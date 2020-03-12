@@ -70,7 +70,3 @@ summary, .summary {
 .relative {
   position: relative;
 }
-
-.hidden, [hidden] {
-  display: none;
-}

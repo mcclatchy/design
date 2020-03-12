@@ -38,12 +38,6 @@ button:hover,
   --lhd: none;
 }
 
-.button.stretch {
-  display: block;
-  align-self: stretch;
-  padding: 1em;
-}
-
 .button.big {
   padding: 10px 35px;
 }

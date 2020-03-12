@@ -42,10 +42,6 @@
 	pointer-events: auto;
 }
 
-.s-modal[hidden] {
-	display: none;
-}
-
 /** Bottom version */
 
 .s-modal.bottom:not([hidden]) {
