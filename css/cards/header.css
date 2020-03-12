@@ -20,6 +20,10 @@
   margin-top: 0;
 }
 
+.bio p.byline {
+  margin: 0;
+}
+
 @media (min-width: 600px) {
 	.header .bio {
 		display: flex;
