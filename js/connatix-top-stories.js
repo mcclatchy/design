@@ -68,7 +68,7 @@ ConnatixTopStories.observer = new IntersectionObserver((entries) => {
     }
   });
 }, {
-  rootMargin: "50% 0px"
+  rootMargin: "100px 0px"
 });
 
 customElements.define("connatix-top-stories", ConnatixTopStories);
