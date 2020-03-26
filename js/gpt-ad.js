@@ -77,7 +77,7 @@ class GPT extends HTMLElement {
   }
 
   get path() {
-    return this.dataset.path || "/7675/KCM.site_kansascity/News/Local";
+    return this.dataset.path || "/7675/KCM.site_kansascity/Sports";
   }
 
   get sizeMap() {
