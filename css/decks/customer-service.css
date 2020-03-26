@@ -1,0 +1,20 @@
+.customer-service {
+  padding: 15px;
+  margin: 0 auto;
+}
+
+.customer-service .h1 {
+  --ht: none;
+  --hf: var(--serif);
+}
+
+.customer-service .package {
+  --ht: uppercase;
+  --hw: bold;
+  --hf: var(--sans);
+  --lc: #222;
+}
+
+.customer-service .package .h4:nth-child(n+2) {
+  margin-top: 30px;
+}

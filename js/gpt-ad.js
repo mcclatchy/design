@@ -92,6 +92,10 @@ class GPT extends HTMLElement {
     return this.dataset.atf || false;
   }
 
+  get pkg() {
+    return this.dataset.pkg || false;
+  }
+
   get uid() {
     this.id = this.id || this.guid();
     return this.id;
@@ -123,6 +127,10 @@ class GPT extends HTMLElement {
 
       if(this.atf) {
         slot.setTargeting("atf", this.atf);
+      }
+
+      if(this.pkg) {
+        slot.setTargeting("pkg", this.pkg);
       }
 
       slot.addService(googletag.pubads());
