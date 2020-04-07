@@ -12,9 +12,14 @@
   --hw: 400;
   --ht: none;
 
+  /* Text family, size and color */
+  --tf: "Noto Serif", serif;
+  --ts: large;
+  --tc: #222;
+
   /* Link decoration and color */
-  --lc: #222;
   --ld: none;
+  --lc: #222;
 
   /* Story width */
   --story-width: 728px;
@@ -103,11 +108,15 @@ h6, .h6 {
 }
 
 p {
-  font: large/1.5em var(--serif);
+  font: var(--ts)/1.5em var(--tf);
+}
+
+ul, ol {
+  padding-left: 0;
 }
 
 li {
-  font: large/1.5em var(--serif);
+  font: var(--ts)/1.5em var(--tf);
   margin: 10px 0 10px calc(1em + 15px);
 }
 

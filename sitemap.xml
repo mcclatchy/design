@@ -36,7 +36,15 @@
   </url>
   
   <url>
+    <loc>https://mcclatchy.github.io/design/labs/gray-box/</loc>
+  </url>
+  
+  <url>
     <loc>https://mcclatchy.github.io/design/labs/lab-panel/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mcclatchy.github.io/design/labs/story-stack/</loc>
   </url>
   
   <url>
@@ -180,10 +188,6 @@
   </url>
   
   <url>
-    <loc>https://mcclatchy.github.io/design/labs/</loc>
-  </url>
-  
-  <url>
     <loc>https://mcclatchy.github.io/design/saratoga/li/</loc>
   </url>
   
@@ -289,6 +293,10 @@
   
   <url>
     <loc>https://mcclatchy.github.io/design/saratoga/vendor-footer/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mcclatchy.github.io/design/labs/</loc>
   </url>
   
 </urlset>
