@@ -15,7 +15,7 @@
   /* Text family, size and color */
   --tf: "Noto Serif", serif;
   --ts: large;
-  --tc: #222;
+  /* --tc: #222; */
 
   /* Link decoration and color */
   --ld: none;
