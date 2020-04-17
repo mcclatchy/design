@@ -16,6 +16,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 15px;
+    grid-column: 1/span 2;
     min-height: 400px;
     --padding: 30px 30px 30px 15px;
   }
