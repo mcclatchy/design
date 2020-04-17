@@ -16,3 +16,7 @@
 .mi-sticky-player-info {
   --ht: none;
 }
+
+.inline-cta > div[class*=recaptcha] {
+  margin: 10px 0 0;
+}
