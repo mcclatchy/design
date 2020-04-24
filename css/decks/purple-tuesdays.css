@@ -20,3 +20,7 @@
 .inline-cta > div[class*=recaptcha] {
   margin: 10px 0 0;
 }
+
+.story-body .ng_endnote_contact {
+  margin: 15px auto;
+}
