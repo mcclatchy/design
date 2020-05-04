@@ -132,6 +132,17 @@ time {
   font-size: 0.75rem;
 }
 
+blockquote {
+  font: bold larger/1.5em var(--sans);
+}
+
+blockquote .attr {
+  display: block;
+  margin-top: 5px;
+  font: 0.875rem/1.5em var(--sans);
+  color: var(--tc, #707070);
+}
+
 /**
  * Custom elements
  */
