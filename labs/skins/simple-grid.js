@@ -1,9 +1,9 @@
 /**
  * Base section theming file
- * A simple grid with 
+ * A simple grid with some options and slots above and below. 
  */
 
-class SimpleGrid extends HTMLElement {
+export default class SimpleGrid extends HTMLElement {
 
   /**
    * Template for the Shadow DOM
@@ -15,12 +15,18 @@ class SimpleGrid extends HTMLElement {
     <style>
     :host {
       display: block;
+      transition: opacity .5s;
+    }
+
+    :host(.faded) {
+      opacity: 0;
     }
 
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       grid-gap: 30px;
+      grid-auto-flow: dense;
       max-width: 1140px;
       margin: 30px auto;
     }
@@ -44,14 +50,14 @@ class SimpleGrid extends HTMLElement {
 
     /* Dark Theme */
 
-    :host([theme=dark]) {
+    :host([data-theme=dark]) {
       background-color: #222;
       color: white;
       --tc: white;
       --lc: white;
     }
 
-    :host([theme=dark]) ::slotted(.card) {
+    :host([data-theme=dark]) ::slotted(.card) {
       background-color: #373737 !important;
     }
     </style>
@@ -72,6 +78,11 @@ class SimpleGrid extends HTMLElement {
 
   constructor() {
     super();
+
+    this.events = {
+      moved: new Event("moved"),
+      visible: new Event("visible")
+    }
   }
 
   /**
@@ -86,8 +97,8 @@ class SimpleGrid extends HTMLElement {
     this.attachShadow({ mode: "open" });
     this.shadowRoot.appendChild(this.template.content.cloneNode(true));
 
-    // Tweak the lead
-    this.handleLedeStory();
+    // Entry point for extensions
+    this.beforeMove();
 
     // Append articles
     this.articles.forEach((a, i) => {
@@ -97,12 +108,13 @@ class SimpleGrid extends HTMLElement {
     // Inject zones
     this.handleZones();
 
-    // Entry point for extensions
-    this.beforeMove();
-
-    // Move this element into position
+    // Move this element into position and alert
     this.main.insertAdjacentElement("beforebegin", this);
+    this.dispatchEvent(this.events.moved);
     this.main.remove();
+
+    // Check for nav 
+    this.handleNav();
 
     // Check for a set theme
     this.handleTheme();
@@ -111,9 +123,10 @@ class SimpleGrid extends HTMLElement {
     this.beforeShow();
 
     // Unfade
-    window.requestAnimationFrame(() => {
+    this.dispatchEvent(this.events.visible);
+    window.setTimeout(() => {
       this.classList.remove("faded");
-    });
+    }, 50);
   }
 
   /**
@@ -133,10 +146,20 @@ class SimpleGrid extends HTMLElement {
    */
 
   get articles() {
-    let list = this.main.querySelectorAll("article.card");
-    return Array.from(list).filter((a) => {
+    function digest(a) {
       return a.querySelector(".label") == null;
-    });
+    }
+
+    let qs = "article.card";
+    let list = this.main.querySelectorAll(qs);
+    let arr = Array.from(list).filter(digest);
+
+    if(arr.length == 0) {
+      list = this.querySelectorAll(qs);
+      arr = Array.from(list).filter(digest);
+    }
+
+    return arr;
   }
 
   /**
@@ -173,16 +196,6 @@ class SimpleGrid extends HTMLElement {
   }
 
   /**
-   * Gets the SDS stylesheet from the main site to use in the Shadow DOM
-   */
-
-  get sds() {
-    let mi = document.head.querySelector("link[href*=mi-styles]");
-    let sds = document.head.querySelector("link[href*=sds]");
-    return mi || sds;
-  }
-
-  /**
    * Returns a new style tag in the head labeled for this element
    */
 
@@ -199,14 +212,33 @@ class SimpleGrid extends HTMLElement {
   }
 
   /**
-   * Modifies the lead story
+   * Runs right before the articles are moved.
+   * Default adjusts the lede story based on what type it is.
    */
 
-  handleLedeStory() {
+  beforeMove() {
     let lede = this.articles[0];
-
     if(lede.querySelector(".video") != null) {
       lede.classList.add("video-lede");
+
+      // global adjustments to the card
+      this.style.sheet.insertRule(`
+      .video-lede .new-video-design { 
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+      }`);
+
+      this.style.sheet.insertRule(`
+      @media(min-width: 960px) {
+        .video-lede .h1 {
+          font-size: 38px;
+          line-height: 1.3em;
+          font-weight: normal;
+          max-width: 550px;
+        }
+      }
+      `);
     } else {
       this.articles[0].classList.add("photo-lede", "horizontal", "impact", "in-depth");
     }
@@ -217,11 +249,26 @@ class SimpleGrid extends HTMLElement {
    */
 
   handleTheme() {
-    let theme = this.getAttribute("theme");
+    let theme = this.dataset.theme;
 
     switch(theme) {
       case "dark":
-        this.style.sheet.insertRule("body { background-color: #222 }");
+        this.style.sheet.insertRule(`
+          body { 
+            background-color: #222 
+          }`);
+
+        this.style.sheet.insertRule(`
+          .subnav-section-front-organism .subnav-section-title .subnav-section-name,
+          .subnav-section-front-organism .subnav-section-container .subnav-section-list .subnav-section-list-item a { 
+            color: white !important; 
+          }`);
+
+        this.style.sheet.insertRule(`
+          .subnav-section-front-organism .subnav-section-title .subnav-section-icon {
+            filter: invert(1);
+          }
+        `);
         break;
       default:
         // Do nothing
@@ -233,19 +280,18 @@ class SimpleGrid extends HTMLElement {
    */
 
   handleZones() {
-    let zones = this.getAttribute("zones");
-
-    switch(zones) {
+    switch(this.dataset.zones) {
       case "simple":
-        this.insertBefore(this.zone(3), this.articles[4]);
-        this.insertBefore(this.zone(5), this.articles[4]);
-        this.insertBefore(this.zone(6), this.articles[4]);
-        this.insertBefore(this.zone(7), this.articles[8]);
+        try {
+          this.insertBefore(this.zone(3), this.articles[4]);
+          this.insertBefore(this.zone(5), this.articles[4]);
 
-        let z8 = this.zone(8);
-        z8.childNodes[1].hidden = true;
-        z8.classList.add("d-md");
-        this.insertBefore(z8, this.articles[8]);
+          let z6 = this.zone(6);
+          z6.setAttribute("slot", "");
+          this.insertBefore(z6, this.articles[4]);
+        } catch(e) {
+          console.warn("Error moving zones:", e);
+        }
         break;
       default:
         // Do nothing
@@ -253,11 +299,23 @@ class SimpleGrid extends HTMLElement {
   }
 
   /**
-   * Run right before the content is moved
+   * Moves section nav on request
    */
 
-  beforeMove() {
-    // Made for extending. Do nothing.
+  handleNav() {
+    switch(this.dataset.nav) {
+      case "standard":
+        let nav = this.main.querySelector("#nav-section-front");
+        if(nav) {
+          nav.setAttribute("slot", "nav");
+          nav.querySelector("h2").textContent = "More Coverage";
+          this.appendChild(nav);
+        }
+        break;
+
+      default:
+        // Do nothing
+    }
   }
 
   /**
@@ -265,7 +323,7 @@ class SimpleGrid extends HTMLElement {
    */
 
   beforeShow() {
-    // Made for extending. Do nothing.
+    // Made for extending. Does nothing here.
   }
 }
 
