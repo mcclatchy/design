@@ -2126,7 +2126,7 @@ section.flag {
   font-weight: 400;
 }
 
-.mi-sticky-player .mi-sticky-player-info.package {
+.lead-item .mi-sticky-player .mi-sticky-player-info {
   padding: 15px;
   --ht:none;
 }
