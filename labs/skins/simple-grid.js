@@ -3,7 +3,7 @@
  * A simple grid with some options and slots above and below. 
  */
 
-export default class SimpleGrid extends HTMLElement {
+class SimpleGrid extends HTMLElement {
 
   /**
    * Template for the Shadow DOM
@@ -50,14 +50,14 @@ export default class SimpleGrid extends HTMLElement {
 
     /* Dark Theme */
 
-    :host([data-theme=dark]) {
+    :host([theme=dark]) {
       background-color: #222;
       color: white;
       --tc: white;
       --lc: white;
     }
 
-    :host([data-theme=dark]) ::slotted(.card) {
+    :host([theme=dark]) ::slotted(.card) {
       background-color: #373737 !important;
     }
     </style>
@@ -79,10 +79,26 @@ export default class SimpleGrid extends HTMLElement {
   constructor() {
     super();
 
-    this.events = {
-      moved: new Event("moved"),
-      visible: new Event("visible")
-    }
+    // Original main container
+    this._main = document.querySelector("#main-content");
+
+    // Light DOM stylesheet specific to themes
+    this._theme = document.createElement("style");
+    this._theme.setAttribute("for", `${this.localName}-theme`);
+    document.head.appendChild(this._theme);
+
+    // Light DOM stylesheet for cleanup
+    this._style = document.createElement("style");
+    this._style.setAttribute("for", this.localName);
+    document.head.appendChild(this._style);
+  }
+
+  /**
+   * Observed attributes run a callback when changed.
+   */
+
+  static get observedAttributes() {
+    return ["theme", "nav"]
   }
 
   /**
@@ -97,118 +113,95 @@ export default class SimpleGrid extends HTMLElement {
     this.attachShadow({ mode: "open" });
     this.shadowRoot.appendChild(this.template.content.cloneNode(true));
 
-    // Entry point for extensions
-    this.beforeMove();
+    // Handles the lede story
+    this.handleLede();
 
     // Append articles
-    this.articles.forEach((a, i) => {
+    this._articles.forEach((a, i) => {
       this.appendChild(a);
     });
 
-    // Inject zones
+    // Inject zones (only runs once)
     this.handleZones();
 
     // Move this element into position and alert
-    this.main.insertAdjacentElement("beforebegin", this);
-    this.dispatchEvent(this.events.moved);
-    this.main.remove();
+    this._main.insertAdjacentElement("beforebegin", this);
+    this._main.remove();
 
-    // Check for nav 
-    this.handleNav();
-
-    // Check for a set theme
-    this.handleTheme();
-
-    // Entry point for extensions 
-    this.beforeShow();
-
-    // Unfade
-    this.dispatchEvent(this.events.visible);
+    // Unfade and notify
+    this.dispatchEvent(new Event("complete"));
     window.setTimeout(() => {
       this.classList.remove("faded");
     }, 50);
   }
 
   /**
-   * Returns the main container element
+   * Fires when an observed attribute changes
    */
 
-  get main() {
-    if(!this._main) {
-      this._main = document.querySelector("#main-content");
+  attributeChangedCallback(name, ov, nv) {
+    switch(name) {
+      case "theme":
+        this.handleThemeChanged(nv, ov);
+        break;
+      case "nav":
+        this.handleNavChanged(nv, ov);
+        break;
+      default:
+        // Do nothing;
     }
+  }
 
-    return this._main;
+  /**
+   * Queries this and main for the first match.
+   * Returns a Set
+   */
+
+  query(qs) {
+    let list = this.queryAll(qs);
+    return Array.from(list).shift();
+  }
+
+  /**
+   * Queries this and main for the all matches.
+   * Returns a Set
+   */
+
+  queryAll(qs) {
+    return new Set([
+      ...this.querySelectorAll(qs),
+      ...this._main.querySelectorAll(qs)
+    ]);
   }
 
   /**
    * Returns an array of all article cards on the page
    */
 
-  get articles() {
-    function digest(a) {
+  get _articles() {
+    let list = this.queryAll("article.card");
+    let arr = Array.from(list).filter((a) => {
       return a.querySelector(".label") == null;
-    }
-
-    let qs = "article.card";
-    let list = this.main.querySelectorAll(qs);
-    let arr = Array.from(list).filter(digest);
-
-    if(arr.length == 0) {
-      list = this.querySelectorAll(qs);
-      arr = Array.from(list).filter(digest);
-    }
+    });
 
     return arr;
   }
 
   /**
-   * Returns an array of all the digests on the page
+   * Returns an array of all digests on the page
    */
 
-  get digests() {
-    let list = this.main.querySelectorAll(".digest");
+  get _digests() {
+    let list = this.queryAll(".digest");
     return Array.from(list);
   }
 
   /**
-   * Returns an array of all the zones on the page
+   * Appends raw CSS text to the inline style tag
    */
 
-  get zones() {
-    let list = this.main.querySelectorAll(".zone-el");
-    return Array.from(list).map((z) => {
-      z.classList.remove("flex-columns", "rail", "main-stage");
-      return z;
-    });
-  }
-
-  /**
-   * Returns the first zone to match a query selector
-   * Can take a query string or an integer to get the zone.
-   */
-
-  zone(qs) {
-    if(Number.isInteger(qs)) qs = `#zone-el-${qs}`;
-    return this.zones.find((z) => {
-      return z.matches(qs);
-    });
-  }
-
-  /**
-   * Returns a new style tag in the head labeled for this element
-   */
-
-  get style() {
-    // Check to see if there is already one there
-    let current = document.head.querySelector(`style[data-element=${this.localName}]`);
-    if(current) return current;
-
-    // Create a new on if not
-    let style = document.createElement("style");
-    style.dataset.element = this.localName;
-    document.head.appendChild(style);
-    return style;
+  addCSS(css) {
+    this._style.textContent += css;
   }
 
   /**
@@ -216,114 +209,184 @@ export default class SimpleGrid extends HTMLElement {
    * Default adjusts the lede story based on what type it is.
    */
 
-  beforeMove() {
-    let lede = this.articles[0];
+  handleLede() {
+    let lede = this._articles[0];
+
+    // Different changes depending on the lede content type
     if(lede.querySelector(".video") != null) {
       lede.classList.add("video-lede");
 
-      // global adjustments to the card
-      this.style.sheet.insertRule(`
+      this.addCSS(`
       .video-lede .new-video-design { 
         display: flex;
         flex-direction: column;
         flex: 1;
-      }`);
+      }
 
-      this.style.sheet.insertRule(`
       @media(min-width: 960px) {
         .video-lede .h1 {
           font-size: 38px;
-          line-height: 1.3em;
+          line-height: 1.2em;
           font-weight: normal;
           max-width: 550px;
         }
-      }
-      `);
+      }`);
     } else {
-      this.articles[0].classList.add("photo-lede", "horizontal", "impact", "in-depth");
+      this._articles[0].classList.add("photo-lede", "horizontal", "impact", "in-depth");
     }
   }
 
   /**
-   * Makes adjutments based on theme
+   * Theme getter and setter
    */
 
-  handleTheme() {
-    let theme = this.dataset.theme;
+  get theme() {
+    return this.getAttribute("theme");
+  }
 
-    switch(theme) {
-      case "dark":
-        this.style.sheet.insertRule(`
-          body { 
-            background-color: #222 
-          }`);
-
-        this.style.sheet.insertRule(`
-          .subnav-section-front-organism .subnav-section-title .subnav-section-name,
-          .subnav-section-front-organism .subnav-section-container .subnav-section-list .subnav-section-list-item a { 
-            color: white !important; 
-          }`);
-
-        this.style.sheet.insertRule(`
-          .subnav-section-front-organism .subnav-section-title .subnav-section-icon {
-            filter: invert(1);
-          }
-        `);
-        break;
-      default:
-        // Do nothing
+  set theme(val) {
+    if(val) {
+      this.setAttribute("theme", val);
+    } else {
+      this.removeAttribute("theme");
     }
   }
 
+  // Alters theme if specified
+  handleThemeChanged(nv, ov) {
+    let css = '';
+
+    if(nv == "dark") {
+      css = `
+      body { 
+        background-color: #222 
+      }
+
+      .subnav-section-front-organism .subnav-section-title .subnav-section-name,
+      .subnav-section-front-organism .subnav-section-container .subnav-section-list .subnav-section-list-item a { 
+        color: white !important; 
+      }
+
+      .subnav-section-front-organism .subnav-section-title .subnav-section-icon {
+        filter: invert(1);
+      }`;
+    }
+
+    // Notify
+    this._theme.textContent = css
+    this.dispatchEvent(new CustomEvent("change", {
+      detail: {
+        type: "theme",
+        nv: nv, 
+        ov: ov
+      }
+    }));
+  }
+
   /**
-   * Injects zones if specified
+   * Nav functionality
    */
 
+  get nav() {
+    return this.getAttribute("nav");
+  }
+
+  set nav(val) {
+    if(val) {
+      this.setAttribute("nav", val);
+    } else {
+      this.removeAttribute("nav");
+    }
+  }
+
+  // Moves section nav on request, boolean trigger
+  handleNavChanged(nv, ov) {
+    let ele = this.query("#nav-section-front");
+
+    if(ele) {
+      ele.setAttribute("slot", "nav");
+      ele.hidden = !this.hasAttribute("nav");
+
+      if(nv && nv.length > 0) {
+        ele.querySelector(".subnav-section-name").textContent = nv;
+      }
+
+      this.appendChild(ele);
+    }
+
+    // Notify
+    this.dispatchEvent(new CustomEvent("change", {
+      detail: {
+        type: "nav",
+        nv: nv,
+        ov: ov
+      }
+    }));
+  }
+
+  /**
+   * Zones functionality
+   */
+
+  get zones() {
+    return this.getAttribute("zones");
+  }
+
+  set zones(val) {
+    if(val) {
+      this.setAttribute("zones", val);
+    } else {
+      this.removeAttribute("zones");
+    }
+  }
+
+  get _zones() {
+    let list = this.queryAll(".zone-el");
+    return Array.from(list, z => {
+      z.classList.remove("flex-columns", "rail", "main-stage");
+      return z;
+    });
+  }
+
+  // Returns the first zone to match a query selector
+  // Can take a query string or an integer to get the zone.
+  getZone(qs) {
+    if(Number.isInteger(qs)) qs = `#zone-el-${qs}`;
+    return this._zones.find((z) => {
+      return z.matches(qs);
+    });
+  }
+
+  // Injects zones if specified
+  // This only runs once in the connectedCallback
   handleZones() {
-    switch(this.dataset.zones) {
-      case "simple":
-        try {
-          this.insertBefore(this.zone(3), this.articles[4]);
-          this.insertBefore(this.zone(5), this.articles[4]);
+    if(this.zones == "simple") {
+      try {
+        this.insertBefore(this.getZone(3), this._articles[4]);
+        this.insertBefore(this.getZone(5), this._articles[4]);
 
-          let z6 = this.zone(6);
-          z6.setAttribute("slot", "");
-          this.insertBefore(z6, this.articles[4]);
-        } catch(e) {
-          console.warn("Error moving zones:", e);
-        }
-        break;
-      default:
-        // Do nothing
+        let z6 = this.getZone(6);
+        z6.setAttribute("slot", "");
+        this.insertBefore(z6, this._articles[4]);
+      } catch(e) {
+        console.warn("Error moving zones:", e);
+      }
+
+      this.addCSS(`
+      ${this.localName} .ad-widget { 
+        margin-top: 0; 
+        margin-bottom: 0; 
+      }`);
     }
-  }
 
-  /**
-   * Moves section nav on request
-   */
-
-  handleNav() {
-    switch(this.dataset.nav) {
-      case "standard":
-        let nav = this.main.querySelector("#nav-section-front");
-        if(nav) {
-          nav.setAttribute("slot", "nav");
-          nav.querySelector("h2").textContent = "More Coverage";
-          this.appendChild(nav);
-        }
-        break;
-
-      default:
-        // Do nothing
-    }
-  }
-
-  /**
-   * Runs right before fade is removed
-   */
-
-  beforeShow() {
-    // Made for extending. Does nothing here.
+    // Notify
+    this.dispatchEvent(new CustomEvent("change", {
+      detail: {
+        type: "zones",
+        nv: this.zones,
+        ov: null
+      }
+    }));
   }
 }
 
