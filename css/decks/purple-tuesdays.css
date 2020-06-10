@@ -33,3 +33,15 @@
 .story-body .ng_endnote_contact {
   margin: 15px auto;
 }
+
+/* section > section fix */
+
+@media(min-width: 600px) {
+  section#main-content {
+    padding: 0 15px;
+  }
+
+  section#main-content > section {
+    padding: 0;
+  }
+}
