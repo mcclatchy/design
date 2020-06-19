@@ -57,7 +57,8 @@ class SimpleGrid extends HTMLElement {
       --lc: white;
     }
 
-    :host([theme=dark]) ::slotted(.card) {
+    :host([theme=dark]) ::slotted(.card),
+    :host([theme=dark]) ::slotted(.no-img) {
       background-color: #373737 !important;
     }
     </style>
@@ -179,7 +180,7 @@ class SimpleGrid extends HTMLElement {
    */
 
   get _articles() {
-    let list = this.queryAll("article.card");
+    let list = this.queryAll("article.card, div.no-img");
     let arr = Array.from(list).filter((a) => {
       return a.querySelector(".label") == null;
     });
@@ -395,3 +396,10 @@ class SimpleGrid extends HTMLElement {
  */
 
 customElements.define("simple-grid", SimpleGrid);
+
+/**
+ * Safari does not load a global classes in ES6 modules.
+ * Need to attach to the window object to be able to import and extend.
+ */
+
+window.SimpleGrid = SimpleGrid;
