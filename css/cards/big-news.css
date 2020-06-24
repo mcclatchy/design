@@ -21,6 +21,7 @@ section.big-news {
 .big-news .h1 {
   font-size: 2rem;
   text-align: center;
+  align-self: center;
 }
 
 @media (min-width: 768px) {
