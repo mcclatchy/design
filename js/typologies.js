@@ -34,16 +34,16 @@ var Typologies = {
       }
     },
     {
+      "name": "dynamic",
+      "units": ["ad"]
+    },
+    {
       "name": "zone6",
       "units": ["zergnet"]
     }
   ],
   
   "configuration-a": [
-    { 
-      "name": "zone1",
-      "units": ["banner"]
-    },
     {
       "name": "zone2",
       "class": "wide",
@@ -90,10 +90,6 @@ var Typologies = {
       "name": "zone5",
       "class": "grid combo",
       "units": ["notifications", "ad"]
-    },
-    {
-      "name": "dynamic",
-      "units": ["ad"]
     },
     {
       "name": "zone6",

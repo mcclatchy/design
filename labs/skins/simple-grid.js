@@ -214,7 +214,7 @@ class SimpleGrid extends HTMLElement {
     let lede = this._articles[0];
 
     // Different changes depending on the lede content type
-    if(lede.querySelector(".video") != null) {
+    if(lede && lede.querySelector(".video") != null) {
       lede.classList.add("video-lede");
 
       this.addCSS(`
