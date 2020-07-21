@@ -29,9 +29,14 @@ class SimpleGrid extends HTMLElement {
       grid-auto-flow: dense;
       max-width: 1140px;
       margin: 30px auto;
+      box-sizing: content-box;
     }
 
-    @media(min-width: 660px) {
+    @media(min-width: 630px) {
+      .grid {
+        padding: 0 15px;
+      }
+
       ::slotted(.photo-lede) {
         grid-column: 1/-1;
       }
