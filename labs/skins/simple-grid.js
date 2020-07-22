@@ -124,6 +124,7 @@ class SimpleGrid extends HTMLElement {
 
     // Append articles
     this._articles.forEach((a, i) => {
+      a.style.order = i + 1;
       this.appendChild(a);
     });
 

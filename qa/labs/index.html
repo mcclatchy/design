@@ -704,10 +704,10 @@
 })();
   </script>
 
-  <!-- <script type="module" src="http://localhost:1313/skins/lab-skin.js"></script> -->
-  <script type="module" src="https://media.mcclatchy.com/labs/skins/lab-skin.js"></script>
+  <script type="module" src="https://media.mcclatchy.com/labs/skins/simple-grid.js"></script>
   <script defer src="https://media.mcclatchy.com/labs/lab-panel.js"></script>
-  <lab-skin class="faded">
+
+  <simple-grid class="faded">
     <!-- Panel above the grid of cards -->
     <lab-panel slot="above" class="fill sans impact" style="background-color: black;">
       <img src="https://media.sacbee.com/static/graphics/2019/gettyskyline.jpg">
@@ -717,7 +717,7 @@
     </lab-panel>
 
     <!-- First digest, after 3rd story -->
-    <div class="digest paper" data-after="1" style="grid-row: span 2;">
+    <div class="digest paper" style="grid-row: span 2; order: 4;">
       <span class="label">
         <h5>TOOLS &amp; RESOURCES</h5>
       </span>
@@ -739,7 +739,7 @@
     </div>
 
     <!-- Impact module -->
-    <div class="promo package" data-after="7" style="grid-column: 1/-2; justify-content: center; padding: 45px;">
+    <div class="promo package" style="grid-column: 1/-2; justify-content: center; padding: 45px; order: 7;">
       <blockquote>“At sit nostro impetus. Vim ad solum regione, tale solum ponderum ut eam. Admodum volutpat scribentur vim id, quidam quaestio eu eam.” <span class="attr">First Last</span></blockquote>
       <a class="button big" href="https://www.sacregcf.org/impact-media">Make a donation</a>
     </div>
@@ -773,7 +773,7 @@
       }
     </style>
 
-    <div class="impact" data-after="14" style="grid-column: 1/-1;">
+    <div class="impact" style="grid-column: 1/-1; order: 14;">
       <div class="label">
         <h3 class="h5">LOCAL IMPACT</h3>
       </div>
@@ -821,7 +821,7 @@
     <lab-panel slot="below"><h3 class="h2">Contact us</h3><p>To learn more about the reporting lab or to suggest a story, email Sacramento Bee Executive Editor Lauren Gustus at lgustus@sacbee.com.</p><p>Read Community Voices stories <a href="https://www.sacbee.com/news/local/sacramento-tipping-point/community-voices">here.</a></p><p>To sign up for our email newsletter, go <a href="https://t.news.sacbee.com/webApp/mccSignUp?newsletter=sacbee_tipping_point_newsletter">here.</a></p></lab-panel>
     <lab-panel slot="below"><h3 class="h2">FREQUENTLY ASKED QUESTIONS</h3><p><b>Q: Do the foundations have any control over what is reported?</b></p><p>Editorial independence has been a core value at The Sacramento Bee for more than 160 years. We strive to deliver high-impact journalism in the public interest. While we value the support of our funding partners, outside funders have no editorial oversight, approval or influence over the content produced by lab reporters or other members of the Sacramento Bee newsroom.</p><p><b>Q: What other news organizations have received foundation funding?</b></p><p>The Seattle Times launched an Education Lab years ago that is supported by the Bill &amp; Melinda Gates Foundation and City University of Seattle. The Miami Herald received support from the Rockefeller Foundation to cover Puerto Rico’s recovery from Maria. The Washington Post, Los Angeles Times, and public media such as NPR and PBS have all accepted foundation funding.</p><p><b>Q: Will this effort replace The Sacramento Bee’s regular reporting on key issues in our community?</b></p><p>No, these are new positions. We will continue to cover housing, transportation, job growth and more across the Sacramento region.</p></lab-panel>
     <lab-panel slot="below"><h3 class="h2">STATEMENT OF EDITORIAL INDEPENDENCE</h3><p>Editorial independence has been a core value at the Sacramento Bee for more than 160 years. We strive to deliver high-impact journalism in the public interest. While we value the support and partnership of our funding partners, outside funders will not have any editorial oversight, approval or influence over the content produced by the fellow or other members of the Sacramento Bee newsroom.</p></lab-panel>
-  </lab-skin>
+  </simple-grid>
 </section>
 
     
