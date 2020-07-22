@@ -133,7 +133,8 @@ class SimpleGrid extends HTMLElement {
 
     // Move this element into position and alert
     this._main.insertAdjacentElement("beforebegin", this);
-    this._main.remove();
+    // this._main.remove();
+    this._main.hidden = true;
 
     // Unfade and notify
     this.dispatchEvent(new Event("complete"));
@@ -369,21 +370,21 @@ class SimpleGrid extends HTMLElement {
   handleZones() {
     if(this.zones == "simple") {
       try {
-        this.insertBefore(this.getZone(3), this._articles[4]);
-        this.insertBefore(this.getZone(5), this._articles[4]);
+        let z3 = this.getZone(3);
+        z3.style.order = 4;
+        this.appendChild(z3);
+
+        let z5 = this.getZone(5);
+        z5.style.order = 4;
+        this.appendChild(z5);
 
         let z6 = this.getZone(6);
         z6.setAttribute("slot", "");
-        this.insertBefore(z6, this._articles[4]);
+        z6.style.order = 4;
+        this.appendChild(z6);
       } catch(e) {
         console.warn("Error moving zones:", e);
       }
-
-      this.addCSS(`
-      ${this.localName} .ad-widget { 
-        margin-top: 0; 
-        margin-bottom: 0; 
-      }`);
     }
 
     // Notify
