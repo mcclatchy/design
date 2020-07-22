@@ -133,8 +133,7 @@ class SimpleGrid extends HTMLElement {
 
     // Move this element into position and alert
     this._main.insertAdjacentElement("beforebegin", this);
-    // this._main.remove();
-    this._main.hidden = true;
+    this._main.remove();
 
     // Unfade and notify
     this.dispatchEvent(new Event("complete"));
