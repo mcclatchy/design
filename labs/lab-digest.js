@@ -70,6 +70,3 @@ class LabDigest extends HTMLElement {
 
 // Register the element
 customElements.define("lab-digest", LabDigest);
-
-// Export ES6 default
-export default LabDigest;
