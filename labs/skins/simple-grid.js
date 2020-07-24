@@ -386,6 +386,12 @@ class SimpleGrid extends HTMLElement {
       }
     }
 
+    // Nativo slot needs order added as well
+    this.addCSS(`
+    .ntv-ap {
+      order: 7;
+    }`);
+
     // Notify
     this.dispatchEvent(new CustomEvent("change", {
       detail: {

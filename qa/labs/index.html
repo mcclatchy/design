@@ -705,8 +705,10 @@
   </script>
 
   <!-- <script type="module" src="http://localhost:1313/design/labs/skins/simple-grid.js"></script> -->
-  <script type="module" src="https://media.mcclatchy.com/labs/skins/simple-grid.js"></script>
+  <!-- <script type="module" src="http://localhost:1313/design/labs/lab-digest.js"></script> -->
+  <script defer src="https://media.mcclatchy.com/labs/skins/simple-grid.js"></script>
   <script defer src="https://media.mcclatchy.com/labs/lab-panel.js"></script>
+  <script type="module" src="https://media.mcclatchy.com/labs/lab-digest.js"></script>
 
   <simple-grid class="faded">
     <!-- Panel above the grid of cards -->
@@ -717,27 +719,13 @@
       <a class="button big" href="https://mcclatchy.github.io/design/qa/labs/#about-labs">Read more about the lab</a>
     </lab-panel>
 
-    <!-- First digest, after 3rd story -->
-    <div class="digest paper" style="grid-row: span 2; order: 4;">
-      <span class="label">
-        <h5>TOOLS &amp; RESOURCES</h5>
-      </span>
-      <div class="package">
-        <a class="h3" href="https://www.seattletimes.com/education-lab/could-you-go-to-college-tuition-free-in-washington-heres-how-to-find-out/">Could you go to college tuition-free in Washington? Here’s how to find out</a>
-      </div>
-      <div class="package">
-        <a class="h3" href="https://www.seattletimes.com/seattle-news/education/new-law-may-make-it-easier-for-people-to-become-teachers-in-washington-state/">New law may make it easier for people to become teachers in Washington state</a>
-      </div>
-      <div class="package">
-        <a class="h3" href="https://www.seattletimes.com/education-lab/special-education-can-be-confusing-here-are-terms-and-programs-you-should-know/">Special Education Glossary, Part 1</a>
-      </div>
-      <div class="package">
-        <a class="h3" href="https://www.seattletimes.com/education-lab/disabilities-treatments-and-philosophies-part-two-of-education-labs-special-education-glossary/">Special Education Glossary, Part 2</a>
-      </div>
-      <div class="package">
-        <a class="h3" href="https://www.seattletimes.com/education-lab/three-ways-you-can-advocate-for-students-with-disabilities-and-special-education-in-washington-state/">Three ways you can advocate for students with disabilities and special education in Washington state</a>
-      </div>
-    </div>
+    <lab-digest label="Tools & Resources" style="order: 4;">
+      <a href="https://www.seattletimes.com/education-lab/could-you-go-to-college-tuition-free-in-washington-heres-how-to-find-out/">Could you go to college tuition-free in Washington? Here’s how to find out</a>
+      <a href="https://www.seattletimes.com/seattle-news/education/new-law-may-make-it-easier-for-people-to-become-teachers-in-washington-state/">New law may make it easier for people to become teachers in Washington state</a>
+      <a href="https://www.seattletimes.com/education-lab/special-education-can-be-confusing-here-are-terms-and-programs-you-should-know/">Special Education Glossary, Part 1</a>
+      <a href="https://www.seattletimes.com/education-lab/disabilities-treatments-and-philosophies-part-two-of-education-labs-special-education-glossary/">Special Education Glossary, Part 2</a>
+      <a href="https://www.seattletimes.com/education-lab/three-ways-you-can-advocate-for-students-with-disabilities-and-special-education-in-washington-state/">Three ways you can advocate for students with disabilities and special education in Washington state</a>
+    </lab-digest>
 
     <!-- Impact module -->
     <div class="promo package" style="grid-column: 1/-2; justify-content: center; padding: 45px; order: 7;">
