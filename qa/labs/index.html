@@ -702,6 +702,27 @@
     mc.style.opacity = 0;
   }
 })();
+
+// Zeus hack to get it working because dev used the location object
+(function() {
+  let zs = document.createElement("script");
+  zs.src = "https://mcclatchy-sacbee.zeustechnology.com/main.js";
+
+  zs.addEventListener("load", () => {
+
+zeus.on("SLOT_RENDER_ENDED", e => {
+  let zone = e.element.closest(".zone-el");
+  let size = e.data.size;
+
+  if(size && size[0] > 300) {
+    zone.style.setProperty("grid-column", "span 3");
+  }
+});
+
+  });
+
+  document.head.appendChild(zs);
+})();
   </script>
 
   <!-- <script type="module" src="http://localhost:1313/design/labs/skins/simple-grid.js"></script> -->
@@ -709,8 +730,12 @@
   <script defer src="https://media.mcclatchy.com/labs/skins/simple-grid.js"></script>
   <script defer src="https://media.mcclatchy.com/labs/lab-panel.js"></script>
   <script defer src="https://media.mcclatchy.com/labs/lab-digest.js"></script>
+  
+  <script defer>
 
-  <simple-grid class="faded">
+  </script>
+
+  <simple-grid class="faded" zones="simple">
     <!-- Panel above the grid of cards -->
     <lab-panel slot="above" class="fill sans impact" style="background-color: black;">
       <img src="https://media.sacbee.com/static/graphics/2019/gettyskyline.jpg">
