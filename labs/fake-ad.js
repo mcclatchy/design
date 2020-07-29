@@ -2,13 +2,6 @@
  * Dummy ad component
  */
 
-var fakeAdObserver = new ResizeObserver(entries => {
-  entries.forEach(e => {
-    let ad = e.target;
-    ad.renderAd(...ad.size);
-  });
-});
-
 class FakeAd extends HTMLElement {
 
   // Watch a couple of attributes for changes
@@ -69,16 +62,16 @@ class FakeAd extends HTMLElement {
       }
       
       .ad {
+        display: none;
         background-color: var(--color);
+      }
+
+      :host(.rendered) .ad {
+        display: block;
       }
 
       :host(.fill) {
         background-color: var(--color);
-        min-height: 325px;
-      }
-
-      :host(.fill) .ad {
-        display: none;
       }
     </style>
 
@@ -99,13 +92,13 @@ class FakeAd extends HTMLElement {
 
   // Called when added to the DOM
   connectedCallback() {
-    this.renderAd(...this.size);
-    fakeAdObserver.observe(this);
+    faIntersectionObserver.observe(this);
+    faResizeObserver.observe(this);
   }
 
   // Called when removed from the DOM
   disconnectedCallback() {
-    fakeAdObserver.unobserve(this);
+    faResizeObserver.unobserve(this);
   }
 
   // Fires when a watched attribute changes
@@ -132,9 +125,8 @@ class FakeAd extends HTMLElement {
         let p = JSON.parse(s);
 
         if(Array.isArray(p[0])) {
-          let r = this.shuffle(p);
-          for(i = 0; i < r.length; i++) {
-            if(this.hasRoom(...r[i])) return r[i];
+          for(let i = 0; i < p.length; i++) {
+            if(this.hasRoom(...p[i])) return p[i];
           }
         } else if(this.hasRoom(...p)) {
           return p;
@@ -167,22 +159,29 @@ class FakeAd extends HTMLElement {
       this.columns = 1;
     }
   }
-
-  // Fisher-Yates shuffle
-  shuffle(array) {
-    var m = array.length, t, i;
-    while (m) {
-      i = Math.floor(Math.random() * m--);
-      t = array[m];
-      array[m] = array[i];
-      array[i] = t;
-    }
-    return array;
-  }
 }
+
+// ResizeObserver
+var faResizeObserver = new ResizeObserver(entries => {
+  entries.forEach(e => {
+    let ad = e.target;
+    ad.renderAd(...ad.size);
+  });
+});
+
+// IntersectionObserver
+var faIntersectionObserver = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if(e.isIntersecting) {
+      let ad = e.target;
+      setTimeout(() => {
+        ad.renderAd(...ad.size);
+        ad.classList.add("rendered");
+      }, 150);
+    }
+  });
+});
+
 
 // Register the element
 customElements.define("fake-ad", FakeAd);
-
-// Export for ES6
-export default FakeAd;

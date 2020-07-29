@@ -514,6 +514,10 @@ button:hover,
   align-items: flex-end;
 }
 
+.package.no-img {
+  box-sizing: border-box;
+}
+
 .package.no-img h3,
 .package.no-img .h3 {
   font-size: x-large;
@@ -959,18 +963,6 @@ summary, .summary {
   align-self: end;
 }
 
-/* .story-body figure.mugshot { */
-/*   padding: 0 15px; */
-/*   margin: 0 auto; */
-/* } */
-/* .story-body figure.mugshot > * { */
-/*   float: right; */
-/*   width: 125px; */
-/*   margin: 0 0 15px 15px; */
-/* } */
-/* .story-body figure.mugshot figcaption { */
-/*   padding: 5px 0 0; */
-/* } */
 /**
  * Tables
  */
