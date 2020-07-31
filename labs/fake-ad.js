@@ -149,14 +149,10 @@ class FakeAd extends HTMLElement {
     this.ad.style.width = `${width}px`;
     this.ad.style.height = `${height}px`;
 
-    if(width > 600) {
-      this.columns = 3;
-    } 
-    else if (width > 300) {
-      this.columns = 2;
-    }
-    else {
+    if(width <= 300) {
       this.columns = 1;
+    } else {
+      this.columns = 3;
     }
   }
 }
