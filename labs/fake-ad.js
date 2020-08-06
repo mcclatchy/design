@@ -6,7 +6,7 @@ class FakeAd extends HTMLElement {
 
   // Watch a couple of attributes for changes
   static get observedAttributes() {
-    return ["order", "columns"];
+    return ["order", "columns", "size"];
   }
 
   // Updating the order shifts where the ad sits in the grid
@@ -109,6 +109,9 @@ class FakeAd extends HTMLElement {
         break;
       case "columns":
         // Handled with CSS instead
+        break;
+      case "size":
+        this.renderAd(...this.size);
         break;
       default:
         // Do nothing
