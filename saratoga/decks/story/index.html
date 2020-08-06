@@ -82,8 +82,34 @@ gpt-ad {
   justify-content: center;
 }
 
-[data-zone="zone1"] fake-ad {
+[data-zone="1"] fake-ad {
   padding: 15px 0;
+}
+
+[data-zone] {
+  position: relative;
+}
+
+[data-zone]:after {
+  content: attr(data-zone);
+  display: flex;
+  width: 120px;
+  height: 120px;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  background-color: rgba(244,244,244,0.6);
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  color: #222;
+  position: absolute;
+  left: calc(50% - 60px);
+  top: calc(50% - 60px);
+  z-index: 10;
+}
+
+[data-zone="dynamic"]:after {
+  font-size: large;
 }
 </style>
 
