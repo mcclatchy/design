@@ -31,14 +31,6 @@ class Dynamics extends Zones {
 
             if(t) {
               let clone = t.content.cloneNode(true);
-              // let gptAd = clone.querySelector("gpt-ad");
-
-              // if(z.gpt && gptAd) {
-              //   for(let [k,v] of Object.entries(z.gpt)) {
-              //     gptAd.dataset[k] = v;
-              //   }
-              // }
-
               slot.appendChild(clone);
             } else {
               console.warn(`missing unit template: ${u}`);
