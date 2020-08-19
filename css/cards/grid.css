@@ -8,6 +8,12 @@
   grid-gap: 30px;
 }
 
+.grid > * {
+  order: var(--order);
+  grid-column: var(--grid-column);
+  grid-row: var(--grid-row);
+}
+
 .grid > .package:not(.paper),
 .zone-el > .package:not(.paper) {
   padding: 0;
