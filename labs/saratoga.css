@@ -665,7 +665,7 @@ summary, .summary {
   color: var(--tc, #31409F);
 }
 
-.error {
+.error, .errorText {
   color: var(--tc, #D63031);
 }
 
