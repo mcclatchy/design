@@ -63,19 +63,15 @@ class VoterGuide extends window.SimpleGrid {
     zone.style.order = order;
     zone.classList.add("vg-zone");
     vb.appendChild(zone);
-
-    // Watch for changes from the PT
-    this.zoneObserver.observe(zone, { childList: true });
   }
 
   handleZones() {
     // Move ad test
     if(this.hasAttribute("ads")) {
 
-      this.zoneObserver = new MutationObserver((list, observer) => {
-        for(let m of list) {
-          let ad = m.target.querySelector("zeus-ad");
-          if(ad) ad.renderBehavior = "lazy";
+      zeus.on("NODE_CONNECTED", ele => {
+        if(ele.renderBehavior == "never") {
+          ele.closest(".zone-el").hidden = true;
         }
       });
 
@@ -95,29 +91,12 @@ class VoterGuide extends window.SimpleGrid {
       this.appendChild(z6);
 
       this.addCSS(`
-        voter-ballot .zone-el {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        }
-
         .ntv-ap {
           order: 3;
         }
 
         .vg-zone {
-          display: block !important;
           grid-column: 1/-1;
-          background-color: blue !important;
-          min-height: 90px;
-          justify-self: stretch !important;
-        }
-
-        .vg-zone:before {
-          display: block;
-          content: attr(id);
-          color: white;
-          padding: 15px;
         }
 
         #zone-el-2 {
