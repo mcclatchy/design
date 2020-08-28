@@ -375,7 +375,7 @@ class VoterBallot extends VoterBaseElement {
 
       this.classList.toggle("partial", pos.length > 0 && local.length == 0)
     } catch(err) {
-      console.error("Issue parsing positions", err);
+      trackInteraction("Voter Guide address searched");
       this.classList.add("empty");
     }
 

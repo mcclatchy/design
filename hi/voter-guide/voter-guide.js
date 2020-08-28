@@ -49,21 +49,50 @@ class VoterGuide extends window.SimpleGrid {
         }
       }
     `);
+
+    let links = this.querySelectorAll("article a");
+    links.forEach(l => {
+      let href = l.href.replace(/#.*$/, "");
+      l.href = `${href}#voter-guide`;
+    });
+  }
+
+  dropZone(zone, order) {
+    let vb = this.querySelector("voter-ballot");
+    zone.setAttribute("slot", "races");
+    zone.style.order = order;
+    zone.classList.add("vg-zone");
+    vb.appendChild(zone);
+
+    // Watch for changes from the PT
+    this.zoneObserver.observe(zone, { childList: true });
   }
 
   handleZones() {
     // Move ad test
     if(this.hasAttribute("ads")) {
-      let vb = this.querySelector("voter-ballot");
-      let z5 = this.getZone(5);
-      z5.setAttribute("slot", "races");
-      z5.style.order = 6;
-      vb.appendChild(z5);
 
-      let z9 = this.getZone(9);
-      z9.setAttribute("slot", "races");
-      z9.style.order = 12;
-      vb.appendChild(z9);
+      this.zoneObserver = new MutationObserver((list, observer) => {
+        for(let m of list) {
+          let ad = m.target.querySelector("zeus-ad");
+          if(ad) ad.renderBehavior = "lazy";
+        }
+      });
+
+      let z3 = this.getZone(3);
+      this.dropZone(z3, 3);
+
+      let z4 = this.getZone(4);
+      this.dropZone(z4, 9);
+
+      let z5 = this.getZone(5);
+      this.dropZone(z5, 1000);
+
+      let z6 = this.getZone(6);
+      z6.setAttribute("slot", "");
+      z6.style.order = 1000;
+      z6.classList.add("vg-zone");
+      this.appendChild(z6);
 
       this.addCSS(`
         voter-ballot .zone-el {
@@ -75,19 +104,26 @@ class VoterGuide extends window.SimpleGrid {
         .ntv-ap {
           order: 3;
         }
-      `);
 
-      // Gonna do something fun with Zeus
-      window.zeus = window.zeus || {};
-      window.zeus.on("SLOT_RENDER_ENDED", e => {
-        let zone = e.element.closest(".zone-el");
-        let width = e.element.getBoundingClientRect().width;
-
-        if(width > 300) {
-          zone.style.setProperty("grid-column", "span 3");
+        .vg-zone {
+          display: block !important;
+          grid-column: 1/-1;
+          background-color: blue !important;
+          min-height: 90px;
+          justify-self: stretch !important;
         }
-      });
 
+        .vg-zone:before {
+          display: block;
+          content: attr(id);
+          color: white;
+          padding: 15px;
+        }
+
+        #zone-el-2 {
+          display: none !important;
+        }
+      `);
     }
   }
 }
