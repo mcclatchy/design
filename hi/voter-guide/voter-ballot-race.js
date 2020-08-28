@@ -194,7 +194,7 @@ class VoterBallotRace extends VoterBaseElement {
           <label class="info flex" for="${c.id}">
             <div class="package">
               <h3>${this.normalizeName(c)}</h3>
-              <summary><span class="party">${c.party_name}</span> ${c.incumbent ? `- INCUMBENT` : ""}</summary>
+              <summary><span class="party">${c.party_name}</summary>
             </div>
             <div class="check">
               <span class="checkbox"></span>

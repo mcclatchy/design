@@ -107,7 +107,7 @@ class VoterRaceDetails extends VoterBaseElement {
       </figure>
       <div class="package">
         <h3 class="name">${this.normalizeName(c)}</h3>
-        <summary><span class="party">${c.party_name}</span> ${c.incumbent ? `- INCUMBENT` : ""}</summary>
+        <summary><span class="party">${c.party_name}</span></summary>
 
         <div class="experience d-list" data-id="${c.id}" hidden>
           <h4 class="c-header expander" onclick="this.classList.toggle('open')">Experience</h4>

@@ -66,6 +66,12 @@ class VoterGuide extends window.SimpleGrid {
   }
 
   handleZones() {
+    this.addCSS(`
+      #zone-el-2 {
+        display: none !important;
+      }
+    `);
+
     // Move ad test
     if(this.hasAttribute("ads")) {
 
@@ -97,10 +103,6 @@ class VoterGuide extends window.SimpleGrid {
 
         .vg-zone {
           grid-column: 1/-1;
-        }
-
-        #zone-el-2 {
-          display: none !important;
         }
       `);
     }
