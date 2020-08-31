@@ -13,8 +13,11 @@ class VoterGuide extends window.SimpleGrid {
     let lede = this._articles[0];
 
     if(lede) {
-      lede.querySelector("h3.h1").classList.remove("h1");
-      lede.querySelector("summary").remove();
+      let headline = lede.querySelector(".h1");
+      if(headline) headline.classList.remove("h1");
+
+      let summary = lede.querySelector("summary");
+      if(summary) summary.remove();
     }
   }
 
