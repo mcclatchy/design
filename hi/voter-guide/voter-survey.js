@@ -103,7 +103,7 @@ class VoterSurvey extends VoterBaseElement {
       <div class="package question">
         <h4 class="expander ${i == 0 && !this.storyMode ? "open" : ""}" onclick="this.classList.toggle('open')">${q}</h4>
         ${this.survey.map(s => `
-        <p class="summary"><b>${s.name} (${s.party[0]}):</b> ${s.questions[q]}</p>
+        <p class="summary"><b>${s.name}${s.party ? ` (${s.party[0]})` : ''}:</b> ${s.questions[q]}</p>
         `).join('')}
       </div>
       `).join('')}
