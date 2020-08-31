@@ -146,6 +146,10 @@ class VoterBallot extends VoterBaseElement {
         display: block;
       }
 
+      dynamic-modal {
+        --story-width: 920px;
+      }
+
       @media print {
         .intro, .partial-message {
           display: none !important;
@@ -219,10 +223,10 @@ class VoterBallot extends VoterBaseElement {
 
     <dynamic-modal>
       <img slot="image" src="https://media.mcclatchy.com/hi/voter-guide/icons/vg-paywall-image.png">
-      <h1>You must be a subscriber to view this content</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris luctus eros in ornare vulputate. Integer congue orci sit amet dui euismod tempus. Phasellus ut orci imperdiet, elementum augue et, accumsan.</p>
+      <h1>Want more candidate insights?</h1>
+      <p>Subscribe for full access to all Voter Guide features.</p>
       <div class="buttons">
-        <a class="button" data-interaction="Voter Guide clicked subscribe button" href="/subscribe/">Subscribe now</a>
+        <a class="button" data-interaction="Voter Guide clicked subscribe button" href="/subscribe/">Subscribe</a>
         <a class="button signin" href="${this.signInLink}">Sign In</a>
       </div>
     </dynamic-modal>
