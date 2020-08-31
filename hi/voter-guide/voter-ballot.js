@@ -218,7 +218,7 @@ class VoterBallot extends VoterBaseElement {
     <mc-toast class="bottom right"></mc-toast>
 
     <dynamic-modal>
-      <img slot="image" src="https://media.mcclatchy.com/target/assets/cc-decline-modal-laptop.png">
+      <img slot="image" src="https://media.mcclatchy.com/hi/voter-guide/icons/vg-paywall-image.png">
       <h1>You must be a subscriber to view this content</h1>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris luctus eros in ornare vulputate. Integer congue orci sit amet dui euismod tempus. Phasellus ut orci imperdiet, elementum augue et, accumsan.</p>
       <div class="buttons">
