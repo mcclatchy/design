@@ -375,7 +375,7 @@ class VoterBallot extends VoterBaseElement {
 
       this.classList.toggle("partial", pos.length > 0 && local.length == 0)
     } catch(err) {
-      trackInteraction("Voter Guide address searched");
+      trackInteraction("Voter Guide reader got the error message");
       this.classList.add("empty");
     }
 

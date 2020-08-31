@@ -76,20 +76,16 @@ class VoterGuide extends window.SimpleGrid {
     // Move ad test
     if(this.hasAttribute("ads")) {
 
-      // zeus.on("NODE_CONNECTED", ele => {
-      //   if(ele.renderBehavior == "never") {
-      //     ele.closest(".zone-el").hidden = true;
-      //   }
-      // });
+      zeus.on("NODE_CONNECTED", ele => {
+        if(ele.renderBehavior == "never") {
+          ele.closest(".zone-el").hidden = true;
+        }
+      });
       
       // Desktop
       let z2 = document.querySelector("#zone-el-2");
       this.dropZone(z2, 3)
       
-      // Tablet
-      let z4 = this.getZone(4);
-      this.dropZone(z4, 3);
-
       // Mobile
       let z6 = this.getZone(6);
       this.dropZone(z6, 3);
@@ -120,18 +116,10 @@ class VoterGuide extends window.SimpleGrid {
           display: flex;
           flex-direction: column;
           align-items: center;
-          min-height: 90px;
-          background-color: blue;
         }
 
-        voter-guide zeus-ad {
-          display: block !important;
-          width: auto !important;
-        }
-
-        voter-guide zeus-ad::before {
-          content: attr(id);
-          color: white;
+        .vg-zone[hidden] { 
+          display: none !important;
         }
       `);
     } else {

@@ -94,10 +94,13 @@ class VoterRaceDetails extends VoterBaseElement {
       <h4>Description</h4>
       <p class="summary">${this.race.description}</p>
     </div>
+
+    ${this.race.salary ? `
     <div class="package">
       <h4>Salary</h4>
       <p class="summary">${this.race.salary}</p>
     </div>
+    ` : ''}
 
     <h2 class="package">Candidates</h2>
     ${this.race.candidates.map((c, i) => `
