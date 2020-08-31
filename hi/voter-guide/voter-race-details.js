@@ -199,6 +199,8 @@ class VoterRaceDetails extends VoterBaseElement {
   // Standardizes experience data from BallotReady
   normalizeExperience(experience) {
     return experience.map((e, i) => {
+      if(!e.position) return '';
+
       let years = '';
 
       if(e.start_year && e.end_year) {
