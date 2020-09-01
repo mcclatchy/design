@@ -205,7 +205,7 @@ class VoterBallotRace extends VoterBaseElement {
 
       ${this.race.candidates.length == 0 ? `
       <div class="incomplete">
-        <h4>Data not yet available</h4>
+        <h4>Data not yet available <small style="display: block;">(or no candidates have filed)</small></h4>
       </div>
       ` : ''}
     </form>
