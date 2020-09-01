@@ -193,17 +193,17 @@ class VoterBallot extends VoterBaseElement {
 
     <div class="intro">
       <slot name="description">
-        <p>Make informed choices in upcoming local elections with our Voter Guide. This interactive tool displays the races and candidates that will appear on your ballot, helping you select (and keep track of) your picks when it’s time to vote. Subscribers can access candidates’ answers to questions about issues important to your community.</p>
+        <p>Make informed choices in upcoming local elections with our Voter Guide. Enter your full address to display the races and candidates that will appear on your ballot. This interactive tool will help you select (and keep track of) your picks when it’s time to vote. Subscribers can access candidates’ answers to questions about issues important to your community.</p>
       </slot>
 
       <div class="how-to-use">
         <h4 class="expander" onclick="this.classList.toggle('open')">${this.enh ? `CÓMO USAR LA GUÍA ELECTORAL` : `HOW TO USE THE VOTER GUIDE`}</h4>
         <slot name="how-to">
-          <p>Enter your home address in the search bar, then click VIEW MY BALLOT. </p>
-          <p>Scroll down to the boxes below to see each ballot item. (Please note some races might be missing due to data availability but will be updated accordingly.)</p>
-          <p>Click “See more candidate information” at the bottom of each box to learn more. Subscribers can click the COMPARE THE CANDIDATES blue box to view candidate responses to our questions. </p>
+          <p>After you enter your home address in the search bar, click VIEW MY BALLOT. </p>
+          <p>Scroll down to the boxes below to see each ballot item. (Please note some races might be missing but will be updated if data becomes available.)</p>
+          <p>Click “See more candidate information” at the bottom of each box to learn more. Subscribers can click the COMPARE THE CANDIDATES blue box to view candidate responses to our questions.</p>
           <p>Click the box next to each candidate you plan to vote for. When you’re finished, click the blue circle icon in the bottom right of the screen to print. Save the printout to refer to when it’s time to vote!</p>
-          <p>You can also bookmark this page if you would prefer not to print. We will load your previous choices when you return on the same device. We will not store your home address or choices on our servers or transmit them in any way; they are confined to your device.</p>
+          <p>You can also bookmark this page if you would prefer not to print. We will load your previous choices when you return on the same device. We will not store your choices on our servers or transmit them in any way; they are confined to your device. We record the addresses submitted to help ensure you have the best customer experience, but they are in no way associated with your choices or any personally identifiable information.</p>
         </slot>
         <slot name="contact"></slot>
       </div>
@@ -226,7 +226,7 @@ class VoterBallot extends VoterBaseElement {
       <h1>Want more candidate insights?</h1>
       <p>Subscribe to explore in-depth surveys highlighting local candidates’ answers to key questions on issues important to your community.</p>
       <div class="buttons">
-        <a class="button" data-interaction="Voter Guide clicked subscribe button" href="/subscribe/">Subscribe</a>
+        <a class="button" data-interaction="Voter Guide clicked subscribe button" href="${this.offer}">Subscribe</a>
         <a class="button signin" href="${this.signInLink}">Sign In</a>
       </div>
     </dynamic-modal>
@@ -454,6 +454,10 @@ class VoterBallot extends VoterBaseElement {
   // Different UI for ENH
   get enh() {
     return this.hasAttribute("enh");
+  }
+
+  get offer() {
+    return this.getAttribute("offer") || "/subscribe/";
   }
 
   get signInLink() {
