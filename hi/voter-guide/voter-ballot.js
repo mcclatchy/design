@@ -80,6 +80,10 @@ class VoterBallot extends VoterBaseElement {
         --hf: var(--sans);
         --ht: uppercase;
         --hw: bold;
+        --lc: #5169B8;
+        --lhc: #31409F;
+        --ld: underline;
+        --lhd: underline;
       }
 
       @media(min-width: 630px) {
