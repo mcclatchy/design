@@ -26,10 +26,19 @@ class VoterGuideCard extends HTMLElement {
         }
       }
 
-      video {
+      .video {
+        position: relative;
+        padding-top: 56.25%;
+      }
+
+      iframe {
         display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
         width: 100%;
-        cursor: pointer;
+        height: 100%;
+        object-fit: cover;
         outline: none;
       }
 
@@ -41,9 +50,7 @@ class VoterGuideCard extends HTMLElement {
     </style>
 
     <div class="video">
-      <video controls poster="https://media.mcclatchy.com/hi/voter-guide/vg-video-poster.jpg">
-        <source src="https://media.mcclatchy.com/hi/voter-guide/vg-video.mp4" type="video/mp4">
-      </video>
+      <iframe src="${this.video}" frameborder="0" allowfullscreen="true"></iframe>
     </div>
 
     <div class="package">
@@ -88,6 +95,10 @@ class VoterGuideCard extends HTMLElement {
   get page() {
     // Let's use the settings instead of having to manually do it this time
     return pageInfo["marketInfo.pagelevel"] || this.getAttribute("page");
+  }
+
+  get video() {
+    return `${this.getAttribute("video")}/video-embed`;
   }
 
   get sds() {
