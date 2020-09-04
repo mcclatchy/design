@@ -32,6 +32,12 @@ class SimpleGrid extends HTMLElement {
       box-sizing: content-box;
     }
 
+    .load-more {
+      display: block;
+      max-width: 1140px;
+      margin: 30px auto;
+    }
+
     @media(min-width: 630px) {
       .grid {
         padding: 0 15px;
@@ -72,6 +78,7 @@ class SimpleGrid extends HTMLElement {
     <slot name="nav"></slot>
     <section>
       <slot class="grid"></slot>
+      <slot class="load-more" name="load-more"></slot>
     </section>
     <slot name="below"></slot>
     `;
@@ -130,6 +137,14 @@ class SimpleGrid extends HTMLElement {
 
     // Inject zones (only runs once)
     this.handleZones();
+
+    // Handle the new load more container
+    let lm = document.querySelector("section.load-more");
+    if(lm) {
+      let lmWrapper = lm.closest("div");
+      lmWrapper.setAttribute("slot", "load-more");
+      this.appendChild(lmWrapper);
+    }
 
     // Move this element into position and alert
     this._main.insertAdjacentElement("beforebegin", this);
