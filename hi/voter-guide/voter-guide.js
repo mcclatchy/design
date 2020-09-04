@@ -79,11 +79,15 @@ class VoterGuide extends window.SimpleGrid {
     // Move ad test
     if(this.hasAttribute("ads")) {
 
-      zeus.on("NODE_CONNECTED", ele => {
-        if(ele.renderBehavior == "never") {
-          ele.closest(".zone-el").hidden = true;
-        }
-      });
+      try {
+        zeus.on("NODE_CONNECTED", ele => {
+          if(ele.renderBehavior == "never") {
+            ele.closest(".zone-el").hidden = true;
+          }
+        });
+      } catch(e) {
+        console.warn("Zeus is not loaded yet.");
+      }
       
       // Desktop
       let z2 = document.querySelector("#zone-el-2");
