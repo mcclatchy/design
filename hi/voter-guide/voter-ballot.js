@@ -228,7 +228,7 @@ class VoterBallot extends VoterBaseElement {
     <dynamic-modal>
       <img slot="image" src="https://media.mcclatchy.com/hi/voter-guide/icons/vg-paywall-image.png">
       <h1>Want more candidate insights?</h1>
-      <p>Subscribe to explore in-depth surveys highlighting local candidates’ answers to key questions on issues important to your community.</p>
+      <p>Sign up to explore in-depth questionnaires highlighting local candidates’ positions on key issues important to your community. View your special offer and get started now.</p>
       <div class="buttons">
         <a class="button" data-interaction="Voter Guide clicked subscribe button" href="${this.offer}">Subscribe</a>
         <a class="button signin" href="${this.signInLink}">Sign In</a>
