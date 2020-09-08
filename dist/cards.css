@@ -21,10 +21,6 @@
   grid-row-end: span var(--rows, 3);
 }
 
-.grid > .zone-el {
-  display: flex;
-}
-
 @media (min-width: 990px) {
   .col-span-2 {
     grid-column: span 2;
@@ -119,6 +115,22 @@
   position: relative;
   top: 0.15em;
   margin-left: 10px;
+}
+
+/**
+ * Zones
+ */
+.zone {
+  clear: both;
+}
+
+.zone.grid {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.zone.grid.combo {
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 /**
