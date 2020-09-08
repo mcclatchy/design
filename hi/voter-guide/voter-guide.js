@@ -27,6 +27,7 @@ class VoterGuide extends window.SimpleGrid {
     this.addCSS(`
       .subnav-section-icon { display: none; }
       .subnav-section-name { margin-top: 0 !important; }
+      voter-ballot .ad-widget { margin: inherit; }
 
       @media print {
         body {
