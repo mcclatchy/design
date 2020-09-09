@@ -52,6 +52,11 @@ class VoterBallot extends VoterBaseElement {
         grid-column: span 2;
       }
 
+      :host(.no-address) .address {
+        border-color: red;
+        box-shadow: 0 0 3px red;
+      }
+
       input {
         width: 100%;
         max-width: 728px;
@@ -343,13 +348,24 @@ class VoterBallot extends VoterBaseElement {
   async getBallot() {
     let order = 0;
     this.ready = false;
-    this.toast.message = "Getting your personalized ballot ...";
-    this.toast.show();
     this.classList.remove("empty");
+    this.classList.remove("no-address");
 
     // Clear out a previous ballot
     this.querySelectorAll("voter-ballot-race, voter-ballot-measure").forEach(r => { r.remove(); });
     this.classList.remove("partial");
+
+    // Check for an empty address
+    if(this.address.length < 1) {
+      trackInteraction("Voter Guide empty address search");
+      this.classList.add("no-address");
+      this.ready = true;
+      return;
+    }
+
+    // Show the message
+    this.toast.message = "Getting your personalized ballot ...";
+    this.toast.show();
 
     // API functions found in voter-element
     const [positions, measures] = await Promise.all([
