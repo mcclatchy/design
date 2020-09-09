@@ -180,11 +180,7 @@ class VoterBallotRace extends VoterBaseElement {
     </style>
 
     <div class="impact race-name package">
-      <h5 class="caps">${this.race.normalized_position.name}</h5>
-      ${this.summary ? `
-      <summary class="description">${this.summary}</summary>
-      ` : '' }
-
+      <h5 class="caps">${this.race.name}</h5>
     </div>
 
     <form class="candidates">
