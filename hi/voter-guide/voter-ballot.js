@@ -235,7 +235,7 @@ class VoterBallot extends VoterBaseElement {
       <h1>Want more candidate insights?</h1>
       <p>Sign up to explore in-depth questionnaires highlighting local candidates’ positions on key issues important to your community. View your special offer and get started now.</p>
       <div class="buttons">
-        <a class="button" data-interaction="Voter Guide clicked subscribe button" href="${this.offer}">Subscribe</a>
+        <a class="button subscribe" data-interaction="Voter Guide clicked subscribe button" href="${this.offer}">Subscribe</a>
         <a class="button signin" href="${this.signInLink}">Sign In</a>
       </div>
     </dynamic-modal>
@@ -332,6 +332,15 @@ class VoterBallot extends VoterBaseElement {
 
     this.addEventListener("survey-loaded", (e) => {
       this.toast.hide();
+    });
+
+    // Listen for the subscribe and sign in buttons
+    this.shadowRoot.querySelector("dynamic-modal .subscribe").addEventListener("click", (e) => {
+      trackInteraction("Voter Guide clicked subscribe button", true);
+    });
+
+    this.shadowRoot.querySelector("dynamic-modal .signin").addEventListener("click", (e) => {
+      trackInteraction("Voter Guide clicked the sign in button", true);
     });
   }
 
