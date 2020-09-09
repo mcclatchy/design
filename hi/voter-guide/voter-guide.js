@@ -23,11 +23,22 @@ class VoterGuide extends window.SimpleGrid {
 
   // A couple additional styles specific to this mock
   connectedCallback() {
+    if(this.shadowRoot) return; 
     super.connectedCallback();
+    
     this.addCSS(`
       .subnav-section-icon { display: none; }
       .subnav-section-name { margin-top: 0 !important; }
       voter-ballot .ad-widget { margin: inherit; }
+
+      .subscriber-status {
+        position: fixed;
+        top: 10px;
+        right: 15px;
+        font: 12px var(--sans);
+        margin: 0;
+        z-index: 99999;
+      }
 
       @media print {
         body {
@@ -59,6 +70,11 @@ class VoterGuide extends window.SimpleGrid {
       let href = l.href.replace(/#.*$/, "");
       l.href = `${href}#voter-guide`;
     });
+
+    // Subscriber status debug hash
+    if(window.location.hash.match("subscriberstatus")) {
+      document.body.insertAdjacentHTML('beforeend', `<p class="subscriber-status">subscriber status: ${digitalData?.user?.subscription?.status}</p>`);
+    }
   }
 
   dropZone(zone, order) {
