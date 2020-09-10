@@ -16,11 +16,12 @@ class LabPanel extends HTMLElement {
       --hw: bold;
       --ht: uppercase;
       --tf: var(--sans);
+      --padding: 0;
     }
 
     .package {
-      max-width: 728px;
-      padding: 45px;
+      max-width: var(--story-width, 728px);
+      padding: 45px 15px;
     }
 
     .package ::slotted(*) {
