@@ -12,6 +12,10 @@ class LabPanel extends HTMLElement {
       flex-direction: column;
       align-items: center;
       max-width: unset !important;
+      --hf: var(--sans);
+      --hw: bold;
+      --ht: uppercase;
+      --tf: var(--sans);
     }
 
     .package {
@@ -22,10 +26,6 @@ class LabPanel extends HTMLElement {
     .package ::slotted(*) {
       position: relative;
       max-width: 100% !important;
-    }
-
-    .package ::slotted(p) {
-      font: 17px/1.8em "McClatchy Sans", sans-serif !important;
     }
 
     /* Fill variant */
