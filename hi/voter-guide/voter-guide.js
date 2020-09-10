@@ -143,7 +143,6 @@ class VoterGuide extends window.SimpleGrid {
 
         .vg-zone {
           grid-column: 1;
-          grid-row: span 2;
         }
       `);
     } else {
