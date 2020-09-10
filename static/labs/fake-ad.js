@@ -64,10 +64,14 @@ class FakeAd extends HTMLElement {
       .ad {
         display: none;
         background-color: var(--color);
+        font-family: var(--font-family, var(--sans));
+        font-size: 24px;
       }
 
       :host(.rendered) .ad {
-        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
 
       :host(.fill) {
@@ -75,7 +79,7 @@ class FakeAd extends HTMLElement {
       }
     </style>
 
-    <div class="ad"></div>
+    <div class="ad">${this.text}</div>
     `;
     return t;
   }
@@ -157,6 +161,10 @@ class FakeAd extends HTMLElement {
     } else {
       this.columns = 3;
     }
+  }
+
+  get text() {
+    return this.getAttribute("text") || "";
   }
 }
 

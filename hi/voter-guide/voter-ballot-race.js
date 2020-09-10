@@ -180,11 +180,7 @@ class VoterBallotRace extends VoterBaseElement {
     </style>
 
     <div class="impact race-name package">
-      <h5 class="caps">${this.race.normalized_position.name}</h5>
-      ${this.summary ? `
-      <summary class="description">${this.summary}</summary>
-      ` : '' }
-
+      <h5 class="caps">${this.race.name}</h5>
     </div>
 
     <form class="candidates">
@@ -194,7 +190,7 @@ class VoterBallotRace extends VoterBaseElement {
           <label class="info flex" for="${c.id}">
             <div class="package">
               <h3>${this.normalizeName(c)}</h3>
-              <summary><span class="party">${c.party_name}</span> ${c.incumbent ? `- INCUMBENT` : ""}</summary>
+              <summary><span class="party">${c.party_name}</summary>
             </div>
             <div class="check">
               <span class="checkbox"></span>
@@ -205,7 +201,7 @@ class VoterBallotRace extends VoterBaseElement {
 
       ${this.race.candidates.length == 0 ? `
       <div class="incomplete">
-        <h4>Data not yet available</h4>
+        <h4>Data not yet available <small style="display: block;">(or no candidates have filed)</small></h4>
       </div>
       ` : ''}
     </form>

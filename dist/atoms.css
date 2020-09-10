@@ -127,6 +127,9 @@ time, .time {
 
 blockquote {
   font: bold larger/1.5em var(--sans);
+  margin: 0;
+  padding-left: 20px;
+  border-left: 6px solid #ddd;
 }
 
 blockquote .attr {

@@ -1,0 +1,37 @@
+/**
+ * CSS for the lab team on Fresnoland
+ */
+
+.lab-team {
+  --tf: var(--sans);
+  --ts: 0.875rem;
+  margin: 0 auto;
+}
+
+.lab-team .grid {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  padding: 30px 15px;
+}
+
+.lab-team .package {
+  align-items: center;
+  text-align: center;
+}
+
+.lab-team .thumb {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.lab-team .thumb img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 20%;
+}

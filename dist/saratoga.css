@@ -127,6 +127,9 @@ time, .time {
 
 blockquote {
   font: bold larger/1.5em var(--sans);
+  margin: 0;
+  padding-left: 20px;
+  border-left: 6px solid #ddd;
 }
 
 blockquote .attr {
@@ -704,10 +707,6 @@ summary, .summary {
   grid-row-end: span var(--rows, 3);
 }
 
-.grid > .zone-el {
-  display: flex;
-}
-
 @media (min-width: 990px) {
   .col-span-2 {
     grid-column: span 2;
@@ -802,6 +801,22 @@ summary, .summary {
   position: relative;
   top: 0.15em;
   margin-left: 10px;
+}
+
+/**
+ * Zones
+ */
+.zone {
+  clear: both;
+}
+
+.zone.grid {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.zone.grid.combo {
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 /**

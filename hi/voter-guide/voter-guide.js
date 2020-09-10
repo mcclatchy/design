@@ -13,17 +13,32 @@ class VoterGuide extends window.SimpleGrid {
     let lede = this._articles[0];
 
     if(lede) {
-      lede.querySelector("h3.h1").classList.remove("h1");
-      lede.querySelector("summary").remove();
+      let headline = lede.querySelector(".h1");
+      if(headline) headline.classList.remove("h1");
+
+      let summary = lede.querySelector("summary");
+      if(summary) summary.remove();
     }
   }
 
   // A couple additional styles specific to this mock
   connectedCallback() {
+    if(this.shadowRoot) return; 
     super.connectedCallback();
+    
     this.addCSS(`
       .subnav-section-icon { display: none; }
       .subnav-section-name { margin-top: 0 !important; }
+      voter-ballot .ad-widget { margin: inherit; }
+
+      .subscriber-status {
+        position: fixed;
+        top: 10px;
+        right: 15px;
+        font: 12px var(--sans);
+        margin: 0;
+        z-index: 99999;
+      }
 
       @media print {
         body {
@@ -49,45 +64,93 @@ class VoterGuide extends window.SimpleGrid {
         }
       }
     `);
+
+    let links = this.querySelectorAll("article a");
+    links.forEach(l => {
+      let href = l.href.replace(/#.*$/, "");
+      l.href = `${href}#voter-guide`;
+    });
+
+    // Subscriber status debug hash
+    if(window.location.hash.match("subscriberstatus")) {
+      document.body.insertAdjacentHTML('beforeend', `<p class="subscriber-status">subscriber status: ${digitalData?.user?.subscription?.status}</p>`);
+    }
+  }
+
+  dropZone(zone, order) {
+    let vb = this.querySelector("voter-ballot");
+
+    if(zone) {
+      zone.setAttribute("slot", "races");
+      zone.style.order = order;
+      zone.classList.add("vg-zone");
+
+      let z9 = zone.querySelector("#zeus_mn-gpt-9");
+      if(z9) z9.remove();
+
+      vb.appendChild(zone);
+
+      let ad = zone.querySelector("zeus-ad");
+      if(ad) {
+        this._observer.observe(ad, { attributes: true });
+      }
+    }
   }
 
   handleZones() {
     // Move ad test
     if(this.hasAttribute("ads")) {
-      let vb = this.querySelector("voter-ballot");
-      let z5 = this.getZone(5);
-      z5.setAttribute("slot", "races");
-      z5.style.order = 6;
-      vb.appendChild(z5);
 
-      let z9 = this.getZone(9);
-      z9.setAttribute("slot", "races");
-      z9.style.order = 12;
-      vb.appendChild(z9);
-
-      this.addCSS(`
-        voter-ballot .zone-el {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        }
-
-        .ntv-ap {
-          order: 3;
-        }
-      `);
-
-      // Gonna do something fun with Zeus
-      window.zeus = window.zeus || {};
-      window.zeus.on("SLOT_RENDER_ENDED", e => {
-        let zone = e.element.closest(".zone-el");
-        let width = e.element.getBoundingClientRect().width;
-
-        if(width > 300) {
-          zone.style.setProperty("grid-column", "span 3");
+      this._observer = new MutationObserver((list, observer) => {
+        for(let mutation of list) {
+          if(mutation.attributeName == "data-renderbehavior") {
+            let ad = mutation.target;
+            let zone = ad.closest(".zone-el");
+            zone.hidden = ad.dataset.renderbehavior == "never";
+          }
         }
       });
 
+      // Mobile
+      let z6 = this.getZone(6);
+      this.dropZone(z6, 4);
+      
+      // Tablet
+      let z3 = this.getZone(3);
+      this.dropZone(z3, 4);
+
+      // Desktop
+      let z5 = this.getZone(5);
+      this.dropZone(z5, 4);
+
+      // Mobile
+      let z7 = this.getZone(7);
+      this.dropZone(z7, 12);
+
+      // Desktop
+      let z8 = this.getZone(8);
+      this.dropZone(z8, 12);
+
+      // Desktop 
+      let z10 = this.getZone(10);
+      z10.style.cssText = `grid-column: 1/-1`;
+      this.dropZone(z10, 1000);
+
+      this.addCSS(`
+        .ntv-ap {
+          order: 3;
+        }
+
+        .vg-zone {
+          grid-column: 1;
+        }
+      `);
+    } else {
+      this.addCSS(`
+        #zone-el-2 {
+          display: none !important;
+        }
+      `);
     }
   }
 }

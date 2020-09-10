@@ -128,6 +128,9 @@ time, .time {
 
 blockquote {
   font: bold larger/1.5em var(--sans);
+  margin: 0;
+  padding-left: 20px;
+  border-left: 6px solid #ddd;
 }
 
 blockquote .attr {
@@ -705,10 +708,6 @@ summary, .summary {
 
 .grid > .rail {
   grid-row-end: span var(--rows, 3);
-}
-
-.grid > .zone-el {
-  display: flex;
 }
 
 @media (min-width: 990px) {

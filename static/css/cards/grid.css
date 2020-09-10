@@ -22,10 +22,6 @@
   grid-row-end: span var(--rows, 3);
 }
 
-.grid > .zone-el {
-  display: flex;
-}
-
 @media(min-width: 990px) {
   .col-span-2 {
     grid-column: span 2;

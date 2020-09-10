@@ -94,10 +94,6 @@ class VoterRaceDetails extends VoterBaseElement {
       <h4>Description</h4>
       <p class="summary">${this.race.description}</p>
     </div>
-    <div class="package">
-      <h4>Salary</h4>
-      <p class="summary">${this.race.salary}</p>
-    </div>
 
     <h2 class="package">Candidates</h2>
     ${this.race.candidates.map((c, i) => `
@@ -107,7 +103,7 @@ class VoterRaceDetails extends VoterBaseElement {
       </figure>
       <div class="package">
         <h3 class="name">${this.normalizeName(c)}</h3>
-        <summary><span class="party">${c.party_name}</span> ${c.incumbent ? `- INCUMBENT` : ""}</summary>
+        <summary><span class="party">${c.party_name}</span></summary>
 
         <div class="experience d-list" data-id="${c.id}" hidden>
           <h4 class="c-header expander" onclick="this.classList.toggle('open')">Experience</h4>
@@ -196,6 +192,8 @@ class VoterRaceDetails extends VoterBaseElement {
   // Standardizes experience data from BallotReady
   normalizeExperience(experience) {
     return experience.map((e, i) => {
+      if(!e.position) return '';
+
       let years = '';
 
       if(e.start_year && e.end_year) {

@@ -52,6 +52,11 @@ class VoterBallot extends VoterBaseElement {
         grid-column: span 2;
       }
 
+      :host(.no-address) .address {
+        border-color: red;
+        box-shadow: 0 0 3px red;
+      }
+
       input {
         width: 100%;
         max-width: 728px;
@@ -80,6 +85,10 @@ class VoterBallot extends VoterBaseElement {
         --hf: var(--sans);
         --ht: uppercase;
         --hw: bold;
+        --lc: #5169B8;
+        --lhc: #31409F;
+        --ld: underline;
+        --lhd: underline;
       }
 
       @media(min-width: 630px) {
@@ -146,6 +155,14 @@ class VoterBallot extends VoterBaseElement {
         display: block;
       }
 
+      dynamic-modal {
+        --story-width: 920px;
+      }
+
+      #races .grid {
+        align-items: center;
+      }
+
       @media print {
         .intro, .partial-message {
           display: none !important;
@@ -189,17 +206,17 @@ class VoterBallot extends VoterBaseElement {
 
     <div class="intro">
       <slot name="description">
-        <p>Make informed choices in upcoming local elections with our Voter Guide. This interactive tool displays the races and candidates that will appear on your ballot, helping you select (and keep track of) your picks when it’s time to vote. Subscribers can access candidates’ answers to questions about issues important to your community.</p>
+        <p>Make informed choices in upcoming local elections with our Voter Guide. Enter your full address to display the races and candidates that will appear on your ballot. This interactive tool will help you select (and keep track of) your picks when it’s time to vote. Subscribers can access candidates’ answers to questions about issues important to your community.</p>
       </slot>
 
       <div class="how-to-use">
         <h4 class="expander" onclick="this.classList.toggle('open')">${this.enh ? `CÓMO USAR LA GUÍA ELECTORAL` : `HOW TO USE THE VOTER GUIDE`}</h4>
         <slot name="how-to">
-          <p>Enter your home address in the search bar, then click VIEW MY BALLOT. </p>
-          <p>Scroll down to the boxes below to see each ballot item. (Please note some races might be missing due to data availability but will be updated accordingly.)</p>
-          <p>Click “See more candidate information” at the bottom of each box to learn more. Subscribers can click the COMPARE THE CANDIDATES blue box to view candidate responses to our questions. </p>
+          <p>After you enter your home address in the search bar, click VIEW MY BALLOT. </p>
+          <p>Scroll down to the boxes below to see each ballot item. (Please note some races might be missing but will be updated if data becomes available.)</p>
+          <p>Click “See more candidate information” at the bottom of each box to learn more. Subscribers can click the COMPARE THE CANDIDATES blue box to view candidate responses to our questions.</p>
           <p>Click the box next to each candidate you plan to vote for. When you’re finished, click the blue circle icon in the bottom right of the screen to print. Save the printout to refer to when it’s time to vote!</p>
-          <p>You can also bookmark this page if you would prefer not to print. We will load your previous choices when you return on the same device. We will not store your home address or choices on our servers or transmit them in any way; they are confined to your device.</p>
+          <p>You can also bookmark this page if you would prefer not to print. We will load your previous choices when you return on the same device. We will not store your choices on our servers or transmit them in any way; they are confined to your device. We record the addresses submitted to help ensure you have the best customer experience, but they are in no way associated with your choices or any personally identifiable information.</p>
         </slot>
         <slot name="contact"></slot>
       </div>
@@ -218,11 +235,11 @@ class VoterBallot extends VoterBaseElement {
     <mc-toast class="bottom right"></mc-toast>
 
     <dynamic-modal>
-      <img slot="image" src="https://media.mcclatchy.com/target/assets/cc-decline-modal-laptop.png">
-      <h1>You must be a subscriber to view this content</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris luctus eros in ornare vulputate. Integer congue orci sit amet dui euismod tempus. Phasellus ut orci imperdiet, elementum augue et, accumsan.</p>
+      <img slot="image" src="https://media.mcclatchy.com/hi/voter-guide/icons/vg-paywall-image.png">
+      <h1>Want more candidate insights?</h1>
+      <p>Sign up to explore in-depth questionnaires highlighting local candidates’ positions on key issues important to your community. View your special offer and get started now.</p>
       <div class="buttons">
-        <a class="button" data-interaction="Voter Guide clicked subscribe button" href="/subscribe/">Subscribe now</a>
+        <a class="button subscribe" data-interaction="Voter Guide clicked subscribe button" href="${this.offer}">Subscribe</a>
         <a class="button signin" href="${this.signInLink}">Sign In</a>
       </div>
     </dynamic-modal>
@@ -302,8 +319,10 @@ class VoterBallot extends VoterBaseElement {
     // Listen for a survey being clicked
     this.addEventListener("survey-clicked", (e) => {
       let bd = window.location.hash.match("nopaywall");
+      let subStatus = digitalData?.user?.subscription?.status;
+
       // Check subscriber status 
-      if(bd || digitalData?.user?.subscription?.status == "sub_0") {
+      if(bd || (subStatus && subStatus.match(/sub_0|ex/))) {
         this.panel.race = e.detail.race;
         this.panel.show("survey");
         this.toast.message = "Getting survey details ...";
@@ -317,6 +336,15 @@ class VoterBallot extends VoterBaseElement {
 
     this.addEventListener("survey-loaded", (e) => {
       this.toast.hide();
+    });
+
+    // Listen for the subscribe and sign in buttons
+    this.shadowRoot.querySelector("dynamic-modal .subscribe").addEventListener("click", (e) => {
+      trackInteraction("Voter Guide clicked subscribe button", true);
+    });
+
+    this.shadowRoot.querySelector("dynamic-modal .signin").addEventListener("click", (e) => {
+      trackInteraction("Voter Guide clicked the sign in button", true);
     });
   }
 
@@ -333,13 +361,24 @@ class VoterBallot extends VoterBaseElement {
   async getBallot() {
     let order = 0;
     this.ready = false;
-    this.toast.message = "Getting your personalized ballot ...";
-    this.toast.show();
     this.classList.remove("empty");
+    this.classList.remove("no-address");
 
     // Clear out a previous ballot
     this.querySelectorAll("voter-ballot-race, voter-ballot-measure").forEach(r => { r.remove(); });
     this.classList.remove("partial");
+
+    // Check for an empty address
+    if(this.address.length < 1) {
+      trackInteraction("Voter Guide empty address search");
+      this.classList.add("no-address");
+      this.ready = true;
+      return;
+    }
+
+    // Show the message
+    this.toast.message = "Getting your personalized ballot ...";
+    this.toast.show();
 
     // API functions found in voter-element
     const [positions, measures] = await Promise.all([
@@ -375,7 +414,7 @@ class VoterBallot extends VoterBaseElement {
 
       this.classList.toggle("partial", pos.length > 0 && local.length == 0)
     } catch(err) {
-      console.error("Issue parsing positions", err);
+      trackInteraction("Voter Guide reader got the error message");
       this.classList.add("empty");
     }
 
@@ -450,6 +489,10 @@ class VoterBallot extends VoterBaseElement {
   // Different UI for ENH
   get enh() {
     return this.hasAttribute("enh");
+  }
+
+  get offer() {
+    return this.getAttribute("offer") || "/subscribe/";
   }
 
   get signInLink() {
