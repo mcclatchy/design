@@ -159,6 +159,10 @@ class VoterBallot extends VoterBaseElement {
         --story-width: 920px;
       }
 
+      #races .grid {
+        align-items: center;
+      }
+
       @media print {
         .intro, .partial-message {
           display: none !important;

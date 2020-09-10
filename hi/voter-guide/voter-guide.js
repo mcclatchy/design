@@ -89,6 +89,11 @@ class VoterGuide extends window.SimpleGrid {
       if(z9) z9.remove();
 
       vb.appendChild(zone);
+
+      let ad = zone.querySelector("zeus-ad");
+      if(ad) {
+        this._observer.observe(ad, { attributes: true });
+      }
     }
   }
 
@@ -96,39 +101,40 @@ class VoterGuide extends window.SimpleGrid {
     // Move ad test
     if(this.hasAttribute("ads")) {
 
-      try {
-        zeus.on("NODE_CONNECTED", ele => {
-          if(ele.renderBehavior == "never") {
-            ele.closest(".zone-el").hidden = true;
+      this._observer = new MutationObserver((list, observer) => {
+        for(let mutation of list) {
+          if(mutation.attributeName == "data-renderbehavior") {
+            let ad = mutation.target;
+            let zone = ad.closest(".zone-el");
+            zone.hidden = ad.dataset.renderbehavior == "never";
           }
-        });
-      } catch(e) {
-        console.warn("Zeus is not loaded yet.");
-      }
-      
-      // Desktop
-      let z2 = document.querySelector("#zone-el-2");
-      this.dropZone(z2, 3)
-      
+        }
+      });
+
       // Mobile
       let z6 = this.getZone(6);
-      this.dropZone(z6, 3);
+      this.dropZone(z6, 4);
+      
+      // Tablet
+      let z3 = this.getZone(3);
+      this.dropZone(z3, 4);
 
       // Desktop
       let z5 = this.getZone(5);
-      this.dropZone(z5, 9);
-
-      // Mobile
-      let z3 = this.getZone(3);
-      this.dropZone(z3, 9);
-
-      // Desktop
-      let z8 = this.getZone(8);
-      this.dropZone(z8, 1000);
+      this.dropZone(z5, 4);
 
       // Mobile
       let z7 = this.getZone(7);
-      this.dropZone(z7, 1000);
+      this.dropZone(z7, 12);
+
+      // Desktop
+      let z8 = this.getZone(8);
+      this.dropZone(z8, 12);
+
+      // Desktop 
+      let z10 = this.getZone(10);
+      z10.style.cssText = `grid-column: 1/-1`;
+      this.dropZone(z10, 1000);
 
       this.addCSS(`
         .ntv-ap {
@@ -136,14 +142,7 @@ class VoterGuide extends window.SimpleGrid {
         }
 
         .vg-zone {
-          grid-column: 1/-1;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-        }
-
-        .vg-zone[hidden] { 
-          display: none !important;
+          grid-column: 1;
         }
       `);
     } else {
