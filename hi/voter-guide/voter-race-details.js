@@ -213,13 +213,15 @@ class VoterRaceDetails extends VoterBaseElement {
     });
 
     return sorted.map((e, i) => {
-      let degree = e.degree.substring(0, e.degree.indexOf("'"));
-      let major = e.major ? `${degree ? ` of` : ''} ${e.major} degree` : '';
-      let year = e.grad_year;
+      let schoolString = [ `${e.school.trim()}`, e.grad_year ].filter(Boolean).join(", ");
 
-      let schoolString = [ `${e.school.trim()}`, year ].filter(Boolean).join(", ");
-
-      return `<p class="summary">${schoolString} <span class="bold gray" style="display: block">${degree.concat(major)}</span></p>`;
+      if(e.degree) {
+        let degree = e.degree.substring(0, e.degree.indexOf("'"));
+        let major = e.major ? `${degree ? ` of` : ''} ${e.major} degree` : '';
+        return `<p class="summary">${schoolString} <span class="bold gray" style="display: block">${degree.concat(major)}</span></p>`;
+      } else {
+        return `<p class="summary">${schoolString}</p>`;
+      }
     }).join('');
   }
 }
