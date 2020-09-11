@@ -10,7 +10,7 @@ The title displays center aligned on all breakpoints and pages, with the excepti
 <div class="dsp example">
     <section class="title">
             <h1 class="sans bold h3">Local news wherever you go</h1>
-            <p class="sans">Thanks for reading! You’ve read all your free articles this month. You must have an account to continue.<br>Subscribe or <a href="/saratoga/decks/purchase-flow/sign-up" class="more-link inline">Sign up</a></p>
+            <p class="sans">Thanks for reading! You’ve read all your free articles this month. You must have an account to continue.<br>Subscribe or <a href="/saratoga/decks/purchase-flow/sign-up" class="more-link inline primary no-caps">Sign up</a></p>
     </section> 
 </div>
 
@@ -20,7 +20,7 @@ The title displays center aligned on all breakpoints and pages, with the excepti
       <div>
           <h1 class="sans bold h3">Sign up</h1>
           <p class="summary">Use your email address or a social account. 
-    Already have an account? <a href="/saratoga/decks/purchase-flow/sign-in/" class="more-link inline">Sign in</a></p>
+    Already have an account? <a href="/saratoga/decks/purchase-flow/sign-in/" class="more-link inline primary no-caps">Sign in</a></p>
       </div>
     </section>
 </div>
@@ -32,7 +32,7 @@ The title displays center aligned on all breakpoints and pages, with the excepti
      <div class="package small">
       <h2 class="sans bold">Sign up</h2>
       <p class="summary">Use your email address or a social account.<br>
-Already have an account? <a href="#" class="more-link inline">Sign in</a></p>
+Already have an account? <a href="#" class="more-link inline primary no-caps">Sign in</a></p>
      </div>
 </section>
 {{< /highlight >}}
@@ -43,7 +43,7 @@ Already have an account? <a href="#" class="more-link inline">Sign in</a></p>
 <div>
   <h1 class="sans bold h3">Sign up</h1>
   <p class="summary">Use your email address or a social account. 
-Already have an account? <a href="/saratoga/decks/purchase-flow/sign-in/" class="more-link inline">Sign in</a></p>
+Already have an account? <a href="/saratoga/decks/purchase-flow/sign-in/" class="more-link inline primary no-caps">Sign in</a></p>
 </div>
 </section>
 {{< /highlight >}}

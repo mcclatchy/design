@@ -1,39 +1,39 @@
 /**
- * Reverse impact and promo  
+ * Reverse impact and promo
  */
-         
+
 .impact,
 .promo,
+.promo-light,
 .disabled {
   background-color: #373737;
   color: white;
   --tc: white;
   --lc: white;
   --lhc: white;
-  --bc: white; 
-} 
-    
+  --bc: white;
+}
+
 .promo {
   background-color: #31409F;
-} 
+}
 
 .disabled {
   background-color: #989898;
 }
 
 .white {
-    background-color: #fff;
-    border-color: #fff;
-    color: #222; 
-} 
+  background-color: #fff;
+  border-color: #fff;
+  color: #222;
+}
 
 .promo-light {
-    background-color: #5169B8;
-    color: #fff;
+  background-color: #5169B8;
 }
- 
+
 .impact *,
-.promo * { 
+.promo * {
   border-color: white;
   fill: white;
   --bc: #222;
@@ -43,5 +43,3 @@
 .promo * {
   --bc: #31409F;
 }
-
-

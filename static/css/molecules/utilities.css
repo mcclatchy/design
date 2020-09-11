@@ -47,12 +47,15 @@ summary, .summary {
   --bc: var(--tc, #707070);
 }
 
-.cutout {
-  background-color: #f4f4f4;
+.dark {
+  color: var(--tc, #222);
+  --lc: #222;
 }
 
-.blue {
+.blue, .primary {
   color: var(--tc, #31409F);
+  --lc: #31409f;
+  --lhc: #5169B8;
 }
 
 .error, .errorText {
@@ -67,6 +70,15 @@ summary, .summary {
   box-shadow: none;
 }
 
+.inline {
+  display: inline;
+}
+
 .relative {
   position: relative;
 }
+
+.cutout {
+  background-color: #f4f4f4;
+}
+

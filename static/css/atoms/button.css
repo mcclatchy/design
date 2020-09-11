@@ -47,22 +47,17 @@ button:hover,
   border-color: #4a4a4a;
 }
 
-
 .button.social {
+  display: block;
+  align-self: stretch;
   border-color: #4a4a4a;
-  margin-bottom: 5px;
-  width: 100%;
-}
-
-.button.social:last-child {
-    margin-bottom: 0px;
 }
 
 .button.social:before {
   content:'';
   font-family: "Font Awesome 5 Brands";
   display: inline-block;
-  margin-right: 10px; 
+  margin-right: 10px;
 }
 
 .button.social.facebook:before {
