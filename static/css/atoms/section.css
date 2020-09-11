@@ -3,7 +3,7 @@
  */
 
 section {
-  max-width: 1140px;
+  max-width: var(--section-width);
   margin: 30px auto;
 }
 
