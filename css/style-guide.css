@@ -50,20 +50,38 @@ td:first-child {
   z-index: 1;
 }
 
-.list .cards {
+.list .cards, .list .organisms {
   background-color: #FDFDF6;
 }
 
-.list .decks {
+.list .decks, .list .molecules, {
   background-color: #D2EFF2;
 }
 
-.list .subscriptions {
+.list .templates {
   background-color: #A5C3E9;
 }
 
 .list .atoms {
   border-top: 1px solid #ddd;
+}
+
+.list .eds-shasta {
+  background-color: #5169B8;
+  color: white;
+  --lc: white;
+  --lhc: white;
+}
+
+.list .eds-pegacorn {
+  background-color: #808CD8;
+}
+
+.list .eds-dumbledore {
+  background-color: #31409F;
+  color: white;
+  --lc: white;
+  --lhc: white;
 }
 
 .list .package.active {
@@ -75,6 +93,17 @@ td:first-child {
 
 .list a.active {
   color: #377f6a;
+}
+
+.list .package.eds-active {
+  background-color: #31409F;
+  color: white;
+  --lc: white;
+  --lhc: white;
+}
+
+.list a.eds-active {
+  color: #31409F;
 }
 
 .list .new:after {

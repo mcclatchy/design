@@ -1,9 +1,11 @@
 /**
- * Reverse impact and promo 
+ * Reverse impact and promo
  */
 
 .impact,
-.promo {
+.promo,
+.promo-light,
+.disabled {
   background-color: #373737;
   color: white;
   --tc: white;
@@ -14,6 +16,20 @@
 
 .promo {
   background-color: #31409F;
+}
+
+.disabled {
+  background-color: #989898;
+}
+
+.white {
+  background-color: #fff;
+  border-color: #fff;
+  color: #222;
+}
+
+.promo-light {
+  background-color: #5169B8;
 }
 
 .impact *,

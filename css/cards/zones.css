@@ -1,0 +1,16 @@
+/**
+ * Zones
+ */
+
+.zone {
+  clear: both;
+}
+
+.zone.grid {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.zone.grid.combo {
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
