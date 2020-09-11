@@ -1,0 +1,109 @@
+{{ $cp := . }}
+<div class="paper digest list">
+
+	<div class="atoms">
+		<div class="label">
+			<h5>OVERVIEW</h5>
+		</div>
+		{{ range .Site.Menus.overview }}
+		{{ $active := $cp.IsMenuCurrent "overview" . }}
+		<div class="package {{- if $active }} eds-active{{ end }}">
+			<h4 class="sans bold">
+				<a class="{{ .Page.Param "class" }}" href="{{ .Page.Permalink }}">{{ .Name }}</a>
+			</h4>
+			<p class="summary">{{ .Page.Description }}</p>
+		</div>
+		{{ end }}
+	</div>
+
+	<div class="atoms">
+		<div class="label">
+			<h5>FRAMEWORK</h5>
+		</div>
+		{{ range .Site.Menus.frameworks }}
+		{{ $active := $cp.IsMenuCurrent "frameworks" . }}
+		<div class="package {{- if $active }} eds-active{{ end }}">
+			<h4 class="sans bold">
+				<a class="{{ .Page.Param "class" }}" href="{{ .Page.Permalink }}">{{ .Name }}</a>
+			</h4>
+			<p class="summary">{{ .Page.Description }}</p>
+		</div>
+		{{ end }}
+	</div>
+
+	<div class="atoms">
+		<div class="label">
+			<h5>ATOMS</h5>
+		</div>
+		<div class="package">
+			{{ range .Site.Menus.atoms }}
+			{{ $active := $cp.IsMenuCurrent "atoms" . }}
+			<h5 class="sans bold {{ .Page.Param "class" }}">
+				<a href="{{ .Page.Permalink }}" class="{{ if $active }}eds-active{{ end }}">{{ .Name }}</a>
+			</h5>
+			{{ end }}
+		</div>
+	</div>
+
+	<div class="atoms">
+		<div class="label">
+			<h5>MOLECULES</h5>
+		</div>
+		{{ range .Site.Menus.molecules }}
+		{{ $active := $cp.IsMenuCurrent "molecules" . }}
+		<div class="package {{- if $active }} eds-active{{ end }}">
+			<h4 class="sans bold">
+				<a class="{{ .Page.Param "class" }}" href="{{ .Page.Permalink }}">{{ .Name }}</a>
+			</h4>
+			<p class="summary">{{ .Page.Description }}</p>
+		</div>
+		{{ end }}
+	</div>
+
+	<div class="atoms">
+		<div class="label">
+			<h5>LAYOUTS</h5>
+		</div>
+		{{ range .Site.Menus.layouts }}
+		{{ $active := $cp.IsMenuCurrent "layouts" . }}
+		<div class="package {{- if $active }} eds-active{{ end }}">
+			<h4 class="sans bold">
+				<a class="{{ .Page.Param "class" }}" href="{{ .Page.Permalink }}">{{ .Name }}</a>
+			</h4>
+			<p class="summary">{{ .Page.Description }}</p>
+		</div>
+		{{ end }}
+	</div>
+
+	<div class="atoms">
+		<div class="label">
+			<h5>ADOBE CAMPAIGN</h5>
+		</div>
+		{{ range .Site.Menus.campaign }}
+		{{ $active := $cp.IsMenuCurrent "campaign" . }}
+		<div class="package {{- if $active }} eds-active{{ end }}">
+			<h4 class="sans bold">
+				<a class="{{ .Page.Param "class" }}" href="{{ .Page.Permalink }}">{{ .Name }}</a>
+			</h4>
+			<p class="summary">{{ .Page.Description }}</p>
+		</div>
+		{{ end }}
+	</div>
+
+	<div class="atoms">
+		<div class="label">
+			<h5>TEMPLATES</h5>
+		</div>
+		{{ range .Site.Menus.templates }}
+		{{ $active := $cp.IsMenuCurrent "templates" . }}
+		<div class="package {{- if $active }} eds-active{{ end }}">
+			<h4 class="sans bold">
+				<a class="{{ .Page.Param "class" }}" href="{{ .Page.Permalink }}">{{ .Name }}</a>
+			</h4>
+			<p class="summary">{{ .Page.Description }}</p>
+		</div>
+		{{ end }}
+	</div>
+
+	<script src="/js/style-guide.js"></script>
+</div>

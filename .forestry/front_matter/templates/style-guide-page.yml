@@ -24,22 +24,22 @@ fields:
   config:
     required: false
 pages:
-- content/saratoga/label.md
-- content/saratoga/h1.md
-- content/saratoga/h3.md
-- content/saratoga/p.md
-- content/saratoga/figure.md
-- content/saratoga/li.md
-- content/saratoga/card.md
 - content/saratoga/button.md
-- content/saratoga/figcaption.md
+- content/saratoga/card.md
 - content/saratoga/digest.md
+- content/saratoga/figcaption.md
+- content/saratoga/figure.md
+- content/saratoga/h1.md
 - content/saratoga/h2.md
-- content/saratoga/h6.md
-- content/saratoga/package.md
-- content/saratoga/h5.md
-- content/saratoga/paper.md
-- content/saratoga/impact.md
-- content/saratoga/time.md
-- content/saratoga/more-link.md
+- content/saratoga/h3.md
 - content/saratoga/h4.md
+- content/saratoga/h5.md
+- content/saratoga/h6.md
+- content/saratoga/impact.md
+- content/saratoga/label.md
+- content/saratoga/li.md
+- content/saratoga/more-link.md
+- content/saratoga/p.md
+- content/saratoga/package.md
+- content/saratoga/paper.md
+- content/saratoga/time.md

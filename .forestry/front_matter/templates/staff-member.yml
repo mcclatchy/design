@@ -38,15 +38,14 @@ fields:
   hidden: false
   default: ''
 pages:
-- data/team/jay.toml
-- data/team/paige.toml
-- data/team/eddie.toml
-- data/team/farhin.toml
 - data/team/aaron.toml
-- data/team/charnae.toml
-- data/team/chelsea.toml
 - data/team/alexandra.toml
-- data/team/holly.toml
-- data/team/jessica.toml
+- data/team/charnae.toml
+- data/team/eddie.toml
 - data/team/eric.toml
+- data/team/farhin.toml
+- data/team/holly.toml
+- data/team/jay.toml
+- data/team/jessica.toml
 - data/team/matt.toml
+- data/team/paige.toml

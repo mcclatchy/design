@@ -12,12 +12,22 @@ Buttons are designed to be placed in a center-aligned row using browser defaults
 
 #### EXAMPLE
 
-<div>
+<div style="padding-bottom: 30px;">
 <button class="impact button">Impact button</button>
 <button class="ghost button">Ghost button</button>
-
 <button class="promo button">Promo button</button>
 <button class="button">Text button</button>
+</div>
+
+##### Social Buttons
+
+<div style="padding-bottom: 30px;">
+    <div class="package" style="max-width:340px;padding: 0;">
+       <button class="button social facebook">Sign in with Facebook</button>
+       <button class="button social google">Sign in with Google</button>
+       <button class="button social apple">Sign in with Apple</button>
+       <button class="button social twitter">Sign in with Twitter</button>
+    </div>
 </div>
 
 #### HTML
@@ -28,6 +38,9 @@ Buttons are designed to be placed in a center-aligned row using browser defaults
   <button class="button ghost">Ghost button</button>
   <button class="button promo">Promo button</button>
   <button class="button">Text button</button>
+  <button class="button social facebook">Sign in with Facebook</button>
+  <button class="button social google">Sign in with Google</button>
+  <button class="button social apple">Sign in with Apple</button>
 </div>
 ```
 

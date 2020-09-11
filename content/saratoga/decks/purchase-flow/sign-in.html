@@ -1,0 +1,83 @@
+---
+title: purchase flow sign in
+description: A sample purchase flow sign in page.
+layout: deck
+---
+<main class="dsp" style="padding-bottom: 50px;">
+<div class="flag full-bleed standard">
+  <div class="paper"> 
+    <div class="top flex">
+        <a href="https://www.miamiherald.com" class="market-logo" aria-label="Miami Herald">
+            <img src="https://www.miamiherald.com/wps/build/images/miamiherald/logo.svg" alt="Miami Herald Logo">
+        </a>  
+        <div class="flex links">
+            <a href="#" class="button">800-555-5555</a>
+            <a href="#" class="button">Contact Us</a>
+            <a href="#" class="more-link">Sign Out</a>
+        </div>
+    </div>
+  </div>
+</div>  
+
+<section>
+    <div class="package small">
+       <div class="progress">
+        <span class="active">1. Account</span>
+        <span>2. Payment</span>
+        <span>3. Review</span>
+       </div>
+    </div>
+</section>
+
+<section class="title purchase-flow">
+  <div>
+      <h1 class="sans bold h3">Sign in</h1>
+      <p class="summary">Use your email address or a social account. 
+Don't have an account? <a href="/saratoga/decks/purchase-flow/sign-up/" class="more-link inline">Sign up</a></p>
+  </div>
+</section>
+
+<section>
+  <div class="grid">
+        <div class="paper" style="order: 2;">
+            <div class="package">
+                <form action="/saratoga/decks/purchase-flow/new-payment/">
+                    <div>
+                        <label for="email-input">Email address</label>
+                        <input type="email" id="email-input" required>
+                    </div>
+                    <div>
+                        <label for="password-input" onclick="changeType()" id="password-label">Password</label>
+                        <small>Must be at least 7 characters long</small>
+                        <input type="password" id="password-input" minlength="7" required>
+                    </div>
+                    <button id="button" type="submit" class="button disabled">sign in</button>
+                </form>
+            </div>
+        </div>
+        <div class="card horizontal package small">
+            <div>
+                <span class="summary bold">Unlimited Digital Access</span>
+                <small>$10.99 for 1 month, $15.99/month after.</small>
+            </div>
+            <small class="expander" onclick="this.classList.toggle('open')">Show details</small>
+            <small class="stretch">Get access to everything on Miamiherald.com, our apps, the eEdition, and our stories platforms like Facebook Instant Articles and Google News.</small>
+        </div>
+        <div style="order: 3;">
+            <div class="paper">
+                <div class="package">
+                   <button class="button social facebook">Sign in with Facebook</button>
+                   <button class="button social google">Sign in with Google</button>
+                   <button class="button social apple">Sign in with Apple</button>
+                </div>
+            </div>
+            <p class="summary">I'm a print subscriber. <a href="#" class="more-link inline">Activate digital access</a></p>
+        </div>
+
+  </div>
+</section>
+
+</main>
+
+
+<script async src="/js/forms.js"></script>
