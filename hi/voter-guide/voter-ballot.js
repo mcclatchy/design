@@ -201,7 +201,7 @@ class VoterBallot extends VoterBaseElement {
       <img class="logo" src="https://media.mcclatchy.com/hi/voter-guide/icons/vg-logo.svg" alt="Logo de Guía Electoral">`}
 
       <input type="text" class="address" name="address" placeholder="e.g., 1452 E 53rd St, Chicago, IL">
-      <input type="submit" class="submit button impact" value="View my ballot"></a>
+      <input type="submit" class="submit button impact" value="${this.enh ? `Ver mi boleta` : `View my ballot`}"></a>
     </form>
 
     <div class="intro">

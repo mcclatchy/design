@@ -118,7 +118,7 @@ class VoterBallotRace extends VoterBaseElement {
       }
 
       :host(.enh) .ballot-details,
-      :host(.enh) .survey-button {
+      :host(.enh) .survey.button {
         display: none;
       }
 
