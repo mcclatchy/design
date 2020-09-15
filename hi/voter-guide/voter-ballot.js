@@ -427,6 +427,11 @@ class VoterBallot extends VoterBaseElement {
         bm.setAttribute("slot", "races");
         order += 1;
         bm.style.order = order;
+
+        if(this.enh) {
+          bm.classList.add("enh");
+        }
+
         this.appendChild(bm);
       });
     } catch(err) {

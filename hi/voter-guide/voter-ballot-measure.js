@@ -118,6 +118,11 @@ class VoterBallotMeasure extends VoterBaseElement {
         transform: rotate(45deg);
       }
 
+      :host(.enh) .ballot-details,
+      :host(.enh) .survey.button {
+        display: none;
+      }
+
       @media print {
         :host {
           display: block;
