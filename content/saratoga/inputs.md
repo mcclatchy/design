@@ -8,75 +8,79 @@ Inputs are designed to be placed in a center-aligned form that is 100% of the pa
 
 #### Text Inputs Example
 
-<div class="dsp" style="margin-bottom: 30px;">
-    <form style="max-width: 400px;">
-        <div>
-          <label for="default-input">Default</label>
-          <input type="text" id="default-input">
-        </div>
-        <div>
-          <label for="focused-input">Focused</label>
-          <input type="text" id="focused-input">
-        </div>
-        <div>
-          <label for="hint-input">Hint</label>
-          <small>This is a hint</small>     
-          <input type="text" id="hint-input">
-        </div>
-        <div>
-          <label for="error-input">Error</label>
-          <small for="error-input">This is an error message</small>     
-          <input type="text" id="error-input" class="is-invalid">
-        </div>
-        <div>
-          <label for="password-input" onclick="changeType()" id="password-label">Password</label>
-          <small>Must be at least 7 characters long</small>    
-          <input type="password" id="password-input">
-        </div>
-      <button id="button" type="submit" class="button promo">submit</button>   
-    </form>  
- </div>  
+<form style="grid-template-columns: 400px;">
+  <div>
+    <label for="default-input">Default</label>
+    <input type="text" id="default-input">
+  </div>
+  <div>
+    <label for="focused-input">Focused</label>
+    <input type="text" class="focus">
+  </div>
+  <div>
+    <label for="hint-input">Hint</label>
+    <small>This is a hint</small>     
+    <input type="text" id="hint-input">
+  </div>
+  <div>
+    <label for="error-input">Error</label>
+    <small class="error" for="error-input">This is an error message</small>     
+    <input type="text" id="error-input" class="is-invalid">
+  </div>
+  <div>
+    <label for="password-input" onclick="changeType()" id="password-label">Password</label>
+    <small>Must be at least 7 characters long</small>    
+    <input type="password" id="password-input">
+  </div>
+  <div>
+    <label for="native-select">Native select box</label>
+    <select>
+      <option value="Relevance">Relevance</option>
+      <option value="Newest">Newest</option>
+      <option value="Oldest">Oldest</option>
+    </select>
+  </div>
+  <button id="button" type="submit" class="button promo">submit</button>   
+</form>  
   
 #### Checkboxes and Radios Example
-<div style="margin-bottom:30px;">
-     <form>
-      <label class="checkbox-container">Custom Checkbox
-          <input type="checkbox">
-          <span class="checkmark"></span>
-      </label>
-      <label class="checkbox-container">Custom Radio
-        <input type="radio" checked="checked" name="radio">
-        <span class="radio"></span>
-      </label>
-      <label class="checkbox-container">Custom Radio
-        <input type="radio" name="radio">
-        <span class="radio"></span>
-      </label>
-    </form> 
-</div>
+<form class="checkboxes">
+  <label class="checkbox-container">Custom Checkbox
+    <input type="checkbox">
+    <span class="checkmark"></span>
+  </label>
+  <label class="check"><input type="checkbox"> Native Checkbox</label>
+  <label class="checkbox-container">Custom Radio
+    <input type="radio" checked="checked" name="radio">
+    <span class="radio"></span>
+  </label>
+  <label class="checkbox-container">Custom Radio
+    <input type="radio" name="radio">
+    <span class="radio"></span>
+  </label>
+  <label class="check"><input type="radio" name="radio"> Native Radio</label>
+</form> 
   
 #### HTML
 ```html
-<div>
-    <form>
-     
-      <label for="input">Default</label>
-      <small>This is a hint</small>           
-      <input type="text" id="input">
-      
-      <label for="password-input" onclick="changeType()" id="password-label">Password</label>
-      <small>Must be at least 7 characters long</small>    
-      <input type="password" id="password-input">
-      
-      <button type="submit" class="button promo">submit</button>  
-      
-      <label class="checkbox-container">Custom Radio
-        <input type="radio" name="radio">
-        <span class="radio"></span>
-      </label>
-      
-    </form>
-</div>
+<form>
+ 
+  <label for="input">Default</label>
+  <small>This is a hint</small>           
+  <input type="text" id="input">
+  
+  <label for="password-input" onclick="changeType()" id="password-label">Password</label>
+  <small>Must be at least 7 characters long</small>    
+  <input type="password" id="password-input">
+  
+  <button type="submit" class="button promo">submit</button>  
+  
+  <label class="checkbox-container">Custom Radio
+    <input type="radio" name="radio">
+    <span class="radio"></span>
+  </label>
+  
+</form>
 ```
 
 #### RULES
