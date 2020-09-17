@@ -12,8 +12,17 @@ form, .checkbox-group {
   grid-gap: 10px;
 }
 
+form .grid {
+  grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
+  grid-gap: 15px;
+}
+
 form > *, .checkbox-group > * {
   margin: 0;
+}
+
+form.paper {
+  padding: 15px;
 }
 
 label { 
