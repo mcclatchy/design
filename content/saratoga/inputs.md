@@ -28,9 +28,9 @@ Inputs are designed to be placed in a center-aligned form that is 100% of the pa
     <input type="text" id="error-input" class="is-invalid">
   </div>
   <div>
-    <label for="password-input" onclick="changeType()" id="password-label">Password</label>
+    <label for="password-input" class="password-label">Password</label>
     <small>Must be at least 7 characters long</small>    
-    <input type="password" id="password-input">
+    <input type="password" class="password">
   </div>
   <div>
     <label for="native-select">Native select box</label>
@@ -40,45 +40,45 @@ Inputs are designed to be placed in a center-aligned form that is 100% of the pa
       <option value="Oldest">Oldest</option>
     </select>
   </div>
+
+  <div class="checkbox-group">
+    <h4>Checkboxes and Radios Example</h4>
+    <label class="checkbox"><input type="checkbox"> Checkbox</label>
+    <label class="checkbox"><input type="radio" name="radio"> Radio Button</label>
+    <label class="checkbox"><input type="radio" name="radio"> Radio Button</label>
+  </div> 
+  
   <button id="button" type="submit" class="button promo">submit</button>   
 </form>  
-  
-#### Checkboxes and Radios Example
-<form class="checkboxes">
-  <label class="checkbox-container">Custom Checkbox
-    <input type="checkbox">
-    <span class="checkmark"></span>
-  </label>
-  <label class="check"><input type="checkbox"> Native Checkbox</label>
-  <label class="checkbox-container">Custom Radio
-    <input type="radio" checked="checked" name="radio">
-    <span class="radio"></span>
-  </label>
-  <label class="checkbox-container">Custom Radio
-    <input type="radio" name="radio">
-    <span class="radio"></span>
-  </label>
-  <label class="check"><input type="radio" name="radio"> Native Radio</label>
-</form> 
+
+---
   
 #### HTML
 ```html
 <form>
  
+  <!-- Either option can be used -->
   <label for="input">Default</label>
   <small>This is a hint</small>           
   <input type="text" id="input">
+
+  <label>Hint <small>This is a hint</small> <input type="text" name="something"></label>
   
-  <label for="password-input" onclick="changeType()" id="password-label">Password</label>
+  <!-- Password toggles go on the label element -->
+  <label for="password-input" class="password-label">Password</label>
   <small>Must be at least 7 characters long</small>    
   <input type="password" id="password-input">
   
+  <!-- Checkbox/Radio labels require a checkbox class -->
+  <div class="checkbox-group">
+    <label class="checkbox"><input type="checkbox"> Checkbox</label>
+    <label class="checkbox"><input type="radio"> Radio button</label>
+  </div>
+
+  <!-- Submit button can be a button element or an input. 
+  The input version will stretch like all other inputs. -->
   <button type="submit" class="button promo">submit</button>  
-  
-  <label class="checkbox-container">Custom Radio
-    <input type="radio" name="radio">
-    <span class="radio"></span>
-  </label>
+  <input type="submit" class="button promo" value="submit">
   
 </form>
 ```
@@ -94,11 +94,12 @@ Inputs are designed to be placed in a center-aligned form that is 100% of the pa
 
 ---
 
-## SELECT
+## CUSTOM SELECT
 
 Custom selects use a combination of the [expander](../expander) molecule and link-based buttons instead of the native select element for forms. Because they are based on the expander, a toggle of the `open` class will show and remove the option list. Lastly, adding the class `selected` to any of options will make it bold. Different use cases will most likely require different javascript, but we have a [starter script](/js/select.js) for the purposes of this demo.
 
 #### EXAMPLE
+
 
 <div class="grid" style="grid-template-columns: 300px 1fr;">
 <form>
@@ -115,18 +116,14 @@ Custom selects use a combination of the [expander](../expander) molecule and lin
 
 <script>
 //toggle password hide/show
-  const el = document.querySelector('#password-label');
-  function changeType() {
-  let x = document.getElementById("password-input");
-  if (x.type === "password") {
-      x.type = "text";  
-  } else {
-    x.type = "password";
-  }
-el.classList.toggle('active');
-}
-//prevent form submit
-  document.getElementById("button").addEventListener("click", function(event){
-  event.preventDefault()
+const passwordInputs = document.querySelectorAll(".password-label");
+passwordInputs.forEach(i => {
+  i.addEventListener("click", togglePasswordVisibility);
 });
+
+function togglePasswordVisibility(e) {
+  let input = e.target.parentNode.querySelector("input");
+  input.type = input.type == "password" ? "text" : "password";
+  e.target.classList.toggle('active');
+}
 </script>

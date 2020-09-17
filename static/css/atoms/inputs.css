@@ -2,51 +2,50 @@
  * Form elements
  */
 
-form {
+form, .checkbox-group {
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 30px;
-  font-size: 0.875rem;
-  /* position: relative; */
-  /* font: 400 14px var(--sans); */
-  /* width: 100%; */
-  /* text-align: left!important; */
 }
 
-form.checkboxes {
+.checkbox-group {
   grid-gap: 10px;
 }
 
-/* form > * { */ 
-/*   margin-bottom: 30px; */
-/*   width: 100%; */ 
-/* } */
-
-/* form > *:last-child { */ 
-/*   margin-bottom: 0px; */ 
-/* } */ 
-
-/**
- * Inputs and Labels
- */
+form > *, .checkbox-group > * {
+  margin: 0;
+}
 
 label { 
-  /* font: 700 14px var(--sans); */
   position: relative;
   font: 700 0.875rem var(--sans);
   line-height: 1.5; 
-  /* color: #222; */ 
   display: block; 
-  /* margin-bottom: 0; */ 
-}   
+}
+
+label.checkbox {
+  display: grid;
+  grid-template-columns: min-content auto;
+  grid-gap: 8px;
+  align-items: center;
+  font-weight: 400;
+  cursor: pointer;
+}
 
 label ~ input, 
 label ~ select, 
-label ~ .select {
+label ~ .select,
+label input,
+label select, 
+label .select {
   margin-top: 10px;
 }
 
+label small,
 label + small {
+  display: block;
+  font-weight: 400;
+  color: var(--tc, #707070);
   margin-top: 2px;
 }
 
@@ -74,74 +73,23 @@ select {
   background-position: calc(100% - 10px) 0;
 }
 
-input:hover, select:hover, .select:hover {
-  border-color: var(--tc, #222);
-}
-
-input[type="text"]:focus,
-input[type="password"]:focus,
-input[type="email"]:focus,
-select:focus,
-.focus {
-  outline: none;
-  box-shadow: 0 0 4px 2px hsla(0, 0%, 59.6%, .75);
-  border-color: #989898; 
-}
-
-/* Native radio test */
-label.check {
-  display: grid;
-  grid-template-columns: min-content auto;
-  grid-gap: 8px;
-  align-items: center;
-  font-weight: 400;
-  cursor: pointer;
-}
-
-label.check input[type="checkbox"] {
+input[type="checkbox"] {
   -webkit-appearance: none;
   appearance: none;
-  width: 18px;
-  height: 18px;
+  width: 16px;
+  height: 16px;
   padding: 0;
   border-radius: 0;
   margin: 0;
   outline: none;
 }
 
-label.check input[type="checkbox"]:checked {
+input[type="checkbox"]:checked {
   background-color: #222;
   box-shadow: inset 0px 0px 0px 3px white;
 }
 
-/* label.check input[type="checkbox"]:checked:before { */
-/*   content: ""; */
-/*   display: block; */
-/*   position: absolute; */
-/*   top: 0; */
-/*   left: 0; */
-/*   width: 100%; */
-/*   height: 100%; */
-/*   box-sizing: border-box; */
-/*   background: #222; */
-/*   border: 1px solid var(--tc, #707070); */
-/*   border-radius: 2px; */
-/* } */
-
-/* label.check input[type="checkbox"]:checked:after { */
-/*   content: ""; */
-/*   display: block; */
-/*   position: absolute; */
-/*   left: 6px; */
-/*   top: 3px; */
-/*   width: 4px; */ 
-/*   height: 7px; */
-/*   border: solid white; */
-/*   border-width: 0 3px 3px 0; */
-/*   transform: rotate(45deg); */
-/* } */
-
-label.check input[type="radio"] {
+input[type="radio"] {
   -webkit-appearance: none;
   appearance: none;
   width: 16px;
@@ -153,101 +101,24 @@ label.check input[type="radio"] {
   outline: none;
 }
 
-label.check input[type="radio"]:checked {
+input[type="radio"]:checked {
   background-color: white;
   box-shadow: inset 0px 0px 0px 4px #222;
 }
 
-
-/* label.check input[type="radio"]:checked:after { */
-/*   content: ""; */
-/*   display: block; */
-/*   position: absolute; */
-/*   top: 0; */
-/*   left: 0; */
-/*   width: 100%; */
-/*   height: 100%; */
-/*   box-sizing: border-box; */
-/*   border-radius: 50%; */
-/*   border: 1px solid var(--tc, #707070); */
-/*   background: radial-gradient(#fff, #fff 30%, #222 32%); */
-/* } */
-
-/* label.check input:checked { */
-/*   background: #222; */
-/* } */
-
-/* input[type=text] { */
-/*   -webkit-appearance: none; */
-/* } */
-
-/* form button { */
-/*   box-sizing: content-box; */
-/* } */ 
-
-/* form .expander { */
-/*   /1* justify-content: flex-start; *1/ */
-/*   padding: 0; */
-/*   font-size: 0.875rem; */
-/*   justify-content: space-between; */
-/* } */
-
-/* form .select .expander.open ~ .options  { */ 
-/*   border-left: 1px solid #989898; */
-/*   border-right: 1px solid #989898; */
-/*   border-bottom: 1px solid #989898; */
-/* } */
-
-/* form .options a:hover { */
-/*   background-color: #f4f4f4; */
-/* } */
-
-/* input, */
-/* form .select{ */ 
-/*   box-sizing: border-box; */
-/*   width: 100%; */
-/*   margin-top: 10px; */  
-/*   border: 1px solid #989898; */
-/*   background: #fff; */
-/*   border-radius: 2px; */
-/*   box-shadow: none; */
-/*   font-size: 1em; */ 
-/*   color: #222; */
-/* } */
-
-/* form .select .expander { */
-/*   padding: 9px 10px; */
-/*   justify-content: space-between; */
-/*   font-size: 14px; */
-/* } */
-
-/* form .select .options a { */
-/*   padding: 10px; */
-/*   font-size: 14px; */
-/* } */
-
-/* On mouse-over, add a black border color */
-/* input:hover, input:hover ~ span { */
-/*   border-color: var(--tc, #222); */
-/* } */
-
-/* input[type="text"]:focus, */
-/* input[type="password"]:focus, */
-/* input[type="email"]:focus, */
-/* #focused-input { */
-/*   outline: none; */
-/*   box-shadow: 0 0 4px 2px hsla(0, 0%, 59.6%, .75); */
-/*   border-color: #989898; */ 
-/* } */
-
-/* flipping this one */
-input:invalid {
-  border-color: #d63031;
-}
-
-input:invalid:focus {
+input:focus, select:focus, .focus {
+  outline: none;
   box-shadow: 0 0 4px 2px hsla(0, 0%, 59.6%, .75);
 }
+
+/* Need to talk through validation with Matt */
+/* input:invalid { */
+/*   border-color: #d63031; */
+/* } */
+
+/* input:invalid:focus { */
+/*   box-shadow: 0 0 4px 2px hsla(0, 0%, 59.6%, .75); */
+/* } */
 
 /* .required { */
 /*   color: #d63031; */
@@ -268,169 +139,36 @@ input:invalid:focus {
 /*   box-shadow: 0 0 4px 2px hsla(0, 0%, 59.6%, .75); */
 /* } */
 
-
-/* Need an exampe of this one too to see how it plays with SDS color strategy.
- */
-form:valid > button[type="submit"] {
-  background-color: #31409f; 
-}
-
-label + small {
-  color: var(--tc, #707070);
-}
+/* form:valid > button[type="submit"] { */
+/*   background-color: #31409f; */ 
+/* } */
 
 /* small[for=error-input] { */  
 /*   color: #d63031; */  
 /* } */
 
-/* Might not want to use an ID here */
-#password-label {
+.password-label {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-#password-label:after { 
+.password-label:after { 
   content: "\f070"; 
   font: 400 14px Font Awesome\ 5 Free;
-  /* position: absolute; */
-  /* right: 0; */
   cursor: pointer;
-  /* line-height: 1.7; */
-  /* width: 20px; */
 }
 
-#password-label.active:after{
+.password-label.active:after{
   content: "\f06e"
 } 
 
-/* Checkbox container */
-.checkbox-container {
-  /* display: block; */
-  /* width: calc(100% - 25px); */
-  position: relative;
-  box-sizing: border-box;
-  padding-left: 25px;
-  /* margin-bottom: 10px; */  
-  cursor: pointer;
-  user-select: none;
-  font-weight: 400;
-  /* font: 400 14px var(--sans); */
-}   
-
-/* Hide the browser's default checkbox */
-.checkbox-container input {
-  display: none;
-  /* position: absolute; */
-  /* opacity: 0; */
-  /* cursor: pointer; */
-  /* height: 0; */
-  /* width: 0; */
-}
-
-/* When the checkbox is checked, add a black background */
-/* input:checked ~ span { */
-/*   background: #222; */
-/*   transition:  all .15s ease-in-out; */
-/* } */  
-
-/* Create the checkmark/indicator (hidden when not checked) */
-.checkmark:after,
-.radio:after { 
-  /* content: ""; */
-  /* position: absolute; */
-  /* display: none; */
-  /* transition:  all .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out */
-}
-
-/* Show the checkmark when checked */
-/* input:checked ~ .checkmark:after, */
-/* input:checked ~ .radio:after { */
-  /* display: block; */ 
-  /* transition:  all .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out */
-/* } */ 
-
-/* Create a custom checkbox */
-.checkmark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 16px;
-  width: 16px;
-  background-color: none; 
-  border: 1px solid var(--tc, #707070);
-  transition:  all .15s ease-in-out;
-  /* transition:  all .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out */
-}
-
-/* Style the checkmark/indicator */
-.checkmark:after {
-  content: "";
-  display: none;
-  position: absolute;
-  left: 5px;
-  top: 2px;
-  width: 4px; 
-  height: 7px;
-  border: solid white;
-  border-width: 0 3px 3px 0;
-  /* -webkit-transform: rotate(45deg); */
-  /* -ms-transform: rotate(45deg); */
-  transform: rotate(45deg);
-  /* transition:  all .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out */
-}
-
-input:checked ~ .checkmark {
-  background-color: var(--tc, #222)
-}
-
-input:checked ~ .checkmark:after {
-  display: block;
-}
-
-/* Create a custom radio button */
-.radio {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 14px;
-  width: 14px;
-  background-color: none;
-  border: 1px solid var(--tc, #707070);
-  border-radius: 50%;
-  transition:  all .15s ease-in-out;
-  /* transition:  all .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out */
-}
-
-/* Create the indicator (the dot/circle - hidden when not checked) */
-.radio:after {
-  content: ""; 
-  display: none;
-  position: absolute;
-  top: 4px;
-  left: 4px;  
-  width: 6px;  
-  height: 6px; 
-  border-radius: 50%;
-  background: white;
-}
-
-input:checked ~ .radio {
-  background-color: var(--tc, #222);
-}
-
-input:checked ~ .radio:after {
-  display: block;
-}
-
 /**
  * Custom select boxes
+ * Let's deprecate this, it jacks with tabs, keyboard controls and accessibility.
  */
 
 .select {
-  /* background-color: white; */
-  /* border: 1px solid var(--tc, #ddd); */
-  /* position: relative; */
   --lc: var(--tc, #222);
   --lhc: var(--tc, #222);
   --ld: none;
@@ -438,19 +176,9 @@ input:checked ~ .radio:after {
 }
 
 .select .expander {
-  /* border: none; */
   justify-content: space-between;
   padding: 0;
-  /* padding-left: 5px; */
-  /* padding-right: 10px; */
-  /* text-transform: none; */
-  /* font-weight: 400; */
-  /* text-align: left; */
 }
-
-/* .select .options { */
-/*   border: 1px solid var(--tc, #989898); */
-/* } */
 
 .select .options a {
   display: block;
@@ -460,10 +188,6 @@ input:checked ~ .radio:after {
 .select .options a:hover {
   background-color: #f4f4f4;
 }
-
-/* .select .options .button { */
-/*   align-self: stretch; */
-/* } */
 
 .select .options .selected {
   font-weight: 700;
