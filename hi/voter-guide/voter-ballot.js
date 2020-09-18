@@ -447,6 +447,12 @@ class VoterBallot extends VoterBaseElement {
     this.shadowRoot.querySelector("#races").hidden = false;
     this.ready = true;
     this.toast.hide();
+
+    // Jump down if on a phone
+    if(window.matchMedia("(max-width: 659px)").matches) {
+      let slot = this.shadowRoot.querySelector("slot[name='races']");
+      slot.scrollIntoView({ behavior: "smooth" });
+    }
   }
 
   // Load previous selections if any
