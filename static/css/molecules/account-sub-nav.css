@@ -1,48 +1,46 @@
-.dsp .account-header {
-    width: 100%;
-    border-top: 1px solid #EBEBEB;
+.account-header {
+  display: grid;
+  grid-gap: 15px;
+  justify-items: center;
+  border-top: 1px solid #EBEBEB;
+  --ht: none;
 }
 
-.dsp .account-header h1 {
-    margin: 10px 0 0;
-    text-transform: none;
+.account-header small {
+  display: block;
+  font-weight: 700;
+  color: var(--tc, #707070);
+  text-transform: uppercase;
+  align-self: center;
 }
 
-.dsp .account-header small {
-   display: block;
-   font-weight: 700;
-   margin: 0; 
-   text-transform: uppercase
+.account-header .nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 900px;
+  max-width: 100%;
+  margin: 0 auto;
 }
 
-.dsp .nav {
-    margin: 15px auto 0;
-    width: 100%;
-    display: flex;
-    max-width: 900px;
-    text-align: center;
+.account-header .tab {
+  padding: 10px;
+  text-transform: uppercase; 
+  text-align: center;
+  font: 400 14px var(--sans); 
+  --lc: #31409f;
+  --lhc: #5169B8;
+  --ld: none;
+  --lhd: none;
 }
 
-.dsp .tab {
-    padding: 10px;
-    width: 50%;
-    display: inline-block;
-    text-transform: uppercase; 
-    font: 400 14px var(--sans); 
-    text-decoration: none;
-    --lc: #31409f;
-    --lhc: #5169B8;
-}
-
-.dsp .tab.active {
-    font: 700 14px var(--sans); 
-    background: rgba(49,64,159,.15);
-    border-radius: 0 2px 0 0;
+.tab.active {
+  font: 700 14px var(--sans); 
+  background: rgba(49,64,159,.15);
+  border-radius: 0 2px 0 0;
 }
 
 @media (min-width: 768px) {
-    .dsp .tab.active {
-        border-radius: 2px 2px 0 0;
-    }
-    
+  .dsp .tab.active {
+    border-radius: 2px 2px 0 0;
+  }
 }

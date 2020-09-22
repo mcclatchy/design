@@ -38,8 +38,8 @@ summary, .summary {
 }
 
 .bold {
-  font-weight: 600;
-  --hw: 600;
+  font-weight: 700;
+  --hw: 700;
 }
 
 .gray {
@@ -82,3 +82,6 @@ summary, .summary {
   background-color: #f4f4f4;
 }
 
+.center-text {
+  text-align: center;
+}

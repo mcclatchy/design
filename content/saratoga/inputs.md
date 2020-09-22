@@ -113,17 +113,4 @@ Custom selects use a combination of the [expander](../expander) molecule and lin
 
 {{< highlight html >}}{{< select >}}{{< /highlight >}}
 
-
-<script>
-//toggle password hide/show
-const passwordInputs = document.querySelectorAll(".password-label");
-passwordInputs.forEach(i => {
-  i.addEventListener("click", togglePasswordVisibility);
-});
-
-function togglePasswordVisibility(e) {
-  let input = e.target.parentNode.querySelector("input");
-  input.type = input.type == "password" ? "text" : "password";
-  e.target.classList.toggle('active');
-}
-</script>
+<script async src="/js/forms.js"></script>

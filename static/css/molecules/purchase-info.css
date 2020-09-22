@@ -1,0 +1,43 @@
+.purchase-info {
+  --tf: var(--sans);
+  --ts: 0.875rem;
+  --ps: 0;
+  padding: var(--padding, 15px);
+  grid-template-columns: 1fr min-content;
+  grid-gap: 0;
+  grid-row-gap: 10px;
+  align-items: center;
+  align-self: flex-start;
+}
+
+.purchase-info p {
+  --tc: #707070;
+  margin: 0;
+  line-height: 1.3em;
+}
+
+.purchase-info .bold {
+  --tc: #222;
+}
+
+.purchase-info .expander ~ * {
+  grid-column: 1/-1;
+}
+
+/* I have this on a class but I need to talk to Matt about it */
+.purchase-info.expanded {
+  grid-template-columns: 1fr;
+  text-align: center;
+}
+
+.purchase-info.expanded .package {
+  align-items: center;
+}
+
+.purchase-info.expanded .expander {
+  display: none;
+}
+
+.purchase-info.expanded .expander ~ * {
+  display: block;
+}

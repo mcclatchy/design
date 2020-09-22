@@ -14,6 +14,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent facilisis ex e
 
 <div class="zone grid combo">
 {{< inline-cta >}}
+<div></div>
 </div>
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent facilisis ex ex, at blandit sapien suscipit eget. Maecenas gravida, erat vitae commodo semper, lorem sem molestie metus, quis faucibus tellus.
@@ -33,6 +34,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent facilisis ex e
 
 <div class="zone combo grid">
 {{< inline-cta type="newsletter" >}}
+<div></div>
 </div>
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent facilisis ex ex, at blandit sapien suscipit eget. Maecenas gravida, erat vitae commodo semper, lorem sem molestie metus, quis faucibus tellus.

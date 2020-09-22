@@ -22,6 +22,10 @@ section > h5,
   padding: 0 15px;
 }
 
+section.dsp {
+  max-width: 900px;
+}
+
 .section-label {
   margin: 0 0 10px;
 }

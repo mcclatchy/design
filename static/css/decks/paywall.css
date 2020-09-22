@@ -1,0 +1,24 @@
+/**
+ * Paywall deck
+ */
+
+.paywall {
+  --section-width: 900px;
+  text-align: center;
+}
+
+.paywall .page-title {
+  margin: 30px auto;
+}
+
+.paywall-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.paywall-details .expander {
+  font: 700 0.875rem var(--sans);
+  text-transform: uppercase;
+  --tc: var(--blue);
+}

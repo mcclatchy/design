@@ -20,7 +20,7 @@
 .s-modal > * {
 	position: relative;
 	width: 100%;
-	max-width: 710px;
+	max-width: var(--modal-width, 900px);
 	margin: 15px auto;
 	pointer-events: auto;
 }
@@ -50,12 +50,12 @@
 }
 
 .s-modal.bottom > * {
-	max-width: 1110px;
+	max-width: var(--section-width);
 	position: relative;
 }
 
 .s-modal.bottom .package {
-	max-width: 710px;
+  max-width: var(--story-width);
 	margin: 0 auto;
 }
 

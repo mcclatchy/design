@@ -38,6 +38,11 @@ td:first-child {
   --lc: #222;
 }
 
+.example.grid {
+  justify-content: center;
+}
+
+.example.shadow .paper,
 .paper.shadow {
   box-shadow: 
     0 1px 2px 0 rgba(0, 0, 0, .2), 

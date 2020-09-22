@@ -3,7 +3,50 @@ title: subscription offers page (DSP)
 description: DSP subscription offers page
 menu: "decks"
 layout: deck
+build: dsp
 ---
+
+<section class="dsp subscription-offers">
+  <h2>Subscription offers</h2>
+  <div class="card">
+    {{< dsp/offer type="primary" >}}
+    {{< dsp/offer-details >}}
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      {{< dsp/offer type="secondary" >}}
+      <div class="package">
+        <p class="bold">All sports, all the time</p>
+        <p>Insider reporting on all the sports action taking place within the Miami area and unlimited sports content on both our website and apps.</p>
+      </div>
+      <div class="package">
+        <p class="bold">Exclusive extras</p>
+        <p>Explore newsletters, subscriber-only content, interactive media and video.</p>
+      </div>
+      <div class="package">
+        <p class="bold">Does not include</p>
+        <p>eEdition and non-sports stories.</p>
+      </div>
+    </div>
+    <div class="card">
+      {{< dsp/offer type="secondary" image="https://media.mcclatchy.com/creatives/subscription-offer-page-images/politics/dome.jpg" >}}
+      <div class="package">
+        <p class="bold">Stay informed</p>
+        <p>Impact2020 is your destination for curated election coverage, focusing on local topics influencing critical states like Florida, Texas, California and the Carolinas.</p>
+      </div>
+      <div class="package">
+        <p class="bold">Exclusive extras</p>
+        <p>Subscriber-only articles, videos and news alerts on Impact2020.com and a weekly newsletter and podcast.</p>
+      </div>
+      <div class="package">
+        <p class="bold">An app just for you</p>
+        <p>Impact2020 mobile app with unlimited content access</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <main class="dsp">
  <div class="flag full-bleed standard">
   <div class="paper"> 

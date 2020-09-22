@@ -7,7 +7,7 @@ menu: cards
 The digest is simple stack of modules using the block layout.
 
 #### Example
-<div class="example grid">
+<div class="example grid shadow">
   {{< digest label="sticky" >}}
   {{< digest >}}
 </div>

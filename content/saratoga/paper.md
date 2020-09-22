@@ -1,7 +1,7 @@
 ---
 title: paper
 description: Default paper molecule with a block display.
-menu: molecule
+menu: atom
 ---
 
 The paper and card molecules both do the same thing of lifting them a plane higher than the background. The paper molecule is the more simple of the two, by having block for the display property. This allows default sizing and spacing of the children to dictate the height of the molecule.

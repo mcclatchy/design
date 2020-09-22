@@ -1,0 +1,57 @@
+{{- $type := default "default" (.Get "type") }}
+
+{{- if eq $type "default" }}
+<div class="dsp-offer paper package promo">
+  <h2 class="h1 offer-title">Unlimited Digital Access</h2>
+  <div class="package">
+    <p class="h4 offer-price">$1.99 for one month</p>
+    <p class="summary caps">$10.99/month after. Cancel anytime.</p>
+  </div>
+  <a class="button white">start today</a>
+</div>
+{{- end }}
+
+{{- if eq $type "primary" }}
+<div class="dsp-offer primary paper package impact" style="--image: url(https://media.mcclatchy.com/creatives/subscription-offer-page-images/markets/Miami/1.jpg);">
+  <h2 class="h1 offer-title">Unlimited Digital Access</h2>
+  <div class="package">
+    <p class="h4 offer-price">$1.99 for one month</p>
+    <p class="summary caps">$10.99/month after. Cancel anytime.</p>
+  </div>
+  <a class="button big promo-light">start today</a>
+</div>
+{{- end }}
+
+{{- if eq $type "secondary" }}
+<div class="dsp-offer secondary paper package" style="--image: url(https://media.mcclatchy.com/creatives/subscription-offer-page-images/sports/football.jpg)">
+  <h3 class="h2 offer-title">Sports Pass™</h3>
+  <div class="package">
+    <p class="summary caps bold">$1.99 for one month</p>
+    <p class="summary caps">$10.99/month after. Cancel anytime.</p>
+  </div>
+  <a class="button impact">start today</a>
+</div>
+{{- end }}
+
+{{- if eq $type "tertiary-a" }}
+<div class="dsp-offer tertiary paper package">
+  <p class="h2 sans offer-title">Subscribe with Google</p>
+  <p class="summary">Get the same Unlimited Digital Access deal as above, but let Google manage your subscription and billing.</p>
+  <div class="package">
+    <a class="button ghost">Subscribe with Google</a>
+    <p class="offer-terms">By subscribing, you are agreeing to the Miami Herald’s <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.</p>
+  </div>
+</div>
+{{- end }}
+
+{{- if eq $type "tertiary-b" }}
+<div class="dsp-offer tertiary paper package">
+  <p class="h2">Home Delivery + Digital Access</p>
+  <p class="summary">Get the paper delivered to your door, plus Unlimited Digital Access.</p>
+  <a class="button impact">View Offers</a>
+  <div class="package">
+    <p class="h3 sans bold">Already a print subscriber?</p>
+    <a class="more-link">Activate digital access</a>
+  </div>
+</div>
+{{- end }}

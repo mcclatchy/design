@@ -7,7 +7,7 @@ menu: cards
 The In Depth module is a version of the horizontal card that changes the flex-grow weight from the right side to the left.
 
 #### Example
-<div class="example">
+<div class="example shadow">
 {{< in-depth >}}
 </div>
 
