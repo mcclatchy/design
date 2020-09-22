@@ -189,8 +189,12 @@ class VoterBallotMeasure extends VoterBaseElement {
     </div>
 
     <div class="package pro-con">
+      ${ !this.measure.pro_snippet || !this.measure.con_snippet ? `
+      <p class="summary">${this.measure.text}</p>
+      ` : `
       <p class="summary">${this.measure.pro_snippet}</p>
       <p class="summary">${this.measure.con_snippet}</p>
+      `}
     </div>
 
     <form class="candidates">
