@@ -1,5 +1,8 @@
 .inline-cta {
   text-align: left;
+  align-self: center;
+  grid-gap: 5px;
+  --ps: 5px;
   --bc: white;
   --bbc: #222;
 }
@@ -10,10 +13,6 @@
 
 .inline-cta input {
   align-self: stretch;
-}
-
-.inline-cta .summary {
-  margin-top: 5px;
 }
 
 .impact .inline-cta {

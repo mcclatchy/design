@@ -61,9 +61,11 @@ body {
 }
 
 .footer {
+  display: block;
   background-color: white;
   border-top: 1px solid #ddd;
   height: 99px;
+  padding: 0;
 }
 
 .footer img {

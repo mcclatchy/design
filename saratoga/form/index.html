@@ -11,42 +11,33 @@
     <meta name="mobile-web-app-capable" content="yes">
     <link rel="shortcut icon" href="../../favicon.ico">
 
-    
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700|Noto+Serif:400,700&display=swap&subset=latin-ext" rel="stylesheet">
 
     
     <link rel="stylesheet" href="../../css/atoms/typography.css">
     <link rel="stylesheet" href="../../css/atoms/media.css">
     <link rel="stylesheet" href="../../css/atoms/section.css">
-    <link rel="stylesheet" href="../../css/atoms/button.css">
     <link rel="stylesheet" href="../../css/atoms/inputs.css">
+    <link rel="stylesheet" href="../../css/atoms/button.css">
+    <link rel="stylesheet" href="../../css/atoms/paper.css">
+    <link rel="stylesheet" href="../../css/atoms/impact.css">
+    <link rel="stylesheet" href="../../css/atoms/utilities.css">
+    <link rel="stylesheet" href="../../css/atoms/flex-columns.css">
+    <link rel="stylesheet" href="../../css/atoms/flex-row.css">
+    <link rel="stylesheet" href="../../css/atoms/grid.css">
+    <link rel="stylesheet" href="../../css/atoms/story-body.css">
 
     
-    <link rel="stylesheet" href="../../css/molecules/paper.css">
     <link rel="stylesheet" href="../../css/molecules/package.css">
-    <link rel="stylesheet" href="../../css/molecules/impact.css">
     <link rel="stylesheet" href="../../css/molecules/social-media.css">
     <link rel="stylesheet" href="../../css/molecules/expander.css">
-    <link rel="stylesheet" href="../../css/molecules/utilities.css">
-    <link rel="stylesheet" href="../../css/molecules/progress.css">
-    <link rel="stylesheet" href="../../css/molecules/page-title.css">
-    <link rel="stylesheet" href="../../css/molecules/offer-details.css">
-    <link rel="stylesheet" href="../../css/molecules/primary-offer.css">
-    <link rel="stylesheet" href="../../css/molecules/secondary-offer.css">
-    <link rel="stylesheet" href="../../css/molecules/tertiary-offer.css">
-    <link rel="stylesheet" href="../../css/molecules/account-sub-nav.css">
-    <link rel="stylesheet" href="../../css/molecules/masthead.css">
-
+    
 
     
-    <link rel="stylesheet" href="../../css/cards/grid.css">
-    <link rel="stylesheet" href="../../css/cards/flex-columns.css">
-    <link rel="stylesheet" href="../../css/cards/flex-row.css">
     <link rel="stylesheet" href="../../css/cards/zones.css">
     <link rel="stylesheet" href="../../css/cards/ads.css">
     <link rel="stylesheet" href="../../css/cards/digest.css">
     <link rel="stylesheet" href="../../css/cards/immersive.css">
-    <link rel="stylesheet" href="../../css/cards/story-body.css">
     <link rel="stylesheet" href="../../css/cards/header.css">
     <link rel="stylesheet" href="../../css/cards/series-nav.css">
     <link rel="stylesheet" href="../../css/cards/correction.css">
@@ -65,15 +56,22 @@
     <link rel="stylesheet" href="../../css/cards/upper-nav.css">
     <link rel="stylesheet" href="../../css/cards/sponsor.css">
     <link rel="stylesheet" href="../../css/cards/gallery.css">
-    <link rel="stylesheet" href="../../css/cards/dsp.css">
-    <link rel="stylesheet" href="../../css/cards/review-order.css">
-    <link rel="stylesheet" href="../../css/cards/paywall.css">
-    <link rel="stylesheet" href="../../css/cards/subscription-offers.css">
-    <link rel="stylesheet" href="../../css/cards/hidden.css">
 
-   
+    
+    <link rel="stylesheet" href="../../css/decks/flag.css">
+    <link rel="stylesheet" href="../../css/decks/footer.css">
+    <link rel="stylesheet" href="../../css/decks/menu.css">
+    <link rel="stylesheet" href="../../css/decks/search.css">
+    <link rel="stylesheet" href="../../css/decks/eedition-portal.css">
+    <link rel="stylesheet" href="../../css/decks/impact2020.css">
+    <link rel="stylesheet" href="../../css/decks/display-classes.css">
+    <link rel="stylesheet" href="../../css/decks/hidden.css">
+    <link rel="stylesheet" href="../../css/decks/purple-tuesdays.css">
+    
+
     
     <link rel="stylesheet" href="../../css/site.css">
+    
 <link rel="stylesheet" href="../../css/style-guide.css">
 
   </head>
@@ -105,101 +103,57 @@
     </h2>
     <p>The form card uses the paper molecule, the package molecule and can utilize the basic grid structure with some minor changes because the grid is within a form. As you can see, if you place a container with the class of &ldquo;grid&rdquo; inside the form, the children of that grid will use a grid-gap of 15px (i.e. the First name and Last name inputs in this example).</p>
 <h4 id="example">Example</h4>
-<div class="dsp" style="margin-bottom: 30px;">
-    <div class="paper" style="max-width: 400px;">
-        <div class="package">
-            <form> 
-                <div class="grid">
-                    <div>
-                        <label for="first-input">First Name</label>
-                        <input type="text" id="first-input">
-                    </div>
-                    <div>
-                        <label for="last-input">Last Name</label>
-                        <input type="text" id="last-input">
-                    </div>
-                </div>
-                <div>
-                    <label for="email-input">Email address</label>
-                    <input type="text" id="email-input">
-                </div>
-                <div>
-                    <label for="password-input" onclick="changeType()" id="password-label">Password</label>
-                    <small>Must be at least 7 characters long</small>
-                    <input type="password" id="password-input">
-                </div>
-                <div>
-                    <label for="select">Choose an option</label>
-                    <div class="select">
-  <span class="button big expander" onclick="this.classList.toggle('open');">Order by</span>
-  <div class="options">
-    <a class="button big" href="#" data-name="Relevance">Relevance</a>
-    <a class="button big" href="#" data-name="Newest">Newest</a>
-    <a class="button big" href="#" data-name="Oldest">Oldest</a>
-  </div>
-</div>
+<div class="example grid shadow" style="--columns: 400px;">
 
-                </div>
-                <button id="button" type="submit" class="button disabled">submit</button>
-            </form>
-        </div>
+<form class="paper"> 
+  <div class="grid">
+    <div>
+      <label for="first-input">First Name</label>
+      <input type="text" name="first" required autocomplete="given-name">
     </div>
+    <div>
+      <label for="last-input">Last Name</label>
+      <input type="text" name="last" required autocomplete="family-name">
+    </div>
+  </div>
+  <div>
+    <label for="email-input">Email address</label>
+    <input type="email" name="email" required autocomplete="email">
+  </div>
+  <div>
+    <label for="password-input" class="password-label">Password</label>
+    <small>Must be at least 7 characters long</small>
+    <input type="password" name="password" required autocomplete="current-password">
+  </div>
+  <input type="submit" class="button promo" value="submit">
+</form>
+
 </div>
 <h4 id="html">HTML</h4>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;paper&#34;</span>&gt;
-        &lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;package&#34;</span>&gt;
-            &lt;<span style="color:#000080;font-weight:bold">form</span>&gt; 
-                &lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;grid&#34;</span>&gt;
-                    &lt;<span style="color:#000080;font-weight:bold">div</span>&gt;
-                        &lt;<span style="color:#000080;font-weight:bold">label</span> <span style="color:#f00">for</span>=<span style="color:#00f">&#34;first-input&#34;</span>&gt;First Name&lt;/<span style="color:#000080;font-weight:bold">label</span>&gt;
-                        &lt;<span style="color:#000080;font-weight:bold">input</span> <span style="color:#f00">type</span>=<span style="color:#00f">&#34;text&#34;</span> <span style="color:#f00">id</span>=<span style="color:#00f">&#34;first-input&#34;</span>&gt;
-                    &lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;
-                    &lt;<span style="color:#000080;font-weight:bold">div</span>&gt;
-                        &lt;<span style="color:#000080;font-weight:bold">label</span> <span style="color:#f00">for</span>=<span style="color:#00f">&#34;last-input&#34;</span>&gt;Last Name&lt;/<span style="color:#000080;font-weight:bold">label</span>&gt;
-                        &lt;<span style="color:#000080;font-weight:bold">input</span> <span style="color:#f00">type</span>=<span style="color:#00f">&#34;text&#34;</span> <span style="color:#f00">id</span>=<span style="color:#00f">&#34;last-input&#34;</span>&gt;
-                    &lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;
-                &lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;
-                &lt;<span style="color:#000080;font-weight:bold">div</span>&gt;
-                    &lt;<span style="color:#000080;font-weight:bold">label</span> <span style="color:#f00">for</span>=<span style="color:#00f">&#34;email-input&#34;</span>&gt;Email address&lt;/<span style="color:#000080;font-weight:bold">label</span>&gt;
-                    &lt;<span style="color:#000080;font-weight:bold">input</span> <span style="color:#f00">type</span>=<span style="color:#00f">&#34;text&#34;</span> <span style="color:#f00">id</span>=<span style="color:#00f">&#34;email-input&#34;</span>&gt;
-                &lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;
-                &lt;<span style="color:#000080;font-weight:bold">div</span>&gt;
-                    &lt;<span style="color:#000080;font-weight:bold">label</span> <span style="color:#f00">for</span>=<span style="color:#00f">&#34;password-input&#34;</span> <span style="color:#f00">onclick</span>=<span style="color:#00f">&#34;changeType()&#34;</span> <span style="color:#f00">id</span>=<span style="color:#00f">&#34;password-label&#34;</span>&gt;Password&lt;/<span style="color:#000080;font-weight:bold">label</span>&gt;
-                    &lt;<span style="color:#000080;font-weight:bold">small</span>&gt;Must be at least 7 characters long&lt;/<span style="color:#000080;font-weight:bold">small</span>&gt;
-                    &lt;<span style="color:#000080;font-weight:bold">input</span> <span style="color:#f00">type</span>=<span style="color:#00f">&#34;password&#34;</span> <span style="color:#f00">id</span>=<span style="color:#00f">&#34;password-input&#34;</span>&gt;
-                &lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;
-                &lt;<span style="color:#000080;font-weight:bold">div</span>&gt;
-                     &lt;<span style="color:#000080;font-weight:bold">label</span> <span style="color:#f00">for</span>=<span style="color:#00f">&#34;select&#34;</span>&gt;Choose an option&lt;/<span style="color:#000080;font-weight:bold">label</span>&gt;
-                     &lt;<span style="color:#000080;font-weight:bold">span</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;button big expander&#34;</span> <span style="color:#f00">onclick</span>=<span style="color:#00f">&#34;this.classList.toggle(&#39;open&#39;);&#34;</span>&gt;Order by&lt;/<span style="color:#000080;font-weight:bold">span</span>&gt;
-                      &lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;options&#34;</span>&gt;
-                        &lt;<span style="color:#000080;font-weight:bold">a</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;button big&#34;</span> <span style="color:#f00">href</span>=<span style="color:#00f">&#34;#&#34;</span> <span style="color:#f00">data-name</span>=<span style="color:#00f">&#34;Relevance&#34;</span>&gt;Relevance&lt;/<span style="color:#000080;font-weight:bold">a</span>&gt;
-                        &lt;<span style="color:#000080;font-weight:bold">a</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;button big&#34;</span> <span style="color:#f00">href</span>=<span style="color:#00f">&#34;#&#34;</span> <span style="color:#f00">data-name</span>=<span style="color:#00f">&#34;Newest&#34;</span>&gt;Newest&lt;/<span style="color:#000080;font-weight:bold">a</span>&gt;
-                        &lt;<span style="color:#000080;font-weight:bold">a</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;button big&#34;</span> <span style="color:#f00">href</span>=<span style="color:#00f">&#34;#&#34;</span> <span style="color:#f00">data-name</span>=<span style="color:#00f">&#34;Oldest&#34;</span>&gt;Oldest&lt;/<span style="color:#000080;font-weight:bold">a</span>&gt;
-                      &lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;
-                &lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;
-                &lt;<span style="color:#000080;font-weight:bold">button</span> <span style="color:#f00">id</span>=<span style="color:#00f">&#34;button&#34;</span> <span style="color:#f00">type</span>=<span style="color:#00f">&#34;submit&#34;</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;button disabled&#34;</span>&gt;submit&lt;/<span style="color:#000080;font-weight:bold">button</span>&gt;
-            &lt;/<span style="color:#000080;font-weight:bold">form</span>&gt;
-        &lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;
-    &lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;</code></pre></div>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080;font-weight:bold">form</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;paper&#34;</span>&gt; 
+  &lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;grid&#34;</span>&gt;
+    &lt;<span style="color:#000080;font-weight:bold">div</span>&gt;
+      &lt;<span style="color:#000080;font-weight:bold">label</span> <span style="color:#f00">for</span>=<span style="color:#00f">&#34;first-input&#34;</span>&gt;First Name&lt;/<span style="color:#000080;font-weight:bold">label</span>&gt;
+      &lt;<span style="color:#000080;font-weight:bold">input</span> <span style="color:#f00">type</span>=<span style="color:#00f">&#34;text&#34;</span> <span style="color:#f00">name</span>=<span style="color:#00f">&#34;first&#34;</span> <span style="color:#f00">required</span> <span style="color:#f00">autocomplete</span>=<span style="color:#00f">&#34;given-name&#34;</span>&gt;
+    &lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;
+    &lt;<span style="color:#000080;font-weight:bold">div</span>&gt;
+      &lt;<span style="color:#000080;font-weight:bold">label</span> <span style="color:#f00">for</span>=<span style="color:#00f">&#34;last-input&#34;</span>&gt;Last Name&lt;/<span style="color:#000080;font-weight:bold">label</span>&gt;
+      &lt;<span style="color:#000080;font-weight:bold">input</span> <span style="color:#f00">type</span>=<span style="color:#00f">&#34;text&#34;</span> <span style="color:#f00">name</span>=<span style="color:#00f">&#34;last&#34;</span> <span style="color:#f00">required</span> <span style="color:#f00">autocomplete</span>=<span style="color:#00f">&#34;family-name&#34;</span>&gt;
+    &lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;
+  &lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;
+  &lt;<span style="color:#000080;font-weight:bold">div</span>&gt;
+    &lt;<span style="color:#000080;font-weight:bold">label</span> <span style="color:#f00">for</span>=<span style="color:#00f">&#34;email-input&#34;</span>&gt;Email address&lt;/<span style="color:#000080;font-weight:bold">label</span>&gt;
+    &lt;<span style="color:#000080;font-weight:bold">input</span> <span style="color:#f00">type</span>=<span style="color:#00f">&#34;email&#34;</span> <span style="color:#f00">name</span>=<span style="color:#00f">&#34;email&#34;</span> <span style="color:#f00">required</span> <span style="color:#f00">autocomplete</span>=<span style="color:#00f">&#34;email&#34;</span>&gt;
+  &lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;
+  &lt;<span style="color:#000080;font-weight:bold">div</span>&gt;
+    &lt;<span style="color:#000080;font-weight:bold">label</span> <span style="color:#f00">for</span>=<span style="color:#00f">&#34;password-input&#34;</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;password-label&#34;</span>&gt;Password&lt;/<span style="color:#000080;font-weight:bold">label</span>&gt;
+    &lt;<span style="color:#000080;font-weight:bold">small</span>&gt;Must be at least 7 characters long&lt;/<span style="color:#000080;font-weight:bold">small</span>&gt;
+    &lt;<span style="color:#000080;font-weight:bold">input</span> <span style="color:#f00">type</span>=<span style="color:#00f">&#34;password&#34;</span> <span style="color:#f00">name</span>=<span style="color:#00f">&#34;password&#34;</span> <span style="color:#f00">required</span> <span style="color:#f00">autocomplete</span>=<span style="color:#00f">&#34;current-password&#34;</span>&gt;
+  &lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;
+  &lt;<span style="color:#000080;font-weight:bold">input</span> <span style="color:#f00">type</span>=<span style="color:#00f">&#34;submit&#34;</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;button promo&#34;</span> <span style="color:#f00">value</span>=<span style="color:#00f">&#34;submit&#34;</span>&gt;
+&lt;/<span style="color:#000080;font-weight:bold">form</span>&gt;</code></pre></div>
 <script async src="../../js/select.js"></script>
-<script>
-//toggle password hide/show
-  const el = document.querySelector('#password-label');
-  function changeType() {
-  let x = document.getElementById("password-input");
-  if (x.type === "password") {
-      x.type = "text";  
-  } else {
-    x.type = "password";
-  }
-el.classList.toggle('active');
-}
-//prevent form submit
-  document.getElementById("button").addEventListener("click", function(event){
-  event.preventDefault()
-});
-</script><blockquote>
-</blockquote>
+<script async src="../../js/forms.js"></script>
 
   </div>
 
@@ -253,14 +207,6 @@ el.classList.toggle('active');
     
     <div class="package">
       <h4 class="sans bold">
-        <a class="" href="https://mcclatchy.github.io/design/saratoga/flex-columns/">flex-columns</a>
-      </h4>
-      <p class="summary">A flexbox version of the grid using the same rules.</p>
-    </div>
-    
-    
-    <div class="package">
-      <h4 class="sans bold">
         <a class="" href="https://mcclatchy.github.io/design/saratoga/footer/">footer</a>
       </h4>
       <p class="summary">Standard footer for the bottom of all pages</p>
@@ -280,14 +226,6 @@ el.classList.toggle('active');
         <a class="" href="https://mcclatchy.github.io/design/saratoga/gallery/">gallery</a>
       </h4>
       <p class="summary">Photo gallery to be used in all occasions.</p>
-    </div>
-    
-    
-    <div class="package">
-      <h4 class="sans bold">
-        <a class="" href="https://mcclatchy.github.io/design/saratoga/grid/">grid</a>
-      </h4>
-      <p class="summary">A very basic starter grid</p>
     </div>
     
     
@@ -336,14 +274,6 @@ el.classList.toggle('active');
         <a class="" href="https://mcclatchy.github.io/design/saratoga/modal/">modal</a>
       </h4>
       <p class="summary">Simple overlay containers to maintain consistency.</p>
-    </div>
-    
-    
-    <div class="package">
-      <h4 class="sans bold">
-        <a class="" href="https://mcclatchy.github.io/design/saratoga/paywall/">paywall (DSP)</a>
-      </h4>
-      <p class="summary">DSP paywall offer card</p>
     </div>
     
     
@@ -599,12 +529,12 @@ el.classList.toggle('active');
       
       
       <h5 class="sans bold ">
-        <a href="https://mcclatchy.github.io/design/saratoga/impact/" class="">impact</a>
+        <a href="https://mcclatchy.github.io/design/saratoga/masthead/" class="">masthead (DSP)</a>
       </h5>
       
       
       <h5 class="sans bold ">
-        <a href="https://mcclatchy.github.io/design/saratoga/masthead/" class="">masthead (DSP)</a>
+        <a href="https://mcclatchy.github.io/design/saratoga/offer/" class="">offer (DSP)</a>
       </h5>
       
       
@@ -624,16 +554,6 @@ el.classList.toggle('active');
       
       
       <h5 class="sans bold ">
-        <a href="https://mcclatchy.github.io/design/saratoga/paper/" class="">paper</a>
-      </h5>
-      
-      
-      <h5 class="sans bold ">
-        <a href="https://mcclatchy.github.io/design/saratoga/primary-offer/" class="">primary offer (DSP)</a>
-      </h5>
-      
-      
-      <h5 class="sans bold ">
         <a href="https://mcclatchy.github.io/design/saratoga/progress/" class="">progress bar (DSP)</a>
       </h5>
       
@@ -644,22 +564,7 @@ el.classList.toggle('active');
       
       
       <h5 class="sans bold ">
-        <a href="https://mcclatchy.github.io/design/saratoga/secondary-offer/" class="">secondary offer (DSP)</a>
-      </h5>
-      
-      
-      <h5 class="sans bold ">
         <a href="https://mcclatchy.github.io/design/saratoga/social-media/" class="">social-media</a>
-      </h5>
-      
-      
-      <h5 class="sans bold ">
-        <a href="https://mcclatchy.github.io/design/saratoga/tertiary-offer/" class="">tertiary offer (DSP)</a>
-      </h5>
-      
-      
-      <h5 class="sans bold ">
-        <a href="https://mcclatchy.github.io/design/saratoga/utilities/" class="">utilities</a>
       </h5>
       
     </div>
@@ -689,6 +594,16 @@ el.classList.toggle('active');
       
       <h5 class="sans bold ">
         <a href="https://mcclatchy.github.io/design/saratoga/figure/" class="">figure</a>
+      </h5>
+      
+      
+      <h5 class="sans bold ">
+        <a href="https://mcclatchy.github.io/design/saratoga/flex-columns/" class="">flex-columns</a>
+      </h5>
+      
+      
+      <h5 class="sans bold ">
+        <a href="https://mcclatchy.github.io/design/saratoga/grid/" class="">grid</a>
       </h5>
       
       
@@ -723,6 +638,11 @@ el.classList.toggle('active');
       
       
       <h5 class="sans bold ">
+        <a href="https://mcclatchy.github.io/design/saratoga/impact/" class="">impact</a>
+      </h5>
+      
+      
+      <h5 class="sans bold ">
         <a href="https://mcclatchy.github.io/design/saratoga/inputs/" class="">inputs</a>
       </h5>
       
@@ -748,12 +668,22 @@ el.classList.toggle('active');
       
       
       <h5 class="sans bold ">
+        <a href="https://mcclatchy.github.io/design/saratoga/paper/" class="">paper</a>
+      </h5>
+      
+      
+      <h5 class="sans bold ">
         <a href="https://mcclatchy.github.io/design/saratoga/section/" class="">section</a>
       </h5>
       
       
       <h5 class="sans bold ">
         <a href="https://mcclatchy.github.io/design/saratoga/time/" class="">time</a>
+      </h5>
+      
+      
+      <h5 class="sans bold ">
+        <a href="https://mcclatchy.github.io/design/saratoga/utilities/" class="">utilities</a>
       </h5>
       
     </div>

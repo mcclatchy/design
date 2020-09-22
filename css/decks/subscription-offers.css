@@ -1,0 +1,44 @@
+/*****
+** Subscription offers
+****/
+
+.subscription-offers {
+  --ts: 0.875rem;
+  --tf: var(--sans);
+  --hf: var(--sans);
+  --hw: 700;
+}
+
+.subscription-offers h2 {
+  text-align: center;
+}
+
+.subscription-offers > .grid {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.subscription-offers .package {
+  --ps: 5px;
+  flex: none;
+  align-items: center;
+  text-align: center;
+}
+
+.subscription-offers .redeem-code {
+  max-width: 400px;
+  margin: 0 auto;
+  align-items: center;
+  --ps: 30px;
+  --hf: var(--sans);
+  --hw: bold;
+}
+
+.subscription-offers form {
+  align-self: stretch;
+  text-align: left;
+}
+
+.subscription-offers .bottom-links {
+  --ps: 15px;
+}

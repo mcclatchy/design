@@ -11,42 +11,33 @@
     <meta name="mobile-web-app-capable" content="yes">
     <link rel="shortcut icon" href="../../favicon.ico">
 
-    
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700|Noto+Serif:400,700&display=swap&subset=latin-ext" rel="stylesheet">
 
     
     <link rel="stylesheet" href="../../css/atoms/typography.css">
     <link rel="stylesheet" href="../../css/atoms/media.css">
     <link rel="stylesheet" href="../../css/atoms/section.css">
-    <link rel="stylesheet" href="../../css/atoms/button.css">
     <link rel="stylesheet" href="../../css/atoms/inputs.css">
+    <link rel="stylesheet" href="../../css/atoms/button.css">
+    <link rel="stylesheet" href="../../css/atoms/paper.css">
+    <link rel="stylesheet" href="../../css/atoms/impact.css">
+    <link rel="stylesheet" href="../../css/atoms/utilities.css">
+    <link rel="stylesheet" href="../../css/atoms/flex-columns.css">
+    <link rel="stylesheet" href="../../css/atoms/flex-row.css">
+    <link rel="stylesheet" href="../../css/atoms/grid.css">
+    <link rel="stylesheet" href="../../css/atoms/story-body.css">
 
     
-    <link rel="stylesheet" href="../../css/molecules/paper.css">
     <link rel="stylesheet" href="../../css/molecules/package.css">
-    <link rel="stylesheet" href="../../css/molecules/impact.css">
     <link rel="stylesheet" href="../../css/molecules/social-media.css">
     <link rel="stylesheet" href="../../css/molecules/expander.css">
-    <link rel="stylesheet" href="../../css/molecules/utilities.css">
-    <link rel="stylesheet" href="../../css/molecules/progress.css">
-    <link rel="stylesheet" href="../../css/molecules/page-title.css">
-    <link rel="stylesheet" href="../../css/molecules/offer-details.css">
-    <link rel="stylesheet" href="../../css/molecules/primary-offer.css">
-    <link rel="stylesheet" href="../../css/molecules/secondary-offer.css">
-    <link rel="stylesheet" href="../../css/molecules/tertiary-offer.css">
-    <link rel="stylesheet" href="../../css/molecules/account-sub-nav.css">
-    <link rel="stylesheet" href="../../css/molecules/masthead.css">
-
+    
 
     
-    <link rel="stylesheet" href="../../css/cards/grid.css">
-    <link rel="stylesheet" href="../../css/cards/flex-columns.css">
-    <link rel="stylesheet" href="../../css/cards/flex-row.css">
     <link rel="stylesheet" href="../../css/cards/zones.css">
     <link rel="stylesheet" href="../../css/cards/ads.css">
     <link rel="stylesheet" href="../../css/cards/digest.css">
     <link rel="stylesheet" href="../../css/cards/immersive.css">
-    <link rel="stylesheet" href="../../css/cards/story-body.css">
     <link rel="stylesheet" href="../../css/cards/header.css">
     <link rel="stylesheet" href="../../css/cards/series-nav.css">
     <link rel="stylesheet" href="../../css/cards/correction.css">
@@ -65,15 +56,22 @@
     <link rel="stylesheet" href="../../css/cards/upper-nav.css">
     <link rel="stylesheet" href="../../css/cards/sponsor.css">
     <link rel="stylesheet" href="../../css/cards/gallery.css">
-    <link rel="stylesheet" href="../../css/cards/dsp.css">
-    <link rel="stylesheet" href="../../css/cards/review-order.css">
-    <link rel="stylesheet" href="../../css/cards/paywall.css">
-    <link rel="stylesheet" href="../../css/cards/subscription-offers.css">
-    <link rel="stylesheet" href="../../css/cards/hidden.css">
 
-   
+    
+    <link rel="stylesheet" href="../../css/decks/flag.css">
+    <link rel="stylesheet" href="../../css/decks/footer.css">
+    <link rel="stylesheet" href="../../css/decks/menu.css">
+    <link rel="stylesheet" href="../../css/decks/search.css">
+    <link rel="stylesheet" href="../../css/decks/eedition-portal.css">
+    <link rel="stylesheet" href="../../css/decks/impact2020.css">
+    <link rel="stylesheet" href="../../css/decks/display-classes.css">
+    <link rel="stylesheet" href="../../css/decks/hidden.css">
+    <link rel="stylesheet" href="../../css/decks/purple-tuesdays.css">
+    
+
     
     <link rel="stylesheet" href="../../css/site.css">
+    
 <link rel="stylesheet" href="../../css/style-guide.css">
 
   </head>
@@ -105,72 +103,74 @@
     </h2>
     <p>Inputs are designed to be placed in a center-aligned form that is 100% of the parent width using browser defaults and to have different states based on user interaction.</p>
 <h4 id="text-inputs-example">Text Inputs Example</h4>
-<div class="dsp" style="margin-bottom: 30px;">
-    <form style="max-width: 400px;">
-        <div>
-          <label for="default-input">Default</label>
-          <input type="text" id="default-input">
-        </div>
-        <div>
-          <label for="focused-input">Focused</label>
-          <input type="text" id="focused-input">
-        </div>
-        <div>
-          <label for="hint-input">Hint</label>
-          <small>This is a hint</small>     
-          <input type="text" id="hint-input">
-        </div>
-        <div>
-          <label for="error-input">Error</label>
-          <small for="error-input">This is an error message</small>     
-          <input type="text" id="error-input" class="is-invalid">
-        </div>
-        <div>
-          <label for="password-input" onclick="changeType()" id="password-label">Password</label>
-          <small>Must be at least 7 characters long</small>    
-          <input type="password" id="password-input">
-        </div>
-      <button id="button" type="submit" class="button promo">submit</button>   
-    </form>  
- </div>  
-<h4 id="checkboxes-and-radios-example">Checkboxes and Radios Example</h4>
-<div style="margin-bottom:30px;">
-     <form>
-      <label class="checkbox-container">Custom Checkbox
-          <input type="checkbox">
-          <span class="checkmark"></span>
-      </label>
-      <label class="checkbox-container">Custom Radio
-        <input type="radio" checked="checked" name="radio">
-        <span class="radio"></span>
-      </label>
-      <label class="checkbox-container">Custom Radio
-        <input type="radio" name="radio">
-        <span class="radio"></span>
-      </label>
-    </form> 
-</div>
+<form style="grid-template-columns: 400px;">
+  <div>
+    <label for="default-input">Default</label>
+    <input type="text" id="default-input">
+  </div>
+  <div>
+    <label for="focused-input">Focused</label>
+    <input type="text" class="focus">
+  </div>
+  <div>
+    <label for="hint-input">Hint</label>
+    <small>This is a hint</small>     
+    <input type="text" id="hint-input">
+  </div>
+  <div>
+    <label for="error-input">Error</label>
+    <small class="error" for="error-input">This is an error message</small>     
+    <input type="text" id="error-input" class="is-invalid">
+  </div>
+  <div>
+    <label for="password-input" class="password-label">Password</label>
+    <small>Must be at least 7 characters long</small>    
+    <input type="password" class="password">
+  </div>
+  <div>
+    <label for="native-select">Native select box</label>
+    <select>
+      <option value="Relevance">Relevance</option>
+      <option value="Newest">Newest</option>
+      <option value="Oldest">Oldest</option>
+    </select>
+  </div>
+  <div class="checkbox-group">
+    <h4>Checkboxes and Radios Example</h4>
+    <label class="checkbox"><input type="checkbox"> Checkbox</label>
+    <label class="checkbox"><input type="radio" name="radio"> Radio Button</label>
+    <label class="checkbox"><input type="radio" name="radio"> Radio Button</label>
+  </div> 
+<p><button id="button" type="submit" class="button promo">submit</button></p>
+</form>  
+<hr>
 <h4 id="html">HTML</h4>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080;font-weight:bold">div</span>&gt;
-    &lt;<span style="color:#000080;font-weight:bold">form</span>&gt;
-     
-      &lt;<span style="color:#000080;font-weight:bold">label</span> <span style="color:#f00">for</span>=<span style="color:#00f">&#34;input&#34;</span>&gt;Default&lt;/<span style="color:#000080;font-weight:bold">label</span>&gt;
-      &lt;<span style="color:#000080;font-weight:bold">small</span>&gt;This is a hint&lt;/<span style="color:#000080;font-weight:bold">small</span>&gt;           
-      &lt;<span style="color:#000080;font-weight:bold">input</span> <span style="color:#f00">type</span>=<span style="color:#00f">&#34;text&#34;</span> <span style="color:#f00">id</span>=<span style="color:#00f">&#34;input&#34;</span>&gt;
-      
-      &lt;<span style="color:#000080;font-weight:bold">label</span> <span style="color:#f00">for</span>=<span style="color:#00f">&#34;password-input&#34;</span> <span style="color:#f00">onclick</span>=<span style="color:#00f">&#34;changeType()&#34;</span> <span style="color:#f00">id</span>=<span style="color:#00f">&#34;password-label&#34;</span>&gt;Password&lt;/<span style="color:#000080;font-weight:bold">label</span>&gt;
-      &lt;<span style="color:#000080;font-weight:bold">small</span>&gt;Must be at least 7 characters long&lt;/<span style="color:#000080;font-weight:bold">small</span>&gt;    
-      &lt;<span style="color:#000080;font-weight:bold">input</span> <span style="color:#f00">type</span>=<span style="color:#00f">&#34;password&#34;</span> <span style="color:#f00">id</span>=<span style="color:#00f">&#34;password-input&#34;</span>&gt;
-      
-      &lt;<span style="color:#000080;font-weight:bold">button</span> <span style="color:#f00">type</span>=<span style="color:#00f">&#34;submit&#34;</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;button promo&#34;</span>&gt;submit&lt;/<span style="color:#000080;font-weight:bold">button</span>&gt;  
-      
-      &lt;<span style="color:#000080;font-weight:bold">label</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;checkbox-container&#34;</span>&gt;Custom Radio
-        &lt;<span style="color:#000080;font-weight:bold">input</span> <span style="color:#f00">type</span>=<span style="color:#00f">&#34;radio&#34;</span> <span style="color:#f00">name</span>=<span style="color:#00f">&#34;radio&#34;</span>&gt;
-        &lt;<span style="color:#000080;font-weight:bold">span</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;radio&#34;</span>&gt;&lt;/<span style="color:#000080;font-weight:bold">span</span>&gt;
-      &lt;/<span style="color:#000080;font-weight:bold">label</span>&gt;
-      
-    &lt;/<span style="color:#000080;font-weight:bold">form</span>&gt;
-&lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080;font-weight:bold">form</span>&gt;
+ 
+  <span style="color:#080;font-style:italic">&lt;!-- Either option can be used --&gt;</span>
+  &lt;<span style="color:#000080;font-weight:bold">label</span> <span style="color:#f00">for</span>=<span style="color:#00f">&#34;input&#34;</span>&gt;Default&lt;/<span style="color:#000080;font-weight:bold">label</span>&gt;
+  &lt;<span style="color:#000080;font-weight:bold">small</span>&gt;This is a hint&lt;/<span style="color:#000080;font-weight:bold">small</span>&gt;           
+  &lt;<span style="color:#000080;font-weight:bold">input</span> <span style="color:#f00">type</span>=<span style="color:#00f">&#34;text&#34;</span> <span style="color:#f00">id</span>=<span style="color:#00f">&#34;input&#34;</span>&gt;
+
+  &lt;<span style="color:#000080;font-weight:bold">label</span>&gt;Hint &lt;<span style="color:#000080;font-weight:bold">small</span>&gt;This is a hint&lt;/<span style="color:#000080;font-weight:bold">small</span>&gt; &lt;<span style="color:#000080;font-weight:bold">input</span> <span style="color:#f00">type</span>=<span style="color:#00f">&#34;text&#34;</span> <span style="color:#f00">name</span>=<span style="color:#00f">&#34;something&#34;</span>&gt;&lt;/<span style="color:#000080;font-weight:bold">label</span>&gt;
+  
+  <span style="color:#080;font-style:italic">&lt;!-- Password toggles go on the label element --&gt;</span>
+  &lt;<span style="color:#000080;font-weight:bold">label</span> <span style="color:#f00">for</span>=<span style="color:#00f">&#34;password-input&#34;</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;password-label&#34;</span>&gt;Password&lt;/<span style="color:#000080;font-weight:bold">label</span>&gt;
+  &lt;<span style="color:#000080;font-weight:bold">small</span>&gt;Must be at least 7 characters long&lt;/<span style="color:#000080;font-weight:bold">small</span>&gt;    
+  &lt;<span style="color:#000080;font-weight:bold">input</span> <span style="color:#f00">type</span>=<span style="color:#00f">&#34;password&#34;</span> <span style="color:#f00">id</span>=<span style="color:#00f">&#34;password-input&#34;</span>&gt;
+  
+  <span style="color:#080;font-style:italic">&lt;!-- Checkbox/Radio labels require a checkbox class --&gt;</span>
+  &lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;checkbox-group&#34;</span>&gt;
+    &lt;<span style="color:#000080;font-weight:bold">label</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;checkbox&#34;</span>&gt;&lt;<span style="color:#000080;font-weight:bold">input</span> <span style="color:#f00">type</span>=<span style="color:#00f">&#34;checkbox&#34;</span>&gt; Checkbox&lt;/<span style="color:#000080;font-weight:bold">label</span>&gt;
+    &lt;<span style="color:#000080;font-weight:bold">label</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;checkbox&#34;</span>&gt;&lt;<span style="color:#000080;font-weight:bold">input</span> <span style="color:#f00">type</span>=<span style="color:#00f">&#34;radio&#34;</span>&gt; Radio button&lt;/<span style="color:#000080;font-weight:bold">label</span>&gt;
+  &lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;
+
+  <span style="color:#080;font-style:italic">&lt;!-- Submit button can be a button element or an input. 
+</span><span style="color:#080;font-style:italic">  The input version will stretch like all other inputs. --&gt;</span>
+  &lt;<span style="color:#000080;font-weight:bold">button</span> <span style="color:#f00">type</span>=<span style="color:#00f">&#34;submit&#34;</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;button promo&#34;</span>&gt;submit&lt;/<span style="color:#000080;font-weight:bold">button</span>&gt;  
+  &lt;<span style="color:#000080;font-weight:bold">input</span> <span style="color:#f00">type</span>=<span style="color:#00f">&#34;submit&#34;</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;button promo&#34;</span> <span style="color:#f00">value</span>=<span style="color:#00f">&#34;submit&#34;</span>&gt;
+  
+&lt;/<span style="color:#000080;font-weight:bold">form</span>&gt;
 </code></pre></div><h4 id="rules">RULES</h4>
 <table>
 <thead>
@@ -199,17 +199,17 @@
 </tbody>
 </table>
 <hr>
-<h2 id="select">SELECT</h2>
+<h2 id="custom-select">CUSTOM SELECT</h2>
 <p>Custom selects use a combination of the <a href="../expander">expander</a> molecule and link-based buttons instead of the native select element for forms. Because they are based on the expander, a toggle of the <code>open</code> class will show and remove the option list. Lastly, adding the class <code>selected</code> to any of options will make it bold. Different use cases will most likely require different javascript, but we have a <a href="../../js/select.js">starter script</a> for the purposes of this demo.</p>
 <h4 id="example">EXAMPLE</h4>
 <div class="grid" style="grid-template-columns: 300px 1fr;">
 <form>
 <div class="select">
-  <span class="button big expander" onclick="this.classList.toggle('open');">Order by</span>
+  <span class="expander" onclick="this.classList.toggle('open');">Order by</span>
   <div class="options">
-    <a class="button big" href="#" data-name="Relevance">Relevance</a>
-    <a class="button big" href="#" data-name="Newest">Newest</a>
-    <a class="button big" href="#" data-name="Oldest">Oldest</a>
+    <a href="#" data-name="Relevance">Relevance</a>
+    <a href="#" data-name="Newest">Newest</a>
+    <a href="#" data-name="Oldest">Oldest</a>
   </div>
 </div>
 
@@ -218,31 +218,14 @@
 <script async src="../../js/select.js"></script>
 <h4 id="html-1">HTML</h4>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;select&#34;</span>&gt;
-  &lt;<span style="color:#000080;font-weight:bold">span</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;button big expander&#34;</span> <span style="color:#f00">onclick</span>=<span style="color:#00f">&#34;this.classList.toggle(&#39;open&#39;);&#34;</span>&gt;Order by&lt;/<span style="color:#000080;font-weight:bold">span</span>&gt;
+  &lt;<span style="color:#000080;font-weight:bold">span</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;expander&#34;</span> <span style="color:#f00">onclick</span>=<span style="color:#00f">&#34;this.classList.toggle(&#39;open&#39;);&#34;</span>&gt;Order by&lt;/<span style="color:#000080;font-weight:bold">span</span>&gt;
   &lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;options&#34;</span>&gt;
-    &lt;<span style="color:#000080;font-weight:bold">a</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;button big&#34;</span> <span style="color:#f00">href</span>=<span style="color:#00f">&#34;#&#34;</span> <span style="color:#f00">data-name</span>=<span style="color:#00f">&#34;Relevance&#34;</span>&gt;Relevance&lt;/<span style="color:#000080;font-weight:bold">a</span>&gt;
-    &lt;<span style="color:#000080;font-weight:bold">a</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;button big&#34;</span> <span style="color:#f00">href</span>=<span style="color:#00f">&#34;#&#34;</span> <span style="color:#f00">data-name</span>=<span style="color:#00f">&#34;Newest&#34;</span>&gt;Newest&lt;/<span style="color:#000080;font-weight:bold">a</span>&gt;
-    &lt;<span style="color:#000080;font-weight:bold">a</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;button big&#34;</span> <span style="color:#f00">href</span>=<span style="color:#00f">&#34;#&#34;</span> <span style="color:#f00">data-name</span>=<span style="color:#00f">&#34;Oldest&#34;</span>&gt;Oldest&lt;/<span style="color:#000080;font-weight:bold">a</span>&gt;
+    &lt;<span style="color:#000080;font-weight:bold">a</span> <span style="color:#f00">href</span>=<span style="color:#00f">&#34;#&#34;</span> <span style="color:#f00">data-name</span>=<span style="color:#00f">&#34;Relevance&#34;</span>&gt;Relevance&lt;/<span style="color:#000080;font-weight:bold">a</span>&gt;
+    &lt;<span style="color:#000080;font-weight:bold">a</span> <span style="color:#f00">href</span>=<span style="color:#00f">&#34;#&#34;</span> <span style="color:#f00">data-name</span>=<span style="color:#00f">&#34;Newest&#34;</span>&gt;Newest&lt;/<span style="color:#000080;font-weight:bold">a</span>&gt;
+    &lt;<span style="color:#000080;font-weight:bold">a</span> <span style="color:#f00">href</span>=<span style="color:#00f">&#34;#&#34;</span> <span style="color:#f00">data-name</span>=<span style="color:#00f">&#34;Oldest&#34;</span>&gt;Oldest&lt;/<span style="color:#000080;font-weight:bold">a</span>&gt;
   &lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;
 &lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;</code></pre></div>
-<script>
-//toggle password hide/show
-  const el = document.querySelector('#password-label');
-  function changeType() {
-  let x = document.getElementById("password-input");
-  if (x.type === "password") {
-      x.type = "text";  
-  } else {
-    x.type = "password";
-  }
-el.classList.toggle('active');
-}
-//prevent form submit
-  document.getElementById("button").addEventListener("click", function(event){
-  event.preventDefault()
-});
-</script><blockquote>
-</blockquote>
+<script async src="../../js/forms.js"></script>
 
   </div>
 
@@ -296,14 +279,6 @@ el.classList.toggle('active');
     
     <div class="package">
       <h4 class="sans bold">
-        <a class="" href="https://mcclatchy.github.io/design/saratoga/flex-columns/">flex-columns</a>
-      </h4>
-      <p class="summary">A flexbox version of the grid using the same rules.</p>
-    </div>
-    
-    
-    <div class="package">
-      <h4 class="sans bold">
         <a class="" href="https://mcclatchy.github.io/design/saratoga/footer/">footer</a>
       </h4>
       <p class="summary">Standard footer for the bottom of all pages</p>
@@ -323,14 +298,6 @@ el.classList.toggle('active');
         <a class="" href="https://mcclatchy.github.io/design/saratoga/gallery/">gallery</a>
       </h4>
       <p class="summary">Photo gallery to be used in all occasions.</p>
-    </div>
-    
-    
-    <div class="package">
-      <h4 class="sans bold">
-        <a class="" href="https://mcclatchy.github.io/design/saratoga/grid/">grid</a>
-      </h4>
-      <p class="summary">A very basic starter grid</p>
     </div>
     
     
@@ -379,14 +346,6 @@ el.classList.toggle('active');
         <a class="" href="https://mcclatchy.github.io/design/saratoga/modal/">modal</a>
       </h4>
       <p class="summary">Simple overlay containers to maintain consistency.</p>
-    </div>
-    
-    
-    <div class="package">
-      <h4 class="sans bold">
-        <a class="" href="https://mcclatchy.github.io/design/saratoga/paywall/">paywall (DSP)</a>
-      </h4>
-      <p class="summary">DSP paywall offer card</p>
     </div>
     
     
@@ -642,12 +601,12 @@ el.classList.toggle('active');
       
       
       <h5 class="sans bold ">
-        <a href="https://mcclatchy.github.io/design/saratoga/impact/" class="">impact</a>
+        <a href="https://mcclatchy.github.io/design/saratoga/masthead/" class="">masthead (DSP)</a>
       </h5>
       
       
       <h5 class="sans bold ">
-        <a href="https://mcclatchy.github.io/design/saratoga/masthead/" class="">masthead (DSP)</a>
+        <a href="https://mcclatchy.github.io/design/saratoga/offer/" class="">offer (DSP)</a>
       </h5>
       
       
@@ -667,16 +626,6 @@ el.classList.toggle('active');
       
       
       <h5 class="sans bold ">
-        <a href="https://mcclatchy.github.io/design/saratoga/paper/" class="">paper</a>
-      </h5>
-      
-      
-      <h5 class="sans bold ">
-        <a href="https://mcclatchy.github.io/design/saratoga/primary-offer/" class="">primary offer (DSP)</a>
-      </h5>
-      
-      
-      <h5 class="sans bold ">
         <a href="https://mcclatchy.github.io/design/saratoga/progress/" class="">progress bar (DSP)</a>
       </h5>
       
@@ -687,22 +636,7 @@ el.classList.toggle('active');
       
       
       <h5 class="sans bold ">
-        <a href="https://mcclatchy.github.io/design/saratoga/secondary-offer/" class="">secondary offer (DSP)</a>
-      </h5>
-      
-      
-      <h5 class="sans bold ">
         <a href="https://mcclatchy.github.io/design/saratoga/social-media/" class="">social-media</a>
-      </h5>
-      
-      
-      <h5 class="sans bold ">
-        <a href="https://mcclatchy.github.io/design/saratoga/tertiary-offer/" class="">tertiary offer (DSP)</a>
-      </h5>
-      
-      
-      <h5 class="sans bold ">
-        <a href="https://mcclatchy.github.io/design/saratoga/utilities/" class="">utilities</a>
       </h5>
       
     </div>
@@ -732,6 +666,16 @@ el.classList.toggle('active');
       
       <h5 class="sans bold ">
         <a href="https://mcclatchy.github.io/design/saratoga/figure/" class="">figure</a>
+      </h5>
+      
+      
+      <h5 class="sans bold ">
+        <a href="https://mcclatchy.github.io/design/saratoga/flex-columns/" class="">flex-columns</a>
+      </h5>
+      
+      
+      <h5 class="sans bold ">
+        <a href="https://mcclatchy.github.io/design/saratoga/grid/" class="">grid</a>
       </h5>
       
       
@@ -766,6 +710,11 @@ el.classList.toggle('active');
       
       
       <h5 class="sans bold ">
+        <a href="https://mcclatchy.github.io/design/saratoga/impact/" class="">impact</a>
+      </h5>
+      
+      
+      <h5 class="sans bold ">
         <a href="https://mcclatchy.github.io/design/saratoga/inputs/" class="active">inputs</a>
       </h5>
       
@@ -791,12 +740,22 @@ el.classList.toggle('active');
       
       
       <h5 class="sans bold ">
+        <a href="https://mcclatchy.github.io/design/saratoga/paper/" class="">paper</a>
+      </h5>
+      
+      
+      <h5 class="sans bold ">
         <a href="https://mcclatchy.github.io/design/saratoga/section/" class="">section</a>
       </h5>
       
       
       <h5 class="sans bold ">
         <a href="https://mcclatchy.github.io/design/saratoga/time/" class="">time</a>
+      </h5>
+      
+      
+      <h5 class="sans bold ">
+        <a href="https://mcclatchy.github.io/design/saratoga/utilities/" class="">utilities</a>
       </h5>
       
     </div>

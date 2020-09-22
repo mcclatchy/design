@@ -11,42 +11,41 @@
     <meta name="mobile-web-app-capable" content="yes">
     <link rel="shortcut icon" href="../../favicon.ico">
 
-    
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700|Noto+Serif:400,700&display=swap&subset=latin-ext" rel="stylesheet">
 
     
     <link rel="stylesheet" href="../../css/atoms/typography.css">
     <link rel="stylesheet" href="../../css/atoms/media.css">
     <link rel="stylesheet" href="../../css/atoms/section.css">
-    <link rel="stylesheet" href="../../css/atoms/button.css">
     <link rel="stylesheet" href="../../css/atoms/inputs.css">
+    <link rel="stylesheet" href="../../css/atoms/button.css">
+    <link rel="stylesheet" href="../../css/atoms/paper.css">
+    <link rel="stylesheet" href="../../css/atoms/impact.css">
+    <link rel="stylesheet" href="../../css/atoms/utilities.css">
+    <link rel="stylesheet" href="../../css/atoms/flex-columns.css">
+    <link rel="stylesheet" href="../../css/atoms/flex-row.css">
+    <link rel="stylesheet" href="../../css/atoms/grid.css">
+    <link rel="stylesheet" href="../../css/atoms/story-body.css">
 
     
-    <link rel="stylesheet" href="../../css/molecules/paper.css">
     <link rel="stylesheet" href="../../css/molecules/package.css">
-    <link rel="stylesheet" href="../../css/molecules/impact.css">
     <link rel="stylesheet" href="../../css/molecules/social-media.css">
     <link rel="stylesheet" href="../../css/molecules/expander.css">
-    <link rel="stylesheet" href="../../css/molecules/utilities.css">
     <link rel="stylesheet" href="../../css/molecules/progress.css">
     <link rel="stylesheet" href="../../css/molecules/page-title.css">
+    <link rel="stylesheet" href="../../css/molecules/offer.css">
+    
+    
     <link rel="stylesheet" href="../../css/molecules/offer-details.css">
-    <link rel="stylesheet" href="../../css/molecules/primary-offer.css">
-    <link rel="stylesheet" href="../../css/molecules/secondary-offer.css">
-    <link rel="stylesheet" href="../../css/molecules/tertiary-offer.css">
     <link rel="stylesheet" href="../../css/molecules/account-sub-nav.css">
     <link rel="stylesheet" href="../../css/molecules/masthead.css">
-
+    <link rel="stylesheet" href="../../css/molecules/purchase-info.css">
 
     
-    <link rel="stylesheet" href="../../css/cards/grid.css">
-    <link rel="stylesheet" href="../../css/cards/flex-columns.css">
-    <link rel="stylesheet" href="../../css/cards/flex-row.css">
     <link rel="stylesheet" href="../../css/cards/zones.css">
     <link rel="stylesheet" href="../../css/cards/ads.css">
     <link rel="stylesheet" href="../../css/cards/digest.css">
     <link rel="stylesheet" href="../../css/cards/immersive.css">
-    <link rel="stylesheet" href="../../css/cards/story-body.css">
     <link rel="stylesheet" href="../../css/cards/header.css">
     <link rel="stylesheet" href="../../css/cards/series-nav.css">
     <link rel="stylesheet" href="../../css/cards/correction.css">
@@ -65,15 +64,26 @@
     <link rel="stylesheet" href="../../css/cards/upper-nav.css">
     <link rel="stylesheet" href="../../css/cards/sponsor.css">
     <link rel="stylesheet" href="../../css/cards/gallery.css">
-    <link rel="stylesheet" href="../../css/cards/dsp.css">
-    <link rel="stylesheet" href="../../css/cards/review-order.css">
-    <link rel="stylesheet" href="../../css/cards/paywall.css">
-    <link rel="stylesheet" href="../../css/cards/subscription-offers.css">
-    <link rel="stylesheet" href="../../css/cards/hidden.css">
 
-   
+    
+    <link rel="stylesheet" href="../../css/decks/flag.css">
+    <link rel="stylesheet" href="../../css/decks/footer.css">
+    <link rel="stylesheet" href="../../css/decks/menu.css">
+    <link rel="stylesheet" href="../../css/decks/search.css">
+    <link rel="stylesheet" href="../../css/decks/eedition-portal.css">
+    <link rel="stylesheet" href="../../css/decks/impact2020.css">
+    <link rel="stylesheet" href="../../css/decks/display-classes.css">
+    <link rel="stylesheet" href="../../css/decks/hidden.css">
+    <link rel="stylesheet" href="../../css/decks/purple-tuesdays.css">
+    
+    <link rel="stylesheet" href="../../css/decks/my-account.css">
+    <link rel="stylesheet" href="../../css/decks/review-order.css">
+    <link rel="stylesheet" href="../../css/decks/paywall.css">
+    <link rel="stylesheet" href="../../css/decks/subscription-offers.css">
+
     
     <link rel="stylesheet" href="../../css/site.css">
+    
 <link rel="stylesheet" href="../../css/style-guide.css">
 
   </head>
@@ -105,102 +115,65 @@
     </h2>
     <p>The review-order card uses the <code>paper</code> molecule to create lift, the <code>flex-columns</code> card to vertically space each item inside the paper, and the <code>package</code> molecule.</p>
 <h4 id="example">Example</h4>
-<div class="dsp" style="margin-bottom: 30px;">
-    <section>
-           <div class="review-order">
-                <div class="paper">
-                   <div class="flex-columns">
-                        <small class="secure">secure transaction <i class="fas fa-lock"></i></small>
-                        <div class="package small">
-                          <button id="button" type="submit" class="button promo">Place order</button>                    
-                        </div>
-                    <div>
-                        <div class="flex">
-                            <span class="summary bold">Your Order</span>
-                            <span class="summary bold">Due Today: $10.99</span>
-                        </div>
-                        <div class="package small">
-                            <div>
-                                <span class="summary">Unlimited Digital Access</span>
-                                <small>$10.99 for 1 month, $15.99/month after.</small>
-                            </div>
-                            <small class="stretch">Get access to everything on Miamiherald.com, our apps, the eEdition, and our stories platforms like Facebook Instant Articles and Google News.</small>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="flex">
-                            <span class="summary bold">Account Info</span>
-                        </div>
-                        <div class="package small">
-                            <div>
-                                <span class="summary">John Wick</span><br>
-                                <span class="summary">j.wick@email.com</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="flex">
-                            <span class="summary bold">Payment Method</span>
-                        </div>
-                        <div class="package small">
-                            <div>
-                                <span class="summary">John Wick</span><br>
-                                <span class="summary">****0000 | Exp. 12/23 <i class="fab fa-cc-visa" style="color: #1A1F71;"></i></span>
-                                <a href="#" class="more-link primary">Edit Payment Method</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<div class="example grid shadow" style="--columns: 425px">
+  <div class="review-order paper">
+  <small class="secure">secure transaction <i class="fas fa-lock"></i></small>
+  <button id="button" type="submit" class="button promo">Place order</button>                    
+
+  <div class="package">
+    <div class="flex bold">
+      <span>Your Order</span>
+      <span>Due Today: $10.99</span>
+    </div>
+    <p>Unlimited Digital Access <small class="gray block">$10.99 for 1 month, $15.99/month after.</small></p>
+    <p class="gray">Get access to everything on Miamiherald.com, our apps, the eEdition, and our stories platforms like Facebook Instant Articles and Google News.</p>
+  </div>
+
+  <div class="package">
+    <div class="flex bold">
+      <span>Account Info</span>
+    </div>
+    <p>John Wick <span class="block">j.wick@email.com</span></p>
+  </div>
+
+  <div class="package">
+    <div class="flex bold">
+      <span>Payment Method</span>
+    </div>
+    <p>John Wick <span class="block">****0000 | Exp. 12/23 <i class="fab fa-cc-visa" style="color: #1A1F71;"></i></span></p>
+    <a href="#" class="more-link blue">Edit Payment Method</a>
+  </div>
+</div>
+
 </div>
 <h4 id="html">HTML</h4>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;review-order&#34;</span>&gt;
-    &lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;paper&#34;</span>&gt;
-       &lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;flex-columns&#34;</span>&gt;
-            &lt;<span style="color:#000080;font-weight:bold">small</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;secure&#34;</span>&gt;secure transaction &lt;<span style="color:#000080;font-weight:bold">i</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;fas fa-lock&#34;</span>&gt;&lt;/<span style="color:#000080;font-weight:bold">i</span>&gt;&lt;/<span style="color:#000080;font-weight:bold">small</span>&gt;
-            &lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;package small&#34;</span>&gt;
-              &lt;<span style="color:#000080;font-weight:bold">button</span> <span style="color:#f00">id</span>=<span style="color:#00f">&#34;button&#34;</span> <span style="color:#f00">type</span>=<span style="color:#00f">&#34;submit&#34;</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;button promo&#34;</span>&gt;Place order&lt;/<span style="color:#000080;font-weight:bold">button</span>&gt;                    
-            &lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;
-        &lt;<span style="color:#000080;font-weight:bold">div</span>&gt;
-            &lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;flex&#34;</span>&gt;
-                &lt;<span style="color:#000080;font-weight:bold">span</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;summary bold&#34;</span>&gt;Your Order&lt;/<span style="color:#000080;font-weight:bold">span</span>&gt;
-                &lt;<span style="color:#000080;font-weight:bold">span</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;summary bold&#34;</span>&gt;Due Today: $10.99&lt;/<span style="color:#000080;font-weight:bold">span</span>&gt;
-            &lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;
-            &lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;package small&#34;</span>&gt;
-                &lt;<span style="color:#000080;font-weight:bold">div</span>&gt;
-                    &lt;<span style="color:#000080;font-weight:bold">span</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;summary&#34;</span>&gt;Unlimited Digital Access&lt;/<span style="color:#000080;font-weight:bold">span</span>&gt;
-                    &lt;<span style="color:#000080;font-weight:bold">small</span>&gt;$10.99 for 1 month, $15.99/month after.&lt;/<span style="color:#000080;font-weight:bold">small</span>&gt;
-                &lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;
-                &lt;<span style="color:#000080;font-weight:bold">small</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;stretch&#34;</span>&gt;Get access to everything on Miamiherald.com, our apps, the eEdition, and our stories platforms like Facebook Instant Articles and Google News.&lt;/<span style="color:#000080;font-weight:bold">small</span>&gt;
-            &lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;
-        &lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;
-        &lt;<span style="color:#000080;font-weight:bold">div</span>&gt;
-            &lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;flex&#34;</span>&gt;
-                &lt;<span style="color:#000080;font-weight:bold">span</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;summary bold&#34;</span>&gt;Account Info&lt;/<span style="color:#000080;font-weight:bold">span</span>&gt;
-            &lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;
-            &lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;package small&#34;</span>&gt;
-                &lt;<span style="color:#000080;font-weight:bold">div</span>&gt;
-                    &lt;<span style="color:#000080;font-weight:bold">span</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;summary&#34;</span>&gt;John Wick&lt;/<span style="color:#000080;font-weight:bold">span</span>&gt;&lt;<span style="color:#000080;font-weight:bold">br</span>&gt;
-                    &lt;<span style="color:#000080;font-weight:bold">span</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;summary&#34;</span>&gt;j.wick@email.com&lt;/<span style="color:#000080;font-weight:bold">span</span>&gt;
-                &lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;
-            &lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;
-        &lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;
-        &lt;<span style="color:#000080;font-weight:bold">div</span>&gt;
-            &lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;flex&#34;</span>&gt;
-                &lt;<span style="color:#000080;font-weight:bold">span</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;summary bold&#34;</span>&gt;Payment Method&lt;/<span style="color:#000080;font-weight:bold">span</span>&gt;
-            &lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;
-            &lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;package small&#34;</span>&gt;
-                &lt;<span style="color:#000080;font-weight:bold">div</span>&gt;
-                    &lt;<span style="color:#000080;font-weight:bold">span</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;summary&#34;</span>&gt;John Wick&lt;/<span style="color:#000080;font-weight:bold">span</span>&gt;&lt;<span style="color:#000080;font-weight:bold">br</span>&gt;
-                    &lt;<span style="color:#000080;font-weight:bold">span</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;summary&#34;</span>&gt;****0000 | Exp. 12/23 &lt;<span style="color:#000080;font-weight:bold">i</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;fab fa-cc-visa&#34;</span> <span style="color:#f00">style</span>=<span style="color:#00f">&#34;color: #1A1F71;&#34;</span>&gt;&lt;/<span style="color:#000080;font-weight:bold">i</span>&gt;&lt;/<span style="color:#000080;font-weight:bold">span</span>&gt;
-                    &lt;<span style="color:#000080;font-weight:bold">a</span> <span style="color:#f00">href</span>=<span style="color:#00f">&#34;#&#34;</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;more-link primary&#34;</span>&gt;Edit Payment Method&lt;/<span style="color:#000080;font-weight:bold">a</span>&gt;
-                &lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;
-            &lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;
-        &lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;review-order paper&#34;</span>&gt;
+  &lt;<span style="color:#000080;font-weight:bold">small</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;secure&#34;</span>&gt;secure transaction &lt;<span style="color:#000080;font-weight:bold">i</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;fas fa-lock&#34;</span>&gt;&lt;/<span style="color:#000080;font-weight:bold">i</span>&gt;&lt;/<span style="color:#000080;font-weight:bold">small</span>&gt;
+  &lt;<span style="color:#000080;font-weight:bold">button</span> <span style="color:#f00">id</span>=<span style="color:#00f">&#34;button&#34;</span> <span style="color:#f00">type</span>=<span style="color:#00f">&#34;submit&#34;</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;button promo&#34;</span>&gt;Place order&lt;/<span style="color:#000080;font-weight:bold">button</span>&gt;                    
+
+  &lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;package&#34;</span>&gt;
+    &lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;flex bold&#34;</span>&gt;
+      &lt;<span style="color:#000080;font-weight:bold">span</span>&gt;Your Order&lt;/<span style="color:#000080;font-weight:bold">span</span>&gt;
+      &lt;<span style="color:#000080;font-weight:bold">span</span>&gt;Due Today: $10.99&lt;/<span style="color:#000080;font-weight:bold">span</span>&gt;
     &lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;
-&lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;
+    &lt;<span style="color:#000080;font-weight:bold">p</span>&gt;Unlimited Digital Access &lt;<span style="color:#000080;font-weight:bold">small</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;gray block&#34;</span>&gt;$10.99 for 1 month, $15.99/month after.&lt;/<span style="color:#000080;font-weight:bold">small</span>&gt;&lt;/<span style="color:#000080;font-weight:bold">p</span>&gt;
+    &lt;<span style="color:#000080;font-weight:bold">p</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;gray&#34;</span>&gt;Get access to everything on Miamiherald.com, our apps, the eEdition, and our stories platforms like Facebook Instant Articles and Google News.&lt;/<span style="color:#000080;font-weight:bold">p</span>&gt;
+  &lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;
+
+  &lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;package&#34;</span>&gt;
+    &lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;flex bold&#34;</span>&gt;
+      &lt;<span style="color:#000080;font-weight:bold">span</span>&gt;Account Info&lt;/<span style="color:#000080;font-weight:bold">span</span>&gt;
+    &lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;
+    &lt;<span style="color:#000080;font-weight:bold">p</span>&gt;John Wick &lt;<span style="color:#000080;font-weight:bold">span</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;block&#34;</span>&gt;j.wick@email.com&lt;/<span style="color:#000080;font-weight:bold">span</span>&gt;&lt;/<span style="color:#000080;font-weight:bold">p</span>&gt;
+  &lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;
+
+  &lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;package&#34;</span>&gt;
+    &lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;flex bold&#34;</span>&gt;
+      &lt;<span style="color:#000080;font-weight:bold">span</span>&gt;Payment Method&lt;/<span style="color:#000080;font-weight:bold">span</span>&gt;
+    &lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;
+    &lt;<span style="color:#000080;font-weight:bold">p</span>&gt;John Wick &lt;<span style="color:#000080;font-weight:bold">span</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;block&#34;</span>&gt;****0000 | Exp. 12/23 &lt;<span style="color:#000080;font-weight:bold">i</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;fab fa-cc-visa&#34;</span> <span style="color:#f00">style</span>=<span style="color:#00f">&#34;color: #1A1F71;&#34;</span>&gt;&lt;/<span style="color:#000080;font-weight:bold">i</span>&gt;&lt;/<span style="color:#000080;font-weight:bold">span</span>&gt;&lt;/<span style="color:#000080;font-weight:bold">p</span>&gt;
+    &lt;<span style="color:#000080;font-weight:bold">a</span> <span style="color:#f00">href</span>=<span style="color:#00f">&#34;#&#34;</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;more-link blue&#34;</span>&gt;Edit Payment Method&lt;/<span style="color:#000080;font-weight:bold">a</span>&gt;
+  &lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;
 &lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;</code></pre></div>
 
   </div>
@@ -255,14 +228,6 @@
     
     <div class="package">
       <h4 class="sans bold">
-        <a class="" href="https://mcclatchy.github.io/design/saratoga/flex-columns/">flex-columns</a>
-      </h4>
-      <p class="summary">A flexbox version of the grid using the same rules.</p>
-    </div>
-    
-    
-    <div class="package">
-      <h4 class="sans bold">
         <a class="" href="https://mcclatchy.github.io/design/saratoga/footer/">footer</a>
       </h4>
       <p class="summary">Standard footer for the bottom of all pages</p>
@@ -282,14 +247,6 @@
         <a class="" href="https://mcclatchy.github.io/design/saratoga/gallery/">gallery</a>
       </h4>
       <p class="summary">Photo gallery to be used in all occasions.</p>
-    </div>
-    
-    
-    <div class="package">
-      <h4 class="sans bold">
-        <a class="" href="https://mcclatchy.github.io/design/saratoga/grid/">grid</a>
-      </h4>
-      <p class="summary">A very basic starter grid</p>
     </div>
     
     
@@ -338,14 +295,6 @@
         <a class="" href="https://mcclatchy.github.io/design/saratoga/modal/">modal</a>
       </h4>
       <p class="summary">Simple overlay containers to maintain consistency.</p>
-    </div>
-    
-    
-    <div class="package">
-      <h4 class="sans bold">
-        <a class="" href="https://mcclatchy.github.io/design/saratoga/paywall/">paywall (DSP)</a>
-      </h4>
-      <p class="summary">DSP paywall offer card</p>
     </div>
     
     
@@ -601,12 +550,12 @@
       
       
       <h5 class="sans bold ">
-        <a href="https://mcclatchy.github.io/design/saratoga/impact/" class="">impact</a>
+        <a href="https://mcclatchy.github.io/design/saratoga/masthead/" class="">masthead (DSP)</a>
       </h5>
       
       
       <h5 class="sans bold ">
-        <a href="https://mcclatchy.github.io/design/saratoga/masthead/" class="">masthead (DSP)</a>
+        <a href="https://mcclatchy.github.io/design/saratoga/offer/" class="">offer (DSP)</a>
       </h5>
       
       
@@ -626,16 +575,6 @@
       
       
       <h5 class="sans bold ">
-        <a href="https://mcclatchy.github.io/design/saratoga/paper/" class="">paper</a>
-      </h5>
-      
-      
-      <h5 class="sans bold ">
-        <a href="https://mcclatchy.github.io/design/saratoga/primary-offer/" class="">primary offer (DSP)</a>
-      </h5>
-      
-      
-      <h5 class="sans bold ">
         <a href="https://mcclatchy.github.io/design/saratoga/progress/" class="">progress bar (DSP)</a>
       </h5>
       
@@ -646,22 +585,7 @@
       
       
       <h5 class="sans bold ">
-        <a href="https://mcclatchy.github.io/design/saratoga/secondary-offer/" class="">secondary offer (DSP)</a>
-      </h5>
-      
-      
-      <h5 class="sans bold ">
         <a href="https://mcclatchy.github.io/design/saratoga/social-media/" class="">social-media</a>
-      </h5>
-      
-      
-      <h5 class="sans bold ">
-        <a href="https://mcclatchy.github.io/design/saratoga/tertiary-offer/" class="">tertiary offer (DSP)</a>
-      </h5>
-      
-      
-      <h5 class="sans bold ">
-        <a href="https://mcclatchy.github.io/design/saratoga/utilities/" class="">utilities</a>
       </h5>
       
     </div>
@@ -691,6 +615,16 @@
       
       <h5 class="sans bold ">
         <a href="https://mcclatchy.github.io/design/saratoga/figure/" class="">figure</a>
+      </h5>
+      
+      
+      <h5 class="sans bold ">
+        <a href="https://mcclatchy.github.io/design/saratoga/flex-columns/" class="">flex-columns</a>
+      </h5>
+      
+      
+      <h5 class="sans bold ">
+        <a href="https://mcclatchy.github.io/design/saratoga/grid/" class="">grid</a>
       </h5>
       
       
@@ -725,6 +659,11 @@
       
       
       <h5 class="sans bold ">
+        <a href="https://mcclatchy.github.io/design/saratoga/impact/" class="">impact</a>
+      </h5>
+      
+      
+      <h5 class="sans bold ">
         <a href="https://mcclatchy.github.io/design/saratoga/inputs/" class="">inputs</a>
       </h5>
       
@@ -750,12 +689,22 @@
       
       
       <h5 class="sans bold ">
+        <a href="https://mcclatchy.github.io/design/saratoga/paper/" class="">paper</a>
+      </h5>
+      
+      
+      <h5 class="sans bold ">
         <a href="https://mcclatchy.github.io/design/saratoga/section/" class="">section</a>
       </h5>
       
       
       <h5 class="sans bold ">
         <a href="https://mcclatchy.github.io/design/saratoga/time/" class="">time</a>
+      </h5>
+      
+      
+      <h5 class="sans bold ">
+        <a href="https://mcclatchy.github.io/design/saratoga/utilities/" class="">utilities</a>
       </h5>
       
     </div>

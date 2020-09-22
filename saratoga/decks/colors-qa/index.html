@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Colors QA</title>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="shortcut icon" href="../../../favicon.ico">
+
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700|Noto+Serif:400,700&display=swap&subset=latin-ext" rel="stylesheet">
+
+    
+    <link rel="stylesheet" href="../../../css/atoms/typography.css">
+    <link rel="stylesheet" href="../../../css/atoms/media.css">
+    <link rel="stylesheet" href="../../../css/atoms/section.css">
+    <link rel="stylesheet" href="../../../css/atoms/inputs.css">
+    <link rel="stylesheet" href="../../../css/atoms/button.css">
+    <link rel="stylesheet" href="../../../css/atoms/paper.css">
+    <link rel="stylesheet" href="../../../css/atoms/impact.css">
+    <link rel="stylesheet" href="../../../css/atoms/utilities.css">
+    <link rel="stylesheet" href="../../../css/atoms/flex-columns.css">
+    <link rel="stylesheet" href="../../../css/atoms/flex-row.css">
+    <link rel="stylesheet" href="../../../css/atoms/grid.css">
+    <link rel="stylesheet" href="../../../css/atoms/story-body.css">
+
+    
+    <link rel="stylesheet" href="../../../css/molecules/package.css">
+    <link rel="stylesheet" href="../../../css/molecules/social-media.css">
+    <link rel="stylesheet" href="../../../css/molecules/expander.css">
+    
+
+    
+    <link rel="stylesheet" href="../../../css/cards/zones.css">
+    <link rel="stylesheet" href="../../../css/cards/ads.css">
+    <link rel="stylesheet" href="../../../css/cards/digest.css">
+    <link rel="stylesheet" href="../../../css/cards/immersive.css">
+    <link rel="stylesheet" href="../../../css/cards/header.css">
+    <link rel="stylesheet" href="../../../css/cards/series-nav.css">
+    <link rel="stylesheet" href="../../../css/cards/correction.css">
+    <link rel="stylesheet" href="../../../css/cards/related-stories.css">
+    <link rel="stylesheet" href="../../../css/cards/author-card.css">
+    <link rel="stylesheet" href="../../../css/cards/author-bio.css">
+    <link rel="stylesheet" href="../../../css/cards/timeline.css">
+    <link rel="stylesheet" href="../../../css/cards/transparency.css">
+    <link rel="stylesheet" href="../../../css/cards/big-news.css">
+    <link rel="stylesheet" href="../../../css/cards/in-depth.css">
+    <link rel="stylesheet" href="../../../css/cards/swg-promo.css">
+    <link rel="stylesheet" href="../../../css/cards/read-next.css">
+    <link rel="stylesheet" href="../../../css/cards/section-nav.css">
+    <link rel="stylesheet" href="../../../css/cards/modals.css">
+    <link rel="stylesheet" href="../../../css/cards/inline-cta.css">
+    <link rel="stylesheet" href="../../../css/cards/upper-nav.css">
+    <link rel="stylesheet" href="../../../css/cards/sponsor.css">
+    <link rel="stylesheet" href="../../../css/cards/gallery.css">
+
+    
+    <link rel="stylesheet" href="../../../css/decks/flag.css">
+    <link rel="stylesheet" href="../../../css/decks/footer.css">
+    <link rel="stylesheet" href="../../../css/decks/menu.css">
+    <link rel="stylesheet" href="../../../css/decks/search.css">
+    <link rel="stylesheet" href="../../../css/decks/eedition-portal.css">
+    <link rel="stylesheet" href="../../../css/decks/impact2020.css">
+    <link rel="stylesheet" href="../../../css/decks/display-classes.css">
+    <link rel="stylesheet" href="../../../css/decks/hidden.css">
+    <link rel="stylesheet" href="../../../css/decks/purple-tuesdays.css">
+    
+
+    
+    <link rel="stylesheet" href="../../../css/site.css">
+    
+  </head>
+
+  <body class="">
+    <div class="banner paper">
+      <a href="../../../" style="padding: 0;"><img class="logo" src="../../../img/banner-logo.2.svg"></a>
+      <nav>
+        <a href="https://mcclatchy.github.io/design/saratoga/" class="active">
+          <span>style guide</span>
+        </a>
+        <a href="https://mcclatchy.github.io/design/markets/" class="">
+          <span>markets</span>
+        </a>
+        <a href="https://mcclatchy.github.io/design/ads/" class="">
+          <span>ads</span>
+        </a>
+        <a href="https://mcclatchy.github.io/design/email/" class="">
+          <span>email</span>
+        </a>
+        <a href="https://mcclatchy.github.io/design/labs/" class="">
+          <span>labs</span>
+        </a>
+      </nav>
+    </div>
+<div class="story-body paper" style="padding-top: 15px;">
+  <style>
+  .package {
+    box-sizing: border-box;
+    padding: 15px;
+  }
+</style>
+<h1 id="color-and-css-custom-properties">Color and CSS Custom Properties</h1>
+<p>The most challenging thing to maintain in SDS is color. Take a button. It can be impact, promo, promo-light or disabled like so.</p>
+<div class="buttons">
+  <a class="button impact">Impact</a>
+  <a class="button promo">Promo</a>
+  <a class="button promo-light">Promo-light</a>
+  <a class="button disabled">Disabled</a>
+</div>
+<p>Those are setup using the class directly on the button like so:</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080;font-weight:bold">a</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;button impact&#34;</span>&gt;Impact&lt;/<span style="color:#000080;font-weight:bold">a</span>&gt;
+&lt;<span style="color:#000080;font-weight:bold">a</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;button promo&#34;</span>&gt;Promo&lt;/<span style="color:#000080;font-weight:bold">a</span>&gt;
+&lt;<span style="color:#000080;font-weight:bold">a</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;button promo-light&#34;</span>&gt;Promo-light&lt;/<span style="color:#000080;font-weight:bold">a</span>&gt;
+&lt;<span style="color:#000080;font-weight:bold">a</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;button disabled&#34;</span>&gt;Disabled&lt;/<span style="color:#000080;font-weight:bold">a</span>&gt;
+</code></pre></div><p>This works fine and dandy by simply addind the appropriate color and background color directly like so:</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.impact {
+  <span style="color:#000080;font-weight:bold">background-color</span>: <span style="color:#00f">#373737</span>;
+  <span style="color:#000080;font-weight:bold">color</span>: <span style="color:#000080;font-weight:bold">white</span>;
+}
+</code></pre></div><p>Things get trickier when we take the concept of impact and promo up a level to the container, which we do frequently. The following CTA works fine with the above rules:</p>
+<div class="package paper promo">
+  <h2>Title</h2>
+  <p class="summary">Offer text goes here</p>
+</div>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;package paper promo&#34;</span>&gt;
+  &lt;<span style="color:#000080;font-weight:bold">h2</span>&gt;Title&lt;/<span style="color:#000080;font-weight:bold">h2</span>&gt;
+  &lt;<span style="color:#000080;font-weight:bold">p</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;summary&#34;</span>&gt;Offer text goes here&lt;/<span style="color:#000080;font-weight:bold">p</span>&gt;
+&lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;
+</code></pre></div><p>Great, but soon we need to add children who also need a different color treatment, like a button, or a link, or a byline.</p>
+<div class="package paper promo">
+  <h2>Title</h2>
+  <p class="summary">Offer text goes here</p>
+  <a class="button">OFFER ACTION</a>
+</div>
+<p>Ok .. now the togo food container is starting to get a little funky. How are we going to handle this? Easy enough, we can add additional rules for buttons like so:</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.promo .button {
+  <span style="color:#000080;font-weight:bold">color</span>: <span style="color:#000080;font-weight:bold">blue</span>;
+}
+</code></pre></div><p>Wait .. how many elements do we have with a default color .. like 12 .. OK .. impact, promo, light, disabled, 12 times 4 .. 48 rules &hellip;&hellip;. ok?</p>
+<div class="package paper promo">
+  <h2>Title</h2>
+  <p class="summary">Offer text goes here</p>
+  <a class="button" style="--bc: #222">OFFER ACTION</a>
+</div>
+<p>Wait .. why is that button text black?</p>
+<div class="package paper promo">
+  <h2>Title</h2>
+  <p class="summary">Offer text goes here</p>
+  <a class="more-link" style="--lc: #707070">OFFER ACTION</a>
+</div>
+<p>I&rsquo;m sorry, we&rsquo;re throwing more links in promos now too?</p>
+<p>And you want them to be <em>white</em>?</p>
+<p><strong>That&rsquo;s it, no more rules I&rsquo;m locking everything down!</strong></p>
+<p>&hellip;</p>
+<p>&hellip;</p>
+<p>&hellip;</p>
+<p>No, we don&rsquo;t get to do that we gotta figure this out.</p>
+<h3 id="css-custom-properties-to-the-rescue">CSS Custom Properties to the rescue</h3>
+<p>For many years developers have used pre-processors like Less and Sass to handle these messes. They do clean up code for the developer, but they don&rsquo;t help at all on payload size. In fact they often make it much much worse because the rule complexity is hidden from us. Custom properties are the new native way of handling funky logic like we have here. I don&rsquo;t have a total handle on best ways to set up larger projects, but this is what I&rsquo;ve discovered so far.</p>
+<p>Placing these properties on bigger boxes themselves provides a very limited advantage over the regular rule, if an advantage exists at all. If you place it on the most basic atom, however, it can be super helpful.</p>
+<p>Take our more-link sample from above. Default rules state that the color of a more-link should be #707070 like so:</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.more-link {
+  <span style="color:#000080;font-weight:bold">color</span>: <span style="color:#00f">#707070</span>;
+}
+</code></pre></div><p>This rule is why you see the more-link show up as gray in the promo box above. If we change this just slightly, however, we can set up some options.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.more-link {
+  <span style="color:#000080;font-weight:bold">color</span>: var(--tc, <span style="color:#00f">#707070</span>);
+}
+</code></pre></div><p>This rules states that the more-link should use the <code>--tc</code> (text-color in my head) variable, and if that isn&rsquo;t set to use the standard #707070. This let&rsquo;s us set up rules for cards at the card level, without having to worry about what elements may or may not get thrown into it through the stakeholder review process. Take the promo CTA from before where the link was gray. Instead of thinking about the specific elements that are going to go into the card, using CSS properties we can think about the rules for the card itself.</p>
+<p>In promo cards, the text should be white, which we can now define like so:</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.promo {
+  --tc: <span style="color:#000080;font-weight:bold">white</span>;
+}
+</code></pre></div><div class="package paper promo">
+  <h2>Title</h2>
+  <p class="summary">Offer text goes here</p>
+  <a class="more-link">OFFER ACTION</a>
+</div>
+<p>If we ensure that every atom that sets a change of color does so in this way, not only do we drastically shrink our CSS payload, but we also get a system that works more like stakeholders think. Can I put a button that links to my special page but also one of those arrow things that goes to our terms and conditions?</p>
+<div class="package paper promo" style="padding: 30px;">
+  <h3 class="sans bold" style="line-height: 1.5em">Get full access to The Sacramento Bee across all your devices. Unlimited Digital Access: Only $0.99 for your first month.</h3>
+  <a class="button">OFFER ACTION</a>
+  <a class="more-link">Terms and conditions</a>
+</div>
+<p>Why yes .. yes you can :)</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;package paper promo&#34;</span> <span style="color:#f00">style</span>=<span style="color:#00f">&#34;padding: 30px;&#34;</span>&gt;
+  &lt;<span style="color:#000080;font-weight:bold">h3</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;sans bold&#34;</span> <span style="color:#f00">style</span>=<span style="color:#00f">&#34;line-height: 1.5em&#34;</span>&gt;Get full access to The Sacramento Bee across all your devices. Unlimited Digital Access: Only $0.99 for your first month.&lt;/<span style="color:#000080;font-weight:bold">h3</span>&gt;
+  &lt;<span style="color:#000080;font-weight:bold">a</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;button&#34;</span>&gt;OFFER ACTION&lt;/<span style="color:#000080;font-weight:bold">a</span>&gt;
+  &lt;<span style="color:#000080;font-weight:bold">a</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;more-link&#34;</span>&gt;Terms and conditions&lt;/<span style="color:#000080;font-weight:bold">a</span>&gt;
+&lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;
+</code></pre></div>
+</div>
+
+    <script src="https://kit.fontawesome.com/8a8585a39f.js" crossorigin="anonymous"></script>
+  </body>
+</html>

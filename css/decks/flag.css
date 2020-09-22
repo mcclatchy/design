@@ -2,7 +2,7 @@
  * Flag
  */
 
-section.flag {
+.flag {
   z-index: 10;
   position: relative;
   margin: 0;

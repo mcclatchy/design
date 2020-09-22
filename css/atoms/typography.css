@@ -7,33 +7,37 @@
   --serif: "Noto Serif", serif;
   --sans: "Noto Sans", sans-serif;
 
+  /* Container widths */
+  --story-width: 728px;
+  --section-width: 1140px;
+
   /* Header family, weight, and text-transform */
   --hf: "Noto Serif", serif;
   --hw: 400;
   --ht: none;
 
-  /* Text family, size and color */
+  /* Text family and size*/
   --tf: "Noto Serif", serif;
-  --ts: large;
-  /* --tc: #222; */
 
   /* Link decoration and color */
   --ld: none;
-  --lc: #222;
 
-  /* Story width */
-  --story-width: 728px;
+  /* Package spacing */
+  --ps: 10px;
 
-  /**
-   * Button color and background color
-   * --bc: #222;
-   * --bbc: transparent;
-   */
+  /* General colors */
+  --dark: #222222;
+  --gray: #707070;
+  --blue: #31409F;
 
   /**
-   * General text color for atoms with default colors
-   * different from normal text.
-   * --tc: defaults set at the atom level
+   * Color variables and text size set at the atomic level
+   *
+   * --ts: large;
+   * --tc: text color
+   * --lc: #222;
+   * --bc: color of the button text;
+   * --bbc: background-color of the button;
    */
 }
 
@@ -44,7 +48,6 @@ html {
 body {
   position: relative;
   margin: 0;
-  color: #222;
   background-color: #f4f4f4;
 }
 
@@ -63,7 +66,7 @@ a {
 
 a:hover {
   color: var(--lhc, var(--lc));
-  text-decoration: var(--lhd, --var(ld));
+  text-decoration: var(--lhd, var(--ld));
 }
 
 .h1, h1,
@@ -76,6 +79,7 @@ a:hover {
   font-weight: var(--hw);
   text-transform: var(--ht);
   line-height: 1.2em;
+  color: var(--tc, #222);
 }
 
 h1, .h1 {
@@ -108,7 +112,8 @@ h6, .h6 {
 }
 
 p {
-  font: var(--ts)/1.5em var(--tf);
+  font: var(--ts, large)/1.5em var(--tf);
+  color: var(--tc, #222);
 }
 
 ul, ol {
@@ -116,8 +121,9 @@ ul, ol {
 }
 
 li {
-  font: var(--ts)/1.5em var(--tf);
+  font: var(--ts, large)/1.5em var(--tf);
   margin: 10px 0 10px calc(1em + 15px);
+  color: var(--tc, #222);
 }
 
 ul li {
@@ -136,7 +142,8 @@ blockquote {
   font: bold larger/1.5em var(--sans);
   margin: 0;
   padding-left: 20px;
-  border-left: 6px solid #ddd
+  border-left: 6px solid #ddd;
+  color: var(--tc, #222);
 }
 
 blockquote .attr {
@@ -208,7 +215,7 @@ blockquote .attr {
 .more-link {
   display: block;
   font-weight: 700;
-  font-size: 0.875rem;
+  font-size: var(--ts, 0.875rem);
   text-transform: uppercase;
   margin-top: 15px;
   --lc: var(--tc, #707070);
@@ -227,23 +234,6 @@ blockquote .attr {
 .more-link:hover:after {
   transform: translateX(4px);
 }
-
-/* .more-link.primary { */
-/*   --lc: #31409f; */
-/*   --lhc: #5169B8; */
-/* } */
-
-/* .more-link.dark { */
-/*   --lc: #222222; */
-/* } */
-
-/* .more-link.inline { */
-  /* display: inline; */
-  /* --lc: #31409f; */
-  /* --lhc: #5169B8; */
-  /* text-transform: none; */
-  /* padding: 0; */
-/* } */
 
 .dateline {
   display: block;
