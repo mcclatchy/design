@@ -2,6 +2,10 @@
  * Utilities 
  */
 
+.block {
+  display: block;
+}
+
 summary, .summary {
   font-size: 0.875rem;
   font-family: var(--sans);
