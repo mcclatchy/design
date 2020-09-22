@@ -2,8 +2,9 @@
  * Gallery card
  */
 
-.gallery .h2 {
-  font-weight: 400;
+.gallery .package {
+  --hw: 400;
+  --hf: var(--sans);
 }
 
 .gallery-panel {

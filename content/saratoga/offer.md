@@ -30,8 +30,9 @@ The primary and secondary variants, used by appending either the `primary` or `s
 
 #### Secondary Example
 
-<div class="example grid" style="grid-template-columns: 400px; justify-content: center;">
+<div class="example grid" style="--columns: repeat(auto-fit, 400px);">
   {{< dsp/offer type="secondary" >}}
+  {{< dsp/offer type="secondary-b" >}}
 </div>
 
 #### Secondary HTML
@@ -42,7 +43,7 @@ The primary and secondary variants, used by appending either the `primary` or `s
 
 #### Tertiary offers
 
-<div class="example grid" style="grid-template-columns: repeat(auto-fit, 400px); justify-content: center;">
+<div class="example grid" style="grid-template-columns: repeat(auto-fit, 400px);">
   {{< dsp/offer type="tertiary-a" >}}
   {{< dsp/offer type="tertiary-b" >}}
 </div>

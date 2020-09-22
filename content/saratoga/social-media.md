@@ -6,14 +6,6 @@ menu: "molecule"
 
 A very small molecule, the icons are simply a center-justified flex row with optimal padding for all devices.
 
-{{< note >}}
-#### Update 1.11.3
-
-Social media icons are not showing in AMP. Given the small set of icons we are using, and to just negate AMP's quirks, we swapped to including the raw SVG code in the HTML output.
-
-The `.i-facebook` and other sets of icons will be removed in 1.12.0.
-{{< /note >}}
-
 #### Example
 {{< social-media >}}
 

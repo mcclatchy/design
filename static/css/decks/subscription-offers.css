@@ -13,79 +13,32 @@
   text-align: center;
 }
 
-.subscription-offers .grid {
+.subscription-offers > .grid {
   margin-top: 30px;
   margin-bottom: 30px;
 }
 
 .subscription-offers .package {
   --ps: 5px;
+  flex: none;
   align-items: center;
   text-align: center;
 }
 
-/* .dsp .subscription-offers section { */
-/*     padding: 7.5px 0; */
-/* } */
+.subscription-offers .redeem-code {
+  max-width: 400px;
+  margin: 0 auto;
+  align-items: center;
+  --ps: 30px;
+  --hf: var(--sans);
+  --hw: bold;
+}
 
-/* .dsp .subscription-offers .title { */
-/*     padding: 0px 0 7.5px; */
-/* } */
+.subscription-offers form {
+  align-self: stretch;
+  text-align: left;
+}
 
-/* .dsp .subscription-offers .primary-offer { */
-/*    background: linear-gradient(90deg, rgba(55,55,55,.7), rgba(55,55,55,.99) 50%,rgba(55,55,55,.7) 100%), url(https://media.mcclatchy.com/creatives/subscription-offer-page-images/markets/Miami/1.jpg); */
-/*    background-size: cover; */
-/*    background-position: center; */
-/* } */
-
-/* .dsp .subscription-offers #impact2020 { */
-/*    background: linear-gradient(90deg, rgba(255,255,255,.7), rgba(255,255,255,.95) 50%,rgba(255,255,255,.7) 100%),url(    https://media.mcclatchy.com/creatives/subscription-offer-page-images/politics/dome.jpg);background-size: cover;background-position: center; */
-       
-/* } */
-
-/* .dsp .subscription-offers .expander { */ 
-/*     color: #31409f; */
-/*     display: flex; */
-/*     justify-content: center; */
-/*     margin: 15px auto; */
-/* } */
-
-/* .dsp .subscription-offers .extras { */
-/*     padding: 50px 0; */
-/*     max-width: 400px; */
-/* } */
-
-/* .dsp .subscription-offers .extras > * { */
-/*     padding: 25px 15px; */
-/* } */
-
-/* .dsp .subscription-offers .extras h2 { */
-/*     margin-bottom: 20px; */
-/* } */
-
-
-/* @media (min-width: 900px) { */  
-    
-/* .dsp .subscription-offers section { */
-/*     padding: 15px 15px; */
-/* } */
-    
-/* .dsp .subscription-offers .primary-offer { */
-/*     padding: 80px 0; */
-/* } */
-
-/* .dsp .subscription-offers .title { */
-/*     padding: 0 0 0 0; */
-/* } */
-    
-/* .dsp .subscription-offers .expander { */
-/*     display: none; */
-/* } */
-
-/* .dsp .subscription-offers .offer-details { */
-/*     display: block; */
-/* } */
-
-    
-/* } */ 
-
+.subscription-offers .bottom-links {
+  --ps: 15px;
+}

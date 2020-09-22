@@ -56,7 +56,7 @@ summary, .summary {
   --lc: #222;
 }
 
-.blue, .primary {
+.blue {
   color: var(--tc, #31409F);
   --lc: #31409f;
   --lhc: #5169B8;
