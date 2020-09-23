@@ -8,3 +8,9 @@
   --tf: var(--sans);
   --ts: 16px;
 }
+
+.page-title .secure {
+  --ts: small;
+  color: var(--gray);
+  text-transform: uppercase;
+}

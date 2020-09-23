@@ -8,7 +8,7 @@ Inputs are designed to be placed in a center-aligned form that is 100% of the pa
 
 #### Text Inputs Example
 
-<form style="grid-template-columns: 400px;">
+<form>
   <div>
     <label for="default-input">Default</label>
     <input type="text" id="default-input">

@@ -1,7 +1,7 @@
 {{- $type := default "sign-up" (.Get "type") }}
 
 {{- if eq $type "sign-up" }}
-<form class="paper"> 
+<form class="paper" action="/saratoga/decks/purchase-flow/new-payment/"> 
   <div class="grid">
     <div>
       <label for="first-input">First Name</label>
@@ -37,5 +37,57 @@
     <input type="password" name="password" required autocomplete="current-password">
   </div>
   <button id="button" type="submit" class="button promo">submit</button>
+</form>
+{{- end }}
+
+{{- if eq $type "new-payment" }}
+<form class="paper" action="/saratoga/decks/purchase-flow/review-order/">
+  <label class="checkbox"><input type="radio" name="radio"> <span>Use debit/credit card <i class="far fa-credit-card"></i></span></label>
+  <div>
+    <label for="name">Name on card</label>
+    <input type="text" name="name" required>
+  </div>
+  <div class="grid">
+    <div>
+      <label for="number">Phone number</label>
+      <input type="tel" name="number" required>
+    </div>  
+    <div>
+      <label for="zip">Zip Code</label>
+      <input type="text" name="zip" required>
+    </div>                                        
+  </div>
+  <div class="grid">
+    <div>
+      <label for="card">Card number</label>
+      <input type="text" name="card" required>
+    </div>
+    <div>
+      <label for="type">Card Type</label>
+      <select name="type">
+        <option value="Visa">Visa</option>
+        <option value="Mastercard">Mastercard</option>
+        <option value="American Express">American Express</option>
+      </select>
+    </div>      
+  </div>
+  <div class="grid">
+    <div> 
+      <label for="cvv">CVV/CVC</label>
+      <small>3/4 digit code</small>
+      <input type="text" id="cvv" required>
+    </div>  
+    <div>
+      <label for="card">Exp. Month</label>
+      <small>MM</small>
+      <input type="text" id="card" required>
+    </div>
+    <div>
+      <label for="card">Exp. Year</label>
+      <small>YYYY</small>
+      <input type="text" id="card" required>
+    </div>                    
+  </div>
+  <button id="submit" type="submit" class="button promo">continue</button>
 </form>
 {{- end }}

@@ -22,3 +22,11 @@
   Don't have an account? <a href="/saratoga/decks/purchase-flow/sign-up/" class="more-link inline blue no-caps">Sign up</a></p>
 </div>
 {{- end }}
+
+{{- if eq $type "new-payment" }}
+<div class="page-title package">
+  <h1 class="h2">Choose a payment method</h1>
+  <p>Use a debit/credit card or a digital payment method.</p>
+  <small class="secure">secure transaction <i class="fas fa-lock"></i></small>
+</div>
+{{- end }}
