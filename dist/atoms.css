@@ -6,28 +6,31 @@
   /* Generals for use in cards */
   --serif: "Noto Serif", serif;
   --sans: "Noto Sans", sans-serif;
+  /* Container widths */
+  --story-width: 728px;
+  --section-width: 1140px;
   /* Header family, weight, and text-transform */
   --hf: "Noto Serif", serif;
   --hw: 400;
   --ht:none;
-  /* Text family, size and color */
+  /* Text family and size*/
   --tf: "Noto Serif", serif;
-  --ts:large;
-  /* --tc: #222; */
   /* Link decoration and color */
   --ld:none;
-  --lc: #222;
-  /* Story width */
-  --story-width: 728px;
+  /* Package spacing */
+  --ps: 10px;
+  /* General colors */
+  --dark: #222222;
+  --gray: #707070;
+  --blue: #31409F;
   /**
-   * Button color and background color
-   * --bc: #222;
-   * --bbc: transparent;
-   */
-  /**
-   * General text color for atoms with default colors
-   * different from normal text.
-   * --tc: defaults set at the atom level
+   * Color variables and text size set at the atomic level
+   *
+   * --ts: large;
+   * --tc: text color
+   * --lc: #222;
+   * --bc: color of the button text;
+   * --bbc: background-color of the button;
    */
 }
 
@@ -38,7 +41,6 @@ html {
 body {
   position: relative;
   margin: 0;
-  color: #222;
   background-color: #f4f4f4;
 }
 
@@ -56,7 +58,7 @@ a {
 
 a:hover {
   color: var(--lhc, var(--lc));
-  text-decoration: var(--lhd, --var(ld));
+  text-decoration: var(--lhd, var(--ld));
 }
 
 .h1, h1,
@@ -69,6 +71,7 @@ a:hover {
   font-weight: var(--hw);
   text-transform: var(--ht);
   line-height: 1.2em;
+  color: var(--tc, #222);
 }
 
 h1, .h1 {
@@ -101,7 +104,8 @@ h6, .h6 {
 }
 
 p {
-  font: var(--ts)/1.5em var(--tf);
+  font: var(--ts, large)/1.5em var(--tf);
+  color: var(--tc, #222);
 }
 
 ul, ol {
@@ -109,8 +113,9 @@ ul, ol {
 }
 
 li {
-  font: var(--ts)/1.5em var(--tf);
+  font: var(--ts, large)/1.5em var(--tf);
   margin: 10px 0 10px calc(1em + 15px);
+  color: var(--tc, #222);
 }
 
 ul li {
@@ -130,6 +135,7 @@ blockquote {
   margin: 0;
   padding-left: 20px;
   border-left: 6px solid #ddd;
+  color: var(--tc, #222);
 }
 
 blockquote .attr {
@@ -200,7 +206,7 @@ blockquote .attr {
 .more-link {
   display: block;
   font-weight: 700;
-  font-size: 0.875rem;
+  font-size: var(--ts, 0.875rem);
   text-transform: uppercase;
   margin-top: 15px;
   --lc:var(--tc, #707070);
@@ -264,7 +270,7 @@ iframe {
  * Sections
  */
 section {
-  max-width: 1140px;
+  max-width: var(--section-width);
   margin: 30px auto;
 }
 
@@ -301,17 +307,242 @@ section > h5,
 /**
  * Form elements
  */
-input, select {
-  border: 1px solid #373737;
+form, .checkbox-group {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 30px;
+}
+
+.checkbox-group {
+  grid-gap: 10px;
+}
+
+form .grid {
+  grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
+  grid-gap: 15px;
+}
+
+form > *, .checkbox-group > * {
+  margin: 0;
+}
+
+form.paper {
+  padding: var(--padding, 15px);
+}
+
+label {
+  position: relative;
+  font: 700 0.875rem var(--sans);
+  line-height: 1.5;
+  display: block;
+}
+
+label.checkbox {
+  display: grid;
+  grid-template-columns: min-content auto;
+  grid-gap: 8px;
+  align-items: center;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+label ~ input,
+label ~ select,
+label ~ .select,
+label input,
+label select,
+label .select {
+  margin-top: 10px;
+}
+
+label small,
+label + small {
+  display: block;
+  font-weight: 400;
+  color: var(--tc, #707070);
+  margin-top: 2px;
+}
+
+input, select, .select {
+  position: relative;
+  display: block;
+  width: 100%;
   padding: 10px;
+  box-sizing: border-box;
   font-size: 0.875rem;
-  --tc: #222;
+  border: 1px solid var(--tc, #989898);
+  border-radius: 2px;
+  background-color: white;
+  color: var(--tc, #222);
+  transition: all 0.15s ease-in-out;
+  cursor: pointer;
 }
 
-input[type=text] {
+select {
   -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"/></svg>');
+  background-repeat: no-repeat;
+  background-size: 1em 100%;
+  background-position: calc(100% - 10px) 0;
 }
 
+input[type=checkbox] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  border-radius: 0;
+  margin: 0;
+  outline: none;
+}
+
+input[type=checkbox]:checked {
+  background-color: #222;
+  box-shadow: inset 0px 0px 0px 3px white;
+}
+
+input[type=radio] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1px solid var(--tc, #707070);
+  padding: 0;
+  margin: 0;
+  outline: none;
+}
+
+input[type=radio]:checked {
+  background-color: white;
+  box-shadow: inset 0px 0px 0px 4px #222;
+}
+
+input:focus, select:focus, .focus {
+  outline: none;
+  box-shadow: 0 0 4px 2px hsla(0, 0%, 59.6%, 0.75);
+}
+
+/* Need to talk through validation with Matt */
+/* input:invalid { */
+/*   border-color: #d63031; */
+/* } */
+/* input:invalid:focus { */
+/*   box-shadow: 0 0 4px 2px hsla(0, 0%, 59.6%, .75); */
+/* } */
+/* .required { */
+/*   color: #d63031; */
+/*   border: 1px solid #d63031; */
+/* } */
+/* input.required:focus { */
+/*   box-shadow:0 0 4px 2px rgba(214,48,49,.75); */
+/*   border: 1px solid #d63031; */
+/* } */
+/* input.required:valid { */
+/*   border: 1px solid #989898; */
+/*   color: #222; */
+/* } */
+/* input.required:valid:focus { */
+/*   box-shadow: 0 0 4px 2px hsla(0, 0%, 59.6%, .75); */
+/* } */
+/* form:valid > button[type="submit"] { */
+/*   background-color: #31409f; */
+/* } */
+/* small[for=error-input] { */
+/*   color: #d63031; */
+/* } */
+.password-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.password-label:after {
+  content: "";
+  font: 400 14px Font Awesome\ 5 Free;
+  cursor: pointer;
+}
+
+.password-label.active:after {
+  content: "";
+}
+
+/**
+ * Custom select boxes
+ * Let's deprecate this, it jacks with tabs, keyboard controls and accessibility.
+ */
+.select {
+  --lc:var(--tc, #222);
+  --lhc:var(--tc, #222);
+  --ld:none;
+  --lhd:none;
+}
+
+.select .expander {
+  justify-content: space-between;
+  padding: 0;
+}
+
+.select .options a {
+  display: block;
+  padding: 10px;
+}
+
+.select .options a:hover {
+  background-color: #f4f4f4;
+}
+
+.select .options .selected {
+  font-weight: 700;
+}
+
+.select .button.expander {
+  padding: 0;
+}
+
+.select .button {
+  border: none;
+  justify-content: space-between;
+  padding: 0 10px 0 5px;
+  padding-left: 5px;
+  padding-right: 10px;
+  text-transform: none;
+  font-weight: 400;
+  text-align: left;
+}
+
+.select .expander.open {
+  border-bottom-color: transparent;
+}
+
+.select .expander.open ~ .options {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  position: absolute;
+  top: 100%;
+  left: -1px;
+  background-color: white;
+  border: 1px solid var(--tc, #989898);
+  border-top: none;
+  width: 100%;
+  z-index: 100;
+}
+
+/**
+ * Buttons
+ */
+/* input, select { */
+/*   border: 1px solid var(--tc, #373737); */
+/*   padding: 10px; */
+/*   font-size: 0.875rem; */
+/*   color: var(--tc, #222); */
+/* } */
+/* input[type=text] { */
+/*   -webkit-appearance: none; */
+/* } */
 button, .button {
   color: var(--bc);
   background-color: var(--bbc);
@@ -321,6 +552,7 @@ button, .button {
 
 button:hover,
 .button:hover {
+  /* Button colors to not change on hover */
   color: var(--bc);
 }
 
@@ -346,6 +578,44 @@ button:hover,
   border-color: #4a4a4a;
 }
 
+.button.social {
+  display: block;
+  align-self: stretch;
+  border-color: #4a4a4a;
+}
+
+.button.social:before {
+  /* content:''; */
+  font-family: "Font Awesome 5 Brands";
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.button.social.facebook:before {
+  content: "";
+  color: #3b5998;
+}
+
+.button.social.google:before {
+  content: "";
+  color: #b82000;
+}
+
+.button.social.apple:before {
+  content: "";
+  color: #000;
+}
+
+.button.social.twitter:before {
+  content: "";
+  color: #00aae5;
+}
+
+.button.social.paypal:before {
+  content: "";
+  color: #00457C;
+}
+
 .button.pill {
   border-radius: 1.5em;
 }
@@ -354,48 +624,550 @@ button:hover,
  * Custom selects 
  * This utilizes expander and buttons
  * */
-.select {
+/* .select { */
+/*   background-color: white; */
+/*   border: 1px solid var(--tc, #ddd); */
+/*   position: relative; */
+/* } */
+/* .select .button { */
+/*   border: none; */
+/*   justify-content: space-between; */
+/*   padding-left: 5px; */
+/*   padding-right: 10px; */
+/*   text-transform: none; */
+/*   font-weight: 400; */
+/*   text-align: left; */
+/* } */
+/* .select .options { */
+/*   border: 1px solid var(--tc, #ddd); */
+/* } */
+/* .select .options .button { */
+/*   align-self: stretch; */
+/* } */
+/* .select .options .selected { */
+/*   font-weight: 700; */
+/* } */
+/* .select .expander.open { */
+/*   border-bottom-color: transparent; */
+/* } */
+/* .select .expander.open ~ .options { */
+/*   display: flex; */
+/*   flex-direction: column; */
+/*   align-items: stretch; */
+/*   position: absolute; */
+/*   top: 100%; */
+/*   left: -1px; */
+/*   background-color: white; */
+/*   border: 1px solid var(--tc, #ddd); */
+/*   border-top: none; */
+/*   width: 100%; */
+/*   z-index: 100; */
+/* } */
+/**
+ * Paper 
+ */
+.paper, .card {
+  position: relative;
   background-color: white;
-  border: 1px solid #ddd;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.13);
+}
+
+.paper .paper,
+.paper .card,
+.card .paper,
+.card .card {
+  box-shadow: none;
+}
+
+/**
+ * Cards 
+ */
+.card {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Horizontal option */
+@media (min-width: 660px) {
+  .card.horizontal {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 15px;
+  }
+}
+.card.horizontal figure {
+  position: relative;
+  margin: 0;
+}
+
+.card.horizontal figure img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 20%;
+}
+
+.card.horizontal .package {
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.card.horizontal .package time {
+  flex: none;
+}
+
+/* Fill option */
+.card.fill img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 20%;
+}
+
+.card.fill .package {
+  min-height: 315px;
+  justify-content: flex-end;
+}
+
+.card.fill .package {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1) 50%, black 90%);
+}
+
+.card.fill time {
+  flex: none;
+}
+
+/**
+ * Reverse impact and promo
+ */
+.impact,
+.promo,
+.promo-light,
+.disabled {
+  background-color: #373737;
+  color: white;
+  fill: white;
+  --tc:white;
+  --lc:white;
+  --lhc:white;
+  --bc:white;
+}
+
+.impact * {
+  --bc: #222;
+  --bbc:white;
+}
+
+.promo {
+  background-color: #31409F;
+}
+
+.promo * {
+  --bc: #31409F;
+  --bbc:white;
+}
+
+.disabled {
+  background-color: #989898;
+}
+
+.disabled * {
+  --bc: #989898;
+  --bbc:white;
+}
+
+.promo-light {
+  background-color: #5169B8;
+}
+
+.promo-light * {
+  --bc: #5169B8;
+  --bbc:white;
+}
+
+/* .white { */
+/*   background-color: #fff; */
+/*   border-color: #fff; */
+/*   color: #222; */
+/* } */
+/* .impact *, */
+/* .promo * { */
+/*   /1* border-color: white; *1/ */
+/*   /1* fill: white; *1/ */
+/*   --bc: #222; */
+/*   --bbc: white; */
+/* } */
+/* .promo * { */
+/*   --bc: #31409F; */
+/* } */
+/**
+ * Utilities 
+ */
+.block {
+  display: block;
+}
+
+summary, .summary {
+  font-size: 0.875rem;
+  font-family: var(--sans);
+}
+
+.small {
+  font-size: small;
+}
+
+.caps {
+  text-transform: uppercase;
+  --ht:uppercase;
+}
+
+.no-caps,
+.button.no-caps {
+  text-transform: none;
+  --ht:none;
+}
+
+.sans {
+  font-family: var(--sans);
+  --hf:var(--sans);
+}
+
+.serif {
+  font-family: var(--serif);
+  --hf:var(--serif);
+}
+
+.soft {
+  font-weight: 400;
+  --hw: 400;
+}
+
+.bold {
+  font-weight: 700;
+  --hw: 700;
+}
+
+.gray {
+  color: var(--tc, #707070);
+  --bc:var(--tc, #707070);
+}
+
+.dark {
+  color: var(--tc, #222);
+  --lc: #222;
+}
+
+.blue {
+  color: var(--tc, #31409F);
+  --lc: #31409f;
+  --lhc: #5169B8;
+}
+
+.error, .errorText {
+  color: var(--tc, #D63031);
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.no-shadow {
+  box-shadow: none;
+}
+
+.inline {
+  display: inline;
+}
+
+.relative {
   position: relative;
 }
 
-.select .button {
-  border: none;
-  justify-content: space-between;
-  padding-left: 5px;
-  padding-right: 10px;
-  text-transform: none;
-  font-weight: 400;
-  text-align: left;
+.cutout {
+  background-color: #f4f4f4;
 }
 
-.select .options {
-  border: 1px solid #ddd;
+.center-text {
+  text-align: center;
 }
 
-.select .options .button {
-  align-self: stretch;
+/**
+ * Flexbox grid
+ */
+.flex-columns > * {
+  margin: 30px 0;
 }
 
-.select .options .selected {
-  font-weight: 700;
+.flex-columns .lead-item {
+  flex-basis: 100%;
 }
 
-.select .expander.open {
-  border-bottom-color: transparent;
-}
+@media (min-width: 690px) {
+  .flex-columns {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
 
-.select .expander.open ~ .options {
+  .flex-columns.reverse {
+    flex-direction: row-reverse;
+  }
+
+  .flex-columns > * {
+    flex: 1 1 300px;
+    margin: 15px;
+  }
+
+  .flex-columns > zeus-ad {
+    flex: none;
+    padding: 15px;
+  }
+
+  .flex-columns > .flex-columns {
+    margin: 0;
+  }
+
+  .flex-columns .main-stage {
+    flex: 2 1 660px;
+    align-self: flex-start;
+  }
+
+  .flex-columns .rail {
+    flex-basis: 330px;
+    align-self: flex-start;
+  }
+
+  /** Special cases **/
+  .lead-section .main-stage > :first-child {
+    flex-basis: 100%;
+  }
+
+  .main-stage > .flex-columns + .flex-columns {
+    padding-top: 15px;
+  }
+}
+/**
+ * Simple Flexbox row
+ *
+ * We are using this combo more and it makes sense to 
+ * pull them out into their own reusables. I will 
+ * incorporate into the rest of the elements as we
+ * re-work them.
+ */
+.flex {
   display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  position: absolute;
-  top: 100%;
-  left: -1px;
-  background-color: white;
-  border: 1px solid #ddd;
-  border-top: none;
-  width: 100%;
-  z-index: 100;
+  align-items: center;
+}
+
+.icons > * {
+  padding: 15px;
+}
+
+/* To fix our strange line heights */
+.icon-label {
+  position: relative;
+  top: 0.15em;
+  margin-left: 10px;
+}
+
+/**
+ * Generic CSS grid
+ */
+.grid {
+  display: grid;
+  grid-template-columns: var(--columns, repeat(auto-fit, minmax(300px, 1fr)));
+  grid-gap: 30px;
+}
+
+.grid > .package:not(.paper),
+.zone-el > .package:not(.paper) {
+  padding: 0;
+}
+
+.grid .ad-widget {
+  margin: 0 auto;
+  align-self: center;
+}
+
+.grid > .rail {
+  grid-row-end: span var(--rows, 3);
+}
+
+@media (min-width: 990px) {
+  .col-span-2 {
+    grid-column: span 2;
+  }
+}
+/**
+ * Static Zone option (with utilities)
+ */
+.grid.static-zones,
+.grid.dense {
+  grid-auto-flow: dense;
+}
+
+.grid.static-zones .zone-el .grid .full-row {
+  grid-column: 1/-1;
+}
+
+/**
+ * Story body
+ */
+.story-body {
+  --hf:var(--sans);
+  --hw: 700;
+  --ht:uppercase;
+  --lc: #5169B8;
+  --lhc: #31409F;
+  --ld:underline;
+  --lhd:underline;
+  padding-bottom: 15px;
+}
+
+.story-body > * {
+  max-width: var(--story-width);
+  padding: 0 15px;
+  margin: 15px auto;
+}
+
+.story-body > :first-child {
+  margin-top: 0;
+  padding-top: 30px;
+}
+
+.story-body > .header {
+  margin-top: 0;
+}
+
+/**
+ * Embeds
+ */
+.story-body .embed-infographic {
+  margin: 30px auto;
+  clear: both;
+}
+
+.embed-infographic > * {
+  max-width: 100%;
+}
+
+.story-body > .story-module {
+  margin: 30px auto;
+}
+
+/**
+ * Media options
+ */
+.story-body > figure,
+.story-body > .figure {
+  margin: 30px auto;
+  padding: 0;
+}
+
+.story-body .wide {
+  max-width: 970px;
+}
+
+.story-body .full-bleed {
+  max-width: 100%;
+  padding: 0;
+}
+
+.story-body figure .package,
+.story-body .figure .package {
+  padding: 10px 0 0;
+}
+
+@media (max-width: 768px) {
+  .story-body > figure,
+.story-body > .figure {
+    max-width: 100%;
+  }
+
+  .story-body figcaption,
+.story-body figure .package,
+.story-body .figure .package {
+    padding: 10px 15px 0;
+  }
+}
+@media (max-width: 990px) {
+  .story-body .wide figcaption,
+.story-body figure.wide .package,
+.story-body .figure.wide .package {
+    padding: 10px 15px 0;
+  }
+}
+.story-body .full-bleed figcaption,
+.story-body figure.full-bleed .package,
+.story-body .figure.full-bleed .package {
+  padding: 10px 15px 0;
+}
+
+/**
+ * Asides
+ */
+.story-body aside > * {
+  margin: 30px auto;
+}
+
+@media (min-width: 930px) {
+  .story-body aside > * {
+    float: right;
+    margin: 0 -150px 30px 30px;
+  }
+
+  .story-body aside.left > * {
+    float: left;
+    margin: 0 30px 30px -150px;
+  }
+}
+.story-body > .zone {
+  margin: 30px auto;
+}
+
+/**
+ * Mugshots
+ */
+.story-body .mugshot {
+  padding: 0 15px;
+}
+
+.story-body .mugshot .img-container {
+  display: grid;
+  grid-template-columns: 125px 1fr;
+  grid-gap: 15px;
+}
+
+.story-body .mugshot figcaption {
+  padding: 0;
+  align-self: end;
+}
+
+/**
+ * Tables
+ */
+.story-body table {
+  max-width: 758px;
+}
+
+/**
+ * Immersive card 
+ */
+.story-body .immersive {
+  max-width: 100%;
+  padding-top: 0;
+}
+
+/**
+ * Zergnet widget only applies to stories
+ */
+.zergnet {
+  max-width: 728px;
+  padding: 0 15px;
 }
