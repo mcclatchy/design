@@ -22,7 +22,7 @@ class VoterBaseElement extends HTMLElement {
         "Content-Type": "application/json"
       },
       body: JSON.stringify({
-        query: `{voterguidePositions( parameters: "{'election_date': '${date}', 'address': '${address}', 'include_candidates': 1}"){data}}`
+        query: `{voterguidePositions( parameters: "{'election_date': '${date}', 'address': '${address}', 'include_candidates': 1, 'include_uncertified_candidates': 1}"){data}}`
       })
     }
 
@@ -83,9 +83,12 @@ class VoterBaseElement extends HTMLElement {
 
     try {
       filtered = raw.filter(p => {
+        // BR couple of funky things with another product of theirs and Pres/VP relationship
         if(p.state == "US") return false;
         if(p.normalized_position.id == 11) return false;
-        if(p.state == "FL" && p.candidates.length == 0) return false;
+
+        // From BR .. Uncertified candidates means it will not show on ballot
+        if(p.candidates.find(c => { return c.candidate_type == "Uncertified" })) return false;
 
         return true;
       })
