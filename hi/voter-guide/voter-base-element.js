@@ -85,7 +85,7 @@ class VoterBaseElement extends HTMLElement {
       filtered = raw.filter(p => {
         if(p.state == "US") return false;
         if(p.normalized_position.id == 11) return false;
-        // if(p.judicial && p.candidates.length == 0) return false;
+        if(p.state == "FL" && p.candidates.length == 0) return false;
 
         return true;
       })
