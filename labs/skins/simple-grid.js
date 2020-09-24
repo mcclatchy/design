@@ -253,7 +253,7 @@ class SimpleGrid extends HTMLElement {
           max-width: 550px;
         }
       }`);
-    } else {
+    } else if(lede) {
       this._articles[0].classList.add("photo-lede", "horizontal", "impact", "in-depth");
     }
   }

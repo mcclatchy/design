@@ -31,7 +31,6 @@
     <link rel="stylesheet" href="../../../../css/molecules/package.css">
     <link rel="stylesheet" href="../../../../css/molecules/social-media.css">
     <link rel="stylesheet" href="../../../../css/molecules/expander.css">
-    
 
     
     <link rel="stylesheet" href="../../../../css/cards/zones.css">
@@ -65,9 +64,18 @@
     <link rel="stylesheet" href="../../../../css/decks/eedition-portal.css">
     <link rel="stylesheet" href="../../../../css/decks/impact2020.css">
     <link rel="stylesheet" href="../../../../css/decks/display-classes.css">
-    <link rel="stylesheet" href="../../../../css/decks/hidden.css">
     <link rel="stylesheet" href="../../../../css/decks/purple-tuesdays.css">
+    <link rel="stylesheet" href="../../../../css/decks/hidden.css">
     
+    
+    <link rel="stylesheet" href="../../../../css/molecules/progress.css">
+    <link rel="stylesheet" href="../../../../css/molecules/page-title.css">
+    <link rel="stylesheet" href="../../../../css/molecules/offer.css">
+    <link rel="stylesheet" href="../../../../css/molecules/offer-details.css">
+    <link rel="stylesheet" href="../../../../css/molecules/account-sub-nav.css">
+    <link rel="stylesheet" href="../../../../css/molecules/masthead.css">
+    <link rel="stylesheet" href="../../../../css/molecules/purchase-info.css">
+    <link rel="stylesheet" href="../../../../css/decks/dsp.css">
 
     
     <link rel="stylesheet" href="../../../../css/site.css">
@@ -136,129 +144,117 @@ gpt-ad {
         </a>
       </nav>
     </div>
-    <main class="dsp" style="padding-bottom: 50px;">
-<div class="flag full-bleed standard">
+    
+
+
+<div class="flag dsp">
   <div class="paper"> 
-    <div class="top flex">
-        <a href="https://www.miamiherald.com" class="market-logo" aria-label="Miami Herald">
-            <img src="https://www.miamiherald.com/wps/build/images/miamiherald/logo.svg" alt="Miami Herald Logo">
-        </a>  
-        <div class="flex links">
-            <a href="#" class="button">800-555-5555</a>
-            <a href="#" class="button">Contact Us</a>
-            <a href="#" class="more-link">Sign Out</a>
-        </div>
+    <div class="top">
+      <div></div>
+      <a href="https://www.miamiherald.com" class="market-logo" aria-label="Miami Herald">
+        <img src="https://www.miamiherald.com/wps/build/images/miamiherald/logo.svg" alt="Miami Herald Logo">
+      </a>  
+      <div class="flex links">
+        <a href="#">800-555-5555</a>
+        <a href="#">Contact Us</a>
+        <a href="#" class="more-link">Sign Out</a>
+      </div>
     </div>
   </div>
-</div>  
+</div> 
 
-<section>
-    <div class="package small">
-       <div class="progress">
-        <span>1. Account</span>
-        <span class="active">2. Payment</span>
-        <span>3. Review</span>
-       </div>
-    </div>
-</section>
+<div class="progress">
+  <span>1. Account</span>
+  <span class="active">2. Payment</span>
+  <span>3. Review</span>
+</div>
 
-<section class="title purchase-flow">
-  <div>
-      <h1 class="sans bold h3">Choose a payment method</h1>
-      <p class="summary">Use a debit/credit card or a digital payment method.</p>
-      <small class="secure">secure transaction<i class="fas fa-lock"></i></small>
-  </div>
-</section>
 
-<section>
+<section class="grid dsp purchase-flow">
+  
+<div class="page-title package">
+  <h1 class="h2">Choose a payment method</h1>
+  <p>Use a debit/credit card or a digital payment method.</p>
+  <small class="secure">secure transaction <i class="fas fa-lock"></i></small>
+</div>
+
+
   <div class="grid">
-        <div class="paper" style="order: 2;">
-            <div class="package">
-                <form id="ignore"> 
-                  <label class="checkbox-container">Use debit/credit card
-                    <input type="radio" id="cc-radio" name="radio" onclick="document.getElementById('cc-form').style.display = 'block'"><i class="far fa-credit-card"></i>
-                    <span class="radio"></span>
-                  </label>
-                </form>
-                <form id="cc-form" style="margin-top: 20px;" action="../../../../saratoga/decks/purchase-flow/review-order/">
-                     <div>
-                        <label for="name">Name on card</label>
-                        <input type="text" id="name" required>
-                    </div>
-                    <div class="grid">
-                     <div>
-                        <label for="number">Phone number</label>
-                        <input type="text" id="number" required>
-                    </div>  
-                     <div>
-                        <label for="zip">Zip Code</label>
-                        <input type="text" id="zip" required>
-                    </div>                                        
-                   </div>
-                   <div class="grid">
-                     <div>
-                        <label for="card">Card number</label>
-                        <input type="text" id="card" required>
-                    </div>
-                    <div>
-                        <label>Card Type</label>
-                        <div class="select">
-                            <span class="expander" onclick="this.classList.toggle('open');" tabindex="0">Card</span>
-                            <div class="options">
-                                <a class="button big" href="#" data-name="Visa">Visa</a>
-                                <a class="button big" href="#" data-name="Mastercard">Mastercard</a>
-                                <a class="button big" href="#" data-name="American Express">American Express</a>
-                            </div>
-                        </div>
-                    </div>      
-                   </div>
-                    <div class="grid">
-                          <div> 
-                            <label for="cvv">CVV/CVC</label>
-                            <small>3/4 digit code</small>
-                            <input type="text" id="cvv" required>
-                        </div>  
-                        <div>
-                            <label for="card">Exp. Month</label>
-                            <small>MM</small>
-                            <input type="text" id="card" required>
-                        </div>
-                        <div>
-                            <label for="card">Exp. Year</label>
-                            <small>YYYY</small>
-                            <input type="text" id="card" required>
-                        </div>                    
-                    </div>
-                <button id="submit" type="submit" class="button disabled">continue</button>
-              </form>
-            </div>
-        </div>
-        <div class="card horizontal package small">
-            <div>
-                <span class="summary bold">Unlimited Digital Access</span>
-                <small>$10.99 for 1 month, $15.99/month after.</small>
-            </div>
-            <small class="expander" onclick="this.classList.toggle('open')">Show details</small>
-            <small class="stretch">Get access to everything on Miamiherald.com, our apps, the eEdition, and our stories platforms like Facebook Instant Articles and Google News.</small>
-        </div>
-        <div style="order: 3;">
-            <div class="paper">
-                <div class="package">
-                   <button class="button social paypal">Continue with PayPal</button>
-                   <button class="button social apple">Continue with Apple Pay</button>
-                </div>
-            </div>
-            <p class="summary">I'm a print subscriber. <a href="#" class="more-link inline">Activate digital access</a></p>
-        </div>
-
+    
+<form class="paper" action="../../../../saratoga/decks/purchase-flow/review-order/">
+  <label class="checkbox"><input type="radio" name="radio"> <span>Use debit/credit card <i class="far fa-credit-card"></i></span></label>
+  <div>
+    <label for="name">Name on card</label>
+    <input type="text" name="name" required>
   </div>
-</section>
+  <div class="grid">
+    <div>
+      <label for="number">Phone number</label>
+      <input type="tel" name="number" required>
+    </div>  
+    <div>
+      <label for="zip">Zip Code</label>
+      <input type="text" name="zip" required>
+    </div>                                        
+  </div>
+  <div class="grid">
+    <div>
+      <label for="card">Card number</label>
+      <input type="text" name="card" required>
+    </div>
+    <div>
+      <label for="type">Card Type</label>
+      <select name="type">
+        <option value="Visa">Visa</option>
+        <option value="Mastercard">Mastercard</option>
+        <option value="American Express">American Express</option>
+      </select>
+    </div>      
+  </div>
+  <div class="grid">
+    <div> 
+      <label for="cvv">CVV/CVC</label>
+      <small>3/4 digit code</small>
+      <input type="text" id="cvv" required>
+    </div>  
+    <div>
+      <label for="card">Exp. Month</label>
+      <small>MM</small>
+      <input type="text" id="card" required>
+    </div>
+    <div>
+      <label for="card">Exp. Year</label>
+      <small>YYYY</small>
+      <input type="text" id="card" required>
+    </div>                    
+  </div>
+  <button id="submit" type="submit" class="button promo">continue</button>
+</form>
 
-</main>
+
+    <div>
+      <div class="paper package">
+        <button class="button social paypal">Continue with PayPal</button>
+        <button class="button social apple">Continue with Apple Pay</button>
+      </div>
+      <p class="center-text summary sans">I'm a print subscriber. <a class="more-link inline" href="#">ACTIVATE DIGITAL ACCESS</a></p>
+    </div>
+  </div>
+
+  <div class="purchase-info paper grid expanded">
+  <div class="package">
+    <p class="bold">Unlimited Digital Access</p>
+    <p>$10.99 for 1 month, $15.99/month after.</p>
+  </div>
+  <p class="expander" onclick="this.classList.toggle('open')">Show details</p>
+  <p>Get access to everything on Miamiherald.com, our apps, the eEdition, and our stories platforms like Facebook Instant Articles and Google News.</p>
+</div>
+
+</section>
 
 <script async src="../../../../js/forms.js"></script>
 <script async src="../../../../js/select.js"></script>
-  
+
     
     <script src="https://kit.fontawesome.com/8a8585a39f.js" crossorigin="anonymous"></script>
   </body>
