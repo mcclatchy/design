@@ -3,161 +3,72 @@ title: subscription offers page (DSP)
 description: DSP subscription offers page
 menu: "decks"
 layout: deck
+build: dsp
 ---
-<main class="dsp">
- <div class="flag full-bleed standard">
-  <div class="paper"> 
-    <div class="top flex">
-        <a href="https://www.miamiherald.com" class="market-logo" aria-label="Miami Herald">
-            <img src="https://www.miamiherald.com/wps/build/images/miamiherald/logo.svg" alt="Miami Herald Logo">
-        </a>  
-        <div class="flex links">
-            <a href="#" class="button">800-555-5555</a>
-            <a href="#" class="button">Contact Us</a>
-            <a href="#" class="more-link">Sign Out</a>
-        </div>
+
+{{< dsp/masthead >}}
+
+<section class="dsp subscription-offers">
+  <h2>Subscription offers</h2>
+  <div class="card">
+    {{< dsp/offer type="primary" >}}
+    {{< dsp/offer-details >}}
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      {{< dsp/offer type="secondary" >}}
+      <div class="package">
+        <p class="bold">All sports, all the time</p>
+        <p>Insider reporting on all the sports action taking place within the Miami area and unlimited sports content on both our website and apps.</p>
+      </div>
+      <div class="package">
+        <p class="bold">Exclusive extras</p>
+        <p>Explore newsletters, subscriber-only content, interactive media and video.</p>
+      </div>
+      <div class="package">
+        <p class="bold">Does not include</p>
+        <p>eEdition and non-sports stories.</p>
+      </div>
+    </div>
+    <div class="card">
+      {{< dsp/offer type="secondary-b" >}}
+      <div class="package">
+        <p class="bold">Stay informed</p>
+        <p>Impact2020 is your destination for curated election coverage, focusing on local topics influencing critical states like Florida, Texas, California and the Carolinas.</p>
+      </div>
+      <div class="package">
+        <p class="bold">Exclusive extras</p>
+        <p>Subscriber-only articles, videos and news alerts on Impact2020.com and a weekly newsletter and podcast.</p>
+      </div>
+      <div class="package">
+        <p class="bold">An app just for you</p>
+        <p>Impact2020 mobile app with unlimited content access</p>
+      </div>
     </div>
   </div>
-</div> 
-  <div class="subscription-offers">
-    <section class="title">
-            <h2 class="sans bold">Subscription offers</h2>
-    </section>
-    <section>
-        <div class="primary-offer card">
-                <h2 class="h1">Unlimited Digital Access</h2>
-                <p class="h4">$1.99 for one month</p>
-                <p class="caps summary">$10.99/month after. Cancel anytime.</p>
-                <a class="button promo-light">start today</a>
-        </div>
-        <div class="offer-details">
-            <div class="card">
-               <div class="package">
-                    <div class="grid">
-                       <div>
-                            <p class="summary bold">Read, view and watch it all</p>
-                            <p class="summary">Get unlimited access to all of our content and unmatched reporting on everything happening in the Miami area with our website and apps.</p>
-                       </div>
-                       <div>
-                            <p class="summary bold">Exclusive extras</p>
-                            <p class="summary">Get access to the eEdition and our stories on Facebook and Google News.</p>
-                       </div>
-                       <div>
-                            <p class="summary bold">Subscriber only content</p>
-                            <p class="summary">Get access to our subscriber-only stories and videos from the Miami Herald.</p>
-                       </div>
-                    </div>
-                </div>
-            </div>
-        </div> 
-    </section>
-    <section>
-        <div class="grid">
-            <div>
-                 <div class="secondary-offer card">
-                   <div class="package">
-                        <h3 class="h2 serif">Sports Pass™</h3>
-                        <p class="summary caps bold">$30 for one year</p>
-                        <p class="summary caps">$50/year after. Cancel anytime.</p>
-                        <a class="button impact">start today</a>
-                    </div>
-                </div>
-                <p class="expander caps summary bold" onclick="this.classList.toggle('open')">show details</p>
-                <div class="offer-details">
-                    <div class="card">
-                       <div class="package">
-                            <div class="grid">
-                               <div>
-                                    <p class="summary bold">All sports, all the time</p>
-                                    <p class="summary">Insider reporting on all the sports action taking place within the Miami area and unlimited sports content on both our website and apps.</p>
-                               </div>
-                               <div>
-                                    <p class="summary bold">Exclusive extras</p>
-                                    <p class="summary">Explore newsletters, subscriber-only content, interactive media and video.</p>
-                               </div>
-                               <div>
-                                    <p class="summary bold">Does not include</p>
-                                    <p class="summary">eEdition and non-sports stories.</p>
-                               </div>
-                            </div>
-                        </div>
-                    </div> 
-                </div> 
-            </div>
-            <div>
-                <div class="secondary-offer card" id="impact2020">
-                   <div class="package">
-                        <h3 class="h2 serif">Impact2020</h3>
-                        <p class="summary caps bold">$50 for one year.</p>
-                        <p class="summary caps">$120/year after. Cancel anytime.</p>
-                        <a class="button impact">start today</a>
-                    </div>
-                </div>
-                <p class="expander caps summary bold" onclick="this.classList.toggle('open')">show details</p>
-                <div class="offer-details">
-                    <div class="card">
-                       <div class="package">
-                            <div class="grid">
-                               <div>
-                                    <p class="summary bold">Stay informed</p>
-                                    <p class="summary">Impact2020 is your destination for curated election coverage, focusing on local topics influencing critical states like Florida, Texas, California and the Carolinas.</p>
-                               </div>
-                               <div>
-                                    <p class="summary bold">Exclusive extras</p>
-                                    <p class="summary">Subscriber-only articles, videos and news alerts on Impact2020.com and a weekly newsletter and podcast.</p>
-                               </div>
-                               <div>
-                                    <p class="summary bold">An app just for you</p>
-                                    <p class="summary">Impact2020 mobile app with unlimited content access</p>
-                               </div>
-                            </div>
-                        </div>
-                    </div> 
-                </div> 
-            </div>          
-        </div>
-    </section>
-    <section>
-            <h2 class="sans bold">More subscription options</h2>
-    </section>
-    <section>
-        <div class="grid">
-            <div class="card tertiary-offer">
-                   <div class="package">
-                        <p class="h3 serif">Subscribe with Google</p>
-                        <p class="summary">Get the same Unlimited Digital Access deal as above, but let Google manage your subscription and billing.</p>
-                        <a class="button ghost">Subscribe with Google</a>
-                        <small>By subscribing, you are agreeing to the Miami Herald’s Terms of Service and Privacy Policy.</small>
-                   </div> 
-            </div>
-            <div class="card tertiary-offer">
-                   <div class="package">
-                        <p class="h3 serif">Home Delivery + Digital Access</p>
-                        <p class="summary">Get the paper delivered to your door, plus Unlimited Digital Access.</p>
-                        <a class="button impact">View Offers</a>
-                        <p class="h4">Already a print subscriber?</p>
-                        <a class="more-link">Activate digital access</a>
-                   </div> 
-            </div>            
-        </div>
-    </section>
-    <section class="extras">
-        <div>
-            <h2 class="sans bold">Have a digital access code to redeem?</h2> 
-            <form> 
-                <div>
-                    <label for="code-input">Redeem your code</label> 
-                    <input type="text" id="code-input" required>
-                </div>
-                <button id="button" type="submit" class="button disabled">redeem now</button>
-            </form> 
-        </div>
-        <div>
-            <a class="more-link primary">Get more a digital day pass for just 99¢</a> 
-            <a class="more-link">Frequently asked questions</a>  
-            <a class="more-link">Privacy policy</a> 
-            <a class="more-link">Terms of use</a>
-        </div>         
-    </section>
+
+  <h2>More subscription options</h2>
+  <div class="grid">
+    {{< dsp/offer type="tertiary-a" >}}
+    {{< dsp/offer type="tertiary-b" >}}
   </div>
-</main>
+
+  <div class="redeem-code package">
+    <h2>Have a digital access code to redeem?</h2>
+    <form> 
+      <div>
+        <label for="code-input">Redeem your code</label> 
+        <input type="text" id="code-input" required>
+      </div>
+      <button id="button" type="submit" class="button disabled">redeem now</button>
+    </form> 
+  </div>
+
+  <div class="package bottom-links">
+    <a class="more-link blue">Get more a digital day pass for just 99¢</a> 
+    <a class="more-link">Frequently asked questions</a>  
+    <a class="more-link">Privacy policy</a> 
+    <a class="more-link">Terms of use</a>
+  </div>
+</section>

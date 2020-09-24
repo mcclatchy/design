@@ -1,0 +1,7 @@
+{{- $active := default "account" (.Get "active") -}}
+
+<div class="progress">
+  <span {{- if eq $active "account" }} class="active"{{ end }}>1. Account</span>
+  <span {{- if eq $active "payment" }} class="active"{{ end }}>2. Payment</span>
+  <span {{- if eq $active "review" }} class="active"{{ end }}>3. Review</span>
+</div>

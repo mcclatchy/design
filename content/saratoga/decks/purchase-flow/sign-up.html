@@ -3,104 +3,31 @@ title: purchase flow (DSP)
 description: A sample purchase flow sign up page.
 menu: decks
 layout: deck
+build: dsp
 ---
-<main class="dsp" style="padding-bottom: 50px;">
-<div class="flag full-bleed standard">
-  <div class="paper"> 
-    <div class="top flex">
-        <a href="https://www.miamiherald.com" class="market-logo" aria-label="Miami Herald">
-            <img src="https://www.miamiherald.com/wps/build/images/miamiherald/logo.svg" alt="Miami Herald Logo">
-        </a>  
-        <div class="flex links">
-            <a href="#" class="button">800-555-5555</a>
-            <a href="#" class="button">Contact Us</a>
-            <a href="#" class="more-link">Sign Out</a>
-        </div>
-    </div>
-  </div>
-</div>  
 
-<section>
-    <div class="package small">
-       <div class="progress">
-        <span class="active">1. Account</span>
-        <span>2. Payment</span>
-        <span>3. Review</span>
-       </div>
-    </div>
-</section>
+{{< dsp/masthead >}}
+{{< dsp/progress >}}
 
-<section class="title purchase-flow">
-  <div>
-      <h1 class="sans bold h3">Sign up</h1>
-      <p class="summary">Use your email address or a social account. 
-Already have an account? <a href="/saratoga/decks/purchase-flow/sign-in/" class="more-link inline">Sign in</a></p>
-  </div>
-</section>
+<section class="grid dsp purchase-flow">
+  {{< dsp/page-title type="sign-up" >}}
 
-<section>
   <div class="grid">
-        <div class="paper" style="order: 2;">
-            <div class="package">
-                <form id="sign-up-form"> 
-                    <div class="grid">
-                        <div>
-                            <label for="first-input">First Name</label>
-                            <input type="text" id="first-input">
-                        </div>
-                        <div>
-                            <label for="last-input">Last Name</label>
-                            <input type="text" id="last-input">
-                        </div>
-                    </div>
-                    <div>
-                        <label for="email-input">Email address</label>
-                        <input type="email" id="email-input" required>
-                    </div>
-                    <div>
-                        <label for="password-input" onclick="changeType()" id="password-label">Password</label>
-                        <small>Must be at least 7 characters long</small>
-                        <input type="password" id="password-input" minlength="7" required>
-                    </div> 
-                    <button id="submit" type="submit" class="button disabled">sign up</button>
-                </form>
-            </div>
-        </div>
-        <div class="card horizontal package small">
-            <div>
-                <span class="summary bold">Unlimited Digital Access</span>
-                <small>$10.99 for 1 month, $15.99/month after.</small>
-            </div>
-            <small class="expander" onclick="this.classList.toggle('open')">Show details</small>
-            <small class="stretch">Get access to everything on Miamiherald.com, our apps, the eEdition, and our stories platforms like Facebook Instant Articles and Google News.</small>
-        </div>
-        <div style="order: 3;">
-            <div class="paper">
-                <div class="package">
-                   <button class="button social facebook">Sign up with Facebook</button>
-                   <button class="button social google">Sign up with Google</button>
-                   <button class="button social apple">Sign up with Apple</button>
-                </div>
-            </div>
-            <p class="summary">I'm a print subscriber. <a href="#" class="more-link inline">Activate digital access</a></p>
-        </div>
+    {{< dsp/form >}}
 
-  </div>
-</section>
-
-<div id="main-modal" class="s-modal screen" hidden>
-  <div class="card impact">
-    <div class="package">
-      <h1 class="sans">Terms and conditions</h1>
-      <p class="summary">By creating and account, you agree to our <a href="#" class="summary underline">Terms of service</a> and <a href="#" class="summary underline">Privacy Policy.</a><br><br></p>
-      <a href="/saratoga/decks/purchase-flow/new-payment/" class="button">Agree and continue</a>
-      <a href="#" onclick="toggleModal('main-modal')" class="bold caps">Cancel</a>
+    <div>
+      <div class="paper package">
+        <button class="button social facebook">Sign in with Facebook</button>
+        <button class="button social google">Sign in with Google</button>
+        <button class="button social apple">Sign in with Apple</button>
+      </div>
+      <p class="center-text summary sans">I'm a print subscriber. <a class="more-link inline" href="#">ACTIVATE DIGITAL ACCESS</a></p>
     </div>
   </div>
-</div>
 
-</main>
+  {{< dsp/purchase-info class="expanded" >}}
+</section>
 
-  
+
 <script src="/js/modal.js"></script>    
 <script async src="/js/forms.js"></script>

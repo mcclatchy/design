@@ -18,14 +18,22 @@
 
   /* Text family and size*/
   --tf: "Noto Serif", serif;
-  --ts: large;
 
   /* Link decoration and color */
   --ld: none;
 
+  /* Package spacing */
+  --ps: 10px;
+
+  /* General colors */
+  --dark: #222222;
+  --gray: #707070;
+  --blue: #31409F;
+
   /**
-   * Color variables set at the atomic level
+   * Color variables and text size set at the atomic level
    *
+   * --ts: large;
    * --tc: text color
    * --lc: #222;
    * --bc: color of the button text;
@@ -104,7 +112,7 @@ h6, .h6 {
 }
 
 p {
-  font: var(--ts)/1.5em var(--tf);
+  font: var(--ts, large)/1.5em var(--tf);
   color: var(--tc, #222);
 }
 
@@ -113,7 +121,7 @@ ul, ol {
 }
 
 li {
-  font: var(--ts)/1.5em var(--tf);
+  font: var(--ts, large)/1.5em var(--tf);
   margin: 10px 0 10px calc(1em + 15px);
   color: var(--tc, #222);
 }
@@ -207,7 +215,7 @@ blockquote .attr {
 .more-link {
   display: block;
   font-weight: 700;
-  font-size: 0.875rem;
+  font-size: var(--ts, 0.875rem);
   text-transform: uppercase;
   margin-top: 15px;
   --lc: var(--tc, #707070);

@@ -2,6 +2,10 @@
  * Utilities 
  */
 
+.block {
+  display: block;
+}
+
 summary, .summary {
   font-size: 0.875rem;
   font-family: var(--sans);
@@ -38,8 +42,8 @@ summary, .summary {
 }
 
 .bold {
-  font-weight: 600;
-  --hw: 600;
+  font-weight: 700;
+  --hw: 700;
 }
 
 .gray {
@@ -52,7 +56,7 @@ summary, .summary {
   --lc: #222;
 }
 
-.blue, .primary {
+.blue {
   color: var(--tc, #31409F);
   --lc: #31409f;
   --lhc: #5169B8;
@@ -82,3 +86,6 @@ summary, .summary {
   background-color: #f4f4f4;
 }
 
+.center-text {
+  text-align: center;
+}

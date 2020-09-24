@@ -23,7 +23,7 @@
 }
 
 .package > * {
-  margin: 10px 0 0 0;
+  margin: var(--ps, 10px) 0 0 0;
   max-width: 100%;
 }
 

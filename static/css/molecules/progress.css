@@ -1,26 +1,23 @@
 .progress {
-    text-align: center;
-    margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 30px auto;
 } 
 
 .progress > * {
-  float: left;
-  display: block;
-  color: black;
-  text-align: center;
   padding: 0px 15px 10px 15px;
-  text-decoration: none;
-  font-size: 17px;
-  text-transform: uppercase;
-  text-align: center;
   font: 400 14px var(--sans);
-  color: #707070;
+  text-transform: uppercase;
+  color: var(--tc, #707070);
+  border-bottom: 3px solid transparent;
   margin: 0;
 }
 
 
 .progress .active {
-    color: #222222;
-    font-weight: 700;
-    border-bottom: 3px solid #222222;
+  color: var(--tc, #222222);
+  font-weight: 700;
+  border-color: #222222;
 }

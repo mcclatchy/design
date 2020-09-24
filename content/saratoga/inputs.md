@@ -8,7 +8,7 @@ Inputs are designed to be placed in a center-aligned form that is 100% of the pa
 
 #### Text Inputs Example
 
-<form style="grid-template-columns: 400px;">
+<form>
   <div>
     <label for="default-input">Default</label>
     <input type="text" id="default-input">
@@ -113,17 +113,4 @@ Custom selects use a combination of the [expander](../expander) molecule and lin
 
 {{< highlight html >}}{{< select >}}{{< /highlight >}}
 
-
-<script>
-//toggle password hide/show
-const passwordInputs = document.querySelectorAll(".password-label");
-passwordInputs.forEach(i => {
-  i.addEventListener("click", togglePasswordVisibility);
-});
-
-function togglePasswordVisibility(e) {
-  let input = e.target.parentNode.querySelector("input");
-  input.type = input.type == "password" ? "text" : "password";
-  e.target.classList.toggle('active');
-}
-</script>
+<script async src="/js/forms.js"></script>
