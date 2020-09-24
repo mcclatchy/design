@@ -388,9 +388,7 @@ class VoterBallot extends VoterBaseElement {
 
     // Load the positions
     try {
-      let pos = positions.data.voterguidePositions.data.positions.filter(p => {
-        return p.state != "US" && p.normalized_position.id != 11;
-      });
+      let pos = this.filterPositions(positions);
 
       // Loop through what we got
       pos.forEach((p, i) => {

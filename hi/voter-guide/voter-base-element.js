@@ -74,6 +74,29 @@ class VoterBaseElement extends HTMLElement {
   }
 
   /**
+   * Data filtration for purple Tuesdays
+   */
+
+  filterPositions(positions) {
+    let raw = positions?.data?.voterguidePositions?.data?.positions;
+    let filtered = []
+
+    try {
+      filtered = raw.filter(p => {
+        if(p.state == "US") return false;
+        if(p.normalized_position.id == 11) return false;
+        // if(p.judicial && p.candidates.length == 0) return false;
+
+        return true;
+      })
+    } catch(e) {
+      console.warn("Error filtering positions:", e);
+    }
+
+    return filtered;
+  }
+
+  /**
    * Data normalization functions
    */
 
