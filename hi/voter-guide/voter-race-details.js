@@ -89,7 +89,7 @@ class VoterRaceDetails extends VoterBaseElement {
       }
     </style>
 
-    <h1 class="package">${this.race.normalized_position.name}</h1>
+    <h1 class="package">${this.race.name}</h1>
     <div class="package">
       <h4>Description</h4>
       <p class="summary">${this.race.description}</p>
