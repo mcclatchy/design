@@ -42,7 +42,7 @@ class VoterGuideCard extends HTMLElement {
         outline: none;
       }
 
-      .logo {
+      .logo, ::slotted(img) {
         display: block;
         width: 300px;
         max-width: 100%;
@@ -53,11 +53,11 @@ class VoterGuideCard extends HTMLElement {
       <iframe src="${this.video}" frameborder="0" allowfullscreen="true"></iframe>
     </div>
 
-    <div class="package">
+    <slot class="package">
       <img class="logo" src="https://media.mcclatchy.com/2020/voter_guide/qa/icons/vg-logo.svg">
       <p class="summary">Make informed choices in upcoming local elections with our Voter Guide. Subscribers can access in-depth surveys chronicling local candidates’ positions on the issues important to your community.</p>
       <a class="button big impact" href="/voter-guide/#hp-card">CHECK IT OUT</a>
-    </div>
+    </slot>
 
     `;
     return t;
