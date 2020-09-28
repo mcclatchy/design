@@ -25,7 +25,6 @@ class VoterBallotMeasure extends VoterBaseElement {
 
       .candidates {
         margin: 0;
-        flex: 1;
       }
 
       input[type="radio"] {
@@ -202,7 +201,7 @@ class VoterBallotMeasure extends VoterBaseElement {
         <input type="radio" name="${this.slug}" value="YES" id="YES">
         <label class="info flex" for="YES">
           <div class="package">
-            <h3>YES</h3>
+            <h3>${this.term("pro") || "YES"}</h3>
           </div>
           <div class="check">
             <span class="checkbox"></span>
@@ -213,7 +212,7 @@ class VoterBallotMeasure extends VoterBaseElement {
         <input type="radio" name="${this.slug}" value="NO" id="NO">
         <label class="info flex" for="NO">
           <div class="package">
-            <h3>NO</h3>
+            <h3>${this.term("con") || "NO"}</h3>
           </div>
           <div class="check">
             <span class="checkbox"></span>
@@ -304,6 +303,23 @@ class VoterBallotMeasure extends VoterBaseElement {
       });
       this.dispatchEvent(event);
     });
+  }
+
+  term(v) {
+    let snippet = "";
+
+    switch(v) {
+      case "pro":
+        snippet = this?.measure?.pro_snippet || "";
+        break;
+      case "con":
+        snippet = this?.measure?.con_snippet || "";
+        break;
+    }
+
+    let match = snippet.match(/"(\w+)"/);
+    console.log(snippet, match)
+    return match && match[1];
   }
 }
 
