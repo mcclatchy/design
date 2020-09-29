@@ -81,6 +81,7 @@
   box-sizing: border-box;
   display: flex;
   justify-content: center;
+  grid-gap: unset;
   opacity: 0;
   transform: translateY(-100%);
   transition: opacity .6s, transform .6s ease;

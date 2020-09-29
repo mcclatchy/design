@@ -1196,7 +1196,7 @@ summary, .summary {
 
 .zone.grid.combo {
   justify-content: center;
-  grid-template-columns: repeat(auto-fit, 300px);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 0.5fr));
 }
 
 /**
@@ -1997,6 +1997,7 @@ section.big-news {
   box-sizing: border-box;
   display: flex;
   justify-content: center;
+  grid-gap: unset;
   opacity: 0;
   transform: translateY(-100%);
   transition: opacity 0.6s, transform 0.6s ease;
@@ -2189,10 +2190,6 @@ section.big-news {
 .main-nav .expander {
   align-self: stretch;
   justify-content: space-between;
-}
-
-.main-nav .expander:after {
-  filter: invert(1);
 }
 
 .main-nav .subsection a {
@@ -2489,6 +2486,16 @@ section.big-news {
 /* Top of section triple up on margin fix */
 #nav-section-front, .subnav-section-name {
   margin-top: 0;
+}
+
+/* inline video is off because of the border-box change */
+.story-body .inline-video {
+  max-width: calc(var(--story-width) + 30px);
+}
+
+/* Connatix is all sorts of messed up looking */
+.story-body #ConnatixVideoAd {
+  margin-top: 45px;
 }
 
 /**

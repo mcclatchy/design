@@ -50,3 +50,13 @@
 #nav-section-front, .subnav-section-name {
   margin-top: 0;
 }
+
+/* inline video is off because of the border-box change */
+.story-body .inline-video {
+  max-width: calc(var(--story-width) + 30px);
+}
+
+/* Connatix is all sorts of messed up looking */
+.story-body #ConnatixVideoAd {
+  margin-top: 45px;
+}
