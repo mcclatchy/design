@@ -175,7 +175,7 @@ gpt-ad {
     <h2 class="center-text">Review your order</h2>
     <div class="review-order paper">
   <small class="secure">secure transaction <i class="fas fa-lock"></i></small>
-  <button id="button" type="submit" class="button promo">Place order</button>                    
+  <button type="submit" class="button promo">Place order</button>                    
 
   <div class="package">
     <div class="flex bold">
@@ -204,6 +204,15 @@ gpt-ad {
 
   </div>
 </section>
+
+<script>
+let button = document.querySelector(".review-order .button");
+if(window.location.pathname.match("/decks/")) {
+  button.addEventListener("click", (e) => {
+    window.location = "../confirmation/";
+  });
+}
+</script>
 
     
     <script src="https://kit.fontawesome.com/8a8585a39f.js" crossorigin="anonymous"></script>

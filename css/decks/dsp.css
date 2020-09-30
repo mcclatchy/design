@@ -18,7 +18,7 @@ section.dsp {
     grid-column: 2;
   }
 
-  .purchase-info {
+  .purchase-flow .purchase-info {
     grid-column: 2;
   }
 }
@@ -152,7 +152,7 @@ section.dsp {
 }
 
 .purchase-confirmation .page-title {
-  margin: 0 auto 15px;
+  margin-bottom: 15px;
 }
 
 .purchase-confirmation .page-title .more-link {
