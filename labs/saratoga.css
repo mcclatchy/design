@@ -425,34 +425,6 @@ input:focus, select:focus, .focus {
   box-shadow: 0 0 4px 2px hsla(0, 0%, 59.6%, 0.75);
 }
 
-/* Need to talk through validation with Matt */
-/* input:invalid { */
-/*   border-color: #d63031; */
-/* } */
-/* input:invalid:focus { */
-/*   box-shadow: 0 0 4px 2px hsla(0, 0%, 59.6%, .75); */
-/* } */
-/* .required { */
-/*   color: #d63031; */
-/*   border: 1px solid #d63031; */
-/* } */
-/* input.required:focus { */
-/*   box-shadow:0 0 4px 2px rgba(214,48,49,.75); */
-/*   border: 1px solid #d63031; */
-/* } */
-/* input.required:valid { */
-/*   border: 1px solid #989898; */
-/*   color: #222; */
-/* } */
-/* input.required:valid:focus { */
-/*   box-shadow: 0 0 4px 2px hsla(0, 0%, 59.6%, .75); */
-/* } */
-/* form:valid > button[type="submit"] { */
-/*   background-color: #31409f; */
-/* } */
-/* small[for=error-input] { */
-/*   color: #d63031; */
-/* } */
 .password-label {
   display: flex;
   align-items: center;
@@ -471,7 +443,7 @@ input:focus, select:focus, .focus {
 
 /**
  * Custom select boxes
- * Let's deprecate this, it jacks with tabs, keyboard controls and accessibility.
+ * Soon to be deprecated.
  */
 .select {
   --lc:var(--tc, #222);
@@ -534,15 +506,6 @@ input:focus, select:focus, .focus {
 /**
  * Buttons
  */
-/* input, select { */
-/*   border: 1px solid var(--tc, #373737); */
-/*   padding: 10px; */
-/*   font-size: 0.875rem; */
-/*   color: var(--tc, #222); */
-/* } */
-/* input[type=text] { */
-/*   -webkit-appearance: none; */
-/* } */
 button, .button {
   color: var(--bc);
   background-color: var(--bbc);
@@ -585,7 +548,6 @@ button:hover,
 }
 
 .button.social:before {
-  /* content:''; */
   font-family: "Font Awesome 5 Brands";
   display: inline-block;
   margin-right: 10px;
@@ -620,49 +582,6 @@ button:hover,
   border-radius: 1.5em;
 }
 
-/**
- * Custom selects 
- * This utilizes expander and buttons
- * */
-/* .select { */
-/*   background-color: white; */
-/*   border: 1px solid var(--tc, #ddd); */
-/*   position: relative; */
-/* } */
-/* .select .button { */
-/*   border: none; */
-/*   justify-content: space-between; */
-/*   padding-left: 5px; */
-/*   padding-right: 10px; */
-/*   text-transform: none; */
-/*   font-weight: 400; */
-/*   text-align: left; */
-/* } */
-/* .select .options { */
-/*   border: 1px solid var(--tc, #ddd); */
-/* } */
-/* .select .options .button { */
-/*   align-self: stretch; */
-/* } */
-/* .select .options .selected { */
-/*   font-weight: 700; */
-/* } */
-/* .select .expander.open { */
-/*   border-bottom-color: transparent; */
-/* } */
-/* .select .expander.open ~ .options { */
-/*   display: flex; */
-/*   flex-direction: column; */
-/*   align-items: stretch; */
-/*   position: absolute; */
-/*   top: 100%; */
-/*   left: -1px; */
-/*   background-color: white; */
-/*   border: 1px solid var(--tc, #ddd); */
-/*   border-top: none; */
-/*   width: 100%; */
-/*   z-index: 100; */
-/* } */
 /**
  * Paper 
  */
@@ -791,21 +710,6 @@ button:hover,
   --bbc:white;
 }
 
-/* .white { */
-/*   background-color: #fff; */
-/*   border-color: #fff; */
-/*   color: #222; */
-/* } */
-/* .impact *, */
-/* .promo * { */
-/*   /1* border-color: white; *1/ */
-/*   /1* fill: white; *1/ */
-/*   --bc: #222; */
-/*   --bbc: white; */
-/* } */
-/* .promo * { */
-/*   --bc: #31409F; */
-/* } */
 /**
  * Utilities 
  */
@@ -1292,7 +1196,7 @@ summary, .summary {
 
 .zone.grid.combo {
   justify-content: center;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 0.5fr));
 }
 
 /**
@@ -2093,6 +1997,7 @@ section.big-news {
   box-sizing: border-box;
   display: flex;
   justify-content: center;
+  grid-gap: unset;
   opacity: 0;
   transform: translateY(-100%);
   transition: opacity 0.6s, transform 0.6s ease;
@@ -2285,10 +2190,6 @@ section.big-news {
 .main-nav .expander {
   align-self: stretch;
   justify-content: space-between;
-}
-
-.main-nav .expander:after {
-  filter: invert(1);
 }
 
 .main-nav .subsection a {
@@ -2585,6 +2486,16 @@ section.big-news {
 /* Top of section triple up on margin fix */
 #nav-section-front, .subnav-section-name {
   margin-top: 0;
+}
+
+/* inline video is off because of the border-box change */
+.story-body .inline-video {
+  max-width: calc(var(--story-width) + 30px);
+}
+
+/* Connatix is all sorts of messed up looking */
+.story-body #ConnatixVideoAd {
+  margin-top: 45px;
 }
 
 /**

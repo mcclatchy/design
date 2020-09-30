@@ -112,10 +112,9 @@
     <p>The expander is a simple molecule to toggle the visibility of it&rsquo;s siblings. The element itself acts as the toggle by swapping the open class. This can be done a number of ways, but to keep things simple for the demo we used the <code>onclick</code> attribute directly.</p>
 <p>The generic rules make for a very flexible setup, where we can force each child to display in all cases inline or with additional CSS in the future.</p>
 <p>This is a version of the expander used on the front-end of our sites, but specific for the purchase flow.</p>
-<h4 id="desktop-example">Desktop Example</h4>
-<div class="example">
-  <div style="max-width: 400px; margin: 0 auto;">
-    <div class="purchase-info paper grid expanded">
+<h4 id="example">Example</h4>
+<div class="example grid" style="--columns: 400px;">
+  <div class="purchase-info paper grid ">
   <div class="package">
     <p class="bold">Unlimited Digital Access</p>
     <p>$10.99 for 1 month, $15.99/month after.</p>
@@ -124,21 +123,6 @@
   <p>Get access to everything on Miamiherald.com, our apps, the eEdition, and our stories platforms like Facebook Instant Articles and Google News.</p>
 </div>
 
-  </div>
-</div>
-<h4 id="mobile-example">Mobile Example</h4>
-<div class="example">
-  <div style="max-width: 400px; margin: 0 auto;">
-    <div class="purchase-info paper grid ">
-  <div class="package">
-    <p class="bold">Unlimited Digital Access</p>
-    <p>$10.99 for 1 month, $15.99/month after.</p>
-  </div>
-  <p class="expander" onclick="this.classList.toggle('open')">Show details</p>
-  <p>Get access to everything on Miamiherald.com, our apps, the eEdition, and our stories platforms like Facebook Instant Articles and Google News.</p>
-</div>
-
-  </div>
 </div>
 <h4 id="html">HTML</h4>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;purchase-info paper grid &#34;</span>&gt;

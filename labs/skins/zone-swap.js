@@ -64,7 +64,8 @@ class ZoneSwap extends HTMLElement {
         ele = document.querySelector("#zone-el-105");
         break;
       default:
-        // Do nothing
+        // Allow a generic querySelector passthrough
+        ele = document.querySelector(zone);
     }
 
     return ele;

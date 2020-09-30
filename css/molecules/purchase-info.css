@@ -25,19 +25,21 @@
 }
 
 /* I have this on a class but I need to talk to Matt about it */
-.purchase-info.expanded {
-  grid-template-columns: 1fr;
-  text-align: center;
-}
+@media(min-width: 660px) {
+  .purchase-info {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
 
-.purchase-info.expanded .package {
-  align-items: center;
-}
+  .purchase-info .package {
+    align-items: center;
+  }
 
-.purchase-info.expanded .expander {
-  display: none;
-}
+  .purchase-info .expander {
+    display: none;
+  }
 
-.purchase-info.expanded .expander ~ * {
-  display: block;
+  .purchase-info .expander ~ * {
+    display: block;
+  }
 }

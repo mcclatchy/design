@@ -120,42 +120,6 @@ input:focus, select:focus, .focus {
   box-shadow: 0 0 4px 2px hsla(0, 0%, 59.6%, .75);
 }
 
-/* Need to talk through validation with Matt */
-/* input:invalid { */
-/*   border-color: #d63031; */
-/* } */
-
-/* input:invalid:focus { */
-/*   box-shadow: 0 0 4px 2px hsla(0, 0%, 59.6%, .75); */
-/* } */
-
-/* .required { */
-/*   color: #d63031; */
-/*   border: 1px solid #d63031; */ 
-/* } */
-
-/* input.required:focus { */
-/*   box-shadow:0 0 4px 2px rgba(214,48,49,.75); */
-/*   border: 1px solid #d63031; */ 
-/* } */
-
-/* input.required:valid { */
-/*   border: 1px solid #989898; */ 
-/*   color: #222; */
-/* } */
-
-/* input.required:valid:focus { */
-/*   box-shadow: 0 0 4px 2px hsla(0, 0%, 59.6%, .75); */
-/* } */
-
-/* form:valid > button[type="submit"] { */
-/*   background-color: #31409f; */ 
-/* } */
-
-/* small[for=error-input] { */  
-/*   color: #d63031; */  
-/* } */
-
 .password-label {
   display: flex;
   align-items: center;
@@ -174,7 +138,7 @@ input:focus, select:focus, .focus {
 
 /**
  * Custom select boxes
- * Let's deprecate this, it jacks with tabs, keyboard controls and accessibility.
+ * Soon to be deprecated.
  */
 
 .select {
