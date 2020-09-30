@@ -11,20 +11,10 @@ The generic rules make for a very flexible setup, where we can force each child 
 
 This is a version of the expander used on the front-end of our sites, but specific for the purchase flow.
 
-#### Desktop Example
+#### Example
 
-<div class="example">
-  <div style="max-width: 400px; margin: 0 auto;">
-    {{< dsp/purchase-info class="expanded" >}}
-  </div>
-</div>
-
-#### Mobile Example
-
-<div class="example">
-  <div style="max-width: 400px; margin: 0 auto;">
-    {{< dsp/purchase-info >}}
-  </div>
+<div class="example grid" style="--columns: 400px;">
+  {{< dsp/purchase-info >}}
 </div>
 
 #### HTML

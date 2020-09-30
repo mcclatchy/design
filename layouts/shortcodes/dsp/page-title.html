@@ -30,3 +30,10 @@
   <small class="secure">secure transaction <i class="fas fa-lock"></i></small>
 </div>
 {{- end }}
+
+{{- if eq $type "confirmation" }}
+<div class="page-title package">
+  <h1 class="h2">Thank you for supporting local news!</h1>
+  <a class="more-link" href="#">GO BACK TO READING YOUR ARTICLE</a>
+</div>
+{{- end }}

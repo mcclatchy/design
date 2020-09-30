@@ -10,20 +10,16 @@ build: dsp
 
 <section class="grid dsp purchase-flow">
   {{< dsp/page-title type="new-payment" >}}
+  {{< dsp/purchase-info >}}
+  {{< dsp/form type="new-payment" >}}
 
-  <div class="grid">
-    {{< dsp/form type="new-payment" >}}
-
-    <div>
-      <div class="paper package">
-        <button class="button social paypal">Continue with PayPal</button>
-        <button class="button social apple">Continue with Apple Pay</button>
-      </div>
-      <p class="center-text summary sans">I'm a print subscriber. <a class="more-link inline" href="#">ACTIVATE DIGITAL ACCESS</a></p>
+  <div>
+    <div class="paper package">
+      <button class="button social paypal">Continue with PayPal</button>
+      <button class="button social apple">Continue with Apple Pay</button>
     </div>
+    <p class="center-text summary sans">I'm a print subscriber. <a class="more-link inline" href="#">ACTIVATE DIGITAL ACCESS</a></p>
   </div>
-
-  {{< dsp/purchase-info class="expanded" >}}
 </section>
 
 <script async src="/js/forms.js"></script>
