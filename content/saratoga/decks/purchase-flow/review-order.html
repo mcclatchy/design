@@ -14,3 +14,12 @@ build: dsp
     {{< dsp/review-order >}}
   </div>
 </section>
+
+<script>
+let button = document.querySelector(".review-order .button");
+if(window.location.pathname.match("/decks/")) {
+  button.addEventListener("click", (e) => {
+    window.location = "../confirmation/";
+  });
+}
+</script>
