@@ -15,14 +15,15 @@ class VoterBaseElement extends HTMLElement {
    */
 
   // Makes a request to the positions endpoint
-  async fetchPositions(address, date = this.electionDate) {
+  async fetchPositions(address = "", date = this.electionDate) {
+    let cleanAddress = address.replace(/['"]/g, '');
     let options = {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
       },
       body: JSON.stringify({
-        query: `{voterguidePositions( parameters: "{'election_date': '${date}', 'address': '${address}', 'include_candidates': 1, 'include_uncertified_candidates': 1}"){data}}`
+        query: `{voterguidePositions( parameters: "{'election_date': '${date}', 'address': '${cleanAddress}', 'include_candidates': 1, 'include_uncertified_candidates': 1}"){data}}`
       })
     }
 
@@ -45,15 +46,15 @@ class VoterBaseElement extends HTMLElement {
   }
 
   // Makes a request to the ballot measures endpoint
-  async fetchMeasures(address, date = this.electionDate) {
+  async fetchMeasures(address = "", date = this.electionDate) {
+    let cleanAddress = address.replace(/['"]/g, '');
     let options = {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
       },
       body: JSON.stringify({
-        query: `{ voterguideMeasures( parameters: "{'election_date':'${date}','address':'${address}'}"){ data }}`
-      })
+        query: `{ voterguideMeasures( parameters: "{'election_date':'${date}','address':'${cleanAddress}'}"){ data }}` })
     }
 
     return await fetch(this.endpoint, options).then(response => response.json());
