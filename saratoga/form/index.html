@@ -123,9 +123,10 @@
   <div>
     <label for="password-input" class="password-label">Password</label>
     <small>Must be at least 7 characters long</small>
-    <input type="password" name="password" required autocomplete="current-password">
+    <input type="password" name="password" required autocomplete="current-password" minlength="7">
   </div>
-  <input type="submit" class="button promo" value="submit">
+  <input type="hidden" name="terms">
+  <input type="submit" class="button promo" value="submit" disabled>
 </form>
 
 </div>
@@ -148,9 +149,10 @@
   &lt;<span style="color:#000080;font-weight:bold">div</span>&gt;
     &lt;<span style="color:#000080;font-weight:bold">label</span> <span style="color:#f00">for</span>=<span style="color:#00f">&#34;password-input&#34;</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;password-label&#34;</span>&gt;Password&lt;/<span style="color:#000080;font-weight:bold">label</span>&gt;
     &lt;<span style="color:#000080;font-weight:bold">small</span>&gt;Must be at least 7 characters long&lt;/<span style="color:#000080;font-weight:bold">small</span>&gt;
-    &lt;<span style="color:#000080;font-weight:bold">input</span> <span style="color:#f00">type</span>=<span style="color:#00f">&#34;password&#34;</span> <span style="color:#f00">name</span>=<span style="color:#00f">&#34;password&#34;</span> <span style="color:#f00">required</span> <span style="color:#f00">autocomplete</span>=<span style="color:#00f">&#34;current-password&#34;</span>&gt;
+    &lt;<span style="color:#000080;font-weight:bold">input</span> <span style="color:#f00">type</span>=<span style="color:#00f">&#34;password&#34;</span> <span style="color:#f00">name</span>=<span style="color:#00f">&#34;password&#34;</span> <span style="color:#f00">required</span> <span style="color:#f00">autocomplete</span>=<span style="color:#00f">&#34;current-password&#34;</span> <span style="color:#f00">minlength</span>=<span style="color:#00f">&#34;7&#34;</span>&gt;
   &lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;
-  &lt;<span style="color:#000080;font-weight:bold">input</span> <span style="color:#f00">type</span>=<span style="color:#00f">&#34;submit&#34;</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;button promo&#34;</span> <span style="color:#f00">value</span>=<span style="color:#00f">&#34;submit&#34;</span>&gt;
+  &lt;<span style="color:#000080;font-weight:bold">input</span> <span style="color:#f00">type</span>=<span style="color:#00f">&#34;hidden&#34;</span> <span style="color:#f00">name</span>=<span style="color:#00f">&#34;terms&#34;</span>&gt;
+  &lt;<span style="color:#000080;font-weight:bold">input</span> <span style="color:#f00">type</span>=<span style="color:#00f">&#34;submit&#34;</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;button promo&#34;</span> <span style="color:#f00">value</span>=<span style="color:#00f">&#34;submit&#34;</span> <span style="color:#f00">disabled</span>&gt;
 &lt;/<span style="color:#000080;font-weight:bold">form</span>&gt;</code></pre></div>
 <script async src="../../js/select.js"></script>
 <script async src="../../js/forms.js"></script>

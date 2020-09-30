@@ -1,4 +1,4 @@
-//toggle password hide/show
+// Password event handle
 const passwordInputs = document.querySelectorAll(".password-label");
 passwordInputs.forEach(i => {
   i.addEventListener("click", handlePasswordToggle);
@@ -9,66 +9,35 @@ function handlePasswordToggle(e) {
   input.type = input.type == "password" ? "text" : "password";
   e.target.classList.toggle('active');
 }
-    
 
-//submit form validation
+// Form event handlers
 const forms = document.querySelectorAll("form");
 forms.forEach(d => {
+  d.addEventListener("input", handleInputBlur);
   d.addEventListener("submit", handleFormSubmit);
 });
 
-function handleFormSubmit(e) {
-  // e.preventDefault();
-  let form = e.target;
-  let valid = form.checkValidity();
-
-  if(!valid) {
-    console.log("Form is valid and would send");
-  } else {
-    try {
-      toggleModal("main-modal")
-    } catch(e) {
-      console.warn("main-modal is not on the page");
-    }
+function handleInputBlur(e) {
+  let form = e.currentTarget;
+  let button = form.querySelector("input[type='submit']");
+  if(button) {
+    button.disabled = !form.checkValidity();
   }
 }
 
+function handleFormSubmit(e) {
+  let form = e.target;
+  let valid = form.checkValidity();
+  let data = new FormData(form);
 
-// window.location = '?#';
-// const button = document.getElementById("submit");
+  if(valid && data.has("terms") && !data.get("terms")) {
+    e.preventDefault();
+    toggleModal("main-modal")
+  }
+}
 
-// button.addEventListener("click", function() {
-// const form = document.getElementById('sign-up-form');
-// const formIsValid = form.checkValidity();
-// const invalid = form.querySelectorAll(":invalid"); 
-//   if (formIsValid) {  
-//       toggleModal('main-modal');
-//   } else {
-//     for (let i in invalid) {
-//      invalid[i].classList.add("required");
-//     }
-//   } 
-// }); 
-
-
-//show/hide cc form 
-// const radio = document.getElementById("cc-radio");
-
-//  function mediaQuery(x) {
-//   if (x.matches) { // If media query matches
-//       radio.checked = true; 
-//   } else {
-//       radio.checked = false; 
-//   }
-// }
-
-// var x = window.matchMedia("(min-width: 640px)")
-// mediaQuery(x) // Call listener function at run time
-// x.addListener(mediaQuery) // Attach listener function on state changes   
-
-// if (radio.checked) {
-//     document.getElementById('cc-form').style.display = 'block'
-// } else {
-//     document.getElementById('cc-form').style.display = 'none'
-// }
-
+function handleTermsClicked(e) {
+  let terms = document.querySelector("input[name='terms']");
+  if(terms) terms.value = "yes";
+  terms.closest("form").submit();
+}
