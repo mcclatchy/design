@@ -181,3 +181,30 @@ section.dsp {
 .app-buttons img {
   height: 36px;
 }
+
+/**
+ * Modal
+ */
+
+.dsp-modal {
+  max-width: var(--story-width);
+  align-items: center;
+  text-align: center;
+  --ts: 14px;
+  --tf: var(--sans);
+  --ld: underline;
+  --lhd: underline;
+}
+
+.dsp-modal .button {
+  align-self: unset;
+}
+
+.dsp-modal .button:first-of-type {
+  margin-top: 30px;
+}
+
+.dsp-modal .button.text {
+  --bc: white;
+  --bbc: transparent;
+}

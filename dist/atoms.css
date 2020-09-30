@@ -668,7 +668,8 @@ button:hover,
 .impact,
 .promo,
 .promo-light,
-.disabled {
+.disabled,
+[disabled] {
   background-color: #373737;
   color: white;
   fill: white;
@@ -692,8 +693,9 @@ button:hover,
   --bbc:white;
 }
 
-.disabled {
+.disabled, [disabled] {
   background-color: #989898;
+  cursor: initial;
 }
 
 .disabled * {

@@ -19,9 +19,10 @@
   <div>
     <label for="password-input" class="password-label">Password</label>
     <small>Must be at least 7 characters long</small>
-    <input type="password" name="password" required autocomplete="current-password">
+    <input type="password" name="password" required autocomplete="current-password" minlength="7">
   </div>
-  <input type="submit" class="button promo" value="submit">
+  <input type="hidden" name="terms">
+  <input type="submit" class="button promo" value="submit" disabled>
 </form>
 {{- end }}
 
@@ -34,7 +35,7 @@
   <div>
     <label for="password-input" class="password-label">Password</label>
     <small>Must be at least 7 characters long</small>
-    <input type="password" name="password" required autocomplete="current-password">
+    <input type="password" name="password" required autocomplete="current-password" minlength="7">
   </div>
   <button id="button" type="submit" class="button promo">submit</button>
 </form>

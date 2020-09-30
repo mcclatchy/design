@@ -24,6 +24,7 @@
 .page-title {
   text-align: center;
   align-items: center;
+  margin: 0 auto;
   padding: 15px;
   max-width: 600px;
   --hf:var(--sans);
@@ -36,6 +37,12 @@
   --ts:small;
   color: var(--gray);
   text-transform: uppercase;
+}
+
+.page-title .more-link {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
 }
 
 /*****
@@ -238,23 +245,24 @@
 }
 
 /* I have this on a class but I need to talk to Matt about it */
-.purchase-info.expanded {
-  grid-template-columns: 1fr;
-  text-align: center;
-}
+@media (min-width: 660px) {
+  .purchase-info {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
 
-.purchase-info.expanded .package {
-  align-items: center;
-}
+  .purchase-info .package {
+    align-items: center;
+  }
 
-.purchase-info.expanded .expander {
-  display: none;
-}
+  .purchase-info .expander {
+    display: none;
+  }
 
-.purchase-info.expanded .expander ~ * {
-  display: block;
+  .purchase-info .expander ~ * {
+    display: block;
+  }
 }
-
 /** 
 DSP Overrides
 **/
@@ -262,10 +270,19 @@ section.dsp {
   max-width: 900px;
 }
 
-@media (min-width: 660px) {
-  .grid.purchase-flow:after {
+.purchase-flow {
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-auto-flow: dense;
+}
+
+@media (min-width: 860px) {
+  .purchase-flow:after {
     content: "";
     grid-row: 1;
+    grid-column: 2;
+  }
+
+  .purchase-flow .purchase-info {
     grid-column: 2;
   }
 }
@@ -382,4 +399,70 @@ section.dsp {
 
 .subscription-offers .bottom-links {
   --ps: 15px;
+}
+
+/**
+ * Confirmation
+ */
+.purchase-confirmation {
+  text-align: center;
+  --ts: 14px;
+  --tf:var(--sans);
+}
+
+.purchase-confirmation .page-title {
+  margin-bottom: 15px;
+}
+
+.purchase-confirmation .page-title .more-link {
+  --lc:var(--blue);
+  --lhc:var(--blue);
+  --ts: 0.875rem;
+}
+
+.purchase-confirmation .purchase-flow:after {
+  display: none;
+}
+
+.purchase-confirmation .package {
+  align-items: center;
+}
+
+.purchase-confirmation .package .package > * {
+  --ps: 0;
+}
+
+.app-buttons {
+  grid-gap: 10px;
+  grid-template-columns: repeat(2, max-content);
+}
+
+.app-buttons img {
+  height: 36px;
+}
+
+/**
+ * Modal
+ */
+.dsp-modal {
+  max-width: var(--story-width);
+  align-items: center;
+  text-align: center;
+  --ts: 14px;
+  --tf:var(--sans);
+  --ld:underline;
+  --lhd:underline;
+}
+
+.dsp-modal .button {
+  align-self: unset;
+}
+
+.dsp-modal .button:first-of-type {
+  margin-top: 30px;
+}
+
+.dsp-modal .button.text {
+  --bc:white;
+  --bbc:transparent;
 }
