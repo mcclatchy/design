@@ -18,16 +18,4 @@ We added very rudimentary utility classes to toggle visibility for three media b
 
 #### HTML
 
-The HTML is separate, to a point, for account holders and anonymous readers. There is also a separate bottom navigation and corresponding class on the flag section to make the logo a little larger. For a better idea of the logic and what's different between versions check out the [footer.html](https://github.com/mcclatchy/design/blob/master/layouts/shortcodes/flag.html) shortcode on GitHub.
-
-##### User is not logged into an account:
-
-{{< highlight html >}}{{< flag >}}{{< /highlight >}}
-
-##### User is logged in to an account:
-
-{{< highlight html >}}{{< flag type="subscriber" >}}{{< /highlight >}}
-
-##### Homepage, User is logged in to an account
-
-{{< highlight html >}}{{< flag type="subscriber" page="homepage" >}}{{< /highlight >}}
+The HTML is separate, to a point, for account holders and anonymous readers. There is also a separate bottom navigation and homepage class to make the logo a little larger for that page. For a better idea of the logic and what's different between versions check out the [flag.html](https://github.com/mcclatchy/design/blob/master/layouts/shortcodes/flag.html) shortcode on GitHub.
