@@ -65,7 +65,7 @@ class LiveEventHeader extends HTMLElement {
         flex-direction: column;
         align-items: center;
         padding: 30px 15px !important;
-        background-color: black !important;
+        background-color: black;
         max-width: 100% !important;
         margin-bottom: 30px !important;
         --hf: var(--serif, "McClatchy Serif");
