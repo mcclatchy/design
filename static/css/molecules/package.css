@@ -32,7 +32,7 @@
 }
 
 .package > time,
-.packge > .time {
+.package > .time {
   flex: 1 1 auto;
   display: flex;
   align-items: flex-end;
