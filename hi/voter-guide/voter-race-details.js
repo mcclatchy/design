@@ -192,15 +192,14 @@ class VoterRaceDetails extends VoterBaseElement {
   // Standardizes experience data from BallotReady
   normalizeExperience(experience) {
     return experience.map((e, i) => {
-      if(!e.position) return '';
-
       let years = '';
+      let position = e.position || '';
 
       if(e.start_year && e.end_year) {
         years = `${e.start_year} &mdash; ${e.end_year}`;
       }
 
-      let positionString = [e.position.trim(), e.company].filter(Boolean).join(', ');
+      let positionString = [position.trim(), e.company].filter(Boolean).join(', ');
 
       return `<p class="summary">${positionString} <span class="bold gray" style="display: block">${years}</span></p>`
     }).join('');
