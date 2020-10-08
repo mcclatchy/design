@@ -1,7 +1,7 @@
 ---
 title: "flex-columns"
 description: "A flexbox version of the grid using the same rules."
-menu: atom
+menu: molecule
 ---
 
 The flex-columns organism is an alternative to the CSS Grid for pages that need full browser support. It functions like Bootstrap where the main container gets a negative 15px margin and each child gets 15px back. This allows for a coding style much like the CSS Grid, so the two can be interchangeable. 

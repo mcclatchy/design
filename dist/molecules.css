@@ -1,55 +1,4 @@
 /**
- * Package 
- */
-.package {
-  position: relative;
-  padding: var(--padding, 15px);
-  display: flex;
-  flex-direction: column;
-  flex: 1 1 auto;
-  align-items: flex-start;
-  color: var(--tc);
-  --hf:var(--serif);
-  --hw: 400;
-  --ht:none;
-  --ld:none;
-  --lhd:underline;
-  --lhc:var(--tc);
-}
-
-.package.flush {
-  padding: 0;
-}
-
-.package > * {
-  margin: var(--ps, 10px) 0 0 0;
-  max-width: 100%;
-}
-
-.package > :first-child {
-  margin-top: 0;
-}
-
-.package > time {
-  flex: 1 1 auto;
-  display: flex;
-  align-items: flex-end;
-}
-
-.package.no-img {
-  box-sizing: border-box;
-}
-
-.package.no-img h3,
-.package.no-img .h3 {
-  font-size: x-large;
-}
-
-.package.marketing > :not(:first-child) {
-  margin-top: 20px;
-}
-
-/**
  * Social media 
  */
 .social-media {
@@ -103,4 +52,279 @@
 
 .expander.open:after {
   transform: rotateX(180deg);
+}
+
+/**
+ * Flexbox grid
+ */
+.flex-columns > * {
+  margin: 30px 0;
+}
+
+.flex-columns .lead-item {
+  flex-basis: 100%;
+}
+
+@media (min-width: 690px) {
+  .flex-columns {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+
+  .flex-columns.reverse {
+    flex-direction: row-reverse;
+  }
+
+  .flex-columns > * {
+    flex: 1 1 300px;
+    margin: 15px;
+  }
+
+  .flex-columns > zeus-ad {
+    flex: none;
+    padding: 15px;
+  }
+
+  .flex-columns > .flex-columns {
+    margin: 0;
+  }
+
+  .flex-columns .main-stage {
+    flex: 2 1 660px;
+    align-self: flex-start;
+  }
+
+  .flex-columns .rail {
+    flex-basis: 330px;
+    align-self: flex-start;
+  }
+
+  /** Special cases **/
+  .lead-section .main-stage > :first-child {
+    flex-basis: 100%;
+  }
+
+  .main-stage > .flex-columns + .flex-columns {
+    padding-top: 15px;
+  }
+}
+/**
+ * Simple Flexbox row
+ *
+ * We are using this combo more and it makes sense to 
+ * pull them out into their own reusables. I will 
+ * incorporate into the rest of the elements as we
+ * re-work them.
+ */
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.icons > * {
+  padding: 15px;
+}
+
+/* To fix our strange line heights */
+.icon-label {
+  position: relative;
+  top: 0.15em;
+  margin-left: 10px;
+}
+
+/**
+ * Generic CSS grid
+ */
+.grid {
+  display: grid;
+  grid-template-columns: var(--columns, repeat(auto-fit, minmax(300px, 1fr)));
+  grid-gap: 30px;
+}
+
+.grid > .package:not(.paper),
+.zone-el > .package:not(.paper) {
+  padding: 0;
+}
+
+.grid .ad-widget {
+  margin: 0 auto;
+  align-self: center;
+}
+
+.grid > .rail {
+  grid-row-end: span var(--rows, 3);
+}
+
+@media (min-width: 990px) {
+  .col-span-2 {
+    grid-column: span 2;
+  }
+}
+/**
+ * Static Zone option (with utilities)
+ */
+.grid.static-zones,
+.grid.dense {
+  grid-auto-flow: dense;
+}
+
+.grid.static-zones .zone-el .grid .full-row {
+  grid-column: 1/-1;
+}
+
+/**
+ * Story body
+ */
+.story-body {
+  --hf:var(--sans);
+  --hw: 700;
+  --ht:uppercase;
+  --lc: #5169B8;
+  --lhc: #31409F;
+  --ld:underline;
+  --lhd:underline;
+  padding-bottom: 15px;
+}
+
+.story-body > * {
+  max-width: var(--story-width);
+  padding: 0 15px;
+  margin: 15px auto;
+}
+
+.story-body > :first-child {
+  margin-top: 0;
+  padding-top: 30px;
+}
+
+.story-body > .header {
+  margin-top: 0;
+}
+
+/**
+ * Embeds
+ */
+.story-body .embed-infographic {
+  margin: 30px auto;
+  clear: both;
+}
+
+.embed-infographic > * {
+  max-width: 100%;
+}
+
+.story-body > .story-module {
+  margin: 30px auto;
+}
+
+/**
+ * Media options
+ */
+.story-body > figure,
+.story-body > .figure {
+  margin: 30px auto;
+  padding: 0;
+}
+
+.story-body .wide {
+  max-width: 970px;
+}
+
+.story-body .full-bleed {
+  max-width: 100%;
+  padding: 0;
+}
+
+.story-body figure .package,
+.story-body .figure .package {
+  padding: 10px 0 0;
+}
+
+@media (max-width: 768px) {
+  .story-body > figure,
+.story-body > .figure {
+    max-width: 100%;
+  }
+
+  .story-body figcaption,
+.story-body figure .package,
+.story-body .figure .package {
+    padding: 10px 15px 0;
+  }
+}
+@media (max-width: 990px) {
+  .story-body .wide figcaption,
+.story-body figure.wide .package,
+.story-body .figure.wide .package {
+    padding: 10px 15px 0;
+  }
+}
+.story-body .full-bleed figcaption,
+.story-body figure.full-bleed .package,
+.story-body .figure.full-bleed .package {
+  padding: 10px 15px 0;
+}
+
+/**
+ * Asides
+ */
+.story-body aside > * {
+  margin: 30px auto;
+}
+
+@media (min-width: 930px) {
+  .story-body aside > * {
+    float: right;
+    margin: 0 -150px 30px 30px;
+  }
+
+  .story-body aside.left > * {
+    float: left;
+    margin: 0 30px 30px -150px;
+  }
+}
+.story-body > .zone {
+  margin: 30px auto;
+}
+
+/**
+ * Mugshots
+ */
+.story-body .mugshot {
+  padding: 0 15px;
+}
+
+.story-body .mugshot .img-container {
+  display: grid;
+  grid-template-columns: 125px 1fr;
+  grid-gap: 15px;
+}
+
+.story-body .mugshot figcaption {
+  padding: 0;
+  align-self: end;
+}
+
+/**
+ * Tables
+ */
+.story-body table {
+  max-width: 758px;
+}
+
+/**
+ * Immersive card 
+ */
+.story-body .immersive {
+  max-width: 100%;
+  padding-top: 0;
+}
+
+/**
+ * Zergnet widget only applies to stories
+ */
+.zergnet {
+  max-width: 728px;
+  padding: 0 15px;
 }
