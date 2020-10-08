@@ -106,7 +106,7 @@ class VoterBaseElement extends HTMLElement {
 
   // Standardizes candidate name
   normalizeName(c) {
-    let fn = `${c.first_name} ${c.middle_name || ""} ${c.last_name} ${c.suffix || ""}`;
+    let fn = `${c.first_name} ${c.middle_name || ""} ${c.nickname ? `“${c.nickname}”` : ''} ${c.last_name} ${c.suffix || ""}`;
     return fn.trim().replace(/\s+/, " ");
   }
 

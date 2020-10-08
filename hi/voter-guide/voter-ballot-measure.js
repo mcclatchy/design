@@ -318,7 +318,6 @@ class VoterBallotMeasure extends VoterBaseElement {
     }
 
     let match = snippet.match(/"(\w+)"/);
-    console.log(snippet, match)
     return match && match[1];
   }
 }
