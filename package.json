@@ -6,6 +6,7 @@
     "dist/molecules.css",
     "dist/cards.css",
     "dist/decks.css",
+    "dist/dsp.css",
     "dist/amp.css",
     "dist/vendor-cards.css"
   ]
