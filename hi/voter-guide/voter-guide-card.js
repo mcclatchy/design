@@ -20,6 +20,11 @@ class VoterGuideCard extends HTMLElement {
           0 1px 5px 0 rgba(0, 0, 0, .13);
       }
 
+      :host(.story) {
+        box-shadow: none;
+        grid-template-columns: 1fr;
+      }
+
       @media(min-width: 768px) {
         :host {
           grid-template-columns: 2fr 1fr;
@@ -47,16 +52,22 @@ class VoterGuideCard extends HTMLElement {
         width: 300px;
         max-width: 100%;
       }
+
+      :host(.story) .package {
+        padding: 0;
+      }
     </style>
 
+    ${this.video ? `
     <div class="video">
       <iframe src="${this.video}" frameborder="0" allowfullscreen="true"></iframe>
     </div>
+    ` : ''}
 
     <slot class="package">
       <img class="logo" src="https://media.mcclatchy.com/2020/voter_guide/qa/icons/vg-logo.svg">
       <p class="summary">Make informed choices in upcoming local elections with our Voter Guide. Subscribers can access in-depth surveys chronicling local candidates’ positions on the issues important to your community.</p>
-      <a class="button big impact" href="/voter-guide/#hp-card">CHECK IT OUT</a>
+      <a class="button big impact" href="/voter-guide/${this.classList.contains("story") ? "#story-card" : "#hp-card"}">CHECK IT OUT</a>
     </slot>
 
     `;
@@ -98,7 +109,8 @@ class VoterGuideCard extends HTMLElement {
   }
 
   get video() {
-    return `${this.getAttribute("video")}/video-embed`;
+    let attr = this.getAttribute("video");
+    return attr ? `${this.getAttribute("video")}/video-embed` : false;
   }
 
   get sds() {
