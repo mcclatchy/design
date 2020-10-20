@@ -12,7 +12,6 @@ class FundraisingChart extends HTMLElement {
   }
 
   get goal() {
-    console.log(this.shadowRoot.querySelectorAll("chart-phase"));
     return parseInt(this.getAttribute("goal"));
   }
 
@@ -37,14 +36,6 @@ class FundraisingChart extends HTMLElement {
       justify-content: space-between;
     }
 
-    .titles {
-      font: 11px/1em "McClatchy Sans", sans-serif;
-    }
-
-    .amounts {
-      font: 600 21px/1em "McClatchy Sans", sans-serif;
-    }
-
     .bar {
       position: relative;
       background-color: #ddd;
@@ -60,6 +51,13 @@ class FundraisingChart extends HTMLElement {
       left: 0;
       height: 100%;
     }
+
+    @media(max-width: 768px) {
+      ::slotted(chart-phase[hide="mobile"]) {
+        display: none;
+      }
+    }
+
     </style>
 
     <div class="phases">
@@ -128,12 +126,12 @@ class ChartPhase extends HTMLElement {
       }
 
       .label {
-        font: 11px/1em "McClatchy Sans", sans-serif;
+        font: 11px/1em var(--sans);
         text-transform: uppercase;
       }
 
       .value {
-        font: 600 21px/1em "McClatchy Sans", sans-serif;
+        font: 700 21px/1em var(--sans);
       }
     </style>
 
