@@ -1220,6 +1220,11 @@ summary, .summary {
   padding: 15px;
 }
 
+/* Form changes jacked with BounceX */
+form[id^=bx-] {
+  display: block;
+}
+
 /**
  * Digests
  */

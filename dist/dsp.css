@@ -53,7 +53,7 @@
   --ht:none;
   display: grid;
   grid-gap: 10px;
-  padding: 30px 15px;
+  padding: 0px 15px 30px;
   text-align: center;
   justify-items: center;
 }
@@ -68,7 +68,16 @@
   font-size: 40px;
 }
 
+.dsp-offer .label * {
+  color: var(--dark);
+}
+
+.dsp-offer .offer-price {
+  font: 700 19px/28px var(--sans);
+}
+
 .dsp-offer .summary {
+  margin: 0;
   opacity: 0.8;
 }
 
@@ -85,11 +94,7 @@
 
 @media (min-width: 900px) {
   .dsp-offer .h1 {
-    font-size: 52px;
-  }
-
-  .dsp-offer .offer-price {
-    font: 700 24px/32px var(--sans);
+    font-size: 48px;
   }
 }
 /**
@@ -107,6 +112,7 @@
   background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.99) 50%, rgba(255, 255, 255, 0.7) 100%), var(--image);
   background-size: cover;
   background-position: 50% 20%;
+  padding: 30px 15px;
 }
 
 /**
