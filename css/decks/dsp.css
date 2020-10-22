@@ -36,16 +36,15 @@ section.dsp {
   margin: 30px auto;
 }
 
-.paywall-details {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.paywall-expander {
+  font: 700 0.875rem var(--sans);
+  --tc: var(--blue);
+  display: inline-block;
+  text-align: center;
 }
 
-.paywall-details .expander {
-  font: 700 0.875rem var(--sans);
-  text-transform: uppercase;
-  --tc: var(--blue);
+.paywall-details .offer-details {
+  grid-column: 1/-1;
 }
 
 /**

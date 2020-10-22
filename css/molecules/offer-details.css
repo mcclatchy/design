@@ -2,16 +2,30 @@
  * offer details card
  */
 
-.offer-details {
-  padding: var(--padding, 30px);
-  text-align: center;
-  margin: 0 auto;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+.paywall-offer {
   --ts: 0.875rem;
   --tf: var(--sans);
+  --padding: 30px;
+  --ps: 10px;
+  --lc: var(--blue);
+  --lhc: var(--blue);
+  text-align: center;
+  align-self: flex-start;
 }
 
-.offer-details .package {
+.paywall-offer .package {
   align-items: center;
-  --ps: 0; /* this one's new :) */
+}
+
+.paywall-offer .more-link {
+  --tc: var(--blue);
+}
+
+.offer-details {
+  padding: var(--padding, 30px);
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+.swg-details .small {
+  font-size: 0.7rem;
 }
