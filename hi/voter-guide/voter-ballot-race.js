@@ -124,6 +124,7 @@ class VoterBallotRace extends VoterBaseElement {
 
       @media print {
         :host {
+          position: relative;
           display: block;
           margin: 0;
           padding: 15px 0;
