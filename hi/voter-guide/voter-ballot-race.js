@@ -13,6 +13,7 @@ class VoterBallotRace extends VoterBaseElement {
     <link rel="stylesheet" href="${this.sds}">
     <style>
       :host {
+        position: relative;
         display: flex;
         flex-direction: column;
         background-color: white;
@@ -124,7 +125,6 @@ class VoterBallotRace extends VoterBaseElement {
 
       @media print {
         :host {
-          position: relative;
           display: block;
           margin: 0;
           padding: 15px 0;
