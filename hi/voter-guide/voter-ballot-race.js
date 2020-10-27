@@ -95,6 +95,10 @@ class VoterBallotRace extends VoterBaseElement {
         font-style: italic;
       }
 
+      .candidates {
+        display: block;
+      }
+
       /* Checked state */
       input:checked ~ .info {
         background-color: #e8f3dd;
@@ -160,10 +164,6 @@ class VoterBallotRace extends VoterBaseElement {
           margin: 0 0 0 5px;
           border-left: 1px solid #222;
           padding-left: 5px;
-        }
-
-        .candidates {
-          display: block;
         }
 
         .candidate .package {
