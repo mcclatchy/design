@@ -124,8 +124,8 @@ class VoterGuide extends window.SimpleGrid {
       this.dropZone(z5, 4);
 
       // Mobile
-      let z7 = this.getZone(7);
-      this.dropZone(z7, 12);
+      // let z7 = this.getZone(7);
+      // this.dropZone(z7, 12);
 
       // Desktop
       let z8 = this.getZone(8);
