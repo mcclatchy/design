@@ -162,6 +162,10 @@ class VoterBallotRace extends VoterBaseElement {
           padding-left: 5px;
         }
 
+        .candidates {
+          display: block;
+        }
+
         .candidate .package {
           padding: 0;
         }
