@@ -45,6 +45,12 @@ class VoterBallot extends VoterBaseElement {
         --ld: underline;
         --lhd: underline;
       }
+
+      p {
+        margin: 45px auto;
+        text-align: center;
+        font-style: italic;
+      }
     </style>
 
     <div>
@@ -54,7 +60,7 @@ class VoterBallot extends VoterBaseElement {
     </div>
 
     <div class="intro">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget dignissim arcu. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus tincidunt tellus et porttitor tempus. Duis ut ligula ante. Fusce a accumsan enim. Nulla mattis orci lectus, ac mattis quam vehicula nec. Vivamus ornare nisl felis, at scelerisque turpis rhoncus et. Donec quis urna pharetra, suscipit nisl at, fermentum nulla. Sed eget hendrerit odio. Mauris ut augue at enim tincidunt porttitor. Phasellus pharetra sit amet ante sit amet venenatis. Praesent eu ullamcorper neque. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+      <p>Our Voter Guide for the Nov. 3 election is no longer available. You can still read all of our coverage of the local elections that are important to your community below.</p>
     </div>
     `;
     return t;
