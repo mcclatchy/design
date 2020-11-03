@@ -60,7 +60,9 @@ class VoterBallot extends VoterBaseElement {
     </div>
 
     <div class="intro">
-      <p>Our Voter Guide for the Nov. 3 election is no longer available. You can still read all of our coverage of the local elections that are important to your community below.</p>
+      ${this.enh ? `
+      <p>Nuestra Guía Electoral para los comicios del 3 de noviembre ya no está disponible. Pero usted todavía puede leer más abajo toda nuestra cobertura de las elecciones locales que son importantes para su comunidad.</p>`:`
+      <p>Our Voter Guide for the Nov. 3 election is no longer available. You can still read all of our coverage of the local elections that are important to your community below.</p>`}
     </div>
     `;
     return t;
