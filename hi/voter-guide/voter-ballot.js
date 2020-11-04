@@ -14,8 +14,62 @@ import "https://media.mcclatchy.com/labs/dynamic-modal.js";
 
 class VoterBallot extends VoterBaseElement {
 
-  // Shadow DOM template
+  // VG is over
   get template() {
+    const t = document.createElement("template");
+    t.innerHTML = `
+    <link rel="stylesheet" href="${this.sds}">
+    <style>
+      :host {
+        display: block;
+        margin: 30px auto;
+        max-width: 1140px;
+        box-sizing: content-box;
+      }
+
+      .logo {
+        display: block;
+        width: 350px;
+        margin: 0 auto;
+      }
+
+      .intro {
+        max-width: var(--story-width);
+        margin: 0 auto;
+        padding: 0 15px;
+        --hf: var(--sans);
+        --ht: uppercase;
+        --hw: bold;
+        --lc: #5169B8;
+        --lhc: #31409F;
+        --ld: underline;
+        --lhd: underline;
+      }
+
+      p {
+        margin: 45px auto;
+        text-align: center;
+        font-style: italic;
+      }
+    </style>
+
+    <div>
+      ${this.enh ? `
+      <img class="logo" src="https://media.mcclatchy.com/2020/voter_guide/qa/icons/vg-logo-enh.svg" alt="2020 Voter Guide logo">`:`
+      <img class="logo" src="https://media.mcclatchy.com/hi/voter-guide/icons/vg-logo.svg" alt="Logo de Guía Electoral">`}
+    </div>
+
+    <div class="intro">
+      ${this.enh ? `
+      <p>Nuestra Guía Electoral para los comicios del 3 de noviembre ya no está disponible. Pero usted todavía puede leer más abajo toda nuestra cobertura de las elecciones locales que son importantes para su comunidad.</p>`:`
+      <p>Our Voter Guide for the Nov. 3 election is no longer available. You can still read all of our coverage of the local elections that are important to your community below.</p>`}
+    </div>
+    `;
+    return t;
+  }
+
+  // Shadow DOM template
+  get originalTemplate() {
     const t = document.createElement("template");
     t.innerHTML = `
     <link rel="stylesheet" href="${this.sds}">
