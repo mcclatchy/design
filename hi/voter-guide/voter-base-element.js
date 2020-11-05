@@ -61,17 +61,9 @@ class VoterBaseElement extends HTMLElement {
   }
 
   async fetchSurvey(sid) {
-    let options = {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        query: `{ survey( sid: ${sid} ){ surveyData }}`
-      })
-    }
-
-    return await fetch(this.endpoint, options).then(response => response.json());
+    // This content has been frozen
+    let endpoint = `https://media.mcclatchy.com/2020/voter_guide/data/${sid}.json`;
+    return await fetch(endpoint).then(response => response.json());
   }
 
   /**
