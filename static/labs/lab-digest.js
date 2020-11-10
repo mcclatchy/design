@@ -31,6 +31,10 @@ class LabDigest extends HTMLElement {
         --ld: none;
         --lhd: underline;
       }
+
+      ::slotted(a:nth-child(n+${this.maxHeadlines + 1})) {
+        display: none;
+      }
     </style>
 
     <span class="label">
@@ -56,14 +60,35 @@ class LabDigest extends HTMLElement {
     return this.getAttribute("label") || "More info";
   }
 
+  get headlinesPerRow() {
+    return this.getAttribute("headlines-per-row") || 3;
+  }
+
+  get maxHeadlines() {
+    return parseInt(this.getAttribute("max-headlines")) || 6;
+  }
+
   get sds() {
     let mi = document.head.querySelector("link[href*=mi-styles]");
     let sds = document.head.querySelector("link[href*=sds]");
     return mi ? mi.href : sds.href;
   }
 
+  get target() {
+    return this.getAttribute("target");
+  }
+
   _handleSlotChange(e) {
-    let rows = Math.ceil(e.target.assignedElements().length / 3);
+    let links = e.target.assignedElements();
+
+    if(this.target) {
+      links.forEach(l => {
+        l.target = this.target;
+      });
+    }
+
+    let headlines = Math.min(links.length, this.maxHeadlines);
+    let rows = Math.ceil(headlines / this.headlinesPerRow);
     this.style.setProperty("--rows", `span ${rows}`);
   }
 }
