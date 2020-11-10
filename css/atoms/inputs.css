@@ -68,9 +68,9 @@ input, select, .select {
   border: 1px solid var(--tc, #989898);
   border-radius: 2px;
   background-color: white;
-  color: var(--tc, #222);
   transition: all .15s ease-in-out;
   cursor: pointer;
+  --tc: initial;
 }
 
 select {

@@ -60,3 +60,8 @@
 .story-body #ConnatixVideoAd {
   margin-top: 45px;
 }
+
+/* Video sharing screen affectd by form grid */
+form.vjs-sharing__link {
+  display: block;
+}

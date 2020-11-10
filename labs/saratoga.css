@@ -373,9 +373,9 @@ input, select, .select {
   border: 1px solid var(--tc, #989898);
   border-radius: 2px;
   background-color: white;
-  color: var(--tc, #222);
   transition: all 0.15s ease-in-out;
   cursor: pointer;
+  --tc:initial;
 }
 
 select {
@@ -2491,6 +2491,11 @@ section.big-news {
 /* Connatix is all sorts of messed up looking */
 .story-body #ConnatixVideoAd {
   margin-top: 45px;
+}
+
+/* Video sharing screen affectd by form grid */
+form.vjs-sharing__link {
+  display: block;
 }
 
 /**
