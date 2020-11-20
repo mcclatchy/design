@@ -8,13 +8,13 @@
   --hw: bold;
   --ts: 0.875rem;
   --tf: var(--sans);
-  --ps: 0px;
+  --ps: 5px;
   --padding: 0px;
   --lc: var(--blue);
   --lhc: var(--blue);
   position: relative;
   display: grid;
-  grid-gap: 10px;
+  grid-gap: 15px;
   padding: 30px;
   justify-items: center;
   text-align: center;
