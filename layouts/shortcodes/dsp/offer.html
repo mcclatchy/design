@@ -18,7 +18,7 @@
 
     {{ with .Get "button" -}}
     {{ if (fileExists (printf "/static/%s" .)) -}}
-    <a class="button" href="#">
+    <a class="button flush" href="#">
       <img src="{{.}}" width="{{ $.Get "button-width" }}">
     </a>
     {{ else -}}
@@ -50,7 +50,7 @@
 
     {{ with .Get "button" -}}
     {{ if (fileExists (printf "/static/%s" .)) -}}
-    <a class="button" href="#">
+    <a class="button flush" href="#">
       <img src="{{.}}" width="{{ $.Get "button-width" }}">
     </a>
     {{ else -}}

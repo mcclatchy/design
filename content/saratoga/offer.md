@@ -5,57 +5,22 @@ menu: "molecule"
 build: dsp
 ---
 
-The primary offer molecule is used with variation in the <a href="/saratoga/paywall/">paywall</a> and <a href="/saratoga/decks/subscription-offers">subscription offers</a> pages. The molecule is a combo of a custom CSS grid and an altered [package](../package/) to allow for equal spacing of groups.
+The DSP offer card provides double padding around the edges, has a customizable grid layout for adjusting spacing as necessary, and tweaks child package molecules just a tad. The tweaks allow for controlling the spacing inside of grouped content, such as offers and terms. 
 
-The primary and secondary variants, used by appending either the `primary` or `secondary` class will put in larger padding and open up the option for a background image using the `--image` CSS property. All variants use utility classes directly the children to highlight the flexibility of the molecule. 
+*Note: These cards represent some of our most fluid to date, and variations in the system occur at the deck level. Check the `decks/dsp.css` file for these adjustments.*
 
-#### Paywall Example
+#### Standard version
 
-<div class="example">{{< dsp/offer >}}</div>
+This version can be placed on it's own like the [paywall deck](../decks/paywall), or in a grid like the [subscription offer deck](../decks/subscription-offers/). The same version, with slight adjustments is also the base element for the SWG offer and the all-offer cards on the paywall deck.
 
-#### Paywall HTML
-{{< highlight html >}}
-{{< dsp/offer >}}
-{{< /highlight >}}
-
-#### Primary Example
-
-<div class="example">{{< dsp/offer type="primary" >}}</div>
-
-#### Primary HTML
-
-{{< highlight html >}}
-{{< dsp/offer type="primary" >}}
-{{< /highlight >}}
-
-#### Secondary Example
-
-<div class="example grid" style="--columns: repeat(auto-fit, 400px);">
-  {{< dsp/offer type="secondary" >}}
-  {{< dsp/offer type="secondary-b" >}}
+<div class="example">
+  <div class="card paywall-offer">{{< dsp/offer color="promo" label="MONTHLY" button="START TODAY" />}}</div>
 </div>
 
-#### Secondary HTML
+#### Horizontal version
 
-{{< highlight html >}}
-{{< dsp/offer type="secondary" >}}
-{{< /highlight >}}
+The horizontal version is used as alternative offers on the subscription offer deck. This version uses media breakpoints, and therefore should not be placed in a grid that has more than one column spanning the entire width of the page.
 
-#### Tertiary offers
-
-<div class="example grid" style="grid-template-columns: repeat(auto-fit, 400px);">
-  {{< dsp/offer type="tertiary-a" >}}
-  {{< dsp/offer type="tertiary-b" >}}
+<div class="example">
+  {{< dsp/offer type="horizontal" label="YEARLY" button="START TODAY" />}}
 </div>
-
-#### Tertiary variant A
-
-{{< highlight html >}}
-{{< dsp/offer type="tertiary-a" >}}
-{{< /highlight >}}
-
-#### Tertiary variant B
-
-{{< highlight html >}}
-{{< dsp/offer type="tertiary-b" >}}
-{{< /highlight >}}
