@@ -30,6 +30,7 @@ section.dsp {
 .paywall {
   --section-width: 900px;
   text-align: center;
+  padding-bottom: 30px;
 }
 
 .paywall .page-title {
@@ -100,10 +101,54 @@ section.dsp {
   align-items: center;
 }
 
-.subscription-offers [class*=promo] .dsp-offer .h1 {
-  min-height: 2.2em;
-  display: flex;
-  align-items: center;
+/* This won't hold up for long */
+@media (min-width: 660px) {
+  .subscription-offers [class*=promo] .dsp-offer .h1 {
+    min-height: 2.2em;
+    display: flex;
+    align-items: center;
+  }
+}
+
+/* Hero at the top of the sub offer page */
+
+.dsp-hero {
+  --tc: white;
+  --pa: center;
+  --padding: 60px 30px;
+  min-height: 320px;
+  position: relative;
+  overflow: visible;
+  text-align: center;
+}
+
+.dsp-hero img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  object-position: 50% 70%;
+  filter: brightness(0.7);
+}
+
+.dsp-hero .h1 {
+  font-size: 38px;
+}
+
+.dsp-hero .h2 {
+  font-size: 20px;
+}
+
+@media (min-width: 990px) {
+  .dsp-hero .h1 {
+    font-size: 52px;
+  }
+
+  .dsp-hero .h2 {
+    font-size: 24px;
+  }
 }
 
 /**

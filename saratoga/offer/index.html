@@ -109,25 +109,50 @@
   <div class="paper story-body details">
     <h2 class="page-header">offer (DSP)
     </h2>
-    <p>The primary offer molecule is used with variation in the <a href="../../saratoga/paywall/">paywall</a> and <a href="../../saratoga/decks/subscription-offers">subscription offers</a> pages. The molecule is a combo of a custom CSS grid and an altered <a href="../package/">package</a> to allow for equal spacing of groups.</p>
-<p>The primary and secondary variants, used by appending either the <code>primary</code> or <code>secondary</code> class will put in larger padding and open up the option for a background image using the <code>--image</code> CSS property. All variants use utility classes directly the children to highlight the flexibility of the molecule.</p>
-<h4 id="paywall-example">Paywall Example</h4>
+    <p>The DSP offer card provides double padding around the edges, has a customizable grid layout for adjusting spacing as necessary, and tweaks child package molecules just a tad. The tweaks allow for controlling the spacing inside of grouped content, such as offers and terms.</p>
+<p><em>Note: These cards represent some of our most fluid to date, and variations in the system occur at the deck level. Check the <code>decks/dsp.css</code> file for these adjustments.</em></p>
+<h4 id="standard-version">Standard version</h4>
+<p>This version can be placed on it&rsquo;s own like the <a href="../decks/paywall">paywall deck</a>, or in a grid like the <a href="../decks/subscription-offers/">subscription offer deck</a>. The same version, with slight adjustments is also the base element for the SWG offer and the all-offer cards on the paywall deck.</p>
 <div class="example">
-<div class="">
+  <div class="card paywall-offer">
+<div class="promo">
+  <div class="label">
+    <span class="h5">MONTHLY</span>
+  </div>
   <div class="dsp-offer">
-     </div>
+    <h3 class="h1">Unlimited Digital Access</h3>
+    <div class="package">
+      <p class="bold">$1.99 FOR ONE MONTH</p>
+      <p class="summary">$10.99/MONTH AFTER. CANCEL ANYTIME.</p>
+    </div>
+    <a class="button" href="#">START TODAY</a>
+    </div>
+</div>
+</div>
+</div>
+<h4 id="horizontal-version">Horizontal version</h4>
+<p>The horizontal version is used as alternative offers on the subscription offer deck. This version uses media breakpoints, and therefore should not be placed in a grid that has more than one column spanning the entire width of the page.</p>
+<div class="example">
+  
+<div class="card">
+  <div class="label dsp-offer-label">
+    <span class="h5">YEARLY</span>
+  </div>
+  <div class="dsp-offer horizontal">
+    <div class="package">
+      <h3 class="h1">Unlimited Digital Access</h3>
+      <p><b>$90 FOR ONE YEAR |</b> <span class="gray">SAVE OVER 40% COMPARED TO MONTHLY</span></p>
+      <ul>
+        <li>Unlimited access to our website and our apps</li> 
+        <li>Additional content in the eEdition (digital replica of the newspaper)</li>
+        <li>Subscriber-only content and exclusive extras</li>
+      </ul>
+      </div>
 
-#### Paywall HTML
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;&#34;</span>&gt;
-  &lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;dsp-offer&#34;</span>&gt;
-     
- &lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;
-&lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;
+    <a class="button promo-light" href="#">START TODAY</a>
+    </div>
+</div>
 
-
-#### Primary Example
-
-&lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;example&#34;</span>&gt;</code></pre></div> </div>
 </div>
 
   </div>
