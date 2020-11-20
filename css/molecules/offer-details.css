@@ -2,6 +2,15 @@
  * offer details card
  */
 
+.offer-details {
+  padding: var(--padding, 30px);
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+}
+
+.swg-details .small {
+  font-size: 0.7rem;
+}
+
 .paywall-offer {
   --ts: 0.875rem;
   --tf: var(--sans);
@@ -19,13 +28,4 @@
 
 .paywall-offer .more-link {
   --tc: var(--blue);
-}
-
-.offer-details {
-  padding: var(--padding, 30px);
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-}
-
-.swg-details .small {
-  font-size: 0.7rem;
 }

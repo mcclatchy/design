@@ -29,6 +29,7 @@
   --dark: #222222;
   --gray: #707070;
   --blue: #31409F;
+  --body-background: #f4f4f4;
 
   /**
    * Color variables and text size set at the atomic level
@@ -48,7 +49,7 @@ html {
 body {
   position: relative;
   margin: 0;
-  background-color: #f4f4f4;
+  background-color: var(--body-background);
 }
 
 body.freeze {

@@ -90,6 +90,9 @@ class LabDigest extends HTMLElement {
     let headlines = Math.min(links.length, this.maxHeadlines);
     let rows = Math.ceil(headlines / this.headlinesPerRow);
     this.style.setProperty("--rows", `span ${rows}`);
+
+    // Remove the hidden attribute
+    this.hidden = false;
   }
 }
 

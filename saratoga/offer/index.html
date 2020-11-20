@@ -113,125 +113,22 @@
 <p>The primary and secondary variants, used by appending either the <code>primary</code> or <code>secondary</code> class will put in larger padding and open up the option for a background image using the <code>--image</code> CSS property. All variants use utility classes directly the children to highlight the flexibility of the molecule.</p>
 <h4 id="paywall-example">Paywall Example</h4>
 <div class="example">
-<div class="dsp-offer paper package promo">
-  <div class="label">
-     <h5>MONTHLY</h5>
-  </div>
-  <h2 class="h1 offer-title">Unlimited Digital Access</h2>
-  <div class="package">
-    <p class="h4 offer-price">$1.99 for one month</p>
-    <p class="summary caps">$10.99/month after. Cancel anytime.</p>
-  </div>
-  <a class="button white">start today</a>
-</div>
-</div>
-<h4 id="paywall-html">Paywall HTML</h4>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;dsp-offer paper package promo&#34;</span>&gt;
-  &lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;label&#34;</span>&gt;
-     &lt;<span style="color:#000080;font-weight:bold">h5</span>&gt;MONTHLY&lt;/<span style="color:#000080;font-weight:bold">h5</span>&gt;
-  &lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;
-  &lt;<span style="color:#000080;font-weight:bold">h2</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;h1 offer-title&#34;</span>&gt;Unlimited Digital Access&lt;/<span style="color:#000080;font-weight:bold">h2</span>&gt;
-  &lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;package&#34;</span>&gt;
-    &lt;<span style="color:#000080;font-weight:bold">p</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;h4 offer-price&#34;</span>&gt;$1.99 for one month&lt;/<span style="color:#000080;font-weight:bold">p</span>&gt;
-    &lt;<span style="color:#000080;font-weight:bold">p</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;summary caps&#34;</span>&gt;$10.99/month after. Cancel anytime.&lt;/<span style="color:#000080;font-weight:bold">p</span>&gt;
-  &lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;
-  &lt;<span style="color:#000080;font-weight:bold">a</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;button white&#34;</span>&gt;start today&lt;/<span style="color:#000080;font-weight:bold">a</span>&gt;
-&lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;</code></pre></div>
-<h4 id="primary-example">Primary Example</h4>
-<div class="example">
-<div class="dsp-offer primary paper package impact" style="--image: url(https://media.mcclatchy.com/creatives/subscription-offer-page-images/markets/Miami/1.jpg);">
-  <h2 class="h1 offer-title">Unlimited Digital Access</h2>
-  <div class="package">
-    <p class="h4 offer-price">$1.99 for one month</p>
-    <p class="summary caps">$10.99/month after. Cancel anytime.</p>
-  </div>
-  <a class="button big promo-light">start today</a>
-</div>
-</div>
-<h4 id="primary-html">Primary HTML</h4>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;dsp-offer primary paper package impact&#34;</span> <span style="color:#f00">style</span>=<span style="color:#00f">&#34;--image: url(https://media.mcclatchy.com/creatives/subscription-offer-page-images/markets/Miami/1.jpg);&#34;</span>&gt;
-  &lt;<span style="color:#000080;font-weight:bold">h2</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;h1 offer-title&#34;</span>&gt;Unlimited Digital Access&lt;/<span style="color:#000080;font-weight:bold">h2</span>&gt;
-  &lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;package&#34;</span>&gt;
-    &lt;<span style="color:#000080;font-weight:bold">p</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;h4 offer-price&#34;</span>&gt;$1.99 for one month&lt;/<span style="color:#000080;font-weight:bold">p</span>&gt;
-    &lt;<span style="color:#000080;font-weight:bold">p</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;summary caps&#34;</span>&gt;$10.99/month after. Cancel anytime.&lt;/<span style="color:#000080;font-weight:bold">p</span>&gt;
-  &lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;
-  &lt;<span style="color:#000080;font-weight:bold">a</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;button big promo-light&#34;</span>&gt;start today&lt;/<span style="color:#000080;font-weight:bold">a</span>&gt;
-&lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;</code></pre></div>
-<h4 id="secondary-example">Secondary Example</h4>
-<div class="example grid" style="--columns: repeat(auto-fit, 400px);">
-  
-<div class="dsp-offer secondary paper package" style="--image: url(https://media.mcclatchy.com/creatives/subscription-offer-page-images/sports/football.jpg)">
-  <h3 class="h2 offer-title">Sports Pass™</h3>
-  <div class="package">
-    <p class="summary caps bold">$XXX FOR ONE YEAR</p>
-    <p class="summary caps">$XXX/YEAR AFTER. CANCEL ANYTIME.</p>
-  </div>
-  <a class="button impact">start today</a>
-</div>
+<div class="">
+  <div class="dsp-offer">
+     </div>
 
-  
-<div class="dsp-offer secondary paper package" style="--image: url(https://media.mcclatchy.com/creatives/subscription-offer-page-images/politics/dome.jpg)">
-  <h3 class="h2 offer-title">Impact2020</h3>
-  <div class="package">
-    <p class="summary caps bold">$XXX FOR ONE YEAR</p>
-    <p class="summary caps">$XXX/YEAR AFTER. CANCEL ANYTIME.</p>
-  </div>
-  <a class="button impact">start today</a>
-</div>
+#### Paywall HTML
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;&#34;</span>&gt;
+  &lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;dsp-offer&#34;</span>&gt;
+     
+ &lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;
+&lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;
 
-</div>
-<h4 id="secondary-html">Secondary HTML</h4>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;dsp-offer secondary paper package&#34;</span> <span style="color:#f00">style</span>=<span style="color:#00f">&#34;--image: url(https://media.mcclatchy.com/creatives/subscription-offer-page-images/sports/football.jpg)&#34;</span>&gt;
-  &lt;<span style="color:#000080;font-weight:bold">h3</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;h2 offer-title&#34;</span>&gt;Sports Pass™&lt;/<span style="color:#000080;font-weight:bold">h3</span>&gt;
-  &lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;package&#34;</span>&gt;
-    &lt;<span style="color:#000080;font-weight:bold">p</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;summary caps bold&#34;</span>&gt;$XXX FOR ONE YEAR&lt;/<span style="color:#000080;font-weight:bold">p</span>&gt;
-    &lt;<span style="color:#000080;font-weight:bold">p</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;summary caps&#34;</span>&gt;$XXX/YEAR AFTER. CANCEL ANYTIME.&lt;/<span style="color:#000080;font-weight:bold">p</span>&gt;
-  &lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;
-  &lt;<span style="color:#000080;font-weight:bold">a</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;button impact&#34;</span>&gt;start today&lt;/<span style="color:#000080;font-weight:bold">a</span>&gt;
-&lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;</code></pre></div>
-<h4 id="tertiary-offers">Tertiary offers</h4>
-<div class="example grid" style="grid-template-columns: repeat(auto-fit, 400px);">
-  
-<div class="dsp-offer tertiary paper package">
-  <p class="h2 sans offer-title">Subscribe with Google</p>
-  <p class="summary">Get the same Unlimited Digital Access deal as above, but let Google manage your subscription and billing.</p>
-  <div class="package">
-    <a class="button ghost">Subscribe with Google</a>
-    <p class="offer-terms">By subscribing, you are agreeing to the Miami Herald’s <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.</p>
-  </div>
-</div>
 
-  
-<div class="dsp-offer tertiary paper package">
-  <p class="h2">Home Delivery + Digital Access</p>
-  <p class="summary">Get the paper delivered to your door, plus Unlimited Digital Access.</p>
-  <a class="button impact">View Offers</a>
-  <div class="package">
-    <p class="h3 sans bold">Already a print subscriber?</p>
-    <a class="more-link">Activate digital access</a>
-  </div>
-</div>
+#### Primary Example
 
+&lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;example&#34;</span>&gt;</code></pre></div> </div>
 </div>
-<h4 id="tertiary-variant-a">Tertiary variant A</h4>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;dsp-offer tertiary paper package&#34;</span>&gt;
-  &lt;<span style="color:#000080;font-weight:bold">p</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;h2 sans offer-title&#34;</span>&gt;Subscribe with Google&lt;/<span style="color:#000080;font-weight:bold">p</span>&gt;
-  &lt;<span style="color:#000080;font-weight:bold">p</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;summary&#34;</span>&gt;Get the same Unlimited Digital Access deal as above, but let Google manage your subscription and billing.&lt;/<span style="color:#000080;font-weight:bold">p</span>&gt;
-  &lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;package&#34;</span>&gt;
-    &lt;<span style="color:#000080;font-weight:bold">a</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;button ghost&#34;</span>&gt;Subscribe with Google&lt;/<span style="color:#000080;font-weight:bold">a</span>&gt;
-    &lt;<span style="color:#000080;font-weight:bold">p</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;offer-terms&#34;</span>&gt;By subscribing, you are agreeing to the Miami Herald’s &lt;<span style="color:#000080;font-weight:bold">a</span> <span style="color:#f00">href</span>=<span style="color:#00f">&#34;#&#34;</span>&gt;Terms of Service&lt;/<span style="color:#000080;font-weight:bold">a</span>&gt; and &lt;<span style="color:#000080;font-weight:bold">a</span> <span style="color:#f00">href</span>=<span style="color:#00f">&#34;#&#34;</span>&gt;Privacy Policy&lt;/<span style="color:#000080;font-weight:bold">a</span>&gt;.&lt;/<span style="color:#000080;font-weight:bold">p</span>&gt;
-  &lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;
-&lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;</code></pre></div>
-<h4 id="tertiary-variant-b">Tertiary variant B</h4>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;dsp-offer tertiary paper package&#34;</span>&gt;
-  &lt;<span style="color:#000080;font-weight:bold">p</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;h2&#34;</span>&gt;Home Delivery + Digital Access&lt;/<span style="color:#000080;font-weight:bold">p</span>&gt;
-  &lt;<span style="color:#000080;font-weight:bold">p</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;summary&#34;</span>&gt;Get the paper delivered to your door, plus Unlimited Digital Access.&lt;/<span style="color:#000080;font-weight:bold">p</span>&gt;
-  &lt;<span style="color:#000080;font-weight:bold">a</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;button impact&#34;</span>&gt;View Offers&lt;/<span style="color:#000080;font-weight:bold">a</span>&gt;
-  &lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;package&#34;</span>&gt;
-    &lt;<span style="color:#000080;font-weight:bold">p</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;h3 sans bold&#34;</span>&gt;Already a print subscriber?&lt;/<span style="color:#000080;font-weight:bold">p</span>&gt;
-    &lt;<span style="color:#000080;font-weight:bold">a</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;more-link&#34;</span>&gt;Activate digital access&lt;/<span style="color:#000080;font-weight:bold">a</span>&gt;
-  &lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;
-&lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;</code></pre></div>
 
   </div>
 
