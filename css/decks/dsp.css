@@ -100,6 +100,12 @@ section.dsp {
   align-items: center;
 }
 
+.subscription-offers [class*=promo] .dsp-offer .h1 {
+  min-height: 2.2em;
+  display: flex;
+  align-items: center;
+}
+
 /**
  * Review Order
  */
