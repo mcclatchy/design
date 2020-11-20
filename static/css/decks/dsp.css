@@ -47,6 +47,20 @@ section.dsp {
   grid-column: 1/-1;
 }
 
+.paywall-offer .dsp-offer {
+  grid-gap: 20px;
+}
+
+.paywall-offer .dsp-offer .bold {
+  font: 700 19px/28px var(--sans);
+}
+
+@media (min-width: 900px) {
+  .paywall-offer .h1 {
+    font-size: 48px;
+  }
+}
+
 /**
  * My account page
  */
@@ -65,6 +79,25 @@ section.dsp {
   --tf: var(--sans);
   --hf: var(--sans);
   --hw: 700;
+}
+
+.subscription-offers .redeem-code {
+  max-width: 400px;
+  margin: 0 auto;
+  align-items: center;
+  --ps: 30px;
+  --hf: var(--sans);
+  --hw: bold;
+}
+
+.subscription-offers form {
+  align-self: stretch;
+  text-align: left;
+}
+
+.subscription-offers .bottom-links {
+  --ps: 15px;
+  align-items: center;
 }
 
 /**
@@ -105,39 +138,6 @@ section.dsp {
   --ps: 15px;
   --hf: var(--sans);
   --hw: 700;
-}
-.subscription-offers h2 {
-  text-align: center;
-}
-
-.subscription-offers > .grid {
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
-
-.subscription-offers .package {
-  --ps: 5px;
-  flex: none;
-  align-items: center;
-  text-align: center;
-}
-
-.subscription-offers .redeem-code {
-  max-width: 400px;
-  margin: 0 auto;
-  align-items: center;
-  --ps: 30px;
-  --hf: var(--sans);
-  --hw: bold;
-}
-
-.subscription-offers form {
-  align-self: stretch;
-  text-align: left;
-}
-
-.subscription-offers .bottom-links {
-  --ps: 15px;
 }
 
 /**

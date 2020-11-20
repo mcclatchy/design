@@ -5,69 +5,112 @@
 .dsp-offer {
   --hf: var(--serif);
   --ht: none;
+  --hw: bold;
+  --ts: 0.875rem;
+  --tf: var(--sans);
+  --ps: 5px;
+  --padding: 0px;
+  --lc: var(--blue);
+  --lhc: var(--blue);
+  position: relative;
   display: grid;
   grid-gap: 10px;
-  padding: 0px 15px 30px;
-  text-align: center;
+  padding: 30px;
   justify-items: center;
+  text-align: center;
+  align-self: flex-start;
+}
+
+.dsp-offer > * {
+  margin: 0;
 }
 
 .dsp-offer .package {
-  --ps: 5px;
-  padding: 0;
+  --hw: bold;
   align-items: center;
 }
 
-.dsp-offer .h1 {
-  font-size: 40px;
+.dsp-offer li {
+  --tc: var(--gray);
+  margin: 5px 0;
+  list-style: disc inside;
 }
-
-.dsp-offer .label *{
-    color: var(--dark); 
-}
-
-.dsp-offer .offer-price {
-    font: 700 19px/28px var(--sans);
-}       
 
 .dsp-offer .summary {
-  margin: 0;
   opacity: 0.8;
+}
+
+.dsp-offer .terms {
+  font-size: 0.75rem;
+  color: var(--gray);
 }
 
 .dsp-offer .button {
   align-self: unset;
 }
 
-.dsp-offer .offer-terms {
-  color: var(--tc, #707070);
-  font: 400 0.75rem/1.2em var(--sans);
-  --lc: #5169B8;
-  max-width: 300px;
-}
+/**
+ * Horizontal Nissan Cube version
+ */
 
-@media (min-width: 900px) {  
-  .dsp-offer .h1 {
-    font-size: 48px;
+@media (min-width: 660px) {
+  .dsp-offer.horizontal {
+    display: grid;
+    grid-template-columns: auto;
+    padding: 30px;
+    justify-items: start;
+    text-align: left;
+    align-self: unset;
   }
- 
+
+  .dsp-offer.horizontal > * {
+    grid-column: 1;
+  }
+
+  .dsp-offer.horizontal .package {
+    align-items: start;
+    text-align: left;
+  }
+
+  .dsp-offer.horizontal > .button {
+    grid-column: 2;
+    grid-row: 1/span 2;
+    align-self: center;
+    justify-self: end;
+  }
+
+  .dsp-offer-label {
+    padding-left: 30px;
+    justify-content: start;
+  }
 }
 
 /**
- * Alternate versions
+ * DSP separator
+ * This is a possible temp holding area
  */
 
-.primary {
-  padding: 80px 15px;
-  background-image: linear-gradient(90deg, rgba(55,55,55,.7), rgba(55,55,55,.99) 50%,rgba(55,55,55,.7) 100%), var(--image);
-  background-size: cover;
-  background-position: 50% 20%;
+.separator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px 0;
+  position: relative;
 }
 
-.secondary {
-  --hw: 400;
-  background-image: linear-gradient(90deg, rgba(255,255,255,.7), rgba(255,255,255,.99) 50%,rgba(255,255,255,.7) 100%), var(--image);
-  background-size: cover;
-  background-position: 50% 20%;
-  padding: 30px 15px;
+.separator > span {
+  margin: 0;
+  padding: 0 15px;
+  position: relative;
+  background-color: var(--body-background);
+}
+
+.separator:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--blue);
+  position: absolute;
+  top: calc(50% - 1px);
 }

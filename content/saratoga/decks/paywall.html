@@ -24,30 +24,31 @@ body {
 
 <section class="paywall">
   {{< dsp/page-title >}}
-  {{< dsp/offer>}}
+
+  <div class="card paywall-offer">
+    {{< dsp/offer color="promo" label="MONTHLY" button="START TODAY" />}}
+  </div>
 
   <div>
-    <p class="expander paywall-expander" onclick="this.classList.toggle('open')">SHOW DETAILS AND OPTIONS</p>
+    <p class="expander paywall-expander open" onclick="this.classList.toggle('open')">SHOW DETAILS AND OPTIONS</p>
 
     <div class="paywall-details grid">
       {{< dsp/offer-details >}}
 
-      <div class="swg-details card paywall-offer">
-        <span class="label"><h5>MONTHLY OR YEARLY</h5></span>
-        <div class="package">
+      <div class="card">
+        {{< dsp/offer label="MONTHLY OR YEARLY" button="/img/swg-button.png" button-width="218" >}}
           <h2 class="h1">Subscribe with Google</h2>
-          <p class="gray">Choose from the same monthly or yearly Unlimited Digital Access deals, but use your Google account to manage your subscription and billing.</p>
-          <p class="small gray">By subscribing, you are agreeing to the Miami Herald's <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.</p>
-          <img src="/img/swg-button.png" width="218">
-        </div>
+          <p>Choose from the same monthly or yearly Unlimited Digital Access deals, but use your Google account to manage your subscription and billing.</p>
+          <p class="terms">By subscribing, you are agreeing to the Miami Herald's <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.</p>
+        {{</ dsp/offer >}}
       </div>
 
-      <div class="card paywall-offer">
-        <div class="package">
+      <div class="card" style="align-self: start;">
+        {{< dsp/offer label="" >}}
           <p class="bold">Looking for more subscription options?</p>
           <p class="gray">Technically this card can be about anything. Gives us some options to promote a link off to something else.</p>
-          <a class="more-link" href="#">CHECK OUT ALL OF OUR OFFERS</a>
-        </div>
+          <a class="more-link blue" href="#">CHECK OUT ALL OF OUR OFFERS</a>
+        {{</ dsp/offer >}}
       </div>
     </div>
   </div>

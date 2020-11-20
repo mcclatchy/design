@@ -1,71 +1,61 @@
 {{- $type := default "default" (.Get "type") }}
 
 {{- if eq $type "default" }}
-<div class="dsp-offer paper package promo">
+<div class="{{ .Get "color" }}">
+  {{ with .Get "label" -}}
   <div class="label">
-     <h5>MONTHLY</h5>
+    <span class="h5">{{.}}</span>
   </div>
-  <h2 class="h1 offer-title">Unlimited Digital Access</h2>
-  <div class="package">
-    <p class="h4 offer-price">$1.99 for one month</p>
-    <p class="summary caps">$10.99/month after. Cancel anytime.</p>
-  </div>
-  <a class="button white">start today</a>
-</div>
-{{- end }}
+  {{ end -}}
+  <div class="dsp-offer">
+    {{ with .Inner }} {{.}} {{ else -}}
+    <h3 class="h1">Unlimited Digital Access</h3>
+    <div class="package">
+      <p class="bold">$1.99 FOR ONE MONTH</p>
+      <p class="summary">$10.99/MONTH AFTER. CANCEL ANYTIME.</p>
+    </div>
+    {{ end -}}
 
-{{- if eq $type "primary" }}
-<div class="dsp-offer primary paper package impact" style="--image: url(https://media.mcclatchy.com/creatives/subscription-offer-page-images/markets/Miami/1.jpg);">
-  <h2 class="h1 offer-title">Unlimited Digital Access</h2>
-  <div class="package">
-    <p class="h4 offer-price">$1.99 for one month</p>
-    <p class="summary caps">$10.99/month after. Cancel anytime.</p>
-  </div>
-  <a class="button big promo-light">start today</a>
-</div>
-{{- end }}
-
-{{- if eq $type "secondary" }}
-<div class="dsp-offer secondary paper package" style="--image: url(https://media.mcclatchy.com/creatives/subscription-offer-page-images/sports/football.jpg)">
-  <h3 class="h2 offer-title">Sports Pass™</h3>
-  <div class="package">
-    <p class="summary caps bold">$XXX FOR ONE YEAR</p>
-    <p class="summary caps">$XXX/YEAR AFTER. CANCEL ANYTIME.</p>
-  </div>
-  <a class="button impact">start today</a>
-</div>
-{{- end }}
-
-{{- if eq $type "secondary-b" }}
-<div class="dsp-offer secondary paper package" style="--image: url(https://media.mcclatchy.com/creatives/subscription-offer-page-images/politics/dome.jpg)">
-  <h3 class="h2 offer-title">Impact2020</h3>
-  <div class="package">
-    <p class="summary caps bold">$XXX FOR ONE YEAR</p>
-    <p class="summary caps">$XXX/YEAR AFTER. CANCEL ANYTIME.</p>
-  </div>
-  <a class="button impact">start today</a>
-</div>
-{{- end }}
-
-{{- if eq $type "tertiary-a" }}
-<div class="dsp-offer tertiary paper package">
-  <p class="h2 sans offer-title">Subscribe with Google</p>
-  <p class="summary">Get the same Unlimited Digital Access deal as above, but let Google manage your subscription and billing.</p>
-  <div class="package">
-    <a class="button ghost">Subscribe with Google</a>
-    <p class="offer-terms">By subscribing, you are agreeing to the Miami Herald’s <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.</p>
+    {{ with .Get "button" -}}
+    {{ if (fileExists (printf "/static/%s" .)) -}}
+    <a class="button" href="#">
+      <img src="{{.}}" width="{{ $.Get "button-width" }}">
+    </a>
+    {{ else -}}
+    <a class="button" href="#">{{.}}</a>
+    {{ end }}{{ end -}}
   </div>
 </div>
 {{- end }}
 
-{{- if eq $type "tertiary-b" }}
-<div class="dsp-offer tertiary paper package">
-  <p class="h2">Home Delivery + Digital Access</p>
-  <p class="summary">Get the paper delivered to your door, plus Unlimited Digital Access.</p>
-  <a class="button impact">View Offers</a>
-  <div class="package">
-    <p class="h3 sans bold">Already a print subscriber?</p>
-    <a class="more-link">Activate digital access</a>
+{{- if eq $type "horizontal" }}
+<div class="card">
+  {{ with .Get "label" -}}
+  <div class="label dsp-offer-label">
+    <span class="h5">{{.}}</span>
+  </div>
+  {{ end -}}
+  <div class="dsp-offer horizontal">
+    <div class="package">
+      {{ with .Inner }} {{.}} {{ else -}}
+      <h3 class="h1">Unlimited Digital Access</h3>
+      <p><b>$90 FOR ONE YEAR |</b> <span class="gray">SAVE OVER 40% COMPARED TO MONTHLY</span></p>
+      <ul>
+        <li>Unlimited access to our website and our apps</li> 
+        <li>Additional content in the eEdition (digital replica of the newspaper)</li>
+        <li>Subscriber-only content and exclusive extras</li>
+      </ul>
+      {{ end -}}
+    </div>
+
+    {{ with .Get "button" -}}
+    {{ if (fileExists (printf "/static/%s" .)) -}}
+    <a class="button" href="#">
+      <img src="{{.}}" width="{{ $.Get "button-width" }}">
+    </a>
+    {{ else -}}
+    <a class="button promo-light" href="#">{{.}}</a>
+    {{ end }}{{ end -}}
   </div>
 </div>
 {{- end }}
