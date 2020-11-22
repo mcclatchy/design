@@ -51,73 +51,87 @@
 .dsp-offer {
   --hf:var(--serif);
   --ht:none;
-  display: grid;
-  grid-gap: 10px;
-  padding: 0px 15px 30px;
-  text-align: center;
-  justify-items: center;
-}
-
-.dsp-offer .package {
+  --hw:bold;
+  --ts: 0.875rem;
+  --tf:var(--sans);
   --ps: 5px;
-  padding: 0;
-  align-items: center;
+  --pa:center;
+  --padding: 0px;
+  --lc:var(--blue);
+  --lhc:var(--blue);
+  position: relative;
+  display: grid;
+  grid-gap: 15px;
+  padding: 30px;
+  justify-items: center;
+  text-align: center;
 }
 
-.dsp-offer .h1 {
-  font-size: 40px;
+.dsp-offer > * {
+  margin: 0;
 }
 
-.dsp-offer .label * {
-  color: var(--dark);
-}
-
-.dsp-offer .offer-price {
-  font: 700 19px/28px var(--sans);
+.dsp-offer li {
+  --tc:var(--gray);
+  margin: 5px 0;
+  list-style: disc inside;
 }
 
 .dsp-offer .summary {
-  margin: 0;
   opacity: 0.8;
+}
+
+.dsp-offer .terms {
+  font-size: 0.75rem;
+  color: var(--gray);
 }
 
 .dsp-offer .button {
   align-self: unset;
 }
 
-.dsp-offer .offer-terms {
-  color: var(--tc, #707070);
-  font: 400 0.75rem/1.2em var(--sans);
-  --lc: #5169B8;
-  max-width: 300px;
-}
+/**
+ * Horizontal Nissan Cube version
+ */
+@media (min-width: 660px) {
+  .dsp-offer.horizontal {
+    --pa:start;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    padding: 30px;
+    justify-items: start;
+    text-align: left;
+    align-self: unset;
+  }
 
-@media (min-width: 900px) {
-  .dsp-offer .h1 {
-    font-size: 48px;
+  .dsp-offer.horizontal > * {
+    grid-column: 1;
+  }
+
+  .dsp-offer.horizontal > .button {
+    grid-column: 2;
+    grid-row: 1/-1;
+    align-self: center;
+    justify-self: end;
+  }
+
+  .dsp-offer-label {
+    padding-left: 30px;
+    justify-content: start;
   }
 }
 /**
- * Alternate versions
- */
-.primary {
-  padding: 80px 15px;
-  background-image: linear-gradient(90deg, rgba(55, 55, 55, 0.7), rgba(55, 55, 55, 0.99) 50%, rgba(55, 55, 55, 0.7) 100%), var(--image);
-  background-size: cover;
-  background-position: 50% 20%;
-}
-
-.secondary {
-  --hw: 400;
-  background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.99) 50%, rgba(255, 255, 255, 0.7) 100%), var(--image);
-  background-size: cover;
-  background-position: 50% 20%;
-  padding: 30px 15px;
-}
-
-/**
  * offer details card
  */
+.offer-details {
+  padding: var(--padding, 30px);
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+}
+
+.swg-details .small {
+  font-size: 0.7rem;
+}
+
 .paywall-offer {
   --ts: 0.875rem;
   --tf:var(--sans);
@@ -135,15 +149,6 @@
 
 .paywall-offer .more-link {
   --tc:var(--blue);
-}
-
-.offer-details {
-  padding: var(--padding, 30px);
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-}
-
-.swg-details .small {
-  font-size: 0.7rem;
 }
 
 .account-header {
@@ -311,6 +316,7 @@ section.dsp {
 .paywall {
   --section-width: 900px;
   text-align: center;
+  padding-bottom: 30px;
 }
 
 .paywall .page-title {
@@ -328,6 +334,19 @@ section.dsp {
   grid-column: 1/-1;
 }
 
+.paywall-offer .dsp-offer {
+  grid-gap: 20px;
+}
+
+.paywall-offer .dsp-offer .bold {
+  font: 700 19px/28px var(--sans);
+}
+
+@media (min-width: 900px) {
+  .paywall-offer .h1 {
+    font-size: 48px;
+  }
+}
 /**
  * My account page
  */
@@ -346,6 +365,72 @@ section.dsp {
   --hw: 700;
 }
 
+.subscription-offers .redeem-code {
+  max-width: 400px;
+  margin: 0 auto;
+  align-items: center;
+  --ps: 30px;
+  --hf:var(--sans);
+  --hw:bold;
+}
+
+.subscription-offers form {
+  align-self: stretch;
+  text-align: left;
+}
+
+.subscription-offers .bottom-links {
+  --ps: 15px;
+  align-items: center;
+}
+
+/* This won't hold up for long */
+@media (min-width: 660px) {
+  .subscription-offers [class*=promo] .dsp-offer .h1 {
+    min-height: 2.2em;
+    display: flex;
+    align-items: center;
+  }
+}
+/* Hero at the top of the sub offer page */
+.dsp-hero {
+  --tc:white;
+  --pa:center;
+  --padding: 60px 30px;
+  min-height: 320px;
+  position: relative;
+  overflow: visible;
+  text-align: center;
+}
+
+.dsp-hero img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  object-position: 50% 70%;
+  filter: brightness(0.7);
+}
+
+.dsp-hero .h1 {
+  font-size: 38px;
+}
+
+.dsp-hero .h2 {
+  font-size: 20px;
+}
+
+@media (min-width: 990px) {
+  .dsp-hero .h1 {
+    font-size: 52px;
+  }
+
+  .dsp-hero .h2 {
+    font-size: 24px;
+  }
+}
 /**
  * Review Order
  */
@@ -383,40 +468,6 @@ section.dsp {
   --ps: 15px;
   --hf:var(--sans);
   --hw: 700;
-}
-
-.subscription-offers h2 {
-  text-align: center;
-}
-
-.subscription-offers > .grid {
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
-
-.subscription-offers .package {
-  --ps: 5px;
-  flex: none;
-  align-items: center;
-  text-align: center;
-}
-
-.subscription-offers .redeem-code {
-  max-width: 400px;
-  margin: 0 auto;
-  align-items: center;
-  --ps: 30px;
-  --hf:var(--sans);
-  --hw:bold;
-}
-
-.subscription-offers form {
-  align-self: stretch;
-  text-align: left;
-}
-
-.subscription-offers .bottom-links {
-  --ps: 15px;
 }
 
 /**

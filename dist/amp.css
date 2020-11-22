@@ -24,6 +24,7 @@
   --dark: #222222;
   --gray: #707070;
   --blue: #31409F;
+  --body-background: #f4f4f4;
   /**
    * Color variables and text size set at the atomic level
    *
@@ -42,7 +43,7 @@ html {
 body {
   position: relative;
   margin: 0;
-  background-color: #f4f4f4;
+  background-color: var(--body-background);
 }
 
 body.freeze {
@@ -583,6 +584,10 @@ button:hover,
   border-radius: 1.5em;
 }
 
+.button.flush {
+  padding: 0;
+}
+
 /**
  * Paper 
  */
@@ -722,7 +727,7 @@ button:hover,
   display: flex;
   flex-direction: column;
   flex: 1 1 auto;
-  align-items: flex-start;
+  align-items: var(--pa, flex-start);
   color: var(--tc);
   --hf:var(--serif);
   --hw: 400;
