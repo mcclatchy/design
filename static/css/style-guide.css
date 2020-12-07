@@ -119,7 +119,7 @@ td:first-child {
 }
 
 .list .package.eds-active p.summary {
-  --tc: white;
+  color: #fff;
 }
 
 .list .new:after {
