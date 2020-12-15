@@ -45,8 +45,8 @@ td:first-child {
 .example.shadow .paper,
 .example.shadow > .card,
 .paper.shadow {
-  box-shadow: 
-    0 1px 2px 0 rgba(0, 0, 0, .2), 
+  box-shadow:
+    0 1px 2px 0 rgba(0, 0, 0, .2),
     0 1px 5px 0 rgba(0, 0, 0, .13);
 }
 
@@ -116,6 +116,10 @@ td:first-child {
 
 .list a.eds-active {
   color: #31409F;
+}
+
+.list .package.eds-active p.summary {
+  --tc: white;
 }
 
 .list .new:after {

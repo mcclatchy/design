@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Newsletter | Dynamic</title>
+    <title>fine print</title>
     
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -102,48 +102,43 @@
     </div>
 <div class="panels">
   <div class="paper story-body details">
-    <h2 class="page-header">Newsletter | Dynamic
+    <h2 class="page-header">fine print
     </h2>
-    <p>This newsletter template is made up of different molecules and organisms that are triggered based upon the content.</p>
-<div class="note">The HTML for molecules and organisms in this template can be used as-is if needed, but if an update needs to be made to the live dynamic newsletter template, the AM team will need to be involved.</div>
-<p>The example shows all of the possible molecules and organisms in one template.</p>
-<p><a class="button big promo" style="margin-bottom:24px;" href="#">Get HTML</a></p>
-<h3 id="example">example</h3>
-<div class="example">
-coming soon
-		<newsletter-digest></newsletter-digest>
-</div>
-<script type="text/javascript">
-class NewsletterDigest extends HTMLElement {
-	get template() {
-		let t = document.createElement("template");
-		t.innerHTML = `
-		<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-		<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400&family=Noto+Serif:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-			<style>
-				@import url( '/css/email/eds.css' )
-			</style>
-<pre><code>    &lt;/head&gt;
-    &lt;body&gt;
-
-    &lt;/body&gt;
-    `;
-    return t;   
-}
-constructor() {
-    super();
-}
-connectedCallback() {
-    let clone = this.template.content.cloneNode(true);
-    this.attachShadow({ mode: &quot;open&quot; });
-    this.shadowRoot.appendChild(clone);
-}
-</code></pre>
-<p>} // end Class
-customElements.define(&ldquo;newsletter-digest&rdquo;, NewsletterDigest);
-</script></p>
+    <p>This is primarily used in the footer and for trademark notices.</p>
+<h3 id="example">EXAMPLE</h3>
+<p><span style="font-family: 'Noto Sans', Tahoma, Arial, sans-serif;font-weight: 400;color: #525252;font-size: 11px;line-height: 16px;">Mistletoe dungeons expecto patronum floo powder duel.</span>
+<br><br></p>
+<h3 id="specifications">SPECIFICATIONS</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Font Stack</td>
+<td>&lsquo;Noto Sans&rsquo;, Tahoma, sans-serif;</td>
+</tr>
+<tr>
+<td>Font Size</td>
+<td>11px</td>
+</tr>
+<tr>
+<td>Line Height</td>
+<td>16px</td>
+</tr>
+<tr>
+<td>Font Weight</td>
+<td>400</td>
+</tr>
+<tr>
+<td>Color</td>
+<td>#525252</td>
+</tr>
+</tbody>
+</table>
 
   </div>
 
@@ -222,7 +217,7 @@ customElements.define(&ldquo;newsletter-digest&rdquo;, NewsletterDigest);
 			
 			
 			<h5 class="sans bold ">
-				<a href="https://mcclatchy.github.io/design/email/atoms/footer-text/" class="">footer text/fine print</a>
+				<a href="https://mcclatchy.github.io/design/email/atoms/fine-print/" class="eds-active">fine print</a>
 			</h5>
 			
 			
@@ -374,25 +369,9 @@ customElements.define(&ldquo;newsletter-digest&rdquo;, NewsletterDigest);
 		
 		<div class="package">
 			<h4 class="sans bold">
-				<a class="" href="https://mcclatchy.github.io/design/email/templates/newsletter-digest/">Newsletter | Digest</a>
+				<a class="" href="https://mcclatchy.github.io/design/email/templates/newsletter/">Newsletter</a>
 			</h4>
-			<p class="summary">email template for digest newsletters</p>
-		</div>
-		
-		
-		<div class="package eds-active">
-			<h4 class="sans bold">
-				<a class="" href="https://mcclatchy.github.io/design/email/templates/newsletter-dynamic/">Newsletter | Dynamic</a>
-			</h4>
-			<p class="summary">email template for dynamic newsletters</p>
-		</div>
-		
-		
-		<div class="package">
-			<h4 class="sans bold">
-				<a class="" href="https://mcclatchy.github.io/design/email/templates/newsletter-long-form/">Newsletter | Long-Form</a>
-			</h4>
-			<p class="summary">email template for long-form newsletters</p>
+			<p class="summary">email template for newsletters</p>
 		</div>
 		
 	</div>

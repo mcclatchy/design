@@ -47,7 +47,7 @@ class EdsAppMolecule extends HTMLElement {
       <!-- // BODY TABLE -->
     </center>
 		`;
-		return t;   
+		return t;
 	}
 	constructor() {
 		super();
@@ -115,7 +115,7 @@ class EdsBasicMolecule extends HTMLElement {
       <!-- // BODY TABLE -->
     </center>
 		`;
-		return t;   
+		return t;
 	}
 	constructor() {
 		super();
@@ -176,4 +176,3 @@ class EdsButtons extends HTMLElement {
 	}
 } // end Class
 customElements.define("eds-buttons", EdsButtons);
-

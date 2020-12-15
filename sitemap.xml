@@ -145,6 +145,10 @@
   </url>
   
   <url>
+    <loc>https://mcclatchy.github.io/design/email/atoms/fine-print/</loc>
+  </url>
+  
+  <url>
     <loc>https://mcclatchy.github.io/design/saratoga/flag/</loc>
   </url>
   
@@ -154,10 +158,6 @@
   
   <url>
     <loc>https://mcclatchy.github.io/design/saratoga/footer/</loc>
-  </url>
-  
-  <url>
-    <loc>https://mcclatchy.github.io/design/email/atoms/footer-text/</loc>
   </url>
   
   <url>
@@ -313,15 +313,7 @@
   </url>
   
   <url>
-    <loc>https://mcclatchy.github.io/design/email/templates/newsletter-digest/</loc>
-  </url>
-  
-  <url>
-    <loc>https://mcclatchy.github.io/design/email/templates/newsletter-dynamic/</loc>
-  </url>
-  
-  <url>
-    <loc>https://mcclatchy.github.io/design/email/templates/newsletter-long-form/</loc>
+    <loc>https://mcclatchy.github.io/design/email/templates/newsletter/</loc>
   </url>
   
   <url>
