@@ -58,7 +58,7 @@ class UWNourish extends HTMLElement {
       }
     </style>
 
-    <img class="uw-logo" src="http://localhost:1313/uw-logo.svg">
+    <img class="uw-logo" src="https://media.mcclatchy.com/hi/united-way/uw-logo.svg">
     <h1>${ this.title }</h1>
     <slot>
       <p>Help us fight hunger in our community this holiday season.</p>
