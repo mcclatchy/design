@@ -17,10 +17,9 @@ In order for Adobe Campaign to properly track any URLs in its tables, the URLs h
 <%@ include view='mccDynamicHeader' %>
 ```
 
-#### FOOTER
+#### FOOTERS
 ```
-<%@ include view='mccDynamicFooterLeftAligned' %>
-<%@ include view='mccDynamicFooterFlexibleWidth' %>
+<%@ include view='footer_marketing' %>
 <%@ include view='mccFooterNoSocial' %>
 ```
 
