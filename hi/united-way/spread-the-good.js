@@ -28,6 +28,10 @@ class SpreadTheGood extends HTMLElement {
         width: 125px;
       }
 
+      .uw-logo[hidden] {
+        display: none;
+      }
+
       h1 {
         font: 200 46px/.95em var(--serif);
         color: #444;
@@ -75,6 +79,7 @@ class SpreadTheGood extends HTMLElement {
     super();
     this.attachShadow({ mode: 'open' });
     this.shadowRoot.appendChild(this.template.content.cloneNode(true));
+    this.shadowRoot.querySelector(".uw-logo").addEventListener("error", this.handleMissingImage);
   }
 
   connectedCallback() {
@@ -102,6 +107,10 @@ class SpreadTheGood extends HTMLElement {
   get logo() {
     let marketLogo = `https://media.mcclatchy.com/hi/united-way/logos/${pageInfo["marketInfo.domain"]}.jpg`;
     return this.getAttribute("logo") || marketLogo;
+  }
+
+  handleMissingImage(e) {
+    e.target.hidden = true;
   }
 }
 
