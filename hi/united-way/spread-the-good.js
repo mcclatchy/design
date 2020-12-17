@@ -66,7 +66,7 @@ class SpreadTheGood extends HTMLElement {
       <p>Please make a donation to our local United Way to support our neighbors in need.</p>
       <p>Let's rise together.</p>
     </slot>
-    <a class="button" href="${this.link}">I WANT TO HELP</a>
+    <a class="button" href="${this.link}">GIVE NOW</a>
     `;
     return t;
   }
@@ -100,7 +100,7 @@ class SpreadTheGood extends HTMLElement {
   }
 
   get logo() {
-    let marketLogo = `http://localhost:1313/united-way/logos/${pageInfo["marketInfo.domain"]}.jpg`
+    let marketLogo = `https://media.mcclatchy.com/hi/united-way/logos/${pageInfo["marketInfo.domain"]}.jpg`;
     return this.getAttribute("logo") || marketLogo;
   }
 }
