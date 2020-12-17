@@ -16,6 +16,7 @@ class BioGrid extends HTMLElement {
     <style>
       :host {
         display: block;
+        margin: 0 auto;
       }
 
       .window {
@@ -24,8 +25,12 @@ class BioGrid extends HTMLElement {
       }
 
       .grid {
-        height: 100%;
         display: grid;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
       }
 
       slot {
@@ -40,22 +45,25 @@ class BioGrid extends HTMLElement {
       }
 
       @media(orientation: landscape) {
-        .grid {
-          grid-template-columns: repeat(var(--columns), 1fr);
+        .window {
+          padding-top: 50%;
         }
 
-        :host(.freshcut) .grid .hl {
-          display: none;
+        .grid {
+          grid-template-columns: repeat(var(--columns), 1fr);
         }
       }
 
       @media(orientation: portrait) {
-        .grid {
-          grid-template-columns: repeat(var(--rows), 1fr);
+        .window {
+          height: 160vw;
+          max-height: 90vh;
         }
 
-        :host(.freshcut) .grid .hp {
-          display: none;
+        .grid {
+          grid-auto-flow: column;
+          grid-template-rows: repeat(var(--columns), 1fr);
+          grid-template-columns: unset;
         }
       }
     </style>
@@ -74,7 +82,7 @@ class BioGrid extends HTMLElement {
     super();
     this.attachShadow({ mode: "open" });
     this.shadowRoot.appendChild(this.template.content.cloneNode(true));
-    this._tick = 0;
+    this.tick = 0;
   }
 
   async connectedCallback() {
@@ -131,14 +139,9 @@ class BioGrid extends HTMLElement {
     }
 
     // Figure out the columns 
-    // I couldn't figure out a formula these numbers are random trial and error
     let sqrt = Math.sqrt(people.length);
     let columns = Math.ceil(sqrt / .75);
-    let rows = Math.ceil(sqrt / 1.25);
-
-    // Set the appropriate columns for landscape and portrait
     this.style.setProperty("--columns", columns);
-    this.style.setProperty("--rows", rows);
 
     // Here we go
     people.forEach((row) => {
@@ -150,18 +153,13 @@ class BioGrid extends HTMLElement {
 
     // Checks how many remainders we would have and adds the class to hide
     if(this.freshcut) {
-      let lWidows = grid.querySelectorAll(`:nth-last-child(-n + ${people.length % columns})`);
-      lWidows.forEach((ele) => { ele.classList.add("hl") });
-
-      let pWidows = grid.querySelectorAll(`:nth-last-child(-n + ${people.length % rows})`);
-      pWidows.forEach((ele) => { ele.classList.add("hp") });
-      
       this.classList.add("freshcut");
+      let widows = grid.querySelectorAll(`:nth-last-child(-n + ${people.length % columns})`);
+      widows.forEach((ele) => { ele.hidden = true });
     }
 
     // Store our elements randomly for timer
-    let children = this.shadowRoot.querySelectorAll("bio-grid-card");
-    this._random = this._shuffle(Array.from(children));
+    this.cards = this.shadowRoot.querySelectorAll("bio-grid-card:not([hidden])");
   }
 
   deselectAll() {
@@ -171,13 +169,13 @@ class BioGrid extends HTMLElement {
   }
 
   showNext() {
-    if(this._tick > this._random.length) {
-      this._tick = 0;
+    this.tick += 1;
+    if(this.tick > this.cards.length) {
+      this.tick = 0;
     }
 
     this.deselectAll();
-    this._random[this._tick].click();
-    this._tick += 1;
+    this.cards[this.tick].click();
   }
 
   _handleBioClick(e) {
@@ -188,11 +186,10 @@ class BioGrid extends HTMLElement {
     panel.render(e.detail, template);
     panel.play();
 
-    // Fill in the children
-    let dataPoints = this.querySelectorAll("[data-column]");
-    dataPoints.forEach((d) => {
-      d.textContent = e.detail[d.dataset.column];
-    });
+    let path = e.composedPath();
+    if(path && path[0]) {
+      this.tick = Array.from(this.cards).indexOf(path[0]);
+    }
   }
 
   _shuffle(array) {

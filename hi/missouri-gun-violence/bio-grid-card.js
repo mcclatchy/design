@@ -11,9 +11,12 @@ class BioGridCard extends HTMLElement {
       :host {
         display: block;
         position: relative;
-        padding-top: 100%;
         flex: 1;
         cursor: pointer;
+      }
+
+      :host([hidden]) {
+        display: none;
       }
 
       img {
