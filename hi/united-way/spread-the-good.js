@@ -105,7 +105,8 @@ class SpreadTheGood extends HTMLElement {
   }
 
   get logo() {
-    let marketLogo = `https://media.mcclatchy.com/hi/united-way/logos/${pageInfo["marketInfo.domain"]}.jpg`;
+    // let marketLogo = `https://media.mcclatchy.com/hi/united-way/logos/${pageInfo["marketInfo.domain"]}.jpg`;
+    let marketLogo = `http://localhost:1313/united-way/logos/${pageInfo["marketInfo.domain"]}.png`;
     return this.getAttribute("logo") || marketLogo;
   }
 
@@ -114,7 +115,7 @@ class SpreadTheGood extends HTMLElement {
   }
 }
 
-const links = [{"domain":"islandpacket","link":""},{"domain":"bnd","link":"https://helpingpeople.org/BND"},{"domain":"sunherald","link":"https://app.mobilecause.com/form/EzQDiw?vid=fdp3d"},{"domain":"idahostatesman","link":""},{"domain":"bradenton","link":"https://igfn.us/f/35fu/n"},{"domain":"charlotteobserver","link":""},{"domain":"ledger-enquirer","link":""},{"domain":"heraldsun","link":"https://www.unitedwaytriangle.org/mcclatchy-triangle-nc-food-insecurity/"},{"domain":"elnuevoherald","link":"https://portal.unitedwaymiami.org/SpreadGood"},{"domain":"kansascity","link":""},{"domain":"kentucky","link":"https://igfn.us/form/S4wykw"},{"domain":"macon","link":"https://www.unitedwaycg.org/civicrm/contribute/transact?reset=1\u0026id=1"},{"domain":"mercedsunstar","link":""},{"domain":"miamiherald","link":"https://portal.unitedwaymiami.org/SpreadGood"},{"domain":"modbee","link":"https://bit.ly/ModUW"},{"domain":"myrtlebeachonline","link":""},{"domain":"theolympian","link":""},{"domain":"newsobserver","link":"https://www.unitedwaytriangle.org/mcclatchy-triangle-nc-food-insecurity/"},{"domain":"sacbee","link":"https://bit.ly/3gY5WXl"},{"domain":"sanluisobispo","link":""},{"domain":"centredaily","link":"https://www.ccunitedway.org/civicrm/contribute/transact?reset=1\u0026id=92"},{"domain":"thenewstribune","link":""},{"domain":"tri-cityherald","link":""},{"domain":"kansas","link":"https://app.mobilecause.com/f/35f0/n?vid=fe8s6"}]
+const links = [{"domain":"islandpacket","link":""},{"domain":"bnd","link":"https://helpingpeople.org/BND"},{"domain":"sunherald","link":"https://app.mobilecause.com/form/EzQDiw?vid=fdp3d"},{"domain":"idahostatesman","link":""},{"domain":"bradenton","link":"https://igfn.us/f/35fu/n"},{"domain":"charlotteobserver","link":""},{"domain":"thestate","link":"https://bit.ly/2Wq2dIP"},{"domain":"ledger-enquirer","link":"https://bit.ly/38kpL7t"},{"domain":"heraldsun","link":"https://www.unitedwaytriangle.org/mcclatchy-triangle-nc-food-insecurity/"},{"domain":"elnuevoherald","link":"https://portal.unitedwaymiami.org/SpreadGood"},{"domain":"fresnobee","link":"https://www.uwfm.org/donate/"},{"domain":"kansascity","link":""},{"domain":"kentucky","link":"https://igfn.us/form/S4wykw"},{"domain":"macon","link":"https://bit.ly/2Wz375z"},{"domain":"mercedsunstar","link":""},{"domain":"miamiherald","link":"https://portal.unitedwaymiami.org/SpreadGood"},{"domain":"modbee","link":"https://bit.ly/ModUW"},{"domain":"myrtlebeachonline","link":""},{"domain":"theolympian","link":""},{"domain":"newsobserver","link":"https://bit.ly/3ny6nu6"},{"domain":"sacbee","link":"https://bit.ly/3gY5WXl"},{"domain":"sanluisobispo","link":"https://bit.ly/3rcy0ea"},{"domain":"centredaily","link":"https://bit.ly/3ra4Uwc"},{"domain":"thenewstribune","link":""},{"domain":"tri-cityherald","link":""},{"domain":"kansas","link":"https://www.unitedwayplains.org/food"}]
 
 // Define the element
 customElements.define("spread-the-good", SpreadTheGood);
