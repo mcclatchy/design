@@ -105,7 +105,7 @@ class SpreadTheGood extends HTMLElement {
   }
 
   get logo() {
-    let marketLogo = `https://media.mcclatchy.com/hi/united-way/logos/${pageInfo["marketInfo.domain"]}.jpg`;
+    let marketLogo = `https://media.mcclatchy.com/hi/united-way/logos/${pageInfo["marketInfo.domain"]}.png`;
     return this.getAttribute("logo") || marketLogo;
   }
 
