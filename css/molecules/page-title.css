@@ -21,3 +21,13 @@
   margin: 0;
   padding: 0;
 }
+
+.page-title .circle-icon {
+  clip-path: circle(22px)
+}
+
+.page-title .circle-icon svg {
+  display: block;
+  width: 24px;
+  padding: 10px;
+}
