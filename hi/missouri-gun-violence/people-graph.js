@@ -15,6 +15,9 @@ class PeopleGraph extends HTMLElement {
     <style>
     :host {
       display: block;
+    }
+
+    .window {
       position: relative;
       padding-top: 56.25%;
     }
@@ -23,19 +26,26 @@ class PeopleGraph extends HTMLElement {
       position: absolute;
       top: 0;
       left: 0;
-      width: 100%;
-      height: 100%;
+      max-width: 100%;
     }
 
-    @media(orientation: portrait) {
-      :host {
-        padding-top: 70%;
-      }
+    slot {
+      display: block;
+      max-width: var(--story-width);
+      margin: 15px auto;
+    }
+
+    slot::slotted(*) {
+      margin: 0 0 10px 0;
     }
     </style>
 
-    <canvas></canvas>
     <img hidden src="${this.icon}">
+    <slot name="above"></slot>
+    <div class="window">
+      <canvas></canvas>
+    </div>
+    <slot name="below"></slot>
     `;
     return t;
   }
@@ -57,6 +67,7 @@ class PeopleGraph extends HTMLElement {
   connectedCallback() {
     let img = this.shadowRoot.querySelector("img");
     img.addEventListener("load", this._handleImageReady);
+    this.hidden = false;
   }
 
   get icon() {
@@ -93,15 +104,14 @@ class PeopleGraph extends HTMLElement {
 
   render() {
     if(!this.ready) return;
-    console.log("rendering");
 
-    let bbox = this.getBoundingClientRect();
+    let bbox = this.shadowRoot.querySelector(".window").getBoundingClientRect();
     this.canvas.width = bbox.width * window.devicePixelRatio;
     this.canvas.height = bbox.height * window.devicePixelRatio;
 
     let img = this.shadowRoot.querySelector("img");
-    let size = this.fitToContainer(this.total, this.canvas.width, this.canvas.height, 9, 24); 
     let row = 0
+    let size = this.fitToContainer(this.total, this.canvas.width, this.canvas.height, 9, 24); 
     let max = Math.floor(this.canvas.width / size.width);
 
     for(let i = 0, t = this.total; i < t; i++) {
@@ -111,7 +121,9 @@ class PeopleGraph extends HTMLElement {
       let x = (size.width * mod);
       let y = (size.height * row);
 
-      if(!isNaN(this.highlight)) {
+      if(isNaN(this.highlight)) {
+        this.ctx.globalAlpha = 0.1;
+      } else {
         this.ctx.globalAlpha = i < this.highlight ? 1 : 0.1;
       }
 

@@ -13,7 +13,7 @@ class BioGridPanel extends HTMLElement {
       :host {
         display: flex;
         flex-direction: column;
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
         width: 100%;
@@ -144,6 +144,7 @@ class BioGridPanel extends HTMLElement {
 
   show() {
     this.classList.add("showing");
+    document.body.classList.add("freeze");
   }
 
   close(e) {
@@ -154,6 +155,7 @@ class BioGridPanel extends HTMLElement {
     this.dispatchEvent(ev);
     this.stop();
     this.classList.remove("showing");
+    document.body.classList.remove("freeze");
   }
 
   play() {

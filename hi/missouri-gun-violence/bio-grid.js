@@ -19,18 +19,8 @@ class BioGrid extends HTMLElement {
         margin: 0 auto;
       }
 
-      .window {
-        position: relative;
-        overflow: hidden;
-      }
-
       .grid {
         display: grid;
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
       }
 
       slot {
@@ -45,22 +35,15 @@ class BioGrid extends HTMLElement {
       }
 
       @media(orientation: landscape) {
-        .window {
-          padding-top: 50%;
-        }
-
         .grid {
+          height: 56.25vw;
           grid-template-columns: repeat(var(--columns), 1fr);
         }
       }
 
       @media(orientation: portrait) {
-        .window {
-          height: 160vw;
-          max-height: 90vh;
-        }
-
         .grid {
+          height: 170vw;
           grid-auto-flow: column;
           grid-template-rows: repeat(var(--columns), 1fr);
           grid-template-columns: unset;
@@ -69,11 +52,9 @@ class BioGrid extends HTMLElement {
     </style>
 
     <slot name="above"></slot>
-    <div class="window">
-      <div class="grid"></div>
-      <bio-grid-panel></bio-grid-panel>
-    </div>
+    <div class="grid"></div>
     <slot name="below"></slot>
+    <bio-grid-panel></bio-grid-panel>
     `;
     return t;
   }
@@ -86,6 +67,9 @@ class BioGrid extends HTMLElement {
   }
 
   async connectedCallback() {
+    // Loaded up show it if hidden
+    this.hidden = false;
+
     // Style the wrapper
     this.parentElement.classList.add("full-bleed");
 
@@ -98,9 +82,6 @@ class BioGrid extends HTMLElement {
     this.addEventListener("bio-click", this._handleBioClick);
     this.addEventListener("panel-close", this.deselectAll);
     this.addEventListener("panel-ready", this.showNext);
-
-    // Loaded up show it if hidden
-    this.hidden = false;
   }
 
   get src() {
@@ -125,10 +106,7 @@ class BioGrid extends HTMLElement {
 
   render(sheet) {
     const grid = this.shadowRoot.querySelector(".grid");
-
-    while(grid.firstChild) {
-      grid.firstChild.remove();
-    }
+    while(grid.firstChild) { grid.firstChild.remove(); }
 
     // Randomize if set
     let people = this.shuffle ? this._shuffle(sheet) : sheet;

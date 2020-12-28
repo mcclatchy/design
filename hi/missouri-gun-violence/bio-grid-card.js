@@ -9,7 +9,7 @@ class BioGridCard extends HTMLElement {
     t.innerHTML = `
     <style>
       :host {
-        display: block;
+        display: flex;
         position: relative;
         flex: 1;
         cursor: pointer;

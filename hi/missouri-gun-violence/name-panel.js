@@ -38,8 +38,10 @@ class NamePanel extends HTMLElement {
         transform: translateY(-.1em);
       }
 
-      span.faded {
-        color: #ddd;
+      span.faded,
+      span.faded:before,
+      span.faded + span:not(.faded):before {
+        opacity: 0.1;
       }
 
       slot {
