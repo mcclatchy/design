@@ -258,3 +258,16 @@ section.dsp {
   --bc: white;
   --bbc: transparent;
 }
+
+/**
+ * Regwall
+ */
+
+.regwall-grid {
+  --columns: 1fr 400px 1fr;
+  padding: 15px;
+}
+
+.regwall-grid > * {
+  grid-column: 2;
+}

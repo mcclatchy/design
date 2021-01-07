@@ -88,4 +88,5 @@ summary, .summary {
 
 .center-text {
   text-align: center;
+  --pa: center;
 }
