@@ -264,7 +264,8 @@ section.dsp {
  */
 
 .regwall-grid {
-  --columns: 1fr 400px 1fr;
+  --columns: 1fr minmax(auto, 400px) 1fr;
+  grid-column-gap: 0px;
   padding: 15px;
 }
 
