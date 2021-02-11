@@ -225,12 +225,12 @@ blockquote .attr {
   content: "\2794";
   padding-left: 4px;
   display: inline-block;
-  transform: scale(1.4) translateY(-.05em);
+  transform: translateY(-.05em);
   transition: transform .6s ease;
 }
 
 .more-link:hover:after {
-  transform: scale(1.4) translateY(-.05em) translateX(4px);
+  transform: translateY(-.05em) translateX(4px);
 }
 
 .dateline {
