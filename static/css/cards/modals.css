@@ -21,6 +21,7 @@
 	position: relative;
 	width: 100%;
 	max-width: var(--modal-width, 900px);
+  box-sizing: border-box;
 	margin: 15px auto;
 	pointer-events: auto;
 }
