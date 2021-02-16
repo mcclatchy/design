@@ -8,7 +8,7 @@ dist:
 release: dist
 	@[ $(v) ] || ( echo ">> v is not set"; exit 1 )
 	git add dist
-	sed -E -i .bak 's/([0-9]+\.){2}([0-9]+)/$(v)/' package.json
+	sed -E --in-place=.bak 's/([0-9]+\.){2}([0-9]+)/$(v)/' package.json
 	git add package.json
 	git commit -m "updating package.json to $(v)"
 	git push
