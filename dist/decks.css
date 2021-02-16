@@ -85,8 +85,8 @@
   grid-column: 1/-1;
   text-align: center;
   font-size: 0.875rem;
-  --lc:var(--gray);
-  --lhc:var(--dark);
+  --lc: var(--gray);
+  --lhc: var(--dark);
   z-index: 2;
 }
 
@@ -97,7 +97,7 @@
 }
 
 .flag .quick-nav a.active {
-  --lc:var(--dark);
+  --lc: var(--dark);
   border-color: var(--dark);
 }
 
@@ -138,7 +138,7 @@
 }
 
 .footer-connect {
-  --hf:var(--sans);
+  --hf: var(--sans);
   --hw: 700;
 }
 
@@ -238,8 +238,8 @@
   border-left: 5px solid transparent;
   border-radius: 0;
   cursor: pointer;
-  --bc:white;
-  --bbc:transparent;
+  --bc: white;
+  --bbc: transparent;
 }
 
 .main-nav:hover :focus {
@@ -264,7 +264,7 @@
 .main-nav .subsection a {
   padding: 10px 30px 10px 45px;
   --lc: #989898;
-  --lhc:white;
+  --lhc: white;
 }
 
 .main-nav .expander.open,
@@ -375,7 +375,7 @@
 .e-edition .package {
   align-items: center;
   --lhc: #222;
-  --hf:var(--sans);
+  --hf: var(--sans);
   --hw: 500;
 }
 
@@ -523,7 +523,7 @@
 
 .lead-item .mi-sticky-player .mi-sticky-player-info {
   padding: 15px;
-  --ht:none;
+  --ht: none;
 }
 
 .mi-sticky-player-info > * {

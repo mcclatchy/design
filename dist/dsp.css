@@ -27,14 +27,14 @@
   margin: 0 auto;
   padding: 15px;
   max-width: 600px;
-  --hf:var(--sans);
-  --ht:none;
-  --tf:var(--sans);
+  --hf: var(--sans);
+  --ht: none;
+  --tf: var(--sans);
   --ts: 16px;
 }
 
 .page-title .secure {
-  --ts:small;
+  --ts: small;
   color: var(--gray);
   text-transform: uppercase;
 }
@@ -59,16 +59,16 @@
  ** DSP offer molecule
  ****/
 .dsp-offer {
-  --hf:var(--serif);
-  --ht:none;
-  --hw:bold;
+  --hf: var(--serif);
+  --ht: none;
+  --hw: bold;
   --ts: 0.875rem;
-  --tf:var(--sans);
+  --tf: var(--sans);
   --ps: 5px;
-  --pa:center;
+  --pa: center;
   --padding: 0px;
-  --lc:var(--blue);
-  --lhc:var(--blue);
+  --lc: var(--blue);
+  --lhc: var(--blue);
   position: relative;
   display: grid;
   grid-gap: 15px;
@@ -83,7 +83,7 @@
 }
 
 .dsp-offer li {
-  --tc:var(--gray);
+  --tc: var(--gray);
   margin: 5px 0;
   list-style: disc inside;
 }
@@ -106,7 +106,7 @@
  */
 @media (min-width: 660px) {
   .dsp-offer.horizontal {
-    --pa:start;
+    --pa: start;
     display: grid;
     grid-template-columns: 1fr auto;
     padding: 30px;
@@ -145,11 +145,11 @@
 
 .paywall-offer {
   --ts: 0.875rem;
-  --tf:var(--sans);
+  --tf: var(--sans);
   --padding: 30px;
   --ps: 10px;
-  --lc:var(--blue);
-  --lhc:var(--blue);
+  --lc: var(--blue);
+  --lhc: var(--blue);
   text-align: center;
   align-self: flex-start;
 }
@@ -159,7 +159,7 @@
 }
 
 .paywall-offer .more-link {
-  --tc:var(--blue);
+  --tc: var(--blue);
 }
 
 .account-header {
@@ -169,7 +169,7 @@
   border-top: 1px solid #EBEBEB;
   max-width: 900px;
   margin: 0 auto;
-  --ht:none;
+  --ht: none;
 }
 
 .account-header small {
@@ -193,8 +193,8 @@
   font: 400 14px var(--sans);
   --lc: #31409f;
   --lhc: #5169B8;
-  --ld:none;
-  --lhd:none;
+  --ld: none;
+  --lhd: none;
 }
 
 .tab.active {
@@ -228,8 +228,8 @@
 .flag.dsp .links {
   --lc: #707070;
   --lhc: #222;
-  --ld:none;
-  --lhd:none;
+  --ld: none;
+  --lhd: none;
   align-items: center;
   font-size: 0.875rem;
   font-weight: bold;
@@ -254,7 +254,7 @@
 }
 
 .purchase-info {
-  --tf:var(--sans);
+  --tf: var(--sans);
   --ts: 0.875rem;
   --ps: 0;
   padding: var(--padding, 15px);
@@ -320,6 +320,7 @@
   position: relative;
   width: 100%;
   max-width: var(--modal-width, 900px);
+  box-sizing: border-box;
   margin: 15px auto;
   pointer-events: auto;
 }
@@ -420,7 +421,7 @@ section.dsp {
 
 .paywall-expander {
   font: 700 0.875rem var(--sans);
-  --tc:var(--blue);
+  --tc: var(--blue);
   display: inline-block;
   text-align: center;
 }
@@ -455,8 +456,8 @@ section.dsp {
  */
 .subscription-offers {
   --ts: 0.875rem;
-  --tf:var(--sans);
-  --hf:var(--sans);
+  --tf: var(--sans);
+  --hf: var(--sans);
   --hw: 700;
 }
 
@@ -465,8 +466,8 @@ section.dsp {
   margin: 0 auto;
   align-items: center;
   --ps: 30px;
-  --hf:var(--sans);
-  --hw:bold;
+  --hf: var(--sans);
+  --hw: bold;
 }
 
 .subscription-offers form {
@@ -489,8 +490,8 @@ section.dsp {
 }
 /* Hero at the top of the sub offer page */
 .dsp-hero {
-  --tc:white;
-  --pa:center;
+  --tc: white;
+  --pa: center;
   --padding: 60px 30px;
   min-height: 320px;
   position: relative;
@@ -534,7 +535,7 @@ section.dsp {
   grid-gap: 30px;
   padding: var(--padding, 15px);
   --ts: 14px;
-  --tf:var(--sans);
+  --tf: var(--sans);
 }
 
 .review-order .package {
@@ -561,7 +562,7 @@ section.dsp {
   align-items: center;
   padding: 0;
   --ps: 15px;
-  --hf:var(--sans);
+  --hf: var(--sans);
   --hw: 700;
 }
 
@@ -571,7 +572,7 @@ section.dsp {
 .purchase-confirmation {
   text-align: center;
   --ts: 14px;
-  --tf:var(--sans);
+  --tf: var(--sans);
 }
 
 .purchase-confirmation .page-title {
@@ -579,8 +580,8 @@ section.dsp {
 }
 
 .purchase-confirmation .page-title .more-link {
-  --lc:var(--blue);
-  --lhc:var(--blue);
+  --lc: var(--blue);
+  --lhc: var(--blue);
   --ts: 0.875rem;
 }
 
@@ -613,9 +614,9 @@ section.dsp {
   align-items: center;
   text-align: center;
   --ts: 14px;
-  --tf:var(--sans);
-  --ld:underline;
-  --lhd:underline;
+  --tf: var(--sans);
+  --ld: underline;
+  --lhd: underline;
 }
 
 .dsp-modal .button {
@@ -627,8 +628,8 @@ section.dsp {
 }
 
 .dsp-modal .button.text {
-  --bc:white;
-  --bbc:transparent;
+  --bc: white;
+  --bbc: transparent;
 }
 
 /**
