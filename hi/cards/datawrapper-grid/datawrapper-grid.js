@@ -16,7 +16,7 @@ class DatawrapperGrid extends HTMLElement {
 
       .grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(425px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
         grid-gap: 30px;
         align-items: stretch;
         margin-top: 15px;
