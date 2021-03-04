@@ -18,7 +18,7 @@ The script includes the definition for both the `<fundraising-chart>` and `<char
 
 `collected` and `goal`
 
-These attributes will be converted to an integer, and used to mathematically figure out how much of the bar to fill.
+These attributes will be converted to integers and used to mathematically figure out the filled portion of the bar.
 
 `value` 
 
