@@ -29,7 +29,3 @@ disableKinds = ["taxonomy", "taxonomyTerm", "RSS", "404"]
     name = "email"
     url = "/email/"
     weight = 4
-  [[menu.main]]
-    name = "labs"
-    url = "/labs/"
-    weight = 5
