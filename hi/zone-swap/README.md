@@ -12,6 +12,7 @@ Lastly, this element is intentionally light to allow for simple direct use and s
 <zone-swap zone="4">
   ...
 </zone-swap>
+```
 
 
 ### Configurable attributes/properties
