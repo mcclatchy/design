@@ -4,7 +4,7 @@ The simple grid custom element is a layer of sugaring to enable rapid section sk
 
 ### ShadowDOM structure
 
-```
+```html
 <slot name="above"></slot>
 <slot name="nav"></slot>
 <section>
@@ -15,7 +15,7 @@ The simple grid custom element is a layer of sugaring to enable rapid section sk
 
 ### Example
 
-```
+```html
 <simple-grid theme="dark" nav="Custom Title" zones="simple">
   <custom-splash slot="above">...</custom-splash>
 </simple-grid>

@@ -8,7 +8,7 @@ Lastly, this element is intentionally light to allow for simple direct use and s
 
 ### Example
 
-```
+```html
 <zone-swap zone="4">
   ...
 </zone-swap>
