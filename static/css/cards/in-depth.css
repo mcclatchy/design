@@ -17,3 +17,8 @@
 .in-depth .image-link-macro {
   position: initial;
 }
+
+.in-depth time,
+.in-depth .time {
+  flex: none;
+}
