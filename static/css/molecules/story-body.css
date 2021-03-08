@@ -3,6 +3,7 @@
  */
 
 .story-body {
+  display: flow-root;
   --hf: var(--sans);
   --hw: 700;
   --ht: uppercase;
@@ -10,7 +11,6 @@
   --lhc: #31409F;
   --ld: underline;
   --lhd: underline;
-  padding-bottom: 0.05px;
 }
 
 .story-body > * {
