@@ -8,6 +8,7 @@
 .disabled,
 [disabled] {
   background-color: #373737;
+  --paper-color: #373737;
   color: white;
   fill: white;
   --tc: white;
@@ -23,6 +24,7 @@
 
 .promo {
   background-color: #31409F;
+  --paper-color: #31409F;
 }
 
 .promo * {
@@ -32,6 +34,7 @@
 
 .disabled, [disabled] {
   background-color: #989898;
+  --paper-color: #989898;
   cursor: initial;
 }
 
@@ -42,6 +45,7 @@
 
 .promo-light {
   background-color: #5169B8;
+  --paper-color: #5169B8;
 }
 
 .promo-light * {
