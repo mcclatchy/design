@@ -4,6 +4,7 @@
 
 .in-depth {
   background-color: #373737;
+  --paper-color: #373737;
 }
 
 .card.in-depth figure {
