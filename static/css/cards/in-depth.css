@@ -3,7 +3,7 @@
  */
 
 .in-depth {
-  background-color: #373737;
+  background-color: var(--paper-color);
   --paper-color: #373737;
 }
 
