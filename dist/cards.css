@@ -465,7 +465,7 @@ section.big-news {
  * In Depth card
  */
 .in-depth {
-  background-color: #373737;
+  background-color: var(--paper-color, #373737);
 }
 
 .card.in-depth figure {
@@ -478,6 +478,11 @@ section.big-news {
 
 .in-depth .image-link-macro {
   position: initial;
+}
+
+.in-depth time,
+.in-depth .time {
+  flex: none;
 }
 
 /**

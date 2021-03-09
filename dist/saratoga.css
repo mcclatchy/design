@@ -24,6 +24,10 @@
   --gray: #707070;
   --blue: #31409F;
   --body-background: #f4f4f4;
+  /* Paper box shadow */
+  --paper-shadow:
+    0 1px 2px 0 rgba(0, 0, 0, .2),
+    0 1px 5px 0 rgba(0, 0, 0, .13);
   /**
    * Color variables and text size set at the atomic level
    *
@@ -590,15 +594,15 @@ button:hover,
  */
 .paper, .card {
   position: relative;
-  background-color: white;
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.13);
+  background-color: var(--paper-color, #fff);
+  box-shadow: var(--paper-shadow);
 }
 
 .paper .paper,
 .paper .card,
 .card .paper,
 .card .card {
-  box-shadow: none;
+  --paper-shadow: none;
 }
 
 /**
@@ -673,7 +677,7 @@ button:hover,
 .promo-light,
 .disabled,
 [disabled] {
-  background-color: #373737;
+  background-color: var(--paper-color, #373737);
   color: white;
   fill: white;
   --tc: white;
@@ -688,7 +692,7 @@ button:hover,
 }
 
 .promo {
-  background-color: #31409F;
+  --paper-color: #31409F;
 }
 
 .promo * {
@@ -697,7 +701,7 @@ button:hover,
 }
 
 .disabled, [disabled] {
-  background-color: #989898;
+  --paper-color: #989898;
   cursor: initial;
 }
 
@@ -707,7 +711,7 @@ button:hover,
 }
 
 .promo-light {
-  background-color: #5169B8;
+  --paper-color: #5169B8;
 }
 
 .promo-light * {
@@ -1038,6 +1042,7 @@ summary, .summary {
  * Story body
  */
 .story-body {
+  display: flow-root;
   --hf: var(--sans);
   --hw: 700;
   --ht: uppercase;
@@ -1045,7 +1050,6 @@ summary, .summary {
   --lhc: #31409F;
   --ld: underline;
   --lhd: underline;
-  padding-bottom: 15px;
 }
 
 .story-body > * {
@@ -1657,7 +1661,7 @@ section.big-news {
  * In Depth card
  */
 .in-depth {
-  background-color: #373737;
+  background-color: var(--paper-color, #373737);
 }
 
 .card.in-depth figure {
@@ -1670,6 +1674,11 @@ section.big-news {
 
 .in-depth .image-link-macro {
   position: initial;
+}
+
+.in-depth time,
+.in-depth .time {
+  flex: none;
 }
 
 /**
