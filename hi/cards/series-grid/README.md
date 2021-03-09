@@ -40,3 +40,15 @@ This element has two use cases. The `inline` attribute will cause the grid to ap
 `hide-series-nav`
 
 By default this element will not hide the normal series nav. In the inline mode, it is likely that we will be asked to do so. By placing the possibility in this element, we can reduce some of the code in the embed to make it more readable and accessible for journalists.
+
+### Custom events
+
+This card will dispatch two events at different points in the process. These are listed in the order and neither include any data.
+
+`series-nav-moved`
+
+This event will only be dispatched if the default presentation is used. It is located at the end of the `move()` function, and will therefore dispatch prior to the `feature-next` or `hide-series-nav` flags are evaluated.
+
+`series-nav-complete`
+
+This event is dispatcehd at the end of the `connectedCallback()` handler and all flags have been evaluated.

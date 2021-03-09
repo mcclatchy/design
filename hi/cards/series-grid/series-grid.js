@@ -165,6 +165,10 @@ class SeriesGrid extends HTMLElement {
       // Add some padding to the intro if it has assigned elements
       let intro = this.shadowRoot.querySelector("slot[name=intro]");
       intro.classList.toggle("not-empty", intro.assignedElements().length > 0);
+
+      // Dispatch a complete event
+      let e = new Event("series-grid-complete");
+      this.dispatchEvent(e);
     }
   }
 
@@ -183,6 +187,10 @@ class SeriesGrid extends HTMLElement {
     siblings.forEach((s) => { 
       s.remove();
     });
+
+    // Flag that the element has moved
+    let e = new Event("series-grid-moved");
+    this.dispatchEvent(e);
   }
 
   // Emphasize the next story in the list
