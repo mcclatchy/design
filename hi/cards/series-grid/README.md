@@ -6,13 +6,15 @@ Stories are added to the grid slot automatically, and the intro will accept any 
 
 ## Example
 
-![Series grid mock](screenshot.jpg)
-
 ```html
 <series-grid [inline] [feature-next] [hide-series-nav]>
   <p slot="intro">...</p>
 </series-grid>
 ```
+
+## Mock
+
+![Series grid mock](screenshot.jpg)
 
 ## ShadowDOM structure
 
