@@ -22,7 +22,7 @@ This card creates a very simple scrollytell experience. The Shadow DOM has two s
 <slot class="overlay"></slot>
 ```
 
-## Interaction tracking
+## Analytics
 
 The element sends two different interactions to Adobe in order to track passive use.
 
