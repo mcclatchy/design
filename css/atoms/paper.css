@@ -4,17 +4,15 @@
 
 .paper, .card {
   position: relative;
-  background-color: white;
-  box-shadow: 
-    0 1px 2px 0 rgba(0, 0, 0, .2), 
-    0 1px 5px 0 rgba(0, 0, 0, .13);
+  background-color: var(--paper-color, #fff);
+  box-shadow: var(--paper-shadow); 
 }
 
 .paper .paper, 
 .paper .card, 
 .card .paper, 
 .card .card {
-  box-shadow: none;
+  --paper-shadow: none;
 }
 
 /**

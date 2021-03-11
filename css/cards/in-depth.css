@@ -3,7 +3,7 @@
  */
 
 .in-depth {
-  background-color: #373737;
+  background-color: var(--paper-color, #373737);
 }
 
 .card.in-depth figure {
@@ -16,4 +16,9 @@
 
 .in-depth .image-link-macro {
   position: initial;
+}
+
+.in-depth time,
+.in-depth .time {
+  flex: none;
 }
