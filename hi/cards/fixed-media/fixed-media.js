@@ -2,6 +2,8 @@
  * Scroll scrubber tracks video currentTime to scroll
  */
 
+import {trackInteraction} from "../../tracking.js";
+
 class FixedMedia extends HTMLElement {
   get template() {
     let t = document.createElement("template");
@@ -89,11 +91,17 @@ class FixedMedia extends HTMLElement {
         ele.videos.forEach(v => {
           if(v.getClientRects().length) v.play();
         });
+
+        trackInteraction("fixed-media-visible")
       } else {
         ele.classList.remove("intersecting");
         ele.videos.forEach(v => {
           if(v.getClientRects().length) v.pause();
         });
+
+        if(e.boundingClientRect.bottom <= 0) {
+          trackInteraction("fixed-media-passed");
+        }
       }
     });
   }
