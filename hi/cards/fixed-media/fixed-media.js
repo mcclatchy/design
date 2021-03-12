@@ -77,6 +77,12 @@ class FixedMedia extends HTMLElement {
 
   connectedCallback() {
     this.iObserver.observe(this);
+
+    // Get the parent embed full width
+    const embed = this.closest(".embed-infographic");
+    if(embed) {
+      embed.classList.add("full-bleed");
+    }
   }
 
   disconnectedCallback() {
