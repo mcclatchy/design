@@ -151,6 +151,7 @@ class SimpleGrid extends HTMLElement {
     this._main.remove();
 
     // Unfade and notify
+    this.hidden = false;
     this.dispatchEvent(new Event("complete"));
     window.setTimeout(() => {
       this.classList.remove("faded");
