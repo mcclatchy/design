@@ -94,14 +94,10 @@ class SeriesGrid extends HTMLElement {
     return document.querySelectorAll("#story-series .card");
   }
 
-  get inline() {
-    return this.hasAttribute("inline");
+  get cards() {
+    return Array.from(this.querySelectorAll(".card"));
   }
 
-  get featureNext() {
-    return this.hasAttribute("feature-next");
-  }
-  
   get article() {
     return document.querySelector(".story-body");
   }
@@ -110,24 +106,21 @@ class SeriesGrid extends HTMLElement {
     return this.closest(".embed-infographic");
   }
 
-  get hideSeriesNav() {
-    return this.hasAttribute("hide-series-nav");
-  }
-
   get seriesNav() {
     let nav = document.querySelector(".series-nav");
     return nav.parentElement;
   }
 
-  get next() {
-    const stories = Array.from(this.querySelectorAll(".card"));
-    this.card = stories.find((s) => {
+  get seriesCard() {
+    return this.cards?.find((s) => {
       let sid = s.querySelector("a")?.href?.match(/[0-9]{7,}/);
       let tid = mistats?.cmsid?.match(/[0-9]{7,}/);
       return sid[0] == tid[0];
     });
+  }
 
-    return this.card?.nextElementSibling || stories[0];
+  get next() {
+    return this.seriesCard?.nextElementSibling || this.cards?.[0];
   }
 
   // Fires when added to the DOM
@@ -144,21 +137,27 @@ class SeriesGrid extends HTMLElement {
       });
 
       // Inline flag displays where embedded
-      if(this.inline) {
+      if(this.hasAttribute("inline")) {
         this.embed.classList.add("full-bleed");
         this.embed.style.margin = "0px";
       } else {
         this.move();
       }
 
-      // Simple flag disables the featured treatment
-      if(this.featureNext) {
+      // Attribute flag enables the featured treatment
+      if(this.hasAttribute("feature-next")) {
         this.highlightNextStory();
       } else {
         this.next.classList.add("next-story");
       }
 
-      if(this.hideSeriesNav) {
+      // Attribute flag to de-dupe
+      if(this.hasAttribute("de-dupe")) {
+        this.seriesCard?.remove();
+      }
+
+      // Attribute flag to hide the original series nav
+      if(this.hasAttribute("hide-series-nav")) {
         this.seriesNav.hidden = true;
       }
 
