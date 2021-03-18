@@ -51,6 +51,13 @@ class LabPanel extends HTMLElement {
       opacity: .2;
       max-width: unset !important;
     }
+
+    /* Button grid popular */
+
+    ::slotted(.lab-button-grid) {
+      grid-gap: 15px !important;
+      --columns: 1fr 1fr;
+    }
     </style>
 
     <div class="package">
