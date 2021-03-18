@@ -22,8 +22,8 @@ class SeriesGrid extends HTMLElement {
 
       .grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, auto));
         grid-gap: 30px;
+        grid-template-columns: var(--columns, repeat(auto-fit, minmax(300px, auto)));
         padding: var(--grid-padding, 15px 0);
       }
 
