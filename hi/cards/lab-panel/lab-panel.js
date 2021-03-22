@@ -56,7 +56,7 @@ class LabPanel extends HTMLElement {
 
     ::slotted(.lab-button-grid) {
       grid-gap: 15px !important;
-      --columns: 1fr 1fr;
+      --columns: repeat(auto-fit, minmax(300px, auto));
     }
 
     /* ENH headline style */
