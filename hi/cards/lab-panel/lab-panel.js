@@ -58,6 +58,22 @@ class LabPanel extends HTMLElement {
       grid-gap: 15px !important;
       --columns: 1fr 1fr;
     }
+
+    /* ENH headline style */
+
+    ::slotted(.enh-panel-title) {
+      --hw: 400px !important;
+      font-size: calc(100vw/10) !important;
+      line-height: 1em !important;
+      letter-spacing: -1px;
+      margin: 0;
+    }
+
+    @media(min-width: 600px) {
+      ::slotted(.enh-panel-title) {
+        font-size: 60px !important;
+      }
+    }
     </style>
 
     <div class="package">
