@@ -106,11 +106,6 @@ class SeriesGrid extends HTMLElement {
     return this.closest(".embed-infographic");
   }
 
-  get seriesNav() {
-    let nav = document.querySelector(".series-nav");
-    return nav.parentElement;
-  }
-
   get seriesCard() {
     return this.cards?.find((s) => {
       let sid = s.querySelector("a")?.href?.match(/[0-9]{7,}/);
@@ -157,8 +152,14 @@ class SeriesGrid extends HTMLElement {
       }
 
       // Attribute flag to hide the original series nav
-      if(this.hasAttribute("hide-series-nav")) {
-        this.seriesNav.hidden = true;
+      if(this.hasAttribute("hide")) {
+        let qs = this.getAttribute("hide");
+        this.hide(qs);
+      }
+
+      if(this.hasAttribute("remove")) {
+        let qs = this.getAttribute("remove");
+        this.remove(qs);
       }
 
       // Add some padding to the intro if it has assigned elements
@@ -182,10 +183,7 @@ class SeriesGrid extends HTMLElement {
     this.article.insertAdjacentElement("afterend", this);
 
     // Remove what was already there
-    const siblings = document.querySelectorAll("series-grid ~ *");
-    siblings.forEach((s) => { 
-      s.remove();
-    });
+    this.remove("series-grid ~ *");
 
     // Flag that the element has moved
     let e = new Event("series-grid-moved");
@@ -196,6 +194,22 @@ class SeriesGrid extends HTMLElement {
   highlightNextStory() {
     this.next.classList.add("next-story", "impact", "horizontal", "in-depth");
     this.next.querySelector("h3").classList.add("h1");
+  }
+
+  // Adds the hidden attribute for all elements in the query selector 
+  hide(qs) {
+    let elements = document.querySelectorAll(qs);
+    elements.forEach((ele) => {
+      ele.hidden = true;
+    });
+  }
+
+  // Removes all elements in the query selector 
+  remove(qs) {
+    let elements = document.querySelectorAll(qs);
+    elements.forEach((ele) => {
+      ele.remove();
+    });
   }
 }
 
