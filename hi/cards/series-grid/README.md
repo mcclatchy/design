@@ -41,9 +41,27 @@ The cards are appended to the LightDOM, so more custom displays can be made on a
 
 This element has two use cases. The `inline` attribute will cause the grid to appear wherever the embed is placed. This should only be used in building standalone landing pages, as the significant size of the grid would prevent readers ffom finishing the story. As we don't put paper on paper, this mode changes the styles of the cards a tad to fit that setting better.
 
-#### hide-series-nav
+#### hide="*query string*"
 
-By default this element will not hide the normal series nav. In the inline mode, it is likely that we will be asked to do so. By placing the possibility in this element, we can reduce some of the code in the embed to make it more readable and accessible for journalists.
+This attribute will pass it's value to a `querySelectorAll()` function call and add the hidden class to each matching element. The SEO squad prefers removing the elements over hiding them, but in the case of the series-nav element the sticky-nav could also be used and would need it available. To hide multiple elements, separate the selectors with a comma.
+
+#### remove="*query string*"
+
+This attribute will pass it's value to a `querySelectorAll()` function call and removde each matching element from the DOM. This is the SEO squad's preferred approach. To remove multiple elements, separate the selectors with a comma.
+
+## Methods
+
+#### move()
+
+This function will replace all elements after the story body with itself. It can only be run once, and is automatically called in the `connectedCallback()` unless the inline attribute is set to true. 
+
+#### hide(*query string*)
+
+This function will add the hidden attribute to all elements matching the query string.
+
+#### remove(*query string*)
+
+This function will remove all elements matchind the query string.
 
 ## Custom events
 
@@ -56,3 +74,19 @@ This event will only be dispatched if the default presentation is used. It is lo
 #### series-nav-complete
 
 This event is dispatcehd at the end of the `connectedCallback()` handler and all flags have been evaluated.
+
+## Analytics
+
+The element sends two different passive interactions, and one active interaction to Adobe.
+
+#### series-grid-visible
+
+This passive interaction is sent when the top of this element reaches the bottom of the screen and is about to be visible.
+
+#### series-grid-passed
+
+This passive interaction is sent when the bottom of the element reaches the top of the screen and is no longer visible.
+
+#### series-grid-clicked
+
+This active interaction is sent whenever a reader clicks a link to any story in the grid.

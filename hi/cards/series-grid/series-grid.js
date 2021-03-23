@@ -2,6 +2,8 @@
  * Series grid element
  */
 
+import {trackInteraction, trackPassive} from "../../tracking.js";
+
 class SeriesGrid extends HTMLElement {
 
   get template() {
@@ -151,12 +153,13 @@ class SeriesGrid extends HTMLElement {
         this.seriesCard?.remove();
       }
 
-      // Attribute flag to hide the original series nav
+      // Attribute flag to hide elements
       if(this.hasAttribute("hide")) {
         let qs = this.getAttribute("hide");
         this.hide(qs);
       }
 
+      // Attribute flag to remove elements from the DOM
       if(this.hasAttribute("remove")) {
         let qs = this.getAttribute("remove");
         this.remove(qs);
@@ -164,7 +167,19 @@ class SeriesGrid extends HTMLElement {
 
       // Add some padding to the intro if it has assigned elements
       let intro = this.shadowRoot.querySelector("slot[name=intro]");
-      intro.classList.toggle("not-empty", intro.assignedElements().length > 0);
+      let notEmpty = intro.assignedElements().length > 0;
+      intro.classList.toggle("not-empty", notEmpty);
+
+      // Set up passive interaction tracking
+      trackPassive(this);
+
+      // Set up active interaction tracking
+      this.addEventListener("click", (e) => {
+        let a = e.target.href ? e.target : e.target.closest("a");
+        if(a.href) {
+          trackInteraction("series-grid-clicked");
+        }
+      });
 
       // Dispatch a complete event
       let e = new Event("series-grid-complete");
