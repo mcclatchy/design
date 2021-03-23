@@ -88,8 +88,6 @@ class SeriesGrid extends HTMLElement {
 
   constructor() {
     super();
-    this.attachShadow({ mode: "open" });
-    this.shadowRoot.appendChild(this.template.content.cloneNode(true));
   }
 
   get stories() {
@@ -122,74 +120,79 @@ class SeriesGrid extends HTMLElement {
 
   // Fires when added to the DOM
   async connectedCallback() {
-    if(!this.moved) {
-      // Clone the stories from the series nav
-      this.stories.forEach((s) => {
-        let links = s.querySelectorAll("a");
-        links.forEach((l) => {
-          l.href = `${l.href}#storylink=series-grid`;
-        })
+    // Only run this once
+    if(this.shadowRoot) return;
 
-        this.appendChild(s.cloneNode(true));
-      });
+    // Load the Shadow DOM
+    this.attachShadow({ mode: "open" });
+    this.shadowRoot.appendChild(this.template.content.cloneNode(true));
 
-      // Inline flag displays where embedded
-      if(this.hasAttribute("inline")) {
-        this.embed.classList.add("full-bleed");
-        this.embed.style.margin = "0px";
-      } else {
-        this.move();
-      }
+    // Clone the stories from the series nav
+    this.stories.forEach((s) => {
+      let links = s.querySelectorAll("a");
+      links.forEach((l) => {
+        l.href = `${l.href}#storylink=series-grid`;
+      })
 
-      // Attribute flag enables the featured treatment
-      if(this.hasAttribute("feature-next")) {
-        this.highlightNextStory();
-      } else {
-        this.next.classList.add("next-story");
-      }
+      this.appendChild(s.cloneNode(true));
+    });
 
-      // Attribute flag to de-dupe
-      if(this.hasAttribute("de-dupe")) {
-        this.seriesCard?.remove();
-      }
-
-      // Attribute flag to hide elements
-      if(this.hasAttribute("hide")) {
-        let qs = this.getAttribute("hide");
-        this.hide(qs);
-      }
-
-      // Attribute flag to remove elements from the DOM
-      if(this.hasAttribute("remove")) {
-        let qs = this.getAttribute("remove");
-        this.remove(qs);
-      }
-
-      // Add some padding to the intro if it has assigned elements
-      let intro = this.shadowRoot.querySelector("slot[name=intro]");
-      let notEmpty = intro.assignedElements().length > 0;
-      intro.classList.toggle("not-empty", notEmpty);
-
-      // Set up passive interaction tracking
-      trackPassive(this);
-
-      // Set up active interaction tracking
-      this.addEventListener("click", (e) => {
-        let a = e.target.href ? e.target : e.target.closest("a");
-        if(a.href) {
-          trackInteraction("series-grid-clicked");
-        }
-      });
-
-      // Dispatch a complete event
-      let e = new Event("series-grid-complete");
-      this.dispatchEvent(e);
+    // Attribute flag enables the featured treatment
+    if(this.hasAttribute("feature-next")) {
+      this.highlightNextStory();
+    } else {
+      this.next?.classList.add("next-story");
     }
+
+    // Attribute flag to de-dupe
+    if(this.hasAttribute("de-dupe")) {
+      this.seriesCard?.remove();
+    }
+
+    // Attribute flag to hide elements
+    if(this.hasAttribute("hide")) {
+      let qs = this.getAttribute("hide");
+      this.hide(qs);
+    }
+
+    // Attribute flag to remove elements from the DOM
+    if(this.hasAttribute("remove")) {
+      let qs = this.getAttribute("remove");
+      this.remove(qs);
+    }
+
+    // Add some padding to the intro if it has assigned elements
+    let intro = this.shadowRoot.querySelector("slot[name=intro]");
+    let notEmpty = intro.assignedElements().length > 0;
+    intro.classList.toggle("not-empty", notEmpty);
+
+    // Set up passive interaction tracking
+    trackPassive(this);
+
+    // Set up active interaction tracking
+    this.addEventListener("click", (e) => {
+      let a = e.target.href ? e.target : e.target.closest("a");
+      if(a.href) {
+        trackInteraction("series-grid-clicked", true);
+      }
+    });
+
+    // Inline flag displays where embedded
+    if(this.hasAttribute("inline")) {
+      this.embed.classList.add("full-bleed");
+      this.embed.style.margin = "0px";
+    } else {
+      this.move();
+    }
+
+    // Dispatch a complete event
+    let e = new Event("series-grid-complete");
+    this.dispatchEvent(e);
   }
 
   // Moves the grid underneath the story body and removes previous content
   move() {
-    this.moved = true;
+    // this.moved = true;
 
     // Hide the embed to eliminate empty margin space
     this.embed.hidden = true;
