@@ -210,8 +210,8 @@ class SeriesGrid extends HTMLElement {
 
   // Emphasize the next story in the list
   highlightNextStory() {
-    this.next.classList.add("next-story", "impact", "horizontal", "in-depth");
-    this.next.querySelector("h3").classList.add("h1");
+    this.next?.classList.add("next-story", "impact", "horizontal", "in-depth");
+    this.next?.querySelector("h3").classList.add("h1");
   }
 
   // Adds the hidden attribute for all elements in the query selector 
