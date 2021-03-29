@@ -35,6 +35,7 @@ class LiveBlogMessage extends HTMLElement {
       }
 
       ::slotted(*) {
+        display: block;
         margin: 10px 0;
       }
 
