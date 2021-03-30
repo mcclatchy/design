@@ -131,7 +131,7 @@ class SeriesGrid extends HTMLElement {
     this.stories.forEach((s) => {
       let links = s.querySelectorAll("a");
       links.forEach((l) => {
-        l.href = `${l.href}#storylink=series-grid`;
+        l.hash = "storylink=series-grid";
       })
 
       this.appendChild(s.cloneNode(true));
@@ -173,6 +173,7 @@ class SeriesGrid extends HTMLElement {
     this.addEventListener("click", (e) => {
       let a = e.target.href ? e.target : e.target.closest("a");
       if(a.href) {
+
         trackInteraction("series-grid-clicked", true);
       }
     });
