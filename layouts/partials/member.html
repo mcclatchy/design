@@ -13,12 +13,6 @@
       <h4>{{ .title | upper }}</h4>
     </div>
     {{- end }}
-
-    <div class="badges">
-      {{- range .badges }}
-      <img src="/img/badges/{{ . }}.svg">
-      {{- end }}
-    </div>
   </div>
   <div class="package">
     {{- if .manager }}
@@ -27,15 +21,6 @@
     {{- end }}
 
     <p>{{ .bio }}</p>
-
-    {{- with .patronus }}
-    <p><b>Patronus:</b> {{ . }}</p>
-    {{ end }}
-
-    {{- with .anagram }}
-    <p><b>Anagram:</b> {{ . }}</p>
-    {{ end }}
-
 
     {{- with .walkup }}
     <p><b>Walkup music:</b> {{ . }}</p>
