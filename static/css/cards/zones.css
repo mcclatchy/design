@@ -11,6 +11,7 @@
 }
 
 .zone.grid.combo {
+  align-items: center;
   justify-content: center;
   grid-template-columns: repeat(auto-fit, minmax(300px, .5fr));
 }
