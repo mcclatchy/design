@@ -28,12 +28,14 @@ p {
  */
 
 section {
+  position: relative;
   margin: 0 auto;
-  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 .grid {
   grid-template-columns: 1fr;
+  padding-top: 15px;
 }
 
 @media (min-width: 700px) {
@@ -92,10 +94,10 @@ section {
 
 /* Manager specials */
 
-.director, .managers {
+.border-bottom {
   border-bottom: 1px solid #d8d8d8;
 }
 
-.bio.manager .avatar {
+.bio.leadership .avatar {
   width: 125px;
 }

@@ -2,14 +2,13 @@ anagram = "Hobo Rally RFD"
 avatar = "holly.gif"
 badges = ["engage", "editorial"]
 bio = "Storytelling is my focus. I include it in illustrations and gifs for email campaigns to engage and surprise our readers. My favorite days are collaborating and brainstorming with the design team. I love a theme party and don’t get why people hate Cadbury Eggs."
-job = "Senior Manager of Creative"
+job = "Director, Consumer Product Operations and Creative"
 manager = true
+leadership = true
 patronus = "Bloodhound"
 title = "Holly Braford"
 walkups = [
   "“Cut Out Witch” by Guided by Voices",
   "“Cannonball” by Breeders",
-  "“Immigrant Song” by Led Zepplin",
-  "“The Cutter” by Echo & the Bunnymen",
-  "“Game of Pricks” by Guided by Voices"
+  "“Immigrant Song” by Led Zepplin"
 ]

@@ -9,19 +9,30 @@
     {{ .Content }}
   </header>
 
-  <section class="director grid">
+  <section class="director border-bottom grid">
     {{ partial "member.html" $.Site.Data.team.jessica }}
   </section>
 
-  <section class="managers grid">
-    {{ partial "member.html" $.Site.Data.team.eddie }}
-    {{ partial "member.html" $.Site.Data.team.holly }}
+  <section class="border-bottom">
+    <div class="label">
+      <h4 class="sans bold impact">LEADERSHIP SQUAD</h3>
+    </div>
+    <div class="grid">
+      {{- range $.Site.Data.team  }}
+      {{ if and .leadership (not .director) }}{{ partial "member.html" . }}{{ end }}
+      {{- end }}
+    </div>
   </section>
 
-  <section class="bios grid">
-    {{- range $.Site.Data.team }}
-    {{ if not .manager }}{{ partial "member.html" . }}{{ end }}
-    {{- end }}
+  <section class="bios">
+    <div class="label">
+      <h4 class="sans bold impact">MEET THE TEAM</h4>
+    </div>
+    <div class="grid">
+      {{- range $.Site.Data.team }}
+      {{ if not .leadership }}{{ partial "member.html" . }}{{ end }}
+      {{- end }}
+    </div>
   </section>
 </article>
 {{ end }}

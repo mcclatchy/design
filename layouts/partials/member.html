@@ -1,5 +1,5 @@
 {{ $name := .title }}
-<div class="bio {{ if .manager }}manager{{ end }}">
+<div class="bio {{ if or .leadership }}leadership{{ end }}">
   <div class="row">
     {{- if .avatar }}
     <img class="avatar" src="/img/avatars/{{ .avatar }}">
@@ -7,7 +7,7 @@
     <img class="avatar" src="/img/avatars/missing.svg">
     {{- end }}
 
-    {{- if not .manager }}
+    {{- if not .leadership }}
     <div class="name">
       <h5 class="job-title">{{ .job }}</h5>
       <h4>{{ .title | upper }}</h4>
@@ -15,7 +15,7 @@
     {{- end }}
   </div>
   <div class="package">
-    {{- if .manager }}
+    {{- if .leadership }}
     <h5 class="job-title">{{ .job }}</h5>
     <h2>{{ .title | upper }}</h2>
     {{- end }}
