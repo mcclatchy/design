@@ -23,13 +23,13 @@ class SEMLanding extends HTMLElement {
 
       .intro ::slotted(img) {
         display: block;
-        max-width: 550px;
+        max-width: 500px;
       }
 
       .grid {
         max-width: 1024px;
         margin: 0 auto;
-        padding: 15px;
+        padding: 15px 15px 30px;
         display: grid;
         grid-gap: 30px;
       }
