@@ -122,18 +122,18 @@ class NewsletterDigest extends HTMLElement {
 				@import url( '/css/email/eds.css' )
 			</style>
 <pre><code>    &lt;/head&gt;
-    &lt;body&gt;
-    &lt;/body&gt;
-    `;
-    return t;   
+	&lt;body&gt;
+	&lt;/body&gt;
+	`;
+	return t;   
 }
 constructor() {
-    super();
+	super();
 }
 connectedCallback() {
-    let clone = this.template.content.cloneNode(true);
-    this.attachShadow({ mode: &quot;open&quot; });
-    this.shadowRoot.appendChild(clone);
+	let clone = this.template.content.cloneNode(true);
+	this.attachShadow({ mode: &quot;open&quot; });
+	this.shadowRoot.appendChild(clone);
 }
 </code></pre>
 <p>} // end Class
