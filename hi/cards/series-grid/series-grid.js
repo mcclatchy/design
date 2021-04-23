@@ -193,16 +193,16 @@ class SeriesGrid extends HTMLElement {
 
   // Moves the grid underneath the story body and removes previous content
   move() {
-    // this.moved = true;
-
-    // Hide the embed to eliminate empty margin space
-    this.embed?.hidden = true;
-
     // Move this element under the article
     this.article.insertAdjacentElement("afterend", this);
 
     // Remove what was already there
     this.remove("series-grid ~ *");
+
+    // Hide the embed to eliminate empty margin space
+    if(this.embed) {
+      this.embed.hidden = true;
+    }
 
     // Flag that the element has moved
     let e = new Event("series-grid-moved");
