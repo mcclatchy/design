@@ -196,7 +196,7 @@ class SeriesGrid extends HTMLElement {
     // this.moved = true;
 
     // Hide the embed to eliminate empty margin space
-    this.embed.hidden = true;
+    this.embed?.hidden = true;
 
     // Move this element under the article
     this.article.insertAdjacentElement("afterend", this);
