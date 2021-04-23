@@ -166,6 +166,11 @@ class SeriesGrid extends HTMLElement {
     let notEmpty = intro.assignedElements().length > 0;
     intro.classList.toggle("not-empty", notEmpty);
 
+    // Hide if hidden in DOM and there are stories
+    if(this.stories.length > 0) {
+      this.removeAttribute("hidden");
+    }
+
     // Set up passive interaction tracking
     trackPassive(this);
 
@@ -173,7 +178,6 @@ class SeriesGrid extends HTMLElement {
     this.addEventListener("click", (e) => {
       let a = e.target.href ? e.target : e.target.closest("a");
       if(a.href) {
-
         trackInteraction("series-grid-clicked", true);
       }
     });
