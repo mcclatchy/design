@@ -166,7 +166,7 @@ class SeriesGrid extends HTMLElement {
     let notEmpty = intro.assignedElements().length > 0;
     intro.classList.toggle("not-empty", notEmpty);
 
-    // Hide if hidden in DOM and there are stories
+    // Show on the page if there are stories
     if(this.stories.length > 0) {
       this.removeAttribute("hidden");
     }
