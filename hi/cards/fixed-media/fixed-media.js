@@ -19,6 +19,7 @@ class FixedMedia extends HTMLElement {
         box-sizing: border-box !important;
         align-items: var(--overlay-align, flex-start);
         justify-content: space-between;
+        --tc: white;
       }
 
       slot[name="fixed"]::slotted(*) {
@@ -41,7 +42,6 @@ class FixedMedia extends HTMLElement {
 
       :host(.screen) .overlay {
         background: var(--overlay-screen, rgba(0,0,0,0.5));
-        --tc: white;
       }
 
       .overlay::slotted(*) {
