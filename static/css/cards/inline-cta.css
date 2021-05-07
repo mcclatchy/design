@@ -18,4 +18,6 @@
 .impact .inline-cta {
   --bc: #222;
   --bbc: white;
+  --ld: underline;
+  --lhc: #b4bbe8;
 }
