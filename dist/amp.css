@@ -1474,7 +1474,7 @@ summary, .summary {
 }
 
 .upper-nav .tab {
-  padding: 10px 30px;
+  padding: 10px 15px;
   box-sizing: border-box;
   max-width: 50vw;
 }
@@ -1494,6 +1494,31 @@ summary, .summary {
   border-left: 1px solid #ddd;
 }
 
+/**
+ * New favicon option
+ */
+.upper-nav .tab .favicon {
+  max-width: unset;
+  height: 24px;
+}
+
+.upper-nav .tab .logo {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .upper-nav .tab {
+    padding: 10px 20px;
+  }
+
+  .upper-nav .tab .favicon {
+    display: none;
+  }
+
+  .upper-nav .tab .logo {
+    display: block;
+  }
+}
 .sponsor {
   display: grid;
   grid-template-columns: 75px minmax(0, 1fr);
