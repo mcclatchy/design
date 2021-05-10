@@ -10,14 +10,14 @@
     {{- if not .leadership }}
     <div class="name">
       <h5 class="job-title">{{ .job }}</h5>
-      <h4>{{ .title | upper }}</h4>
+      <h4>{{ .name | upper }}</h4>
     </div>
     {{- end }}
   </div>
   <div class="package">
     {{- if .leadership }}
     <h5 class="job-title">{{ .job }}</h5>
-    <h2>{{ .title | upper }}</h2>
+    <h2>{{ .name | upper }}</h2>
     {{- end }}
 
     <p>{{ .bio }}</p>

@@ -1,18 +1,10 @@
-anagram = "Bee Goo Parfait"
-avatar = "paige.gif"
-badges = ["engage"]
-bio = "I use empathy to create thoughtful and engaging visuals and designs for company-wide marketing campaigns. When I’m not chasing around two rambunctious boys, I strive to find inner peace with a cup of coffee and Michael Bublé."
+name = "Paige Barefoot"
 job = "Product Designer"
-patronus = "St. Bernard"
-title = "Paige Barefoot"
+bio = "I use empathy to create thoughtful and engaging visuals and designs for marketing campaigns. I create processes to facilitate production of assets across our markets, from dynamic and customizable email designs, animations and print and digital creatives. I love collaborating with colleagues and devising fantastic ideas and strategies. I have two rambunctious boys and a small yappy dog – when I’m not serving as referee between the three, I strive to find inner peace with a cup of coffee."
+avatar = "paige.gif"
 walkups = [
   "“Thunderstruck” by AC/DC",
-  "“Magic Carpet Ride” by Steppenwolf",
   "“Sir Duke” by Stevie Wonder",
   "“Basket Case” by Green Day",
-  "“The Distance” by Cake",
-  "“Inside Out” by Eve 6",
-  "“Epic” by Faith no More",
   "“End of the World as We Know It” by REM",
-  "“Should I stay or should I go” by The Clash",
 ]

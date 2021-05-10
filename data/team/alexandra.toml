@@ -1,8 +1,5 @@
-anagram = "Rare Antlered Paradox"
-avatar = "alexandra.gif"
-badges = ["engage", "saratoga"]
+name = "Alexandra Porter"
+job = "Product Manager and Designer"
 bio = "I create marketing email and ad designs, write HTML for emails (without going insane) and work on UX design and some HTML/CSS for our websites. I'm our resident hardcore journalism geek and enjoy bringing a journalist's perspective into design, because I think it's important to always remember what we are designing for. I also love to foster shelter kittens, dye my hair random colors and watch too much prestige TV."
-job = "Product Designer"
-patronus = "Dolphin"
-title = "Alexandra Porter"
-walkup = "“DNA” by Kendrick Lamar or “Lemon” by N.E.R.D."
+avatar = "alexandra.gif"
+walkups = ["“DNA” by Kendrick Lamar", "“Lemon” by N.E.R.D."]

@@ -1,16 +1,5 @@
-anagram = "Mass Toast"
+name = "Matt Sasso"
+job = "Product Owner"
+bio = "Well, where should I start? If you have a subscription question, I’ve got your answer. I work with a brilliant team of developers and QA testers to create new revenue opportunities through subscriptions, and to optimize and improve our customer experience. I enjoy basketball, hip-hop, bad Nicolas Cage movies, DIY projects and above all, pizza (New Haven thin crust, please)."
 avatar = "matt.gif"
-badges = ["engage"]
-bio = "I’m a multitasker who splits my time between product UX/UI design, editorial and marketing email design, email HTML/CSS, digital ads, JavaScript, responsive code/design and logos/branding. I enjoy basketball, hip-hop, bad Nicolas Cage movies, DIY projects and above all, pizza (thin crust, please)."
-job = "Product Designer"
-patronus = ""
-title = "Matt Sasso"
-walkups = [
-  "“Exhibit C” by Jay Electronica",
-  "“Public Service Announcement” by Jay-z",
-  "“Can’t C Me” by Tupac",
-  "“New God Flow” by Pusha T & Kanye",
-  "“Monster Mash” by Whomstever sang the Monster Mash",
-  "“Old Town Road” by Lil Nas X",
-  "“September” by Earth, Wind & Fire"
-]
+walkup = "“Exhibit C” by Jay Electronica"
