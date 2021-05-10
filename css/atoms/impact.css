@@ -31,8 +31,8 @@
 }
 
 .disabled, [disabled] {
-  --paper-color: #989898;
-  cursor: initial;
+  --paper-color: #757575;
+  cursor: not-allowed;
 }
 
 .disabled * {
