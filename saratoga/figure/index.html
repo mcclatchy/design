@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <title>figure</title>
+    <meta name="description" content="Semantic wrapper for media in stories and cards">
     
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -11,7 +12,8 @@
     <meta name="mobile-web-app-capable" content="yes">
     <link rel="shortcut icon" href="../../favicon.ico">
 
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700|Noto+Serif:400,700&display=swap&subset=latin-ext" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700|Noto+Serif:400,700&display=swap&subset=latin-ext">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     
     <link rel="stylesheet" href="../../css/atoms/typography.css">
@@ -78,7 +80,7 @@
 
   <body class="">
     <div class="banner paper">
-      <a href="../../" style="padding: 0;"><img class="logo" src="../../img/banner-logo.prodx.svg"></a>
+      <a href="../../" style="padding: 0;"><img class="logo" src="../../img/banner-logo.prodx.svg" width="300" height="76" alt="McClatchy ProdX logo"></a>
       <nav>
         <a href="https://mcclatchy.github.io/design/saratoga/" class="active">
           <span>style guide</span>
@@ -101,7 +103,7 @@
     <p>The <code>&lt;figure&gt;</code> atom is used as a semantic method of targeting media in different scenarios. The default margins are removed and any images are contained to the container. In previous versions we used <code>object-fit: cover</code> to ensure a 16:9 ratio but that has been removed in favor of consistent images coming from the server.</p>
 <h4 id="example">EXAMPLE</h4>
 <figure class="">
-  <img src="../../img/lanterns.jpg" alt="Lorem ipsum dolor sit amet" loading="lazy">
+  <img src="../../img/lanterns.jpg" alt="Lorem ipsum dolor sit amet" width="1140" height="641" loading="lazy">
   <figcaption>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula sem et congue iaculis. Nam vel nisi elit. Pellentesque habitant morbi tristique senectus et netus.
     <span class="byline">By <a href="#">First Last</a> <span class="credit">Publication name</span>
     </span>

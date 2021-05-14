@@ -155,6 +155,7 @@ class FakeAd extends HTMLElement {
   renderAd(width, height) {
     this.ad.style.width = `${width}px`;
     this.ad.style.height = `${height}px`;
+    this.style.setProperty("--height", "auto");
 
     if(width <= 300) {
       this.columns = 1;
