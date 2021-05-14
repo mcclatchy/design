@@ -21,7 +21,8 @@ class SEMLanding extends HTMLElement {
         background-color: white;
       }
 
-      .intro ::slotted(img) {
+      .intro ::slotted(img),
+      .intro ::slotted(object) {
         display: block;
         max-width: 500px;
       }
@@ -41,7 +42,6 @@ class SEMLanding extends HTMLElement {
       }
 
       .grid ::slotted(.card) {
-        background-color: var(--paper-color, #f4f4f4) !important;
         box-shadow: 
           0 1px 2px 0 rgba(0, 0, 0, .2),
           0 1px 5px 0 rgba(0, 0, 0, .13) !important;
