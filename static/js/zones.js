@@ -10,7 +10,7 @@ class Zones {
 
   static get zoneMap() {
     return {
-      "1": "before",
+      // "1": "before",
       "2": 3,
       "3": 6,
       "4": 11,
