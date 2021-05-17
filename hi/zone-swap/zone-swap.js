@@ -43,32 +43,8 @@ class ZoneSwap extends HTMLElement {
     }
   }
 
-  zoneElement(zone = this.zone) {
-    let ele = undefined;
-    let comboZones = document.querySelectorAll(".story-body .zone.combo");
-
-    switch(parseInt(this.zone)) {
-      case 1:
-        ele = document.querySelector("#zone-el-2");
-        break;
-      case 2:
-        ele = document.querySelector("#ConnatixVideoAd");
-        break;
-      case 3:
-        ele = comboZones[0];
-        break;
-      case 4: 
-        ele = comboZones[1];
-        break;
-      case 5:
-        ele = document.querySelector("#zone-el-105");
-        break;
-      default:
-        // Allow a generic querySelector passthrough
-        ele = document.querySelector(zone);
-    }
-
-    return ele;
+  zoneElement(qs = this.zone) {
+    return document.querySelector(qs);
   }
 
   updatePosition() {
