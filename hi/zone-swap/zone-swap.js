@@ -53,10 +53,7 @@ class ZoneSwap extends HTMLElement {
     if(ele) {
       this.hidden = false;
       ele.insertAdjacentElement("afterend", this);
-      ele.hidden = true;
-    } else if(this.zone == 2) {
-      // Zone 2 is injected so we need to ping until it's there.
-      window.setTimeout(this.updatePosition.bind(this), 1000);
+      ele.remove();
     } else {
       console.warn(`${this.localName} is unable to replace zone ${this.zone}`);
     }
