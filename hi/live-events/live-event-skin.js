@@ -158,7 +158,7 @@ class LiveEventHeader extends HTMLElement {
 
     ${this.sponsor ? `
     <div class="row">
-      <span>PRESENTED BY</span>
+      <slot name="sponsor-text"><span>PRESENTED BY</span></slot>
       <img class="sponsor" src="${this.sponsor}">
     </div>
     ` : ""}
