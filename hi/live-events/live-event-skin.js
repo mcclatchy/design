@@ -88,12 +88,13 @@ class LiveEventHeader extends HTMLElement {
         margin-bottom: 45px;
       }
 
-      .row span {
+      .row span,
+      .row ::slotted(span) {
         display: inline-block;
         font: 700 0.875rem var(--sans, "McClatchy Sans");
-        width: 105px;
         text-align: right;
         padding-right: 15px;
+        margin: 0;
       }
 
       .sponsor {
