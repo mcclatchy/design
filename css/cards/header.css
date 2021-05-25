@@ -81,6 +81,7 @@
 .opinion-banner svg {
   position: relative;
   top: .2em;
+  width: 100%;
 }
 
 .opinion-banner * {
