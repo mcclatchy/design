@@ -63,3 +63,36 @@
   object-fit: cover;
   border-radius: 50%;
 }
+
+/**
+ * Opinion banner
+ */
+
+.opinion-banner {
+  display: grid;
+  grid-template-columns: 35px min-content 1fr;
+  grid-column-gap: 15px;
+  grid-row-gap: 5px;
+  max-width: var(--story-width);
+  margin: 0 auto;
+  padding: 15px;
+}
+
+.opinion-banner svg {
+  position: relative;
+  top: .2em;
+}
+
+.opinion-banner * {
+  margin: 0;
+}
+
+@media(max-width: 700px) {
+  .opinion-banner {
+    grid-template-columns: 35px 1fr;
+  }
+
+  .opinion-banner svg {
+    grid-row: span 2;
+  }
+}
