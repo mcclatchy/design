@@ -77,7 +77,7 @@ class DynamicModal extends HTMLElement {
       }
 
       .package > ::slotted(*) {
-        margin: 10px 0 0;
+        margin: var(--ps, 10px) 0 0;
       }
 
       .package > ::slotted(:first-child) {
