@@ -2,8 +2,13 @@
 
 <header class="header {{$class}}">
   <a class="kicker h6" href="#">SECTION</a>
-  <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tempus lorem a</h1>
+  <h1 class="h1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tempus lorem a</h1>
   <div class="bio">
+    {{- if eq $class "opinion" }}
+    <div class="thumb">
+      <img src="/img/aaron_moody.jpg" alt="John Doe">
+    </div>
+    {{- end }}
     <div>
       <div class="byline">By <a href="#">John Doe</a> <span class="credit">SAMPLE NEWSPAPER</span></div>
       <div>
