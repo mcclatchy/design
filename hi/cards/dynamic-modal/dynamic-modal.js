@@ -3,8 +3,6 @@
  * Setup to allow serving through Adobe Target
  */
 
-import { trackInteraction } from "./tracking.js";
-
 class DynamicModal extends HTMLElement {
 
   /**
@@ -110,6 +108,18 @@ class DynamicModal extends HTMLElement {
           object-fit: cover;
         }
       }
+
+      /**
+       * Requires an action to close
+       */
+
+      :host(.requires-action) .card {
+        padding-right: 0;
+      }
+
+      :host(.requires-action) .close {
+        display: none;
+      }
     </style>
 
     <div class="screen"></div>
@@ -138,43 +148,42 @@ class DynamicModal extends HTMLElement {
     this.shadowRoot.appendChild(this.template.content.cloneNode(true));
 
     // Load template into Shadow DOM
-    let imgSlot = this.shadowRoot.querySelector("slot[name=image]");
+    const imgSlot = this.shadowRoot.querySelector("slot[name=image]");
     imgSlot.addEventListener("slotchange", (e) => {
       this.classList.toggle("has-img", imgSlot.assignedNodes().length > 0);
     });
 
     // Set up close events
-    let cb = this.shadowRoot.querySelector(".close");
+    const cb = this.shadowRoot.querySelector(".close");
     cb.addEventListener("click", e => {
-      trackInteraction("Close", false);
-      this.classList.remove("showing");
-    });
-
-    // Check for children with interaction messages
-    let mainSlot = this.shadowRoot.querySelector("slot#main");
-    mainSlot.addEventListener("slotchange", (e) => {
-      [...this.children].forEach((c) => {
-        let message = c.dataset.interaction;
-
-        if(message) {
-          c.addEventListener("click", (e) => {
-            trackInteraction(message, true)
-          });
-        }
-      });
+      this.close();
     });
   }
+
+  /**
+   * Fires when added to the DOM
+   */
+
+  connectedCallback() {
+    // Once this element has updated, let it decide to hide or show
+    this.hidden = false;
+  }
+  
 
   /**
    * Element methods
    */
 
-  show() {
+  open() {
+    const e = new Event("open");
     this.classList.add("showing");
+    this.dispatchEvent(e);
   }
 
-  hide() {
+  close() {
+    const e = new Event("close");
     this.classList.remove("showing");
+    this.dispatchEvent(e);
   }
 }
 
@@ -183,9 +192,3 @@ class DynamicModal extends HTMLElement {
  */
 
 customElements.define("dynamic-modal", DynamicModal);
-
-/**
- * Module export
- */
-
-export default DynamicModal;
