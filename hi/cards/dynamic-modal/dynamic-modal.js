@@ -158,6 +158,10 @@ class DynamicModal extends HTMLElement {
     cb.addEventListener("click", e => {
       this.close();
     });
+
+    // Register events
+    this.openEvent = new Event("open");
+    this.closeEvent = new Event("close");
   }
 
   /**
@@ -167,6 +171,11 @@ class DynamicModal extends HTMLElement {
   connectedCallback() {
     // Once this element has updated, let it decide to hide or show
     this.hidden = false;
+
+    // Check for the showing class and dispatch the open event if there
+    if(this.classList.contains("showing")) {
+      this.dispatchEvent(this.openEvent);
+    }
   }
   
 
@@ -175,15 +184,13 @@ class DynamicModal extends HTMLElement {
    */
 
   open() {
-    const e = new Event("open");
     this.classList.add("showing");
-    this.dispatchEvent(e);
+    this.dispatchEvent(this.openEvent);
   }
 
   close() {
-    const e = new Event("close");
     this.classList.remove("showing");
-    this.dispatchEvent(e);
+    this.dispatchEvent(this.closeEvent);
   }
 }
 
