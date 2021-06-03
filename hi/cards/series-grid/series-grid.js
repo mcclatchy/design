@@ -131,6 +131,7 @@ class SeriesGrid extends HTMLElement {
     this.stories.forEach((s) => {
       let links = s.querySelectorAll("a");
       links.forEach((l) => {
+        // Add the tracking string
         l.hash = "storylink=series-grid";
       })
 
