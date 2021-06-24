@@ -17,6 +17,7 @@ class LabPanel extends HTMLElement {
       --ht: uppercase;
       --tf: var(--sans);
       --padding: 0;
+      --lc: #31409F;
     }
 
     .package {
