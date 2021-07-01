@@ -718,6 +718,7 @@ section.big-news {
 .upper-nav .tab .favicon {
   max-width: unset;
   height: 24px;
+  width: 24px;
 }
 
 .upper-nav .tab .logo {
