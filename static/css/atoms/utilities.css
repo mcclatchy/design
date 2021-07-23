@@ -90,3 +90,7 @@ summary, .summary {
   text-align: center;
   --pa: center;
 }
+
+.faded {
+  opacity: 0;
+}

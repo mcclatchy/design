@@ -52,7 +52,7 @@ class OfferCard extends HTMLElement {
 
       .kicker {
         display: flex;
-        justify-content: center;
+        place-content: center;
       }
 
       .kicker::slotted(*) {
@@ -65,18 +65,13 @@ class OfferCard extends HTMLElement {
       .package {
         display: grid;
         grid-row-gap: var(--ps);
-        align-self: center;
-        justify-items: start;
+        place-items: var(--card-items, start);
+        place-content: var(--card-content, center start);
         padding: 15px;
       }
 
       .package::slotted(*) {
         margin: 0;
-      }
-
-      :host(.center) .package {
-        justify-items: center;
-        text-align: center;
       }
     </style>
 

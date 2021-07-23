@@ -39,7 +39,10 @@ class LandingPage extends HTMLElement {
       /* Panel display */
       :host(.panels) {
         display: block;
+        text-align: center;
         --gap: 0px;
+        --card-items: center;
+        --card-content: center;
       }
 
       :host(.panels) ::slotted(*) {
