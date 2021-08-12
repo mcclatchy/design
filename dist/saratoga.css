@@ -864,6 +864,10 @@ summary, .summary {
   --pa: center;
 }
 
+.faded {
+  opacity: 0;
+}
+
 /**
  * Social media 
  */
@@ -2067,6 +2071,7 @@ section.big-news {
 
 .flag .signin .button {
   align-self: unset;
+  background-color: #5169B8;
 }
 
 .flag .signin .expander {
