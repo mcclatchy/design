@@ -11,7 +11,7 @@ button, .button {
 
 button:hover, 
 .button:hover {
-  /* Button colors to not change on hover */
+  /* Button colors do not change on hover */
   color: var(--bc);
 }
 

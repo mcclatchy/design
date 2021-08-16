@@ -187,8 +187,37 @@ fake-ad {
   <fake-ad size="[[970,250],[728,90]]" text="zone-el-2"></fake-ad>
 </div>
 
-<div id="above-grid" class="section">
-  
+<!-- Without slots we may need new areas in CUE -->
+<div id="above-grid">
+  <script defer src="https://media.mcclatchy.com/hi/cards/lab-panel/lab-panel.js"></script>
+  <lab-panel slot="above" class="fill impact" style="background-color: #222;">
+    <div class="package">
+      <img src="https://media.mcclatchy.com/2020/equity-lab/equity-lab-logo-reversed.svg" alt="The Equity Lab logo">
+      <p class="h2 sans bold" style="margin: 30px auto; text-align: center;">We’re a team of community-funded journalists at The Sacramento Bee with a mission to deeply engage with disenfranchised communities and elevate stories of community and collective importance.</p>
+      <style>
+        .lab-button-grid {
+          grid-gap: 15px;
+          align-self: stretch;
+        }
+
+        @media(max-width: 767px) {
+          .lab-button-grid {
+            grid-template-columns: 1fr;
+            align-self:unset;
+          }
+        }
+      </style>
+      <div class="grid lab-button-grid">
+        <a class="button big" href="#whatwewilldo">Read more about the lab</a>
+        <a class="button big" href="https://www.sacregcf.org/donors/partnering-with-us/fundholder-stories-fund-list/impact-media-fund/" target="_blank">Donate to The Equity Lab </a>
+        <a class="button big" href="https://www.sacbee.com/news/equity-lab/accountability" target="_blank">Accountability</a>
+        <a class="button big" href="https://www.sacbee.com/news/equity-lab/representation" target="_blank">Representation</a>
+      </div>
+    </div>
+  </lab-panel>
+</div>
+
+
 <section class="section-nav">
   <h1 class="expander title h1" onclick="this.classList.toggle('open')">Sports</h1>
   <div class="icons summary">
@@ -199,7 +228,6 @@ fake-ad {
   </div>
 </section>
 
-</div>
 
 <!-- VUE layer -->  
 <section class="section grid">
@@ -513,11 +541,22 @@ fake-ad {
   <div class="load-more">
     <a class="button big impact" href="#page2">Load More</a>
   </div>
-
-  <!-- CUE banner options or Target -->
 </section>
 
-<div id="below-grid" class="section"></div>
+<!-- Without slots we may need new areas in CUE -->
+<div id="below-grid">
+  <lab-panel slot="below" id="whatwewilldo" style="background-color: white;">
+    <h3>What we'll do</h3>
+    <p>The Sacramento Bee Equity Lab has two pillars.</p>
+    <p>Our accountability journalism is concerned with stories you can find only in the Central Valley. We are directly engaged with readers to elevate the stories that most affect our livelihoods, while holding people and institutions accountable for fair practices.</p>
+    <p>Our representative journalism is focused on specific community coverage of the everyday lives, cultures, achievements and concerns of communities underserved by mainstream media and news outlets.</p>
+  </lab-panel>
+  <lab-panel slot="below">
+    <h3>Statement of Editorial Independence</h3>
+    <p>Editorial independence has been a core value at The Sacramento Bee for more than 160 years. We strive to deliver high-impact journalism in the public interest. While we value the support and partnership of our funding partners, outside funders will not have any editorial oversight, approval or influence over the content produced by the fellow or other members of The Sacramento Bee newsroom.
+</p>
+  </lab-panel>
+</div>
 
 <footer class="impact">
   <section class="footer">
