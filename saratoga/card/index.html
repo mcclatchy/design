@@ -29,7 +29,7 @@
     
     <link rel="stylesheet" href="../../css/molecules/social-media.css">
     <link rel="stylesheet" href="../../css/molecules/expander.css">
-    <link rel="stylesheet" href="../../css/molecules/flex-columns.css">
+    
     <link rel="stylesheet" href="../../css/molecules/flex-row.css">
     <link rel="stylesheet" href="../../css/molecules/grid.css">
     <link rel="stylesheet" href="../../css/molecules/story-body.css">
@@ -63,7 +63,6 @@
     <link rel="stylesheet" href="../../css/decks/footer.css">
     <link rel="stylesheet" href="../../css/decks/menu.css">
     <link rel="stylesheet" href="../../css/decks/search.css">
-    <link rel="stylesheet" href="../../css/decks/eedition-portal.css">
     <link rel="stylesheet" href="../../css/decks/impact2020.css">
     <link rel="stylesheet" href="../../css/decks/display-classes.css">
     <link rel="stylesheet" href="../../css/decks/purple-tuesdays.css">
@@ -103,7 +102,7 @@
     <p>The card molecule extends the paper base molecule and adds Flexbox. By doing so the size of the card is stretched to match adjacent cards in each row. Card molecules should be the direct children of any Flexbox or Grid container.</p>
 <h4 id="example">Example</h4>
 <div class="example grid shadow">
-  <article class="card ">
+  <article class="card " style="">
   <figure>
     <a href="https://mcclatchy.github.io/saratoga/food/205504249/">
       <img src="../../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
@@ -116,7 +115,7 @@
   </div>
 </article>
 
-  <article class="card ">
+  <article class="card " style="">
   <figure>
     <a href="https://mcclatchy.github.io/saratoga/food/205504249/">
       <img src="../../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
@@ -131,7 +130,7 @@
 
 </div>
 <h4 id="html">HTML</h4>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080;font-weight:bold">article</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;card &#34;</span>&gt;
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080;font-weight:bold">article</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;card &#34;</span> <span style="color:#f00">style</span>=<span style="color:#00f">&#34;&#34;</span>&gt;
   &lt;<span style="color:#000080;font-weight:bold">figure</span>&gt;
     &lt;<span style="color:#000080;font-weight:bold">a</span> <span style="color:#f00">href</span>=<span style="color:#00f">&#34;https://mcclatchy.github.io/saratoga/food/205504249/&#34;</span>&gt;
       &lt;<span style="color:#000080;font-weight:bold">img</span> <span style="color:#f00">src</span>=<span style="color:#00f">&#34;/img/kitten.jpg&#34;</span> <span style="color:#f00">alt</span>=<span style="color:#00f">&#34;Kitten clings for life during Hurricane Florence&#34;</span> <span style="color:#f00">width</span>=<span style="color:#00f">&#34;1140&#34;</span> <span style="color:#f00">height</span>=<span style="color:#00f">&#34;641&#34;</span> <span style="color:#f00">loading</span>=<span style="color:#00f">&#34;lazy&#34;</span>&gt;
@@ -147,9 +146,8 @@
 <h2 id="horizontal-version">Horizontal version</h2>
 <p>The card can also be made horizontal by adding a class with the same name.</p>
 <h4 id="example-1">Example</h4>
-<article class="card horizontal">
+<article class="card horizontal" style="">
   <figure>
-    <div class="label sticky"><h5 class="impact">READ NEXT</h5></div>
     <a href="https://mcclatchy.github.io/saratoga/food/205504249/">
       <img src="../../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
     </a>
@@ -162,9 +160,8 @@
 </article>
 
 <h4 id="html-1">HTML</h4>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080;font-weight:bold">article</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;card horizontal&#34;</span>&gt;
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080;font-weight:bold">article</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;card horizontal&#34;</span> <span style="color:#f00">style</span>=<span style="color:#00f">&#34;&#34;</span>&gt;
   &lt;<span style="color:#000080;font-weight:bold">figure</span>&gt;
-    &lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;label sticky&#34;</span>&gt;&lt;<span style="color:#000080;font-weight:bold">h5</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;impact&#34;</span>&gt;READ NEXT&lt;/<span style="color:#000080;font-weight:bold">h5</span>&gt;&lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;
     &lt;<span style="color:#000080;font-weight:bold">a</span> <span style="color:#f00">href</span>=<span style="color:#00f">&#34;https://mcclatchy.github.io/saratoga/food/205504249/&#34;</span>&gt;
       &lt;<span style="color:#000080;font-weight:bold">img</span> <span style="color:#f00">src</span>=<span style="color:#00f">&#34;/img/kitten.jpg&#34;</span> <span style="color:#f00">alt</span>=<span style="color:#00f">&#34;Kitten clings for life during Hurricane Florence&#34;</span> <span style="color:#f00">width</span>=<span style="color:#00f">&#34;1140&#34;</span> <span style="color:#f00">height</span>=<span style="color:#00f">&#34;641&#34;</span> <span style="color:#f00">loading</span>=<span style="color:#00f">&#34;lazy&#34;</span>&gt;
     &lt;/<span style="color:#000080;font-weight:bold">a</span>&gt;
@@ -414,14 +411,6 @@
         <a class="" href="https://mcclatchy.github.io/design/saratoga/decks/contests/">contests</a>
       </h4>
       <p class="summary">An alternative grid and card arrangement for contests.</p>
-    </div>
-    
-    
-    <div class="package">
-      <h4 class="sans bold">
-        <a class="" href="https://mcclatchy.github.io/design/saratoga/decks/e-edition/">eEdition</a>
-      </h4>
-      <p class="summary">A portal page with recent eEditions.</p>
     </div>
     
     

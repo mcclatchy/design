@@ -24,7 +24,7 @@
   margin: 0;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 630px) {
 	.header .bio {
 		display: flex;
     align-items: center;

@@ -89,17 +89,17 @@ a:hover {
 }
 
 h1, .h1 {
-  font-size: 1.875rem;
-  line-height: 1.1em;
+  font-size: var(--hs, 1.875rem);
   --hw: 700;
+  line-height: 1.1em;
 }
 
 h2, .h2 {
-  font-size: x-large;
+  font-size: var(--hs, x-large);
 }
 
 h3, .h3 {
-  font-size: larger;
+  font-size: var(--hs, larger);
 }
 
 h4, .h4 {

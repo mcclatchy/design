@@ -1,12 +1,11 @@
 .section-nav {
   padding: 0;
-  max-width: 1170px;
+  /* max-width: 1170px; */
   --lc: #707070;
 }
 
 .section-nav .title {
   margin: 0;
-  padding: 0 15px;
 }
 
 .section-nav .title:after {
@@ -28,7 +27,7 @@
   padding-bottom: 0;
 }
 
-@media(max-width: 600px) {
+@media(max-width: 630px) {
   .section-nav .title {
     font-size: x-large;
     text-align: center;

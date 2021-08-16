@@ -82,7 +82,7 @@
 	align-self: unset;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 630px) {
 	.modal-newsletter .grid {
 		grid-template-columns: 3fr 1fr;
 	}

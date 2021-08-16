@@ -36,7 +36,7 @@
 
 /* section > section fix */
 
-@media(min-width: 600px) {
+@media(min-width: 630px) {
   section#main-content {
     padding: 0 15px;
   }
