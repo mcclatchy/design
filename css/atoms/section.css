@@ -92,8 +92,7 @@ section.full-bleed,
   padding: 0 15px;
 }
 
-.section .section-label,
-.section .section-nav {
+.section .section-label {
   grid-column: 1/-1;
   margin: 0;
   padding: 0 15px;
@@ -125,8 +124,7 @@ section.full-bleed,
 
 @media(min-width: 630px) {
   .section .more-link,
-  .section .section-label,
-  .section .section-nav {
+  .section .section-label {
     padding: 0;
   }
 }
