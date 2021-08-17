@@ -1,0 +1,99 @@
+/**
+ * .sections
+ */
+
+.section {
+  display: block;
+  max-width: var(--section-width);
+  margin: 30px auto;
+}
+
+@media (min-width: 630px) {
+  .section {
+    padding: 0 15px;
+  }
+}
+
+/**
+ * Card rules
+ */
+
+::slotted(.lead-story) {
+  --hs: 1.875rem;
+  --hw: bold;
+}
+
+@media (min-width: 660px) {
+  ::slotted(.lead-story) {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+}
+
+::slotted(.in-depth) {
+  grid-row: 8;
+  grid-column: 1/-1;
+}
+
+::slotted(.digest) {
+  grid-row: 14;
+}
+
+::slotted(#newsletter-signUpWidget) {
+  grid-row: 16;
+  grid-column: 1;
+}
+
+::slotted(.load-more) {
+  grid-column: 1/-1;
+}
+
+
+/**
+ * Zones
+ */
+
+::slotted(.zone) {
+  grid-column: 1/-1;
+}
+
+::slotted(#zone-el-5) {
+  grid-row: 4;
+}
+
+::slotted(#zone-el-6) {
+  grid-row: 7;
+}
+
+::slotted(#zone-el-8) {
+  grid-row: 10;
+}
+
+::slotted(#zone-el-9) {
+  grid-row: 13;
+}
+
+/**
+ * Two columns and up
+ */
+
+@media(min-width: 660px) {
+  ::slotted(.digest) {
+    grid-row-end: span 2;
+  }
+
+  ::slotted(#newsletter-signUpWidget) {
+    grid-row: 6;
+    grid-column: 1;
+  }
+}
+
+/**
+ * Three columns
+ */
+
+@media(min-width: 990px) {
+  ::slotted(.digest) {
+    grid-row-start: 1;
+  }
+}

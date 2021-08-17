@@ -29,11 +29,7 @@ section.full-bleed,
  * Card rules
  */
 
-.section .big-news {
-  grid-row: 1;
-}
-
-.section .lead-story .package {
+.section .lead-story {
   --hs: 1.875rem;
   --hw: bold;
 }
