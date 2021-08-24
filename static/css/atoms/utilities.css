@@ -78,6 +78,10 @@ summary, .summary {
   display: inline;
 }
 
+.inline-block {
+  display: inline-block;
+}
+
 .relative {
   position: relative;
 }
