@@ -4,10 +4,8 @@
  * need to "line up with the grid".
  */
 
-.big-news {
+section.big-news {
   padding: 0;
-  grid-column: 1/-1;
-  order: 0;
 }
 
 .big-news .latest {

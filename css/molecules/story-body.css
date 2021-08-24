@@ -140,6 +140,14 @@
 }
 
 /**
+ * Tables
+ */
+
+.story-body table {
+  max-width: 758px;
+}
+
+/**
  * Immersive card 
  */
 

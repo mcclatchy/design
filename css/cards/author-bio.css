@@ -8,7 +8,7 @@
   padding: 0 15px;
 }
 
-@media (min-width: 630px) {
+@media (min-width: 600px) {
   .author-bio {
     padding: 0;
   }

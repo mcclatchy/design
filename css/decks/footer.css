@@ -51,7 +51,7 @@
   margin: 15px;
 }
 
-@media (min-width: 630px) {
+@media (min-width: 600px) {
   .footer-links {
     display: flex;
     flex: 1 1 auto;

@@ -29,7 +29,7 @@
     
     <link rel="stylesheet" href="../../../css/molecules/social-media.css">
     <link rel="stylesheet" href="../../../css/molecules/expander.css">
-    
+    <link rel="stylesheet" href="../../../css/molecules/flex-columns.css">
     <link rel="stylesheet" href="../../../css/molecules/flex-row.css">
     <link rel="stylesheet" href="../../../css/molecules/grid.css">
     <link rel="stylesheet" href="../../../css/molecules/story-body.css">
@@ -57,13 +57,13 @@
     <link rel="stylesheet" href="../../../css/cards/upper-nav.css">
     <link rel="stylesheet" href="../../../css/cards/sponsor.css">
     <link rel="stylesheet" href="../../../css/cards/gallery.css">
-    <link rel="stylesheet" href="../../../css/cards/panel.css">
 
     
     <link rel="stylesheet" href="../../../css/decks/flag.css">
     <link rel="stylesheet" href="../../../css/decks/footer.css">
     <link rel="stylesheet" href="../../../css/decks/menu.css">
     <link rel="stylesheet" href="../../../css/decks/search.css">
+    <link rel="stylesheet" href="../../../css/decks/eedition-portal.css">
     <link rel="stylesheet" href="../../../css/decks/impact2020.css">
     <link rel="stylesheet" href="../../../css/decks/display-classes.css">
     <link rel="stylesheet" href="../../../css/decks/purple-tuesdays.css">
@@ -192,13 +192,7 @@ fake-ad {
 </section>
 
 
-
-<div id="zone-el-2" class="zone zone-el section">
-  <fake-ad size="[[970,250],[728,90]]" text="zone-el-2"></fake-ad>
-</div>
-
-<div class="section">
-  <div class="big-news paper">
+<section class="big-news paper">
   <a href="#" class="label"><h5 class="impact">HURRICANE FLORENCE</h5></a>
   <h5 class="latest">LATEST NEWS</h5>
   <div class="grid" data-children="3">
@@ -251,21 +245,18 @@ fake-ad {
       </div>
     </article>
   </div>
-</div>
+</section>
 
- 
-  <!-- potentially new ad to counter permanent big-news on some markets -->
-  <div id="zone-el-bn" class="zone zone-el section">
-    <fake-ad size="[[970,250],[728,90]]" text="New Big News Ad?"></fake-ad>
-  </div>
-</div>
 
-<div id="above-grid"></div>
+<section>
+  <fake-ad size="[[970,250],[728,90],[300,50]]"></fake-ad>
+</section>
 
-<!-- VUE layer -->  
-<section class="section grid">
-  <!-- Default server response for any section -->
-  <article class="card lead-story" style="">
+<section>
+  <div class="flex-columns reverse">
+    <div class="main-stage">
+      <div class="flex-columns">
+        <article class="card ">
   <figure>
     <a href="https://mcclatchy.github.io/saratoga/food/205504249/">
       <img src="../../../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
@@ -273,26 +264,14 @@ fake-ad {
   </figure>
   <div class="package">
     <a class="kicker h6" href="https://mcclatchy.github.io/saratoga/food/">FOOD</a>
-    <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
-    <p class="summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet tellus dapibus, efficitur dolor et, convallis ex. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vel pharetra neque.</p>
+    <h2 class="h1"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
     <time>March 16, 2018 11:33 am</time>
   </div>
 </article>
 
-  <article class="card " style="">
-  <figure>
-    <a href="https://mcclatchy.github.io/saratoga/food/205504249/">
-      <img src="../../../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
-    </a>
-  </figure>
-  <div class="package">
-    <a class="kicker h6" href="https://mcclatchy.github.io/saratoga/food/">FOOD</a>
-    <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
-    <time>March 16, 2018 11:33 am</time>
-  </div>
-</article>
-
-  <article class="card " style="">
+      </div>
+      <div class="flex-columns">
+        <article class="card ">
   <figure>
     <a href="https://mcclatchy.github.io/saratoga/food/205504249/">
       <img src="../../../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
@@ -305,7 +284,7 @@ fake-ad {
   </div>
 </article>
 
-  <article class="card " style="">
+        <article class="card ">
   <figure>
     <a href="https://mcclatchy.github.io/saratoga/food/205504249/">
       <img src="../../../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
@@ -318,7 +297,7 @@ fake-ad {
   </div>
 </article>
 
-  <article class="card " style="">
+        <article class="card ">
   <figure>
     <a href="https://mcclatchy.github.io/saratoga/food/205504249/">
       <img src="../../../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
@@ -331,7 +310,7 @@ fake-ad {
   </div>
 </article>
 
-  <article class="card " style="">
+        <article class="card ">
   <figure>
     <a href="https://mcclatchy.github.io/saratoga/food/205504249/">
       <img src="../../../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
@@ -344,7 +323,7 @@ fake-ad {
   </div>
 </article>
 
-  <article class="card " style="">
+        <article class="card ">
   <figure>
     <a href="https://mcclatchy.github.io/saratoga/food/205504249/">
       <img src="../../../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
@@ -357,7 +336,7 @@ fake-ad {
   </div>
 </article>
 
-  <article class="card " style="">
+        <article class="card ">
   <figure>
     <a href="https://mcclatchy.github.io/saratoga/food/205504249/">
       <img src="../../../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
@@ -370,165 +349,10 @@ fake-ad {
   </div>
 </article>
 
-  <article class="card " style="">
-  <figure>
-    <a href="https://mcclatchy.github.io/saratoga/food/205504249/">
-      <img src="../../../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
-    </a>
-  </figure>
-  <div class="package">
-    <a class="kicker h6" href="https://mcclatchy.github.io/saratoga/food/">FOOD</a>
-    <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
-    <time>March 16, 2018 11:33 am</time>
-  </div>
-</article>
-
-  <article class="card " style="">
-  <figure>
-    <a href="https://mcclatchy.github.io/saratoga/food/205504249/">
-      <img src="../../../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
-    </a>
-  </figure>
-  <div class="package">
-    <a class="kicker h6" href="https://mcclatchy.github.io/saratoga/food/">FOOD</a>
-    <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
-    <time>March 16, 2018 11:33 am</time>
-  </div>
-</article>
-
-  <article class="card " style="">
-  <figure>
-    <a href="https://mcclatchy.github.io/saratoga/food/205504249/">
-      <img src="../../../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
-    </a>
-  </figure>
-  <div class="package">
-    <a class="kicker h6" href="https://mcclatchy.github.io/saratoga/food/">FOOD</a>
-    <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
-    <time>March 16, 2018 11:33 am</time>
-  </div>
-</article>
-
-  <article class="card " style="">
-  <figure>
-    <a href="https://mcclatchy.github.io/saratoga/food/205504249/">
-      <img src="../../../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
-    </a>
-  </figure>
-  <div class="package">
-    <a class="kicker h6" href="https://mcclatchy.github.io/saratoga/food/">FOOD</a>
-    <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
-    <time>March 16, 2018 11:33 am</time>
-  </div>
-</article>
-
-  <article class="card " style="">
-  <figure>
-    <a href="https://mcclatchy.github.io/saratoga/food/205504249/">
-      <img src="../../../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
-    </a>
-  </figure>
-  <div class="package">
-    <a class="kicker h6" href="https://mcclatchy.github.io/saratoga/food/">FOOD</a>
-    <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
-    <time>March 16, 2018 11:33 am</time>
-  </div>
-</article>
-
-  <article class="card " style="">
-  <figure>
-    <a href="https://mcclatchy.github.io/saratoga/food/205504249/">
-      <img src="../../../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
-    </a>
-  </figure>
-  <div class="package">
-    <a class="kicker h6" href="https://mcclatchy.github.io/saratoga/food/">FOOD</a>
-    <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
-    <time>March 16, 2018 11:33 am</time>
-  </div>
-</article>
-
-  <article class="card " style="">
-  <figure>
-    <a href="https://mcclatchy.github.io/saratoga/food/205504249/">
-      <img src="../../../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
-    </a>
-  </figure>
-  <div class="package">
-    <a class="kicker h6" href="https://mcclatchy.github.io/saratoga/food/">FOOD</a>
-    <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
-    <time>March 16, 2018 11:33 am</time>
-  </div>
-</article>
-
-  <article class="card " style="">
-  <figure>
-    <a href="https://mcclatchy.github.io/saratoga/food/205504249/">
-      <img src="../../../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
-    </a>
-  </figure>
-  <div class="package">
-    <a class="kicker h6" href="https://mcclatchy.github.io/saratoga/food/">FOOD</a>
-    <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
-    <time>March 16, 2018 11:33 am</time>
-  </div>
-</article>
-
-  <article class="card " style="">
-  <figure>
-    <a href="https://mcclatchy.github.io/saratoga/food/205504249/">
-      <img src="../../../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
-    </a>
-  </figure>
-  <div class="package">
-    <a class="kicker h6" href="https://mcclatchy.github.io/saratoga/food/">FOOD</a>
-    <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
-    <time>March 16, 2018 11:33 am</time>
-  </div>
-</article>
-
-  <article class="card " style="">
-  <figure>
-    <a href="https://mcclatchy.github.io/saratoga/food/205504249/">
-      <img src="../../../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
-    </a>
-  </figure>
-  <div class="package">
-    <a class="kicker h6" href="https://mcclatchy.github.io/saratoga/food/">FOOD</a>
-    <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
-    <time>March 16, 2018 11:33 am</time>
-  </div>
-</article>
-
-  <article class="card " style="">
-  <figure>
-    <a href="https://mcclatchy.github.io/saratoga/food/205504249/">
-      <img src="../../../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
-    </a>
-  </figure>
-  <div class="package">
-    <a class="kicker h6" href="https://mcclatchy.github.io/saratoga/food/">FOOD</a>
-    <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
-    <time>March 16, 2018 11:33 am</time>
-  </div>
-</article>
-
-  <article class="card " style="">
-  <figure>
-    <a href="https://mcclatchy.github.io/saratoga/food/205504249/">
-      <img src="../../../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
-    </a>
-  </figure>
-  <div class="package">
-    <a class="kicker h6" href="https://mcclatchy.github.io/saratoga/food/">FOOD</a>
-    <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
-    <time>March 16, 2018 11:33 am</time>
-  </div>
-</article>
-
-
-  <!-- extra stuff coming out of WPS -->
-  <div class="digest">
+      </div>
+    </div>
+    <div class="flex-columns rail">
+      <div class="digest">
   <div class="paper ">
     <a href="https://mcclatchy.github.io/saratoga/opinion/" class="label ">
       <span class="h5">OPINION</span>
@@ -549,38 +373,16 @@ fake-ad {
       <h2 class="h3"><a href="https://mcclatchy.github.io/saratoga/opinion/205583064/">Letters: Readers discuss teen drinking, tax-cut benefits in Missouri and student protests</a></h2>
       <time>March 16, 2018 4:08 pm</time>
     </article>
-    <article class="package">
-      <h2 class="h3"><a href="https://mcclatchy.github.io/saratoga/opinion/205583064/">Usain Bolt would consider racing Chiefs’ Tyreek Hill under certain conditions</a></h2>
-      <time>March 16, 2018 4:08 pm</time>
-    </article>
   </div>
   <a href="https://mcclatchy.github.io/saratoga/opinion/" class="more-link">MORE OPINION</a>
 </div>
 
-  
+      <fake-ad size="[300,600]"></fake-ad>
+    </div>
+  </div>
+</section>
 
-
-
-
-
-
-
-<div id="newsletter-signUpWidget" class="impact">
-  <form class="inline-cta package ">
-    <h1>Breaking news</h1>
-    <p class="summary">Be the first to know when big news breaks</p>
-    <input type="hidden" value="breaking newsletter" id="newsletterType">
-    <input type="email" placeholder="Email">
-    <button class="button">Sign Up</button>
-    <p class="small sans gray">This site is protected by reCAPTCHA and the Google <a href="https://policies.google.com/privacy">Privacy Policy</a> and <a href="https://policies.google.com/terms">Terms of Service</a> apply.</p>
-  </form>
-</div>
-
-
-
-
-
-
+<section>
   <div class="card horizontal in-depth">
   <figure>
     <div class="label sticky"><h5>IN DEPTH</h5></div>
@@ -595,28 +397,199 @@ fake-ad {
   </div>
 </div>
 
-
-  <!-- Ads all go here -->
-  <div id="zone-el-5" class="zone">
-    <fake-ad size="[[970,250],[728,90]]" text="zone-el-5"></fake-ad>
-  </div>
-
-  <div id="zone-el-6" class="zone">
-    <fake-ad size="[[970,250],[728,90]]" text="zone-el-6"></fake-ad>
-  </div>
-
-  <div id="zone-el-8" class="zone">
-    <fake-ad size="[[970,250],[728,90]]" text="zone-el-8"></fake-ad>
-  </div>
-
-  <div id="zone-el-9" class="zone">
-    <fake-ad size="[[970,250],[728,90]]" text="zone-el-9"></fake-ad>
-  </div>
-
-  <!-- CUE banner options or Target -->
 </section>
 
-<div id="below-grid"></div>
+<section>
+  <div class="flex-columns">
+    <div class="main-stage">
+      <div class="flex-columns">
+        <div class="digest">
+  <div class="paper ">
+    <a href="https://mcclatchy.github.io/saratoga/opinion/" class="label sticky">
+      <span class="h5">OPINION</span>
+    </a>
+    <article class="card">
+      <figure>
+        <a href="https://mcclatchy.github.io/saratoga/opinion/205928724/">
+          <img src="https://pics.mcclatchyinteractive.com/opinion/gi1163/picture205928719/ALTERNATES/LANDSCAPE_640/AP_18073734498485" srcset="https://pics.mcclatchyinteractive.com/opinion/gi1163/picture205928719/ALTERNATES/LANDSCAPE_1140/AP_18073734498485 1140w"> 
+        </a>
+      </figure>
+      <div class="package">
+        <h2 class="h3"><a href="https://mcclatchy.github.io/saratoga/opinion/205928724/">Kudlow joins White House that sorely needs cooler heads to prevail</a></h2>
+        <time>March 19, 2018 5:34 pm</time>
+      </div>
+    </article>
+    <article class="package">
+      <h2 class="h3"><a href="https://mcclatchy.github.io/saratoga/opinion/205579084/">The Episcopal Church changed course for our LGBT members</a></h2>
+      <time>March 16, 2018 3:42 pm</time>
+    </article>
+    <article class="package">
+      <h2 class="h3"><a href="https://mcclatchy.github.io/saratoga/opinion/205581414/">The Kansas Republican Party is taking a stance on transgender identity</a></h2>
+      <time>March 16, 2018 3:58 pm</time>
+    </article>
+    <article class="package">
+      <h2 class="h3"><a href="https://mcclatchy.github.io/saratoga/opinion/205583064/">Letters: Readers discuss teen drinking, tax-cut benefits in Missouri and student protests</a></h2>
+      <time>March 16, 2018 4:08 pm</time>
+    </article>
+  </div>
+  <a href="https://mcclatchy.github.io/saratoga/opinion/" class="more-link">MORE OPINION</a>
+</div>
+
+        <div class="digest">
+  <div class="paper ">
+    <a href="https://mcclatchy.github.io/saratoga/opinion/" class="label sticky">
+      <span class="h5">OPINION</span>
+    </a>
+    <article class="card">
+      <figure>
+        <a href="https://mcclatchy.github.io/saratoga/opinion/205928724/">
+          <img src="https://pics.mcclatchyinteractive.com/opinion/gi1163/picture205928719/ALTERNATES/LANDSCAPE_640/AP_18073734498485" srcset="https://pics.mcclatchyinteractive.com/opinion/gi1163/picture205928719/ALTERNATES/LANDSCAPE_1140/AP_18073734498485 1140w"> 
+        </a>
+      </figure>
+      <div class="package">
+        <h2 class="h3"><a href="https://mcclatchy.github.io/saratoga/opinion/205928724/">Kudlow joins White House that sorely needs cooler heads to prevail</a></h2>
+        <time>March 19, 2018 5:34 pm</time>
+      </div>
+    </article>
+    <article class="package">
+      <h2 class="h3"><a href="https://mcclatchy.github.io/saratoga/opinion/205579084/">The Episcopal Church changed course for our LGBT members</a></h2>
+      <time>March 16, 2018 3:42 pm</time>
+    </article>
+    <article class="package">
+      <h2 class="h3"><a href="https://mcclatchy.github.io/saratoga/opinion/205581414/">The Kansas Republican Party is taking a stance on transgender identity</a></h2>
+      <time>March 16, 2018 3:58 pm</time>
+    </article>
+    <article class="package">
+      <h2 class="h3"><a href="https://mcclatchy.github.io/saratoga/opinion/205583064/">Letters: Readers discuss teen drinking, tax-cut benefits in Missouri and student protests</a></h2>
+      <time>March 16, 2018 4:08 pm</time>
+    </article>
+  </div>
+  <a href="https://mcclatchy.github.io/saratoga/opinion/" class="more-link">MORE OPINION</a>
+</div>
+
+      </div>
+      <div class="flex-columns">
+        <div class="digest">
+  <div class="paper ">
+    <a href="https://mcclatchy.github.io/saratoga/opinion/" class="label sticky">
+      <span class="h5">OPINION</span>
+    </a>
+    <article class="card">
+      <figure>
+        <a href="https://mcclatchy.github.io/saratoga/opinion/205928724/">
+          <img src="https://pics.mcclatchyinteractive.com/opinion/gi1163/picture205928719/ALTERNATES/LANDSCAPE_640/AP_18073734498485" srcset="https://pics.mcclatchyinteractive.com/opinion/gi1163/picture205928719/ALTERNATES/LANDSCAPE_1140/AP_18073734498485 1140w"> 
+        </a>
+      </figure>
+      <div class="package">
+        <h2 class="h3"><a href="https://mcclatchy.github.io/saratoga/opinion/205928724/">Kudlow joins White House that sorely needs cooler heads to prevail</a></h2>
+        <time>March 19, 2018 5:34 pm</time>
+      </div>
+    </article>
+    <article class="package">
+      <h2 class="h3"><a href="https://mcclatchy.github.io/saratoga/opinion/205579084/">The Episcopal Church changed course for our LGBT members</a></h2>
+      <time>March 16, 2018 3:42 pm</time>
+    </article>
+    <article class="package">
+      <h2 class="h3"><a href="https://mcclatchy.github.io/saratoga/opinion/205581414/">The Kansas Republican Party is taking a stance on transgender identity</a></h2>
+      <time>March 16, 2018 3:58 pm</time>
+    </article>
+    <article class="package">
+      <h2 class="h3"><a href="https://mcclatchy.github.io/saratoga/opinion/205583064/">Letters: Readers discuss teen drinking, tax-cut benefits in Missouri and student protests</a></h2>
+      <time>March 16, 2018 4:08 pm</time>
+    </article>
+  </div>
+  <a href="https://mcclatchy.github.io/saratoga/opinion/" class="more-link">MORE OPINION</a>
+</div>
+
+        <div class="digest">
+  <div class="paper ">
+    <a href="https://mcclatchy.github.io/saratoga/opinion/" class="label sticky">
+      <span class="h5">OPINION</span>
+    </a>
+    <article class="card">
+      <figure>
+        <a href="https://mcclatchy.github.io/saratoga/opinion/205928724/">
+          <img src="https://pics.mcclatchyinteractive.com/opinion/gi1163/picture205928719/ALTERNATES/LANDSCAPE_640/AP_18073734498485" srcset="https://pics.mcclatchyinteractive.com/opinion/gi1163/picture205928719/ALTERNATES/LANDSCAPE_1140/AP_18073734498485 1140w"> 
+        </a>
+      </figure>
+      <div class="package">
+        <h2 class="h3"><a href="https://mcclatchy.github.io/saratoga/opinion/205928724/">Kudlow joins White House that sorely needs cooler heads to prevail</a></h2>
+        <time>March 19, 2018 5:34 pm</time>
+      </div>
+    </article>
+    <article class="package">
+      <h2 class="h3"><a href="https://mcclatchy.github.io/saratoga/opinion/205579084/">The Episcopal Church changed course for our LGBT members</a></h2>
+      <time>March 16, 2018 3:42 pm</time>
+    </article>
+    <article class="package">
+      <h2 class="h3"><a href="https://mcclatchy.github.io/saratoga/opinion/205581414/">The Kansas Republican Party is taking a stance on transgender identity</a></h2>
+      <time>March 16, 2018 3:58 pm</time>
+    </article>
+    <article class="package">
+      <h2 class="h3"><a href="https://mcclatchy.github.io/saratoga/opinion/205583064/">Letters: Readers discuss teen drinking, tax-cut benefits in Missouri and student protests</a></h2>
+      <time>March 16, 2018 4:08 pm</time>
+    </article>
+  </div>
+  <a href="https://mcclatchy.github.io/saratoga/opinion/" class="more-link">MORE OPINION</a>
+</div>
+
+      </div>
+    </div>
+    <div class="rail flex-columns">
+      <fake-ad></fake-ad>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="card horizontal swg-promo">
+  <div class="package sans promo">
+    <h1 class="title">SIGN UP AND SAVE</h1>
+    <span class="h3">#READLOCAL</span>
+  </div>
+  <div class="package">
+    <p class="summary">Get six months of free digital access to The Kansas City Star. Terms and conditions apply</p>
+    <a class="button impact" href="#">Subscribe with Google</a>
+  </div>
+</div>
+
+</section>
+
+<section>
+  <div class="flex-columns">
+    <div class="main-stage flex-columns">
+      <article class="card ">
+  <figure>
+    <a href="https://mcclatchy.github.io/saratoga/food/205504249/">
+      <img src="../../../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
+    </a>
+  </figure>
+  <div class="package">
+    <a class="kicker h6" href="https://mcclatchy.github.io/saratoga/food/">FOOD</a>
+    <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
+    <time>March 16, 2018 11:33 am</time>
+  </div>
+</article>
+
+      <article class="card ">
+  <figure>
+    <a href="https://mcclatchy.github.io/saratoga/food/205504249/">
+      <img src="../../../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
+    </a>
+  </figure>
+  <div class="package">
+    <a class="kicker h6" href="https://mcclatchy.github.io/saratoga/food/">FOOD</a>
+    <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
+    <time>March 16, 2018 11:33 am</time>
+  </div>
+</article>
+
+    </div>
+    <div class="rail">
+      <fake-ad></fake-ad>
+    </div>
+  </div>
+</section>
 
 <footer class="impact">
   <section class="footer">

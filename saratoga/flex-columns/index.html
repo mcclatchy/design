@@ -1,8 +1,8 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>in-depth</title>
-    <meta name="description" content="In depth module for section pages">
+    <title>flex-columns</title>
+    <meta name="description" content="A flexbox version of the grid using the same rules.">
     
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -98,63 +98,105 @@
     </div>
 <div class="panels">
   <div class="paper story-body details">
-    <h2 class="page-header">in-depth
+    <h2 class="page-header">flex-columns
     </h2>
-    <p>The In Depth module is a version of the horizontal card that changes the flex-grow weight from the right side to the left.</p>
-<h4 id="example">Example</h4>
-<div class="example shadow">
-<div class="card horizontal in-depth">
+    <p>The flex-columns organism is an alternative to the CSS Grid for pages that need full browser support. It functions like Bootstrap where the main container gets a negative 15px margin and each child gets 15px back. This allows for a coding style much like the CSS Grid, so the two can be interchangeable.</p>
+<p>The rules are simple, each column has a 330px flex basis and it wraps. This ensures that ads will always display properly. None of that kicks in until 690px to enssure that phones always behave as a vertical stack.</p>
+<p>In addition to the standard grid, there is also a <code>.main-stage</code> and <code>.rail</code> concept. A child with the <code>.main-stage</code> class will have a basis of 660px. Order of the children for our designs should always be <code>.main-stage</code> first and <code>.rail</code> second. This is appropriate for mobile. There is a <code>.reverse</code> option that will swap the <code>.rail</code> to the left side on desktop.</p>
+<h4 id="examples">EXAMPLES</h4>
+<p>This is a standard grid.</p>
+<section class="example">
+  <div class="flex-columns">
+    <article class="card ">
   <figure>
-    <div class="label sticky"><h5>IN DEPTH</h5></div>
-    <a href="https://www.kansascity.com/news/politics-government/article225926790.html">
-      <img src="https://www.kansas.com/latest-news/6aw7pv/picture225984215/alternates/LANDSCAPE_768/tax-forms.jpg">
+    <a href="https://mcclatchy.github.io/saratoga/food/205504249/">
+      <img src="../../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
     </a>
   </figure>
-  <div class="package impact">
-    <a class="kicker h6" href="https://www.kansascity.com/news/politics-government/article225926790.html">Government &amp; Politics</a>
-    <h3 class="h1"><a href="https://www.kansascity.com/news/politics-government/">After meeting Brownback’s circle, firm was on ‘right path’ to $61M no-bid contract</a></h3>
-    <summary>Thousands of emails reveal how CGI Technologies landed a $61 million contract to overhaul Kansas tax systems. New Gov. Laura Kelly has promised to crack down on no-bid contracts.</summary>
+  <div class="package">
+    <a class="kicker h6" href="https://mcclatchy.github.io/saratoga/food/">FOOD</a>
+    <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
+    <time>March 16, 2018 11:33 am</time>
   </div>
-</div>
+</article>
 
-</div>
+    <article class="card ">
+  <figure>
+    <a href="https://mcclatchy.github.io/saratoga/food/205504249/">
+      <img src="../../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
+    </a>
+  </figure>
+  <div class="package">
+    <a class="kicker h6" href="https://mcclatchy.github.io/saratoga/food/">FOOD</a>
+    <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
+    <time>March 16, 2018 11:33 am</time>
+  </div>
+</article>
+
+    <article class="card ">
+  <figure>
+    <a href="https://mcclatchy.github.io/saratoga/food/205504249/">
+      <img src="../../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
+    </a>
+  </figure>
+  <div class="package">
+    <a class="kicker h6" href="https://mcclatchy.github.io/saratoga/food/">FOOD</a>
+    <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
+    <time>March 16, 2018 11:33 am</time>
+  </div>
+</article>
+
+  </div>
+</section>
+<p>This is using the <code>.main-stage</code>, <code>.rail</code> and <code>.reverse</code> concepts.</p>
+<section class="example">
+  <div class="flex-columns reverse">
+    <div class="main-stage">
+      <article class="card ">
+  <figure>
+    <a href="https://mcclatchy.github.io/saratoga/food/205504249/">
+      <img src="../../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
+    </a>
+  </figure>
+  <div class="package">
+    <a class="kicker h6" href="https://mcclatchy.github.io/saratoga/food/">FOOD</a>
+    <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
+    <time>March 16, 2018 11:33 am</time>
+  </div>
+</article>
+
+    </div>
+    <div class="rail">
+      <article class="card ">
+  <figure>
+    <a href="https://mcclatchy.github.io/saratoga/food/205504249/">
+      <img src="../../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
+    </a>
+  </figure>
+  <div class="package">
+    <a class="kicker h6" href="https://mcclatchy.github.io/saratoga/food/">FOOD</a>
+    <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
+    <time>March 16, 2018 11:33 am</time>
+  </div>
+</article>
+
+    </div>
+  </div>
+</section>
 <h4 id="html">HTML</h4>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;card horizontal in-depth&#34;</span>&gt;
-  &lt;<span style="color:#000080;font-weight:bold">figure</span>&gt;
-    &lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;label sticky&#34;</span>&gt;&lt;<span style="color:#000080;font-weight:bold">h5</span>&gt;IN DEPTH&lt;/<span style="color:#000080;font-weight:bold">h5</span>&gt;&lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;
-    &lt;<span style="color:#000080;font-weight:bold">a</span> <span style="color:#f00">href</span>=<span style="color:#00f">&#34;https://www.kansascity.com/news/politics-government/article225926790.html&#34;</span>&gt;
-      &lt;<span style="color:#000080;font-weight:bold">img</span> <span style="color:#f00">src</span>=<span style="color:#00f">&#34;https://www.kansas.com/latest-news/6aw7pv/picture225984215/alternates/LANDSCAPE_768/tax-forms.jpg&#34;</span>&gt;
-    &lt;/<span style="color:#000080;font-weight:bold">a</span>&gt;
-  &lt;/<span style="color:#000080;font-weight:bold">figure</span>&gt;
-  &lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;package impact&#34;</span>&gt;
-    &lt;<span style="color:#000080;font-weight:bold">a</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;kicker h6&#34;</span> <span style="color:#f00">href</span>=<span style="color:#00f">&#34;https://www.kansascity.com/news/politics-government/article225926790.html&#34;</span>&gt;Government &amp;amp; Politics&lt;/<span style="color:#000080;font-weight:bold">a</span>&gt;
-    &lt;<span style="color:#000080;font-weight:bold">h3</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;h1&#34;</span>&gt;&lt;<span style="color:#000080;font-weight:bold">a</span> <span style="color:#f00">href</span>=<span style="color:#00f">&#34;https://www.kansascity.com/news/politics-government/&#34;</span>&gt;After meeting Brownback’s circle, firm was on ‘right path’ to $61M no-bid contract&lt;/<span style="color:#000080;font-weight:bold">a</span>&gt;&lt;/<span style="color:#000080;font-weight:bold">h3</span>&gt;
-    &lt;<span style="color:#000080;font-weight:bold">summary</span>&gt;Thousands of emails reveal how CGI Technologies landed a $61 million contract to overhaul Kansas tax systems. New Gov. Laura Kelly has promised to crack down on no-bid contracts.&lt;/<span style="color:#000080;font-weight:bold">summary</span>&gt;
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;flex-columns reverse&#34;</span>&gt;
+  &lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;main-stage&#34;</span>&gt;
+    &lt;<span style="color:#000080;font-weight:bold">article</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;card&#34;</span>&gt; ... &lt;/<span style="color:#000080;font-weight:bold">article</span>&gt;
+    &lt;<span style="color:#000080;font-weight:bold">article</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;card&#34;</span>&gt; ... &lt;/<span style="color:#000080;font-weight:bold">article</span>&gt;
+    &lt;<span style="color:#000080;font-weight:bold">article</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;card&#34;</span>&gt; ... &lt;/<span style="color:#000080;font-weight:bold">article</span>&gt;
+    &lt;<span style="color:#000080;font-weight:bold">article</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;card&#34;</span>&gt; ... &lt;/<span style="color:#000080;font-weight:bold">article</span>&gt;
+    &lt;<span style="color:#000080;font-weight:bold">article</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;card&#34;</span>&gt; ... &lt;/<span style="color:#000080;font-weight:bold">article</span>&gt;
   &lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;
-&lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;</code></pre></div>
-<hr>
-<h2 id="no-image-version">No Image version</h2>
-<p>When there is missing lead art for the story, the text should fall in the middle of the box on desktop.</p>
-<h4 id="example-1">EXAMPLE</h4>
-<div class="example">
-<div class="card horizontal in-depth">
-  <div class="package impact">
-    <a class="kicker h6" href="https://www.kansascity.com/news/politics-government/article225926790.html">Government &amp; Politics</a>
-    <h3 class="h1"><a href="https://www.kansascity.com/news/politics-government/">After meeting Brownback’s circle, firm was on ‘right path’ to $61M no-bid contract</a></h3>
-    <summary>Thousands of emails reveal how CGI Technologies landed a $61 million contract to overhaul Kansas tax systems. New Gov. Laura Kelly has promised to crack down on no-bid contracts.</summary>
-  </div>
-</div>
-
-</div>
-<h4 id="html-1">HTML</h4>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;card horizontal in-depth&#34;</span>&gt;
-  &lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;package impact&#34;</span>&gt;
-    &lt;<span style="color:#000080;font-weight:bold">a</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;kicker h6&#34;</span> <span style="color:#f00">href</span>=<span style="color:#00f">&#34;https://www.kansascity.com/news/politics-government/article225926790.html&#34;</span>&gt;Government &amp;amp; Politics&lt;/<span style="color:#000080;font-weight:bold">a</span>&gt;
-    &lt;<span style="color:#000080;font-weight:bold">h3</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;h1&#34;</span>&gt;&lt;<span style="color:#000080;font-weight:bold">a</span> <span style="color:#f00">href</span>=<span style="color:#00f">&#34;https://www.kansascity.com/news/politics-government/&#34;</span>&gt;After meeting Brownback’s circle, firm was on ‘right path’ to $61M no-bid contract&lt;/<span style="color:#000080;font-weight:bold">a</span>&gt;&lt;/<span style="color:#000080;font-weight:bold">h3</span>&gt;
-    &lt;<span style="color:#000080;font-weight:bold">summary</span>&gt;Thousands of emails reveal how CGI Technologies landed a $61 million contract to overhaul Kansas tax systems. New Gov. Laura Kelly has promised to crack down on no-bid contracts.&lt;/<span style="color:#000080;font-weight:bold">summary</span>&gt;
+  &lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;rail&#34;</span>&gt;
+    &lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;digest&#34;</span>&gt; ... &lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;
   &lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;
-&lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;</code></pre></div>
-
+&lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;
+</code></pre></div>
   </div>
 
   
@@ -245,7 +287,7 @@
     </div>
     
     
-    <div class="package active">
+    <div class="package">
       <h4 class="sans bold">
         <a class="" href="https://mcclatchy.github.io/design/saratoga/in-depth/">in-depth</a>
       </h4>
@@ -561,7 +603,7 @@
       
       
       <h5 class="sans bold ">
-        <a href="https://mcclatchy.github.io/design/saratoga/flex-columns/" class="">flex-columns</a>
+        <a href="https://mcclatchy.github.io/design/saratoga/flex-columns/" class="active">flex-columns</a>
       </h5>
       
       
