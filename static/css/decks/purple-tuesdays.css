@@ -59,6 +59,7 @@
 /* Connatix is all sorts of messed up looking */
 .story-body #ConnatixVideoAd {
   margin-top: 45px;
+  position: relative;
 }
 
 /* Video sharing screen affectd by form grid */
