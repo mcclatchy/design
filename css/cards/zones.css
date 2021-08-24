@@ -12,6 +12,14 @@
 
 .zone.grid.combo {
   align-items: center;
-  justify-content: center;
-  grid-template-columns: repeat(auto-fit, minmax(300px, .5fr));
+  /* justify-content: center; */
+  grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+}
+
+/**
+ * Custom changes
+ */
+
+#zone-el-2 {
+  margin: 15px 0;
 }
