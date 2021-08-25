@@ -852,6 +852,10 @@ summary, .summary {
   display: inline;
 }
 
+.inline-block {
+  display: inline-block;
+}
+
 .relative {
   position: relative;
 }
@@ -962,11 +966,6 @@ summary, .summary {
 .grid > .package:not(.paper),
 .zone-el > .package:not(.paper) {
   padding: 0;
-}
-
-.grid .ad-widget {
-  margin: 0 auto;
-  align-self: center;
 }
 
 .grid > .rail {
@@ -1101,10 +1100,6 @@ summary, .summary {
     margin: 0 30px 30px -150px;
   }
 }
-.story-body > .zone {
-  margin: 30px auto;
-}
-
 /**
  * Mugshots
  */

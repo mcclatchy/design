@@ -566,10 +566,16 @@
 /* Connatix is all sorts of messed up looking */
 .story-body #ConnatixVideoAd {
   margin-top: 45px;
+  position: relative;
 }
 
 /* Video sharing screen affectd by form grid */
 form.vjs-sharing__link {
+  display: block;
+}
+
+/* Form changes jacked with BounceX */
+form[id^=bx-] {
   display: block;
 }
 

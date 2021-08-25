@@ -11,31 +11,15 @@
 
 .zone.grid.combo {
   align-items: center;
-  justify-content: center;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 0.5fr));
+  /* justify-content: center; */
+  grid-template-columns: repeat(auto-fit, minmax(300px, auto));
 }
 
 /**
- * Ad styling
+ * Custom changes
  */
-/* Pre Zeus (can be removed when merger complete) */
-.ad-widget {
-  text-align: center;
-}
-
-.ad-widget iframe,
-.ad-widget > div {
-  margin: 0 auto;
-}
-
-/* Zeus integration */
-#zeus_mn-gpt-2:not(:empty) {
-  padding: 15px;
-}
-
-/* Form changes jacked with BounceX */
-form[id^=bx-] {
-  display: block;
+#zone-el-2 {
+  margin: 15px 0;
 }
 
 /**
@@ -668,6 +652,12 @@ section.big-news {
   --bbc: #222;
 }
 
+@media (max-width: 659px) {
+  .inline-cta {
+    max-width: 300px;
+    justify-self: center;
+  }
+}
 .inline-cta .h1 {
   --hf: var(--serif);
 }

@@ -66,3 +66,9 @@
 form.vjs-sharing__link {
   display: block;
 }
+
+/* Form changes jacked with BounceX */
+
+form[id^="bx-"] {
+  display: block;
+}

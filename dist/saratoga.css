@@ -851,6 +851,10 @@ summary, .summary {
   display: inline;
 }
 
+.inline-block {
+  display: inline-block;
+}
+
 .relative {
   position: relative;
 }
@@ -1017,11 +1021,6 @@ summary, .summary {
   padding: 0;
 }
 
-.grid .ad-widget {
-  margin: 0 auto;
-  align-self: center;
-}
-
 .grid > .rail {
   grid-row-end: span var(--rows, 3);
 }
@@ -1154,10 +1153,6 @@ summary, .summary {
     margin: 0 30px 30px -150px;
   }
 }
-.story-body > .zone {
-  margin: 30px auto;
-}
-
 /**
  * Mugshots
  */
@@ -1212,31 +1207,15 @@ summary, .summary {
 
 .zone.grid.combo {
   align-items: center;
-  justify-content: center;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 0.5fr));
+  /* justify-content: center; */
+  grid-template-columns: repeat(auto-fit, minmax(300px, auto));
 }
 
 /**
- * Ad styling
+ * Custom changes
  */
-/* Pre Zeus (can be removed when merger complete) */
-.ad-widget {
-  text-align: center;
-}
-
-.ad-widget iframe,
-.ad-widget > div {
-  margin: 0 auto;
-}
-
-/* Zeus integration */
-#zeus_mn-gpt-2:not(:empty) {
-  padding: 15px;
-}
-
-/* Form changes jacked with BounceX */
-form[id^=bx-] {
-  display: block;
+#zone-el-2 {
+  margin: 15px 0;
 }
 
 /**
@@ -1869,6 +1848,12 @@ section.big-news {
   --bbc: #222;
 }
 
+@media (max-width: 659px) {
+  .inline-cta {
+    max-width: 300px;
+    justify-self: center;
+  }
+}
 .inline-cta .h1 {
   --hf: var(--serif);
 }
@@ -2601,10 +2586,16 @@ section.big-news {
 /* Connatix is all sorts of messed up looking */
 .story-body #ConnatixVideoAd {
   margin-top: 45px;
+  position: relative;
 }
 
 /* Video sharing screen affectd by form grid */
 form.vjs-sharing__link {
+  display: block;
+}
+
+/* Form changes jacked with BounceX */
+form[id^=bx-] {
   display: block;
 }
 

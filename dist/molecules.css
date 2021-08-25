@@ -147,11 +147,6 @@
   padding: 0;
 }
 
-.grid .ad-widget {
-  margin: 0 auto;
-  align-self: center;
-}
-
 .grid > .rail {
   grid-row-end: span var(--rows, 3);
 }
@@ -284,10 +279,6 @@
     margin: 0 30px 30px -150px;
   }
 }
-.story-body > .zone {
-  margin: 30px auto;
-}
-
 /**
  * Mugshots
  */
