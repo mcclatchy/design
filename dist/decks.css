@@ -523,6 +523,7 @@
 }
 
 .lead-item .mi-sticky-player .mi-sticky-player-info {
+  max-width: calc(100% - 385px);
   padding: 15px;
   --ht: none;
 }
