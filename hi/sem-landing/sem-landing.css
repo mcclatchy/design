@@ -25,14 +25,7 @@
 
 .dsp-offer {
   --ts: 1rem;
-  /* flex: 1; */
-  /* grid-template-rows: 1fr auto auto; */
-  /* --ts: 1rem; */
 }
-
-/* .spl .offer { */
-/*   --ps: 15px; */
-/* } */
 
 .dsp-offer .h1 {
   display: flex;
@@ -49,10 +42,6 @@
 .dsp-offer small {
   font: 700 0.875rem var(--sans);
 }
-
-/* .spl .card .offer .package { */
-/*   justify-content: center; */
-/* } */
 
 .dsp-offer .price {
   --ts: 25px;
@@ -80,17 +69,6 @@
   margin-left: 1em;
   list-style-position: outside;
 }
-
-
-/* .spl .paywall-offer { */
-/*   align-self: unset; */
-/*   grid-template-columns: unset; */
-/*   --ts: 1rem; */
-/* } */
-
-/* .spl .best-offer { */
-/*   --bbc: #31409F; */
-/* } */
 
 .strike {
   text-decoration: line-through;
