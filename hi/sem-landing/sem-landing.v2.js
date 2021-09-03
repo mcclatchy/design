@@ -91,7 +91,7 @@ class SEMLanding extends HTMLElement {
 
       if(match) {
         let html = this.innerHTML;
-        let tags = [...html.matchAll(/\{{2}(.*)\}{2}/g)]
+        let tags = [...html.matchAll(/\{{2}(.*?)\}{2}/g)]
         tags.forEach(tag => {
           let column = tag[1].trim();
           html = html.replace(tag[0], match[column])
@@ -119,7 +119,7 @@ class SEMLanding extends HTMLElement {
 
   // Domain getter
   get domain() {
-    return this.getAttribute("domain") || location.hostname;
+    return this.getAttribute("domain") || location.hostname.replace(/www.(.*).com/, "$1");
   }
 }
 
