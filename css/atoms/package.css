@@ -13,6 +13,7 @@
 	--hf: var(--serif);
 	--hw: 400;
 	--ht: none;
+  --lc: var(--tc);
   --ld: none;
   --lhd: underline;
   --lhc: var(--tc); 

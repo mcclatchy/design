@@ -16,16 +16,11 @@
 .story-body > * {
   max-width: var(--story-width);
   padding: 0 15px;
-  margin: 15px auto;
-}
-
-.story-body > :first-child {
-  margin-top: 0;
-  padding-top: 30px;
+  margin: 20px auto;
 }
 
 .story-body > .header {
-  margin-top: 0;
+  margin: 30px auto;
 }
 
 /**
