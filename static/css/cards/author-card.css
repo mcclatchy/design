@@ -40,6 +40,10 @@
   width: auto;
 }
 
+.author-card svg {
+  fill: var(--tc, #222);
+}
+
 /** 
  * Grid takeover
  */

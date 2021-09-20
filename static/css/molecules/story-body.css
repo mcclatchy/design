@@ -16,7 +16,7 @@
 .story-body > * {
   max-width: var(--story-width);
   padding: 0 15px;
-  margin: 15px auto;
+  margin: 20px auto;
 }
 
 .story-body > .header {
