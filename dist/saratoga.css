@@ -31,11 +31,11 @@
   /**
    * Color variables and text size set at the atomic level
    *
-   * --ts: large;
+   * --ts: text size;
    * --tc: text color
-   * --lc: #222;
-   * --bc: color of the button text;
-   * --bbc: background-color of the button;
+   * --lc: link col0r;
+   * --bc: button text color;
+   * --bbc: button background color;
    */
 }
 
@@ -233,6 +233,7 @@ blockquote .attr {
   font-style: italic;
   font-size: 0.875rem;
   text-transform: uppercase;
+  color: var(--tc);
 }
 
 /**
@@ -734,6 +735,7 @@ button:hover,
   --hf: var(--serif);
   --hw: 400;
   --ht: none;
+  --lc: var(--tc);
   --ld: none;
   --lhd: underline;
   --lhc: var(--tc);
@@ -1059,16 +1061,11 @@ summary, .summary {
 .story-body > * {
   max-width: var(--story-width);
   padding: 0 15px;
-  margin: 15px auto;
-}
-
-.story-body > :first-child {
-  margin-top: 0;
-  padding-top: 30px;
+  margin: 20px auto;
 }
 
 .story-body > .header {
-  margin-top: 0;
+  margin: 30px auto;
 }
 
 /**
@@ -1091,7 +1088,8 @@ summary, .summary {
  * Media options
  */
 .story-body > figure,
-.story-body > .figure {
+.story-body > .figure,
+.story-body > .inline-video {
   margin: 30px auto;
   padding: 0;
 }
@@ -1215,7 +1213,11 @@ summary, .summary {
  * Custom changes
  */
 #zone-el-2 {
-  margin: 15px 0;
+  position: relative;
+}
+
+#zeus_top-banner {
+  padding: 15px 0;
 }
 
 /**
@@ -1490,6 +1492,10 @@ summary, .summary {
   width: auto;
 }
 
+.author-card svg {
+  fill: var(--tc, #222);
+}
+
 /** 
  * Grid takeover
  */
@@ -1627,7 +1633,7 @@ summary, .summary {
 .transparency {
   max-width: 100%;
   padding: 15px;
-  background-color: #f4f4f4;
+  background-color: var(--paper-color, #f4f4f4);
 }
 
 .transparency > * {
@@ -1843,17 +1849,12 @@ section.big-news {
   text-align: left;
   align-self: center;
   grid-gap: 5px;
+  max-width: 500px;
   --ps: 5px;
   --bc: white;
   --bbc: #222;
 }
 
-@media (max-width: 659px) {
-  .inline-cta {
-    max-width: 300px;
-    justify-self: center;
-  }
-}
 .inline-cta .h1 {
   --hf: var(--serif);
 }
@@ -2577,11 +2578,6 @@ section.big-news {
 /* Top of section triple up on margin fix */
 #nav-section-front, .subnav-section-name {
   margin-top: 0;
-}
-
-/* inline video is off because of the border-box change */
-.story-body .inline-video {
-  max-width: calc(var(--story-width) + 30px);
 }
 
 /* Connatix is all sorts of messed up looking */

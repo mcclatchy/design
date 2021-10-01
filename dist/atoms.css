@@ -31,11 +31,11 @@
   /**
    * Color variables and text size set at the atomic level
    *
-   * --ts: large;
+   * --ts: text size;
    * --tc: text color
-   * --lc: #222;
-   * --bc: color of the button text;
-   * --bbc: background-color of the button;
+   * --lc: link col0r;
+   * --bc: button text color;
+   * --bbc: button background color;
    */
 }
 
@@ -233,6 +233,7 @@ blockquote .attr {
   font-style: italic;
   font-size: 0.875rem;
   text-transform: uppercase;
+  color: var(--tc);
 }
 
 /**
@@ -734,6 +735,7 @@ button:hover,
   --hf: var(--serif);
   --hw: 400;
   --ht: none;
+  --lc: var(--tc);
   --ld: none;
   --lhd: underline;
   --lhc: var(--tc);

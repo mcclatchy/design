@@ -32,11 +32,11 @@
   /**
    * Color variables and text size set at the atomic level
    *
-   * --ts: large;
+   * --ts: text size;
    * --tc: text color
-   * --lc: #222;
-   * --bc: color of the button text;
-   * --bbc: background-color of the button;
+   * --lc: link col0r;
+   * --bc: button text color;
+   * --bbc: button background color;
    */
 }
 
@@ -234,6 +234,7 @@ blockquote .attr {
   font-style: italic;
   font-size: 0.875rem;
   text-transform: uppercase;
+  color: var(--tc);
 }
 
 /**
@@ -735,6 +736,7 @@ button:hover,
   --hf: var(--serif);
   --hw: 400;
   --ht: none;
+  --lc: var(--tc);
   --ld: none;
   --lhd: underline;
   --lhc: var(--tc);
@@ -1006,16 +1008,11 @@ summary, .summary {
 .story-body > * {
   max-width: var(--story-width);
   padding: 0 15px;
-  margin: 15px auto;
-}
-
-.story-body > :first-child {
-  margin-top: 0;
-  padding-top: 30px;
+  margin: 20px auto;
 }
 
 .story-body > .header {
-  margin-top: 0;
+  margin: 30px auto;
 }
 
 /**
@@ -1038,7 +1035,8 @@ summary, .summary {
  * Media options
  */
 .story-body > figure,
-.story-body > .figure {
+.story-body > .figure,
+.story-body > .inline-video {
   margin: 30px auto;
   padding: 0;
 }
@@ -1404,6 +1402,10 @@ summary, .summary {
   width: auto;
 }
 
+.author-card svg {
+  fill: var(--tc, #222);
+}
+
 /** 
  * Grid takeover
  */
@@ -1442,7 +1444,7 @@ summary, .summary {
 .transparency {
   max-width: 100%;
   padding: 15px;
-  background-color: #f4f4f4;
+  background-color: var(--paper-color, #f4f4f4);
 }
 
 .transparency > * {

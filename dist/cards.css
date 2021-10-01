@@ -19,7 +19,11 @@
  * Custom changes
  */
 #zone-el-2 {
-  margin: 15px 0;
+  position: relative;
+}
+
+#zeus_top-banner {
+  padding: 15px 0;
 }
 
 /**
@@ -294,6 +298,10 @@
   width: auto;
 }
 
+.author-card svg {
+  fill: var(--tc, #222);
+}
+
 /** 
  * Grid takeover
  */
@@ -431,7 +439,7 @@
 .transparency {
   max-width: 100%;
   padding: 15px;
-  background-color: #f4f4f4;
+  background-color: var(--paper-color, #f4f4f4);
 }
 
 .transparency > * {
@@ -647,17 +655,12 @@ section.big-news {
   text-align: left;
   align-self: center;
   grid-gap: 5px;
+  max-width: 500px;
   --ps: 5px;
   --bc: white;
   --bbc: #222;
 }
 
-@media (max-width: 659px) {
-  .inline-cta {
-    max-width: 300px;
-    justify-self: center;
-  }
-}
 .inline-cta .h1 {
   --hf: var(--serif);
 }
