@@ -317,6 +317,7 @@ form, .checkbox-group {
   grid-template-columns: 1fr;
   grid-gap: 30px;
   text-align: left;
+  color: var(--tc);
 }
 
 .checkbox-group {
@@ -1311,11 +1312,11 @@ summary, .summary {
 }
 
 .series-nav hr {
-  border-color: #dfdfdf;
+  border-color: var(--tc, #dfdfdf);
 }
 
 .series-nav .summary {
-  color: #707070;
+  color: var(--tc, #707070);
 }
 
 .series-nav .article {

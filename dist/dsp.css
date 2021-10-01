@@ -546,7 +546,7 @@ section.dsp {
 .review-order .secure {
   text-align: center;
   text-transform: uppercase;
-  color: var(--gray);
+  color: var(--tc, var(--gray));
 }
 
 .review-order .flex {
