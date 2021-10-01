@@ -243,4 +243,5 @@ blockquote .attr {
   font-style: italic;
   font-size: 0.875rem;
   text-transform: uppercase;
+  color: var(--tc);
 }

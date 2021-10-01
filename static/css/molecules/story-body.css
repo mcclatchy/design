@@ -45,7 +45,8 @@
  */
 
 .story-body > figure,
-.story-body > .figure {
+.story-body > .figure,
+.story-body > .inline-video {
   margin: 30px auto;
   padding: 0;
 }
