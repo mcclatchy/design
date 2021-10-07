@@ -1,0 +1,26 @@
+/**
+ * Panel
+ */
+
+.panel {
+  padding: 45px 15px;
+  max-width: 100%;
+  background-color: var(--paper-color);
+  --hf: var(--sans);
+  --hw: bold;
+  --ht: uppercase;
+  --tf: var(--sans);
+}
+
+.panel.impact {
+  --paper-color: #373737;
+}
+
+.panel > * {
+  max-width: var(--story-width);
+  margin: 20px auto;
+}
+
+.panel .grid {
+  grid-gap: 15px;
+}

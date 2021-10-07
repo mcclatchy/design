@@ -11,27 +11,16 @@ var Typologies = {
     { 
       "zone": "3",
       "class": "grid combo",
-      "units": ["newsletter", "ad"],
-      "gpt": {
-        "atf": "n",
-        "pkg": "b"
-      }
+      "units": ["newsletter", "ad"]
     },
     {
       "zone": "4",
       "class": "grid combo",
-      "units": ["subscription", "ad"],
-      "gpt": {
-        "atf": "n",
-        "pkg": "c"
-      }
+      "units": ["subscription", "ad"]
     },
     {
       "zone": "5",
-      "units": ["banner"],
-      "gpt": {
-        "atf": "n"
-      }
+      "units": ["banner"]
     },
     {
       "zone": "dynamic",
@@ -108,5 +97,38 @@ var Typologies = {
       "class": "grid combo",
       "units": ["podcast"]
     }
-  ]
+  ],
+  "dml": [
+    { 
+      "zone": "1",
+      "units": ["leaderboard"]
+    },
+    { 
+      "zone": "2",
+      "units": ["connatix"]
+    },
+    { 
+      "zone": "3",
+      "class": "grid combo",
+      "units": ["newsletter", "ad"]
+    },
+    {
+      "zone": "4",
+      "class": "grid combo",
+      "units": ["subscription", "ad"]
+    },
+    {
+      "zone": "5",
+      "class": "wide",
+      "units": ["dml"]
+    },
+    {
+      "zone": "dynamic",
+      "units": ["ad"]
+    },
+    {
+      "zone": "6",
+      "units": ["zergnet"]
+    }
+  ],
 }

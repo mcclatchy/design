@@ -2,16 +2,10 @@
   text-align: left;
   align-self: center;
   grid-gap: 5px;
+  max-width: 500px;
   --ps: 5px;
   --bc: white;
   --bbc: #222;
-}
-
-@media(max-width: 659px) {
-  .inline-cta {
-    max-width: 300px;
-    justify-self: center;
-  }
 }
 
 .inline-cta .h1 {

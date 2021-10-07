@@ -100,3 +100,12 @@ footer {
   justify-content: center;
   --hw: bold;
 }
+
+/**
+ * Custom spacing for this zone vs live site
+ * Not included in SDS build
+ */
+
+#zone-el-2 {
+  padding: 15px 0;
+}

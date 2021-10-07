@@ -20,8 +20,8 @@
 }
 
 .section-nav .icons {
-  --lc: #707070;
-  --lhc: #222;
+  --lc: var(--tc, #707070);
+  --lhc: var(--tc, #222);
 }
 
 .section-nav .icons > * {
