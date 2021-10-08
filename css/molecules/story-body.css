@@ -156,3 +156,11 @@
   max-width: 728px;
   padding: 0 15px;
 }
+
+/**
+ * Panel settings for story bodies
+ */
+
+.story-body .panel {
+  --paper-color: var(--body-background);
+}
