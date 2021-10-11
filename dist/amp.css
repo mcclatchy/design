@@ -1140,6 +1140,13 @@ summary, .summary {
   padding: 0 15px;
 }
 
+/**
+ * Panel settings for story bodies
+ */
+.story-body .panel {
+  --paper-color: var(--body-background);
+}
+
 /* Cards */
 /**
  * Immersive media card
@@ -1598,6 +1605,32 @@ summary, .summary {
 
 .sponsor .package {
   justify-content: center;
+}
+
+/**
+ * Panel
+ */
+.panel {
+  padding: 45px 15px;
+  max-width: 100%;
+  background-color: var(--paper-color);
+  --hf: var(--sans);
+  --hw: bold;
+  --ht: uppercase;
+  --tf: var(--sans);
+}
+
+.panel.impact {
+  --paper-color: #373737;
+}
+
+.panel > * {
+  max-width: var(--story-width);
+  margin: 20px auto;
+}
+
+.panel .grid {
+  grid-gap: 15px;
 }
 
 /* Decks */
