@@ -1,0 +1,28 @@
+/**
+ * Premium content skin
+ */
+
+/**
+ * SDS changes
+ */
+
+.story-body > .header,
+.story-body > .zone {
+  margin: 30px auto;
+}
+
+#zone-el-2 {
+  margin: unset;
+}
+
+#zeus_top-banner {
+  padding: 15px 0;
+}
+
+/**
+ * Scheduled for an upcoming SDS release
+ */
+
+.inline-cta {
+  max-width: 500px;
+}
