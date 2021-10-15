@@ -1,0 +1,65 @@
+---
+title: dark
+description: An impact presentation for media-heavy articles.
+menu: themes
+layout: deck
+---
+
+{{< upper-nav >}}
+{{< flag type="subscriber" >}}
+{{< menu >}}
+
+<style>
+  code {
+    background-color: #373737;
+  }
+</style>
+
+<script type="module">
+  import * as enhancements from "/design/themes/enhancements.js";
+  enhancements.makePhotosWide();
+</script>
+
+<article class="paper story-body">
+  <link rel="stylesheet" href="/themes/dark.css">
+
+  {{< header >}}
+  {{< figure >}}
+  
+  <p>The dark theme is designed to showcase great media accompanying a story. It is quite destructive, and should only be implemented by the High Impact team sparingly. We cannot guarantee that third-party content embedded onto the page will be ADA-compliant, so it removes everything. This includes the following:</p>
+
+  <ul>
+    <li>DataWrapper graphics</li>
+    <li>social media posts</li>
+    <li>Youtube videos</li>
+    <li>the Trinity audio widget</li>
+    <li>comments</li>
+    <li>all iframes</li>
+    <li>spillover galleries</li>
+    <li>cards after the story</li>
+  </ul>
+
+  <p>In addition to the default set, if the <i>Allow Ads</i> option is unchecked in the story file, the theme will also remove the following:</p>
+
+  <ul>
+    <li>all zone containers</li>
+    <li>the zone 3A marketing card</li>
+    <li>the zone 4A marketing card</li>
+  </ul>
+
+  <p><i>This implementation is also using the <code>makePhotosWide()</code> story enhancement, and though not required the two pair nicely.</i></p>
+
+  {{< figure >}}
+  <h3>Lorem Ipsum</h3>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dignissim lacinia dolor, fringilla gravida velit pulvinar sit amet. Nunc pulvinar urna sed ante ullamcorper, non semper ex volutpat. Duis sed consectetur mi. Aliquam at neque hendrerit, lobortis libero a, ultrices sem. Mauris ac finibus orci. Suspendisse congue nibh ac mi iaculis, nec convallis mauris vulputate.</p>
+  <p>Quisque dictum sagittis odio, at sodales eros pharetra et. Nulla placerat nisl neque, sit amet viverra orci tincidunt eu. Nullam eu faucibus elit. Pellentesque pretium, dui et lobortis aliquet, tortor nunc placerat libero, nec vehicula velit lacus ut lectus. Nunc fringilla mi purus, ac vehicula odio sodales ac. Phasellus blandit facilisis tellus, nec vulputate eros vestibulum at.</p>
+
+  {{< figure >}}
+  <h3>Lorem Ipsum</h3>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dignissim lacinia dolor, fringilla gravida velit pulvinar sit amet. Nunc pulvinar urna sed ante ullamcorper, non semper ex volutpat. Duis sed consectetur mi. Aliquam at neque hendrerit, lobortis libero a, ultrices sem. Mauris ac finibus orci. Suspendisse congue nibh ac mi iaculis, nec convallis mauris vulputate.</p>
+  <p>Quisque dictum sagittis odio, at sodales eros pharetra et. Nulla placerat nisl neque, sit amet viverra orci tincidunt eu. Nullam eu faucibus elit. Pellentesque pretium, dui et lobortis aliquet, tortor nunc placerat libero, nec vehicula velit lacus ut lectus. Nunc fringilla mi purus, ac vehicula odio sodales ac. Phasellus blandit facilisis tellus, nec vulputate eros vestibulum at.</p>
+
+  {{< author-card >}}
+</article>
+
+{{< footer >}}

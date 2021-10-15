@@ -1,0 +1,77 @@
+/**
+ * Reverse Impact theme stylesheet
+ */
+
+.story-body {
+  --paper-color: #222;
+  --tc: white;
+  --ts: 19px;
+  --lc: #859CE8;
+  --lhc: #5F7BD9;
+}
+
+.story-body > * {
+  margin: 20px auto;
+}
+
+.story-body > .h3,
+.story-body > h3 {
+  font-size: 22px;
+}
+
+.story-body .zone {
+  margin: 60px auto;
+}
+
+.story-body .button.impact {
+  color: #222;
+  background-color: white;
+}
+
+
+/**
+ * Need to also remove these with JS
+ */
+
+.story-body .zone:empty,
+.story-body .zone.grid .zone:empty,
+.story-body > .figure:empty,
+.trinity-player-iframe-wrapper,
+.commenting-container,
+.embed-infographic iframe {
+  display: none;
+}
+
+/**
+ * Needs to be moved into SDS
+ */
+
+.package {
+  --lc: var(--tc);
+}
+
+.author-card svg {
+  fill: var(--tc);
+}
+
+.story-body > * {
+  margin: 20px auto;
+  clear: unset;
+}
+
+.story-body .header {
+  margin: 30px auto;
+}
+
+.story-body > :first-child {
+  padding-top: 0px;
+}
+
+.story-body .dateline {
+  color: var(--tc);
+}
+
+.story-body .social-media {
+  fill: var(--tc);
+}
+

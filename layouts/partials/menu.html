@@ -30,6 +30,20 @@
     {{ end }}
   </div>
 
+  <div class="themes">
+    <div class="label">
+      <h5>STORY THEMES</h5>
+    </div>
+    {{ range .Site.Menus.themes }}
+    <div class="package">
+      <h4 class="sans bold">
+        <a class="{{ .Page.Param "class" }}" href="{{ .Page.Permalink }}">{{ .Name }}</a>
+      </h4>
+      <p class="summary">{{ .Page.Description }}</p>
+    </div>
+    {{ end }}
+  </div>
+
   <div class="molecules">
     <div class="label">
       <h5>MOLECULES</h5>
