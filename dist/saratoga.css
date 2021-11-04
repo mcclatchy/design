@@ -1104,6 +1104,10 @@ summary, .summary {
   padding: 0;
 }
 
+.story-body > .full-bleed:first-child {
+  margin-top: 0;
+}
+
 .story-body figure .package,
 .story-body .figure .package {
   padding: 10px 0 0;
