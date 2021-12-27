@@ -1,0 +1,9 @@
+/**
+ * Taboola card
+ */
+
+.tbl-feed-container {
+  max-width: var(--section-width);
+  margin: 15px auto;
+  padding: 0 15px;
+}
