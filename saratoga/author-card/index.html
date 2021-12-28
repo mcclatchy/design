@@ -110,15 +110,16 @@
 <p>As the organism compresses to fit smaller screens, the icons should wrap under the author&rsquo;s name and still right of the thumbnail. The biography uses the <code>summary</code> molecule and shoudn&rsquo;t deviate from the defaults. Also, the author&rsquo;s name should be made a link and shown in the standard <code>byline</code> style.</p>
 <h4 id="example">EXAMPLE</h4>
 <div class="story-module">
+  <div class="story-module">
   <div class="author-card package">
-  <div class="thumb">
-    <img src="../../img/aaron_moody.jpg" width="400" height="400" alt="Aaron Moody">
-  </div>
-  <div class="flex">
-    <span class="h6 byline">
-      <a href="mailto:amoody@newsobserver.com">Aaron Moody</a>
-    </span>
-    <div class="social-media">
+    <div class="thumb">
+      <img src="../../img/aaron_moody.jpg" width="400" height="400" alt="Aaron Moody">
+    </div>
+    <div class="flex">
+      <span class="h6 byline">
+        <a href="mailto:amoody@newsobserver.com">Aaron Moody</a>
+      </span>
+      <div class="social-media">
   <a href="#">
     <svg class="twitter" viewBox="0 0 512 512"><title>Go to Twitter</title><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
   </a>
@@ -134,24 +135,26 @@
   </a>
 </div>
 
-  </div>
-  <div class="summary package">
-    <span>Aaron Moody is a sports and general reporter for the News &amp; Observer. Here is a second sentence for the bio because it will probably be longer than this. Maybe even longer I don't know.</span>
-    <a class="h5" href="#custom-url-from-cue">Support my work with a digital subscription</a>
+    </div>
+    <div class="summary package">
+      <span>Aaron Moody is a sports and general reporter for the News &amp; Observer. Here is a second sentence for the bio because it will probably be longer than this. Maybe even longer I don't know.</span>
+      <a class="h5" href="#custom-url-from-cue">Support my work with a digital subscription</a>
+    </div>
   </div>
 </div>
 
 </div>
 <h4 id="html">HTML</h4>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;author-card package&#34;</span>&gt;
-  &lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;thumb&#34;</span>&gt;
-    &lt;<span style="color:#000080;font-weight:bold">img</span> <span style="color:#f00">src</span>=<span style="color:#00f">&#34;/img/aaron_moody.jpg&#34;</span> <span style="color:#f00">width</span>=<span style="color:#00f">&#34;400&#34;</span> <span style="color:#f00">height</span>=<span style="color:#00f">&#34;400&#34;</span> <span style="color:#f00">alt</span>=<span style="color:#00f">&#34;Aaron Moody&#34;</span>&gt;
-  &lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;
-  &lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;flex&#34;</span>&gt;
-    &lt;<span style="color:#000080;font-weight:bold">span</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;h6 byline&#34;</span>&gt;
-      &lt;<span style="color:#000080;font-weight:bold">a</span> <span style="color:#f00">href</span>=<span style="color:#00f">&#34;mailto:amoody@newsobserver.com&#34;</span>&gt;Aaron Moody&lt;/<span style="color:#000080;font-weight:bold">a</span>&gt;
-    &lt;/<span style="color:#000080;font-weight:bold">span</span>&gt;
-    &lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;social-media&#34;</span>&gt;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;story-module&#34;</span>&gt;
+  &lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;author-card package&#34;</span>&gt;
+    &lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;thumb&#34;</span>&gt;
+      &lt;<span style="color:#000080;font-weight:bold">img</span> <span style="color:#f00">src</span>=<span style="color:#00f">&#34;/img/aaron_moody.jpg&#34;</span> <span style="color:#f00">width</span>=<span style="color:#00f">&#34;400&#34;</span> <span style="color:#f00">height</span>=<span style="color:#00f">&#34;400&#34;</span> <span style="color:#f00">alt</span>=<span style="color:#00f">&#34;Aaron Moody&#34;</span>&gt;
+    &lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;
+    &lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;flex&#34;</span>&gt;
+      &lt;<span style="color:#000080;font-weight:bold">span</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;h6 byline&#34;</span>&gt;
+        &lt;<span style="color:#000080;font-weight:bold">a</span> <span style="color:#f00">href</span>=<span style="color:#00f">&#34;mailto:amoody@newsobserver.com&#34;</span>&gt;Aaron Moody&lt;/<span style="color:#000080;font-weight:bold">a</span>&gt;
+      &lt;/<span style="color:#000080;font-weight:bold">span</span>&gt;
+      &lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;social-media&#34;</span>&gt;
   &lt;<span style="color:#000080;font-weight:bold">a</span> <span style="color:#f00">href</span>=<span style="color:#00f">&#34;#&#34;</span>&gt;
     &lt;<span style="color:#000080;font-weight:bold">svg</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;twitter&#34;</span> <span style="color:#f00">viewBox</span>=<span style="color:#00f">&#34;0 0 512 512&#34;</span>&gt;&lt;<span style="color:#000080;font-weight:bold">title</span>&gt;Go to Twitter&lt;/<span style="color:#000080;font-weight:bold">title</span>&gt;&lt;<span style="color:#000080;font-weight:bold">path</span> <span style="color:#f00">d</span>=<span style="color:#00f">&#34;M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z&#34;</span>/&gt;&lt;/<span style="color:#000080;font-weight:bold">svg</span>&gt;
   &lt;/<span style="color:#000080;font-weight:bold">a</span>&gt;
@@ -167,24 +170,26 @@
   &lt;/<span style="color:#000080;font-weight:bold">a</span>&gt;
 &lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;
 
-  &lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;
-  &lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;summary package&#34;</span>&gt;
-    &lt;<span style="color:#000080;font-weight:bold">span</span>&gt;Aaron Moody is a sports and general reporter for the News &amp;amp; Observer. Here is a second sentence for the bio because it will probably be longer than this. Maybe even longer I don&#39;t know.&lt;/<span style="color:#000080;font-weight:bold">span</span>&gt;
-    &lt;<span style="color:#000080;font-weight:bold">a</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;h5&#34;</span> <span style="color:#f00">href</span>=<span style="color:#00f">&#34;#custom-url-from-cue&#34;</span>&gt;Support my work with a digital subscription&lt;/<span style="color:#000080;font-weight:bold">a</span>&gt;
+    &lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;
+    &lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;summary package&#34;</span>&gt;
+      &lt;<span style="color:#000080;font-weight:bold">span</span>&gt;Aaron Moody is a sports and general reporter for the News &amp;amp; Observer. Here is a second sentence for the bio because it will probably be longer than this. Maybe even longer I don&#39;t know.&lt;/<span style="color:#000080;font-weight:bold">span</span>&gt;
+      &lt;<span style="color:#000080;font-weight:bold">a</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;h5&#34;</span> <span style="color:#f00">href</span>=<span style="color:#00f">&#34;#custom-url-from-cue&#34;</span>&gt;Support my work with a digital subscription&lt;/<span style="color:#000080;font-weight:bold">a</span>&gt;
+    &lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;
   &lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;
 &lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;</code></pre></div>
 <hr>
 <h4 id="two-author-example">TWO-AUTHOR EXAMPLE</h4>
 <div class="grid story-module">
+  <div class="story-module">
   <div class="author-card package">
-  <div class="thumb">
-    <img src="../../img/aaron_moody.jpg" width="400" height="400" alt="Aaron Moody">
-  </div>
-  <div class="flex">
-    <span class="h6 byline">
-      <a href="mailto:amoody@newsobserver.com">Aaron Moody</a>
-    </span>
-    <div class="social-media">
+    <div class="thumb">
+      <img src="../../img/aaron_moody.jpg" width="400" height="400" alt="Aaron Moody">
+    </div>
+    <div class="flex">
+      <span class="h6 byline">
+        <a href="mailto:amoody@newsobserver.com">Aaron Moody</a>
+      </span>
+      <div class="social-media">
   <a href="#">
     <svg class="twitter" viewBox="0 0 512 512"><title>Go to Twitter</title><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
   </a>
@@ -200,22 +205,24 @@
   </a>
 </div>
 
-  </div>
-  <div class="summary package">
-    <span>Aaron Moody is a sports and general reporter for the News &amp; Observer. Here is a second sentence for the bio because it will probably be longer than this. Maybe even longer I don't know.</span>
-    <a class="h5" href="#custom-url-from-cue">Support my work with a digital subscription</a>
+    </div>
+    <div class="summary package">
+      <span>Aaron Moody is a sports and general reporter for the News &amp; Observer. Here is a second sentence for the bio because it will probably be longer than this. Maybe even longer I don't know.</span>
+      <a class="h5" href="#custom-url-from-cue">Support my work with a digital subscription</a>
+    </div>
   </div>
 </div>
 
+  <div class="story-module">
   <div class="author-card package">
-  <div class="thumb">
-    <img src="../../img/aaron_moody.jpg" width="400" height="400" alt="Aaron Moody">
-  </div>
-  <div class="flex">
-    <span class="h6 byline">
-      <a href="mailto:amoody@newsobserver.com">Aaron Moody</a>
-    </span>
-    <div class="social-media">
+    <div class="thumb">
+      <img src="../../img/aaron_moody.jpg" width="400" height="400" alt="Aaron Moody">
+    </div>
+    <div class="flex">
+      <span class="h6 byline">
+        <a href="mailto:amoody@newsobserver.com">Aaron Moody</a>
+      </span>
+      <div class="social-media">
   <a href="#">
     <svg class="twitter" viewBox="0 0 512 512"><title>Go to Twitter</title><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
   </a>
@@ -231,25 +238,27 @@
   </a>
 </div>
 
-  </div>
-  <div class="summary package">
-    <span>Aaron Moody is a sports and general reporter for the News &amp; Observer. Here is a second sentence for the bio because it will probably be longer than this. Maybe even longer I don't know.</span>
-    <a class="h5" href="#custom-url-from-cue">Support my work with a digital subscription</a>
+    </div>
+    <div class="summary package">
+      <span>Aaron Moody is a sports and general reporter for the News &amp; Observer. Here is a second sentence for the bio because it will probably be longer than this. Maybe even longer I don't know.</span>
+      <a class="h5" href="#custom-url-from-cue">Support my work with a digital subscription</a>
+    </div>
   </div>
 </div>
 
 </div>
 <h4 id="html-1">HTML</h4>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;grid story-module&#34;</span>&gt;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;grid story-module&#34;</span>&gt;
+  &lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;story-module&#34;</span>&gt;
   &lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;author-card package&#34;</span>&gt;
-  &lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;thumb&#34;</span>&gt;
-    &lt;<span style="color:#000080;font-weight:bold">img</span> <span style="color:#f00">src</span>=<span style="color:#00f">&#34;/img/aaron_moody.jpg&#34;</span> <span style="color:#f00">width</span>=<span style="color:#00f">&#34;400&#34;</span> <span style="color:#f00">height</span>=<span style="color:#00f">&#34;400&#34;</span> <span style="color:#f00">alt</span>=<span style="color:#00f">&#34;Aaron Moody&#34;</span>&gt;
-  &lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;
-  &lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;flex&#34;</span>&gt;
-    &lt;<span style="color:#000080;font-weight:bold">span</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;h6 byline&#34;</span>&gt;
-      &lt;<span style="color:#000080;font-weight:bold">a</span> <span style="color:#f00">href</span>=<span style="color:#00f">&#34;mailto:amoody@newsobserver.com&#34;</span>&gt;Aaron Moody&lt;/<span style="color:#000080;font-weight:bold">a</span>&gt;
-    &lt;/<span style="color:#000080;font-weight:bold">span</span>&gt;
-    &lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;social-media&#34;</span>&gt;
+    &lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;thumb&#34;</span>&gt;
+      &lt;<span style="color:#000080;font-weight:bold">img</span> <span style="color:#f00">src</span>=<span style="color:#00f">&#34;/img/aaron_moody.jpg&#34;</span> <span style="color:#f00">width</span>=<span style="color:#00f">&#34;400&#34;</span> <span style="color:#f00">height</span>=<span style="color:#00f">&#34;400&#34;</span> <span style="color:#f00">alt</span>=<span style="color:#00f">&#34;Aaron Moody&#34;</span>&gt;
+    &lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;
+    &lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;flex&#34;</span>&gt;
+      &lt;<span style="color:#000080;font-weight:bold">span</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;h6 byline&#34;</span>&gt;
+        &lt;<span style="color:#000080;font-weight:bold">a</span> <span style="color:#f00">href</span>=<span style="color:#00f">&#34;mailto:amoody@newsobserver.com&#34;</span>&gt;Aaron Moody&lt;/<span style="color:#000080;font-weight:bold">a</span>&gt;
+      &lt;/<span style="color:#000080;font-weight:bold">span</span>&gt;
+      &lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;social-media&#34;</span>&gt;
   &lt;<span style="color:#000080;font-weight:bold">a</span> <span style="color:#f00">href</span>=<span style="color:#00f">&#34;#&#34;</span>&gt;
     &lt;<span style="color:#000080;font-weight:bold">svg</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;twitter&#34;</span> <span style="color:#f00">viewBox</span>=<span style="color:#00f">&#34;0 0 512 512&#34;</span>&gt;&lt;<span style="color:#000080;font-weight:bold">title</span>&gt;Go to Twitter&lt;/<span style="color:#000080;font-weight:bold">title</span>&gt;&lt;<span style="color:#000080;font-weight:bold">path</span> <span style="color:#f00">d</span>=<span style="color:#00f">&#34;M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z&#34;</span>/&gt;&lt;/<span style="color:#000080;font-weight:bold">svg</span>&gt;
   &lt;/<span style="color:#000080;font-weight:bold">a</span>&gt;
@@ -265,22 +274,24 @@
   &lt;/<span style="color:#000080;font-weight:bold">a</span>&gt;
 &lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;
 
-  &lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;
-  &lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;summary package&#34;</span>&gt;
-    &lt;<span style="color:#000080;font-weight:bold">span</span>&gt;Aaron Moody is a sports and general reporter for the News &amp;amp; Observer. Here is a second sentence for the bio because it will probably be longer than this. Maybe even longer I don&#39;t know.&lt;/<span style="color:#000080;font-weight:bold">span</span>&gt;
-    &lt;<span style="color:#000080;font-weight:bold">a</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;h5&#34;</span> <span style="color:#f00">href</span>=<span style="color:#00f">&#34;#custom-url-from-cue&#34;</span>&gt;Support my work with a digital subscription&lt;/<span style="color:#000080;font-weight:bold">a</span>&gt;
+    &lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;
+    &lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;summary package&#34;</span>&gt;
+      &lt;<span style="color:#000080;font-weight:bold">span</span>&gt;Aaron Moody is a sports and general reporter for the News &amp;amp; Observer. Here is a second sentence for the bio because it will probably be longer than this. Maybe even longer I don&#39;t know.&lt;/<span style="color:#000080;font-weight:bold">span</span>&gt;
+      &lt;<span style="color:#000080;font-weight:bold">a</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;h5&#34;</span> <span style="color:#f00">href</span>=<span style="color:#00f">&#34;#custom-url-from-cue&#34;</span>&gt;Support my work with a digital subscription&lt;/<span style="color:#000080;font-weight:bold">a</span>&gt;
+    &lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;
   &lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;
 &lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;
 
+  &lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;story-module&#34;</span>&gt;
   &lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;author-card package&#34;</span>&gt;
-  &lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;thumb&#34;</span>&gt;
-    &lt;<span style="color:#000080;font-weight:bold">img</span> <span style="color:#f00">src</span>=<span style="color:#00f">&#34;/img/aaron_moody.jpg&#34;</span> <span style="color:#f00">width</span>=<span style="color:#00f">&#34;400&#34;</span> <span style="color:#f00">height</span>=<span style="color:#00f">&#34;400&#34;</span> <span style="color:#f00">alt</span>=<span style="color:#00f">&#34;Aaron Moody&#34;</span>&gt;
-  &lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;
-  &lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;flex&#34;</span>&gt;
-    &lt;<span style="color:#000080;font-weight:bold">span</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;h6 byline&#34;</span>&gt;
-      &lt;<span style="color:#000080;font-weight:bold">a</span> <span style="color:#f00">href</span>=<span style="color:#00f">&#34;mailto:amoody@newsobserver.com&#34;</span>&gt;Aaron Moody&lt;/<span style="color:#000080;font-weight:bold">a</span>&gt;
-    &lt;/<span style="color:#000080;font-weight:bold">span</span>&gt;
-    &lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;social-media&#34;</span>&gt;
+    &lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;thumb&#34;</span>&gt;
+      &lt;<span style="color:#000080;font-weight:bold">img</span> <span style="color:#f00">src</span>=<span style="color:#00f">&#34;/img/aaron_moody.jpg&#34;</span> <span style="color:#f00">width</span>=<span style="color:#00f">&#34;400&#34;</span> <span style="color:#f00">height</span>=<span style="color:#00f">&#34;400&#34;</span> <span style="color:#f00">alt</span>=<span style="color:#00f">&#34;Aaron Moody&#34;</span>&gt;
+    &lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;
+    &lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;flex&#34;</span>&gt;
+      &lt;<span style="color:#000080;font-weight:bold">span</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;h6 byline&#34;</span>&gt;
+        &lt;<span style="color:#000080;font-weight:bold">a</span> <span style="color:#f00">href</span>=<span style="color:#00f">&#34;mailto:amoody@newsobserver.com&#34;</span>&gt;Aaron Moody&lt;/<span style="color:#000080;font-weight:bold">a</span>&gt;
+      &lt;/<span style="color:#000080;font-weight:bold">span</span>&gt;
+      &lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;social-media&#34;</span>&gt;
   &lt;<span style="color:#000080;font-weight:bold">a</span> <span style="color:#f00">href</span>=<span style="color:#00f">&#34;#&#34;</span>&gt;
     &lt;<span style="color:#000080;font-weight:bold">svg</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;twitter&#34;</span> <span style="color:#f00">viewBox</span>=<span style="color:#00f">&#34;0 0 512 512&#34;</span>&gt;&lt;<span style="color:#000080;font-weight:bold">title</span>&gt;Go to Twitter&lt;/<span style="color:#000080;font-weight:bold">title</span>&gt;&lt;<span style="color:#000080;font-weight:bold">path</span> <span style="color:#f00">d</span>=<span style="color:#00f">&#34;M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z&#34;</span>/&gt;&lt;/<span style="color:#000080;font-weight:bold">svg</span>&gt;
   &lt;/<span style="color:#000080;font-weight:bold">a</span>&gt;
@@ -296,10 +307,11 @@
   &lt;/<span style="color:#000080;font-weight:bold">a</span>&gt;
 &lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;
 
-  &lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;
-  &lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;summary package&#34;</span>&gt;
-    &lt;<span style="color:#000080;font-weight:bold">span</span>&gt;Aaron Moody is a sports and general reporter for the News &amp;amp; Observer. Here is a second sentence for the bio because it will probably be longer than this. Maybe even longer I don&#39;t know.&lt;/<span style="color:#000080;font-weight:bold">span</span>&gt;
-    &lt;<span style="color:#000080;font-weight:bold">a</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;h5&#34;</span> <span style="color:#f00">href</span>=<span style="color:#00f">&#34;#custom-url-from-cue&#34;</span>&gt;Support my work with a digital subscription&lt;/<span style="color:#000080;font-weight:bold">a</span>&gt;
+    &lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;
+    &lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;summary package&#34;</span>&gt;
+      &lt;<span style="color:#000080;font-weight:bold">span</span>&gt;Aaron Moody is a sports and general reporter for the News &amp;amp; Observer. Here is a second sentence for the bio because it will probably be longer than this. Maybe even longer I don&#39;t know.&lt;/<span style="color:#000080;font-weight:bold">span</span>&gt;
+      &lt;<span style="color:#000080;font-weight:bold">a</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;h5&#34;</span> <span style="color:#f00">href</span>=<span style="color:#00f">&#34;#custom-url-from-cue&#34;</span>&gt;Support my work with a digital subscription&lt;/<span style="color:#000080;font-weight:bold">a</span>&gt;
+    &lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;
   &lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;
 &lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;
 
@@ -342,7 +354,7 @@
 <h4 id="html-2">HTML</h4>
 <p>The structure for this element is using many of the same classes and concepts from the inline author-card, but it is slightly different. Despite many attempts to keep the structure the same, it either didn&rsquo;t work or the CSS became overly complex.</p>
 <p>This version does utilize a media breakpoint, since it is only used in one way on the author bio page. That causes issues in this guide. To see how the element responds to browser resizing, use the <a href="../decks/author-bio/">author bio deck</a>.</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;author-card author-bio package&#34;</span>&gt;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;author-card author-bio package&#34;</span>&gt;
   &lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;thumb&#34;</span>&gt;
     &lt;<span style="color:#000080;font-weight:bold">img</span> <span style="color:#f00">src</span>=<span style="color:#00f">&#34;/img/aaron_moody.jpg&#34;</span> <span style="color:#f00">width</span>=<span style="color:#00f">&#34;400&#34;</span> <span style="color:#f00">height</span>=<span style="color:#00f">&#34;400&#34;</span> <span style="color:#f00">alt</span>=<span style="color:#00f">&#34;Aaron Moody&#34;</span>&gt;
   &lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;

@@ -111,21 +111,21 @@ In order for Adobe Campaign to properly track any URLs in its tables, the URLs h
 </div>
 <h3 id="content-blocks">Content blocks</h3>
 <h4 id="header">Header</h4>
-<pre><code>&lt;%@ include view='mccDynamicHeader' %&gt;
+<pre tabindex="0"><code>&lt;%@ include view='mccDynamicHeader' %&gt;
 </code></pre><h4 id="footers">FOOTERS</h4>
-<pre><code>&lt;%@ include view='footer_marketing' %&gt;
+<pre tabindex="0"><code>&lt;%@ include view='footer_marketing' %&gt;
 &lt;%@ include view='mccFooterNoSocial' %&gt;
 </code></pre><h4 id="terms-of-service">TERMS OF SERVICE</h4>
-<pre><code>&lt;%@ include view='tos_digital_2019_10' %&gt;
+<pre tabindex="0"><code>&lt;%@ include view='tos_digital_2019_10' %&gt;
 &lt;%@ include view='tos_combo_2019_10' %&gt;
 </code></pre><br>
 <h3 id="importing-content-from-a-csv">Importing Content From a CSV</h3>
-<pre><code>&lt;%= targetData.imageURL %&gt;
+<pre tabindex="0"><code>&lt;%= targetData.imageURL %&gt;
 (Replace imageURL with whatever the name of the column is in the spreadsheet)
 </code></pre><br>
 <h3 id="site-brand-table">Site Brand Table</h3>
 <h4 id="property-names">Property Names</h4>
-<pre><code>Official Property Name (what it says in the masthead)
+<pre tabindex="0"><code>Official Property Name (what it says in the masthead)
 &lt;%= recipient.siteBrand.paperName %&gt;
 
 The Property Name
@@ -137,7 +137,7 @@ the Property Name
 Property Name
 &lt;%= recipient.siteBrand.propertyName %&gt;
 </code></pre><h4 id="publication-links">Publication Links</h4>
-<pre><code>https://&lt;%= recipient.siteBrand.publicationUrl %&gt;
+<pre tabindex="0"><code>https://&lt;%= recipient.siteBrand.publicationUrl %&gt;
 https://&lt;%= recipient.siteBrand.eeditionVanity %&gt;
 https://&lt;%= recipient.siteBrand.subActivation %&gt;
 https://&lt;%= recipient.siteBrand.gamesPage %&gt;
@@ -146,19 +146,19 @@ https://&lt;%= recipient.siteBrand.nieDonationURL %&gt;
 You can also add a link to a specific section of a publication or vanity link by using the structure:
 https://www.&lt;%= recipient.siteName %&gt;/section
 </code></pre><h4 id="app-links">App Links</h4>
-<pre><code>https://&lt;%= recipient.siteBrand.googlePlayApp %&gt;
+<pre tabindex="0"><code>https://&lt;%= recipient.siteBrand.googlePlayApp %&gt;
 https://&lt;%= recipient.siteBrand.iosApp %&gt;
 </code></pre><h4 id="social-media-links">Social Media Links</h4>
-<pre><code>https://www.facebook.com/&lt;%= recipient.siteBrand.connectFacebookUrl %&gt;
+<pre tabindex="0"><code>https://www.facebook.com/&lt;%= recipient.siteBrand.connectFacebookUrl %&gt;
 https://www.twitter.com/&lt;%= recipient.siteBrand.connectTwitterUrl %&gt;
 https://www.instagram.com/&lt;%= recipient.siteBrand.connectInstagramUrl %&gt;
 </code></pre><h4 id="customer-service">CUSTOMER SERVICE</h4>
-<pre><code>&lt;%= recipient.siteBrand.customerServiceEmail %&gt;
+<pre tabindex="0"><code>&lt;%= recipient.siteBrand.customerServiceEmail %&gt;
 &lt;%= recipient.siteBrand.customerServicePh1 %&gt;
 https://&lt;%= recipient.siteBrand.customerServicePage %&gt;
 </code></pre><br>
 <h3 id="subscriber-table">Subscriber Table</h3>
-<pre><code>&lt;%= recipient.firstName %&gt;
+<pre tabindex="0"><code>&lt;%= recipient.firstName %&gt;
 &lt;%= recipient.lastName %&gt;
 &lt;%= recipient.account %&gt;
 </code></pre>
