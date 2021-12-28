@@ -17,40 +17,44 @@ layout: deck
     {{< header >}}
     {{< figure >}}
     
-    <p>The dark theme is designed to showcase great media accompanying a story. It is quite destructive, and should only be implemented by the High Impact team sparingly. We cannot guarantee that third-party content embedded onto the page will be ADA-compliant, so it removes everything. This includes the following:</p>
+    <p>The premium theme is designed for enterprise content. It performs a number of enhancements common to these types of projects:</p>
 
     <ul>
-      <li>DataWrapper graphics</li>
-      <li>social media posts</li>
-      <li>Youtube videos</li>
-      <li>the Trinity audio widget</li>
-      <li>comments</li>
-      <li>all iframes</li>
-      <li>spillover galleries</li>
-      <li>cards after the story</li>
+      <li>It widens landscape photos and videos</li>
+      <li>It removes content between the story and the footer</li>
+      <li>It fixes Series Nav links when published to multiple markets</li>
     </ul>
 
-    <p>In addition to the default set, if the <i>Allow Ads</i> option is unchecked in the story file, the theme will also remove the following:</p>
+    <p>In addition to these changes, the theme also addresses zones and introduces a concept we call valid insertion points. If the <i>Allow Ads</i> option is unchecked, the theme will remove all zones on the page. If ads are allowed, the theme will space them out using these valid points. First, the theme pulls the zones out of the page and stores them. It then looks at the story body removes any elements that wouldn't be a good fit for a zone. The rules are:</p>
 
     <div class="zone">
       <fake-ad size="[728,400]"></fake-ad>
     </div>
 
+    <ol class="code">
+      <li>The element must be a paragraph</li>
+      <li>The text of the paragraph must be more than 100 characters</li>
+      <li>The previous element must also be a paragraph</li>
+    </ol>
+
+    <p>Once the theme has a clean list of paragraphs, it places the zones back into the story using a custom map. The map for this theme is lsited below, and please use our <a href="../../decks/story/">story deck</a> for reference. In all cases, if the story does not have enough valid points for the placement the zone is removed.</p>
+
     <ul>
-      <li>all zone containers</li>
-      <li>the zone 3A marketing card</li>
-      <li>the zone 4A marketing card</li>
+      <li>Zone 2 is removed entirely</li>
+      <li>Zone 3 is moved to the 6th point</li>
+      <li>Zone 4 is moved to the 12th point</li>
+      <li>Zone 5 is moved to the 18th point</li>
+      <li>No additional zones (dynamic) are kept</li>
     </ul>
-
-    <p><i>This implementation is also using a story enhancement that makes landscape photos and videos wider, and though not required the two pair nicely.</i></p>
-
-    {{< figure >}}
 
     <div class="zone grid combo">
       <fake-ad style="--color: gray"></fake-ad>
       <fake-ad></fake-ad>
     </div>
 
+    <p>Zones are often removed entirely on enterprise stories. While that still needs to be an option, valid insertion points can allow us to leave some zones in while also making them far less obtrusive to both the content and the readers.</p>
+
+    {{< figure >}}
     <h3>Lorem Ipsum</h3>
     <p>The cactus is a design. They were lost without the offbeat aardvark that composed their tuba. The jumbos could be said to resemble untaught invoices. Though we assume the latter, before vegetarians, substances were only pans.</p>
     <p>Ovoid deals show us how cushions can be authors. A rainstorm is a thuggish music. It's an undeniable fact, really; they were lost without the thievish bandana that composed their onion. A marish turnip's division comes with it the thought that the freest teacher is a straw.</p>
