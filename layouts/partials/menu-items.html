@@ -1,0 +1,8 @@
+{{ range . }}
+<div class="package">
+  <h4 class="sans bold">
+    <a href="{{ .Page.Permalink }}">{{ .Name }}</a>
+  </h4>
+  <p class="summary">{{ .Page.Description }}</p>
+</div>
+{{ end }}

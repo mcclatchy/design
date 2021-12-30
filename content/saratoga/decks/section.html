@@ -2,14 +2,8 @@
 title: section
 description: A sample section page.
 menu: decks
-layout: deck
+layout: section
 ---
-
-{{< flag >}}
-
-<section>
-  <fake-ad size="[[970,250],[728,90],[300,50]]"></fake-ad>
-</section>
 
 {{< section-nav >}}
 
@@ -25,6 +19,7 @@ layout: deck
       {{< card >}}
     </div>
     <div class="rail flex-columns">
+      {{< digest >}}
       {{< digest >}}
       <fake-ad size="[300,600]"></fake-ad>
     </div>
@@ -43,7 +38,7 @@ layout: deck
 <section>
   <div class="flex-columns">
     <div class="rail flex-columns">
-      <fake-ad></fake-ad>
+      <fake-ad size="[300,600]"></fake-ad>
       <fake-ad></fake-ad>
     </div>
     <div class="main-stage flex-columns">
@@ -67,5 +62,3 @@ layout: deck
   </div>
   <a href="#" class="more-link">View all galleries</a>
 </section>
-
-{{< footer >}}

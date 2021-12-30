@@ -1,0 +1,15 @@
+{{ define "head" }}
+  <script defer src="/js/navigation.js"></script>
+{{ end }}
+
+{{ define "content" }}
+  {{ partial "decks/masthead" . }}
+
+  <section id="zone-el-2" class="zone" data-zone="1">
+    <fake-ad size="[[728,90],[320,50]]"></fake-ad>
+  </section>
+
+  {{ .Content }}
+
+  {{ partial "decks/footer" . }}
+{{ end }}

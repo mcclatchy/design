@@ -8,9 +8,3 @@ The gallery card can be used in a story, or as a standalone card for sections or
 
 #### EXAMPLE
 {{< gallery >}}
-
-
-#### HTML
-{{< highlight html >}}
-{{< gallery >}}
-{{< /highlight >}}

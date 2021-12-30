@@ -1,0 +1,11 @@
+{{ define "head" }}
+  <script defer src="/js/forms.js"></script>
+{{ end }}
+
+{{ define "content" }}
+  {{ .Render "masthead" }}
+
+  {{ .Content }}
+
+  {{ partial "decks/footer" . }}
+{{ end }}

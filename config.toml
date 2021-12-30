@@ -1,31 +1,29 @@
+# Globals
 baseURL = "https://mcclatchy.github.io/design"
 title = "McClatchy Design"
-
 languageCode = "en-us"
 relativeURLs = true
 pluralizeListTitles = false
+disableKinds = ["taxonomy", "taxonomyTerm", "RSS", "404"]
+
+# Highlighting
 pygmentsCodeFences = true
 pygmentsStyle = "borland"
 
-disableKinds = ["taxonomy", "taxonomyTerm", "RSS", "404"]
-
+# Markdown Options
 [markup.goldmark.renderer]
   unsafe = true
 
-[menu]
-  [[menu.main]]
-    name = "style guide"
-    url = "/saratoga/"
-    weight = 1
-  [[menu.main]]
-    name = "markets"
-    url = "/markets/"
-    weight = 2
-  [[menu.main]]
-    name = "ads"
-    url = "/ads/"
-    weight = 3
-  [[menu.main]]
-    name = "email"
-    url = "/email/"
-    weight = 4
+# Top Nav menu
+[[menu.main]]
+  name = "style guide"
+  url = "/saratoga/"
+  weight = 1
+[[menu.main]]
+  name = "markets"
+  url = "/markets/"
+  weight = 2
+[[menu.main]]
+  name = "email"
+  url = "/email/"
+  weight = 3
