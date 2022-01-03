@@ -11,7 +11,3 @@ On mobile (600px), the section-nav headline reduces in size and the expandable l
 #### EXAMPLE
 
 *The section nav is included in the [section deck](../decks/section/) and is better represented there.*
-
-#### HTML
-
-{{< highlight html >}}{{< section-nav >}}{{< /highlight >}}

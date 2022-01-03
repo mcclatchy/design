@@ -13,13 +13,6 @@ The byline and credit rules should have this standard anywhere attribution appli
   </p>
 </div>
 
-#### HTML
-```html
-<p class="byline">By <a href="#">John Doe</a> 
-  <span class="credit">SAMPLE NEWSPAPER</span>
-</p>
-```
-
 #### BYLINE RULES
 
 Property | Value

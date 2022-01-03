@@ -11,9 +11,3 @@ The review-order card uses the `paper` molecule to create lift, the `flex-column
 <div class="example grid shadow" style="--columns: 425px">
   {{< dsp/review-order >}}
 </div>
-
-#### HTML
-{{< highlight html >}}
-{{< dsp/review-order >}}
-{{< /highlight >}}
-

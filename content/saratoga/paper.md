@@ -14,18 +14,3 @@ In our digests, the design dictates that there be 15px of space between the labe
 {{< digest label="sticky" >}}
 {{< digest >}}
 </div>
-
-#### HTML
-
-```html
-<div class="paper">
-  <article class="package">
-    <h3><a href="https://mcclatchy.github.io/saratoga/opinion/205579084/">The Episcopal Church changed course for our LGBT members</a></h3>
-    <time>March 16, 2018 3:42 pm</time>
-  </article>
-  <article class="package">
-    <h3><a href="https://mcclatchy.github.io/saratoga/opinion/205581414/">The Kansas Republican Party is taking a stance on transgender identity</a></h3>
-    <time>March 16, 2018 3:58 pm</time>
-  </article>
-</div>
-```

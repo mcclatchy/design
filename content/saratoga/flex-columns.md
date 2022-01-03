@@ -1,5 +1,5 @@
 ---
-title: "flex-columns"
+title: "flex-columns (deprecated)"
 description: "A flexbox version of the grid using the same rules."
 menu: molecule
 ---
@@ -34,19 +34,3 @@ This is using the `.main-stage`, `.rail` and `.reverse` concepts.
     </div>
   </div>
 </section>
-
-#### HTML
-```html
-<div class="flex-columns reverse">
-  <div class="main-stage">
-    <article class="card"> ... </article>
-    <article class="card"> ... </article>
-    <article class="card"> ... </article>
-    <article class="card"> ... </article>
-    <article class="card"> ... </article>
-  </div>
-  <div class="rail">
-    <div class="digest"> ... </div>
-  </div>
-</div>
-```

@@ -15,9 +15,3 @@ This card will never be used with the rest of the design system. In order to iso
 <div class="example">
 {{< vendor-footer >}}
 </div>
-
-#### HTML 
-
-{{< highlight html >}}
-{{< vendor-footer >}}
-{{< /highlight >}}

@@ -11,11 +11,6 @@ The In Depth module is a version of the horizontal card that changes the flex-gr
 {{< in-depth >}}
 </div>
 
-#### HTML
-{{< highlight html >}}
-{{< in-depth >}}
-{{< /highlight >}}
-
 ---
 
 ## No Image version
@@ -26,8 +21,3 @@ When there is missing lead art for the story, the text should fall in the middle
 <div class="example">
 {{< in-depth hide="image" >}}
 </div>
-
-#### HTML
-{{< highlight html >}}
-{{< in-depth hide="image" >}}
-{{< /highlight >}}

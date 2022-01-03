@@ -10,8 +10,3 @@ The promo card is a revenue component that, like the In Depth card, extends the 
 <div class="example">
 {{< promo >}}
 </div>
-
-#### HTML
-{{< highlight html >}}
-{{< promo >}}
-{{< /highlight >}}

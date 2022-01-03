@@ -9,7 +9,3 @@ The panel card is a more generic form of the transparency card. It was originall
 #### EXAMPLE
 
 {{< panel >}}
-
-#### HTML
-
-{{< highlight html >}}{{< panel >}}{{< /highlight >}}

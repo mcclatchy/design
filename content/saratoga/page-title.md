@@ -12,17 +12,7 @@ The title displays center aligned on all breakpoints and pages, with the excepti
   {{< dsp/page-title >}}
 </div>
 
-#### HTML
-{{< highlight html >}}
-  {{< dsp/page-title >}}
-{{< /highlight >}}
-
 #### Purchase flow example
 <div class="example grid" style="--columns: 400px;">
   {{< dsp/page-title type="sign-up" >}}
 </div>
-
-#### Purchase Flow HTML
-{{< highlight html >}}
-  {{< dsp/page-title type="sign-up" >}}
-{{< /highlight >}}

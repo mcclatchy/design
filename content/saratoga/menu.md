@@ -17,9 +17,3 @@ A large portion of the menu is a simple stack of expander elements and will requ
 
 *The menu is included in the [story deck](../decks/story/) and is better represented there.  
 Click the hamburger menu in the flag to open it.*
-
-#### HTML
-
-{{< highlight html >}}
-{{< menu >}}
-{{< /highlight >}}

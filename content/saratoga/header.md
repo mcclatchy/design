@@ -8,9 +8,3 @@ The `header` organism is based on the standard `package` molecule but increases 
 
 #### EXAMPLE
 {{< header >}}
-
-
-#### HTML
-{{< highlight html >}}
-{{< header >}}
-{{< /highlight >}}

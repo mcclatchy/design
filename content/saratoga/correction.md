@@ -8,8 +8,3 @@ The correction card notifies readers that the story has been changed to fix fact
 
 #### Example
 {{< correction >}}
-
-#### HTML
-{{< highlight html >}}
-{{< correction >}}
-{{< /highlight >}}

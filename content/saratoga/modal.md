@@ -10,12 +10,7 @@ Modals should be consistent across products and vendors to benefit our readers. 
 #### EXAMPLE
 <button class="button ghost" onclick="toggleModal('main-modal')">Show modal</button>
 
-#### HTML
-{{< highlight html >}}
-{{< modal >}}
-{{< /highlight >}}
-
-#### JavaScript
+#### JavaScript example
 ```js
 function toggleModal(id, force) {
   let m = document.getElementById(id);
@@ -40,11 +35,6 @@ function toggleModal(id, force) {
 
 #### EXAMPLE
 <button class="button ghost" onclick="toggleModal('bottom-modal')">Show modal</button>
-
-#### HTML
-{{< highlight html >}}
-{{< modal type="bottom" >}}
-{{< /highlight >}}
 
 {{< modal >}}
 {{< modal type="bottom" >}}

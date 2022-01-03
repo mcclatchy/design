@@ -8,6 +8,3 @@ This organism is mostly a combination of the grid and package molecules, with a 
 
 #### Example
 {{< related-stories >}}
-
-#### HTML
-{{< highlight html >}}{{< related-stories >}}{{< /highlight >}}

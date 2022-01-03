@@ -89,6 +89,16 @@ footer {
 }
 
 /**
+ * Download snippet button
+ */
+
+.download-snippet {
+  --ht: uppercase;
+  --hw: bold;
+  --hf: var(--sans);
+}
+
+/**
  * Unincorporated cards
  */
 

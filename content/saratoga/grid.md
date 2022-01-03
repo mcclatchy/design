@@ -13,24 +13,9 @@ This is the smallest method of creating a grid following the design rules, which
   {{< card >}}
 </div>
 
-#### HTML
-```html
-<section class="grid">
-  <article class="card"> 
-    ...  
-  </article>
-  <article class="card"> 
-    ...  
-  </article>
-  <article class="card"> 
-    ...  
-  </article>
-</section>
-```
-
 #### RULES
 
 Property | Value
 --- | ---
 Column width | 300px minimum and stretches to fill between sizes.
-Spacing between columns | 30px
+Gap | 30px

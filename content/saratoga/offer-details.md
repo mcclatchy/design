@@ -11,8 +11,3 @@ The offer details pane is used on the paywall in an `expander` and on the subscr
 <div class="example">
 {{< dsp/offer-details >}}
 </div>
-
-#### HTML
-{{< highlight html >}}
-{{< dsp/offer-details >}}
-{{< /highlight >}}

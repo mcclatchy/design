@@ -9,7 +9,3 @@ The transparency organism is an extension of the `expander` molecule made to hou
 #### EXAMPLE
 
 {{< transparency >}}
-
-#### HTML
-
-{{< highlight html >}}{{< transparency >}}{{< /highlight >}}

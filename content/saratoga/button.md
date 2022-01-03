@@ -30,20 +30,6 @@ Buttons are designed to be placed in a center-aligned row using browser defaults
     </div>
 </div>
 
-#### HTML
-
-```html
-<div>
-  <button class="button impact">Impact button</button>
-  <button class="button ghost">Ghost button</button>
-  <button class="button promo">Promo button</button>
-  <button class="button">Text button</button>
-  <button class="button social facebook">Sign in with Facebook</button>
-  <button class="button social google">Sign in with Google</button>
-  <button class="button social apple">Sign in with Apple</button>
-</div>
-```
-
 #### RULES
 
 | Property | Value |
@@ -67,7 +53,3 @@ Custom selects use a combination of the [expander](../expander) molecule and lin
 </div>
 
 <script async src="/js/select.js"></script>
-
-#### HTML
-
-{{< highlight html >}}{{< select >}}{{< /highlight >}}

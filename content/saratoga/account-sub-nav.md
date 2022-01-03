@@ -9,9 +9,6 @@ The account header molecule is used on the <a href="/saratoga/decks/my-account">
 
 ##### Example
 
-{{< dsp/account-sub-nav >}}
-
-#### HTML
-{{< highlight html >}}
-{{< dsp/account-sub-nav >}}
-{{< /highlight >}}
+<div class="example">
+  {{< dsp/account-sub-nav >}}
+</div>

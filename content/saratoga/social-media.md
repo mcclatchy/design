@@ -9,11 +9,6 @@ A very small molecule, the icons are simply a center-justified flex row with opt
 #### Example
 {{< social-media >}}
 
-#### HTML 
-{{< highlight html >}}
-{{< social-media >}}
-{{< /highlight >}}
-
 #### RULES
 
 Properties | Value

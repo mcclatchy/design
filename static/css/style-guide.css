@@ -38,6 +38,10 @@ td:first-child {
   --lc: #222;
 }
 
+.example:last-child {
+  margin-bottom: 0;
+}
+
 .example.grid {
   justify-content: center;
 }
@@ -136,7 +140,6 @@ td:first-child {
 .details {
   position: relative;
   z-index: 2;
-  padding-bottom: 30px;
 }
 
 @media (min-width: 769px) {

@@ -8,6 +8,3 @@ The sponsor card is a simple grid and package combination, with some differences
 
 #### Example
 {{< sponsor >}}
-
-#### HTML
-{{< highlight html >}}{{< sponsor >}}{{< /highlight >}}

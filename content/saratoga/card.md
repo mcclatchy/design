@@ -12,21 +12,11 @@ The card molecule extends the paper base molecule and adds Flexbox. By doing so 
   {{< card >}}
 </div>
 
-#### HTML
-{{< highlight html >}}
-{{< card >}}
-{{< /highlight >}}
-
----
-
 ## Horizontal version
 
 The card can also be made horizontal by adding a class with the same name.
 
 #### Example
-{{< card class="horizontal" >}}
-
-#### HTML
-{{< highlight html >}}
-{{< card class="horizontal" >}}
-{{< /highlight >}}
+<div class="example grid" style="grid-template-rows: 300px;">
+  {{< card class="horizontal" >}}
+</div>

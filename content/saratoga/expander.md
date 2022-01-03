@@ -10,6 +10,3 @@ The generic rules make for a very flexible setup, where we can force each child 
 
 #### Example
 {{< series-nav >}}
-
-#### HTML
-{{< highlight html >}}{{< series-nav >}}{{< /highlight >}}

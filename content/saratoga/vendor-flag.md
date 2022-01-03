@@ -15,24 +15,12 @@ This card will never be used with the rest of the design system. In order to iso
 {{< vendor-flag >}}
 </div>
 
-{{< highlight html >}}
-{{< vendor-flag >}}
-{{< /highlight >}}
-
 #### Text example
 <div class="example">
 {{< vendor-flag type="name" >}}
 </div>
 
-{{< highlight html >}}
-{{< vendor-flag type="name" >}}
-{{< /highlight >}}
-
 #### Logo example
 <div class="example">
 {{< vendor-flag type="logo" >}}
 </div>
-
-{{< highlight html >}}
-{{< vendor-flag type="logo" >}}
-{{< /highlight >}}

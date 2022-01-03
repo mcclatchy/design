@@ -1,33 +1,22 @@
 ---
 title: color themes
+description: An explanation of custom properties and color.
 date: 2019-05-13T10:03:00-05:00
-layout: deck
 menu: molecule
 ---
 
-<style>
-.story-body {
-  padding: 15px 0;
-}
-</style>
+<p>We've adjusted and expanded the CSS custom properties at tad to make the system more optimized in general and also allow for the new color ranges coming out of the marketing side. After discussion, we determined the areas that should be adjustable are the background, text, links and any buttons. These properties can always be changed with targeted CSS, but the more specific we make the atoms the more code we have to add at the molecule and card level to overload previous rules.</p>
+<p>Starting with just impact, a normal approach wasn't too bad. It's ok to declare, as an example, in an impact molecule or card that the label should be black text on a white background. That's not a lot of code. It got a little more repetitive when we added the promo concept and then it got really ugly when we started putting these into a story body with its own rules.</p>
+<p>What we have done here instead, using CSS custom properties, is set some defaults for our current cards to eliminate boilerplate code while also giving us a clean place to add new themes without increasing the payload by all that much. Here is the new set of standards for impact card and promo cards.</p>
 
-<div class="story-body paper">
-  <h1>Colors and custom properties</h1>
-  <p>We've adjusted and expanded the CSS custom properties at tad to make the system more optimized in general and also allow for the new color ranges coming out of the marketing side. After discussion, we determined the areas that should be adjustable are the background, text, links and any buttons. These properties can always be changed with targeted CSS, but the more specific we make the atoms the more code we have to add at the molecule and card level to overload previous rules.</p>
-  <p>Starting with just impact, a normal approach wasn't too bad. It's ok to declare, as an example, in an impact molecule or card that the label should be black text on a white background. That's not a lot of code. It got a little more repetitive when we added the promo concept and then it got really ugly when we started putting these into a story body with its own rules.</p>
-  <p>What we have done here instead, using CSS custom properties, is set some defaults for our current cards to eliminate boilerplate code while also giving us a clean place to add new themes without increasing the payload by all that much. Here is the new set of standards for our regular card, impact card, and promo card.</p>
-</div>
-
-<section class="grid">
-  {{< digest >}}
+<section class="example grid">
   {{< digest class="impact">}}
   {{< digest class="promo" >}}
 </section>
 
-<div class="story-body paper">
-  <p>In the new setup, atoms like links, buttons and labels are listening for these properties. Here is a sampling of the CSS for the impact and promo molecules.</p>
+<p>In the new setup, atoms like links, buttons and labels are listening for these properties. Here is a sampling of the CSS for the impact and promo molecules.</p>
 
-  {{< highlight css >}}
+{{< highlight css >}}
 .impact,
 .promo {
   background-color: #373737;
@@ -42,10 +31,9 @@ menu: molecule
   background-color: #31409F;
   --bc: #31409F;
 }
-  {{< /highlight >}}
+{{< /highlight >}}
 
-  <p>This setup allows us to expand in the future for different ad campaigns. Here is a quick sample.</p>
-</div>
+<p>This setup allows us to expand in the future for different ad campaigns. Here is a quick sample.</p>
 
 <style>
 .read-next {
@@ -81,16 +69,14 @@ menu: molecule
 }
 </style>
 
-<section class="grid">
+<section class="grid example">
   {{< digest class="purple" >}}
   {{< digest class="charcoal" >}}
-  {{< digest class="slate" >}}
 </section>
 
-<div class="story-body paper">
-  <p>Here is the CSS to make those work.</p>
+<p>Here is the CSS to make those work.</p>
 
-  {{< highlight css >}}
+{{< highlight css >}}
 .purple {
   background-color: #91096F;
   --tc: white;
@@ -108,17 +94,11 @@ menu: molecule
   --bc: #7A8A0E;
   --bbc: white;
 }
+{{< /highlight >}}
 
-.slate {
-  background-color: #EBEAE4;
-  --bbc: #719281;
-}
-  {{< /highlight >}}
+<p>The same CSS also works for cards, along with any other element that uses our system.</p>
 
-  <p>The same CSS also works for cards, along with any other element that uses our system.</p>
-</div>
-
-<section class="grid">
+<section class="grid example">
   {{< card >}}
   {{< card class="impact" >}}
   {{< card class="promo" >}}
@@ -127,15 +107,13 @@ menu: molecule
   {{< card class="slate" >}}
 </section>
 
-<section class="grid">
+<section class="grid example">
   {{< read-next >}}
   {{< read-next class="purple" >}}
 </section>
 
-<div class="story-body paper">
-  <p>Lastly, though we dont' use this in our designs, it was important in the structure that elements inside of a story body could be tailored too. The same rules could be applied to the article header, as an example.</p>
+<p>Lastly, though we dont' use this in our designs, it was important in the structure that elements inside of a story body could be tailored too. The same rules could be applied to the article header, as an example.</p>
 
-  {{< header >}}
-  {{< header class="impact" >}}
-  {{< header class="purple" >}}
-</div>
+{{< header >}}
+{{< header class="impact" >}}
+{{< header class="purple" >}}

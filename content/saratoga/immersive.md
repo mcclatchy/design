@@ -10,8 +10,3 @@ The immersive card can be used to increase the impact of a story. It should go t
 <div class="example" style="padding: 0 0 10px 0;">
   {{< immersive >}}
 </div>
-
-#### HTML
-{{< highlight html >}}
-{{< immersive >}}
-{{< /highlight >}}

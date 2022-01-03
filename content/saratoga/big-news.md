@@ -11,9 +11,3 @@ The big news card is a series of independent areas designed to give newsrooms co
 <div class="example" style="padding: 15px 0;">
 {{< big-news >}}
 </div>
-
-#### HTML
-
-{{< highlight html >}}
-{{< big-news >}}
-{{< /highlight >}}

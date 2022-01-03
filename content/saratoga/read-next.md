@@ -10,9 +10,3 @@ The read next card mimics the top of a story body in card form. Mostly, it's a c
 <div class="example">
 {{< read-next >}}
 </div>
-
-#### HTML
-{{< highlight html >}}
-{{< read-next >}}
-{{< /highlight >}}
-

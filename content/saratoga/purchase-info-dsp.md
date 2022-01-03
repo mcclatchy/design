@@ -16,8 +16,3 @@ This is a version of the expander used on the front-end of our sites, but specif
 <div class="example grid" style="--columns: 400px;">
   {{< dsp/purchase-info >}}
 </div>
-
-#### HTML
-{{< highlight html >}}
-{{< dsp/purchase-info >}}
-{{< /highlight >}}

@@ -9,9 +9,6 @@ The timeline organism is a stack of events styled for chronological display. In 
 #### Example
 {{< timeline type="story" >}}
 
-#### HTML
-{{< highlight html >}}{{< timeline type="story" >}}{{< /highlight >}}
-
 ---
 
 ## LIVE UPDATES VERSION
@@ -20,6 +17,3 @@ The live updates version doesn't use the expander molecule since the primary pur
 
 #### LIVE UPDATES EXAMPLE
 {{< timeline >}}
-
-#### LIVE UPDATES HTML
-{{< highlight html >}}{{< timeline >}}{{< /highlight >}}

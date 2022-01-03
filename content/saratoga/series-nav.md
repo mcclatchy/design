@@ -8,8 +8,3 @@ The series nav is a visual tool to link stories together than may or may not be 
 
 #### Example
 {{< series-nav >}}
-
-#### HTML
-{{< highlight html >}}
-{{< series-nav >}}
-{{< /highlight >}}
