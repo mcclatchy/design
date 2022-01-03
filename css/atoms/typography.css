@@ -195,6 +195,7 @@ blockquote .attr {
   margin: 0;
   display: flex;
   justify-content: center;
+  text-decoration: none;
 }
 
 .label > * {

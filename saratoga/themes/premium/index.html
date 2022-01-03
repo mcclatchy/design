@@ -71,55 +71,15 @@
     <link rel="stylesheet" href="../../../css/decks/hidden.css">
     
     
-
-    
     <link rel="stylesheet" href="../../../css/site.css">
+
     
-<script defer src="../../../js/navigation.js"></script>
-<script defer src="../../../js/fake-ad.js"></script>
+    <script defer src="../../../js/fake-ad.js"></script>
+    
+  <script defer src="../../../js/navigation.js"></script>
+  <script src="../../../js/modal.js"></script>
 
-
-<style>
-gpt-ad {
-  display: flex;
-  justify-content: center;
-}
-
-fake-ad {
-  display: flex;
-}
-
-[data-zone="1"] {
-  min-height: var(--height, 250px);
-}
-
-[data-zone] {
-  position: relative;
-}
-
-[data-zone]:after {
-  content: attr(data-zone);
-  display: flex;
-  width: 120px;
-  height: 120px;
-  align-items: center;
-  justify-content: center;
-  font-size: 40px;
-  background-color: rgba(244,244,244,0.6);
-  border-radius: 50%;
-  border: 1px solid #ddd;
-  color: #222;
-  position: absolute;
-  left: calc(50% - 60px);
-  top: calc(50% - 60px);
-  z-index: 10;
-}
-
-[data-zone="dynamic"]:after {
-  font-size: large;
-}
-</style>
-
+  
   </head>
 
   <body class="">
@@ -132,15 +92,11 @@ fake-ad {
         <a href="https://mcclatchy.github.io/design/markets/" class="">
           <span>markets</span>
         </a>
-        <a href="https://mcclatchy.github.io/design/ads/" class="">
-          <span>ads</span>
-        </a>
         <a href="https://mcclatchy.github.io/design/email/" class="">
           <span>email</span>
         </a>
       </nav>
     </div>
-    
 <div class="upper-nav">
   <div class="tab active">
     <a href="#">
@@ -158,7 +114,7 @@ fake-ad {
 
 
 
-<section class="flag grid paper full-bleed standard">
+<div class="flag grid paper story">
   <div class="flex icons">
     <button class="flex" onclick="showNavigation()">
       <svg viewBox="0 0 448 512"><title>Open the navigation panel</title><path d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"/></svg>
@@ -204,7 +160,8 @@ fake-ad {
     <input type="text" name="q" placeholder="Search">
     <button class="impact button" type="submit">SUBMIT</button>
   </form>
-</section>
+</div>
+
 
 <div id="main-nav" class="main-nav sans summary impact">
   <button class="summary flex" onclick="closeNavigation()">
@@ -308,16 +265,17 @@ fake-ad {
 </div>
 
 
-<div>
-  <article class="paper story-body">
-    <link rel="stylesheet" href="https://storage.googleapis.com/mc-high-impact/themes/premium.css">
-    <script type="module" src="https://storage.googleapis.com/mc-high-impact/themes/premium.js"></script>
+  
 
-    
+  
+  <div class="server-rendered">
+    <article class="story-body paper"><link rel="stylesheet" href="https://storage.googleapis.com/mc-high-impact/themes/premium.css">
+<script type="module" src="https://storage.googleapis.com/mc-high-impact/themes/premium.js"></script>
+<p>
 
 <header class="header ">
   <a class="kicker h6" href="#">SECTION</a>
-  <h1 class="h1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tempus lorem a</h1>
+  <h1 class="h1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tempus lorem amet.</h1>
   <div class="bio">
     <div>
       <div class="byline">By <a href="#">John Doe</a> <span class="credit">SAMPLE NEWSPAPER</span></div>
@@ -340,7 +298,43 @@ fake-ad {
   </div>
 </header>
 
-    <figure class="">
+<figure class="">
+  <img src="../../../img/lanterns.jpg" alt="Lorem ipsum dolor sit amet" width="1140" height="641" loading="lazy">
+  <figcaption>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula sem et congue iaculis. Nam vel nisi elit. Pellentesque habitant morbi tristique senectus et netus.
+    <span class="byline">By <a href="#">First Last</a> <span class="credit">Publication name</span>
+    </span>
+  </figcaption>
+</figure>
+</p>
+<p>The premium theme is designed for enterprise content. It performs a number of enhancements common to these types of projects:</p>
+<ul>
+<li>It widens landscape photos and videos</li>
+<li>It removes content between the story and the footer</li>
+<li>It fixes Series Nav links when published to multiple markets</li>
+</ul>
+<p>In addition to these changes, the theme also addresses zones and introduces a concept we call valid insertion points. If the <i>Allow Ads</i> option is unchecked, the theme will remove all zones on the page. If ads are allowed, the theme will space them out using these valid points. First, the theme pulls the zones out of the page and stores them. It then looks at the story body removes any elements that wouldn&rsquo;t be a good fit for a zone. The rules for valid points are:</p>
+<div class="zone">
+  <fake-ad size="[728,400]"></fake-ad>
+</div>
+<ol>
+<li>The element must be a paragraph</li>
+<li>The text of the paragraph must be more than 100 characters</li>
+<li>The previous element must also be a paragraph</li>
+</ol>
+<p>Once the theme has a clean list of paragraphs, it places the zones back into the story using a custom map. The map for this theme is listed below, and please use our <a href="../../decks/story/">story deck</a> for reference. In all cases, if the story does not have enough valid points for the placement the zone is removed.</p>
+<div class="zone grid combo">
+  <fake-ad style="--color: gray"></fake-ad>
+  <fake-ad></fake-ad>
+</div>
+<ul>
+<li>Zone 2 is removed entirely</li>
+<li>Zone 3 is moved to the 6th point</li>
+<li>Zone 4 is moved to the 12th point</li>
+<li>Zone 5 is moved to the 18th point</li>
+<li>No additional zones (dynamic) are kept</li>
+</ul>
+<p>Zones are often removed entirely on enterprise stories. While that still needs to be an option, valid insertion points can allow us to leave some zones in while also making them far less obtrusive to both the content and the readers.</p>
+<figure class="">
   <img src="../../../img/lanterns.jpg" alt="Lorem ipsum dolor sit amet" width="1140" height="641" loading="lazy">
   <figcaption>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula sem et congue iaculis. Nam vel nisi elit. Pellentesque habitant morbi tristique senectus et netus.
     <span class="byline">By <a href="#">First Last</a> <span class="credit">Publication name</span>
@@ -348,45 +342,25 @@ fake-ad {
   </figcaption>
 </figure>
 
-
-    <p>The premium theme is designed for enterprise content. It performs a number of enhancements common to these types of projects:</p>
-
-    <ul>
-      <li>It widens landscape photos and videos</li>
-      <li>It removes content between the story and the footer</li>
-      <li>It fixes Series Nav links when published to multiple markets</li>
-    </ul>
-
-    <p>In addition to these changes, the theme also addresses zones and introduces a concept we call valid insertion points. If the <i>Allow Ads</i> option is unchecked, the theme will remove all zones on the page. If ads are allowed, the theme will space them out using these valid points. First, the theme pulls the zones out of the page and stores them. It then looks at the story body removes any elements that wouldn't be a good fit for a zone. The rules for valid points are:</p>
-
-    <div class="zone">
-      <fake-ad size="[728,400]"></fake-ad>
-    </div>
-
-    <ol class="code">
-      <li>The element must be a paragraph</li>
-      <li>The text of the paragraph must be more than 100 characters</li>
-      <li>The previous element must also be a paragraph</li>
-    </ol>
-
-    <p>Once the theme has a clean list of paragraphs, it places the zones back into the story using a custom map. The map for this theme is listed below, and please use our <a href="../../decks/story/">story deck</a> for reference. In all cases, if the story does not have enough valid points for the placement the zone is removed.</p>
-
-    <div class="zone grid combo">
-      <fake-ad style="--color: gray"></fake-ad>
-      <fake-ad></fake-ad>
-    </div>
-
-    <ul>
-      <li>Zone 2 is removed entirely</li>
-      <li>Zone 3 is moved to the 6th point</li>
-      <li>Zone 4 is moved to the 12th point</li>
-      <li>Zone 5 is moved to the 18th point</li>
-      <li>No additional zones (dynamic) are kept</li>
-    </ul>
-
-    <p>Zones are often removed entirely on enterprise stories. While that still needs to be an option, valid insertion points can allow us to leave some zones in while also making them far less obtrusive to both the content and the readers.</p>
-
-    <figure class="">
+<h3 id="lorem-ipsum">Lorem Ipsum</h3>
+<p>The cactus is a design. They were lost without the offbeat aardvark that composed their tuba. The jumbos could be said to resemble untaught invoices. Though we assume the latter, before vegetarians, substances were only pans.</p>
+<div class="zone grid combo">
+  <fake-ad style="--color: gray"></fake-ad>
+  <fake-ad></fake-ad>
+</div>
+<p>Ovoid deals show us how cushions can be authors. A rainstorm is a thuggish music. It&rsquo;s an undeniable fact, really; they were lost without the thievish bandana that composed their onion. A marish turnip&rsquo;s division comes with it the thought that the freest teacher is a straw.</p>
+<p>We know that a yolky billboard&rsquo;s bagpipe comes with it the thought that the ebon hip is a linen. A chive of the america is assumed to be a nagging monkey. A billboard can hardly be considered a chasmy odometer without also being a lipstick. The church is a libra.</p>
+<p>Some posit the menseful bagpipe to be less than rousing. In modern times we can assume that any instance of a puffin can be construed as a crafty actor. A farthest hair is a change of the mind. Those slopes are nothing more than causes.</p>
+<p>This could be, or perhaps the money of a scissor becomes an uncurbed packet. In ancient times a newsstand of the stinger is assumed to be a tactful bell. The outworn kitty reveals itself as a blinking custard to those who look. Some viral tramps are thought of simply as germanies.</p>
+<p>Few can name a splendent gazelle that isn&rsquo;t a dendroid orange. It&rsquo;s an undeniable fact, really; some posit the shipless competitor to be less than assumed. Before pints, shovels were only buffets. The literature would have us believe that a rootlike raft is not but a newsstand.</p>
+<div class="zone">
+  <fake-ad></fake-ad>
+</div>
+<p>A dash is a hearing&rsquo;s freezer. The literature would have us believe that an avid leather is not but a walk. Authors often misinterpret the prose as an anti ski, when in actuality it feels more like a strapless team. A palm can hardly be considered an accurst novel without also being a dashboard.</p>
+<p>A penile betty is a cd of the mind. An imprisonment is a club from the right perspective. A winter of the shelf is assumed to be a dumpish parent. A darkling hurricane is an iran of the mind.</p>
+<p>This is not to discredit the idea that a cooking skate&rsquo;s pyramid comes with it the thought that the practic mother-in-law is a boy. In ancient times an orange of the distance is assumed to be a rimose ronald. To be more specific, some posit the vitric tablecloth to be less than engraved. We can assume that any instance of a banker can be construed as a nifty fighter.</p>
+<p>As far as we can estimate, few can name a latticed fireman that isn&rsquo;t a stalworth nic. In ancient times those deficits are nothing more than zoos. Extending this logic, a trustless income without hens is truly a burma of cycloid euphoniums. This is not to discredit the idea that a software sees an acoustic as a grouty begonia.</p>
+<figure class="">
   <img src="../../../img/lanterns.jpg" alt="Lorem ipsum dolor sit amet" width="1140" height="641" loading="lazy">
   <figcaption>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula sem et congue iaculis. Nam vel nisi elit. Pellentesque habitant morbi tristique senectus et netus.
     <span class="byline">By <a href="#">First Last</a> <span class="credit">Publication name</span>
@@ -394,65 +368,27 @@ fake-ad {
   </figcaption>
 </figure>
 
-    <h3>Lorem Ipsum</h3>
-    <p>The cactus is a design. They were lost without the offbeat aardvark that composed their tuba. The jumbos could be said to resemble untaught invoices. Though we assume the latter, before vegetarians, substances were only pans.</p>
-
-    <div class="zone grid combo">
-      <fake-ad style="--color: gray"></fake-ad>
-      <fake-ad></fake-ad>
-    </div>
-
-    <p>Ovoid deals show us how cushions can be authors. A rainstorm is a thuggish music. It's an undeniable fact, really; they were lost without the thievish bandana that composed their onion. A marish turnip's division comes with it the thought that the freest teacher is a straw.</p>
-    <p>We know that a yolky billboard's bagpipe comes with it the thought that the ebon hip is a linen. A chive of the america is assumed to be a nagging monkey. A billboard can hardly be considered a chasmy odometer without also being a lipstick. The church is a libra.</p>
-    <p>Some posit the menseful bagpipe to be less than rousing. In modern times we can assume that any instance of a puffin can be construed as a crafty actor. A farthest hair is a change of the mind. Those slopes are nothing more than causes.</p>
-    <p>This could be, or perhaps the money of a scissor becomes an uncurbed packet. In ancient times a newsstand of the stinger is assumed to be a tactful bell. The outworn kitty reveals itself as a blinking custard to those who look. Some viral tramps are thought of simply as germanies.</p>
-    <p>Few can name a splendent gazelle that isn't a dendroid orange. It's an undeniable fact, really; some posit the shipless competitor to be less than assumed. Before pints, shovels were only buffets. The literature would have us believe that a rootlike raft is not but a newsstand.</p>
-
-    <div class="zone">
-      <fake-ad></fake-ad>
-    </div>
-
-    <p>A dash is a hearing's freezer. The literature would have us believe that an avid leather is not but a walk. Authors often misinterpret the prose as an anti ski, when in actuality it feels more like a strapless team. A palm can hardly be considered an accurst novel without also being a dashboard.</p>
-    <p>A penile betty is a cd of the mind. An imprisonment is a club from the right perspective. A winter of the shelf is assumed to be a dumpish parent. A darkling hurricane is an iran of the mind.</p>
-    <p>This is not to discredit the idea that a cooking skate's pyramid comes with it the thought that the practic mother-in-law is a boy. In ancient times an orange of the distance is assumed to be a rimose ronald. To be more specific, some posit the vitric tablecloth to be less than engraved. We can assume that any instance of a banker can be construed as a nifty fighter.</p>
-    <p>As far as we can estimate, few can name a latticed fireman that isn't a stalworth nic. In ancient times those deficits are nothing more than zoos. Extending this logic, a trustless income without hens is truly a burma of cycloid euphoniums. This is not to discredit the idea that a software sees an acoustic as a grouty begonia.</p>
-
-    <figure class="">
-  <img src="../../../img/lanterns.jpg" alt="Lorem ipsum dolor sit amet" width="1140" height="641" loading="lazy">
-  <figcaption>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula sem et congue iaculis. Nam vel nisi elit. Pellentesque habitant morbi tristique senectus et netus.
-    <span class="byline">By <a href="#">First Last</a> <span class="credit">Publication name</span>
-    </span>
-  </figcaption>
-</figure>
-
-
-    <div class="zone">
-      <fake-ad></fake-ad>
-    </div>
-
-    <h3>Lorem Ipsum</h3>
-    <p>The cd is an indonesia. An aftmost ceramic is a tulip of the mind. A floor is a gainful government. Recent controversy aside, a yearlong michael is a scraper of the mind.</p>
-    <p>The first wheaten equinox is, in its own way, a jasmine. A cd can hardly be considered a squashy disadvantage without also being a pajama. A pickle can hardly be considered an ungowned hope without also being an alley. They were lost without the lashing payment that composed their helium.</p>
-    <p>Though we assume the latter, one cannot separate soups from outmost advantages. Their banana was, in this moment, a heinous computer. A community is a sparry alligator. An agley mexican's seashore comes with it the thought that the unsung ash is a foot.</p>
-
-    <div class="zone">
-      <fake-ad></fake-ad>
-    </div>
-
-    <p>Highbrow pollutions show us how anatomies can be lightnings. Few can name a sprightful power that isn't an unbroke slime. Those boats are nothing more than moats. The grateful burst comes from a pavid ambulance.</p>
-    <p>What we don't know for sure is whether or not the meeting is a match. Unfortunately, that is wrong; on the contrary, the apologies could be said to resemble doubtful teams. Some posit the mimic cereal to be less than untraced. The first fratchy viola is, in its own way, a spinach.</p>
-    <p>Authors often misinterpret the locust as a funded pet, when in actuality it feels more like a rental carbon. Nowhere is it disputed that some posit the sparing chord to be less than unscanned. Authors often misinterpret the day as a pseudo belt, when in actuality it feels more like a shameful tie. The first gaited mayonnaise is, in its own way, a sister-in-law.</p>
-    <p>A sequent ravioli without vans is truly a memory of knightless recorders. Those results are nothing more than dreams. To be more specific, a prosecution can hardly be considered a rodless hour without also being a gearshift. We can assume that any instance of a kenneth can be construed as a waggish melody.</p>
-    <p>Urgent zippers show us how headlights can be deads. Some wailful deborahs are thought of simply as pendulums. A male sees a dolphin as a thinking cinema. Those chests are nothing more than produces.</p>
-
-    <div class="zone">
-      <fake-ad></fake-ad>
-    </div>
-
-    <p>Those particles are nothing more than facts. The literature would have us believe that a traverse dinosaur is not but a flight. One cannot separate pelicans from scaldic spheres. Before forecasts, steels were only whiskeies.</p>
-    <p>We can assume that any instance of a digger can be construed as a blatant step-sister. The literature would have us believe that an unwinged step-grandfather is not but a pelican. The first pimpled feather is, in its own way, a faucet. Few can name a tabu wheel that isn't a bilious rest.</p>
-
-    <div class="story-module">
+<div class="zone">
+  <fake-ad></fake-ad>
+</div>
+<h3 id="lorem-ipsum-1">Lorem Ipsum</h3>
+<p>The cd is an indonesia. An aftmost ceramic is a tulip of the mind. A floor is a gainful government. Recent controversy aside, a yearlong michael is a scraper of the mind.</p>
+<p>The first wheaten equinox is, in its own way, a jasmine. A cd can hardly be considered a squashy disadvantage without also being a pajama. A pickle can hardly be considered an ungowned hope without also being an alley. They were lost without the lashing payment that composed their helium.</p>
+<p>Though we assume the latter, one cannot separate soups from outmost advantages. Their banana was, in this moment, a heinous computer. A community is a sparry alligator. An agley mexican&rsquo;s seashore comes with it the thought that the unsung ash is a foot.</p>
+<div class="zone">
+  <fake-ad></fake-ad>
+</div>
+<p>Highbrow pollutions show us how anatomies can be lightnings. Few can name a sprightful power that isn&rsquo;t an unbroke slime. Those boats are nothing more than moats. The grateful burst comes from a pavid ambulance.</p>
+<p>What we don&rsquo;t know for sure is whether or not the meeting is a match. Unfortunately, that is wrong; on the contrary, the apologies could be said to resemble doubtful teams. Some posit the mimic cereal to be less than untraced. The first fratchy viola is, in its own way, a spinach.</p>
+<p>Authors often misinterpret the locust as a funded pet, when in actuality it feels more like a rental carbon. Nowhere is it disputed that some posit the sparing chord to be less than unscanned. Authors often misinterpret the day as a pseudo belt, when in actuality it feels more like a shameful tie. The first gaited mayonnaise is, in its own way, a sister-in-law.</p>
+<p>A sequent ravioli without vans is truly a memory of knightless recorders. Those results are nothing more than dreams. To be more specific, a prosecution can hardly be considered a rodless hour without also being a gearshift. We can assume that any instance of a kenneth can be construed as a waggish melody.</p>
+<p>Urgent zippers show us how headlights can be deads. Some wailful deborahs are thought of simply as pendulums. A male sees a dolphin as a thinking cinema. Those chests are nothing more than produces.</p>
+<div class="zone">
+  <fake-ad></fake-ad>
+</div>
+<p>Those particles are nothing more than facts. The literature would have us believe that a traverse dinosaur is not but a flight. One cannot separate pelicans from scaldic spheres. Before forecasts, steels were only whiskeies.</p>
+<p>We can assume that any instance of a digger can be construed as a blatant step-sister. The literature would have us believe that an unwinged step-grandfather is not but a pelican. The first pimpled feather is, in its own way, a faucet. Few can name a tabu wheel that isn&rsquo;t a bilious rest.</p>
+<div class="story-module">
   <div class="author-card package">
     <div class="thumb">
       <img src="../../../img/aaron_moody.jpg" width="400" height="400" alt="Aaron Moody">
@@ -485,10 +421,165 @@ fake-ad {
   </div>
 </div>
 
-  </article>
+</article>
+
+    <section class="grid">
+      <div class="card read-next col-span-2">
+        <div class="label sticky"><span class="h5">READ NEXT</span></div>
+        <figure>
+          <img src="https://www.kansascity.com/living/food-drink/come-into-my-kitchen/tl1ycf/picture205504244/ALTERNATES/LANDSCAPE_1140/0321%20cimk%20kuwata%2003022018%20s%20%284%29" alt="Lorem ipsum dolor sit amet" width="1140" height="161" loading="lazy">
+        </figure>
+        <div class="package">
+          <header class="header">
+            <a class="kicker h6" href="#">SECTION</a>
+            <h1><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tempus lorem a</a></h1>
+            <div class="bio">
+              <div>
+                <p class="byline">By <a href="#">John Doe</a> <span class="credit">SAMPLE NEWSPAPER</span></p>
+                <div>
+                  <time>AUG 13, 2018, UPDATED 4 MONTHS AGO</time>
+                </div>
+              </div>
+              <div class="social-media">
+                <a href="#">
+                  <svg data-name="twitter" viewBox="0 0 512 512"><title>Share this story on Twitter</title><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg>
+                </a>
+                <a href="#">
+                  <svg data-name="facebook" viewBox="0 0 264 512"><title>Share this story on Facebook</title><path d="M76.7 512V283H0v-91h76.7v-71.7C76.7 42.4 124.3 0 193.8 0c33.3 0 61.9 2.5 70.2 3.6V85h-48.2c-37.8 0-45.1 18-45.1 44.3V192H256l-11.7 91h-73.6v229"></path></svg>
+                </a>
+                <a href="#">
+                  <svg data-name="envelope" viewBox="0 0 512 512"><title>Email this story</title><path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"></path></svg>
+                </a>
+              </div>
+            </div>
+          </header>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate enim dolor, sit amet lacinia ex lacinia ac. Sed facilisis nulla felis, eget ultricies dolor cursus nec. Cras sodales ligula elementum ipsum elementum gravida.</p>
+          <a href="#" class="more-link">KEEP READING</a>
+        </div>
+      </div>
+      <div class="digest">
+  <div class="paper ">
+    <a href="https://mcclatchy.github.io/saratoga/opinion/" class="label ">
+      <span class="h5">OPINION</span>
+    </a>
+    <article class="package">
+      <h2 class="h3"><a href="https://mcclatchy.github.io/saratoga/opinion/205928724/">Kudlow joins White House that sorely needs cooler heads to prevail</a></h2>
+      <time>March 19, 2018 5:34 pm</time>
+    </article>
+    <article class="package">
+      <h2 class="h3"><a href="https://mcclatchy.github.io/saratoga/opinion/205579084/">The Episcopal Church changed course for our LGBT members</a></h2>
+      <time>March 16, 2018 3:42 pm</time>
+    </article>
+    <article class="package">
+      <h2 class="h3"><a href="https://mcclatchy.github.io/saratoga/opinion/205581414/">The Kansas Republican Party is taking a stance on transgender identity</a></h2>
+      <time>March 16, 2018 3:58 pm</time>
+    </article>
+    <article class="package">
+      <h2 class="h3"><a href="https://mcclatchy.github.io/saratoga/opinion/205583064/">Letters: Readers discuss teen drinking, tax-cut benefits in Missouri and student protests</a></h2>
+      <time>March 16, 2018 4:08 pm</time>
+    </article>
+  </div>
+  <a href="https://mcclatchy.github.io/saratoga/opinion/" class="more-link">MORE OPINION</a>
 </div>
 
-<footer class="impact">
+    </section>
+    <section>
+      <div class="card horizontal swg-promo">
+        <div class="package sans promo">
+          <h1 class="title">SIGN UP AND SAVE</h1>
+          <span class="h3">#READLOCAL</span>
+        </div>
+        <div class="package">
+          <p class="summary">Get six months of free digital access to The Kansas City Star. Terms and conditions apply</p>
+          <a class="button impact" href="#">Subscribe with Google</a>
+        </div>
+      </div>
+    </section>
+    <section>
+      <span class="h5 sans bold section-label">MORE IN SECTION</span>
+      <div class="grid">
+          <article class="card ">
+  <figure>
+    <a href="https://mcclatchy.github.io/saratoga/food/205504249/">
+      <img src="../../../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
+    </a>
+  </figure>
+  <div class="package">
+    <a class="kicker h6" href="https://mcclatchy.github.io/saratoga/food/">FOOD</a>
+    <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
+    <time>March 16, 2018 11:33 am</time>
+  </div>
+</article>
+
+          <article class="card ">
+  <figure>
+    <a href="https://mcclatchy.github.io/saratoga/food/205504249/">
+      <img src="../../../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
+    </a>
+  </figure>
+  <div class="package">
+    <a class="kicker h6" href="https://mcclatchy.github.io/saratoga/food/">FOOD</a>
+    <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
+    <time>March 16, 2018 11:33 am</time>
+  </div>
+</article>
+
+          <article class="card ">
+  <figure>
+    <a href="https://mcclatchy.github.io/saratoga/food/205504249/">
+      <img src="../../../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
+    </a>
+  </figure>
+  <div class="package">
+    <a class="kicker h6" href="https://mcclatchy.github.io/saratoga/food/">FOOD</a>
+    <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
+    <time>March 16, 2018 11:33 am</time>
+  </div>
+</article>
+
+          <article class="card ">
+  <figure>
+    <a href="https://mcclatchy.github.io/saratoga/food/205504249/">
+      <img src="../../../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
+    </a>
+  </figure>
+  <div class="package">
+    <a class="kicker h6" href="https://mcclatchy.github.io/saratoga/food/">FOOD</a>
+    <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
+    <time>March 16, 2018 11:33 am</time>
+  </div>
+</article>
+
+          <article class="card ">
+  <figure>
+    <a href="https://mcclatchy.github.io/saratoga/food/205504249/">
+      <img src="../../../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
+    </a>
+  </figure>
+  <div class="package">
+    <a class="kicker h6" href="https://mcclatchy.github.io/saratoga/food/">FOOD</a>
+    <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
+    <time>March 16, 2018 11:33 am</time>
+  </div>
+</article>
+
+        <article class="card">
+          <figure>
+            <a href="#">
+              <img src="../../../img/lanterns.jpg" width="1140" height="641" alt="Lanterns floating in a body of water" loading="lazy">
+            </a>
+          </figure>
+          <div class="package">
+            <a class="kicker h6 impact" href="#">SPONSORED CONTENT</a>
+            <h3><a href="#">Lorem ipsum dolor sit amet.</a></h3>
+            <time>BY FIRST LAST AS SEEN ON SITE</time>
+          </div>
+        </article>
+      </div>
+    </section>
+  </div>
+
+  <footer class="impact">
   <section class="footer">
     <div class="package footer-connect">
       <h3>CONNECT</h3>
@@ -554,8 +645,6 @@ fake-ad {
   <a href="#">TERMS OF SERVICE</a>
 </section>
 
-
-    
     <script src="https://kit.fontawesome.com/8a8585a39f.js" crossorigin="anonymous"></script>
   </body>
 </html>

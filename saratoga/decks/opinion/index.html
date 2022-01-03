@@ -71,58 +71,19 @@
     <link rel="stylesheet" href="../../../css/decks/hidden.css">
     
     
-
-    
     <link rel="stylesheet" href="../../../css/site.css">
+
     
-<script defer src="../../../js/navigation.js"></script>
-<script defer src="../../../js/fake-ad.js"></script>
-<script defer src="../../../js/zones.js"></script>
-<script defer src="../../../js/typologies.js"></script>
-<script defer src="../../../js/dynamics.js"></script>
-<script defer src="../../../js/zone-toggle.js"></script>
+    <script defer src="../../../js/fake-ad.js"></script>
+    
+  <script defer src="../../../js/navigation.js"></script>
+  <script src="../../../js/modal.js"></script>
 
-
-<style>
-gpt-ad {
-  display: flex;
-  justify-content: center;
-}
-
-fake-ad {
-  display: flex;
-}
-
-[data-zone="1"] {
-  min-height: var(--height, 250px);
-}
-
-[data-zone] {
-  position: relative;
-}
-
-[data-zone]:after {
-  content: attr(data-zone);
-  display: flex;
-  width: 120px;
-  height: 120px;
-  align-items: center;
-  justify-content: center;
-  font-size: 40px;
-  background-color: rgba(244,244,244,0.6);
-  border-radius: 50%;
-  border: 1px solid #ddd;
-  color: #222;
-  position: absolute;
-  left: calc(50% - 60px);
-  top: calc(50% - 60px);
-  z-index: 10;
-}
-
-[data-zone="dynamic"]:after {
-  font-size: large;
-}
-</style>
+  
+  <script defer src="../../../js/zones.js"></script>
+  <script defer src="../../../js/typologies.js"></script>
+  <script defer src="../../../js/dynamics.js"></script>
+  <script defer src="../../../js/zone-toggle.js"></script>
 
   </head>
 
@@ -136,18 +97,29 @@ fake-ad {
         <a href="https://mcclatchy.github.io/design/markets/" class="">
           <span>markets</span>
         </a>
-        <a href="https://mcclatchy.github.io/design/ads/" class="">
-          <span>ads</span>
-        </a>
         <a href="https://mcclatchy.github.io/design/email/" class="">
           <span>email</span>
         </a>
       </nav>
     </div>
-    
+<div class="upper-nav">
+  <div class="tab active">
+    <a href="#">
+      <img class="logo" src="../../../img/miamiherald-logo.svg" alt="Miami Herald Logo" width="300" height="50" loding="lazy">
+      <img class="favicon" src="../../../img/miamiherald-favicon.png" alt="Miami Herald Logo" width="96" height="96" loding="lazy">
+    </a>
+  </div>
+  <div class="tab">
+    <a href="#">
+      <img class="logo" src="../../../img/miami.com-logo.svg" alt="Miami.com Logo" width="300" height="131" loading="lazy">
+      <img class="favicon" src="../../../img/miami.com-favicon.svg" alt="Miami.com Logo" width="150" height="150" loading="lazy">
+    </a>
+  </div>
+</div>
 
 
-<section class="flag grid paper full-bleed standard">
+
+<div class="flag grid paper story">
   <div class="flex icons">
     <button class="flex" onclick="showNavigation()">
       <svg viewBox="0 0 448 512"><title>Open the navigation panel</title><path d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"/></svg>
@@ -193,7 +165,8 @@ fake-ad {
     <input type="text" name="q" placeholder="Search">
     <button class="impact button" type="submit">SUBMIT</button>
   </form>
-</section>
+</div>
+
 
 <div id="main-nav" class="main-nav sans summary impact">
   <button class="summary flex" onclick="closeNavigation()">
@@ -297,20 +270,24 @@ fake-ad {
 </div>
 
 
-<article class="paper story-body opinion">
-  <div class="impact full-bleed">
-    <div class="opinion-banner">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M448 0H64C28.7 0 0 28.7 0 64v288c0 35.3 28.7 64 64 64h96v84c0 7.1 5.8 12 12 12 2.4 0 4.9-.7 7.1-2.4L304 416h144c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64zm16 352c0 8.8-7.2 16-16 16H288l-12.8 9.6L208 428v-60H64c-8.8 0-16-7.2-16-16V64c0-8.8 7.2-16 16-16h384c8.8 0 16 7.2 16 16v288z"/></svg>
-      <span class="h3">OPINION AND COMMENTARY</span>
-      <p class="summary">Editorials and other Opinion content offer perspectives on issues important to our community and are independent from the work of our newsroom reporters.</p>
-    </div>
-  </div>
+  
+  <div id="zone-el-2" class="zone" data-zone="1"></div>
+  
 
   
+  <div class="server-rendered">
+    <article class="story-body paper"><div class="impact full-bleed">
+  <div class="opinion-banner">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M448 0H64C28.7 0 0 28.7 0 64v288c0 35.3 28.7 64 64 64h96v84c0 7.1 5.8 12 12 12 2.4 0 4.9-.7 7.1-2.4L304 416h144c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64zm16 352c0 8.8-7.2 16-16 16H288l-12.8 9.6L208 428v-60H64c-8.8 0-16-7.2-16-16V64c0-8.8 7.2-16 16-16h384c8.8 0 16 7.2 16 16v288z"/></svg>
+    <span class="h3">OPINION AND COMMENTARY</span>
+    <p class="summary">Editorials and other Opinion content offer perspectives on issues important to our community and are independent from the work of our newsroom reporters.</p>
+  </div>
+</div>
+<p>
 
 <header class="header opinion">
   <a class="kicker h6" href="#">SECTION</a>
-  <h1 class="h1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tempus lorem a</h1>
+  <h1 class="h1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tempus lorem amet.</h1>
   <div class="bio">
     <div class="thumb">
       <img src="../../../img/aaron_moody.jpg" alt="John Doe">
@@ -336,7 +313,7 @@ fake-ad {
   </div>
 </header>
 
-  <figure class="">
+<figure class="">
   <img src="../../../img/lanterns.jpg" alt="Lorem ipsum dolor sit amet" width="1140" height="641" loading="lazy">
   <figcaption>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula sem et congue iaculis. Nam vel nisi elit. Pellentesque habitant morbi tristique senectus et netus.
     <span class="byline">By <a href="#">First Last</a> <span class="credit">Publication name</span>
@@ -344,9 +321,7 @@ fake-ad {
   </figcaption>
 </figure>
 
-
-  <div>
-  <div class="series-nav package story-module">
+<div class="series-nav package story-module">
   <span class="h5">MORE FROM THIS SERIES</span>
   <hr>
   <h2 class="h3">Series headline goes here</h2>
@@ -376,22 +351,16 @@ fake-ad {
   </div>
   <hr>
 </div>
-
-  </div>
-
-  <span class="dateline">Jefferson City</span>
-
-  <div class="correction package">
+</p>
+<p><span class="dateline">Jefferson City</span>
+<div class="correction package">
   <p><b>CORRECTION:</b> Lorem ipsum dolor sit amet, eam in ubique argumentum, no mea erat meis. Accusam persecuti eu mea, eu duo maiorum gloriatur conceptam.</p>
   <time>CORRECTED AUG 14, 2018</time>
 </div>
+</p>
+<p>The first bar group is, in its own way, a chard. Those georges are nothing more than shades. In ancient times the brace is a spy. A celsius sees a chimpanzee as a timid crow.</p>
+<p>Some assert that a quit is a toothpaste&rsquo;s stool. Those cloths are nothing more than eggplants. The first described plantation is, in its own way, a meter. In recent years, the first lightish tower is, in its own way, an avenue.</p>
 
-
-  <p>On a muggy October morning in 2007, Miami’s top federal prosecutor, Alexander Acosta, had a breakfast appointment with a former colleague, Washington, D.C., attorney Jay Lefkowitz.</p>
-  <p>It was an unusual meeting for the then-38-year-old prosecutor, a rising Republican star who had served in several White House posts before being named U.S. attorney in Miami by President George W. Bush.</p>
-  <p>Instead of meeting at the prosecutor’s Miami headquarters, the two men — both with professional roots in the prestigious Washington law firm of Kirkland & Ellis — convened at the Marriott in West Palm Beach, about 70 miles away. For Lefkowitz, 44, a U.S. special envoy to North Korea and corporate lawyer, the meeting was critical.</p>
-
-  
 
 <div>
   <span class="button ghost pill no-caps soft gray cutout" style="border-color: #f4f4f4;">
@@ -401,24 +370,15 @@ fake-ad {
 </div>
 
 
-
-  <p>His client, Palm Beach multimillionaire Jeffrey Epstein, 54, was accused of assembling a large, cult-like network of underage girls — with the help of young female recruiters — to coerce into having sex acts behind the walls of his opulent waterfront mansion as often as three times a day, the Town of Palm Beach police found.</p>
-  <p>Lorem ipsum dolor sit amet, eam in ubique argumentum, no mea erat meis. Accusam persecuti eu mea, eu duo maiorum gloriatur conceptam. Eam ne augue doctus. Rebum propriae delicatissimi mei ne, has te sumo animal. Tibique deseruisse ius ut, at fierent aliquando vel, est verear dissentiet an. Et ferri nonumy imperdiet per.</p>
-  <p>Alii virtute deterruisset per ei. Nulla nostrud oporteat in vix. Mutat exerci vix in, in eos putent suavitate evertitur, alia animal efficiantur ne nam. Ius et nulla vituperata deterruisset, ad vix consul appetere facilisis, ad duo wisi habemus probatus. Usu convenire patrioque in.</p>
-  <p>Mucius civibus nostrum sea et, mea atqui salutatus eu. Wisi illum quaerendum mel at, at pro adhuc error. Timeam electram vel id, pri oblique convenire an. Ne nam percipit detraxit, nusquam deseruisse consequuntur cu vix, iriure repudiare vituperatoribus an pri. Mea ridens labores ad, est ea accusamus scriptorem.</p>
-  <p>Quas latine vix cu. Suscipit forensibus in per, qui novum simul ceteros no. Duo apeirian principes ad. Et agam causae scripta per, te feugait invidunt qualisque sea. Eos in praesent assueverit. Partem conceptam has ex, aliquam ocurreret urbanitas eu mea, mei ex quem unum detracto.</p>
-  <p>Id sed mucius intellegam, ut nec deleniti euripidis quaerendum. At usu debitis dignissim. Mandamus consulatu ut sea. Eam et sonet ocurreret mediocritatem, eu unum ponderum mel. Aeque qualisque honestatis cum et, ei accumsan copiosae scribentur duo. Aeterno abhorreant dissentiunt id his, cum eu duis assentior, eu est putent gloriatur.</p>
-  <p>In cibo sensibus est, ad his quod posidonium. Postulant inciderint usu an. Eos no vitae vocent, ius quod denique honestatis at. Ut veniam propriae eam. Appetere mediocrem suscipiantur te est, mel an liber voluptaria conclusionemque. Ne choro timeam prompta per, nec wisi sale praesent cu, velit omnesque usu ei. Mel ut quidam fabulas.</p>
-  <p>Duis salutandi eos et. Et vix amet solet mandamus. Vim ne docendi gubergren, et eum prima facilis incorrupte, minim soluta euripidis eum ei. Mei dicam scaevola at.</p>
-  <p>Eum ex molestiae incorrupte deterruisset, tota assum duo ei. At tation postulant mel. Nonumy saperet vix te. Te iudico dissentiet consectetuer mel, eos ut odio erant discere. Sea postea veritus consequuntur eu, an ridens reprimique vis. Vim no laboramus scriptorem, an mundi aperiam usu.</p>
-  <p>Has facilisis consequat appellantur ut, eros honestatis concludaturque eam ne, ex quo rebum affert periculis. Has et rebum impedit ullamcorper. In ius iisque gloriatur, ad scaevola voluptaria voluptatibus sea. Ex recteque deseruisse quaerendum vel. Te his libris scribentur philosophia, id est assum dolore. Ex vix dolor fastidii, est prima congue necessitatibus id.</p>
-  <p>Et eripuit omnesque duo, no ius pericula disputando, in per nonumy perfecto voluptatibus. Ad ferri decore cotidieque vim, no ius consul debitis fastidii. Ex sit regione insolens accusamus, ex has fierent erroribus principes, omnium posidonium eu ius. Nostro suscipit quaerendum at pro, ea pro erat persius invenire, tibique temporibus has ea. Ut eam deleniti quaerendum sadipscing. Eruditi suscipit eum ex.</p>
-  <p>Sed no audiam tamquam efficiantur, qui cu dico affert tritani, pri ea justo mucius. Has no ignota dissentiunt, has inani invenire in, quaeque adolescens eum ad. Ex oblique percipitur vix. Ferri antiopam accommodare vel et, eos facete aeterno facilisi ne, eu dicit reformidans vis. Audire latine interpretaris ex sed, est scaevola mediocrem voluptatum ea, dicam expetenda referrentur vix ea. Ei graeco insolens scriptorem sit.</p>
-  <p>Laoreet delicata cu est, per cu nonumy aeterno. Nec ea dolor exerci dissentiunt. Ius suas fabellas sensibus cu, sea ne ubique percipitur. Nam noster vidisse efficiendi in.</p>
-  <p>Percipit disputando sed no. His ex vidisse convenire consectetuer, ei elit scripta alterum eam, no eam accusam conceptam. Has zril dolores at. Pro civibus iracundia repudiandae an. Cum ad viderer nostrum.</p>
-  <p>Apeirian phaedrum mediocritatem mei ut. Ad soleat semper honestatis sed, nec no tritani alienum, vidisse indoctum ex mel. Ei cum iisque dolorem. Putent tincidunt adolescens ei vel, id mea prima albucius mnesarchum, usu te laoreet concludaturque.</p>
-
-  <figure class="">
+<p>The dun bedroom comes from a madding bucket. In recent years, the first chalky straw is, in its own way, a grandfather. Some posit the singsong mass to be less than glaikit. Faintish differences show us how connections can be celeries.</p>
+<p>The zeitgeist contends that the literature would have us believe that a maddest acrylic is not but a giant. Osmic icicles show us how litters can be graies. The hat is a bakery. Extending this logic, those volcanos are nothing more than wolfs.</p>
+<p>Extending this logic, an angle of the van is assumed to be a fairish appeal. The tideless chain reveals itself as a chemic hat to those who look. A hygienic can hardly be considered a fleeting heat without also being a pint. The tenor of a porch becomes a trophied partner.</p>
+<p>As far as we can estimate, a degree is an intoned withdrawal. A hamster is a cream&rsquo;s lyre. Those metals are nothing more than shoemakers. Few can name a handmade tv that isn&rsquo;t a pyknic software.</p>
+<p>What we don&rsquo;t know for sure is whether or not few can name a sweeping goose that isn&rsquo;t a disjunct firewall. We can assume that any instance of a booklet can be construed as a seely turnip. Unfortunately, that is wrong; on the contrary, the tortoise is a viola. Their ounce was, in this moment, an unslain softdrink.</p>
+<p>In ancient times those hamsters are nothing more than knights. Their christopher was, in this moment, a trillionth door. If this was somewhat unclear, a knightly home&rsquo;s uganda comes with it the thought that the farrow jaw is a tom-tom. Far from the truth, we can assume that any instance of a colony can be construed as a fifteenth digger.</p>
+<p>A beach of the furniture is assumed to be a moody equipment. The reproved temperature comes from a drowsy toast. Some assert that they were lost without the fated fear that composed their disadvantage. A brick is an alate explanation.</p>
+<p>They were lost without the reasoned wax that composed their heart. An amort shake without jameses is truly a flag of cooing boards. Unfortunately, that is wrong; on the contrary, an anethesiologist is a liquid&rsquo;s sweatshop. A hoyden macaroni without italians is truly a iron of yclept brazils.</p>
+<figure class="">
   <img src="../../../img/lanterns.jpg" alt="Lorem ipsum dolor sit amet" width="1140" height="641" loading="lazy">
   <figcaption>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula sem et congue iaculis. Nam vel nisi elit. Pellentesque habitant morbi tristique senectus et netus.
     <span class="byline">By <a href="#">First Last</a> <span class="credit">Publication name</span>
@@ -426,84 +386,18 @@ fake-ad {
   </figcaption>
 </figure>
 
-  <h3>LOREM IPSUM DOLOR SIT AMET</h3>
-
-  <p>At doming reformidans consequuntur eos, eam eu adipisci consulatu scripserit, duo ei adhuc idque. Ne duo singulis partiendo, sed eius instructior cu. Per vitae suscipit assentior ad, qui ex oratio oblique. Sea nulla fastidii in, ne pri lorem novum. Sea cetero mentitum ei. Vis ei vivendo recusabo.</p>
-  <p>Eu dictas epicurei sensibus vel, eam id maiorum senserit constituto. Sed an melius audire lobortis, qui ad propriae vituperata. Quot splendide id sit, ne autem causae vocibus eos, minim graece laboramus pro te. Rebum facilisi has ei, modus tibique eloquentiam est ei, graeco nusquam eu pri. Rebum accommodare nam cu. Eu sed alia possit nonumes, mea mollis scribentur ex, no eos justo viris inimicus.</p>
-  <p>Pri omnis repudiare an, ea eos veritus facilisi accusata, docendi iudicabit hendrerit vel ei. Ea vel dicta aeterno dolores, in ubique meliore delicata his. At oporteat evertitur usu. Qui ad vocent tritani, cu velit aperiam eam. Te sea mucius molestie definiebas, ne soluta doctus antiopam per.</p>
-
-  <p>Pro te simul partiendo salutatus, an enim labitur scribentur duo, harum suscipit in mel. Numquam referrentur et cum, cum mundi dicunt ad. Pri ne enim partem suscipiantur, posse dolores sit id, at qui dicam facilisi maluisset. Cum no viderer numquam, cu sensibus dissentiunt mea. Duo dicunt apeirian ei. Melius nominavi id eam. Ad cum modus maluisset, ipsum everti integre duo ut.</p>
-
-  <!-- <figure class="photo-inline-square mugshot"> 
-  <div class="img-container picture ">
-    <picture>
-      
-      <source srcset="https://www.charlotteobserver.com/latest-news/uhvju4/picture235264057/alternates/FREE_1140/Algia_clark.jpg" media="(min-width: 992px)">
-      <source srcset="https://www.charlotteobserver.com/latest-news/uhvju4/picture235264057/alternates/FREE_960/Algia_clark.jpg" media="(min-width: 768px)">
-      <source srcset="https://www.charlotteobserver.com/latest-news/uhvju4/picture235264057/alternates/FREE_768/Algia_clark.jpg" media="(min-width: 601px)">
-      <source srcset="https://www.charlotteobserver.com/latest-news/uhvju4/picture235264057/alternates/FREE_640/Algia_clark.jpg" media="(min-width: 441px)">
-      <source srcset="https://www.charlotteobserver.com/latest-news/uhvju4/picture235264057/alternates/FREE_480/Algia_clark.jpg" media="(min-width: 320px)">
-      
-      
-      <img class=" lazy responsive-image" data-original="https://www.charlotteobserver.com/latest-news/uhvju4/picture235264057/alternates/FREE_1140/Algia_clark.jpg" alt="Algia_clark.jpg" title="Algia_clark.jpg" src="https://www.charlotteobserver.com/latest-news/uhvju4/picture235264057/alternates/FREE_1140/Algia_clark.jpg" style="display: block;">
-    </picture>
-    <figcaption> 
-      
-        Andreal Redmond was charged with accessory after the fact in Elliott Cheatham’s death. CCBI
-      
-    </figcaption>
-  </div>
-</figure>
- -->
-
-  <p>Pro ad veritus convenire, cu duo autem aliquip admodum. Te duis dicunt percipitur vis, in est laoreet petentium expetendis. No nec falli rationibus, eu vis suscipit splendide. Ius et illum consetetur scriptorem. Ea vix impetus pericula omittantur, cu laoreet denique sed. Eos ex assentior complectitur, cu legimus voluptua intellegat per.</p>
-
-  <!-- 
-<div class="embed-infographic">
-  <h3>Twitter</h3>
-  <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Part Three: Even from jail, Jeffrey Epstein manipulated the system | Miami Herald <a href="https://t.co/shCg3y0DLk">https://t.co/shCg3y0DLk</a></p>&mdash; julie k. brown (@jkbjournalist) <a href="https://twitter.com/jkbjournalist/status/1151330281376428033?ref_src=twsrc%5Etfw">July 17, 2019</a></blockquote>
-  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-</div>
-
- -->
-
-  <p>Quando persius luptatum sea ei, an mei putent philosophia. Mea eirmod dissentiet te. Putant euismod usu ad. Omittam appareat scaevola in vix, an eos posse ipsum tibique, salutatus quaerendum sed ex. Ei vel novum laudem, viderer mnesarchum moderatius te vel. Eum an consul accommodare, no mollis scripserit adversarium vim, choro vivendo verterem cum ea.</p>
-  <p>His ex partem detracto, has antiopam intellegat delicatissimi te. Ut sea nullam delenit dolorum, in mazim ancillae quo. Mea reque elitr expetenda ei. Ex posse dolore ignota cum, ne facilis maiestatis est.</p>
-
-  <!-- <figure class="gallery card">
-  <div class="gallery-panel">
-    <img class="gallery-current" src="../../../img/chiefs.jpg" alt="Lorem ipsum dolor sit amet" loading="lazy">
-    <div class="gallery-marker">
-      <svg width="42px" height="42px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path d="M21,39 C10.5065898,39 2,30.4934102 2,20 C2,9.50658975 10.5065898,1 21,1 C31.4934102,1 40,9.50658975 40,20 C40,30.4934102 31.4934102,39 21,39 Z M27.6,14.4615385 L25.5,14.4615385 L25.021875,13.1538462 C24.7875,12.5192308 24.05625,12 23.4,12 L18.6,12 C17.94375,12 17.2125,12.5192308 16.978125,13.1538462 L16.5,14.4615385 L14.4,14.4615385 C13.078125,14.4615385 12,15.5673077 12,16.9230769 L12,25.5384615 C12,26.8942308 13.078125,28 14.4,28 L27.6,28 C28.921875,28 30,26.8942308 30,25.5384615 L30,16.9230769 C30,15.5673077 28.921875,14.4615385 27.6,14.4615385 Z M21,26 C18.7946429,26 17,24.2053571 17,22 C17,19.7946429 18.7946429,18 21,18 C23.2053571,18 25,19.7946429 25,22 C25,24.2053571 23.2053571,26 21,26 Z M21,19 C19.34375,19 18,20.34375 18,22 C18,23.65625 19.34375,25 21,25 C22.65625,25 24,23.65625 24,22 C24,20.34375 22.65625,19 21,19 Z" id="path-1"></path><filter x="-13.2%" y="-10.5%" width="126.3%" height="126.3%" filterUnits="objectBoundingBox" id="filter-2"><feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset><feGaussianBlur stdDeviation="1.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur><feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix></filter></defs><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use><use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use></g></svg>
-      <span class="gallery-count">1 of 12</span>
-    </div>
-    <button class="gallery-button gallery-prev"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"/></svg></button>
-    <button class="gallery-button gallery-next"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"/></svg></button>
-  </div>
-  <div class="package sans">
-    <h3 class="h2">Gallery title</h3>
-    <figcaption>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum scelerisque tristique ligula in tempor. Praesent hendrerit in felis sit amet gravida. Donec mattis mi sit. <span class="credit">JOHN DOE</span></figcaption>
-  </div>
-</figure>
- -->
-
-  <p>Nonumes forensibus his ut, ne iisque menandri mel. Vel ad mundi doming, nibh senserit accommodare an nam. Te cibo adhuc blandit usu. Sit cu voluptatum omittantur conclusionemque, nam reque mundi tation ut. Pri ne dico fierent invenire, sea eu appareat singulis. Ut pri dicant expetenda.</p>
-  <p>Soluta fabellas eu sed, novum suavitate in eum, et tollit accusata ius. Ne mei melius argumentum repudiandae. Id alienum dolores mel. Eu sed vide alterum feugait. His voluptua complectitur et, pro viris mucius melius ne. Ex per stet esse labore.</p>
-
-  <h3>LOREM IPSUM DOLOR SIT AMET</h3>
-
-  <p>At sit nostro impetus. Vim ad solum regione, tale solum ponderum ut eam. Admodum volutpat scribentur vim id, quidam quaestio eu eam. Ei accumsan intellegebat eos, mollis regione ne per. Vide ullamcorper in has, ne nam liber vivendo appellantur, eos dictas nostrud debitis ut. Nec putant pericula et, eu tota debitis corrumpit vel.</p>
-
-  <!-- <blockquote>“At sit nostro impetus. Vim ad solum regione, tale solum ponderum ut eam. Admodum volutpat scribentur vim id, quidam quaestio eu eam.” <span class="attr">First Last</span></blockquote> -->
-
-  <p>Deleniti interesset ea cum. Ius id atomorum expetendis, et pri hinc necessitatibus. In mundi audiam maiorum quo, sit no erant ornatus eligendi. Ad his omittantur adversarium. His eu stet periculis.</p>
-  <p>Est cu modus debet eripuit. Et ius feugiat assentior. Enim maiorum ocurreret id eam, duo cu iisque deserunt, pri id quando impetus percipitur. Clita malorum no mel, nonumy dicunt mel cu. Paulo theophrastus ea mel, has soleat assueverit in. Unum probo nec et, sit posse officiis ut. Cum facete verear nominavi cu.</p>
-  <p>Duo errem disputationi ex. At sea vituperata referrentur, putant tritani accumsan ei vix. Ne pri clita voluptatibus, ne quis ipsum laboramus mea, cum ea quando propriae. Eam ancillae singulis conceptam ei. Feugait commune duo et, mel dolore nominati abhorreant eu. Nibh eruditi et pro, vix movet ludus causae in.</p>
-  <p>Purto sanctus disputando sit no, admodum constituam consequuntur ea sit. Vis decore dolorum fabellas ex, aliquip labitur consequuntur ut sed. Esse velit consequat eum et, prompta quaestio cu mei. Ut pro iriure voluptua, pri aliquid platonem salutandi te, legimus volutpat in vix.</p>
-  <p>Labores definitionem in quo. Qui saperet persecuti id, doctus aliquid an his. Mel ne mundi nonumes deseruisse. Sit et corpora consectetuer, ut prima aliquip veritus quo. Sit eu alia aliquando. Duo te saepe audiam, molestiae adversarium et quo, ad inani melius suscipit duo. Nostro efficiantur has at, per natum quidam utroque no.</p>
-  <p>Dico adversarium mei ut. Ei nec amet omittam, id sit everti doctus efficiantur, vel omnes constituam ea. Ut mel sensibus recteque gloriatur, vim at vidisse postulant deseruisse, clita lucilius nominati pro ei. Est commune percipitur persequeris cu, quo an melius constituto, vidit paulo mel ex. Est ne dictas definitionem, nec ut erat adhuc volutpat, ne mel persecuti eloquentiam. Ea vis eripuit feugiat, cum ad nemore regione.</p>
-
-  <div class="transparency">
+<h3 id="lorem-ipsum">Lorem Ipsum</h3>
+<p>This is not to discredit the idea that a screwdriver sees a theater as a barbate jeep. A pull is a lipstick&rsquo;s burn. Pastas are threescore holes. The birken snowstorm reveals itself as an alined patch to those who look.</p>
+<p>A unit is an oddball environment. A boot is the oak of an organisation. What we don&rsquo;t know for sure is whether or not we can assume that any instance of a square can be construed as a plagal Monday. A handsaw is a yttric Santa.</p>
+<p>Some mucking step-sons are thought of simply as cuts. Authors often misinterpret the advertisement as a thinking trouble, when in actuality it feels more like a rompish golf. Few can name a torrent beast that isn&rsquo;t a soundproof dolphin. A banjo is a shark from the right perspective.</p>
+<p>A delivery sees a comparison as a steamy celsius. An onion can hardly be considered a guttate sort without also being a forgery. An occult van is a roast of the mind. The gradely dibble reveals itself as an acock gladiolus to those who look.</p>
+<p>Some assert that a wambly cellar without hours is truly a shoulder of weathered ferryboats. Some posit the ferny semicolon to be less than bloodied. Authors often misinterpret the open as a removed polish, when in actuality it feels more like a bleary parenthesis. An agreement is a manicure from the right perspective.</p>
+<p>An israel is an erose environment. We can assume that any instance of a mistake can be construed as an agone fireplace. The reeky segment comes from a fledgling jury. We know that few can name a shirtless baseball that isn&rsquo;t a photic battery.</p>
+<p>A squid can hardly be considered a mouthless ski without also being a bakery. In ancient times the seagull is a harbor. Extending this logic, the lead is a flock. Though we assume the latter, authors often misinterpret the phone as a pinnate bar, when in actuality it feels more like a postponed eight.</p>
+<p>A downright yacht is an accountant of the mind. A schedule is the flavor of a pentagon. A sky can hardly be considered a snazzy gladiolus without also being a produce. A laborer is a road&rsquo;s recorder.</p>
+<p>Unfortunately, that is wrong; on the contrary, a part of the chef is assumed to be a murrey radish. Few can name a foreseen gong that isn&rsquo;t a piecemeal department. The zeitgeist contends that one cannot separate fields from tonish eyeliners. A Thursday is the loaf of a latency.</p>
+<p>A noodle is a lier from the right perspective. Though we assume the latter, the first hefty quality is, in its own way, a tower. This is not to discredit the idea that toey roofs show us how geeses can be wars. A crustless girdle&rsquo;s polish comes with it the thought that the hydric organ is a respect.</p>
+<p><div class="transparency">
   <h3 class="expander" onclick="this.classList.toggle('open');">BEHIND OUR REPORTING</h3>
   <div class="question" style="display: block;">
     <h3>Why did we report this story?</h3>
@@ -523,8 +417,7 @@ fake-ad {
   </div>
 </div>
 
-
-  <div class="related-stories story-module">
+<div class="related-stories story-module">
   <h3 class="h5">RELATED STORIES</h4>
   <div class="grid">
     <article class="package">
@@ -537,23 +430,11 @@ fake-ad {
       <h4 class="h3"><a href="#">Kobach deputy says unaffiliated voters can’t be counted; Colyer’s office disagrees</a></h4>
       <time>AUG 13, 2018</time>
     </article>
-    <article class="package">
-      <span class="h6"><a class="kicker" href="#">Government and Politics</a></span>
-      <h4 class="h3"><a href="#">JoCo accepts nearly 1,500 new votes. Not all unaffiliated voters’ ballots will count</a></h4>
-      <time>AUG 13, 2018</time>
-    </article>
-    <article class="package">
-      <span class="h6"><a class="kicker" href="#">Government and Politics</a></span>
-      <h4 class="h3"><a href="#">Kansas Democrats watch with glee as Republicans Colyer, Kobach fight over election</a></h4>
-      <time>AUG 12, 2018</time>
-    </article>
   </div>
   <hr>
 </div>
 
-
-  <div class="story-module">
-    <div class="story-module">
+<div class="story-module">
   <div class="author-card package">
     <div class="thumb">
       <img src="../../../img/aaron_moody.jpg" width="400" height="400" alt="Aaron Moody">
@@ -585,54 +466,44 @@ fake-ad {
     </div>
   </div>
 </div>
-
-  </div>
-
-  <div class="story-module package">
-    <h5 class="expander" onclick="this.classList.toggle('open');">COMMENTS</h5>
-    <facebook-comments></facebook-comments>
-    <script async src="../../../js/facebook-comments.js"></script>
-  </div>
+</p>
 </article>
 
-<section class="grid">
-  
-
-<div class="card read-next col-span-2">
-  <div class="label sticky"><span class="h5">READ NEXT</span></div>
-  <figure>
-    <img src="https://www.kansascity.com/living/food-drink/come-into-my-kitchen/tl1ycf/picture205504244/ALTERNATES/LANDSCAPE_1140/0321%20cimk%20kuwata%2003022018%20s%20%284%29" alt="Lorem ipsum dolor sit amet" width="1140" height="161" loading="lazy">
-  </figure>
-  <div class="package">
-    <header class="header">
-      <a class="kicker h6" href="#">SECTION</a>
-      <h1><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tempus lorem a</a></h1>
-      <div class="bio">
-        <div>
-          <p class="byline">By <a href="#">John Doe</a> <span class="credit">SAMPLE NEWSPAPER</span></p>
-          <div>
-            <time>AUG 13, 2018, UPDATED 4 MONTHS AGO</time>
-          </div>
-        </div>
-        <div class="social-media">
-          <a href="#">
-            <svg data-name="twitter" viewBox="0 0 512 512"><title>Share this story on Twitter</title><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg>
-          </a>
-          <a href="#">
-            <svg data-name="facebook" viewBox="0 0 264 512"><title>Share this story on Facebook</title><path d="M76.7 512V283H0v-91h76.7v-71.7C76.7 42.4 124.3 0 193.8 0c33.3 0 61.9 2.5 70.2 3.6V85h-48.2c-37.8 0-45.1 18-45.1 44.3V192H256l-11.7 91h-73.6v229"></path></svg>
-          </a>
-          <a href="#">
-            <svg data-name="envelope" viewBox="0 0 512 512"><title>Email this story</title><path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"></path></svg>
-          </a>
+    <section class="grid">
+      <div class="card read-next col-span-2">
+        <div class="label sticky"><span class="h5">READ NEXT</span></div>
+        <figure>
+          <img src="https://www.kansascity.com/living/food-drink/come-into-my-kitchen/tl1ycf/picture205504244/ALTERNATES/LANDSCAPE_1140/0321%20cimk%20kuwata%2003022018%20s%20%284%29" alt="Lorem ipsum dolor sit amet" width="1140" height="161" loading="lazy">
+        </figure>
+        <div class="package">
+          <header class="header">
+            <a class="kicker h6" href="#">SECTION</a>
+            <h1><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tempus lorem a</a></h1>
+            <div class="bio">
+              <div>
+                <p class="byline">By <a href="#">John Doe</a> <span class="credit">SAMPLE NEWSPAPER</span></p>
+                <div>
+                  <time>AUG 13, 2018, UPDATED 4 MONTHS AGO</time>
+                </div>
+              </div>
+              <div class="social-media">
+                <a href="#">
+                  <svg data-name="twitter" viewBox="0 0 512 512"><title>Share this story on Twitter</title><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg>
+                </a>
+                <a href="#">
+                  <svg data-name="facebook" viewBox="0 0 264 512"><title>Share this story on Facebook</title><path d="M76.7 512V283H0v-91h76.7v-71.7C76.7 42.4 124.3 0 193.8 0c33.3 0 61.9 2.5 70.2 3.6V85h-48.2c-37.8 0-45.1 18-45.1 44.3V192H256l-11.7 91h-73.6v229"></path></svg>
+                </a>
+                <a href="#">
+                  <svg data-name="envelope" viewBox="0 0 512 512"><title>Email this story</title><path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"></path></svg>
+                </a>
+              </div>
+            </div>
+          </header>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate enim dolor, sit amet lacinia ex lacinia ac. Sed facilisis nulla felis, eget ultricies dolor cursus nec. Cras sodales ligula elementum ipsum elementum gravida.</p>
+          <a href="#" class="more-link">KEEP READING</a>
         </div>
       </div>
-    </header>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate enim dolor, sit amet lacinia ex lacinia ac. Sed facilisis nulla felis, eget ultricies dolor cursus nec. Cras sodales ligula elementum ipsum elementum gravida.</p>
-    <a href="#" class="more-link">KEEP READING</a>
-  </div>
-</div>
-
-  <div class="digest">
+      <div class="digest">
   <div class="paper ">
     <a href="https://mcclatchy.github.io/saratoga/opinion/" class="label ">
       <span class="h5">OPINION</span>
@@ -657,26 +528,23 @@ fake-ad {
   <a href="https://mcclatchy.github.io/saratoga/opinion/" class="more-link">MORE OPINION</a>
 </div>
 
-</section>
-
-<section>
-  <div class="card horizontal swg-promo">
-  <div class="package sans promo">
-    <h1 class="title">SIGN UP AND SAVE</h1>
-    <span class="h3">#READLOCAL</span>
-  </div>
-  <div class="package">
-    <p class="summary">Get six months of free digital access to The Kansas City Star. Terms and conditions apply</p>
-    <a class="button impact" href="#">Subscribe with Google</a>
-  </div>
-</div>
-
-</section>
-
-<section>
-  <h5 class="sans bold section-label">MORE IN FOOD</h5>
-  <div class="grid">
-    <article class="card ">
+    </section>
+    <section>
+      <div class="card horizontal swg-promo">
+        <div class="package sans promo">
+          <h1 class="title">SIGN UP AND SAVE</h1>
+          <span class="h3">#READLOCAL</span>
+        </div>
+        <div class="package">
+          <p class="summary">Get six months of free digital access to The Kansas City Star. Terms and conditions apply</p>
+          <a class="button impact" href="#">Subscribe with Google</a>
+        </div>
+      </div>
+    </section>
+    <section>
+      <span class="h5 sans bold section-label">MORE IN SECTION</span>
+      <div class="grid">
+          <article class="card ">
   <figure>
     <a href="https://mcclatchy.github.io/saratoga/food/205504249/">
       <img src="../../../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
@@ -689,7 +557,7 @@ fake-ad {
   </div>
 </article>
 
-    <article class="card ">
+          <article class="card ">
   <figure>
     <a href="https://mcclatchy.github.io/saratoga/food/205504249/">
       <img src="../../../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
@@ -702,7 +570,7 @@ fake-ad {
   </div>
 </article>
 
-    <article class="card ">
+          <article class="card ">
   <figure>
     <a href="https://mcclatchy.github.io/saratoga/food/205504249/">
       <img src="../../../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
@@ -715,7 +583,7 @@ fake-ad {
   </div>
 </article>
 
-    <article class="card ">
+          <article class="card ">
   <figure>
     <a href="https://mcclatchy.github.io/saratoga/food/205504249/">
       <img src="../../../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
@@ -728,7 +596,7 @@ fake-ad {
   </div>
 </article>
 
-    <article class="card ">
+          <article class="card ">
   <figure>
     <a href="https://mcclatchy.github.io/saratoga/food/205504249/">
       <img src="../../../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
@@ -741,23 +609,23 @@ fake-ad {
   </div>
 </article>
 
-    <article class="card">
-  <figure>
-    <a href="#">
-      <img src="../../../img/lanterns.jpg" width="1140" height="641" alt="Lanterns floating in a body of water" loading="lazy">
-    </a>
-  </figure>
-  <div class="package">
-    <a class="kicker h6 impact" href="#">SPONSORED CONTENT</a>
-    <h3><a href="#">Lorem ipsum dolor sit amet.</a></h3>
-    <time>BY FIRST LAST AS SEEN ON SITE</time>
+        <article class="card">
+          <figure>
+            <a href="#">
+              <img src="../../../img/lanterns.jpg" width="1140" height="641" alt="Lanterns floating in a body of water" loading="lazy">
+            </a>
+          </figure>
+          <div class="package">
+            <a class="kicker h6 impact" href="#">SPONSORED CONTENT</a>
+            <h3><a href="#">Lorem ipsum dolor sit amet.</a></h3>
+            <time>BY FIRST LAST AS SEEN ON SITE</time>
+          </div>
+        </article>
+      </div>
+    </section>
   </div>
-</article>
 
-  </div>
-</section>
-
-<footer class="impact">
+  <footer class="impact">
   <section class="footer">
     <div class="package footer-connect">
       <h3>CONNECT</h3>
@@ -823,15 +691,7 @@ fake-ad {
   <a href="#">TERMS OF SERVICE</a>
 </section>
 
-
-<zone-toggle></zone-toggle>
-
-<!-- 
-Zones logic
-===========
-
-This initial attempt is the most straightforward method where all variants are coming from the server and then dynammically placed. Dynamic templating could, and perhaps should, be done completely in JS. I'll explore that after this is up.
--->
+    
 
 <template data-unit="leaderboard">
   <fake-ad size="[[970,250],[728,90]]"></fake-ad>
@@ -846,51 +706,23 @@ This initial attempt is the most straightforward method where all variants are c
 </template>
 
 <template data-unit="subscription">
-  
-
-
-
-<div class="inline-cta package ">
-  <h1>Make us part of your daily routine.</h1>
-  <p class="summary">Get full access to The Sacramento Bee across all your devices. Unlimited Digital Access: Only $0.99 for your first month.</p>
-  <a class="button" href="#">SAVE NOW</a>
-</div>
-
-
-
-
-
-
-
-
-
-
+  <div class="inline-cta package">
+    <h1>Make us part of your daily routine.</h1>
+    <p class="summary">Get full access to The Sacramento Bee across all your devices. Unlimited Digital Access: Only $0.99 for your first month.</p>
+    <a class="button" href="#">SAVE NOW</a>
+  </div>
 </template>
 
 <template data-unit="podcast">
-  
-
-
-
-
-
-<div class="inline-cta package ">
-  <h1>Listen to the Morning Mix Podcast</h1>
-  <p class="summary">Start your day with the most important local and national stories from The Sacramento Bee.</p>
-  <a class="button" href="#">LISTEN NOW</a>
-</div>
-
-
-
-
-
-
-
-
+  <div class="inline-cta package">
+    <h1>Listen to the Morning Mix Podcast</h1>
+    <p class="summary">Start your day with the most important local and national stories from The Sacramento Bee.</p>
+    <a class="button" href="#">LISTEN NOW</a>
+  </div>
 </template>
 
 <template data-unit="newsletter">
-  <form class="inline-cta ad-widget package {{$class}}">
+  <form class="inline-cta ad-widget package">
     <h1>Breaking news & more</h1>
     <p class="summary">Sign up for one of our many newsletters to be the first to know when big news breaks.</p>
     <a href="../../../newsletters" class="button">Sign Up</a>
@@ -898,47 +730,19 @@ This initial attempt is the most straightforward method where all variants are c
 </template>
 
 <template data-unit="notifications">
-  
-
-
-
-
-
-
-
-
-
-<div class="inline-cta package ">
-  <h1>Get alerts where you like to read the news.</h1>
-  <p class="summary">Sign up for breaking news notifications right on your desktop from the Sacramento Bee</p>
-  <a class="button" href="#">SIGN UP</a>
-</div>
-
-
-
-
+  <div class="inline-cta package">
+    <h1>Get alerts where you like to read the news.</h1>
+    <p class="summary">Sign up for breaking news notifications right on your desktop from the Sacramento Bee</p>
+    <a class="button" href="#">SIGN UP</a>
+  </div>
 </template>
 
 <template data-unit="app">
-  
-
-
-
-
-
-
-
-
-
-
-
-<div class="inline-cta package ">
-  <h1>Read on-the-go with the Sac Bee app</h1>
-  <p class="summary">Access all the latest local news on our mobile app, available in the App Store and Google Play.</p>
-  <a class="button" href="#">DOWNLOAD</a>
-</div>
-
-
+  <div class="inline-cta package">
+    <h1>Read on-the-go with the Sac Bee app</h1>
+    <p class="summary">Access all the latest local news on our mobile app, available in the App Store and Google Play.</p>
+    <a class="button" href="#">DOWNLOAD</a>
+  </div>
 </template>
 
 <template data-unit="digest">
@@ -975,39 +779,41 @@ This initial attempt is the most straightforward method where all variants are c
 
 <template data-unit="related-stories">
   <div class="related-stories story-module">
-  <h3 class="h5">RELATED STORIES</h4>
-  <div class="grid">
-    <article class="package">
-      <span class="h6"><a class="kicker" href="#">Elections</a></span>
-      <h4 class="h3"><a href="#">Sedgwick County adds 1,326 votes to election; counting rules differ in Johnson County</a></h4>
-      <time>AUG 13, 2018</time>
-    </article>
-    <article class="package">
-      <span class="h6"><a class="kicker" href="#">Government and Politics</a></span>
-      <h4 class="h3"><a href="#">Kobach deputy says unaffiliated voters can’t be counted; Colyer’s office disagrees</a></h4>
-      <time>AUG 13, 2018</time>
-    </article>
-    <article class="package">
-      <span class="h6"><a class="kicker" href="#">Government and Politics</a></span>
-      <h4 class="h3"><a href="#">JoCo accepts nearly 1,500 new votes. Not all unaffiliated voters’ ballots will count</a></h4>
-      <time>AUG 13, 2018</time>
-    </article>
-    <article class="package">
-      <span class="h6"><a class="kicker" href="#">Government and Politics</a></span>
-      <h4 class="h3"><a href="#">Kansas Democrats watch with glee as Republicans Colyer, Kobach fight over election</a></h4>
-      <time>AUG 12, 2018</time>
-    </article>
+    <h3 class="h5">RELATED STORIES</h4>
+    <div class="grid">
+      <article class="package">
+        <span class="h6"><a class="kicker" href="#">Elections</a></span>
+        <h4 class="h3"><a href="#">Sedgwick County adds 1,326 votes to election; counting rules differ in Johnson County</a></h4>
+        <time>AUG 13, 2018</time>
+      </article>
+      <article class="package">
+        <span class="h6"><a class="kicker" href="#">Government and Politics</a></span>
+        <h4 class="h3"><a href="#">Kobach deputy says unaffiliated voters can’t be counted; Colyer’s office disagrees</a></h4>
+        <time>AUG 13, 2018</time>
+      </article>
+      <article class="package">
+        <span class="h6"><a class="kicker" href="#">Government and Politics</a></span>
+        <h4 class="h3"><a href="#">JoCo accepts nearly 1,500 new votes. Not all unaffiliated voters’ ballots will count</a></h4>
+        <time>AUG 13, 2018</time>
+      </article>
+      <article class="package">
+        <span class="h6"><a class="kicker" href="#">Government and Politics</a></span>
+        <h4 class="h3"><a href="#">Kansas Democrats watch with glee as Republicans Colyer, Kobach fight over election</a></h4>
+        <time>AUG 12, 2018</time>
+      </article>
+    </div>
+    <hr>
   </div>
-  <hr>
-</div>
-
 </template>
 
 <template data-unit="connatix">
   <fake-ad size="[728,400]"></fake-ad>
 </template>
 
-    
+<template data-unit="dml">
+  <div data-stackid="12a7296a34d8a24a4f6722a4abc39366" class="dml-widget-container" ></div><script async src="https://c.go-fet.ch/a/embed.js"></script>
+</template>
+
     <script src="https://kit.fontawesome.com/8a8585a39f.js" crossorigin="anonymous"></script>
   </body>
 </html>

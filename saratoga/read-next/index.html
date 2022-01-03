@@ -71,9 +71,10 @@
     <link rel="stylesheet" href="../../css/decks/hidden.css">
     
     
+    <link rel="stylesheet" href="../../css/site.css">
 
     
-    <link rel="stylesheet" href="../../css/site.css">
+    <script defer src="../../js/fake-ad.js"></script>
     
 <link rel="stylesheet" href="../../css/style-guide.css">
 
@@ -89,9 +90,6 @@
         <a href="https://mcclatchy.github.io/design/markets/" class="">
           <span>markets</span>
         </a>
-        <a href="https://mcclatchy.github.io/design/ads/" class="">
-          <span>ads</span>
-        </a>
         <a href="https://mcclatchy.github.io/design/email/" class="">
           <span>email</span>
         </a>
@@ -99,8 +97,7 @@
     </div>
 <div class="panels">
   <div class="paper story-body details">
-    <h2 class="page-header">read-next
-    </h2>
+    <h2>read-next</h2>
     <p>The read next card mimics the top of a story body in card form. Mostly, it&rsquo;s a combination of different molecules in the package, with minimal CSS overloads.</p>
 <h4 id="example">EXAMPLE</h4>
 <div class="example">
@@ -141,266 +138,205 @@
 </div>
 
 </div>
-<h4 id="html">HTML</h4>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;card read-next &#34;</span>&gt;
-  &lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;label sticky&#34;</span>&gt;&lt;<span style="color:#000080;font-weight:bold">span</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;h5&#34;</span>&gt;READ NEXT&lt;/<span style="color:#000080;font-weight:bold">span</span>&gt;&lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;
-  &lt;<span style="color:#000080;font-weight:bold">figure</span>&gt;
-    &lt;<span style="color:#000080;font-weight:bold">img</span> <span style="color:#f00">src</span>=<span style="color:#00f">&#34;https://www.kansascity.com/living/food-drink/come-into-my-kitchen/tl1ycf/picture205504244/ALTERNATES/LANDSCAPE_1140/0321%20cimk%20kuwata%2003022018%20s%20%284%29&#34;</span> <span style="color:#f00">alt</span>=<span style="color:#00f">&#34;Lorem ipsum dolor sit amet&#34;</span> <span style="color:#f00">width</span>=<span style="color:#00f">&#34;1140&#34;</span> <span style="color:#f00">height</span>=<span style="color:#00f">&#34;161&#34;</span> <span style="color:#f00">loading</span>=<span style="color:#00f">&#34;lazy&#34;</span>&gt;
-  &lt;/<span style="color:#000080;font-weight:bold">figure</span>&gt;
-  &lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;package&#34;</span>&gt;
-    &lt;<span style="color:#000080;font-weight:bold">header</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;header&#34;</span>&gt;
-      &lt;<span style="color:#000080;font-weight:bold">a</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;kicker h6&#34;</span> <span style="color:#f00">href</span>=<span style="color:#00f">&#34;#&#34;</span>&gt;SECTION&lt;/<span style="color:#000080;font-weight:bold">a</span>&gt;
-      &lt;<span style="color:#000080;font-weight:bold">h1</span>&gt;&lt;<span style="color:#000080;font-weight:bold">a</span> <span style="color:#f00">href</span>=<span style="color:#00f">&#34;#&#34;</span>&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tempus lorem a&lt;/<span style="color:#000080;font-weight:bold">a</span>&gt;&lt;/<span style="color:#000080;font-weight:bold">h1</span>&gt;
-      &lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;bio&#34;</span>&gt;
-        &lt;<span style="color:#000080;font-weight:bold">div</span>&gt;
-          &lt;<span style="color:#000080;font-weight:bold">p</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;byline&#34;</span>&gt;By &lt;<span style="color:#000080;font-weight:bold">a</span> <span style="color:#f00">href</span>=<span style="color:#00f">&#34;#&#34;</span>&gt;John Doe&lt;/<span style="color:#000080;font-weight:bold">a</span>&gt; &lt;<span style="color:#000080;font-weight:bold">span</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;credit&#34;</span>&gt;SAMPLE NEWSPAPER&lt;/<span style="color:#000080;font-weight:bold">span</span>&gt;&lt;/<span style="color:#000080;font-weight:bold">p</span>&gt;
-          &lt;<span style="color:#000080;font-weight:bold">div</span>&gt;
-            &lt;<span style="color:#000080;font-weight:bold">time</span>&gt;AUG 13, 2018, UPDATED 4 MONTHS AGO&lt;/<span style="color:#000080;font-weight:bold">time</span>&gt;
-          &lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;
-        &lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;
-        &lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;social-media&#34;</span>&gt;
-          &lt;<span style="color:#000080;font-weight:bold">a</span> <span style="color:#f00">href</span>=<span style="color:#00f">&#34;#&#34;</span>&gt;
-            &lt;<span style="color:#000080;font-weight:bold">svg</span> <span style="color:#f00">data-name</span>=<span style="color:#00f">&#34;twitter&#34;</span> <span style="color:#f00">viewBox</span>=<span style="color:#00f">&#34;0 0 512 512&#34;</span>&gt;&lt;<span style="color:#000080;font-weight:bold">title</span>&gt;Share this story on Twitter&lt;/<span style="color:#000080;font-weight:bold">title</span>&gt;&lt;<span style="color:#000080;font-weight:bold">path</span> <span style="color:#f00">d</span>=<span style="color:#00f">&#34;M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z&#34;</span>&gt;&lt;/<span style="color:#000080;font-weight:bold">path</span>&gt;&lt;/<span style="color:#000080;font-weight:bold">svg</span>&gt;
-          &lt;/<span style="color:#000080;font-weight:bold">a</span>&gt;
-          &lt;<span style="color:#000080;font-weight:bold">a</span> <span style="color:#f00">href</span>=<span style="color:#00f">&#34;#&#34;</span>&gt;
-            &lt;<span style="color:#000080;font-weight:bold">svg</span> <span style="color:#f00">data-name</span>=<span style="color:#00f">&#34;facebook&#34;</span> <span style="color:#f00">viewBox</span>=<span style="color:#00f">&#34;0 0 264 512&#34;</span>&gt;&lt;<span style="color:#000080;font-weight:bold">title</span>&gt;Share this story on Facebook&lt;/<span style="color:#000080;font-weight:bold">title</span>&gt;&lt;<span style="color:#000080;font-weight:bold">path</span> <span style="color:#f00">d</span>=<span style="color:#00f">&#34;M76.7 512V283H0v-91h76.7v-71.7C76.7 42.4 124.3 0 193.8 0c33.3 0 61.9 2.5 70.2 3.6V85h-48.2c-37.8 0-45.1 18-45.1 44.3V192H256l-11.7 91h-73.6v229&#34;</span>&gt;&lt;/<span style="color:#000080;font-weight:bold">path</span>&gt;&lt;/<span style="color:#000080;font-weight:bold">svg</span>&gt;
-          &lt;/<span style="color:#000080;font-weight:bold">a</span>&gt;
-          &lt;<span style="color:#000080;font-weight:bold">a</span> <span style="color:#f00">href</span>=<span style="color:#00f">&#34;#&#34;</span>&gt;
-            &lt;<span style="color:#000080;font-weight:bold">svg</span> <span style="color:#f00">data-name</span>=<span style="color:#00f">&#34;envelope&#34;</span> <span style="color:#f00">viewBox</span>=<span style="color:#00f">&#34;0 0 512 512&#34;</span>&gt;&lt;<span style="color:#000080;font-weight:bold">title</span>&gt;Email this story&lt;/<span style="color:#000080;font-weight:bold">title</span>&gt;&lt;<span style="color:#000080;font-weight:bold">path</span> <span style="color:#f00">d</span>=<span style="color:#00f">&#34;M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z&#34;</span>&gt;&lt;/<span style="color:#000080;font-weight:bold">path</span>&gt;&lt;/<span style="color:#000080;font-weight:bold">svg</span>&gt;
-          &lt;/<span style="color:#000080;font-weight:bold">a</span>&gt;
-        &lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;
-      &lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;
-    &lt;/<span style="color:#000080;font-weight:bold">header</span>&gt;
-    &lt;<span style="color:#000080;font-weight:bold">p</span>&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate enim dolor, sit amet lacinia ex lacinia ac. Sed facilisis nulla felis, eget ultricies dolor cursus nec. Cras sodales ligula elementum ipsum elementum gravida.&lt;/<span style="color:#000080;font-weight:bold">p</span>&gt;
-    &lt;<span style="color:#000080;font-weight:bold">a</span> <span style="color:#f00">href</span>=<span style="color:#00f">&#34;#&#34;</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;more-link&#34;</span>&gt;KEEP READING&lt;/<span style="color:#000080;font-weight:bold">a</span>&gt;
-  &lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;
-&lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;</code></pre></div>
 
   </div>
 
-  
-<div class="paper digest list">
+  <div class="paper digest list">
   <div class="cards">
     <div class="label">
       <h5>CARDS</h5>
     </div>
     
-    
-    <div class="package">
-      <h4 class="sans bold">
-        <a class="" href="https://mcclatchy.github.io/design/saratoga/author-card/">author-card</a>
-      </h4>
-      <p class="summary">Author information at the bottom of articles</p>
-    </div>
-    
-    
-    <div class="package">
-      <h4 class="sans bold">
-        <a class="" href="https://mcclatchy.github.io/design/saratoga/big-news/">big-news</a>
-      </h4>
-      <p class="summary">Goes on the top of the homepage during large news events.</p>
-    </div>
-    
-    
-    <div class="package">
-      <h4 class="sans bold">
-        <a class="" href="https://mcclatchy.github.io/design/saratoga/correction/">correction</a>
-      </h4>
-      <p class="summary">A correction disclaimer for the top of a story.</p>
-    </div>
-    
-    
-    <div class="package">
-      <h4 class="sans bold">
-        <a class="" href="https://mcclatchy.github.io/design/saratoga/digest/">digest</a>
-      </h4>
-      <p class="summary">Headline stacks for section content.</p>
-    </div>
-    
-    
-    <div class="package">
-      <h4 class="sans bold">
-        <a class="" href="https://mcclatchy.github.io/design/saratoga/flag/">flag</a>
-      </h4>
-      <p class="summary">The top banner of the sites including the search panel and account popout</p>
-    </div>
-    
-    
-    <div class="package">
-      <h4 class="sans bold">
-        <a class="" href="https://mcclatchy.github.io/design/saratoga/footer/">footer</a>
-      </h4>
-      <p class="summary">Standard footer for the bottom of all pages</p>
-    </div>
-    
-    
-    <div class="package">
-      <h4 class="sans bold">
-        <a class="" href="https://mcclatchy.github.io/design/saratoga/form/">form (DSP)</a>
-      </h4>
-      <p class="summary">DSP form layout</p>
-    </div>
-    
-    
-    <div class="package">
-      <h4 class="sans bold">
-        <a class="" href="https://mcclatchy.github.io/design/saratoga/gallery/">gallery</a>
-      </h4>
-      <p class="summary">Photo gallery to be used in all occasions.</p>
-    </div>
-    
-    
-    <div class="package">
-      <h4 class="sans bold">
-        <a class="" href="https://mcclatchy.github.io/design/saratoga/header/">header</a>
-      </h4>
-      <p class="summary">An expanded package for article headers.</p>
-    </div>
-    
-    
-    <div class="package">
-      <h4 class="sans bold">
-        <a class="" href="https://mcclatchy.github.io/design/saratoga/immersive/">immersive</a>
-      </h4>
-      <p class="summary">Immersive card to match the layout option.</p>
-    </div>
-    
-    
-    <div class="package">
-      <h4 class="sans bold">
-        <a class="" href="https://mcclatchy.github.io/design/saratoga/in-depth/">in-depth</a>
-      </h4>
-      <p class="summary">In depth module for section pages</p>
-    </div>
-    
-    
-    <div class="package">
-      <h4 class="sans bold">
-        <a class="" href="https://mcclatchy.github.io/design/saratoga/inline-cta/">inline-cta</a>
-      </h4>
-      <p class="summary">Inline call to action for story display.</p>
-    </div>
-    
-    
-    <div class="package">
-      <h4 class="sans bold">
-        <a class="" href="https://mcclatchy.github.io/design/saratoga/menu/">menu</a>
-      </h4>
-      <p class="summary">Side menu panel tied to the hamburger.</p>
-    </div>
-    
-    
-    <div class="package">
-      <h4 class="sans bold">
-        <a class="" href="https://mcclatchy.github.io/design/saratoga/modal/">modal</a>
-      </h4>
-      <p class="summary">Simple overlay containers to maintain consistency.</p>
-    </div>
-    
-    
-    <div class="package">
-      <h4 class="sans bold">
-        <a class="" href="https://mcclatchy.github.io/design/saratoga/panel/">panel</a>
-      </h4>
-      <p class="summary">A stackable card for supplemental section and story information.</p>
-    </div>
-    
-    
-    <div class="package active">
-      <h4 class="sans bold">
-        <a class="" href="https://mcclatchy.github.io/design/saratoga/read-next/">read-next</a>
-      </h4>
-      <p class="summary">The custom read next card under story bodies.</p>
-    </div>
-    
-    
-    <div class="package">
-      <h4 class="sans bold">
-        <a class="" href="https://mcclatchy.github.io/design/saratoga/related-stories/">related-stories</a>
-      </h4>
-      <p class="summary">Display for stories related in CUE.</p>
-    </div>
-    
-    
-    <div class="package">
-      <h4 class="sans bold">
-        <a class="" href="https://mcclatchy.github.io/design/saratoga/review-order/">review-order (DSP)</a>
-      </h4>
-      <p class="summary">DSP review-order card</p>
-    </div>
-    
-    
-    <div class="package">
-      <h4 class="sans bold">
-        <a class="" href="https://mcclatchy.github.io/design/saratoga/section-nav/">section-nav</a>
-      </h4>
-      <p class="summary">Top navigation for section fronts where applied in CUE</p>
-    </div>
-    
-    
-    <div class="package">
-      <h4 class="sans bold">
-        <a class="" href="https://mcclatchy.github.io/design/saratoga/series-nav/">series-nav</a>
-      </h4>
-      <p class="summary">Series nav for article pages.</p>
-    </div>
-    
-    
-    <div class="package">
-      <h4 class="sans bold">
-        <a class="" href="https://mcclatchy.github.io/design/saratoga/sponsor/">sponsor</a>
-      </h4>
-      <p class="summary">Grant/Sponsorship card for article pages.</p>
-    </div>
-    
-    
-    <div class="package">
-      <h4 class="sans bold">
-        <a class="" href="https://mcclatchy.github.io/design/saratoga/promo/">swg-promo</a>
-      </h4>
-      <p class="summary">Promo card for story and section pages</p>
-    </div>
-    
-    
-    <div class="package">
-      <h4 class="sans bold">
-        <a class="" href="https://mcclatchy.github.io/design/saratoga/timeline/">timeline</a>
-      </h4>
-      <p class="summary">Used in live updates and for static timelines.</p>
-    </div>
-    
-    
-    <div class="package">
-      <h4 class="sans bold">
-        <a class="" href="https://mcclatchy.github.io/design/saratoga/transparency/">transparency</a>
-      </h4>
-      <p class="summary">Provides story background information.</p>
-    </div>
-    
-    
-    <div class="package">
-      <h4 class="sans bold">
-        <a class="" href="https://mcclatchy.github.io/design/saratoga/upper-nav/">upper-nav</a>
-      </h4>
-      <p class="summary">Top tab navigation used in niche verticals.</p>
-    </div>
-    
-    
-    <div class="package">
-      <h4 class="sans bold">
-        <a class="" href="https://mcclatchy.github.io/design/saratoga/vendor-flag/">vendor-flag</a>
-      </h4>
-      <p class="summary">A basic flag that can be used on 3rd-party sites in an iframe.</p>
-    </div>
-    
-    
-    <div class="package">
-      <h4 class="sans bold">
-        <a class="" href="https://mcclatchy.github.io/design/saratoga/vendor-footer/">vendor-footer</a>
-      </h4>
-      <p class="summary">A basic footer that can be used on 3rd-party sites in an iframe.</p>
-    </div>
-    
+<div class="package">
+  <h4 class="sans bold">
+    <a href="https://mcclatchy.github.io/design/saratoga/author-card/">author-card</a>
+  </h4>
+  <p class="summary">Author information at the bottom of articles</p>
+</div>
+
+<div class="package">
+  <h4 class="sans bold">
+    <a href="https://mcclatchy.github.io/design/saratoga/big-news/">big-news</a>
+  </h4>
+  <p class="summary">Goes on the top of the homepage during large news events.</p>
+</div>
+
+<div class="package">
+  <h4 class="sans bold">
+    <a href="https://mcclatchy.github.io/design/saratoga/correction/">correction</a>
+  </h4>
+  <p class="summary">A correction disclaimer for the top of a story.</p>
+</div>
+
+<div class="package">
+  <h4 class="sans bold">
+    <a href="https://mcclatchy.github.io/design/saratoga/digest/">digest</a>
+  </h4>
+  <p class="summary">Headline stacks for section content.</p>
+</div>
+
+<div class="package">
+  <h4 class="sans bold">
+    <a href="https://mcclatchy.github.io/design/saratoga/flag/">flag</a>
+  </h4>
+  <p class="summary">The top banner of the sites including the search panel and account popout</p>
+</div>
+
+<div class="package">
+  <h4 class="sans bold">
+    <a href="https://mcclatchy.github.io/design/saratoga/footer/">footer</a>
+  </h4>
+  <p class="summary">Standard footer for the bottom of all pages</p>
+</div>
+
+<div class="package">
+  <h4 class="sans bold">
+    <a href="https://mcclatchy.github.io/design/saratoga/form/">form (DSP)</a>
+  </h4>
+  <p class="summary">DSP form layout</p>
+</div>
+
+<div class="package">
+  <h4 class="sans bold">
+    <a href="https://mcclatchy.github.io/design/saratoga/gallery/">gallery</a>
+  </h4>
+  <p class="summary">Photo gallery to be used in all occasions.</p>
+</div>
+
+<div class="package">
+  <h4 class="sans bold">
+    <a href="https://mcclatchy.github.io/design/saratoga/header/">header</a>
+  </h4>
+  <p class="summary">An expanded package for article headers.</p>
+</div>
+
+<div class="package">
+  <h4 class="sans bold">
+    <a href="https://mcclatchy.github.io/design/saratoga/immersive/">immersive</a>
+  </h4>
+  <p class="summary">Immersive card to match the layout option.</p>
+</div>
+
+<div class="package">
+  <h4 class="sans bold">
+    <a href="https://mcclatchy.github.io/design/saratoga/in-depth/">in-depth</a>
+  </h4>
+  <p class="summary">In depth module for section pages</p>
+</div>
+
+<div class="package">
+  <h4 class="sans bold">
+    <a href="https://mcclatchy.github.io/design/saratoga/inline-cta/">inline-cta</a>
+  </h4>
+  <p class="summary">Inline call to action for story display.</p>
+</div>
+
+<div class="package">
+  <h4 class="sans bold">
+    <a href="https://mcclatchy.github.io/design/saratoga/menu/">menu</a>
+  </h4>
+  <p class="summary">Side menu panel tied to the hamburger.</p>
+</div>
+
+<div class="package">
+  <h4 class="sans bold">
+    <a href="https://mcclatchy.github.io/design/saratoga/modal/">modal</a>
+  </h4>
+  <p class="summary">Simple overlay containers to maintain consistency.</p>
+</div>
+
+<div class="package">
+  <h4 class="sans bold">
+    <a href="https://mcclatchy.github.io/design/saratoga/panel/">panel</a>
+  </h4>
+  <p class="summary">A stackable card for supplemental section and story information.</p>
+</div>
+
+<div class="package">
+  <h4 class="sans bold">
+    <a href="https://mcclatchy.github.io/design/saratoga/read-next/">read-next</a>
+  </h4>
+  <p class="summary">The custom read next card under story bodies.</p>
+</div>
+
+<div class="package">
+  <h4 class="sans bold">
+    <a href="https://mcclatchy.github.io/design/saratoga/related-stories/">related-stories</a>
+  </h4>
+  <p class="summary">Display for stories related in CUE.</p>
+</div>
+
+<div class="package">
+  <h4 class="sans bold">
+    <a href="https://mcclatchy.github.io/design/saratoga/review-order/">review-order (DSP)</a>
+  </h4>
+  <p class="summary">DSP review-order card</p>
+</div>
+
+<div class="package">
+  <h4 class="sans bold">
+    <a href="https://mcclatchy.github.io/design/saratoga/section-nav/">section-nav</a>
+  </h4>
+  <p class="summary">Top navigation for section fronts where applied in CUE</p>
+</div>
+
+<div class="package">
+  <h4 class="sans bold">
+    <a href="https://mcclatchy.github.io/design/saratoga/series-nav/">series-nav</a>
+  </h4>
+  <p class="summary">Series nav for article pages.</p>
+</div>
+
+<div class="package">
+  <h4 class="sans bold">
+    <a href="https://mcclatchy.github.io/design/saratoga/sponsor/">sponsor</a>
+  </h4>
+  <p class="summary">Grant/Sponsorship card for article pages.</p>
+</div>
+
+<div class="package">
+  <h4 class="sans bold">
+    <a href="https://mcclatchy.github.io/design/saratoga/promo/">swg-promo</a>
+  </h4>
+  <p class="summary">Promo card for story and section pages</p>
+</div>
+
+<div class="package">
+  <h4 class="sans bold">
+    <a href="https://mcclatchy.github.io/design/saratoga/timeline/">timeline</a>
+  </h4>
+  <p class="summary">Used in live updates and for static timelines.</p>
+</div>
+
+<div class="package">
+  <h4 class="sans bold">
+    <a href="https://mcclatchy.github.io/design/saratoga/transparency/">transparency</a>
+  </h4>
+  <p class="summary">Provides story background information.</p>
+</div>
+
+<div class="package">
+  <h4 class="sans bold">
+    <a href="https://mcclatchy.github.io/design/saratoga/upper-nav/">upper-nav</a>
+  </h4>
+  <p class="summary">Top tab navigation used in niche verticals.</p>
+</div>
+
+<div class="package">
+  <h4 class="sans bold">
+    <a href="https://mcclatchy.github.io/design/saratoga/vendor-flag/">vendor-flag</a>
+  </h4>
+  <p class="summary">A basic flag that can be used on 3rd-party sites in an iframe.</p>
+</div>
+
+<div class="package">
+  <h4 class="sans bold">
+    <a href="https://mcclatchy.github.io/design/saratoga/vendor-footer/">vendor-footer</a>
+  </h4>
+  <p class="summary">A basic footer that can be used on 3rd-party sites in an iframe.</p>
+</div>
+
+
   </div>
 
   <div class="decks">
@@ -408,150 +344,126 @@
       <h5>DECKS</h5>
     </div>
     
-    
-    <div class="package">
-      <h4 class="sans bold">
-        <a class="" href="https://mcclatchy.github.io/design/saratoga/decks/author-bio/">author bio</a>
-      </h4>
-      <p class="summary">A sample of the author bio page.</p>
-    </div>
-    
-    
-    <div class="package">
-      <h4 class="sans bold">
-        <a class="" href="https://mcclatchy.github.io/design/saratoga/decks/contests/">contests</a>
-      </h4>
-      <p class="summary">An alternative grid and card arrangement for contests.</p>
-    </div>
-    
-    
-    <div class="package">
-      <h4 class="sans bold">
-        <a class="" href="https://mcclatchy.github.io/design/saratoga/decks/free-trial/">free trial (DSP)</a>
-      </h4>
-      <p class="summary">A sample of the free trial offer page.</p>
-    </div>
-    
-    
-    <div class="package">
-      <h4 class="sans bold">
-        <a class="" href="https://mcclatchy.github.io/design/saratoga/decks/gallery/">gallery</a>
-      </h4>
-      <p class="summary">A CSS Grid version using the experimental rail code.</p>
-    </div>
-    
-    
-    <div class="package">
-      <h4 class="sans bold">
-        <a class="" href="https://mcclatchy.github.io/design/saratoga/decks/homepage/">homepage</a>
-      </h4>
-      <p class="summary">A sample homepage.</p>
-    </div>
-    
-    
-    <div class="package">
-      <h4 class="sans bold">
-        <a class="" href="https://mcclatchy.github.io/design/saratoga/decks/immersive/">immersive</a>
-      </h4>
-      <p class="summary">A sample story page.</p>
-    </div>
-    
-    
-    <div class="package">
-      <h4 class="sans bold">
-        <a class="" href="https://mcclatchy.github.io/design/saratoga/decks/impact2020/">Impact 2020</a>
-      </h4>
-      <p class="summary">Priority vertical product page.</p>
-    </div>
-    
-    
-    <div class="package">
-      <h4 class="sans bold">
-        <a class="" href="https://mcclatchy.github.io/design/saratoga/decks/my-account/">my account (DSP)</a>
-      </h4>
-      <p class="summary">A sample account profile page.</p>
-    </div>
-    
-    
-    <div class="package">
-      <h4 class="sans bold">
-        <a class="" href="https://mcclatchy.github.io/design/saratoga/decks/opinion/">opinion story</a>
-      </h4>
-      <p class="summary">A sample opinion story page.</p>
-    </div>
-    
-    
-    <div class="package">
-      <h4 class="sans bold">
-        <a class="" href="https://mcclatchy.github.io/design/saratoga/decks/paywall/">paywall (DSP)</a>
-      </h4>
-      <p class="summary">A sample paywall overlay page.</p>
-    </div>
-    
-    
-    <div class="package">
-      <h4 class="sans bold">
-        <a class="" href="https://mcclatchy.github.io/design/saratoga/decks/purchase-flow/sign-up/">purchase flow (DSP)</a>
-      </h4>
-      <p class="summary">A sample purchase flow sign up page.</p>
-    </div>
-    
-    
-    <div class="package">
-      <h4 class="sans bold">
-        <a class="" href="https://mcclatchy.github.io/design/saratoga/decks/registration/">registration (DSP)</a>
-      </h4>
-      <p class="summary">A sample of the registration offer page.</p>
-    </div>
-    
-    
-    <div class="package">
-      <h4 class="sans bold">
-        <a class="" href="https://mcclatchy.github.io/design/saratoga/decks/registration-confirmation/">registration confirmation (DSP)</a>
-      </h4>
-      <p class="summary">A sample of the registration confirmation page.</p>
-    </div>
-    
-    
-    <div class="package">
-      <h4 class="sans bold">
-        <a class="" href="https://mcclatchy.github.io/design/saratoga/decks/search/">search</a>
-      </h4>
-      <p class="summary">Search results page.</p>
-    </div>
-    
-    
-    <div class="package">
-      <h4 class="sans bold">
-        <a class="" href="https://mcclatchy.github.io/design/saratoga/decks/section/">section</a>
-      </h4>
-      <p class="summary">A sample section page.</p>
-    </div>
-    
-    
-    <div class="package">
-      <h4 class="sans bold">
-        <a class="" href="https://mcclatchy.github.io/design/saratoga/decks/story/">story</a>
-      </h4>
-      <p class="summary">A sample story page.</p>
-    </div>
-    
-    
-    <div class="package">
-      <h4 class="sans bold">
-        <a class="" href="https://mcclatchy.github.io/design/saratoga/decks/subscription-offers/">subscription offers page (DSP)</a>
-      </h4>
-      <p class="summary">DSP subscription offers page</p>
-    </div>
-    
-    
-    <div class="package">
-      <h4 class="sans bold">
-        <a class="" href="https://mcclatchy.github.io/design/saratoga/decks/topic/">topic</a>
-      </h4>
-      <p class="summary">The topic layout.</p>
-    </div>
-    
+<div class="package">
+  <h4 class="sans bold">
+    <a href="https://mcclatchy.github.io/design/saratoga/decks/author-bio/">author bio</a>
+  </h4>
+  <p class="summary">A sample of the author bio page.</p>
+</div>
+
+<div class="package">
+  <h4 class="sans bold">
+    <a href="https://mcclatchy.github.io/design/saratoga/decks/free-trial/">free trial (DSP)</a>
+  </h4>
+  <p class="summary">A sample of the free trial offer page.</p>
+</div>
+
+<div class="package">
+  <h4 class="sans bold">
+    <a href="https://mcclatchy.github.io/design/saratoga/decks/gallery/">gallery</a>
+  </h4>
+  <p class="summary">A CSS Grid version using the experimental rail code.</p>
+</div>
+
+<div class="package">
+  <h4 class="sans bold">
+    <a href="https://mcclatchy.github.io/design/saratoga/decks/homepage/">homepage</a>
+  </h4>
+  <p class="summary">A sample homepage.</p>
+</div>
+
+<div class="package">
+  <h4 class="sans bold">
+    <a href="https://mcclatchy.github.io/design/saratoga/decks/immersive/">immersive</a>
+  </h4>
+  <p class="summary">A sample story page.</p>
+</div>
+
+<div class="package">
+  <h4 class="sans bold">
+    <a href="https://mcclatchy.github.io/design/saratoga/decks/impact2020/">Impact 2020</a>
+  </h4>
+  <p class="summary">Priority vertical product page.</p>
+</div>
+
+<div class="package">
+  <h4 class="sans bold">
+    <a href="https://mcclatchy.github.io/design/saratoga/decks/my-account/">my account (DSP)</a>
+  </h4>
+  <p class="summary">A sample account profile page.</p>
+</div>
+
+<div class="package">
+  <h4 class="sans bold">
+    <a href="https://mcclatchy.github.io/design/saratoga/decks/opinion/">opinion story</a>
+  </h4>
+  <p class="summary">A sample opinion story page.</p>
+</div>
+
+<div class="package">
+  <h4 class="sans bold">
+    <a href="https://mcclatchy.github.io/design/saratoga/decks/paywall/">paywall (DSP)</a>
+  </h4>
+  <p class="summary">A sample paywall overlay page.</p>
+</div>
+
+<div class="package">
+  <h4 class="sans bold">
+    <a href="https://mcclatchy.github.io/design/saratoga/decks/purchase-flow/sign-up/">purchase flow (DSP)</a>
+  </h4>
+  <p class="summary">A sample purchase flow sign up page.</p>
+</div>
+
+<div class="package">
+  <h4 class="sans bold">
+    <a href="https://mcclatchy.github.io/design/saratoga/decks/registration/">registration (DSP)</a>
+  </h4>
+  <p class="summary">A sample of the registration offer page.</p>
+</div>
+
+<div class="package">
+  <h4 class="sans bold">
+    <a href="https://mcclatchy.github.io/design/saratoga/decks/registration-confirmation/">registration confirmation (DSP)</a>
+  </h4>
+  <p class="summary">A sample of the registration confirmation page.</p>
+</div>
+
+<div class="package">
+  <h4 class="sans bold">
+    <a href="https://mcclatchy.github.io/design/saratoga/decks/search/">search</a>
+  </h4>
+  <p class="summary">Search results page.</p>
+</div>
+
+<div class="package">
+  <h4 class="sans bold">
+    <a href="https://mcclatchy.github.io/design/saratoga/decks/section/">section</a>
+  </h4>
+  <p class="summary">A sample section page.</p>
+</div>
+
+<div class="package">
+  <h4 class="sans bold">
+    <a href="https://mcclatchy.github.io/design/saratoga/decks/story/">story</a>
+  </h4>
+  <p class="summary">A sample story page.</p>
+</div>
+
+<div class="package">
+  <h4 class="sans bold">
+    <a href="https://mcclatchy.github.io/design/saratoga/decks/subscription-offers/">subscription offers page (DSP)</a>
+  </h4>
+  <p class="summary">DSP subscription offers page</p>
+</div>
+
+<div class="package">
+  <h4 class="sans bold">
+    <a href="https://mcclatchy.github.io/design/saratoga/decks/topic/">topic</a>
+  </h4>
+  <p class="summary">The topic layout.</p>
+</div>
+
+
   </div>
 
   <div class="themes">
@@ -559,208 +471,275 @@
       <h5>STORY THEMES</h5>
     </div>
     
-    <div class="package">
-      <h4 class="sans bold">
-        <a class="" href="https://mcclatchy.github.io/design/saratoga/themes/dark/">dark</a>
-      </h4>
-      <p class="summary">An impact presentation for media-heavy articles.</p>
-    </div>
-    
-    <div class="package">
-      <h4 class="sans bold">
-        <a class="" href="https://mcclatchy.github.io/design/saratoga/themes/premium/">premium</a>
-      </h4>
-      <p class="summary">A light theme for enterprise content.</p>
-    </div>
-    
+<div class="package">
+  <h4 class="sans bold">
+    <a href="https://mcclatchy.github.io/design/saratoga/themes/dark/">dark</a>
+  </h4>
+  <p class="summary">An impact presentation for media-heavy articles.</p>
+</div>
+
+<div class="package">
+  <h4 class="sans bold">
+    <a href="https://mcclatchy.github.io/design/saratoga/themes/premium/">premium</a>
+  </h4>
+  <p class="summary">A light theme for enterprise content.</p>
+</div>
+
+
   </div>
 
   <div class="molecules">
     <div class="label">
       <h5>MOLECULES</h5>
     </div>
-    <div class="package">
-      
-      
-      <h5 class="sans bold ">
-        <a href="https://mcclatchy.github.io/design/saratoga/account-sub-nav/" class="">account header (DSP)</a>
-      </h5>
-      
-      
-      <h5 class="sans bold ">
-        <a href="https://mcclatchy.github.io/design/saratoga/card/" class="">card</a>
-      </h5>
-      
-      
-      <h5 class="sans bold ">
-        <a href="https://mcclatchy.github.io/design/saratoga/colors/" class="">color themes</a>
-      </h5>
-      
-      
-      <h5 class="sans bold ">
-        <a href="https://mcclatchy.github.io/design/saratoga/expander/" class="">expander</a>
-      </h5>
-      
-      
-      <h5 class="sans bold ">
-        <a href="https://mcclatchy.github.io/design/saratoga/flex-columns/" class="">flex-columns</a>
-      </h5>
-      
-      
-      <h5 class="sans bold ">
-        <a href="https://mcclatchy.github.io/design/saratoga/grid/" class="">grid</a>
-      </h5>
-      
-      
-      <h5 class="sans bold ">
-        <a href="https://mcclatchy.github.io/design/saratoga/masthead/" class="">masthead (DSP)</a>
-      </h5>
-      
-      
-      <h5 class="sans bold ">
-        <a href="https://mcclatchy.github.io/design/saratoga/offer/" class="">offer (DSP)</a>
-      </h5>
-      
-      
-      <h5 class="sans bold ">
-        <a href="https://mcclatchy.github.io/design/saratoga/offer-details/" class="">offer details (DSP)</a>
-      </h5>
-      
-      
-      <h5 class="sans bold ">
-        <a href="https://mcclatchy.github.io/design/saratoga/page-title/" class="">page title (DSP)</a>
-      </h5>
-      
-      
-      <h5 class="sans bold ">
-        <a href="https://mcclatchy.github.io/design/saratoga/progress/" class="">progress bar (DSP)</a>
-      </h5>
-      
-      
-      <h5 class="sans bold ">
-        <a href="https://mcclatchy.github.io/design/saratoga/purchase-info-dsp/" class="">purchase info (DSP)</a>
-      </h5>
-      
-      
-      <h5 class="sans bold ">
-        <a href="https://mcclatchy.github.io/design/saratoga/social-media/" class="">social-media</a>
-      </h5>
-      
-    </div>
+    
+<div class="package">
+  <h4 class="sans bold">
+    <a href="https://mcclatchy.github.io/design/saratoga/account-sub-nav/">account header (DSP)</a>
+  </h4>
+  <p class="summary">The username, entitlements tag, sub nav and sign out molecule at the top of my account pages</p>
+</div>
+
+<div class="package">
+  <h4 class="sans bold">
+    <a href="https://mcclatchy.github.io/design/saratoga/card/">card</a>
+  </h4>
+  <p class="summary">Enhanced paper molecule with flex display.</p>
+</div>
+
+<div class="package">
+  <h4 class="sans bold">
+    <a href="https://mcclatchy.github.io/design/saratoga/colors/">color themes</a>
+  </h4>
+  <p class="summary">An explanation of custom properties and color.</p>
+</div>
+
+<div class="package">
+  <h4 class="sans bold">
+    <a href="https://mcclatchy.github.io/design/saratoga/expander/">expander</a>
+  </h4>
+  <p class="summary">A collapsible box with a caret.</p>
+</div>
+
+<div class="package">
+  <h4 class="sans bold">
+    <a href="https://mcclatchy.github.io/design/saratoga/flex-columns/">flex-columns (deprecated)</a>
+  </h4>
+  <p class="summary">A flexbox version of the grid using the same rules.</p>
+</div>
+
+<div class="package">
+  <h4 class="sans bold">
+    <a href="https://mcclatchy.github.io/design/saratoga/grid/">grid</a>
+  </h4>
+  <p class="summary">A very basic starter grid</p>
+</div>
+
+<div class="package">
+  <h4 class="sans bold">
+    <a href="https://mcclatchy.github.io/design/saratoga/masthead/">masthead (DSP)</a>
+  </h4>
+  <p class="summary">The masthead displayed at the top of all DSP pages. Includes customer service links and a Sign Out link.</p>
+</div>
+
+<div class="package">
+  <h4 class="sans bold">
+    <a href="https://mcclatchy.github.io/design/saratoga/offer/">offer (DSP)</a>
+  </h4>
+  <p class="summary">A variation of this molecule is used on the paywall and subscription offers page</p>
+</div>
+
+<div class="package">
+  <h4 class="sans bold">
+    <a href="https://mcclatchy.github.io/design/saratoga/offer-details/">offer details (DSP)</a>
+  </h4>
+  <p class="summary">Variations of this is used on the paywall and subscription offers page</p>
+</div>
+
+<div class="package">
+  <h4 class="sans bold">
+    <a href="https://mcclatchy.github.io/design/saratoga/page-title/">page title (DSP)</a>
+  </h4>
+  <p class="summary">The title molecule that displays on paywalls, purchase flows, confirmation pages, etc.</p>
+</div>
+
+<div class="package">
+  <h4 class="sans bold">
+    <a href="https://mcclatchy.github.io/design/saratoga/progress/">progress bar (DSP)</a>
+  </h4>
+  <p class="summary">A progress bar for the purchase flow</p>
+</div>
+
+<div class="package">
+  <h4 class="sans bold">
+    <a href="https://mcclatchy.github.io/design/saratoga/purchase-info-dsp/">purchase info (DSP)</a>
+  </h4>
+  <p class="summary">A collapsible information box with a caret.</p>
+</div>
+
+<div class="package">
+  <h4 class="sans bold">
+    <a href="https://mcclatchy.github.io/design/saratoga/social-media/">social-media</a>
+  </h4>
+  <p class="summary">Social media icon row for story pages.</p>
+</div>
+
+
   </div>
 
   <div class="atoms">
     <div class="label">
       <h5>ATOMS</h5>
     </div>
-    <div class="package">
-      
-      
-      <h5 class="sans bold ">
-        <a href="https://mcclatchy.github.io/design/saratoga/button/" class="">button</a>
-      </h5>
-      
-      
-      <h5 class="sans bold ">
-        <a href="https://mcclatchy.github.io/design/saratoga/byline/" class="">byline</a>
-      </h5>
-      
-      
-      <h5 class="sans bold ">
-        <a href="https://mcclatchy.github.io/design/saratoga/figcaption/" class="">figcaption</a>
-      </h5>
-      
-      
-      <h5 class="sans bold ">
-        <a href="https://mcclatchy.github.io/design/saratoga/figure/" class="">figure</a>
-      </h5>
-      
-      
-      <h5 class="sans bold ">
-        <a href="https://mcclatchy.github.io/design/saratoga/h1/" class="">h1</a>
-      </h5>
-      
-      
-      <h5 class="sans bold ">
-        <a href="https://mcclatchy.github.io/design/saratoga/h2/" class="">h2</a>
-      </h5>
-      
-      
-      <h5 class="sans bold ">
-        <a href="https://mcclatchy.github.io/design/saratoga/h3/" class="">h3</a>
-      </h5>
-      
-      
-      <h5 class="sans bold ">
-        <a href="https://mcclatchy.github.io/design/saratoga/h4/" class="">h4</a>
-      </h5>
-      
-      
-      <h5 class="sans bold ">
-        <a href="https://mcclatchy.github.io/design/saratoga/h5/" class="">h5</a>
-      </h5>
-      
-      
-      <h5 class="sans bold ">
-        <a href="https://mcclatchy.github.io/design/saratoga/h6/" class="">h6</a>
-      </h5>
-      
-      
-      <h5 class="sans bold ">
-        <a href="https://mcclatchy.github.io/design/saratoga/impact/" class="">impact</a>
-      </h5>
-      
-      
-      <h5 class="sans bold ">
-        <a href="https://mcclatchy.github.io/design/saratoga/inputs/" class="">inputs</a>
-      </h5>
-      
-      
-      <h5 class="sans bold ">
-        <a href="https://mcclatchy.github.io/design/saratoga/label/" class="">label</a>
-      </h5>
-      
-      
-      <h5 class="sans bold ">
-        <a href="https://mcclatchy.github.io/design/saratoga/li/" class="">lists</a>
-      </h5>
-      
-      
-      <h5 class="sans bold ">
-        <a href="https://mcclatchy.github.io/design/saratoga/more-link/" class="">more-link</a>
-      </h5>
-      
-      
-      <h5 class="sans bold ">
-        <a href="https://mcclatchy.github.io/design/saratoga/p/" class="">p</a>
-      </h5>
-      
-      
-      <h5 class="sans bold ">
-        <a href="https://mcclatchy.github.io/design/saratoga/package/" class="">package</a>
-      </h5>
-      
-      
-      <h5 class="sans bold ">
-        <a href="https://mcclatchy.github.io/design/saratoga/paper/" class="">paper</a>
-      </h5>
-      
-      
-      <h5 class="sans bold ">
-        <a href="https://mcclatchy.github.io/design/saratoga/section/" class="">section</a>
-      </h5>
-      
-      
-      <h5 class="sans bold ">
-        <a href="https://mcclatchy.github.io/design/saratoga/time/" class="">time</a>
-      </h5>
-      
-      
-      <h5 class="sans bold ">
-        <a href="https://mcclatchy.github.io/design/saratoga/utilities/" class="">utilities</a>
-      </h5>
-      
-    </div>
+    
+<div class="package">
+  <h4 class="sans bold">
+    <a href="https://mcclatchy.github.io/design/saratoga/button/">button</a>
+  </h4>
+  <p class="summary">Button styles to ensure proper row alignment</p>
+</div>
+
+<div class="package">
+  <h4 class="sans bold">
+    <a href="https://mcclatchy.github.io/design/saratoga/byline/">byline</a>
+  </h4>
+  <p class="summary">Standard byline and credit styles</p>
+</div>
+
+<div class="package">
+  <h4 class="sans bold">
+    <a href="https://mcclatchy.github.io/design/saratoga/figcaption/">figcaption</a>
+  </h4>
+  <p class="summary">Default styles for all media captions</p>
+</div>
+
+<div class="package">
+  <h4 class="sans bold">
+    <a href="https://mcclatchy.github.io/design/saratoga/figure/">figure</a>
+  </h4>
+  <p class="summary">Semantic wrapper for media in stories and cards</p>
+</div>
+
+<div class="package">
+  <h4 class="sans bold">
+    <a href="https://mcclatchy.github.io/design/saratoga/h1/">h1</a>
+  </h4>
+  <p class="summary">Primary headline on story pages, video pages and video playlists. Lead headline on homepage and section pages.</p>
+</div>
+
+<div class="package">
+  <h4 class="sans bold">
+    <a href="https://mcclatchy.github.io/design/saratoga/h2/">h2</a>
+  </h4>
+  <p class="summary">Secondary headlines in the lead group on the homepage and section pages.</p>
+</div>
+
+<div class="package">
+  <h4 class="sans bold">
+    <a href="https://mcclatchy.github.io/design/saratoga/h3/">h3</a>
+  </h4>
+  <p class="summary">Used in headline stacks and cards on the homepage and section pages; primary subhead in articles.</p>
+</div>
+
+<div class="package">
+  <h4 class="sans bold">
+    <a href="https://mcclatchy.github.io/design/saratoga/h4/">h4</a>
+  </h4>
+  <p class="summary">Used as footer labels.</p>
+</div>
+
+<div class="package">
+  <h4 class="sans bold">
+    <a href="https://mcclatchy.github.io/design/saratoga/h5/">h5</a>
+  </h4>
+  <p class="summary">Used as labels for headline stacks.</p>
+</div>
+
+<div class="package">
+  <h4 class="sans bold">
+    <a href="https://mcclatchy.github.io/design/saratoga/h6/">h6</a>
+  </h4>
+  <p class="summary">Used primarily for kickers.</p>
+</div>
+
+<div class="package">
+  <h4 class="sans bold">
+    <a href="https://mcclatchy.github.io/design/saratoga/impact/">impact</a>
+  </h4>
+  <p class="summary">Reverse impact on any element.</p>
+</div>
+
+<div class="package">
+  <h4 class="sans bold">
+    <a href="https://mcclatchy.github.io/design/saratoga/inputs/">inputs</a>
+  </h4>
+  <p class="summary">Form input styles</p>
+</div>
+
+<div class="package">
+  <h4 class="sans bold">
+    <a href="https://mcclatchy.github.io/design/saratoga/label/">label</a>
+  </h4>
+  <p class="summary">Labels for the tops of cards and headline stacks on section pages.</p>
+</div>
+
+<div class="package">
+  <h4 class="sans bold">
+    <a href="https://mcclatchy.github.io/design/saratoga/li/">lists</a>
+  </h4>
+  <p class="summary">Default styles for lists in story bodies.</p>
+</div>
+
+<div class="package">
+  <h4 class="sans bold">
+    <a href="https://mcclatchy.github.io/design/saratoga/more-link/">more-link</a>
+  </h4>
+  <p class="summary">Used below grid digests.</p>
+</div>
+
+<div class="package">
+  <h4 class="sans bold">
+    <a href="https://mcclatchy.github.io/design/saratoga/p/">p</a>
+  </h4>
+  <p class="summary">Default text on story pages.</p>
+</div>
+
+<div class="package">
+  <h4 class="sans bold">
+    <a href="https://mcclatchy.github.io/design/saratoga/package/">package</a>
+  </h4>
+  <p class="summary">Provides spacing for text in cards and digests.</p>
+</div>
+
+<div class="package">
+  <h4 class="sans bold">
+    <a href="https://mcclatchy.github.io/design/saratoga/paper/">paper</a>
+  </h4>
+  <p class="summary">Default paper molecule with a block display.</p>
+</div>
+
+<div class="package">
+  <h4 class="sans bold">
+    <a href="https://mcclatchy.github.io/design/saratoga/section/">section (deprecated)</a>
+  </h4>
+  <p class="summary">Stackable building block of pages</p>
+</div>
+
+<div class="package">
+  <h4 class="sans bold">
+    <a href="https://mcclatchy.github.io/design/saratoga/time/">time</a>
+  </h4>
+  <p class="summary">Used for publish and modified times.</p>
+</div>
+
+<div class="package">
+  <h4 class="sans bold">
+    <a href="https://mcclatchy.github.io/design/saratoga/utilities/">utilities</a>
+  </h4>
+  <p class="summary">Utility typography classes.</p>
+</div>
+
+
   </div>
 
   <script src="../../js/style-guide.js"></script>

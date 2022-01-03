@@ -136,20 +136,13 @@
 }
 
 /**
- * Tables
- */
-
-.story-body table {
-  max-width: 758px;
-}
-
-/**
  * Immersive card 
  */
 
-.story-body .immersive {
+.story-body > .immersive {
   max-width: 100%;
   padding-top: 0;
+  margin-top: 0
 }
 
 /**
