@@ -1,9 +1,0 @@
-name = "The Kansas City Star."
-city = "Kansas City"
-state = "MO"
-url = "https://www.kansascity.com"
-slug = "kansascity"
-
-[[colors]]
-hex = "#0793cf"
-rgb = "20, 82, 136"

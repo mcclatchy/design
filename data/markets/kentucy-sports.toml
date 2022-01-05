@@ -1,9 +1,0 @@
-name = "Kentucky Sports"
-city = "Lexington"
-state = "KY"
-url = "https://www.kentucky.com/sports/college/kentucky-sports/"
-slug = "kentucky-sports"
-
-[[colors]]
-hex = "#18569e"
-rgb = "24, 86, 158"

@@ -1,0 +1,247 @@
+[bnd]
+name = "Belleville News-Democrat"
+city = "Belleville"
+state = "IL"
+domain = "bnd"
+glob = "belleville"
+sort = "belleville"
+
+[bellinghamherald]
+name = "Bellingham Herald"
+city = "Bellingham"
+state = "WA"
+domain = "bellinghamherald"
+glob = "bellingham"
+sort = "bellingham"
+
+[sunherald]
+name = "Biloxi Sun Herald"
+city = "Biloxi"
+state = "MS"
+domain = "sunherald"
+glob = "biloxi"
+sort = "biloxi"
+
+[idahostatesman]
+name = "Idaho Statesman"
+city = "Boise"
+state = "ID"
+domain = "idahostatesman"
+glob = "boise"
+sort = "idaho"
+
+[bradenton]
+name = "Bradenton Herald"
+city = "Bradenton"
+state = "FL"
+domain = "bradenton"
+glob = "bradenton"
+sort = "bradenton"
+
+[charlotteobserver]
+name = "Charlotte Observer"
+city = "Charlotte"
+state = "NC"
+domain = "charlotteobserver"
+glob = "charlotte"
+sort = "charlotte"
+
+[thestate]
+name = "The State in Columbia SC"
+city = "Columbia"
+state = "SC"
+domain = "thestate"
+glob = "columbia"
+sort = "state"
+
+[ledger-enquirer]
+name = "Columbus Ledger-Enquirer"
+city = "Columbus"
+state = "GA"
+domain = "ledger-enquirer"
+glob = "columbus"
+sort = "columbus"
+
+[heraldsun]
+name = "The Herald Sun"
+city = "Durham"
+state = "NC"
+domain = "heraldsun"
+glob = "durham"
+sort = "herald"
+
+[elnuevoherald]
+name = "El Nuevo Herald"
+city = "Miami"
+state = "FL"
+domain = "elnuevoherald"
+glob = "miami-el-nuevo"
+sort = "el"
+
+[star-telegram]
+name = "Star Telegram"
+city = "Fort Worth"
+state = "TX"
+domain = "star-telegram"
+glob = "fort-worth"
+sort = "star"
+
+[fresnobee]
+name = "The Fresno Bee"
+city = "Fresno"
+state = "CA"
+domain = "fresnobee"
+glob = "fresno"
+sort = "fresno"
+
+[islandpacket]
+name = "The Island Packet"
+city = "Hilton Head"
+state = "SC"
+domain = "islandpacket"
+glob = "hilton-head"
+sort = "island"
+
+[[islandpacket.subs]]
+name = "The Beaufort Gazette"
+city = "Beaufort"
+state = "SC"
+url = "https://www.islandpacket.com/news/local/community/beaufort-news/"
+glob = "beaufort"
+sort = "beaufort"
+
+[kansascity]
+name = "The Kansas City Star"
+city = "Kansas City"
+state = "MO"
+domain = "kansascity"
+glob = "kansas-city"
+sort = "kansas city"
+
+[kentucky]
+name = "Lexington Herald-Leader"
+city = "Lexington"
+state = "KY"
+domain = "kentucky"
+glob = "lexington"
+sort = "lexington"
+
+[macon]
+name = "The Telegraph"
+city = "Macon"
+state = "GA"
+domain = "macon"
+glob = "macon"
+sort = "telegraph"
+
+[mcclatchydc]
+name = "McClatchy DC"
+city = "Washington"
+state = "DC"
+domain = "mcclatchydc"
+glob = "mcclatchy-dc"
+sort = "mcclatchy"
+
+[mercedsunstar]
+name = "Merced Sun Star"
+city = "Merced"
+state = "CA"
+domain = "mercedsunstar"
+glob = "merced"
+sort = "merced"
+
+[miamiherald]
+name = "Miami Herald"
+city = "Miami"
+state = "FL"
+domain = "miamiherald"
+glob = "miami-herald"
+sort = "miami"
+
+[modbee]
+name = "The Modesto Bee"
+city = "Modesto"
+state = "CA"
+domain = "modbee"
+glob = "modesto"
+sort = "modesto"
+
+[myrtlebeachonline]
+name = "Myrtle Beach Online"
+city = "Myrtle Beach"
+state = "SC"
+domain = "myrtlebeachonline"
+glob = "myrtle-beach"
+sort = "myrtle beach"
+
+[theolympian]
+name = "The Olympian"
+city = "Olympia"
+state = "WA"
+domain = "theolympian"
+glob = "olympian"
+sort = "olympian"
+
+[newsobserver]
+name = "The News & Observer"
+city = "Raleigh"
+state = "NC"
+domain = "newsobserver"
+glob = "news-observer"
+sort = "news observer"
+
+[heraldonline]
+name = "The Herald"
+city = "Rock Hill"
+state = "SC"
+domain = "heraldonline"
+glob = "rock-hill"
+sort = "herald"
+
+[sacbee]
+name = "The Sacramento Bee"
+city = "Sacramento"
+state = "CA"
+domain = "sacbee"
+glob = "sacramento"
+sort = "sacramento"
+
+[sanluisobispo]
+name = "The Tribune"
+city = "San Luis Obispo"
+state = "CA"
+domain = "sanluisobispo"
+glob = "obispo"
+sort = "tribune"
+
+[centredaily]
+name = "Centre Daily Times"
+city = "State College"
+state = "PA"
+domain = "centredaily"
+glob = "state-college"
+sort = "centre"
+
+[thenewstribune]
+name = "The News Tribune"
+city = "Tacoma"
+state = "WA"
+domain = "thenewstribune"
+glob = "tacoma"
+sort = "news tribune"
+
+[tri-cityherald]
+name = "Tri-City Herald"
+city = "Kennewick"
+state = "WA"
+domain = "tri-cityherald"
+glob = "kennewick"
+sort = "tri-city"
+
+[kansas]
+name = "The Wichita Eagle"
+city = "Wichita"
+state = "KS"
+domain = "kansas"
+glob = "wichita"
+sort = "wichita"

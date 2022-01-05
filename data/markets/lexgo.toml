@@ -1,9 +1,0 @@
-name = "Lexgo"
-city = "Lexington"
-state = "KY"
-url = "https://www.kentucky.com/entertainment/video/"
-slug = "lexgo"
-
-[[colors]]
-hex = "#db8200"
-rgb = "219, 130, 0"

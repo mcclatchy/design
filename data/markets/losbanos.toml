@@ -1,9 +1,0 @@
-name = "Los Banos Enterprise"
-city = "Los Banos"
-state = "CA"
-url = "https://www.losbanosenterprise.com/"
-slug = "losbanos"
-
-[[colors]]
-hex = "#1c94d2"
-rgb = "28, 148, 210"

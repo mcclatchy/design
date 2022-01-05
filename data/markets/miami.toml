@@ -1,8 +1,0 @@
-name = "Miami Herald"
-city = "Miami"
-state = "FL"
-url = "https://www.miamiherald.com"
-
-[[colors]]
-hex = "#0b67b2"
-rgb = "11, 103, 178"

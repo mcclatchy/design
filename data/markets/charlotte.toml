@@ -1,8 +1,0 @@
-name = "Charlotte Observer"
-city = "Charlotte"
-state = "NC"
-url = "https://www.charlotteobserver.com/"
-
-[[colors]]
-hex = "#006db6"
-rgb = "32, 111, 168"

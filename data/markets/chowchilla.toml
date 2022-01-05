@@ -1,9 +1,0 @@
-name = "Chowchilla News"
-city = "Merced"
-state = "CA"
-url = "https://www.mercedsunstar.com/news/local/community/chowchilla/"
-slug = "chowchilla"
-
-[[colors]]
-hex = "#e31f26"
-rgb = "227, 31, 38"

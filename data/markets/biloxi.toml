@@ -1,8 +1,0 @@
-name = "Sun Herald"
-city = "Biloxi"
-state = "MS"
-url = "https://www.sunherald.com"
-
-[[colors]]
-hex = "#008FD4"
-rgb = "0, 143, 212"

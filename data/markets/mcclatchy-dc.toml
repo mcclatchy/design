@@ -1,9 +1,0 @@
-name = "McClatchy DC"
-city = "Washington"
-state = "DC"
-url = "https://www.mcclatchydc.com/"
-slug = "mcclatchydc"
-
-[[colors]]
-hex = "#b11f24"
-rgb = "177, 31, 36"

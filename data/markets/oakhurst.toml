@@ -1,8 +1,0 @@
-name = "Sierra Star"
-city = "Oakhurst"
-state = "CA"
-url = "https://www.sierrastar.com"
-
-[[colors]]
-hex = "#446896"
-rgb = "68, 104, 150"

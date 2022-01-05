@@ -1,9 +1,0 @@
-name = "El Nuevo Herald"
-city = "Miami"
-state = "FL"
-url = "https://www.elnuevoherald.com/"
-slug = "elnuevo"
-
-[[colors]]
-hex = "#0b79bf"
-rgb = "11, 121, 198"

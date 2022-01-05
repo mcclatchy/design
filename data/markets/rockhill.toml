@@ -1,9 +1,0 @@
-name = "The Herald"
-city = "Rock Hill"
-state = "SC"
-url = "https://www.heraldonline.com"
-slug = "rockhill"
-
-[[colors]]
-hex = "#d02c34"
-rgb = "208, 44, 52"

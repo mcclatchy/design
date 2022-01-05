@@ -1,8 +1,0 @@
-name = "Belleville News Democrat"
-city = "Belleville"
-state = "IL"
-url = "https://www.bnd.com"
-
-[[colors]]
-hex = "#0078b2"
-rgb = "0, 120, 178"

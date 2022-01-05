@@ -1,8 +1,0 @@
-name = "Merced Sun Star"
-city = "Merced"
-state = "CA"
-url = "https://www.mercedsunstar.com/"
-
-[[colors]]
-hex = "#6c7b34"
-rgb = "108, 123, 52"

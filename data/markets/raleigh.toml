@@ -1,8 +1,0 @@
-name = "The News & Observer"
-city = "Raleigh"
-state = "NC"
-url = "https://www.newsobserver.com"
-
-[[colors]]
-hex = "#BA2814"
-rgb = "186, 40, 20"

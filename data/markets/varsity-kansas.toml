@@ -1,9 +1,0 @@
-name = "Varsity Kansas"
-city = "Wichita"
-state = "KS"
-url = "https://www.thenewstribune.com/"
-slug = "varsity-kansas"
-
-[color]
-hex = "#7c1c23"
-rgb = "124, 28, 35"
