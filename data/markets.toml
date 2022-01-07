@@ -245,3 +245,11 @@ state = "KS"
 domain = "kansas"
 glob = "wichita"
 sort = "wichita"
+
+[mcclatchy]
+name = "McClatchy"
+city = "Sacramento"
+state = "CA"
+domain = "mcclatchy"
+glob = "mcclatchy"
+sort = "mcclatchy"

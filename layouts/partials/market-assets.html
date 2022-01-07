@@ -1,5 +1,5 @@
 {{ range . }}
-<div class="pack {{ if in .Name "white" }}impact{{ end }}">
+<div class="pack {{ if in (lower .Name) "white" }}impact{{ end }}">
   <p class="h6 lowercase">{{ path.Base .Name }}</p>
   <a href="{{ .Permalink }}" download>
     <img src="{{ .Permalink }}">
