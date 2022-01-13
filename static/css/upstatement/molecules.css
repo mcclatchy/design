@@ -1,0 +1,62 @@
+/**
+ * Vertical stacks
+ */
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--stack-gap, 10px);
+}
+
+.stack > * {
+  margin: 0;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: var(--row-gap, 10px);
+}
+
+/**
+ * Horizontal slider for additional content
+ */
+
+.slider {
+  text-align: center;
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+
+.slider .row {
+  display: inline-flex;
+}
+
+/**
+ * Grid from SDS
+ */
+
+.grid {
+  display: grid;
+  grid-template-columns: var(--columns, repeat(auto-fit, minmax(300px, 1fr)));
+  grid-gap: var(--gap, 30px);
+  grid-auto-flow: dense;
+}
+
+/**
+ * Paper
+ */
+
+.paper {
+  background-color: var(--paper-color, white);
+  box-shadow: var(--paper-shadow);
+}
+
+/**
+ * Section concept for layout stacking
+ */
+
+.section {
+  max-width: var(--section-width);
+  margin: var(--gap) auto;
+}

@@ -1,0 +1,106 @@
+/**
+ * Default parameters
+ */
+
+:root {
+  /* Fonts */
+  --serif: "Noto Serif", serif;
+  --sans: "Inter", sans-serif;
+
+  /* Spacing and alignment */
+  --gap: 30px;
+  --page-padding: 15px;
+  --section-width: 1140px;
+  --story-width: 728px;
+
+  /* Colors */
+  --black: #222222;
+  --gray: #707070;
+  --impact: #373737;
+  --promo: #31409F;
+  --subBlue: #00223e;
+  --subYellow: #ffd71a;
+  --bodyBackground: #f4f4f4;
+
+  /* Paper box shadow */
+  --paper-shadow: 
+    0 1px 2px 0 rgba(0, 0, 0, .2), 
+    0 1px 5px 0 rgba(0, 0, 0, .13);
+}
+
+body {
+  margin: 0;
+  background-color: var(--bodyBackground);
+}
+
+body.freeze {
+  overflow: hidden;
+}
+
+/**
+ * Typography
+ */
+
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: var(--header-family, var(--serif));
+  font-size: var(--header-size);
+  font-weight: var(--header-weight, bold);
+  text-transform: var(--header-transform, none);
+  line-height: 1.2em;
+  color: var(--header-color, var(--text-color));
+}
+
+p, li {
+  font-family: var(--text-family, var(--serif));
+  font-size: var(--text-size);
+  text-transform: var(--text-transform, none);
+  line-height: var(--line-height, 1.5em);
+  color: var(--text-color);
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: var(--link-decoration);
+}
+
+a:hover {
+  color: var(--link-hover-color, var(--link-color));
+  text-decoration: var(--link-hover-decoration, var(--link-decoration));
+}
+
+.time {
+  text-transform: uppercase;
+  color: var(--text-color, var(--gray));
+  font-size: 0.75em;
+}
+
+.button {
+  padding: 8px 10px;
+  border-radius: 3px;
+  color: var(--button-text-color, white);
+  background-color: var(--button-background-color, #00223e);
+}
+
+.button:hover {
+  color: var(--button-text-color, white);
+}
+
+/**
+ * Fonts
+ */
+
+@font-face {
+  font-display: auto;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./fonts/Inter-Regular.woff") format("woff")
+}
+
+@font-face {
+  font-display: auto;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  src: url("./fonts/Inter-Bold.woff") format("woff")
+}
