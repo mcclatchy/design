@@ -1,0 +1,19 @@
+/**
+ * Premium topper
+ */
+
+.topper {
+  background-color: var(--subBlue);
+  color: white;
+  --text-color: white;
+  --link-color: white;
+  fill: white;
+
+  display: none;
+  place-items: center;
+  min-height: 100vh;
+}
+
+.msb .topper {
+  display: grid;
+}
