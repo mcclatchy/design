@@ -26,6 +26,7 @@
 .mast-top {
   justify-content: space-between;
   font: bold 13px/1em var(--sans);
+  min-height: 30px;
   --row-gap: var(--gap);
 }
 
@@ -59,7 +60,7 @@
   visibility: hidden;
   font: bold 13px/1em var(--sans);
   position: absolute;
-  top: -25px;
+  top: -20px;
   color: var(--text-color);
 }
 
@@ -107,10 +108,6 @@
 
 /**
  * Media breakpoints 
- *
- * I like to put my media breakpoints next to the element
- * itself, or in the same file, but to each their own so don't
- * think that's a rule or anything.
  **/
 
 @media(max-width: 767px) {
@@ -121,12 +118,9 @@
 }
 
 @media(min-width: 768px) {
-  .mast {
-    --page-padding: 30px;
-  }
-
   .mast-middle {
     grid-template-columns: 1fr 1fr;
+    grid-row-gap: 45px;
   }
 
   .mast-logo {
@@ -162,7 +156,7 @@
   --button-background-color: white;
   --button-text-color: var(--subBlue);
   --border-color: white;
-  fill: white;
+  --fill-color: white;
 }
 
 .msb .mast-edition {

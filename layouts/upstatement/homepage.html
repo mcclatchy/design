@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="msb">
   <head>
     <title>{{ .Title }}</title>
     
@@ -15,6 +15,14 @@
     <link rel="stylesheet" href="/css/upstatement/molecules.css">
     <link rel="stylesheet" href="/css/upstatement/masthead.css">
     <link rel="stylesheet" href="/css/upstatement/topper.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;700&family=Noto+Serif:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- MSB Topper custom element -->
+    <script type="module" src="/js/premium-topper.js"></script>
   </head>
 
   <body>
@@ -29,9 +37,15 @@
             <svg class="h-phone" width="17" height="17" xmlns="http://www.w3.org/2000/svg"><path d="m16.768 14.699-3.31-3.31a.796.796 0 0 0-.565-.233h-.541a6.872 6.872 0 0 0 1.46-4.25A6.905 6.905 0 0 0 6.907 0 6.905 6.905 0 0 0 0 6.906a6.905 6.905 0 0 0 6.906 6.907 6.872 6.872 0 0 0 4.25-1.461v.54c0 .213.083.416.233.565l3.31 3.31a.794.794 0 0 0 1.126 0l.94-.94a.8.8 0 0 0 .003-1.128Zm-9.862-3.543c-2.347 0-4.25-1.899-4.25-4.25 0-2.347 1.9-4.25 4.25-4.25 2.348 0 4.25 1.9 4.25 4.25 0 2.348-1.899 4.25-4.25 4.25Z"></path></svg>
           </span>
         </div>
-        <div class="row">
+        <div class="row msb-hide">
           <a href="#">LOG IN</a>
           <a class="button" data-toggle="layout" href="#">SUBSCRIBE</a>
+        </div>
+        <div class="row msb-show">
+          <a href="#" class="expander" data-toggle="layout">
+            <svg class="h-tablet" width="17" height="19" viewBox="0 0 17 19" xmlns="http://www.w3.org/2000/svg"><path d="M11.5972 7.41211C10.7942 8.21509 9.70584 8.66577 8.57034 8.66577C7.43557 8.66431 6.34719 8.21289 5.54495 7.41064C4.74197 6.60791 4.29055 5.52014 4.28909 4.38464C4.28982 3.24988 4.74051 2.16077 5.54348 1.35779C6.34646 0.55481 7.43484 0.104126 8.57034 0.104126C9.70559 0.104126 10.7942 0.55481 11.5972 1.35779C12.3999 2.16077 12.8506 3.24976 12.8506 4.38525C12.8506 5.52002 12.3999 6.60913 11.5972 7.41211ZM16.9373 18.1038H0.893825H0.203396C0.197781 15.8833 1.0801 13.7537 2.65432 12.1879C4.2239 10.6193 6.35134 9.73755 8.57034 9.73755C10.7893 9.73755 12.9178 10.6193 14.4864 12.1879C16.0557 13.7572 16.9373 15.8848 16.9373 18.1038Z"></path></svg>
+            <span class="h-phone">Account</span>
+          </a>
         </div>
       </div>
 
@@ -73,9 +87,24 @@
       </div>
     </div>
 
-    <div class="topper">
-      {{ .Content }}
-    </div>
+    <premium-topper class="topper">
+      <h2 class="h1" slot="headline">We're continuing to track the Caldor Fire.</h2>
+      <figure slot="media">
+        <img src="/img/fire.jpg">
+        <figcaption>A cabin near the Aspen Creek Tract is engulfed in flames along Highway 50 east of Twin Bridges on Sunday evening. Several homes were destroyed in the area.</figcaption>
+      </figure>
+      <p><b>The record setting Caldor Fire</b> has been tormenting Northern California residents for 17 days. Here is what you need to know:</p>
+      <ul>
+        <li>El Dorado county <a href="#">locks down its public barbecues</a> in advance of Labor Day weekend</li>
+        <li>See <a href="#">photos of evactuations and damage</a> as Caldor Fire burns toward South Lake Tahoe</li>
+        <li>From donations to animal care, here's <a href="#">how you can help victims</a> of the Caldor Fire</li>
+      </ul>
+      <ol slot="other">
+        <li><b>Video Round up:</b> The <a href="#">must-share video exclusive videos</a> you don't want to miss</li>
+        <li><b>Dinner in 15:</b> Personalized, <a href="#">fast and easy meal</a> for supper tonight</li>
+        <li><b>Hungry?</b> <a href="#">Our favorite lunch spots.</a> Search by location and availability.</li>
+      </ol>
+    </premium-topper>
 
     <div class="section grid">
       {{ range (seq 20) }}
