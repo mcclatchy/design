@@ -4,8 +4,9 @@
 
 :root {
   /* Fonts */
-  --serif: "Noto Serif", serif;
   --sans: "Inter", sans-serif;
+  --serif: "Noto Serif", serif;
+  --premium-serif: "DM Serif Display", serif;
 
   /* Spacing and alignment */
   --gap: 30px;
@@ -28,6 +29,12 @@
     0 1px 5px 0 rgba(0, 0, 0, .13);
 }
 
+@media(min-width: 768px) {
+  :root {
+    --page-padding: 30px;
+  }
+}
+
 body {
   margin: 0;
   background-color: var(--bodyBackground);
@@ -46,7 +53,7 @@ body.freeze {
   font-size: var(--header-size);
   font-weight: var(--header-weight, bold);
   text-transform: var(--header-transform, none);
-  line-height: 1.2em;
+  line-height: var(--line-height, 1.2em);
   color: var(--header-color, var(--text-color));
 }
 
@@ -68,6 +75,10 @@ a:hover {
   text-decoration: var(--link-hover-decoration, var(--link-decoration));
 }
 
+ul, ol {
+  padding-left: 1em;
+}
+
 .time {
   text-transform: uppercase;
   color: var(--text-color, var(--gray));
@@ -86,21 +97,27 @@ a:hover {
 }
 
 /**
- * Fonts
+ * Inline SVG
  */
 
-@font-face {
-  font-display: auto;
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 400;
-  src: url("./fonts/Inter-Regular.woff") format("woff")
+svg {
+  fill: var(--fill-color, var(--text-color));
 }
 
-@font-face {
-  font-display: auto;
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 700;
-  src: url("./fonts/Inter-Bold.woff") format("woff")
+/** 
+ * Media
+ */
+
+figure {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+}
+
+figure > * {
+  max-width: 100%;
+}
+
+figcaption {
+  font: 400 14px/1.4em var(--sans);
 }
