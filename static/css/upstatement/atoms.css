@@ -57,9 +57,10 @@ body.freeze {
   color: var(--header-color, var(--text-color));
 }
 
-p, li {
+p, li, a, span {
   font-family: var(--text-family, var(--serif));
   font-size: var(--text-size);
+  font-weight: var(--text-weight);
   text-transform: var(--text-transform, none);
   line-height: var(--line-height, 1.5em);
   color: var(--text-color);
