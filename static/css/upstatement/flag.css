@@ -26,7 +26,6 @@
   margin: 0 auto;
   padding: var(--page-padding);
   padding-bottom: 0;
-  /* font: bold 13px var(--sans); */
 
   /* Custom properties for kids */
   --gap: 15px;
@@ -47,6 +46,7 @@
 
 @media(min-width: 768px) {
   .flag {
+    grid-template-columns: 1fr 1fr;
     grid-template-areas:
       "menu account"
       "left right"
@@ -56,16 +56,17 @@
 
   .msb .flag {
     grid-template-areas:
-    "menu account"
-    "left right"
-    "edition edition"
-    "logo logo"
-    "nav nav"
+      "menu account"
+      "left right"
+      "edition edition"
+      "logo logo"
+      "nav nav"
   }
 }
 
 @media(min-width: 1024px) {
   .flag {
+    grid-template-columns: 1fr 2fr 1fr;
     grid-template-areas:
       "menu . account"
       "left logo right"
