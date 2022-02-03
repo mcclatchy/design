@@ -22,6 +22,7 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;700&family=Noto+Serif:wght@400;700&display=swap" rel="stylesheet">
 
     <!-- MSB Topper custom element -->
+    <!-- <script type="module" src="/js/premium-topper.js"></script> -->
     <script type="module" src="https://storage.googleapis.com/mc-high-impact/prodx/premium-topper/premium-topper.js"></script>
   </head>
 
@@ -87,7 +88,24 @@
       </div>
     </div>
 
-    <premium-topper class="topper" data-id="1at5xhMgQNOVYBpiSmJqstOiuB9Iwk6_vYu_Tbh6UnWY"></premium-topper>
+<style>
+.video-js {
+  width: 100%;
+  padding-top: 56.25%;
+}
+</style>
+
+    <premium-topper class="topper" data-id="1at5xhMgQNOVYBpiSmJqstOiuB9Iwk6_vYu_Tbh6UnWY">
+      <!-- <video-js slot="media" --> 
+      <!--   data-video-id="6294202703001" -->
+      <!--   data-account="5502557046001" --> 
+      <!--   data-player="default" --> 
+      <!--   data-embed="default" --> 
+      <!--   controls="" -->
+      <!--   data-application-id=""></video-js> -->
+      <!-- <script src="//players.brightcove.net/5502557046001/default_default/index.min.js"></script> -->
+      <!-- <div class="vjs-playlist"></div> -->
+    </premium-topper>
 
     <div class="section grid">
       {{ range (seq 20) }}
