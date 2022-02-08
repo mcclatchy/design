@@ -47,10 +47,10 @@
 
 	<div class="atoms">
 		<div class="label">
-			<h5>MOLECULES</h5>
+			<h5>MODULES</h5>
 		</div>
-		{{ range .Site.Menus.molecules }}
-		{{ $active := $cp.IsMenuCurrent "molecules" . }}
+		{{ range .Site.Menus.modules }}
+		{{ $active := $cp.IsMenuCurrent "modules" . }}
 		<div class="package {{- if $active }} eds-active{{ end }}">
 			<h4 class="sans bold">
 				<a class="{{ .Page.Param "class" }}" href="{{ .Page.Permalink }}">{{ .Name }}</a>

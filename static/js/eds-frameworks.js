@@ -181,8 +181,8 @@ class EdsStandardFramework extends HTMLElement {
                                         <td align="center" valign="top" width="100%">
                                             <table border="0" cellpadding="0" cellspacing="0">
                                                  <tr>
-                                                        <td align="center" valign="top" class="button bg-white">
-                                                             <a href="#" class="button-link border-white blue">Sign Up Now</a>
+                                                        <td align="center" valign="top" class="button button-reverse">
+                                                             <a href="#" class="button-a button-reverse-a-accent">Sign Up Now</a>
                                                         </td>
                                                  </tr>
                                             </table>
@@ -249,7 +249,7 @@ class EdsStandardFramework extends HTMLElement {
         <!-- Font Awesome Free by @fontawesome - https://fontawesome.com -->
     </center>
 		`;
-		return t;   
+		return t;
 	}
 	constructor() {
 		super();
@@ -529,7 +529,7 @@ class EdsFullWidthFramework extends HTMLElement {
         <!-- // BODY TABLE -->
     </center>
       `;
-      return t;   
+      return t;
     }
     constructor() {
     super();

@@ -20,7 +20,9 @@ In order for Adobe Campaign to properly track any URLs in its tables, the URLs h
 #### FOOTERS
 ```
 <%@ include view='footer_marketing' %>
-<%@ include view='mccFooterNoSocial' %>
+<%@ include view='footer_newsletter' %>
+<%@ include view='footer_generic' %>
+<%@ include view='footer_transactional' %>
 ```
 
 #### TERMS OF SERVICE
@@ -32,8 +34,8 @@ In order for Adobe Campaign to properly track any URLs in its tables, the URLs h
 
 ### Importing Content From a CSV
 ```
-<%= targetData.imageURL %>
-(Replace imageURL with whatever the name of the column is in the spreadsheet)
+<%= targetData.columnName %>
+(Replace columnName with whatever the name of the column is in the spreadsheet)
 ```
 <br>
 
@@ -41,16 +43,16 @@ In order for Adobe Campaign to properly track any URLs in its tables, the URLs h
 
 #### Property Names
 ```
-Official Property Name (what it says in the masthead)
+Official Property Name (what it says in the flag)
 <%= recipient.siteBrand.paperName %>
 
-The Property Name
+The Property Name (for use at the beginning of a sentence)
 <%= recipient.siteBrand.upperThePropertyName %>
 
-the Property Name
+the Property Name (for use in the middle of a sentence)
 <%= recipient.siteBrand.lowerThePropertyName %>
 
-Property Name
+Property Name (for use as a compound adjective)
 <%= recipient.siteBrand.propertyName %>
 ```
 
@@ -60,16 +62,15 @@ https://<%= recipient.siteBrand.publicationUrl %>
 https://<%= recipient.siteBrand.eeditionVanity %>
 https://<%= recipient.siteBrand.subActivation %>
 https://<%= recipient.siteBrand.gamesPage %>
-https://<%= recipient.siteBrand.nieDonationURL %>
 
 You can also add a link to a specific section of a publication or vanity link by using the structure:
-https://www.<%= recipient.siteName %>/section
+https://www.<%= recipient.siteName %>.com/section
 ```
 
 #### App Links
 ```
-https://<%= recipient.siteBrand.googlePlayApp %>
-https://<%= recipient.siteBrand.iosApp %>
+https://<%= recipient.siteBrand.googlePlayApp %>?ac_cid=<%= message.delivery.internalName %>&ac_bid=<%= message.id %>
+https://<%= recipient.siteBrand.iosApp %>?ac_cid=<%= message.delivery.internalName %>&ac_bid=<%= message.id %>
 ```
 
 #### Social Media Links

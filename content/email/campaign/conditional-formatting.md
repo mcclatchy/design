@@ -9,7 +9,7 @@ Adobe Campaign allows the use of conditional formatting to display different con
 The best example of this is in our footers, where Spanish is shown to subscribers of *el Nuevo Herald* and English is shown for everywhere else.
 
 ### Syntax
-This code looks like JavaScript except that every portion of JS has to be contained within the `<% %>` tag that Adobe Campaign uses. This can be used on the simplest level just using an `if` statement followed by a single `else` statement, or can go as specific as needed with multiple `else if` statements in between.
+This code looks like JavaScript except that every portion of JS has to be contained within the `<% %>` tag that Adobe Campaign uses. This can be used on the simplest level just using an `if` statement followed by a single `else` statement, or can go as specific as needed with multiple `else if` statements in between. Usually `siteName` is the parameter we use to determine conditional formatting.
 
 ```javascript
 <% if (siteName == 'site1') { %>
@@ -22,5 +22,14 @@ This code looks like JavaScript except that every portion of JS has to be contai
 ```
 
 <div class="note">
-There are only 2 operators we are likely to use: <code>==</code> for "is equal to" and <code>!=</code> for "does not equal."
+There are 2 operators we are most likely to use: <code>==</code> for "is equal to" and <code>!=</code> for "does not equal."
 </div>
+
+Sometimes an OR statement might be needed. Set those up like this:
+```javascript
+<% if (recipient.siteName == 'site1' || recipient.siteName == 'site2') { %>
+	site1 and site2 stuff
+<% } else { %>
+	all other sites stuff
+<% } %>
+```
