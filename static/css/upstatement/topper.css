@@ -15,7 +15,7 @@
   --link-hover-color: var(--subYellow);
 }
 
-.msb .topper::not(.loaded) {
+.msb .topper:not(.loaded) {
   min-height: 100vh;
 }
 

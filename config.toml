@@ -27,3 +27,6 @@ pygmentsStyle = "borland"
   name = "email"
   url = "/email/"
   weight = 3
+
+# Server settings
+port = 3000

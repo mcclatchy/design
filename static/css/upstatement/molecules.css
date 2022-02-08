@@ -1,8 +1,8 @@
 /**
- * Vertical stacks
+ * Vertical and horizontal stacks
  */
 
-.stack {
+.stack, .package, .card {
   display: flex;
   flex-direction: column;
   gap: var(--stack-gap, 10px);
@@ -35,23 +35,21 @@
 }
 
 /**
- * Grid from SDS
+ * Grid
  */
 
 .grid {
   display: grid;
-  grid-template-columns: var(--columns, repeat(auto-fit, minmax(300px, 1fr)));
-  grid-gap: var(--gap, 30px);
+  grid-template-columns: var(--columns, 1fr);
+  grid-row-gap: var(--gap, 30px);
   grid-auto-flow: dense;
 }
 
-/**
- * Paper
- */
-
-.paper {
-  background-color: var(--paper-color, white);
-  box-shadow: var(--paper-shadow);
+@media(min-width: 660px) {
+  .grid {
+    grid-template-columns: var(--columns, repeat(auto-fit, minmax(300px, 1fr)));
+    grid-column-gap: var(--gap, 30px);
+  }
 }
 
 /**
@@ -62,6 +60,12 @@
   position: relative;
   max-width: var(--section-width);
   margin: var(--gap) auto;
+}
+
+@media(min-width: 600px) {
+  .section {
+    padding: 0 var(--page-padding);
+  }
 }
 
 /**
@@ -93,6 +97,32 @@
 
 .expander.open:after {
   transform: rotateX(180deg);
+}
+
+/**
+ * Social media 
+ */
+
+.social-media {
+  display: flex;
+  justify-content: center;
+}
+
+.social-media > a {
+  padding: 10px 7.5px;
+}
+
+.social-media > a:first-child {
+  padding-left: 0;
+}
+
+.social-media > a:last-child {
+  padding-right: 0;
+}
+
+.social-media svg {
+  height: 20px;
+  width: 20px;
 }
 
 /**
