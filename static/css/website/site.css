@@ -21,8 +21,7 @@
 }
 
 .banner a {
-  font-size: small;
-  font-weight: bold;
+  font: bold small var(--sans);
   padding: 13px 15px;
   text-transform: uppercase;
   color: inherit;

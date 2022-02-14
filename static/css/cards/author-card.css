@@ -1,6 +1,107 @@
 /**
  * Author card
+ *
+ * Note: the DOM is quite old and could use some love
  */
+
+.author-card {
+  display: grid;
+  gap: 15px;
+  grid-template-columns: auto 1fr;
+  grid-template-areas: 
+    "thumb info"
+    "bio bio";
+  font-family: var(--sans);
+  font-size: 0.875rem;
+  align-items: center;
+  --link-color: var(--gray);
+  --link-decoration: none;
+  --header-transform: none;
+  --gap: 0;
+}
+
+.author-card .thumb {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  box-sizing: border-box;
+  grid-area: thumb;
+}
+
+.author-card .thumb img {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.author-card > .flex {
+  display: grid;
+  gap: var(--spread);
+  grid-area: info;
+}
+
+.author-card .summary {
+  grid-area: bio;
+}
+
+/**
+ * Bio version
+ */
+
+.author-bio {
+  grid-template-columns: auto 1fr;
+  grid-row-gap: var(--spread);
+  grid-template-areas:
+    "thumb info"
+    "bio bio"
+    "contact contact";
+  --header-weight: 400;
+}
+
+.author-bio .a-details {
+  grid-area: info;
+}
+
+.author-bio .summary {
+  grid-area: bio;
+  align-self: start;
+}
+
+.author-bio .a-social {
+  grid-area: contact;
+}
+
+.author-bio .h6 {
+  color: var(--gray);
+}
+
+@media(min-width: 768px) {
+  .author-bio {
+    grid-template-columns: auto 3fr 2fr;
+    grid-template-areas: 
+      "thumb info contact"
+      "thumb bio contact";
+  }
+
+  .author-bio .a-details {
+    align-self: end;
+  }
+
+  .author-bio .thumb {
+    width: 160px;
+    height: 160px;
+  }
+
+  .author-bio .a-social {
+    justify-self: end;
+  }
+}
+
+
+/*
 
 .author-card,
 .author-card .package {
@@ -44,9 +145,13 @@
   fill: var(--tc, #222);
 }
 
+*/
+
 /** 
  * Grid takeover
  */
+
+/*
 
 @supports(display: grid) {
   .author-card {
@@ -77,3 +182,5 @@
     grid-column: span 2;
   }
 }
+
+*/

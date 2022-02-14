@@ -1,8 +1,8 @@
 {{ range . }}
-<div class="package">
-  <h4 class="sans bold">
+<div class="stack">
+  <h4>
     <a href="{{ .Page.Permalink }}">{{ .Name }}</a>
   </h4>
-  <p class="summary">{{ .Page.Description }}</p>
+  <p>{{ .Page.Description }}</p>
 </div>
 {{ end }}

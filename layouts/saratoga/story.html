@@ -10,11 +10,11 @@
 {{ end }}{{ end }}
 
 {{ define "content" -}}
-  {{ partial "decks/masthead" . }}
-
   {{ if isset .Params "zones" }}
   <div id="zone-el-2" class="zone" data-zone="1"></div>
   {{ end }}
+
+  {{ partial "decks/masthead" . }}
 
   <!-- the wrapper was added by the front-end team -->
   <div class="server-rendered">
@@ -57,19 +57,6 @@
       {{ template "shortcodes/digest.html" }}
     </section>
     <section>
-      <div class="card horizontal swg-promo">
-        <div class="package sans promo">
-          <h1 class="title">SIGN UP AND SAVE</h1>
-          <span class="h3">#READLOCAL</span>
-        </div>
-        <div class="package">
-          <p class="summary">Get six months of free digital access to The Kansas City Star. Terms and conditions apply</p>
-          <a class="button impact" href="#">Subscribe with Google</a>
-        </div>
-      </div>
-    </section>
-    <section>
-      <span class="h5 sans bold section-label">MORE IN SECTION</span>
       <div class="grid">
         {{- range seq 5 }}
           {{ template "shortcodes/card.html" }}

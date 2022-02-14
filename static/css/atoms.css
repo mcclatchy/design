@@ -4,24 +4,29 @@
 
 :root {
   /* Fonts */
-  --sans: "Inter", sans-serif;
+  --sans: "Noto Sans", sans-serif;
   --serif: "Noto Serif", serif;
+  --premium-sans: "Inter", sans-serif;
   --premium-serif: "DM Serif Display", serif;
 
   /* Spacing and alignment */
   --gap: 30px;
+  --spread: 6px;
   --page-padding: 15px;
   --section-width: 1140px;
   --story-width: 728px;
 
   /* Colors */
-  --black: #222222;
+  --black: #01101c;
   --gray: #707070;
   --impact: #373737;
   --promo: #31409F;
   --subBlue: #00223e;
   --subYellow: #ffd71a;
   --bodyBackground: #f4f4f4;
+  --text-color: var(--black);
+  --button-color: var(--impact);
+  --button-text-color: white;
 
   /* Paper box shadow */
   --paper-shadow: 
@@ -55,25 +60,47 @@ h4, .h4,
 h5, .h5,
 h6, .h6 {
   font-family: var(--header-family, var(--serif));
-  font-size: var(--header-size);
   font-weight: var(--header-weight, bold);
   text-transform: var(--header-transform, none);
   line-height: var(--line-height, 1.2em);
   color: var(--header-color, var(--text-color));
 }
 
-p, li, a, span {
-  font-family: var(--text-family, var(--serif));
+h1, .h1 {
+  font-size: 1.875rem;
+  line-height: 1.1em;
+}
+
+h2, .h2 {
+  font-size: x-large;
+}
+
+h3, .h3 {
+  font-size: larger;
+}
+
+h4, .h4 {
+  font-size: medium;
+}
+
+h5, .h5 {
+  font: bold 0.875rem var(--sans);
+}
+
+h6, .h6 {
+  font: 0.75rem var(--sans);
+}
+
+p, li {
+  font-family: var(--text-family);
   font-size: var(--text-size);
-  font-weight: var(--text-weight);
-  text-transform: var(--text-transform, none);
-  line-height: var(--line-height, 1.5em);
+  line-height: var(--text-leading, 1.5em);
   color: var(--text-color);
 }
 
 a {
-  color: var(--link-color);
-  text-decoration: var(--link-decoration);
+  color: var(--link-color, inherit);
+  text-decoration: var(--link-decoration, none);
 }
 
 a:hover {
@@ -90,29 +117,49 @@ ul, ol {
   font-weight: normal;
   color: var(--text-color);
   border: 1px solid var(--text-color);
+  border-radius: 2px;
   text-transform: uppercase;
+  background-color: var(--paper-color);
+  --link-decoration: none;
+  --link-hover-decoration: none;
 }
 
-.time {
+time, .time, .byline {
+  display: inline-block;
   text-transform: uppercase;
-  color: var(--text-color, var(--gray));
-  font-size: 0.75em;
+  color: var(--gray);
+  font: 0.75rem var(--sans);
+}
+
+.byline a {
+  color: inherit;
+  font-weight: bold;
+}
+
+.credit {
+  font-style: italic;
+}
+
+summary, .summary {
+  font: 0.875rem var(--sans);
 }
 
 .label {
   margin: 0;
-  display: flex;
-  justify-content: center;
-  text-decoration: none;
+  display: grid;
+  place-items: center;
+  --link-decoration: none;
 }
 
 .label > * {
   margin: 0;
   padding: 5px 10px;
-  color: var(--bc, white);
-  background-color: var(--bbc, #373737);
-  --ld: none;
-  --lhd: none;
+  color: var(--label-text-color, white);
+  background-color: var(--label-background-color, var(--impact));
+  font-size: 0.875rem;
+  line-height: 1em;
+  --text-family: var(--sans);
+  --header-family: var(--sans);
 }
 
 .label.sticky {
@@ -125,37 +172,37 @@ ul, ol {
 
 .more-link {
   display: block;
-  font-weight: 700;
-  font-size: var(--ts, 0.875rem);
+  font: 700 0.875rem/1em var(--sans);
   text-transform: uppercase;
-  margin-top: 15px;
-  --lc: var(--tc, #707070);
-  --lhc: var(--tc, #707070);
-  --ld: none;
-  --lhd: none;
+  color: var(--text-color, var(--gray));
+  text-decoration: none;
+}
+
+.more-link:hover {
+  color: var(--text-color, var(--gray));
+  text-decoration: none;
 }
 
 .more-link:after {
   content: "\2794";
-  padding-left: 4px;
   display: inline-block;
-  transform: translateY(-.05em);
+  transform: translateY(-.05em) translateX(4px);
   transition: transform .6s ease;
 }
 
 .more-link:hover:after {
-  transform: translateY(-.05em) translateX(4px);
+  transform: translateY(-.05em) translateX(8px);
 }
 
 .dateline {
   display: block;
-  font-style: italic;
-  font-size: 0.875rem;
+  font: 0.875rem italic var(--sans);
   text-transform: uppercase;
-  color: var(--tc);
+  color: var(--text-color, #757575);
 }
 
 hr {
+  align-self: stretch;
   border: .5px solid var(--text-color, #707070);
 }
 
@@ -164,16 +211,21 @@ hr {
  */
 
 .button {
+  display: inline-block;
   padding: 8px 10px;
   border-radius: 3px;
-  font: 700 1em/1em var(--sans);
-  color: var(--button-text-color, white);
-  background-color: var(--button-background-color, #00223e);
+  font-weight: bold;
+  font-family: var(--sans);
+  color: var(--button-text-color);
+  background-color: var(--button-color);
   text-transform: uppercase;
+  text-decoration: none;
 }
 
 .button:hover {
-  color: var(--button-text-color, white);
+  color: var(--button-hover-text-color, var(--button-text-color));
+  background-color: var(--button-hover-color, var(--button-color));
+  text-decoration: none;
 }
 
 .button.big {
@@ -189,7 +241,7 @@ form, .checkbox-group {
   grid-template-columns: 1fr;
   grid-gap: 30px;
   text-align: left;
-  color: var(--tc);
+  color: var(--text-color);
 }
 
 .checkbox-group {
@@ -206,7 +258,7 @@ form > *, .checkbox-group > * {
 }
 
 form.paper {
-  padding: var(--padding, 15px);
+  padding: calc(var(--gap) / 2);
 }
 
 label { 
@@ -238,7 +290,7 @@ label small,
 label + small {
   display: block;
   font-weight: 400;
-  color: var(--tc, #707070);
+  color: var(--text-color, #707070);
   margin-top: 2px;
 }
 
@@ -249,12 +301,11 @@ input, select, .select {
   padding: 10px;
   box-sizing: border-box;
   font-size: 0.875rem;
-  border: 1px solid var(--tc, #989898);
+  border: 1px solid #989898;
   border-radius: 2px;
   background-color: white;
   transition: all .15s ease-in-out;
   cursor: pointer;
-  --tc: initial;
 }
 
 select {
@@ -338,8 +389,11 @@ figure {
   margin: 0;
 }
 
-figure > * {
-  max-width: 100%;
+
+figure img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 figcaption, .caption {
@@ -357,8 +411,14 @@ figcaption, .caption {
   box-shadow: var(--paper-shadow); 
 }
 
+.paper * {
+  --paper-shadow: none;
+}
+
 /**
  * Color schemes
+ * 
+ * Note: this is going to need an audit
  */
 
 .impact, 
@@ -366,14 +426,14 @@ figcaption, .caption {
 .promo-light,
 .disabled,
 [disabled] {
-  --paper-color: #373737;
+  --paper-color: var(--impact);
   --text-color: white;
   --link-color: white;
   --fill-color: white;
 }
 
 .promo {
-  --paper-color: #31409F;
+  --paper-color: var(--promo);
 }
 
 .promo-light {
@@ -385,4 +445,17 @@ figcaption, .caption {
   cursor: not-allowed;
 }
 
-/* Seeing if I can do without the utilities */
+.impact .button,
+.promo .button,
+.promo-light .button,
+.disabled .button,
+[disabled] .button {
+  --paper-color: white;
+  --text-color: var(--text-color, var(--black));
+}
+
+/**
+ * Seeing if I can do without the utilities 
+ */
+
+

@@ -3,35 +3,31 @@
  */
 
 .header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
+  gap: 15px;
+  justify-items: center;
   text-align: center;
-  color: var(--tc);
-  --hf: "Noto Serif", serif;
-  --ht: none;
+  --header-family: var(--serif);
+  --header-weight: bold;
+  --header-transform: none;
 }
 
 .header > * {
-	margin: 15px 0 0;
-}
-
-.header > :first-child {
-  margin-top: 0;
-}
-
-.bio p.byline {
   margin: 0;
 }
 
+.bio {
+  display: grid;
+  gap: 15px;
+}
+
 @media (min-width: 600px) {
-	.header .bio {
-		display: flex;
+  .header .bio {
+    display: flex;
+    justify-self: stretch;
     align-items: center;
-		justify-content: space-between;
-		width: 100%;
-		text-align: left;
-	}
+    justify-content: space-between;
+  }
 }
 
 /**

@@ -3,8 +3,16 @@
  */
 
 .digest {
-  --lc: #222;
-  --lhc: #222;
-  --bc: white;
-  --bbc: #222;
+  display: grid;
+  gap: 15px;
+}
+
+.digest .more-link {
+  padding: 0 15px;
+}
+
+@media(min-width: 600px) {
+  .digest .more-link {
+    padding: 0;
+  }
 }

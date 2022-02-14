@@ -1,0 +1,102 @@
+/**
+ * Footer
+ *
+ * Note: this card could use a DOM refresher
+ */
+
+.footer {
+  margin: 0 auto;
+  padding: var(--page-padding);
+  display: grid;
+  gap: var(--gap);
+  color: white;
+  font-family: var(--sans);
+}
+
+.footer-connect {
+  display: grid;
+  gap: 20px;
+  padding: 0;
+  max-width: 340px;
+  --header-family: var(--sans);
+  --header-weight: bold;
+}
+
+.footer-connect .flex {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.footer svg,
+.footer .icon {
+  height: 30px;
+  width: 30px;
+}
+
+.footer .icon {
+  background-color: white;
+  border-radius: 20%;
+}
+
+.footer .icon img {
+  display: block;
+  border-radius: 20%;
+  width: 28px;
+  height: 28px;
+  margin: 1px 0 0 1px;
+}
+
+.footer .social {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer .social svg {
+  height: 35px;
+  width: 35px;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: space-between;
+}
+
+.footer-links .package {
+  padding: 0;
+}
+
+.bottom-nav {
+  margin: 0;
+}
+
+.bottom-nav a {
+  display: block;
+  padding: 15px;
+}
+
+@media (min-width: 600px) {
+  .footer-links {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .bottom-nav {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer {
+    grid-template-columns: 340px 1fr;
+  }
+
+  .footer-links {
+    justify-content: end;
+  }
+}

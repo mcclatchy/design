@@ -7,13 +7,19 @@
   display: none;
 }
 
+@media (max-width: 767px) {
+  .h-phone {
+    display: none;
+  }
+}
+
 @media (min-width: 768px) {
   .h-tablet {
     display: none;
   }
 
   .d-tablet {
-    display: block;
+    display: var(--display, block);
   }
 }
 
@@ -23,6 +29,33 @@
   }
 
   .d-desktop {
-    display: block;
+    display: var(--display, block);
   }
+}
+
+/**
+ * msb toggles
+ */
+
+.msb-show,
+.msb .msb-hide {
+  display: none;
+}
+
+.msb .msb-show {
+  display: var(--display, block);
+}
+
+/**
+ * To ensure these work in as many cases as possible 
+ * they're placed as the last thing in the system.
+ */
+
+.hidden, [hidden] {
+  display: none;
+}
+
+.zone-el.hidden,
+.grid > .zone-el.hidden {
+  display: none;
 }

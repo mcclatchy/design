@@ -22,6 +22,7 @@
 
 #zone-el-2 {
   position: relative;
+  background-color: var(--black);
 }
 
 #zeus_top-banner {

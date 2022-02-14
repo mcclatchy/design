@@ -6,7 +6,7 @@
 }
 
 .upper-nav .tab {
-  padding: 10px 15px;
+  padding: 10px var(--page-padding);
   box-sizing: border-box;
   max-width: 50vw;
 }
@@ -42,9 +42,9 @@
 }
 
 @media (min-width: 768px) {
-  .upper-nav .tab {
-    padding: 10px 20px;
-  }
+  /* .upper-nav .tab { */
+  /*   padding: 10px 20px; */
+  /* } */
 
   .upper-nav .tab .favicon {
     display: none;

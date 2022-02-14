@@ -4,23 +4,23 @@
 
 .story-body {
   display: flow-root;
-  --hf: var(--sans);
-  --hw: 700;
-  --ht: uppercase;
-  --lc: #5169B8;
-  --lhc: #31409F;
-  --ld: underline;
-  --lhd: underline;
+  --header-family: var(--sans);
+  --header-transform: uppercase;
+  --text-family: var(--serif);
+  --text-size: large;
+  --link-color: #5169B8;
+  --link-hover-color: #31409F;
+  --link-decoration: underline;
 }
 
 .story-body > * {
   max-width: var(--story-width);
-  padding: 0 15px;
+  padding: 0 var(--page-padding);
   margin: 20px auto;
 }
 
 .story-body > .header {
-  margin: 30px auto;
+  margin: 40px auto;
 }
 
 /**
@@ -64,9 +64,14 @@
   margin-top: 0;
 }
 
+.story-body figure,
+.story-body .figure {
+  --stack-gap: 10px;
+}
+
 .story-body figure .package,
 .story-body .figure .package {
-  padding: 10px 0 0;
+  padding: 0px;
 }
 
 @media(max-width: 768px) {
@@ -78,7 +83,7 @@
   .story-body figcaption,
   .story-body figure .package,
   .story-body .figure .package {
-    padding: 10px 15px 0;
+    padding: 0px 15px;
   }
 }
 
@@ -86,14 +91,14 @@
   .story-body .wide figcaption,
   .story-body figure.wide .package,
   .story-body .figure.wide .package {
-    padding: 10px 15px 0;
+    padding: 0px 15px;
   }
 }
 
 .story-body .full-bleed figcaption,
 .story-body figure.full-bleed .package,
 .story-body .figure.full-bleed .package {
-  padding: 10px 15px 0;
+  padding: 0px 15px;
 }
 
 /**
@@ -143,15 +148,6 @@
   max-width: 100%;
   padding-top: 0;
   margin-top: 0
-}
-
-/**
- * Zergnet widget only applies to stories
- */
-
-.zergnet {
-  max-width: 728px;
-  padding: 0 15px;
 }
 
 /**
