@@ -10,7 +10,7 @@
   display: grid;
   gap: var(--gap);
   color: white;
-  font-family: var(--sans);
+  font: 16px var(--sans);
 }
 
 .footer-connect {

@@ -8,7 +8,6 @@ zones: true
 
 {{< immersive >}}
 
-{{< sponsor >}}
 {{< series-nav >}}
 
 <span class="dateline">Jefferson City</span>

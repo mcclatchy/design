@@ -4,6 +4,9 @@
 
 .gallery {
   font-family: var(--sans);
+  align-items: unset;
+  color: var(--gray);
+  --header-color: var(--black);
 }
 
 .gallery .package {

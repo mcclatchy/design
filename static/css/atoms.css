@@ -4,6 +4,7 @@
 
 :root {
   /* Fonts */
+  font: 18px/1.5rem var(--serif);
   --sans: "Noto Sans", sans-serif;
   --serif: "Noto Serif", serif;
   --premium-sans: "Inter", sans-serif;
@@ -11,7 +12,7 @@
 
   /* Spacing and alignment */
   --gap: 30px;
-  --spread: 6px;
+  --spread: 10px;
   --page-padding: 15px;
   --section-width: 1140px;
   --story-width: 728px;
@@ -66,29 +67,29 @@ h6, .h6 {
 }
 
 h1, .h1 {
-  font-size: 1.875rem;
+  font-size: 1.7rem;
   font-weight: bold;
   line-height: 1.1em;
 }
 
 h2, .h2 {
-  font-size: x-large;
+  font-size: 1.35rem;
 }
 
 h3, .h3 {
-  font-size: larger;
+  font-size: 1.1rem;
 }
 
 h4, .h4 {
-  font-size: medium;
+  font-size: .9rem;
 }
 
 h5, .h5 {
-  font: bold 0.875rem var(--sans);
+  font: bold 0.75rem var(--sans);
 }
 
 h6, .h6 {
-  font: 0.75rem var(--sans);
+  font: 0.65rem var(--sans);
 }
 
 a {
@@ -106,13 +107,13 @@ ul, ol {
 }
 
 .kicker {
+  display: block;
   padding: 5px 8px;
   font-weight: normal;
   color: var(--text-color, var(--black));
   border: 1px solid var(--text-color, var(--black));
   border-radius: 2px;
   text-transform: uppercase;
-  background-color: var(--paper-color);
   --link-decoration: none;
   --link-hover-decoration: none;
 }
@@ -121,7 +122,7 @@ time, .time, .byline {
   display: inline-block;
   text-transform: uppercase;
   color: var(--text-color, var(--gray));
-  font: 0.75rem var(--sans);
+  font: 0.65rem/1.1em var(--sans);
 }
 
 .byline a {
@@ -134,7 +135,7 @@ time, .time, .byline {
 }
 
 summary, .summary {
-  font: 0.875rem var(--sans);
+  font: 0.75rem var(--sans);
 }
 
 .label {
@@ -189,7 +190,7 @@ summary, .summary {
 
 .dateline {
   display: block;
-  font: 0.875rem italic var(--sans);
+  font: italic 0.875rem var(--sans);
   text-transform: uppercase;
   color: var(--text-color, #757575);
 }
@@ -225,10 +226,15 @@ hr {
   padding: 10px 35px;
 }
 
-.button.impact {
-  background-color: var(--impact);
-  color: white;
+.button.ghost {
+  color: var(--button-color);
+  border: 1px solid var(--button-color);
 }
+
+.button.pill {
+  border-radius: 1.5em;
+}
+
 
 /**
  * Form elements
@@ -427,31 +433,52 @@ figcaption, .caption {
 .promo-light,
 .disabled,
 [disabled] {
+  background-color: var(--impact);
+  color: white;
   --paper-color: var(--impact);
   --text-color: white;
   --link-color: white;
+  --link-hover-color: white;
   --fill-color: white;
   --button-color: white;
   --button-text-color: var(--impact);
 }
 
 .promo {
+  background-color: var(--promo);
   --paper-color: var(--promo);
   --button-text-color: var(--promo);
 }
 
 .promo-light {
+  background-color: #5169B8;
   --paper-color: #5169B8;
   --button-text-color: #5169B8;
 }
 
 .disabled, [disabled] {
+  background-color: #757575;
   --paper-color: #757575;
   cursor: not-allowed;
 }
 
 /**
- * Seeing if I can do without the utilities 
+ * Some utilities I can't get rid of yet
  */
 
+.cutout {
+  background-color: var(--bodyBackground);
+}
 
+.gray {
+  color: var(--text-color, var(--gray));
+  --button-color: var(--text-color, var(--gray));
+}
+
+.no-caps {
+  text-transform: none;
+}
+
+.soft {
+  font-weight: normal;
+}

@@ -4,7 +4,6 @@
 
 .story-body {
   display: flow-root;
-  font: large/1.5em var(--serif);
   color: var(--text-color);
   --header-family: var(--sans);
   --header-transform: uppercase;

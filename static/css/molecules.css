@@ -33,8 +33,8 @@
   --header-family: var(--serif);
   --link-decoration: none;
   --link-hover-decoration: underline;
-  --link-color: inherit;
-  --link-hover-color: inherit;
+  --link-color: var(--text-color, inherit);
+  --link-hover-color: var(--text-color, inherit);
 }
 
 .card {
@@ -119,6 +119,10 @@ section, .section {
   grid-template-columns: var(--columns, repeat(auto-fit, minmax(300px, 1fr)));
   gap: var(--gap);
   grid-auto-flow: dense;
+}
+
+.grid > .package {
+  padding: 0;
 }
 
 /**
