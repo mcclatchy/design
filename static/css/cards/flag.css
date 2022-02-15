@@ -3,11 +3,15 @@
  */
 
 .masthead {
-  --paper-color: white;
+  --paper-color: transparent;
   --paper-shadow: none;
 }
 
-.msb .masthead {
+body.story .masthead {
+  --paper-color: white;
+}
+
+html.msb .masthead {
   --paper-color: var(--subBlue);
   --text-color: white;
   --link-color: white;
@@ -16,7 +20,7 @@
 
 .flag {
   display: grid;
-  gap: var(--gap);
+  gap: 15px;
   grid-template-areas:
     "menu account"
     "logo logo"
@@ -26,6 +30,7 @@
   padding: var(--page-padding);
   padding-bottom: 0;
   font: bold 13px/1em var(--premium-sans);
+  color: var(--text-color);
 
   /* Custom properties for kids */
   --spread: 15px;
@@ -70,8 +75,7 @@
 
   .msb .flag {
     grid-template-areas:
-      "menu . account"
-      "edition edition edition"
+      "menu edition account"
       "left logo right"
       "nav nav nav"
   }
@@ -103,7 +107,8 @@
 
 .flag-right {
   grid-area: right;
-  place-self: end;
+  justify-self: end;
+  align-items: end;
   font-size: 14px;
   --spread: 7px;
   --link-hover-decoration: underline;
@@ -120,11 +125,11 @@
   content: "";
   width: 30px;
   height: 1px;
-  background-color: var(--text-color);
+  background-color: var(--subYellow);
 }
 
 .msb .flag-edition {
-  --text-color: var(--subYellow);
+  color: var(--subYellow);
 }
 
 .flag-logo {

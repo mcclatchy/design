@@ -24,7 +24,6 @@
   --subBlue: #00223e;
   --subYellow: #ffd71a;
   --bodyBackground: #f4f4f4;
-  --text-color: var(--black);
   --button-color: var(--impact);
   --button-text-color: white;
 
@@ -59,15 +58,16 @@ h3, .h3,
 h4, .h4,
 h5, .h5,
 h6, .h6 {
-  font-family: var(--header-family, var(--serif));
+  font-family: var(--header-family, inherit);
   font-weight: var(--header-weight, bold);
   text-transform: var(--header-transform, none);
-  line-height: var(--line-height, 1.2em);
+  line-height: var(--header-leading, 1.2em);
   color: var(--header-color, var(--text-color));
 }
 
 h1, .h1 {
   font-size: 1.875rem;
+  font-weight: bold;
   line-height: 1.1em;
 }
 
@@ -91,13 +91,6 @@ h6, .h6 {
   font: 0.75rem var(--sans);
 }
 
-p, li {
-  font-family: var(--text-family);
-  font-size: var(--text-size);
-  line-height: var(--text-leading, 1.5em);
-  color: var(--text-color);
-}
-
 a {
   color: var(--link-color, inherit);
   text-decoration: var(--link-decoration, none);
@@ -115,8 +108,8 @@ ul, ol {
 .kicker {
   padding: 5px 8px;
   font-weight: normal;
-  color: var(--text-color);
-  border: 1px solid var(--text-color);
+  color: var(--text-color, var(--black));
+  border: 1px solid var(--text-color, var(--black));
   border-radius: 2px;
   text-transform: uppercase;
   background-color: var(--paper-color);
@@ -127,7 +120,7 @@ ul, ol {
 time, .time, .byline {
   display: inline-block;
   text-transform: uppercase;
-  color: var(--gray);
+  color: var(--text-color, var(--gray));
   font: 0.75rem var(--sans);
 }
 
@@ -230,6 +223,11 @@ hr {
 
 .button.big {
   padding: 10px 35px;
+}
+
+.button.impact {
+  background-color: var(--impact);
+  color: white;
 }
 
 /**
@@ -384,9 +382,11 @@ svg {
  */
 
 figure {
+  position: relative;
   display: grid;
   gap: 10px;
   margin: 0;
+  flex: none;
 }
 
 
@@ -409,6 +409,7 @@ figcaption, .caption {
   position: relative;
   background-color: var(--paper-color, white);
   box-shadow: var(--paper-shadow); 
+  color: var(--text-color);
 }
 
 .paper * {
@@ -430,28 +431,23 @@ figcaption, .caption {
   --text-color: white;
   --link-color: white;
   --fill-color: white;
+  --button-color: white;
+  --button-text-color: var(--impact);
 }
 
 .promo {
   --paper-color: var(--promo);
+  --button-text-color: var(--promo);
 }
 
 .promo-light {
   --paper-color: #5169B8;
+  --button-text-color: #5169B8;
 }
 
 .disabled, [disabled] {
   --paper-color: #757575;
   cursor: not-allowed;
-}
-
-.impact .button,
-.promo .button,
-.promo-light .button,
-.disabled .button,
-[disabled] .button {
-  --paper-color: white;
-  --text-color: var(--text-color, var(--black));
 }
 
 /**

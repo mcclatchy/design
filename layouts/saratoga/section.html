@@ -3,11 +3,27 @@
 {{ end }}
 
 {{ define "content" }}
-  {{ partial "decks/masthead" . }}
+  <!-- upper-nav card -->
+  <div class="upper-nav">
+    <div class="tab active">
+      <a href="#">
+        <img class="logo" src="/img/miamiherald-logo.svg" alt="Miami Herald Logo" width="300" height="50" loding="lazy">
+        <img class="favicon" src="/img/miamiherald-favicon.png" alt="Miami Herald Logo" width="96" height="96" loding="lazy">
+      </a>
+    </div>
+    <div class="tab">
+      <a href="#">
+        <img class="logo" src="/img/miami.com-logo.svg" alt="Miami.com Logo" width="300" height="131" loading="lazy">
+        <img class="favicon" src="/img/miami.com-favicon.svg" alt="Miami.com Logo" width="150" height="150" loading="lazy">
+      </a>
+    </div>
+  </div>
 
-  <section id="zone-el-2" class="zone" data-zone="1">
-    <fake-ad size="[[728,90],[320,50]]"></fake-ad>
-  </section>
+  <div id="zone-el-2" class="zone" data-zone="1">
+    <fake-ad size="[[970,250],[728,90],[320,50]]"></fake-ad>
+  </div>
+
+  {{ partial "decks/masthead" . }}
 
   {{ .Content }}
 

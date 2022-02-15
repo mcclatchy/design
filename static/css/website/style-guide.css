@@ -65,9 +65,7 @@ td:first-child {
   background-color: #f4f4f4;
   box-sizing: border-box;
   z-index: 1;
-  --header-family: var(--sans);
-  --text-family: var(--sans);
-  --text-size: 0.875rem;
+  font: 0.875rem var(--sans);
 }
 
 .list > * {

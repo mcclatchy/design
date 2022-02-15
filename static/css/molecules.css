@@ -27,6 +27,7 @@
 
 .package {
   padding: calc(var(--gap) / 2);
+  color: var(--text-color);
   --header-transform: none;
   --header-weight: normal;
   --header-family: var(--serif);
@@ -39,12 +40,33 @@
 .card {
   position: relative;
   background-color: var(--paper-color, white);
+  color: var(--text-color);
   box-shadow: var(--paper-shadow);
 }
 
-.card.horizontal {
-  /* todo */
+@media(min-width: 660px) {
+  .card.horizontal {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .card.horizontal figure {
+    align-self: stretch;
+  }
+
+  .card.horizontal figure img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 20%;
+  }
 }
+
 /**
  * Horizontal slider for additional content
  */
@@ -71,9 +93,20 @@ section, .section {
   margin: var(--gap) auto;
 }
 
+.section-label {
+  margin: 0;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 0 var(--page-padding);
+}
+
 @media(min-width: 600px) {
   section, .section {
     padding: 0 var(--page-padding);
+  }
+
+  .section-label {
+    padding: 0;
   }
 }
 
@@ -88,6 +121,48 @@ section, .section {
   grid-auto-flow: dense;
 }
 
+/**
+ * Flex Columns
+ *
+ * Note: Rewritten for the 2022 transition, 
+ * but needs to go away at some point
+ */ 
+
+
+.flex-columns {
+  display: grid;
+  gap: var(--gap);
+  align-items: start;
+}
+
+.flex-columns .flex-columns {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-areas: unset;
+}
+
+.flex-columns + .flex-columns {
+  margin-top: var(--gap);
+}
+
+@media(min-width: 990px) {
+  .flex-columns {
+    grid-template-columns: 1fr 300px;
+    grid-template-areas: "main rail";
+  }
+
+  .flex-columns.reverse {
+    grid-template-columns: 300px 1fr;
+    grid-template-areas: "rail main";
+  }
+
+  .flex-columns .rail {
+    grid-area: rail;
+  }
+
+  .flex-columns .main-stage {
+    grid-area: main;
+  }
+}
 
 /**
  * Expander 

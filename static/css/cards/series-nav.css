@@ -4,11 +4,6 @@
 
 .series-nav {
   padding: 0;
-	--hf: var(--serif);
-	--hw: 400;
-	--ht: none;
-  --lc: #222;
-  --lhc: #222;
 }
 
 .series-nav .package {
@@ -16,11 +11,11 @@
 }
 
 .series-nav hr {
-  border-color: var(--tc, #dfdfdf);
+  border-color: var(--text-color, #dfdfdf);
 }
 
 .series-nav .summary {
-  color: var(--tc, #707070);
+  color: var(--text-color, #707070);
 }
 
 .series-nav .article {

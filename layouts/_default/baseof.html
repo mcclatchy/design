@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="msb">
   <head>
     <title>{{ .Title }}</title>
     <meta name="description" content="{{ .Description }}">
@@ -85,7 +85,7 @@
     {{ block "head" . }}{{ end }}
   </head>
 
-  <body class="{{ .Params.deck }}">
+  <body class="{{ if eq .Params.layout "story" }}story{{ end }}">
     <div class="banner paper">
       <a href="/" style="padding: 0;"><img class="logo" src="/img/banner-logo.prodx.svg" width="300" height="76" alt="McClatchy ProdX logo"></a>
       <nav>
