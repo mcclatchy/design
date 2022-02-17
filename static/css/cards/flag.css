@@ -85,6 +85,12 @@ html.msb .masthead {
  * Children
  */
 
+.sds-flag button {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+}
+
 .flag-menu {
   grid-area: menu;
   --spread: 15px;

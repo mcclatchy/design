@@ -206,13 +206,14 @@ hr {
  * Buttons and UI elements
  */
 
-.button {
+button, .button {
   display: inline-block;
   padding: .4em 1em;
   border-radius: 3px;
   font: bold 1rem var(--sans);
   color: var(--button-text-color);
   background-color: var(--button-color);
+  border: 1px solid transparent;
   text-transform: uppercase;
   text-decoration: none;
   cursor: pointer;
