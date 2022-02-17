@@ -1,10 +1,10 @@
 ---
-title: "Basic Molecule"
+title: "Basic Module"
 description: "large icon, subheading, body copy and button"
-menu: "molecules"
+menu: "modules"
 ---
 
-This molecule is used frequently in the email Welcome Series and serves as a good starting point for many other use cases.
+This module is a good starting point.
 
 ### Example
 
@@ -18,7 +18,7 @@ This molecule is used frequently in the email Welcome Series and serves as a goo
 <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
 	<tr>
 		<td align="center" valign="top" class="pb16">
-			<img src="https://media.mcclatchy.com/email-assets/global/icons/ICON-NAME.png" width="40" alt="ICON NAME icon" />
+			<img src="https://media.mcclatchy.com/email-assets/global/icons/ICON-NAME.png" width="40" alt="" />
 		</td>
 	</tr>
 	<tr>
@@ -35,11 +35,11 @@ This molecule is used frequently in the email Welcome Series and serves as a goo
 		<td align="center" valign="top">
 
 			<table role="presentation" border="0" cellpadding="0" cellspacing="0">
-				 <tr>
-						<td align="center" valign="top" class="button">
-							 <a href="#" target="_blank" class="button-link">Button Text</a>
-						</td>
-				 </tr>
+				<tr>
+					<td align="center" valign="top" class="button button-default">
+						<a href="#" target="_blank" class="button-a button-default-a">Button</a>
+					</td>
+				</tr>
 			</table>
 
 		</td>
