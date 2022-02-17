@@ -68,8 +68,6 @@ h6, .h6 {
 
 h1, .h1 {
   font-size: var(--header-size, 1.875rem);
-  font-weight: bold;
-  line-height: 1.1em;
 }
 
 h2, .h2 {
@@ -100,6 +98,10 @@ a {
 a:hover {
   color: var(--link-hover-color, var(--link-color));
   text-decoration: var(--link-hover-decoration, var(--link-decoration));
+}
+
+ul, ol {
+  padding-left: 0;
 }
 
 li {
