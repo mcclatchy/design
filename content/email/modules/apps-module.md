@@ -1,10 +1,10 @@
 ---
-title: "App Molecule"
+title: "App Module"
 description: "download our app and app badges"
-menu: "molecules"
+menu: "modules"
 ---
 
-This molecule is frequently used before the footer in marketing emails.
+This module is frequently used before the footer in marketing emails.
 
 ### Example
 
@@ -29,10 +29,10 @@ This molecule is frequently used before the footer in marketing emails.
 			<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
 				<tr>
 					<td align="right" valign="top" class="col-fixed first">
-						<a href="https://<%= recipient.siteBrand.iosApp %>" target="_blank"><img src="https://media.mcclatchy.com/email-assets/global/app-store-badge.png" width="120" alt="Download on the App Store" /></a>
+						<a href="https://<%= recipient.siteBrand.iosApp %>?ac_cid=<%= message.delivery.internalName %>&ac_bid=<%= message.id %>" target="_blank"><img src="https://media.mcclatchy.com/email-assets/global/app-store-badge.png" width="120" alt="Download on the App Store" /></a>
 					</td>
 					<td align="left" valign="top" class="col-fixed last">
-						<a href="https://<%= recipient.siteBrand.googlePlayApp %>" target="_blank"><img src="https://media.mcclatchy.com/email-assets/global/google-play-badge.png" width="134" alt="Get it on Google Play" /></a>
+						<a href="https://<%= recipient.siteBrand.googlePlayApp %>?ac_cid=<%= message.delivery.internalName %>&ac_bid=<%= message.id %>" target="_blank"><img src="https://media.mcclatchy.com/email-assets/global/google-play-badge.png" width="134" alt="Get it on Google Play" /></a>
 					</td>
 				</tr>
 			</table>
