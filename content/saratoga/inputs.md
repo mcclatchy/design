@@ -51,38 +51,6 @@ Inputs are designed to be placed in a center-aligned form that is 100% of the pa
   <button id="button" type="submit" class="button promo">submit</button>   
 </form>  
 
----
-  
-#### HTML
-```html
-<form>
- 
-  <!-- Either option can be used -->
-  <label for="input">Default</label>
-  <small>This is a hint</small>           
-  <input type="text" id="input">
-
-  <label>Hint <small>This is a hint</small> <input type="text" name="something"></label>
-  
-  <!-- Password toggles go on the label element -->
-  <label for="password-input" class="password-label">Password</label>
-  <small>Must be at least 7 characters long</small>    
-  <input type="password" id="password-input">
-  
-  <!-- Checkbox/Radio labels require a checkbox class -->
-  <div class="checkbox-group">
-    <label class="checkbox"><input type="checkbox"> Checkbox</label>
-    <label class="checkbox"><input type="radio"> Radio button</label>
-  </div>
-
-  <!-- Submit button can be a button element or an input. 
-  The input version will stretch like all other inputs. -->
-  <button type="submit" class="button promo">submit</button>  
-  <input type="submit" class="button promo" value="submit">
-  
-</form>
-```
-
 #### RULES
 
 | Property | Value |
@@ -91,26 +59,5 @@ Inputs are designed to be placed in a center-aligned form that is 100% of the pa
 | Weight | 400 |
 | Size | 1 em |
 | Border | 1 pixel solid #989898 with a 2-pixel radius |
-
----
-
-## CUSTOM SELECT
-
-Custom selects use a combination of the [expander](../expander) molecule and link-based buttons instead of the native select element for forms. Because they are based on the expander, a toggle of the `open` class will show and remove the option list. Lastly, adding the class `selected` to any of options will make it bold. Different use cases will most likely require different javascript, but we have a [starter script](/js/select.js) for the purposes of this demo.
-
-#### EXAMPLE
-
-
-<div class="grid" style="grid-template-columns: 300px 1fr;">
-<form>
-{{< select >}}
-</form>
-</div>
-
-<script async src="/js/select.js"></script>
-
-#### HTML
-
-{{< highlight html >}}{{< select >}}{{< /highlight >}}
 
 <script async src="/js/forms.js"></script>

@@ -102,8 +102,8 @@ a:hover {
   text-decoration: var(--link-hover-decoration, var(--link-decoration));
 }
 
-ul, ol {
-  padding-left: 1em;
+li {
+  margin: 5px 0 5px 1em;
 }
 
 .kicker {
@@ -225,9 +225,15 @@ hr {
   padding: 10px 35px;
 }
 
+.button.text,
 .button.ghost {
   color: var(--button-color);
+  background-color: transparent;
   border: 1px solid var(--button-color);
+}
+
+.button.text {
+  border: none;
 }
 
 .button.pill {
