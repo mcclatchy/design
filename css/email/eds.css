@@ -1,100 +1,112 @@
-	/*----------RESET----------*/
-	body, #body-table, #body-cell {height: 100% !important;margin: 0;padding: 0;width: 100% !important;}
-	table {border-collapse: collapse;}
-	img {display: block;border: 0;outline: none;text-decoration: none;height: auto;}
-	a img {border: 0;outline: none;text-decoration: none;}
-	.img-inline {display: inline;}
-	h1, h2, h3, h4, h5, h6 {margin: 0;padding: 0;line-height: 100%;}
+/* MCCLATCHY EMAIL FRAMEWORK UPDATED 6 JAN 2022 */
+/* -----RESET----- */
+body, #body-table, #body-cell {margin: 0 auto !important;padding: 0 !important;height: 100% !important;width: 100% !important;}
+table {border-spacing: 0 !important;border-collapse: collapse !important;}
+img {display: block;border: 0;outline: none;text-decoration: none;height: auto;}
+a img {border: 0;outline: none;text-decoration: none;}
+.img-inline {display: inline;}
+h1, h2, h3, h4, h5, h6 {margin: 0;padding: 0;line-height: 100%;}
 
-	/*----------DESIGN SYSTEM STYLES----------*/
-	/* overall background color */
-	body, #body-cell {background-color: #f4f4f4;}
+/* -----EMAIL DESIGN SYSTEM----- */
+/* overall background color */
+body, #body-cell {background-color: #f4f4f4;}
 
-	/* preview-text */
-	.preview-text {display: none;font-family: Tahoma, Arial, sans-serif;max-height: 0;font-size: 1px; line-height: 1px; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; mso-hide: all;}
+/* preview text */
+.preview-text {display: none;max-height: 0;font-size: 1px; line-height: 1px; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; mso-hide: all;font-family: sans-serif;}
 
-	/* delete if you do not want padding below the header */
-	#header {padding-bottom: 24px;}
+/* delete if you do not want padding below the header */
+#header {padding-bottom: 24px;}
 
-	/* spacing */
-	.card {padding: 24px;}
-	.pt24 {padding-top: 24px;}
-	.ps24 {padding-right: 24px;padding-left: 24px;}
-	.pb24 {padding-bottom: 24px;}
-	.pt16 {padding-top: 16px;}
-	.ps16 {padding-right: 16px;padding-left: 16px;}
-	.pb16 {padding-bottom: 16px;}
-	.pt8 {padding-top: 8px;}
-	.ps8 {padding-right: 8px;padding-left: 8px;}
-	.pb8 {padding-bottom: 8px;}
+/* spacing */
+.card {padding: 24px;}
+.card-mobile {padding-bottom: 24px;}
+.pt24 {padding-top: 24px;}
+.ps24 {padding-right: 24px;padding-left: 24px;}
+.pb24 {padding-bottom: 24px;}
+.pt16 {padding-top: 16px;}
+.ps16 {padding-right: 16px;padding-left: 16px;}
+.pb16 {padding-bottom: 16px;}
+.pt8 {padding-top: 8px;}
+.ps8 {padding-right: 8px;padding-left: 8px;}
+.pb8 {padding-bottom: 8px;}
 
-	/* columns */
-	.col {padding-right: 12px;padding-left: 12px;}
-	.col-fixed {padding-right: 12px;padding-left: 12px;} /* a column that should not collapse */
-	.first {padding-left: 0;}
-	.row-end {padding-right: 0;} /* a column at the end of a row where the next row will also have columns */
-	.last {padding-right: 0;} /* the very last column in a group */
+/* columns */
+.col {padding-right: 12px;padding-bottom: 24px;padding-left: 12px;}
+.col-fixed {padding-right: 12px;padding-bottom: 24px;padding-left: 12px;} /* a column that should not collapse */
+.first {padding-left: 0;} /* the first column in a row */
+.last {padding-right: 0;} /* the last column in a row */
 
-	/* typography */
-	.p {font-family: 'Noto Sans', Tahoma, Arial, sans-serif;font-weight: 400;color: #222;font-size: 16px;line-height: 24px;}
-	.small {font-family: 'Noto Sans', Tahoma, Arial, sans-serif;font-weight: 400;color: #222;font-size: 14px;line-height: 20px;}
-	.h1 {font-family: 'Noto Sans', Tahoma, Arial, sans-serif;font-weight: 700;font-size: 36px;line-height: 40px;color: #222;}
-	.h2 {font-family: 'Noto Sans', Tahoma, Arial, sans-serif;font-weight: 400;font-size: 24px;line-height: 32px;color: #222;}
-	.h3 {font-family: 'Noto Sans', Tahoma, Arial, sans-serif;font-weight: 700;font-size: 18px;line-height: 24px;text-transform: uppercase;color: #222;}
-	.h4 {font-family: 'Noto Serif', 'Times New Roman', serif;font-weight: 700;font-size: 18px;line-height: 24px;color: #222;}
+/* typography */
+.p {font-family: 'Noto Sans', Tahoma, Arial, sans-serif;font-weight: 400;color: #222;font-size: 16px;line-height: 24px;}
+.small {font-family: 'Noto Sans', Tahoma, Arial, sans-serif;font-weight: 400;color: #222;font-size: 14px;line-height: 20px;}
+.h1 {font-family: 'Noto Sans', Tahoma, Arial, sans-serif;font-weight: 700;font-size: 36px;line-height: 40px;color: #222;}
+.h2 {font-family: 'Noto Sans', Tahoma, Arial, sans-serif;font-weight: 400;font-size: 24px;line-height: 32px;color: #222;}
+.h3 {font-family: 'Noto Sans', Tahoma, Arial, sans-serif;font-weight: 700;font-size: 18px;line-height: 24px;text-transform: uppercase;color: #222;}
+.h4 {font-family: 'Noto Serif', 'Times New Roman', serif;font-weight: 700;font-size: 18px;line-height: 24px;color: #222;}
+.fine-print {font-family: 'Noto Sans', Tahoma, Arial, sans-serif;font-weight: 400;color: #525252;font-size: 11px;line-height: 16px;}
 
-	/* buttons */
-	.button {border-radius: 2px;background-color: #222;}
-	.button-link {display: block;padding: 8px 16px;border: 1px solid #222;border-radius: 2px;font-family: 'Noto Sans', Tahoma, Arial, sans-serif;color: #fff;font-weight: 700;font-size: 16px;line-height: 24px;letter-spacing: 1px;text-transform: uppercase;text-decoration: none;}
-	.border-blue {border-color: #31409f;}
-	.border-white {border-color: #fff;}
+/* buttons */
+.button {border-radius: 2px;}
+.button-a {display: block;padding: 8px 16px;border-radius: 2px;font-family: 'Noto Sans', Tahoma, Arial, sans-serif;font-weight: 700;font-size: 16px;line-height: 24px;letter-spacing: 1px;text-transform: uppercase;text-decoration: none;}
+.button-default {background-color: #222;}
+.button-default-a {border: 1px solid #222;color: #fff;}
+.button-accent {background-color: #31409f;}
+.button-accent-a {border: 1px solid #31409f;color: #fff;}
+.button-reverse {background-color: #fff;}
+.button-reverse-a-default {border: 1px solid #fff;color: #222;}
+.button-reverse-a-accent {border: 1px solid #fff;color: #31409f;}
 
-	/* background color modifiers for cards and buttons */
-	.bg-gray {background-color: #222;}
-	.bg-white {background-color: #fff;}
-	.bg-blue {background-color: #31409f;}
+/* background color modifiers for cards and buttons */
+.bg-gray {background-color: #222;}
+.bg-white {background-color: #fff;}
+.bg-blue {background-color: #31409f;}
 
-	/* text modifiers -- be sure to keep these last */
-	.bold {font-weight: 700;}
-	.serif {font-family: 'Noto Serif', Georgia, serif;}
-	.gray {color: #222;}
-	.white {color: #fff;}
-	.blue {color: #31409f;}
-	.light-blue {color: #808CD8;}
+/* text modifiers -- be sure to keep these last */
+.a {text-decoration: underline;}
+.bold {font-weight: 700;}
+.serif {font-family: 'Noto Serif', 'Times New Roman', serif;}
+.gray {color: #222;}
+.white {color: #fff;}
+.blue {color: #31409f;}
+.light-blue {color: #808CD8;}
 
-	/*----------CUSTOM STYLES----------*/
+/* -----CUSTOM STYLES----- */
 
+/* -----MOBILE STYLES----- */
 
-	/*----------MOBILE STYLES----------*/
-	@media only screen and (max-width: 480px) {
-		#email-table {
-			height: auto !important;
-			max-width: 480px !important;
-			width: 100% !important;
-		}
-		.collapse {
-			display: block !important;
-			width: 100% !important;
-			direction: ltr !important;
-		}
-		img {
-			max-width: 100% !important;
-		}
-		.center-mobile {
-			text-align: center !important;
-		}
-		.center-mobile img {
-			margin: 0 auto !important;
-		}
-		.col {
-			padding-left: 0 !important;
-			padding-right: 0 !important;
-			padding-bottom: 24px !important;
-		}
-		.last {
-			padding-bottom: 0 !important;
-		}
+@media only screen and (max-width: 480px) {
+	#main-table {
+		height: auto !important;
+		max-width: 480px !important;
+		width: 100% !important;
 	}
-	@media only screen and (max-width: 320px) {
-		/* sometimes needed to reduce text sizes for the smallest screens */
+	#header {
+		padding-bottom: 0 !important;
 	}
+	.collapse {
+		display: block !important;
+		width: 100% !important;
+		direction: ltr !important;
+	}
+	.card-mobile {
+		padding: 0 24px 24px !important;
+	}
+	img {
+		max-width: 100% !important;
+	}
+	.center-mobile {
+		text-align: center !important;
+	}
+	.center-mobile img {
+		margin: 0 auto !important;
+	}
+	.col {
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+	}
+}
+@media only screen and (max-width: 320px) {}
+/* button hovers -- do not delete */
+.button-default:hover, .button-default-a:hover {background-color: #444;border-color: #444 !important;}
+.button-accent:hover, .button-accent-a:hover {background-color: #4C5DC8;border-color: #4C5DC8 !important;}
+.button-reverse:hover, .button-reverse-a-default:hover, .button-reverse-a-accent:hover {background-color: #ddd;border-color: #ddd !important;}

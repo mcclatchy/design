@@ -105,7 +105,7 @@
     </h2>
     <p>All CSS for buttons is found in the framework. Buttons are made entirely of HTML and CSS and should never be images. The default button is dark gray with white text and a dark gray border.</p>
 <div class="note">
-Note: Our buttons are coded so that the entire area of the button is clickable and not just the text. To make this method work in Outlook Desktop on Windows, it requires a border on the anchor tag. This forces Outlook to render the top and bottom padding and the border radius on the button. Otherwise none of the padding would render and it would lose the appearance of a button.
+Note: Our buttons are coded so that the entire area of the button is clickable and not just the text. To make this method work in Outlook Desktop on Windows, we included a border on the anchor tag. This forces Outlook to render the top and bottom padding and the border radius on the button. Otherwise none of the padding would render and it would lose the appearance of a button.
 </div>
 <h3 id="examples">Examples</h3>
 <div class="example">
@@ -113,16 +113,19 @@ Note: Our buttons are coded so that the entire area of the button is clickable a
 </div>
 <h3 id="html">HTML</h3>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080;font-weight:bold">table</span> <span style="color:#f00">border</span>=<span style="color:#00f">&#34;0&#34;</span> <span style="color:#f00">cellpadding</span>=<span style="color:#00f">&#34;0&#34;</span> <span style="color:#f00">cellspacing</span>=<span style="color:#00f">&#34;0&#34;</span> <span style="color:#f00">role</span>=<span style="color:#00f">&#34;presentation&#34;</span>&gt;
-	&lt;<span style="color:#000080;font-weight:bold">tr</span>&gt;
-		&lt;<span style="color:#000080;font-weight:bold">td</span> <span style="color:#f00">align</span>=<span style="color:#00f">&#34;center&#34;</span> <span style="color:#f00">valign</span>=<span style="color:#00f">&#34;top&#34;</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;button&#34;</span>&gt;
-			&lt;<span style="color:#000080;font-weight:bold">a</span> <span style="color:#f00">href</span>=<span style="color:#00f">&#34;#&#34;</span> <span style="color:#f00">target</span>=<span style="color:#00f">&#34;_blank&#34;</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;button-link&#34;</span>&gt;Button Text&lt;/<span style="color:#000080;font-weight:bold">a</span>&gt;
-		&lt;/<span style="color:#000080;font-weight:bold">td</span>&gt;
-	&lt;/<span style="color:#000080;font-weight:bold">tr</span>&gt;
+  &lt;<span style="color:#000080;font-weight:bold">tr</span>&gt;
+    &lt;<span style="color:#000080;font-weight:bold">td</span> <span style="color:#f00">align</span>=<span style="color:#00f">&#34;center&#34;</span> <span style="color:#f00">valign</span>=<span style="color:#00f">&#34;top&#34;</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;button button-default&#34;</span>&gt;
+      &lt;<span style="color:#000080;font-weight:bold">a</span> <span style="color:#f00">href</span>=<span style="color:#00f">&#34;#&#34;</span> <span style="color:#f00">target</span>=<span style="color:#00f">&#34;_blank&#34;</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;button-a button-default-a&#34;</span>&gt;Button&lt;/<span style="color:#000080;font-weight:bold">a</span>&gt;
+    &lt;/<span style="color:#000080;font-weight:bold">td</span>&gt;
+  &lt;/<span style="color:#000080;font-weight:bold">tr</span>&gt;
 &lt;/<span style="color:#000080;font-weight:bold">table</span>&gt;
 </code></pre></div><h3 id="rules">Rules</h3>
-<p>Be sure to include the <code>.button</code> and <code>.button-link</code> classes as shown above.</p>
-<p>To change the background color, there are helper classes to add after the default <code>.button</code> class: <code>.bg-white</code> and <code>.bg-blue</code>. You must also add in a border class to match the background color that goes in <em>after</em> the <code>.button-link</code> class. The border classes are <code>.border-white</code> and <code>.border-blue</code> (<code>.button-link</code> already has the dark gray border for the default button).</p>
-<p>To change the link color, the helper classes are: <code>.gray</code> and <code>.blue</code>. The link color should match the background color of the card, with the exception of a light gray card, where the button text is white.</p>
+<p>Be sure to include the <code>.button</code> and <code>.button-a</code> classes as shown above.</p>
+<p>To change the button color, change the <code>.button-default</code> class to either <code>.button-accent</code> for blue or <code>.button-reverse</code> for white, then change <code>.button-default-a</code> to <code>.button-accent-a</code> (white text on blue button), <code>.button-reverse-a-default</code> (dark gray text on white button) or <code>.button-reverse-a-accent</code> (blue text on white button).</p>
+<p>The text color should match the background color of the card, with the exception of a light gray card, where the button text is white. Please note, the CSS for the button hover effect is in a separate style tag in the framework file with the <code>data-embed</code> attribute added to the style. This prevents the CSS inliner tool from removing this CSS.</p>
+<div class="note">
+In the rare circumstance where a button may need to be a color other than one of the included options, use the HTML and CSS included in the framework file as a guide to create it.
+</div>
 
   </div>
 
@@ -171,14 +174,6 @@ Note: Our buttons are coded so that the entire area of the button is clickable a
 				<a class="" href="https://mcclatchy.github.io/design/email/frameworks/standard-framework/">Email Framework</a>
 			</h4>
 			<p class="summary">standard email framework</p>
-		</div>
-		
-		
-		<div class="package">
-			<h4 class="sans bold">
-				<a class="" href="https://mcclatchy.github.io/design/email/frameworks/full-width-framework/">Full-Width Email Framework</a>
-			</h4>
-			<p class="summary">used for full-width backgrounds</p>
 		</div>
 		
 	</div>
@@ -254,13 +249,13 @@ Note: Our buttons are coded so that the entire area of the button is clickable a
 
 	<div class="atoms">
 		<div class="label">
-			<h5>MOLECULES</h5>
+			<h5>MODULES</h5>
 		</div>
 		
 		
 		<div class="package">
 			<h4 class="sans bold">
-				<a class="" href="https://mcclatchy.github.io/design/email/molecules/apps-molecule/">App Molecule</a>
+				<a class="" href="https://mcclatchy.github.io/design/email/modules/apps-module/">App Module</a>
 			</h4>
 			<p class="summary">download our app and app badges</p>
 		</div>
@@ -268,7 +263,7 @@ Note: Our buttons are coded so that the entire area of the button is clickable a
 		
 		<div class="package">
 			<h4 class="sans bold">
-				<a class="" href="https://mcclatchy.github.io/design/email/molecules/basic-molecule/">Basic Molecule</a>
+				<a class="" href="https://mcclatchy.github.io/design/email/modules/basic-module/">Basic Module</a>
 			</h4>
 			<p class="summary">large icon, subheading, body copy and button</p>
 		</div>

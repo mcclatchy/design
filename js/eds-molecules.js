@@ -97,8 +97,8 @@ class EdsBasicMolecule extends HTMLElement {
                           <td align="center" valign="top">
                             <table role="presentation" border="0" cellpadding="0" cellspacing="0">
                               <tr>
-                                <td align="center" valign="top" class="button">
-                                  <a href="#" target="_blank" class="button-link">Button</a>
+                                <td align="center" valign="top" class="button button-default">
+                                  <a href="#" target="_blank" class="button-a button-default-a">Button</a>
                                 </td>
                               </tr>
                             </table>
@@ -146,20 +146,20 @@ class EdsButtons extends HTMLElement {
 
     <table role="presentation" border="0" cellpadding="0" cellspacing="0">
       <tr>
-        <td align="center" valign="top" class="button">
-          <a href="#" class="button-link">Button Text</a>
+        <td align="center" valign="top" class="button button-default">
+          <a href="#" class="button-a button-default-a">Button Text</a>
         </td>
         <td class="ps8"></td>
-        <td align="center" valign="top" class="button bg-blue">
-          <a href="#" class="button-link border-blue white">Button Text</a>
+        <td align="center" valign="top" class="button button-accent">
+          <a href="#" class="button-a button-accent-a">Button Text</a>
         </td>
         <td class="ps8"></td>
-        <td align="center" valign="top" class="button bg-white">
-          <a href="#" class="button-link border-white gray">Button Text</a>
+        <td align="center" valign="top" class="button button-reverse">
+          <a href="#" class="button-a button-reverse-a-default">Button Text</a>
         </td>
         <td class="ps8"></td>
-        <td align="center" valign="top" class="button bg-white">
-          <a href="#" class="button-link border-white blue">Button Text</a>
+        <td align="center" valign="top" class="button button-reverse">
+          <a href="#" class="button-a button-reverse-a-accent">Button Text</a>
         </td>
       </tr>
     </table>

@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>App Molecule</title>
+    <title>App Module</title>
     <meta name="description" content="download our app and app badges">
     
     <meta charset="UTF-8">
@@ -101,9 +101,9 @@
     </div>
 <div class="panels">
   <div class="paper story-body details">
-    <h2 class="page-header">App Molecule
+    <h2 class="page-header">App Module
     </h2>
-    <p>This molecule is frequently used before the footer in marketing emails.</p>
+    <p>This module is frequently used before the footer in marketing emails.</p>
 <h3 id="example">Example</h3>
 <div class="example">
 	<eds-app-molecule></eds-app-molecule>
@@ -123,10 +123,10 @@
 			&lt;<span style="color:#000080;font-weight:bold">table</span> <span style="color:#f00">role</span>=<span style="color:#00f">&#34;presentation&#34;</span> <span style="color:#f00">border</span>=<span style="color:#00f">&#34;0&#34;</span> <span style="color:#f00">cellpadding</span>=<span style="color:#00f">&#34;0&#34;</span> <span style="color:#f00">cellspacing</span>=<span style="color:#00f">&#34;0&#34;</span> <span style="color:#f00">width</span>=<span style="color:#00f">&#34;100%&#34;</span>&gt;
 				&lt;<span style="color:#000080;font-weight:bold">tr</span>&gt;
 					&lt;<span style="color:#000080;font-weight:bold">td</span> <span style="color:#f00">align</span>=<span style="color:#00f">&#34;right&#34;</span> <span style="color:#f00">valign</span>=<span style="color:#00f">&#34;top&#34;</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;col-fixed first&#34;</span>&gt;
-						&lt;<span style="color:#000080;font-weight:bold">a</span> <span style="color:#f00">href</span>=<span style="color:#00f">&#34;https://&lt;%= recipient.siteBrand.iosApp %&gt;&#34;</span> <span style="color:#f00">target</span>=<span style="color:#00f">&#34;_blank&#34;</span>&gt;&lt;<span style="color:#000080;font-weight:bold">img</span> <span style="color:#f00">src</span>=<span style="color:#00f">&#34;https://media.mcclatchy.com/email-assets/global/app-store-badge.png&#34;</span> <span style="color:#f00">width</span>=<span style="color:#00f">&#34;120&#34;</span> <span style="color:#f00">alt</span>=<span style="color:#00f">&#34;Download on the App Store&#34;</span> /&gt;&lt;/<span style="color:#000080;font-weight:bold">a</span>&gt;
+						&lt;<span style="color:#000080;font-weight:bold">a</span> <span style="color:#f00">href</span>=<span style="color:#00f">&#34;https://&lt;%= recipient.siteBrand.iosApp %&gt;?ac_cid=&lt;%= message.delivery.internalName %&gt;&amp;ac_bid=&lt;%= message.id %&gt;&#34;</span> <span style="color:#f00">target</span>=<span style="color:#00f">&#34;_blank&#34;</span>&gt;&lt;<span style="color:#000080;font-weight:bold">img</span> <span style="color:#f00">src</span>=<span style="color:#00f">&#34;https://media.mcclatchy.com/email-assets/global/app-store-badge.png&#34;</span> <span style="color:#f00">width</span>=<span style="color:#00f">&#34;120&#34;</span> <span style="color:#f00">alt</span>=<span style="color:#00f">&#34;Download on the App Store&#34;</span> /&gt;&lt;/<span style="color:#000080;font-weight:bold">a</span>&gt;
 					&lt;/<span style="color:#000080;font-weight:bold">td</span>&gt;
 					&lt;<span style="color:#000080;font-weight:bold">td</span> <span style="color:#f00">align</span>=<span style="color:#00f">&#34;left&#34;</span> <span style="color:#f00">valign</span>=<span style="color:#00f">&#34;top&#34;</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;col-fixed last&#34;</span>&gt;
-						&lt;<span style="color:#000080;font-weight:bold">a</span> <span style="color:#f00">href</span>=<span style="color:#00f">&#34;https://&lt;%= recipient.siteBrand.googlePlayApp %&gt;&#34;</span> <span style="color:#f00">target</span>=<span style="color:#00f">&#34;_blank&#34;</span>&gt;&lt;<span style="color:#000080;font-weight:bold">img</span> <span style="color:#f00">src</span>=<span style="color:#00f">&#34;https://media.mcclatchy.com/email-assets/global/google-play-badge.png&#34;</span> <span style="color:#f00">width</span>=<span style="color:#00f">&#34;134&#34;</span> <span style="color:#f00">alt</span>=<span style="color:#00f">&#34;Get it on Google Play&#34;</span> /&gt;&lt;/<span style="color:#000080;font-weight:bold">a</span>&gt;
+						&lt;<span style="color:#000080;font-weight:bold">a</span> <span style="color:#f00">href</span>=<span style="color:#00f">&#34;https://&lt;%= recipient.siteBrand.googlePlayApp %&gt;?ac_cid=&lt;%= message.delivery.internalName %&gt;&amp;ac_bid=&lt;%= message.id %&gt;&#34;</span> <span style="color:#f00">target</span>=<span style="color:#00f">&#34;_blank&#34;</span>&gt;&lt;<span style="color:#000080;font-weight:bold">img</span> <span style="color:#f00">src</span>=<span style="color:#00f">&#34;https://media.mcclatchy.com/email-assets/global/google-play-badge.png&#34;</span> <span style="color:#f00">width</span>=<span style="color:#00f">&#34;134&#34;</span> <span style="color:#f00">alt</span>=<span style="color:#00f">&#34;Get it on Google Play&#34;</span> /&gt;&lt;/<span style="color:#000080;font-weight:bold">a</span>&gt;
 					&lt;/<span style="color:#000080;font-weight:bold">td</span>&gt;
 				&lt;/<span style="color:#000080;font-weight:bold">tr</span>&gt;
 			&lt;/<span style="color:#000080;font-weight:bold">table</span>&gt;
@@ -184,14 +184,6 @@
 				<a class="" href="https://mcclatchy.github.io/design/email/frameworks/standard-framework/">Email Framework</a>
 			</h4>
 			<p class="summary">standard email framework</p>
-		</div>
-		
-		
-		<div class="package">
-			<h4 class="sans bold">
-				<a class="" href="https://mcclatchy.github.io/design/email/frameworks/full-width-framework/">Full-Width Email Framework</a>
-			</h4>
-			<p class="summary">used for full-width backgrounds</p>
 		</div>
 		
 	</div>
@@ -267,13 +259,13 @@
 
 	<div class="atoms">
 		<div class="label">
-			<h5>MOLECULES</h5>
+			<h5>MODULES</h5>
 		</div>
 		
 		
 		<div class="package eds-active">
 			<h4 class="sans bold">
-				<a class="" href="https://mcclatchy.github.io/design/email/molecules/apps-molecule/">App Molecule</a>
+				<a class="" href="https://mcclatchy.github.io/design/email/modules/apps-module/">App Module</a>
 			</h4>
 			<p class="summary">download our app and app badges</p>
 		</div>
@@ -281,7 +273,7 @@
 		
 		<div class="package">
 			<h4 class="sans bold">
-				<a class="" href="https://mcclatchy.github.io/design/email/molecules/basic-molecule/">Basic Molecule</a>
+				<a class="" href="https://mcclatchy.github.io/design/email/modules/basic-module/">Basic Module</a>
 			</h4>
 			<p class="summary">large icon, subheading, body copy and button</p>
 		</div>
