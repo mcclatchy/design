@@ -1,0 +1,33 @@
+/**
+ * offer details card
+ */
+
+.offer-details {
+  padding: var(--padding, 30px);
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+}
+
+.swg-details .small {
+  font-size: 0.7rem;
+}
+
+.paywall-offer {
+  font: 0.875rem var(--sans);
+  --padding: 30px;
+  --spread: 10px;
+  --link-color: var(--promo);
+  --link-hover-color: var(--promo);
+  --label-text-color: var(--promo);
+  --label-background-color: white;
+  text-align: center;
+  align-items: unset;
+}
+
+.paywall-offer .package {
+  align-items: center;
+  padding: 0;
+}
+
+.paywall-offer .more-link {
+  --text-color: var(--promo);
+}

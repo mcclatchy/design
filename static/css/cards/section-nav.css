@@ -25,7 +25,7 @@
 }
 
 .section-nav .icons > * {
-  padding-bottom: 0;
+  padding: 0 15px;
 }
 
 @media(max-width: 600px) {

@@ -1,0 +1,34 @@
+.page-title {
+  text-align: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 600px;
+  font: 16px var(--sans);
+  --header-family: var(--sans);
+  --header-weight: bold;
+  --header-transform: none;
+}
+
+.page-title .secure {
+  font-size: small;
+  color: var(--gray);
+  text-transform: uppercase;
+}
+
+.page-title .more-link {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  color: var(--promo);
+}
+
+.page-title .circle-icon {
+  clip-path: circle(22px)
+}
+
+.page-title .circle-icon svg {
+  display: block;
+  width: 24px;
+  padding: 10px;
+}

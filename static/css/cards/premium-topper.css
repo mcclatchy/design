@@ -8,11 +8,20 @@
   background-color: var(--subBlue);
   color: white;
   padding: calc(var(--gap) * 2) var(--page-padding);
+  font: 1rem/1.5em var(--premium-sans);
   --text-color: white;
-  --text-size: calc(14px + (16 - 14) * ( 100vw - 400px ) / (1400 - 400));
   --link-color: white;
   --link-decoration: underline;
   --link-hover-color: var(--subYellow);
+}
+
+.topper h1 {
+  font: normal 54px/1.1em var(--premium-serif);
+}
+
+.topper h3 {
+  font: normal 13px/1.1em var(--premium-sans);
+  color: var(--subYellow);
 }
 
 .msb .topper:not(.loaded) {

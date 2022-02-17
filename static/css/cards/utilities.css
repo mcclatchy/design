@@ -1,4 +1,54 @@
 /**
+ * Utilities
+ */
+
+.cutout {
+  background-color: var(--bodyBackground);
+}
+
+.gray {
+  color: var(--text-color, var(--gray));
+  --button-color: var(--text-color, var(--gray));
+}
+
+.no-caps {
+  text-transform: none;
+}
+
+.center-text {
+  text-align: center;
+  align-items: center;
+}
+
+.serif {
+  font-family: var(--serif);
+  --header-family: var(--serif);
+}
+
+.sans {
+  font-family: var(--sans);
+  --header-family: var(--sans);
+}
+
+.bold {
+  font-weight: bold;
+  --header-weight: bold;
+}
+
+.soft {
+  font-weight: normal;
+  --header-weight: normal;
+}
+
+.small {
+  font-size: small;
+}
+
+.flush {
+  padding: 0;
+}
+
+/**
  * Display classes
  */
 

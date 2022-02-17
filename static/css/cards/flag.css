@@ -18,7 +18,7 @@ html.msb .masthead {
   --border-color: white;
 }
 
-.flag {
+.sds-flag {
   display: grid;
   gap: 15px;
   grid-template-areas:
@@ -37,7 +37,7 @@ html.msb .masthead {
   --link-decoration: none;
 }
 
-.msb .flag {
+.msb .sds-flag {
   grid-template-areas:
     "menu edition account"
     "logo logo logo"
@@ -45,7 +45,7 @@ html.msb .masthead {
 }
 
 @media(min-width: 768px) {
-  .flag {
+  .sds-flag {
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
       "menu account"
@@ -54,7 +54,7 @@ html.msb .masthead {
       "nav nav";
   }
 
-  .msb .flag {
+  .msb .sds-flag {
     grid-template-areas:
       "menu account"
       "left right"
@@ -65,7 +65,7 @@ html.msb .masthead {
 }
 
 @media(min-width: 1024px) {
-  .flag {
+  .sds-flag {
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-areas:
       "menu . account"
@@ -73,7 +73,7 @@ html.msb .masthead {
       "nav nav nav";
   }
 
-  .msb .flag {
+  .msb .sds-flag {
     grid-template-areas:
       "menu edition account"
       "left logo right"

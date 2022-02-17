@@ -4,7 +4,7 @@
 
 :root {
   /* Fonts */
-  font: 18px/1.5rem var(--serif);
+  font: 16px/1.5rem var(--serif);
   --sans: "Noto Sans", sans-serif;
   --serif: "Noto Serif", serif;
   --premium-sans: "Inter", sans-serif;
@@ -67,29 +67,29 @@ h6, .h6 {
 }
 
 h1, .h1 {
-  font-size: 1.7rem;
+  font-size: var(--header-size, 1.875rem);
   font-weight: bold;
   line-height: 1.1em;
 }
 
 h2, .h2 {
-  font-size: 1.35rem;
+  font-size: var(--header-size, 1.5rem);
 }
 
 h3, .h3 {
-  font-size: 1.1rem;
+  font-size: var(--header-size, 1.2rem);
 }
 
 h4, .h4 {
-  font-size: .9rem;
+  font-size: var(--header-size, 1rem);
 }
 
 h5, .h5 {
-  font: bold 0.75rem var(--sans);
+  font: bold 0.875rem var(--sans);
 }
 
 h6, .h6 {
-  font: 0.65rem var(--sans);
+  font: 0.75rem var(--sans);
 }
 
 a {
@@ -122,7 +122,7 @@ time, .time, .byline {
   display: inline-block;
   text-transform: uppercase;
   color: var(--text-color, var(--gray));
-  font: 0.65rem/1.1em var(--sans);
+  font: 0.75rem/1.1em var(--sans);
 }
 
 .byline a {
@@ -135,7 +135,7 @@ time, .time, .byline {
 }
 
 summary, .summary {
-  font: 0.75rem var(--sans);
+  font: 0.875rem var(--sans);
 }
 
 .label {
@@ -165,7 +165,7 @@ summary, .summary {
 }
 
 .more-link {
-  display: block;
+  display: inline-block;
   font: 700 0.875rem/1em var(--sans);
   text-transform: uppercase;
   color: var(--text-color, var(--gray));
@@ -206,19 +206,18 @@ hr {
 
 .button {
   display: inline-block;
-  padding: 8px 10px;
+  padding: .4em 1em;
   border-radius: 3px;
-  font-weight: bold;
-  font-family: var(--sans);
+  font: bold 1rem var(--sans);
   color: var(--button-text-color);
   background-color: var(--button-color);
   text-transform: uppercase;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .button:hover {
-  color: var(--button-hover-text-color, var(--button-text-color));
-  background-color: var(--button-hover-color, var(--button-color));
+  color: var(--button-text-color);
   text-decoration: none;
 }
 
@@ -235,6 +234,9 @@ hr {
   border-radius: 1.5em;
 }
 
+.button > img {
+  display: block;
+}
 
 /**
  * Form elements
@@ -293,7 +295,7 @@ label .select {
 label small,
 label + small {
   display: block;
-  font-weight: 400;
+  font: 400 0.875rem var(--sans);
   color: var(--text-color, #707070);
   margin-top: 2px;
 }
@@ -460,25 +462,4 @@ figcaption, .caption {
   background-color: #757575;
   --paper-color: #757575;
   cursor: not-allowed;
-}
-
-/**
- * Some utilities I can't get rid of yet
- */
-
-.cutout {
-  background-color: var(--bodyBackground);
-}
-
-.gray {
-  color: var(--text-color, var(--gray));
-  --button-color: var(--text-color, var(--gray));
-}
-
-.no-caps {
-  text-transform: none;
-}
-
-.soft {
-  font-weight: normal;
 }

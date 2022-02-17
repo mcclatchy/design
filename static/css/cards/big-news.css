@@ -41,7 +41,11 @@ section.big-news {
 }
 
 .big-news .grid:not(.featured) {
-  gap: 0;
+  padding: 0 15px;
+}
+
+.big-news .grid:not(.featured) .package {
+  padding: 0;
 }
 
 .big-news .featured {
