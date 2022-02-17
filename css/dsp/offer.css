@@ -1,0 +1,78 @@
+/*****
+ ** DSP offer molecule
+ ****/
+
+.dsp-offer {
+  font: 0.875rem var(--sans);
+  --header-family: var(--serif);
+  --header-transform: none;
+  --header-weight: bold;
+  --spread: 5px;
+  --link-color: var(--promo);
+  --link-hover-color: var(--promo);
+  position: relative;
+  display: grid;
+  grid-gap: 15px;
+  padding: 30px;
+  justify-items: center;
+  text-align: center;
+}
+
+.dsp-offer .package {
+  padding: 0;
+}
+
+.dsp-offer > * {
+  margin: 0;
+  max-width: 600px;
+}
+
+.dsp-offer li {
+  color: var(--gray);
+  margin: 5px 0;
+  list-style: disc inside;
+}
+
+.dsp-offer .summary {
+  opacity: 0.8;
+}
+
+.dsp-offer .terms {
+  font-size: 0.75rem;
+  color: var(--gray);
+}
+
+.dsp-offer .button {
+  align-self: unset;
+}
+
+/**
+ * Horizontal Nissan Cube version
+ */
+
+@media (min-width: 660px) {
+  .dsp-offer.horizontal {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    padding: 30px;
+    justify-items: start;
+    text-align: left;
+    align-self: stretch;
+  }
+
+  .dsp-offer.horizontal > * {
+    grid-column: 1;
+  }
+
+  .dsp-offer.horizontal > .button {
+    grid-column: 2;
+    grid-row: 1/-1;
+    align-self: center;
+    justify-self: end;
+  }
+
+  .dsp-offer-label {
+    padding-left: 30px;
+    justify-content: start;
+  }
+}

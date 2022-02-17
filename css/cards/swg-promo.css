@@ -3,8 +3,14 @@
  */
 
 .card.swg-promo .package {
-  --hw: 400;
-  --hf: var(--sans);
+  --header-weight: 400;
+  --header-family: var(--sans);
+}
+
+.card.swg-promo .promo {
+  background-color: var(--promo);
+  color: white;
+  justify-content: center;
 }
 
 .card.swg-promo .title {

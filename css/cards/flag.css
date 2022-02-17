@@ -1,0 +1,162 @@
+/**
+ * Flag styles
+ */
+
+.masthead {
+  --paper-color: transparent;
+  --paper-shadow: none;
+}
+
+body.story .masthead {
+  --paper-color: white;
+}
+
+html.msb .masthead {
+  --paper-color: var(--subBlue);
+  --text-color: white;
+  --link-color: white;
+  --border-color: white;
+}
+
+.sds-flag {
+  display: grid;
+  gap: 15px;
+  grid-template-areas:
+    "menu account"
+    "logo logo"
+    "nav nav";
+  align-items: center;
+  margin: 0 auto;
+  padding: var(--page-padding);
+  padding-bottom: 0;
+  font: bold 13px/1em var(--premium-sans);
+  color: var(--text-color);
+
+  /* Custom properties for kids */
+  --spread: 15px;
+  --link-decoration: none;
+}
+
+.msb .sds-flag {
+  grid-template-areas:
+    "menu edition account"
+    "logo logo logo"
+    "nav nav nav";
+}
+
+@media(min-width: 768px) {
+  .sds-flag {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "menu account"
+      "left right"
+      "logo logo"
+      "nav nav";
+  }
+
+  .msb .sds-flag {
+    grid-template-areas:
+      "menu account"
+      "left right"
+      "edition edition"
+      "logo logo"
+      "nav nav"
+  }
+}
+
+@media(min-width: 1024px) {
+  .sds-flag {
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas:
+      "menu . account"
+      "left logo right"
+      "nav nav nav";
+  }
+
+  .msb .sds-flag {
+    grid-template-areas:
+      "menu edition account"
+      "left logo right"
+      "nav nav nav"
+  }
+}
+
+/**
+ * Children
+ */
+
+.sds-flag button {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+}
+
+.flag-menu {
+  grid-area: menu;
+  --spread: 15px;
+}
+
+.flag-account {
+  grid-area: account;
+  place-self: end;
+  min-height: 30px;
+  --button-color: var(--subBlue);
+  --button-hover-text-color: var(--subYellow);
+}
+
+.flag-left {
+  grid-area: left;
+  font-size: 14px;
+  --spread: 7px;
+  --link-hover-decoration: underline;
+}
+
+.flag-right {
+  grid-area: right;
+  justify-self: end;
+  align-items: end;
+  font-size: 14px;
+  --spread: 7px;
+  --link-hover-decoration: underline;
+}
+
+.flag-edition {
+  grid-area: edition;
+  place-self: center;
+  font: bold 13px/1em var(--sans);
+}
+
+.flag-edition:before,
+.flag-edition:after {
+  content: "";
+  width: 30px;
+  height: 1px;
+  background-color: var(--subYellow);
+}
+
+.msb .flag-edition {
+  color: var(--subYellow);
+}
+
+.flag-logo {
+  grid-area: logo;
+}
+
+.logo {
+  width: 100%;
+  height: auto;
+  max-height: 75px;
+}
+
+.flag-nav {
+  grid-area: nav;
+  border-top: 2px solid var(--border-color, var(--black));
+  border-bottom: 1px solid var(--border-color, var(--black));
+  font-size: 16px;
+  padding: 15px 0;
+  --link-hover-decoration: underline;
+}
+
+.flag-nav .separator ~ * {
+  font-weight: normal;
+}

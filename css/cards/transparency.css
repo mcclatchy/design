@@ -18,7 +18,7 @@
 }
 
 .question {
-	--hf: var(--serif);
-	--hw: 400;
-	--ht: none;
+	--header-family: var(--serif);
+	--header-weight: 400;
+	--header-transform: none;
 }

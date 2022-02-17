@@ -1,0 +1,169 @@
+/**
+ * Vertical and horizontal stacks
+ */
+
+.stack, 
+.package, 
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: var(--spread);
+  --display: flex;
+}
+
+.stack > *,
+.package > *,
+.card > * {
+  margin: 0;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: var(--spread);
+  --display: flex;
+}
+
+.package {
+  padding: calc(var(--gap) / 2);
+  color: var(--text-color);
+  --header-transform: none;
+  --header-weight: normal;
+  --header-family: var(--serif);
+  --link-decoration: none;
+  --link-hover-decoration: underline;
+  --link-color: var(--text-color, inherit);
+  --link-hover-color: var(--text-color, inherit);
+}
+
+.card {
+  position: relative;
+  background-color: var(--paper-color, white);
+  color: var(--text-color);
+  box-shadow: var(--paper-shadow);
+}
+
+@media(min-width: 660px) {
+  .card.horizontal {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .card.horizontal figure {
+    align-self: stretch;
+  }
+
+  .card.horizontal figure img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 20%;
+  }
+}
+
+/**
+ * Horizontal slider for additional content
+ */
+
+.slider {
+  text-align: center;
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+
+.slider .row {
+  display: inline-flex;
+}
+
+/**
+ * Section concept for layout stacking
+ */
+
+section, .section {
+  display: grid;
+  gap: calc(var(--gap) / 2);
+  position: relative;
+  max-width: var(--section-width);
+  margin: var(--gap) auto;
+}
+
+.section-label {
+  margin: 0;
+  font-weight: bold;
+  padding: 0 var(--page-padding);
+}
+
+@media(min-width: 600px) {
+  section, .section {
+    padding: 0 var(--page-padding);
+  }
+
+  .section-label {
+    padding: 0;
+  }
+}
+
+/**
+ * Grid
+ */
+
+.grid {
+  display: grid;
+  grid-template-columns: var(--columns, repeat(auto-fit, minmax(300px, 1fr)));
+  gap: var(--gap);
+  grid-auto-flow: dense;
+}
+
+/**
+ * Expander 
+ */
+
+.expander {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  outline: none;
+}
+
+.expander:after {
+  content: "";
+  display: inline-block;
+  clip-path: polygon(0% 0%, 50% 80%, 100% 0%, 100% 20%, 50% 100%, 0% 20%, 0% 0%);
+  width: 0.8em;
+  height: 0.48em;
+  max-width: 15px;
+  max-height: 9px;
+  margin-left: 5px;
+  transition: transform .5s ease;
+  transform-origin: 50%;
+  background-color: currentColor;
+}
+
+.expander:not(.open) ~ * {
+  display: none;
+}
+
+.expander.open:after {
+  transform: rotateX(180deg);
+}
+
+/**
+ * Social media 
+ */
+
+.social-media {
+  display: flex;
+  place-content: center;
+  gap: 15px;
+}
+
+.social-media svg {
+  height: 20px;
+  width: 20px;
+}

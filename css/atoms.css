@@ -1,0 +1,474 @@
+/**
+ * Default parameters
+ */
+
+:root {
+  /* Fonts */
+  font: 16px/1.5rem var(--serif);
+  --sans: "Noto Sans", sans-serif;
+  --serif: "Noto Serif", serif;
+  --premium-sans: "Inter", sans-serif;
+  --premium-serif: "DM Serif Display", serif;
+
+  /* Spacing and alignment */
+  --gap: 30px;
+  --spread: 10px;
+  --page-padding: 15px;
+  --section-width: 1140px;
+  --story-width: 728px;
+
+  /* Colors */
+  --black: #01101c;
+  --gray: #707070;
+  --impact: #373737;
+  --promo: #31409F;
+  --subBlue: #00223e;
+  --subYellow: #ffd71a;
+  --bodyBackground: #f4f4f4;
+  --button-color: var(--impact);
+  --button-text-color: white;
+
+  /* Paper box shadow */
+  --paper-shadow: 
+    0 1px 2px 0 rgba(0, 0, 0, .2), 
+    0 1px 5px 0 rgba(0, 0, 0, .13);
+}
+
+@media(min-width: 768px) {
+  :root {
+    --page-padding: 30px;
+  }
+}
+
+body {
+  margin: 0;
+  background-color: var(--bodyBackground);
+}
+
+body.freeze {
+  overflow: hidden;
+}
+
+/**
+ * Typography
+ */
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  font-family: var(--header-family, inherit);
+  font-weight: var(--header-weight, bold);
+  text-transform: var(--header-transform, none);
+  line-height: var(--header-leading, 1.2em);
+  color: var(--header-color, var(--text-color));
+}
+
+h1, .h1 {
+  font-size: var(--header-size, 1.875rem);
+}
+
+h2, .h2 {
+  font-size: var(--header-size, 1.5rem);
+}
+
+h3, .h3 {
+  font-size: var(--header-size, 1.2rem);
+}
+
+h4, .h4 {
+  font-size: var(--header-size, 1rem);
+}
+
+h5, .h5 {
+  font: bold 0.875rem var(--sans);
+}
+
+h6, .h6 {
+  font: 0.75rem var(--sans);
+}
+
+a {
+  color: var(--link-color, inherit);
+  text-decoration: var(--link-decoration, none);
+}
+
+a:hover {
+  color: var(--link-hover-color, var(--link-color));
+  text-decoration: var(--link-hover-decoration, var(--link-decoration));
+}
+
+ul, ol {
+  padding-left: 0;
+}
+
+li {
+  margin: 5px 0 5px 1em;
+}
+
+.kicker {
+  display: block;
+  padding: 5px 8px;
+  font-weight: normal;
+  color: var(--text-color, var(--black));
+  border: 1px solid var(--text-color, var(--black));
+  border-radius: 2px;
+  text-transform: uppercase;
+  --link-decoration: none;
+  --link-hover-decoration: none;
+}
+
+time, .time, .byline {
+  display: inline-block;
+  text-transform: uppercase;
+  color: var(--text-color, var(--gray));
+  font: 0.75rem/1.1em var(--sans);
+}
+
+.byline a {
+  color: inherit;
+  font-weight: bold;
+}
+
+.credit {
+  font-style: italic;
+}
+
+summary, .summary {
+  font: 0.875rem var(--sans);
+}
+
+.label {
+  margin: 0;
+  display: grid;
+  place-items: center;
+  --link-decoration: none;
+}
+
+.label > * {
+  margin: 0;
+  padding: 5px 10px;
+  color: var(--label-text-color, white);
+  background-color: var(--label-background-color, var(--impact));
+  font-size: 0.875rem;
+  line-height: 1em;
+  --text-family: var(--sans);
+  --header-family: var(--sans);
+}
+
+.label.sticky {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.more-link {
+  display: inline-block;
+  font: 700 0.875rem/1em var(--sans);
+  text-transform: uppercase;
+  color: var(--text-color, var(--gray));
+  text-decoration: none;
+}
+
+.more-link:hover {
+  color: var(--text-color, var(--gray));
+  text-decoration: none;
+}
+
+.more-link:after {
+  content: "\2794";
+  display: inline-block;
+  transform: translateY(-.05em) translateX(4px);
+  transition: transform .6s ease;
+}
+
+.more-link:hover:after {
+  transform: translateY(-.05em) translateX(8px);
+}
+
+.dateline {
+  display: block;
+  font: italic 0.875rem var(--sans);
+  text-transform: uppercase;
+  color: var(--text-color, #757575);
+}
+
+hr {
+  align-self: stretch;
+  border: .5px solid var(--text-color, #707070);
+}
+
+/**
+ * Buttons and UI elements
+ */
+
+button, .button {
+  display: inline-block;
+  padding: .4em 1em;
+  border-radius: 3px;
+  font: bold 1rem var(--sans);
+  color: var(--button-text-color);
+  background-color: var(--button-color);
+  border: 1px solid transparent;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  color: var(--button-text-color);
+  text-decoration: none;
+}
+
+.button.big {
+  padding: 10px 35px;
+}
+
+.button.text,
+.button.ghost {
+  color: var(--button-color);
+  background-color: transparent;
+  border: 1px solid var(--button-color);
+}
+
+.button.text {
+  border: none;
+}
+
+.button.pill {
+  border-radius: 1.5em;
+}
+
+.button > img {
+  display: block;
+}
+
+/**
+ * Form elements
+ */
+
+form, .checkbox-group {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 30px;
+  text-align: left;
+  color: var(--text-color);
+}
+
+.checkbox-group {
+  grid-gap: 10px;
+}
+
+form .grid {
+  grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
+  grid-gap: 15px;
+}
+
+form > *, .checkbox-group > * {
+  margin: 0;
+}
+
+form.paper {
+  padding: calc(var(--gap) / 2);
+}
+
+label { 
+  position: relative;
+  font: 700 0.875rem var(--sans);
+  line-height: 1.5; 
+  display: block; 
+}
+
+label.checkbox {
+  display: grid;
+  grid-template-columns: min-content auto;
+  grid-gap: 8px;
+  align-items: center;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+label ~ input, 
+label ~ select, 
+label ~ .select,
+label input,
+label select, 
+label .select {
+  margin-top: 10px;
+}
+
+label small,
+label + small {
+  display: block;
+  font: 400 0.875rem var(--sans);
+  color: var(--text-color, #707070);
+  margin-top: 2px;
+}
+
+input, select, .select {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 0.875rem;
+  border: 1px solid #989898;
+  border-radius: 2px;
+  background-color: white;
+  transition: all .15s ease-in-out;
+  cursor: pointer;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"/></svg>');
+  background-repeat: no-repeat;
+  background-size: 1em 100%;
+  background-position: calc(100% - 10px) 0;
+}
+
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  border-radius: 0;
+  margin: 0;
+  outline: none;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #222;
+  box-shadow: inset 0px 0px 0px 3px white;
+}
+
+input[type="radio"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1px solid var(--tc, #707070);
+  padding: 0;
+  margin: 0;
+  outline: none;
+}
+
+input[type="radio"]:checked {
+  background-color: white;
+  box-shadow: inset 0px 0px 0px 4px #222;
+}
+
+input:focus, select:focus, .focus {
+  outline: none;
+  box-shadow: 0 0 4px 2px hsla(0, 0%, 59.6%, .75);
+}
+
+.password-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.password-label:after { 
+  content: "\f070"; 
+  font: 400 14px Font Awesome\ 5 Free;
+  cursor: pointer;
+}
+
+.password-label.active:after{
+  content: "\f06e"
+} 
+
+/**
+ * Inline SVG
+ */
+
+svg {
+  fill: var(--fill-color, var(--text-color));
+}
+
+/** 
+ * Media
+ */
+
+figure {
+  position: relative;
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  flex: none;
+}
+
+
+figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+figcaption, .caption {
+  font: 400 0.875rem/1.4em var(--sans);
+  color: var(--text-color)
+}
+
+/**
+ * Paper
+ */
+
+.paper {
+  position: relative;
+  background-color: var(--paper-color, white);
+  box-shadow: var(--paper-shadow); 
+  color: var(--text-color);
+}
+
+.paper * {
+  --paper-shadow: none;
+}
+
+/**
+ * Color schemes
+ * 
+ * Note: this is going to need an audit
+ */
+
+.impact, 
+.promo,
+.promo-light,
+.disabled,
+[disabled] {
+  background-color: var(--impact);
+  color: white;
+  --paper-color: var(--impact);
+  --text-color: white;
+  --link-color: white;
+  --link-hover-color: white;
+  --fill-color: white;
+  --button-color: white;
+  --button-text-color: var(--impact);
+}
+
+.promo {
+  background-color: var(--promo);
+  --paper-color: var(--promo);
+  --button-text-color: var(--promo);
+}
+
+.promo-light {
+  background-color: #5169B8;
+  --paper-color: #5169B8;
+  --button-text-color: #5169B8;
+}
+
+.disabled, [disabled] {
+  background-color: #757575;
+  --paper-color: #757575;
+  cursor: not-allowed;
+}

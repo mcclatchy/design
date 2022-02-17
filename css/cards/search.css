@@ -1,0 +1,42 @@
+.search-form {
+  margin: 50px 0;
+  display: grid;
+  grid-template-columns: 1fr 140px;
+  grid-gap: 15px;
+}
+
+.search-form input,
+.search-form button {
+  font-size: medium;
+}
+
+.search-form .select {
+  grid-column: span 2;
+}
+
+.search-form .select .button {
+  justify-content: space-between;
+  font-weight: normal;
+  text-transform: none;
+  padding: 0;
+  --button-color: transparent;
+  --button-text-color: var(--black);
+}
+
+/* Different grids */
+
+@media (min-width: 769px) {
+  .search-form {
+    grid-template-columns: 1fr 140px 200px;
+  }
+
+  .search-form .select {
+    grid-column: auto;
+  }
+}
+
+/* Results */
+
+.load-more {
+  justify-content: center;
+}

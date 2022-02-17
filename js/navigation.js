@@ -23,3 +23,7 @@ function toggleSubMenu() {
     d.classList.toggle("submenu-out");
   });
 }
+
+function toggleMSB() {
+  document.documentElement.classList.toggle("msb");
+}

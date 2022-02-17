@@ -1,0 +1,42 @@
+/**
+ * Social buttons for DSP
+ */
+
+.button.social {
+  display: block;
+  align-self: stretch;
+  background-color: transparent;
+  color: var(--black);
+  border: 1px solid #4a4a4a;
+}
+
+.button.social:before {
+  font-family: "Font Awesome 5 Brands";
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.button.social.facebook:before {
+  content:'\f39e';
+  color: #3b5998;
+}
+
+.button.social.google:before {
+  content:'\f1a0';
+  color: #b82000;
+}
+
+.button.social.apple:before {
+  content:'\f179';
+  color: #000;
+}
+
+.button.social.twitter:before {
+  content:'\f099';
+  color: #00aae5;
+}
+
+.button.social.paypal:before {
+  content:'\f1ed';
+  color: #00457C;
+}

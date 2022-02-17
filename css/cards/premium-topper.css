@@ -1,0 +1,57 @@
+/**
+ * Premium topper
+ */
+
+.topper {
+  display: none;
+  position: relative;
+  background-color: var(--subBlue);
+  color: white;
+  padding: calc(var(--gap) * 2) var(--page-padding);
+  font: 1rem/1.5em var(--premium-sans);
+  --text-color: white;
+  --link-color: white;
+  --link-decoration: underline;
+  --link-hover-color: var(--subYellow);
+}
+
+.msb .topper:not(.loaded) {
+  min-height: 100vh;
+}
+
+.msb .topper > * {
+  opacity: 0;
+}
+
+.msb .topper {
+  display: block;
+}
+
+.msb .topper.loaded::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: calc(50px + 8vw);
+  background-color: var(--subBlue);
+}
+
+/**
+ * Light DOM styles for the video embeds
+ */
+
+.embed-video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  background-color: #222;
+}
+
+.embed-video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}

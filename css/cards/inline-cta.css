@@ -1,11 +1,12 @@
 .inline-cta {
   text-align: left;
   align-self: center;
-  grid-gap: 5px;
   max-width: 500px;
-  --ps: 5px;
-  --bc: white;
-  --bbc: #222;
+  --spread: 10px;
+}
+
+.inline-cta.package {
+  padding: 0;
 }
 
 .inline-cta .h1 {

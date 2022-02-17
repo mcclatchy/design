@@ -2,9 +2,16 @@
  * Gallery card
  */
 
+.gallery {
+  font-family: var(--sans);
+  align-items: unset;
+  color: var(--gray);
+  --header-color: var(--black);
+}
+
 .gallery .package {
-  --hw: 400;
-  --hf: var(--sans);
+  --header-weight: 400;
+  --header-family: var(--sans);
 }
 
 .gallery-panel {
@@ -55,6 +62,7 @@
   align-items: center;
   outline: none;
   cursor: pointer;
+  background-color: transparent;
 }
 
 .gallery-button svg {
