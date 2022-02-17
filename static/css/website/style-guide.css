@@ -28,6 +28,11 @@ td:first-child {
   box-sizing: border-box;
 }
 
+pre {
+  font-size: 0.875rem;
+  line-height: 1.3em;
+}
+
 /*
  * Style guide main rules.
  */

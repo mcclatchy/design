@@ -7,7 +7,7 @@
 		</div>
 		{{ range .Site.Menus.overview }}
 		{{ $active := $cp.IsMenuCurrent "overview" . }}
-		<div class="package {{- if $active }} eds-active{{ end }}">
+		<div class="stack {{- if $active }} eds-active{{ end }}">
 			<h4 class="sans bold">
 				<a class="{{ .Page.Param "class" }}" href="{{ .Page.Permalink }}">{{ .Name }}</a>
 			</h4>
@@ -22,7 +22,7 @@
 		</div>
 		{{ range .Site.Menus.frameworks }}
 		{{ $active := $cp.IsMenuCurrent "frameworks" . }}
-		<div class="package {{- if $active }} eds-active{{ end }}">
+		<div class="stack {{- if $active }} eds-active{{ end }}">
 			<h4 class="sans bold">
 				<a class="{{ .Page.Param "class" }}" href="{{ .Page.Permalink }}">{{ .Name }}</a>
 			</h4>
@@ -35,7 +35,7 @@
 		<div class="label">
 			<h5>ATOMS</h5>
 		</div>
-		<div class="package">
+		<div class="stack">
 			{{ range .Site.Menus.atoms }}
 			{{ $active := $cp.IsMenuCurrent "atoms" . }}
 			<h5 class="sans bold {{ .Page.Param "class" }}">
@@ -51,7 +51,7 @@
 		</div>
 		{{ range .Site.Menus.modules }}
 		{{ $active := $cp.IsMenuCurrent "modules" . }}
-		<div class="package {{- if $active }} eds-active{{ end }}">
+		<div class="stack {{- if $active }} eds-active{{ end }}">
 			<h4 class="sans bold">
 				<a class="{{ .Page.Param "class" }}" href="{{ .Page.Permalink }}">{{ .Name }}</a>
 			</h4>
@@ -66,7 +66,7 @@
 		</div>
 		{{ range .Site.Menus.layouts }}
 		{{ $active := $cp.IsMenuCurrent "layouts" . }}
-		<div class="package {{- if $active }} eds-active{{ end }}">
+		<div class="stack {{- if $active }} eds-active{{ end }}">
 			<h4 class="sans bold">
 				<a class="{{ .Page.Param "class" }}" href="{{ .Page.Permalink }}">{{ .Name }}</a>
 			</h4>
@@ -81,7 +81,7 @@
 		</div>
 		{{ range .Site.Menus.campaign }}
 		{{ $active := $cp.IsMenuCurrent "campaign" . }}
-		<div class="package {{- if $active }} eds-active{{ end }}">
+		<div class="stack {{- if $active }} eds-active{{ end }}">
 			<h4 class="sans bold">
 				<a class="{{ .Page.Param "class" }}" href="{{ .Page.Permalink }}">{{ .Name }}</a>
 			</h4>
@@ -96,7 +96,7 @@
 		</div>
 		{{ range .Site.Menus.templates }}
 		{{ $active := $cp.IsMenuCurrent "templates" . }}
-		<div class="package {{- if $active }} eds-active{{ end }}">
+		<div class="stack {{- if $active }} eds-active{{ end }}">
 			<h4 class="sans bold">
 				<a class="{{ .Page.Param "class" }}" href="{{ .Page.Permalink }}">{{ .Name }}</a>
 			</h4>
