@@ -52,15 +52,10 @@
  * Display classes
  */
 
+.h-phone,
 .d-tablet,
 .d-desktop {
   display: none;
-}
-
-@media (max-width: 767px) {
-  .h-phone {
-    display: none;
-  }
 }
 
 @media (min-width: 768px) {
@@ -68,6 +63,7 @@
     display: none;
   }
 
+  .h-phone,
   .d-tablet {
     display: var(--display, block);
   }
