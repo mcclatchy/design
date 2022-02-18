@@ -1,8 +1,9 @@
 ---
-title: "modal"
+title: modal (DSP)
 description: "Simple overlay containers to maintain consistency."
 menu: cards
 modal: true
+build: dsp
 ---
 
 Modals should be consistent across products and vendors to benefit our readers. The modal organism is setup as a wrapper that provides consistent behavior but can accept any HTML. To allow for flexibility in function, we have created CSS classes like `.screen` that act as toggles for different behavior.
@@ -36,7 +37,7 @@ function toggleModal(id, force) {
 #### EXAMPLE
 <button class="button ghost" onclick="toggleModal('bottom-modal')">Show modal</button>
 
-{{< modal >}}
-{{< modal type="bottom" >}}
+{{< dsp/modal >}}
+{{< dsp/modal type="bottom" >}}
 
 <script src="/js/modal.js"></script>
