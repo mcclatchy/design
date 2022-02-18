@@ -2,6 +2,36 @@
  * Style guide native defaults
  */
 
+@media (min-width: 768px) {
+  body {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .panels {
+    position: relative;
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    overflow: hidden;
+  }
+
+  .panels > * {
+    height: 100%;
+    overflow: scroll;
+  }
+
+  .list {
+    max-width: 400px;
+    order: 1;
+  }
+
+  .details {
+    order: 2;
+  }
+}
+
 table {
   width: 100%;
   text-align: left;
@@ -74,7 +104,7 @@ pre {
   font: 0.875rem var(--sans);
 }
 
-.list > * {
+.list > div {
   display: grid;
   gap: var(--gap);
   padding: 0 15px 15px;
@@ -151,29 +181,6 @@ pre {
 .details {
   position: relative;
   z-index: 2;
-}
-
-@media (min-width: 769px) {
-  .panels {
-    position: relative;
-    height: calc(100vh - 84px);
-    display: flex;
-  }
-
-  .panels > * {
-    flex: 1;
-    overflow: scroll;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  .list {
-    max-width: 400px;
-    order: 1;
-  }
-
-  .details {
-    order: 2;
-  }
 }
 
 .page-header {

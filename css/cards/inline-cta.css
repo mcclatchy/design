@@ -18,6 +18,7 @@
 }
 
 .impact .inline-cta {
+  padding: 15px;
   --bc: #222;
   --bbc: white;
   --ld: underline;

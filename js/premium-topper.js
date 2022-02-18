@@ -39,7 +39,7 @@ class PremiumTopper extends HTMLElement {
       }
 
       .label {
-        font: 400 13px var(--premium-sans);
+        font: 400 13px var(--sans);
         color: var(--subYellow);
         text-transform: uppercase;
         margin: 0;
@@ -60,7 +60,7 @@ class PremiumTopper extends HTMLElement {
       .content::slotted(h3) {
         --header-size: 13px;
         --header-weight: normal;
-        --header-family: var(--premium-sans);
+        --header-family: var(--sans);
         --header-color: var(--subYellow);
         --header-transform: uppercase;
       }
