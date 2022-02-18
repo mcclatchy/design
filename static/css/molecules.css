@@ -44,26 +44,26 @@
   box-shadow: var(--paper-shadow);
 }
 
+.card.horizontal figure {
+  align-self: stretch;
+}
+
+.card.horizontal figure img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 20%;
+}
+
 @media(min-width: 660px) {
   .card.horizontal {
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 15px;
     align-items: center;
-  }
-
-  .card.horizontal figure {
-    align-self: stretch;
-  }
-
-  .card.horizontal figure img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: 50% 20%;
   }
 }
 
@@ -115,7 +115,7 @@ section, .section {
 
 .grid {
   display: grid;
-  grid-template-columns: var(--columns, repeat(auto-fit, minmax(300px, 1fr)));
+  grid-template-columns: var(--columns);
   gap: var(--gap);
   grid-auto-flow: dense;
 }

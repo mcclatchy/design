@@ -14,6 +14,7 @@
 }
 
 .card.swg-promo .title {
+  --header-weight: bold;
   font-size: 48px;
 }
 

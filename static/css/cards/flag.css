@@ -29,7 +29,7 @@ html.msb .masthead {
   margin: 0 auto;
   padding: var(--page-padding);
   padding-bottom: 0;
-  font: bold 13px/1em var(--premium-sans);
+  font: bold 13px/1em var(--sans);
   color: var(--text-color);
 
   /* Custom properties for kids */
@@ -39,7 +39,8 @@ html.msb .masthead {
 
 .msb .sds-flag {
   grid-template-areas:
-    "menu edition account"
+    "menu . account"
+    "edition edition edition"
     "logo logo logo"
     "nav nav nav";
 }

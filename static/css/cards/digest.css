@@ -5,6 +5,7 @@
 .digest {
   display: grid;
   gap: 15px;
+  align-self: start;
 }
 
 .digest .more-link {
