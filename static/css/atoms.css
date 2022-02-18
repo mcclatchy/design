@@ -26,7 +26,7 @@
   --subYellow: #ffd71a;
   --bodyBackground: #f4f4f4;
 
-  /* Links and buttons */
+  /* Links and Buttons */
   --link-color: inherit;
   --link-decoration: none;
   --button-color: var(--impact);
@@ -207,7 +207,59 @@ hr {
 }
 
 /**
+ * Color schemes
+ */
+
+.impact, 
+.promo,
+.promo-light,
+.disabled,
+[disabled] {
+  background-color: var(--impact);
+  --paper-color: var(--impact);
+  --text-color: white;
+  --link-color: white;
+  --fill-color: white;
+  --button-color: var(--impact);
+  --button-text-color: white;
+}
+
+.impact .button {
+  --button-color: white;
+  --button-text-color: var(--impact);
+}
+
+.promo {
+  background-color: var(--promo);
+  --paper-color: var(--promo);
+  --button-color: var(--promo);
+}
+
+.promo .button {
+  --button-color: white;
+  --button-text-color: var(--promo);
+}
+
+.promo-light {
+  background-color: #5169B8;
+  --paper-color: #5169B8;
+  --button-color: #5169B8;
+}
+
+.promo-light .button {
+  --button-color: white;
+  --button-text-color: #5169B8;
+}
+
+.disabled, [disabled] {
+  --paper-color: #757575;
+  cursor: not-allowed;
+}
+
+/**
  * Buttons and UI elements
+ *
+ * Now this needs promo/impact love
  */
 
 .button {
@@ -221,11 +273,8 @@ hr {
   text-transform: uppercase;
   text-decoration: none;
   cursor: pointer;
-}
-
-.button:hover {
-  color: var(--button-hover-text-color, var(--button-text-color));
-  text-decoration: none;
+  --link-hover-color: var(--button-text-color);
+  --link-hover-decoration: none;
 }
 
 .button.big {
@@ -435,44 +484,4 @@ figcaption, .caption {
 
 .paper * {
   --paper-shadow: none;
-}
-
-/**
- * Color schemes
- * 
- * Note: this is going to need an audit
- */
-
-.impact, 
-.promo,
-.promo-light,
-.disabled,
-[disabled] {
-  background-color: var(--impact);
-  color: white;
-  --paper-color: var(--impact);
-  --text-color: white;
-  --link-color: white;
-  --link-hover-color: white;
-  --fill-color: white;
-  --button-color: white;
-  --button-text-color: var(--impact);
-}
-
-.promo {
-  background-color: var(--promo);
-  --paper-color: var(--promo);
-  --button-text-color: var(--promo);
-}
-
-.promo-light {
-  background-color: #5169B8;
-  --paper-color: #5169B8;
-  --button-text-color: #5169B8;
-}
-
-.disabled, [disabled] {
-  background-color: #757575;
-  --paper-color: #757575;
-  cursor: not-allowed;
 }
