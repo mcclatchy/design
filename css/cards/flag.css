@@ -102,7 +102,14 @@ html.msb .masthead {
   place-self: end;
   min-height: 30px;
   --button-color: var(--subBlue);
-  --button-hover-text-color: var(--subYellow);
+}
+
+.flag-account .button {
+  font-size: 1em;
+}
+
+.flag-account .button:hover {
+  --button-text-color: var(--subYellow);
 }
 
 .flag-left {
