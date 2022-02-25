@@ -19,8 +19,8 @@
   font-weight: normal;
   text-transform: none;
   padding: 0;
-  --button-color: transparent;
-  --button-text-color: var(--black);
+  --bc: var(--black);
+  --bbc: transparent;
 }
 
 /* Different grids */

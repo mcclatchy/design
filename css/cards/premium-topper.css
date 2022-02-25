@@ -9,10 +9,10 @@
   color: white;
   padding: calc(var(--gap) * 2) var(--page-padding);
   font: 1rem/1.5em var(--sans);
-  --text-color: white;
-  --link-color: white;
-  --link-decoration: underline;
-  --link-hover-color: var(--subYellow);
+  --tc: white;
+  --lc: white;
+  --ld: underline;
+  --lhc: var(--subYellow);
 }
 
 .msb .topper:not(.loaded) {

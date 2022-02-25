@@ -13,8 +13,8 @@ body.story .masthead {
 
 html.msb .masthead {
   --paper-color: var(--subBlue);
-  --text-color: white;
-  --link-color: white;
+  --tc: white;
+  --lc: white;
   --border-color: white;
 }
 
@@ -30,11 +30,11 @@ html.msb .masthead {
   padding: var(--page-padding);
   padding-bottom: 0;
   font: bold 13px/1em var(--sans);
-  color: var(--text-color);
+  color: var(--tc);
 
   /* Custom properties for kids */
   --spread: 15px;
-  --link-decoration: none;
+  --ld: none;
 }
 
 .msb .sds-flag {
@@ -129,7 +129,8 @@ html.msb .masthead {
   grid-area: account;
   place-self: end;
   min-height: 30px;
-  --button-color: var(--subBlue);
+  --bc: white;
+  --bbc: var(--subBlue);
 }
 
 .flag-account .button {
@@ -137,14 +138,14 @@ html.msb .masthead {
 }
 
 .flag-account .button:hover {
-  --button-text-color: var(--subYellow);
+  --bc: var(--subYellow);
 }
 
 .flag-left {
   grid-area: left;
   font-size: 14px;
   --spread: 7px;
-  --link-hover-decoration: underline;
+  --lhd: underline;
 }
 
 .flag-right {
@@ -153,7 +154,7 @@ html.msb .masthead {
   align-items: end;
   font-size: 14px;
   --spread: 7px;
-  --link-hover-decoration: underline;
+  --lhd: underline;
 }
 
 .flag-edition {

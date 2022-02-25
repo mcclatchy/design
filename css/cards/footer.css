@@ -9,7 +9,6 @@
   padding: var(--page-padding);
   display: grid;
   gap: var(--gap);
-  color: white;
   font: 16px var(--sans);
 }
 
@@ -18,8 +17,8 @@
   gap: 20px;
   padding: 0;
   max-width: 340px;
-  --header-family: var(--sans);
-  --header-weight: bold;
+  --hf: var(--sans);
+  --hw: bold;
 }
 
 .footer-connect .flex {

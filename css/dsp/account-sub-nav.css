@@ -5,13 +5,13 @@
   border-top: 1px solid #EBEBEB;
   max-width: 900px;
   margin: 0 auto;
-  --header-transform: none;
+  --ht: none;
 }
 
 .account-header small {
   display: block;
   font-weight: 700;
-  color: var(--text-color, #707070);
+  color: var(--tc, #707070);
   text-transform: uppercase;
   align-self: center;
 }
@@ -27,10 +27,10 @@
   text-transform: uppercase; 
   text-align: center;
   font: 400 14px var(--sans); 
-  --link-color: #31409f;
-  --link-hover-color: #5169B8;
-  --link-decoration: none;
-  --link-hover-decoration: none;
+  --lc: #31409f;
+  --lhc: #5169B8;
+  --ld: none;
+  --lhd: none;
 }
 
 .tab.active {

@@ -14,8 +14,7 @@ class PremiumTopper extends HTMLElement {
     <style>
       :host {
         display: block;
-        --header-family: var(--premium-serif);
-        --text-family: var(--sans);
+        --hf: var(--premium-serif);
       }
 
       :host(.loaded) ::slotted(*) {
@@ -46,10 +45,10 @@ class PremiumTopper extends HTMLElement {
       }
 
       .headline::slotted(*) {
-        --header-size: 8vw;
-        --header-weight: normal;
-        --header-leading: 1.1em;
-        --header-family: var(--premium-serif);
+        --hs: 8vw;
+        --hw: normal;
+        --hl: 1.1em;
+        --hf: var(--premium-serif);
         margin: 0;
       }
 
@@ -58,11 +57,11 @@ class PremiumTopper extends HTMLElement {
       }
 
       .content::slotted(h3) {
-        --header-size: 13px;
-        --header-weight: normal;
-        --header-family: var(--sans);
-        --header-color: var(--subYellow);
-        --header-transform: uppercase;
+        --hs: 13px;
+        --hw: normal;
+        --hf: var(--sans);
+        --hc: var(--subYellow);
+        --ht: uppercase;
       }
 
       .media::slotted(.pt-video) {
@@ -93,7 +92,7 @@ class PremiumTopper extends HTMLElement {
         }
 
         .headline::slotted(*) {
-          --header-size: 54px;
+          --hs: 54px;
         }
       }
     </style>

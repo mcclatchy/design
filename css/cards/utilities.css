@@ -7,8 +7,8 @@
 }
 
 .gray {
-  color: var(--text-color, var(--gray));
-  --button-color: var(--text-color, var(--gray));
+  color: var(--tc, var(--gray));
+  --bbc: var(--tc, var(--gray));
 }
 
 .no-caps {
@@ -22,22 +22,22 @@
 
 .serif {
   font-family: var(--serif);
-  --header-family: var(--serif);
+  --hf: var(--serif);
 }
 
 .sans {
   font-family: var(--sans);
-  --header-family: var(--sans);
+  --hf: var(--sans);
 }
 
 .bold {
   font-weight: bold;
-  --header-weight: bold;
+  --hw: bold;
 }
 
 .soft {
   font-weight: normal;
-  --header-weight: normal;
+  --hw: normal;
 }
 
 .small {

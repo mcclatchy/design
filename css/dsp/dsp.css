@@ -39,7 +39,7 @@ section.dsp {
 
 .paywall-expander {
   font: 700 0.875rem var(--sans);
-  --tc: var(--blue);
+  --tc: var(--promo);
   display: inline-block;
   text-align: center;
 }
@@ -207,8 +207,8 @@ section.dsp {
 }
 
 .purchase-confirmation .page-title .more-link {
-  --lc: var(--blue);
-  --lhc: var(--blue);
+  --lc: var(--promo);
+  --lhc: var(--promo);
   --ts: 0.875rem;
 }
 

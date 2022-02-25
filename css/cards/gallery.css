@@ -6,12 +6,12 @@
   font-family: var(--sans);
   align-items: unset;
   color: var(--gray);
-  --header-color: var(--black);
+  --hc: var(--black);
 }
 
 .gallery .package {
-  --header-weight: 400;
-  --header-family: var(--sans);
+  --hw: 400;
+  --hf: var(--sans);
 }
 
 .gallery-panel {

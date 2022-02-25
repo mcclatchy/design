@@ -30,7 +30,7 @@
 	padding: 30px 50px 30px 15px;
   align-items: unset;
   --spread: 15px;
-  --link-decoration: underline;
+  --ld: underline;
 }
 
 .s-modal .close {

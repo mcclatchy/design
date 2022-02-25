@@ -18,10 +18,10 @@
 }
 
 .flag.dsp .links {
-  --link-color: #707070;
-  --link-hover-color: #222;
-  --link-decoration: none;
-  --link-hover-decoration: none;
+  --lc: #707070;
+  --lhc: #222;
+  --ld: none;
+  --lhd: none;
   align-items: center;
   font: bold 0.875rem var(--sans);
   text-transform: uppercase;
