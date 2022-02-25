@@ -36,8 +36,12 @@
   border-left: 5px solid transparent;
   border-radius: 0;
   cursor: pointer;
-  --button-text-color: white;
-  --button-color: transparent;
+  background-color: transparent;
+  color: white;
+}
+
+.main-nav button {
+  font-weight: bold;
 }
 
 .main-nav:hover :focus {
@@ -61,8 +65,11 @@
 
 .main-nav .subsection a {
   padding: 10px 30px 10px 45px;
-  --lc: #989898;
-  --lhc: white;
+  color: #989898;
+}
+
+.main-nav .subsection a:hover {
+  color: white;
 }
 
 .main-nav .expander.open,

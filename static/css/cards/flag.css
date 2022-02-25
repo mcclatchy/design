@@ -97,6 +97,34 @@ html.msb .masthead {
   --spread: 15px;
 }
 
+.flag-menu button,
+.flag-menu form,
+.flag-menu svg {
+  cursor: pointer;
+}
+
+.sds-flag .search {
+  --spread: 10px;
+}
+
+.sds-flag .search input {
+  margin-top: 0;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid transparent;
+  padding: 5px 0px;
+  color: white;
+  position: relative;
+  bottom: 5px;
+}
+
+.sds-flag .search input:focus,
+.sds-flag .search input:not(:placeholder-shown) {
+  box-shadow: none;
+  outline: none;
+  border-color: white;
+}
+
 .flag-account {
   grid-area: account;
   place-self: end;
