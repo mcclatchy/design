@@ -7,7 +7,7 @@
 }
 
 .in-depth .package {
-  --header-weight: bold;
+  --hw: bold;
 }
 
 .card.in-depth figure {

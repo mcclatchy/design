@@ -36,6 +36,40 @@
   --paper-shadow: 
     0 1px 2px 0 rgba(0, 0, 0, .2), 
     0 1px 5px 0 rgba(0, 0, 0, .13);
+
+  /**
+   * Header properties available
+   *
+   * --hf: header family
+   * --hw: header weigth
+   * --ht: header transform
+   * --hl: header leading
+   * --hc: header color
+   * --hs: header size
+   */
+
+  /**
+   * Text properties available
+   *
+   * --tc: text color
+   * --fc: fill color (inline svg)
+   */
+
+  /**
+   * Link properties available
+   *
+   * --lc: link color
+   * --ld: link decoration
+   * --lhc: link hover color
+   * --lhd: link hover decoration
+   */
+
+  /**
+   * Button properties available
+   *
+   * --bc: button color
+   * --bbc: button background color
+   */
 }
 
 @media(min-width: 768px) {
@@ -63,27 +97,27 @@ h3, .h3,
 h4, .h4,
 h5, .h5,
 h6, .h6 {
-  font-family: var(--header-family, inherit);
-  font-weight: var(--header-weight, bold);
-  text-transform: var(--header-transform, none);
-  line-height: var(--header-leading, 1.2em);
-  color: var(--header-color, var(--text-color));
+  font-family: var(--hf, inherit);
+  font-weight: var(--hw, bold);
+  text-transform: var(--ht, none);
+  line-height: var(--hl, 1.2em);
+  color: var(--hc, var(--text-color));
 }
 
 h1, .h1 {
-  font-size: var(--header-size, 1.875rem);
+  font-size: var(--hs, 1.875rem);
 }
 
 h2, .h2 {
-  font-size: var(--header-size, 1.5rem);
+  font-size: var(--hs, 1.5rem);
 }
 
 h3, .h3 {
-  font-size: var(--header-size, 1.2rem);
+  font-size: var(--hs, 1.2rem);
 }
 
 h4, .h4 {
-  font-size: var(--header-size, 1rem);
+  font-size: var(--hs, 1rem);
 }
 
 h5, .h5 {
@@ -95,13 +129,13 @@ h6, .h6 {
 }
 
 a {
-  color: var(--link-color);
-  text-decoration: var(--link-decoration);
+  color: var(--lc);
+  text-decoration: var(--ld);
 }
 
 a:hover {
-  color: var(--link-hover-color, var(--link-color));
-  text-decoration: var(--link-hover-decoration, var(--link-decoration));
+  color: var(--lhc, var(--lc));
+  text-decoration: var(--lhd, var(--ld));
 }
 
 ul, ol {
@@ -116,18 +150,18 @@ li {
   display: block;
   padding: 5px 8px;
   font-weight: normal;
-  color: var(--text-color, var(--black));
-  border: 1px solid var(--text-color, var(--black));
+  color: var(--tc, var(--black));
+  border: 1px solid var(--tc, var(--black));
   border-radius: 2px;
   text-transform: uppercase;
-  --link-decoration: none;
-  --link-hover-decoration: none;
+  --ld: none;
+  --lhd: none;
 }
 
 time, .time, .byline {
   display: inline-block;
   text-transform: uppercase;
-  color: var(--text-color, var(--gray));
+  color: var(--tc, var(--gray));
   font: 0.75rem/1.1em var(--sans);
 }
 
@@ -148,18 +182,16 @@ summary, .summary {
   margin: 0;
   display: grid;
   place-items: center;
-  --link-decoration: none;
+  --ld: none;
 }
 
 .label > * {
   margin: 0;
   padding: 5px 10px;
-  color: var(--label-text-color, white);
-  background-color: var(--label-background-color, var(--impact));
-  font-size: 0.875rem;
+  color: var(--bc, white);
+  background-color: var(--bcc, var(--impact));
+  font: 0.875rem var(--sans);
   line-height: 1em;
-  --text-family: var(--sans);
-  --header-family: var(--sans);
 }
 
 .label.sticky {
@@ -174,12 +206,12 @@ summary, .summary {
   display: inline-block;
   font: 700 0.875rem/1em var(--sans);
   text-transform: uppercase;
-  color: var(--text-color, var(--gray));
+  color: var(--tc, var(--gray));
   text-decoration: none;
 }
 
 .more-link:hover {
-  color: var(--text-color, var(--gray));
+  color: var(--tc, var(--gray));
   text-decoration: none;
 }
 
@@ -198,12 +230,12 @@ summary, .summary {
   display: block;
   font: italic 0.875rem var(--sans);
   text-transform: uppercase;
-  color: var(--text-color, #757575);
+  color: var(--tc, #757575);
 }
 
 hr {
   align-self: stretch;
-  border: .5px solid var(--text-color, #707070);
+  border: .5px solid var(--tc, #707070);
 }
 
 /**
@@ -217,38 +249,38 @@ hr {
 [disabled] {
   background-color: var(--impact);
   --paper-color: var(--impact);
-  --text-color: white;
-  --link-color: white;
-  --fill-color: white;
-  --button-color: var(--impact);
-  --button-text-color: white;
+  --tc: white;
+  --tc: white;
+  --fc: white;
+  --bc: white;
+  --bbc: var(--impact);
 }
 
 .impact .button {
-  --button-color: white;
-  --button-text-color: var(--impact);
+  --bc: var(--impact);
+  --bbc: white;
 }
 
 .promo {
   background-color: var(--promo);
   --paper-color: var(--promo);
-  --button-color: var(--promo);
+  --bcc: var(--promo);
 }
 
 .promo .button {
-  --button-color: white;
-  --button-text-color: var(--promo);
+  --bc: var(--promo);
+  --bbc: white;
 }
 
 .promo-light {
   background-color: #5169B8;
   --paper-color: #5169B8;
-  --button-color: #5169B8;
+  --bbc: #5169B8;
 }
 
 .promo-light .button {
-  --button-color: white;
-  --button-text-color: #5169B8;
+  --bc: #5169B8;
+  --bbc: white;
 }
 
 .disabled, [disabled] {
@@ -267,14 +299,14 @@ hr {
   padding: .4em 1em;
   border-radius: 3px;
   font: bold 1rem var(--sans);
-  color: var(--button-text-color);
-  background-color: var(--button-color);
+  color: var(--bc);
+  background-color: var(--bbc);
   border: 1px solid transparent;
   text-transform: uppercase;
   text-decoration: none;
   cursor: pointer;
-  --link-hover-color: var(--button-text-color);
-  --link-hover-decoration: none;
+  --lhc: var(--bc);
+  --lhd: none;
 }
 
 .button.big {
@@ -283,9 +315,9 @@ hr {
 
 .button.text,
 .button.ghost {
-  color: var(--button-color);
+  color: var(--bbc);
   background-color: transparent;
-  border: 1px solid var(--button-color);
+  border: 1px solid var(--bbc);
 }
 
 .button.text {
@@ -309,7 +341,7 @@ form, .checkbox-group {
   grid-template-columns: 1fr;
   grid-gap: 30px;
   text-align: left;
-  color: var(--text-color);
+  color: var(--tc);
 }
 
 .checkbox-group {
@@ -444,7 +476,7 @@ input:focus, select:focus, .focus {
  */
 
 svg {
-  fill: var(--fill-color, var(--text-color));
+  fill: var(--fc, var(--tc));
 }
 
 /** 
@@ -468,7 +500,7 @@ figure img {
 
 figcaption, .caption {
   font: 400 0.875rem/1.4em var(--sans);
-  color: var(--text-color)
+  color: var(--tc)
 }
 
 /**
@@ -479,7 +511,7 @@ figcaption, .caption {
   position: relative;
   background-color: var(--paper-color, white);
   box-shadow: var(--paper-shadow); 
-  color: var(--text-color);
+  color: var(--tc);
 }
 
 .paper * {

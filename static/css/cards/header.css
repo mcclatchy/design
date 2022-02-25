@@ -7,9 +7,9 @@
   gap: 15px;
   justify-items: center;
   text-align: center;
-  --header-family: var(--serif);
-  --header-weight: bold;
-  --header-transform: none;
+  --hf: var(--serif);
+  --hw: bold;
+  --ht: none;
 }
 
 .header > * {

@@ -4,13 +4,13 @@
 
 .story-body {
   display: flow-root;
-  color: var(--text-color);
+  color: var(--tc);
   font: 18px/1.5em var(--serif);
-  --header-family: var(--sans);
-  --header-transform: uppercase;
-  --link-color: #5169B8;
-  --link-hover-color: #31409F;
-  --link-decoration: underline;
+  --hf: var(--sans);
+  --ht: uppercase;
+  --lc: #5169B8;
+  --lhc: #31409F;
+  --ld: underline;
 }
 
 .story-body > * {
@@ -66,7 +66,7 @@
 
 .story-body figure,
 .story-body .figure {
-  --stack-gap: 10px;
+  --spread: 10px;
 }
 
 .story-body figure .package,

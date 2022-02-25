@@ -15,10 +15,10 @@
   font: 0.875rem var(--sans);
   --padding: 30px;
   --spread: 10px;
-  --link-color: var(--promo);
-  --link-hover-color: var(--promo);
-  --label-text-color: var(--promo);
-  --label-background-color: white;
+  --lc: var(--promo);
+  --lhc: var(--promo);
+  --bc: white;
+  --bbc: var(--promo);
   text-align: center;
   align-items: unset;
 }
@@ -29,5 +29,5 @@
 }
 
 .paywall-offer .more-link {
-  --text-color: var(--promo);
+  --tc: var(--promo);
 }

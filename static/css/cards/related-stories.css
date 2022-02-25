@@ -3,8 +3,8 @@
  */
 
 .related-stories {
-  --link-color: #222;
-  --link-hover-color: #222;
+  --lc: #222;
+  --lhc: #222;
 }
 
 .related-stories h5 {

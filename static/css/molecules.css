@@ -27,20 +27,20 @@
 
 .package {
   padding: calc(var(--gap) / 2);
-  color: var(--text-color);
-  --header-transform: none;
-  --header-weight: normal;
-  --header-family: var(--serif);
-  --link-decoration: none;
-  --link-hover-decoration: underline;
-  --link-color: var(--text-color, inherit);
-  --link-hover-color: var(--text-color, inherit);
+  color: var(--tc);
+  --ht: none;
+  --hw: normal;
+  --hf: var(--serif);
+  --ld: none;
+  --lhd: underline;
+  --lc: var(--lc, inherit);
+  --lhc: var(--lc, inherit);
 }
 
 .card {
   position: relative;
   background-color: var(--paper-color, white);
-  color: var(--text-color);
+  color: var(--tc);
   box-shadow: var(--paper-shadow);
 }
 

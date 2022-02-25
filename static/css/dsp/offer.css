@@ -4,12 +4,12 @@
 
 .dsp-offer {
   font: 0.875rem var(--sans);
-  --header-family: var(--serif);
-  --header-transform: none;
-  --header-weight: bold;
+  --hf: var(--serif);
+  --ht: none;
+  --hw: bold;
   --spread: 5px;
-  --link-color: var(--promo);
-  --link-hover-color: var(--promo);
+  --lc: var(--promo);
+  --lhc: var(--promo);
   position: relative;
   display: grid;
   grid-gap: 15px;
