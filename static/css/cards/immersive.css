@@ -42,6 +42,8 @@
 .immersive .title {
 	font: 700 2.5em/1.1em var(--serif);
 	text-transform: none;
+  --lc: white;
+  --lhc: white;
   --ld: none;
   --lhd: underline;
 }

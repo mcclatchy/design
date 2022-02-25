@@ -26,11 +26,11 @@
   --subYellow: #ffd71a;
   --bodyBackground: #f4f4f4;
 
-  /* Links and Buttons */
-  --link-color: inherit;
-  --link-decoration: none;
-  --button-color: var(--impact);
-  --button-text-color: white;
+  /* Link and button defaults */
+  --lc: inherit;
+  --ld: none;
+  --bc: white;
+  --bbc: var(--impact);
 
   /* Paper box shadow */
   --paper-shadow: 
@@ -101,7 +101,7 @@ h6, .h6 {
   font-weight: var(--hw, bold);
   text-transform: var(--ht, none);
   line-height: var(--hl, 1.2em);
-  color: var(--hc, var(--text-color));
+  color: var(--hc, var(--tc));
 }
 
 h1, .h1 {
@@ -189,8 +189,8 @@ summary, .summary {
   margin: 0;
   padding: 5px 10px;
   color: var(--bc, white);
-  background-color: var(--bcc, var(--impact));
-  font: 0.875rem var(--sans);
+  background-color: var(--bbc, var(--impact));
+  font: bold 0.875rem var(--sans);
   line-height: 1em;
 }
 
@@ -250,13 +250,13 @@ hr {
   background-color: var(--impact);
   --paper-color: var(--impact);
   --tc: white;
-  --tc: white;
   --fc: white;
   --bc: white;
   --bbc: var(--impact);
 }
 
-.impact .button {
+.impact .button,
+.impact .label {
   --bc: var(--impact);
   --bbc: white;
 }
@@ -264,10 +264,11 @@ hr {
 .promo {
   background-color: var(--promo);
   --paper-color: var(--promo);
-  --bcc: var(--promo);
+  --bbc: var(--promo);
 }
 
-.promo .button {
+.promo .button,
+.promo .label {
   --bc: var(--promo);
   --bbc: white;
 }
@@ -278,7 +279,8 @@ hr {
   --bbc: #5169B8;
 }
 
-.promo-light .button {
+.promo-light .button,
+.promo-light .label {
   --bc: #5169B8;
   --bbc: white;
 }
