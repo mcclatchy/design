@@ -191,7 +191,7 @@ html.msb .masthead {
   border-bottom: 1px solid var(--border-color, var(--black));
   font-size: 16px;
   padding: 15px 0;
-  --link-hover-decoration: underline;
+  --lhd: underline;
 }
 
 .flag-nav .separator ~ * {
