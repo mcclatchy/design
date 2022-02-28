@@ -145,7 +145,7 @@ html.msb .masthead {
   grid-area: left;
   font-size: 14px;
   --spread: 7px;
-  --lhd: underline;
+  --ld: underline;
 }
 
 .flag-right {
