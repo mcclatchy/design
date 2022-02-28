@@ -131,6 +131,7 @@ html.msb .masthead {
   min-height: 30px;
   --bc: white;
   --bbc: var(--subBlue);
+  --lhd: underline;
 }
 
 .flag-account .button {
