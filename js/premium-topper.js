@@ -39,29 +39,13 @@ class PremiumTopper extends HTMLElement {
 
       .label {
         font: 400 13px var(--sans);
-        color: var(--subYellow);
+        color: var(--premium-impact);
         text-transform: uppercase;
-        margin: 0;
-      }
-
-      .headline::slotted(*) {
-        --hs: 8vw;
-        --hw: normal;
-        --hl: 1.1em;
-        --hf: var(--premium-serif);
         margin: 0;
       }
 
       .content::slotted(*) {
         margin-top: 0;
-      }
-
-      .content::slotted(h3) {
-        --hs: 13px;
-        --hw: normal;
-        --hf: var(--sans);
-        --hc: var(--subYellow);
-        --ht: uppercase;
       }
 
       .media::slotted(.pt-video) {
@@ -89,10 +73,6 @@ class PremiumTopper extends HTMLElement {
 
         .media {
           grid-area: media;
-        }
-
-        .headline::slotted(*) {
-          --hs: 54px;
         }
       }
     </style>

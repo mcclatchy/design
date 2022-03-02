@@ -5,14 +5,14 @@
 .topper {
   display: none;
   position: relative;
-  background-color: var(--subBlue);
-  color: white;
+  background-color: var(--premium-bc);
+  color: var(--premium-tc);
   padding: calc(var(--gap) * 2) var(--page-padding);
   font: 1rem/1.5em var(--sans);
   --tc: white;
   --lc: white;
   --ld: underline;
-  --lhc: var(--subYellow);
+  --lhc: var(--premium-impact);
 }
 
 .msb .topper:not(.loaded) {
@@ -33,7 +33,33 @@
   left: 0;
   width: 100%;
   height: calc(50px + 8vw);
-  background-color: var(--subBlue);
+  background-color: var(--premium-bc);
+}
+
+/**
+ * Light DOM styles for the portal
+ */
+
+.msb .topper [slot="headline"] {
+  --hs: 8vw;
+  --hw: normal;
+  --hl: 1.1em;
+  --hf: var(--premium-serif);
+  margin: 0;
+}
+
+@media(min-width: 768px) {
+  .msb .topper [slot="headline"] {
+    --hs: 54px;
+  }
+}
+
+.msb .topper h3 {
+  --hs: 13px;
+  --hw: normal;
+  --hf: var(--sans);
+  --hc: var(--premium-impact);
+  --ht: uppercase;
 }
 
 /**

@@ -22,9 +22,10 @@
   --gray: #707070;
   --impact: #373737;
   --promo: #31409F;
-  --subBlue: #00223e;
-  --subYellow: #ffd71a;
-  --bodyBackground: #f4f4f4;
+  --premium-bc: #00223e;
+  --premium-tc: white;
+  --premium-impact: #ffd71a;
+  --body-background: #f4f4f4;
 
   /* Link and button defaults */
   --lc: inherit;
@@ -80,7 +81,7 @@
 
 body {
   margin: 0;
-  background-color: var(--bodyBackground);
+  background-color: var(--body-background);
 }
 
 body.freeze {

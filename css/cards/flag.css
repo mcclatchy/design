@@ -5,6 +5,7 @@
 .masthead {
   --paper-color: transparent;
   --paper-shadow: none;
+  z-index: 2;
 }
 
 body.story .masthead {
@@ -12,10 +13,10 @@ body.story .masthead {
 }
 
 html.msb .masthead {
-  --paper-color: var(--subBlue);
-  --tc: white;
-  --lc: white;
-  --border-color: white;
+  --paper-color: var(--premium-bc);
+  --tc: var(--premium-tc);
+  --lc: var(--premium-tc);
+  --border-color: var(--premium-tc);
 }
 
 .sds-flag {
@@ -113,7 +114,7 @@ html.msb .masthead {
   border: none;
   border-bottom: 1px solid transparent;
   padding: 5px 0px;
-  color: white;
+  color: var(--premium-tc);
   position: relative;
   bottom: 5px;
 }
@@ -122,15 +123,15 @@ html.msb .masthead {
 .sds-flag .search input:not(:placeholder-shown) {
   box-shadow: none;
   outline: none;
-  border-color: white;
+  border-color: var(--premium-tc);
 }
 
 .flag-account {
   grid-area: account;
   place-self: end;
   min-height: 30px;
-  --bc: white;
-  --bbc: var(--subBlue);
+  --bc: var(--premium-tc);
+  --bbc: var(--premium-bc);
   --lhd: underline;
 }
 
@@ -139,7 +140,7 @@ html.msb .masthead {
 }
 
 .flag-account .button:hover {
-  --bc: var(--subYellow);
+  --bc: var(--premium-impact);
 }
 
 .flag-left {
@@ -169,11 +170,11 @@ html.msb .masthead {
   content: "";
   width: 30px;
   height: 1px;
-  background-color: var(--subYellow);
+  background-color: var(--premium-impact);
 }
 
 .msb .flag-edition {
-  color: var(--subYellow);
+  color: var(--premium-impact);
 }
 
 .flag-logo {
@@ -193,6 +194,10 @@ html.msb .masthead {
   font-size: 16px;
   padding: 15px 0;
   --lhd: underline;
+
+  /* Hides the bottom border for decks without the premium topper */
+  position: relative;
+  top: 1px;
 }
 
 .flag-nav .separator ~ * {
