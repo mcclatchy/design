@@ -71,9 +71,9 @@
   padding: 0;
   max-width: 600px;
   font: 16px var(--sans);
-  --header-family: var(--sans);
-  --header-weight: bold;
-  --header-transform: none;
+  --hf: var(--sans);
+  --hw: bold;
+  --ht: none;
 }
 
 .page-title .secure {
@@ -104,12 +104,12 @@
  ****/
 .dsp-offer {
   font: 0.875rem var(--sans);
-  --header-family: var(--serif);
-  --header-transform: none;
-  --header-weight: bold;
+  --hf: var(--serif);
+  --ht: none;
+  --hw: bold;
   --spread: 5px;
-  --link-color: var(--promo);
-  --link-hover-color: var(--promo);
+  --lc: var(--promo);
+  --lhc: var(--promo);
   position: relative;
   display: grid;
   grid-gap: 15px;
@@ -191,10 +191,10 @@
   font: 0.875rem var(--sans);
   --padding: 30px;
   --spread: 10px;
-  --link-color: var(--promo);
-  --link-hover-color: var(--promo);
-  --label-text-color: var(--promo);
-  --label-background-color: white;
+  --lc: var(--promo);
+  --lhc: var(--promo);
+  --bc: white;
+  --bbc: var(--promo);
   text-align: center;
   align-items: unset;
 }
@@ -205,7 +205,7 @@
 }
 
 .paywall-offer .more-link {
-  --text-color: var(--promo);
+  --tc: var(--promo);
 }
 
 .account-header {
@@ -215,13 +215,13 @@
   border-top: 1px solid #EBEBEB;
   max-width: 900px;
   margin: 0 auto;
-  --header-transform: none;
+  --ht: none;
 }
 
 .account-header small {
   display: block;
   font-weight: 700;
-  color: var(--text-color, #707070);
+  color: var(--tc, #707070);
   text-transform: uppercase;
   align-self: center;
 }
@@ -237,10 +237,10 @@
   text-transform: uppercase;
   text-align: center;
   font: 400 14px var(--sans);
-  --link-color: #31409f;
-  --link-hover-color: #5169B8;
-  --link-decoration: none;
-  --link-hover-decoration: none;
+  --lc: #31409f;
+  --lhc: #5169B8;
+  --ld: none;
+  --lhd: none;
 }
 
 .tab.active {
@@ -272,10 +272,10 @@
   }
 }
 .flag.dsp .links {
-  --link-color: #707070;
-  --link-hover-color: #222;
-  --link-decoration: none;
-  --link-hover-decoration: none;
+  --lc: #707070;
+  --lhc: #222;
+  --ld: none;
+  --lhd: none;
   align-items: center;
   font: bold 0.875rem var(--sans);
   text-transform: uppercase;
@@ -377,7 +377,7 @@
   padding: 30px 50px 30px 15px;
   align-items: unset;
   --spread: 15px;
-  --link-decoration: underline;
+  --ld: underline;
 }
 
 .s-modal .close {
@@ -472,7 +472,7 @@ section.dsp {
 
 .paywall-expander {
   font: 700 0.875rem var(--sans);
-  --tc: var(--blue);
+  --tc: var(--promo);
   display: inline-block;
   text-align: center;
 }
@@ -632,8 +632,8 @@ section.dsp {
 }
 
 .purchase-confirmation .page-title .more-link {
-  --lc: var(--blue);
-  --lhc: var(--blue);
+  --lc: var(--promo);
+  --lhc: var(--promo);
   --ts: 0.875rem;
 }
 
