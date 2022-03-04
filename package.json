@@ -2,10 +2,7 @@
   "name": "saratoga-design-system",
   "version": "1.15.1",
   "files": [
-    "dist/atoms.css",
-    "dist/molecules.css",
-    "dist/cards.css",
-    "dist/decks.css",
+    "dist/saratog.css",
     "dist/dsp.css",
     "dist/amp.css",
     "dist/vendor-cards.css"
