@@ -57,31 +57,36 @@ class PremiumTopper extends HTMLElement {
       @media(min-width: 768px) {
         .container {
           grid-template-columns: 1fr 1fr;
+          grid-template-rows: auto auto 1fr;
           grid-template-areas:
             "label label"
             "headline media"
             "content media";
         }
 
+        .label {
+          grid-area: label;
+        }
+
         .headline {
           grid-area: headline;
+        }
+        
+        .media {
+          grid-area: media;
         }
 
         .content {
           grid-area: content;
         }
-
-        .media {
-          grid-area: media;
-        }
       }
     </style>
 
     <div class="container grid">
-      <h4 class="label"><b>Your community portal:</b> what you need to know</h4>
+      <h4 class="label"><b>Your community portal:</b> what you need to know TEST</h4>
       <slot name="headline" class="headline"></slot>
       <slot name="media" class="media"></slot>
-      <slot class="content"></slot>
+      <slot class="content" class="content"></slot>
     </div>
     `;
     return t;

@@ -62,6 +62,21 @@
   --ht: uppercase;
 }
 
+.msb .topper li {
+  padding-left: 1em;
+}
+
+.msb .topper ul li::marker {
+  content: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSIxMiI+CiAgPGNpcmNsZSBjeD0iNiIgY3k9IjYiIHI9IjYiIGZpbGw9IndoaXRlIi8+CiAgPGNpcmNsZSBjeD0iNiIgY3k9IjYiIHI9IjQiIGZpbGw9IiNlMjQ4NDgiLz4KPC9zdmc+Cg==");
+  border: 2px solid var(--premium-tc);
+}
+
+.msb .topper ol li::marker {
+  color: var(--premium-impact);
+  font-size: .85em;
+  font-weight: bold;
+}
+
 /**
  * Light DOM styles for the video embeds
  */
