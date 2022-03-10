@@ -83,7 +83,7 @@ class PremiumTopper extends HTMLElement {
     </style>
 
     <div class="container grid">
-      <h4 class="label"><b>Your community portal:</b> what you need to know TEST</h4>
+      <h4 class="label"><b>Your community portal:</b> what you need to know</h4>
       <slot name="headline" class="headline"></slot>
       <slot name="media" class="media"></slot>
       <slot class="content" class="content"></slot>
