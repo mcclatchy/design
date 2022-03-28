@@ -114,7 +114,7 @@ html.msb .masthead {
   border: none;
   border-bottom: 1px solid transparent;
   padding: 5px 0px;
-  color: var(--premium-tc);
+  color: var(--tc);
   position: relative;
   bottom: 5px;
 }
@@ -123,7 +123,7 @@ html.msb .masthead {
 .sds-flag .search input:not(:placeholder-shown) {
   box-shadow: none;
   outline: none;
-  border-color: var(--premium-tc);
+  border-color: var(--tc);
 }
 
 .flag-account {
