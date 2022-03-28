@@ -487,7 +487,7 @@ figure img {
 
 figcaption, .caption {
   font: 400 0.875rem/1.4em var(--sans);
-  color: var(--tc);
+  color: var(--tc, var(--gray));
 }
 
 /**
@@ -755,7 +755,7 @@ html.msb .masthead {
   border: none;
   border-bottom: 1px solid transparent;
   padding: 5px 0px;
-  color: var(--premium-tc);
+  color: var(--tc);
   position: relative;
   bottom: 5px;
 }
@@ -764,7 +764,7 @@ html.msb .masthead {
 .sds-flag .search input:not(:placeholder-shown) {
   box-shadow: none;
   outline: none;
-  border-color: var(--premium-tc);
+  border-color: var(--tc);
 }
 
 .flag-account {
@@ -1288,6 +1288,21 @@ html.msb .masthead {
   --hf: var(--sans);
   --hc: var(--premium-impact);
   --ht: uppercase;
+}
+
+.msb .topper li {
+  padding-left: 1em;
+}
+
+.msb .topper ul li::marker {
+  content: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSIxMiI+CiAgPGNpcmNsZSBjeD0iNiIgY3k9IjYiIHI9IjYiIGZpbGw9IndoaXRlIi8+CiAgPGNpcmNsZSBjeD0iNiIgY3k9IjYiIHI9IjQiIGZpbGw9IiNlMjQ4NDgiLz4KPC9zdmc+Cg==");
+  border: 2px solid var(--premium-tc);
+}
+
+.msb .topper ol li::marker {
+  color: var(--premium-impact);
+  font-size: 0.85em;
+  font-weight: bold;
 }
 
 /**
