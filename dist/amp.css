@@ -578,10 +578,24 @@ figcaption, .caption {
   text-align: center;
   overflow-x: scroll;
   white-space: nowrap;
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-foreground, #0007) var(--scrollbar-background, transparent);
 }
 
 .slider .row {
   display: inline-flex;
+}
+
+.slider::-webkit-scrollbar {
+  height: var(--scrollbar-height, 2px);
+}
+
+.slider::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-foreground, #0007);
+}
+
+.slider::--webkit-scrollbar-track {
+  background: var(--scrollbar-background, transparent);
 }
 
 /**
@@ -833,11 +847,15 @@ html.msb .masthead {
   border-top: 2px solid var(--border-color, var(--black));
   border-bottom: 1px solid var(--border-color, var(--black));
   font-size: 16px;
-  padding: 15px 0;
+  padding: 17px 0 15px;
   --lhd: underline;
   /* Hides the bottom border for decks without the premium topper */
   position: relative;
   top: 1px;
+}
+
+.msb .flag-nav {
+  --scrollbar-foreground: var(--premium-impact);
 }
 
 .flag-nav .separator ~ * {
