@@ -75,10 +75,26 @@
   text-align: center;
   overflow-x: scroll;
   white-space: nowrap;
+  scrollbar-width: thin;
+  scrollbar-color: 
+    var(--scrollbar-foreground, #0007) 
+    var(--scrollbar-background, transparent);
 }
 
 .slider .row {
   display: inline-flex;
+}
+
+.slider::-webkit-scrollbar {
+  height: var(--scrollbar-height, 2px);
+}
+
+.slider::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-foreground, #0007);
+}
+
+.slider::--webkit-scrollbar-track {
+  background: var(--scrollbar-background, transparent);
 }
 
 /**
