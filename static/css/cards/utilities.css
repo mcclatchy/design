@@ -122,3 +122,7 @@ form[id^=bx-form] {
   font-size: 14px;
   line-height: 15px;
 }
+
+.videoIngest .card.read-next {
+  display: block;
+}

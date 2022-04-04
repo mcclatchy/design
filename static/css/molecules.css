@@ -38,6 +38,10 @@
   --lhc: var(--lc, inherit);
 }
 
+.package.no-img {
+  --hs: x-large;
+}
+
 .package > .time,
 .package > time {
   flex: 1 1 auto;
@@ -158,7 +162,7 @@ section, .section {
   grid-auto-flow: dense;
 }
 
-.grid > .package {
+.grid > .package:not(.no-img) {
   --gap: 0px;
 }
 
