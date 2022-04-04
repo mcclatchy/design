@@ -544,6 +544,10 @@ figcaption, .caption {
   --lhc: var(--lc, inherit);
 }
 
+.package.no-img {
+  --hs: x-large;
+}
+
 .package > .time,
 .package > time {
   flex: 1 1 auto;
@@ -657,7 +661,7 @@ section, .section {
   grid-auto-flow: dense;
 }
 
-.grid > .package {
+.grid > .package:not(.no-img) {
   --gap: 0px;
 }
 
@@ -687,6 +691,10 @@ section, .section {
 
 .expander:not(.open) ~ * {
   display: none;
+}
+
+.expander:not(.open) ~ .d-block {
+  display: block;
 }
 
 .expander.open:after {
@@ -1409,6 +1417,7 @@ html.msb .masthead {
   max-width: var(--story-width);
   margin: 0 auto;
   padding: 15px;
+  color: white;
 }
 
 .opinion-banner svg {
@@ -1891,4 +1900,8 @@ form[id^=bx-form] {
 .mi-sticky-player figcaption {
   font-size: 14px;
   line-height: 15px;
+}
+
+.videoIngest .card.read-next {
+  display: block;
 }
