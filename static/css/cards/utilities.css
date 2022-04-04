@@ -105,3 +105,20 @@
 .grid > .zone-el.hidden {
   display: none;
 }
+
+/**
+ * Purple Tuesdays
+ */
+
+form[id^=bx-form] {
+  justify-items: center;
+}
+
+.mi-sticky-player {
+  --ht: none;
+}
+
+.mi-sticky-player figcaption {
+  font-size: 14px;
+  line-height: 15px;
+}
