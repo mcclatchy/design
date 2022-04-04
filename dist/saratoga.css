@@ -138,7 +138,7 @@ li {
 }
 
 .kicker {
-  display: block;
+  display: inline-block;
   padding: 5px 8px;
   font-weight: normal;
   color: var(--tc, var(--black));
@@ -242,6 +242,7 @@ hr {
   --tc: white;
   --fc: white;
   --bc: white;
+  --lhc: white;
   --bbc: var(--impact);
 }
 
@@ -533,6 +534,7 @@ figcaption, .caption {
 .package {
   padding: calc(var(--gap) / 2);
   color: var(--tc);
+  flex: 1;
   --ht: none;
   --hw: normal;
   --hf: var(--serif);
@@ -542,6 +544,13 @@ figcaption, .caption {
   --lhc: var(--lc, inherit);
 }
 
+.package > .time,
+.package > time {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: end;
+}
+
 .card {
   position: relative;
   background-color: var(--paper-color, white);
@@ -549,7 +558,9 @@ figcaption, .caption {
   box-shadow: var(--paper-shadow);
 }
 
-.card.horizontal figure {
+.card figure,
+.card .video,
+.card .playlist-carousel-wrapper {
   align-self: stretch;
 }
 
@@ -609,10 +620,22 @@ section, .section {
   margin: var(--gap) auto;
 }
 
+#main-content,
+.videoIngest #vueContainer {
+  display: block;
+  margin: 0;
+  padding: 0;
+  max-width: unset;
+}
+
 .section-label {
   margin: 0;
   font-weight: bold;
   padding: 0 var(--page-padding);
+}
+
+.section-title h5 {
+  margin: 0;
 }
 
 @media (min-width: 600px) {
@@ -632,6 +655,10 @@ section, .section {
   grid-template-columns: var(--columns);
   gap: var(--gap);
   grid-auto-flow: dense;
+}
+
+.grid > .package {
+  --gap: 0px;
 }
 
 /**
@@ -1016,6 +1043,7 @@ html.msb .masthead {
   gap: 20px;
   padding: 0;
   max-width: 340px;
+  align-self: start;
   --hf: var(--sans);
   --hw: bold;
 }
@@ -1887,11 +1915,6 @@ section.big-news {
   padding: 0px 15px;
 }
 
-.big-news figure:last-child {
-  /* fix if there is no grid */
-  padding-bottom: 15px;
-}
-
 .big-news .grid:not(.featured) {
   padding: 0 15px;
 }
@@ -1906,7 +1929,7 @@ section.big-news {
 }
 
 .big-news .featured .package {
-  padding: 15px 0 0;
+  padding: 0;
 }
 
 @media (min-width: 660px) {
@@ -2360,4 +2383,20 @@ section.big-news {
 .zone-el.hidden,
 .grid > .zone-el.hidden {
   display: none;
+}
+
+/**
+ * Purple Tuesdays
+ */
+form[id^=bx-form] {
+  justify-items: center;
+}
+
+.mi-sticky-player {
+  --ht: none;
+}
+
+.mi-sticky-player figcaption {
+  font-size: 14px;
+  line-height: 15px;
 }
