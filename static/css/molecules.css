@@ -195,6 +195,10 @@ section, .section {
   display: none;
 }
 
+.expander:not(.open) ~ .d-block {
+  display: block;
+}
+
 .expander.open:after {
   transform: rotateX(180deg);
 }
