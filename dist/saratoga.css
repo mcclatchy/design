@@ -242,6 +242,7 @@ hr {
   --tc: white;
   --fc: white;
   --bc: white;
+  --hc: white;
   --lhc: white;
   --bbc: var(--impact);
 }
@@ -1587,6 +1588,7 @@ html.msb .masthead {
   display: grid;
   grid-template-columns: 1fr 140px;
   grid-gap: 15px;
+  align-items: start;
 }
 
 .search-form input,
@@ -1605,6 +1607,11 @@ html.msb .masthead {
   padding: 0;
   --bc: var(--black);
   --bbc: transparent;
+}
+
+.search-form .select .options a {
+  display: block;
+  padding: 20px 0 0;
 }
 
 /* Different grids */
@@ -2395,6 +2402,10 @@ section.big-news {
   padding: 0;
 }
 
+.error, .errorText {
+  color: var(--tc, #d63031);
+}
+
 /**
  * Display classes
  */
@@ -2452,7 +2463,7 @@ section.big-news {
  * Purple Tuesdays
  */
 form[id^=bx-form] {
-  justify-items: center;
+  display: block;
 }
 
 .mi-sticky-player {

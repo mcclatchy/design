@@ -242,6 +242,7 @@ hr {
   --tc: white;
   --fc: white;
   --bc: white;
+  --hc: white;
   --lhc: white;
   --bbc: var(--impact);
 }
@@ -1870,6 +1871,10 @@ html.msb .masthead {
   padding: 0;
 }
 
+.error, .errorText {
+  color: var(--tc, #d63031);
+}
+
 /**
  * Display classes
  */
@@ -1927,7 +1932,7 @@ html.msb .masthead {
  * Purple Tuesdays
  */
 form[id^=bx-form] {
-  justify-items: center;
+  display: block;
 }
 
 .mi-sticky-player {
