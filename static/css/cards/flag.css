@@ -227,6 +227,10 @@ html.msb .masthead {
   box-shadow:
     0 3px 6px rgba(0,0,0,0.16),
     0 3px 6px rgba(0,0,0,0.23);
+  --tc: var(--black);
+  --lc: var(--black);
+  --lhc: var(--black);
+  --lhd: none;
 }
 
 .sds-flag .popout > * {
