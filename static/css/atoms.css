@@ -253,6 +253,7 @@ hr {
   --tc: white;
   --fc: white;
   --bc: white;
+  --hc: white;
   --lhc: white;
   --bbc: var(--impact);
 }

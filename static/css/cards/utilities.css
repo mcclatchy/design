@@ -48,6 +48,10 @@
   padding: 0;
 }
 
+.error, .errorText {
+  color: var(--tc,#d63031);
+}
+
 /**
  * Display classes
  */
@@ -111,7 +115,7 @@
  */
 
 form[id^=bx-form] {
-  justify-items: center;
+  display: block;
 }
 
 .mi-sticky-player {
