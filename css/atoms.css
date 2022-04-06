@@ -148,7 +148,7 @@ li {
 }
 
 .kicker {
-  display: block;
+  display: inline-block;
   padding: 5px 8px;
   font-weight: normal;
   color: var(--tc, var(--black));
@@ -253,6 +253,8 @@ hr {
   --tc: white;
   --fc: white;
   --bc: white;
+  --hc: white;
+  --lhc: white;
   --bbc: var(--impact);
 }
 

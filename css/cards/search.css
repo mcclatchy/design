@@ -3,6 +3,7 @@
   display: grid;
   grid-template-columns: 1fr 140px;
   grid-gap: 15px;
+  align-items: start;
 }
 
 .search-form input,
@@ -21,6 +22,11 @@
   padding: 0;
   --bc: var(--black);
   --bbc: transparent;
+}
+
+.search-form .select .options a {
+  display: block;
+  padding: 20px 0 0;
 }
 
 /* Different grids */

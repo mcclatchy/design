@@ -48,6 +48,10 @@
   padding: 0;
 }
 
+.error, .errorText {
+  color: var(--tc,#d63031);
+}
+
 /**
  * Display classes
  */
@@ -104,4 +108,25 @@
 .zone-el.hidden,
 .grid > .zone-el.hidden {
   display: none;
+}
+
+/**
+ * Purple Tuesdays
+ */
+
+form[id^=bx-form] {
+  display: block;
+}
+
+.mi-sticky-player {
+  --ht: none;
+}
+
+.mi-sticky-player figcaption {
+  font-size: 14px;
+  line-height: 15px;
+}
+
+.videoIngest .card.read-next {
+  display: block;
 }
