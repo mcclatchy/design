@@ -48,8 +48,8 @@
   padding: 0;
 }
 
-.error, .errorText {
-  color: var(--tc,#d63031);
+.error {
+  color: #d63031;
 }
 
 /**
