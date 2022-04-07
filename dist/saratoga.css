@@ -749,10 +749,12 @@ html.msb .masthead {
   /* Custom properties for kids */
   --spread: 15px;
   --ld: none;
+  --tc: var(--black);
 }
 
 .msb .sds-flag {
   grid-template-areas: "menu . account" "edition edition edition" "logo logo logo" "nav nav nav";
+  --tc: var(--premium-tc);
 }
 
 @media (min-width: 768px) {
@@ -937,6 +939,10 @@ html.msb .masthead {
 .sds-flag .popout .user {
   min-height: 72px;
   border-bottom: 1px solid #A1A1A1;
+}
+
+.sds-flag .popout svg {
+  width: 20px;
 }
 
 /**
@@ -1323,6 +1329,19 @@ html.msb .masthead {
  */
 .story-body .panel {
   --paper-color: var(--body-background);
+}
+
+/*
+ * AMP stuff
+ */
+.amp-rm-wrapper {
+  position: relative;
+  display: grid;
+  place-items: center;
+  margin: -100px auto 0;
+  padding: 100px 30px 30px;
+  background: linear-gradient(transparent, rgba(255, 255, 255, 0.7) 20%, white 45%);
+  z-index: 99;
 }
 
 /**
@@ -2406,8 +2425,8 @@ section.big-news {
   padding: 0;
 }
 
-.error, .errorText {
-  color: var(--tc, #d63031);
+.error {
+  color: #d63031;
 }
 
 /**
