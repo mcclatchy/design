@@ -36,6 +36,7 @@ html.msb .masthead {
   /* Custom properties for kids */
   --spread: 15px;
   --ld: none;
+  --tc: var(--black);
 }
 
 .msb .sds-flag {
@@ -44,6 +45,8 @@ html.msb .masthead {
     "edition edition edition"
     "logo logo logo"
     "nav nav nav";
+
+  --tc: var(--premium-tc);
 }
 
 @media(min-width: 768px) {
@@ -250,4 +253,8 @@ html.msb .masthead {
 .sds-flag .popout .user {
   min-height: 72px;
   border-bottom: 1px solid #A1A1A1;
+}
+
+.sds-flag .popout svg {
+  width: 20px;
 }
