@@ -93,6 +93,18 @@ class PremiumTopper extends HTMLElement {
   }
 
   /**
+   * Getters and setters
+   */
+
+  get moved() {
+    return this.dataset.moved;
+  }
+
+  set moved(val) {
+    this.dataset.moved = val;
+  }
+
+  /**
    * Called once when instantiated
    */
 
@@ -105,6 +117,28 @@ class PremiumTopper extends HTMLElement {
 
     // Fetch the data
     this.render();
+  }
+
+  /**
+   * Called when added or moved in the DOM
+   */
+
+  connectedCallback() {
+    if(!this.moved) {
+      const header = document.querySelector("body > header");
+      const parentSection = this.closest("section");
+
+      // Only run this once
+      this.moved = true;
+
+      // Move it
+      header.insertAdjacentElement("afterend", this);
+      
+      // Clean up the empty parent (if there)
+      if(parentSection.children.length == 0) {
+        parentSection.remove();
+      }
+    }
   }
 
   /**
