@@ -4,15 +4,43 @@
 
 class CustomCard extends HTMLElement {
 
+  /**
+   * Observed attributes go through the callback when they change
+   */
+
   static get observedAttributes() {
     return ["order"]
   }
 
+  /**
+   * Order getter and setter
+   */
+
+  get order() {
+    return this.getAttribute("order");
+  }
+
+  set order(val) {
+    if(val) {
+      this.setAttribute("order", val);
+    } else {
+      this.removeAttribute("order");
+      this.hidden = true;
+    }
+  }
+
+  /**
+   * Fires when element is created
+   */
+
   constructor() {
     super();
-
     this.section = this.closest("section");
   }
+
+  /**
+   * Fires when an observed attribute changes
+   */
 
   attributeChangedCallback(name, ov, nv) {
     switch(name) {
@@ -21,6 +49,10 @@ class CustomCard extends HTMLElement {
         break;
     }
   }
+
+  /**
+   * Updates the position of the element
+   */
 
   updatePosition(val) {
     switch(val) {
@@ -42,7 +74,7 @@ class CustomCard extends HTMLElement {
             this.section.appendChild(this);
           }
         } else {
-          console.error("custom-card: order should be either before, after or an integer", val);
+          console.error("custom-card: order should be either 'before', 'after' or an integer");
         }
     }
   }
