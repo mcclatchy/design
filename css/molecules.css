@@ -167,6 +167,14 @@ section, .section {
 }
 
 /**
+ * Custom card test
+ */
+
+custom-card {
+  display: contents;
+}
+
+/**
  * Expander 
  */
 
