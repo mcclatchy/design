@@ -74,7 +74,7 @@ class CustomCard extends HTMLElement {
             this.section.appendChild(this);
           }
         } else {
-          console.error("custom-card: order should be either before, after or an integer", val);
+          console.error("custom-card: order should be either 'before', 'after' or an integer");
         }
     }
   }
