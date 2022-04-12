@@ -79,6 +79,10 @@
   }
 }
 
+* {
+  color: var(--tc, var(--black));
+}
+
 body {
   margin: 0;
   background-color: var(--body-background);
