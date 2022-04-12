@@ -5,28 +5,38 @@ menu: decks
 layout: section
 ---
 
+<script type="module" src="/js/custom-card.js"></script>
+
+<style>
+  fake-ad {
+    grid-column: 1;
+  }
+
+  fake-ad[size*="600"] {
+    grid-row: span 2;
+  }
+</style>
+
 {{< section-nav >}}
 
-<section>
-  <div class="flex-columns reverse">
-    <div class="main-stage flex-columns">
-      {{< card class="lead-item" headline-size="h1" >}}
-      {{< card >}}
-      {{< card >}}
-      {{< card >}}
-      {{< card >}}
-      {{< card >}}
-      {{< card >}}
-    </div>
-    <div class="rail flex-columns">
-      {{< digest >}}
-      {{< digest >}}
-      <fake-ad size="[300,600]"></fake-ad>
-    </div>
-  </div>
-</section>
-
 <section class="grid">
+  {{< card class="lead-item" headline-size="h1" >}}
+  {{< card >}}
+  {{< card >}}
+  <fake-ad></fake-ad>
+  {{< card >}}
+  {{< card >}}
+  {{< card >}}
+  {{< card >}}
+  {{< card >}}
+  <fake-ad size="[300,600]"></fake-ad>
+  {{< card >}}
+  {{< card >}}
+  {{< card >}}
+  {{< card >}}
+  {{< card >}}
+  <fake-ad></fake-ad>
+  {{< card >}}
   {{< card >}}
   {{< card >}}
   {{< card >}}
@@ -35,22 +45,50 @@ layout: section
   {{< card >}}
 </section>
 
-<section>
-  <div class="flex-columns">
-    <div class="rail flex-columns">
-      <fake-ad size="[300,600]"></fake-ad>
-      <fake-ad></fake-ad>
-    </div>
-    <div class="main-stage flex-columns">
-      {{< card >}}
-      {{< card >}}
-      {{< card >}}
-      {{< card >}}
-      {{< card >}}
-      {{< card >}}
-    </div>
-  </div>
-</section>
+<!-- <section> -->
+<!--   <div class="flex-columns reverse"> -->
+<!--     <div class="main-stage flex-columns"> -->
+<!--       {{< card class="lead-item" headline-size="h1" >}} -->
+<!--       {{< card >}} -->
+<!--       {{< card >}} -->
+<!--       {{< card >}} -->
+<!--       {{< card >}} -->
+<!--       {{< card >}} -->
+<!--       {{< card >}} -->
+<!--     </div> -->
+<!--     <div class="rail flex-columns"> -->
+<!--       {{< digest >}} -->
+<!--       {{< digest >}} -->
+<!--       <fake-ad size="[300,600]"></fake-ad> -->
+<!--     </div> -->
+<!--   </div> -->
+<!-- </section> -->
+
+<!-- <section class="grid"> -->
+<!--   {{< card >}} -->
+<!--   {{< card >}} -->
+<!--   {{< card >}} -->
+<!--   {{< card >}} -->
+<!--   {{< card >}} -->
+<!--   {{< card >}} -->
+<!-- </section> -->
+
+<!-- <section> -->
+<!--   <div class="flex-columns"> -->
+<!--     <div class="rail flex-columns"> -->
+<!--       <fake-ad size="[300,600]"></fake-ad> -->
+<!--       <fake-ad></fake-ad> -->
+<!--     </div> -->
+<!--     <div class="main-stage flex-columns"> -->
+<!--       {{< card >}} -->
+<!--       {{< card >}} -->
+<!--       {{< card >}} -->
+<!--       {{< card >}} -->
+<!--       {{< card >}} -->
+<!--       {{< card >}} -->
+<!--     </div> -->
+<!--   </div> -->
+<!-- </section> -->
 
 <section class="load-more">
   <a class="button big impact" href="#page2">Load More</a>
