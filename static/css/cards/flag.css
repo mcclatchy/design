@@ -8,7 +8,8 @@
   z-index: 2;
 }
 
-body.story .masthead {
+body.story .masthead,
+body.wirestory .masthead {
   --paper-color: white;
 }
 
