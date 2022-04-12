@@ -14,7 +14,7 @@ section.big-news {
 }
 
 .big-news .h1 {
-  font: 2.5rem/1em var(--premium-serif);
+  font: 700 2.5rem/1em var(--serif);
   text-align: center;
   align-self: center;
 }
