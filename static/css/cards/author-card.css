@@ -48,6 +48,10 @@
   grid-area: bio;
 }
 
+.author-card .byline {
+  margin: 0;
+}
+
 /**
  * Bio version
  */
