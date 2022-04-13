@@ -173,6 +173,21 @@
 }
 
 /**
+ * Newsgate tagging
+ */
+
+.story-body .ng_leadin {
+  font: 700 18px var(--sans);
+  text-transform: uppercase;
+}
+
+.story-body .ng_endnote_contact,
+.story-body .ng_endnote_contact p {
+  font: italic 400 14px var(--sans);
+}
+
+
+/**
  * Fixes for HTML discrepencies
  */
 
