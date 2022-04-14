@@ -125,19 +125,7 @@ class PremiumTopper extends HTMLElement {
 
   connectedCallback() {
     if(!this.moved) {
-      const header = document.querySelector("body > header");
-      const parentSection = this.closest("section");
-
-      // Only run this once
-      this.moved = true;
-
-      // Move it
-      header.insertAdjacentElement("afterend", this);
-      
-      // Clean up the empty parent (if there)
-      if(parentSection.children.length == 0) {
-        parentSection.remove();
-      }
+      this.move();
     }
   }
 
@@ -186,6 +174,26 @@ class PremiumTopper extends HTMLElement {
 
     // Show it up
     this.classList.add("loaded");
+  }
+
+  /**
+   * Moves the element into position
+   */
+
+  move() {
+    const header = document.querySelector("#mastheadVueContainer");
+    const parentSection = this.closest("section");
+
+    // Only run this once
+    this.moved = true;
+
+    // Move it
+    header.insertAdjacentElement("afterend", this);
+    
+    // Clean up the empty parent (if there)
+    if(parentSection.children.length == 0) {
+      parentSection.remove();
+    }
   }
 }
 

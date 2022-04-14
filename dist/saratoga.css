@@ -725,7 +725,8 @@ section, .section {
   z-index: 2;
 }
 
-body.story .masthead {
+body.story .masthead,
+body.wirestory .masthead {
   --paper-color: white;
 }
 
@@ -1345,6 +1346,26 @@ html.msb .masthead {
 }
 
 /**
+ * Newsgate tagging
+ */
+.story-body .ng_leadin {
+  font: 700 18px var(--sans);
+  text-transform: uppercase;
+}
+
+.story-body .ng_endnote_contact,
+.story-body .ng_endnote_contact p {
+  font: italic 400 14px var(--sans);
+}
+
+/**
+ * Fixes for HTML discrepencies
+ */
+.story-body .lead-item figcaption {
+  padding-top: 10px;
+}
+
+/**
  * Premium topper
  */
 .topper {
@@ -1672,6 +1693,11 @@ html.msb .masthead {
 .bio {
   display: grid;
   gap: 15px;
+  text-align: left;
+}
+
+.bio .byline {
+  margin: 0;
 }
 
 @media (min-width: 600px) {
@@ -1856,6 +1882,10 @@ html.msb .masthead {
   grid-area: bio;
 }
 
+.author-card .byline {
+  margin: 0;
+}
+
 /**
  * Bio version
  */
@@ -1972,7 +2002,7 @@ section.big-news {
 }
 
 .big-news .h1 {
-  font: 2.5rem/1em var(--premium-serif);
+  font: 700 2.5rem/1em var(--serif);
   text-align: center;
   align-self: center;
 }
