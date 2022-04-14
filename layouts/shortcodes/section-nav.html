@@ -3,11 +3,11 @@
 {{- $size := default "h1" (.Get "size") }}
 
 {{- if eq $type "empty" }}
-<section class="section-nav">
+<div class="section-nav">
   <h1 class="title {{$size}}">{{ $label }}</h1>
-</section>
+</div>
 {{- else }}
-<section class="section-nav">
+<div class="section-nav">
   <h1 class="expander title {{$size}}" onclick="this.classList.toggle('open')">{{ $label }}</h1>
   <div class="icons summary">
     <a href="#">NFL</a>
@@ -15,5 +15,5 @@
     <a href="#">NBA</a>
     <a href="#">College</a>
   </div>
-</section>
+</div>
 {{- end }}

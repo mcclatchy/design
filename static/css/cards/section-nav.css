@@ -1,12 +1,11 @@
 .section-nav {
   padding: 0;
-  max-width: 1170px;
+  grid-column: 1/-1;
   --lc: #707070;
 }
 
 .section-nav .title {
   margin: 0;
-  padding: 0 15px;
 }
 
 .section-nav .title:after {
@@ -16,16 +15,15 @@
 
 .section-nav .expander.open + .icons {
   display: flex;
+  grid-gap: 30px;
   flex-wrap: wrap;
 }
 
 .section-nav .icons {
+  padding-top: 15px;
+  flex-wrap: wrap;
   --lc: var(--tc, #707070);
   --lhc: var(--tc, #222);
-}
-
-.section-nav .icons > * {
-  padding: 0 15px;
 }
 
 @media(max-width: 600px) {

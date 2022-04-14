@@ -17,10 +17,11 @@ layout: section
   }
 </style>
 
-{{< section-nav >}}
-
 <section class="grid">
+  {{< section-nav >}}
+
   {{< card class="lead-item" headline-size="h1" >}}
+  {{< digest >}}
   {{< card >}}
   {{< card >}}
   <fake-ad></fake-ad>
@@ -35,6 +36,7 @@ layout: section
   {{< card >}}
   {{< card >}}
   {{< card >}}
+  {{< card >}}
   <fake-ad></fake-ad>
   {{< card >}}
   {{< card >}}
@@ -42,54 +44,12 @@ layout: section
   {{< card >}}
   {{< card >}}
   {{< card >}}
-  {{< card >}}
-</section>
 
-<!-- <section> -->
-<!--   <div class="flex-columns reverse"> -->
-<!--     <div class="main-stage flex-columns"> -->
-<!--       {{< card class="lead-item" headline-size="h1" >}} -->
-<!--       {{< card >}} -->
-<!--       {{< card >}} -->
-<!--       {{< card >}} -->
-<!--       {{< card >}} -->
-<!--       {{< card >}} -->
-<!--       {{< card >}} -->
-<!--     </div> -->
-<!--     <div class="rail flex-columns"> -->
-<!--       {{< digest >}} -->
-<!--       {{< digest >}} -->
-<!--       <fake-ad size="[300,600]"></fake-ad> -->
-<!--     </div> -->
-<!--   </div> -->
-<!-- </section> -->
+  <div class="load-more">
+    <a class="button big impact" href="#page2">Load More</a>
+  </div>
 
-<!-- <section class="grid"> -->
-<!--   {{< card >}} -->
-<!--   {{< card >}} -->
-<!--   {{< card >}} -->
-<!--   {{< card >}} -->
-<!--   {{< card >}} -->
-<!--   {{< card >}} -->
-<!-- </section> -->
-
-<!-- <section> -->
-<!--   <div class="flex-columns"> -->
-<!--     <div class="rail flex-columns"> -->
-<!--       <fake-ad size="[300,600]"></fake-ad> -->
-<!--       <fake-ad></fake-ad> -->
-<!--     </div> -->
-<!--     <div class="main-stage flex-columns"> -->
-<!--       {{< card >}} -->
-<!--       {{< card >}} -->
-<!--       {{< card >}} -->
-<!--       {{< card >}} -->
-<!--       {{< card >}} -->
-<!--       {{< card >}} -->
-<!--     </div> -->
-<!--   </div> -->
-<!-- </section> -->
-
-<section class="load-more">
-  <a class="button big impact" href="#page2">Load More</a>
+  <div class="hidden">
+    <!-- this is the equivalent banner option area -->
+  </div>
 </section>
