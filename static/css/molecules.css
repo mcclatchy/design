@@ -56,6 +56,10 @@
   box-shadow: var(--paper-shadow);
 }
 
+.card * {
+  --paper-shadow: none;
+}
+
 .card figure,
 .card .video,
 .card .playlist-carousel-wrapper {

@@ -19,7 +19,6 @@
 .bio {
   display: grid;
   gap: 15px;
-  text-align: left;
 }
 
 .bio .byline {
@@ -32,6 +31,7 @@
     justify-self: stretch;
     align-items: center;
     justify-content: space-between;
+    text-align: left;
   }
 }
 
