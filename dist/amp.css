@@ -563,6 +563,10 @@ figcaption, .caption {
   box-shadow: var(--paper-shadow);
 }
 
+.card * {
+  --paper-shadow: none;
+}
+
 .card figure,
 .card .video,
 .card .playlist-carousel-wrapper {
@@ -1447,7 +1451,6 @@ html.msb .masthead {
 .bio {
   display: grid;
   gap: 15px;
-  text-align: left;
 }
 
 .bio .byline {
@@ -1460,6 +1463,7 @@ html.msb .masthead {
     justify-self: stretch;
     align-items: center;
     justify-content: space-between;
+    text-align: left;
   }
 }
 /**
