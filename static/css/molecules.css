@@ -204,7 +204,7 @@ section, .section {
 }
 
 .expander.open:after {
-  transform: rotateX(180deg);
+  transform: scaleY(-1);
 }
 
 /**
