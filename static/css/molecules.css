@@ -223,7 +223,7 @@ custom-card {
 }
 
 .expander.open:after {
-  transform: rotateX(180deg);
+  transform: scaleY(-1);
 }
 
 /**
