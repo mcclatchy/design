@@ -40,11 +40,21 @@
  * Light DOM styles for the portal
  */
 
+.msb .topper h3 {
+  --hs: 13px;
+  --hw: normal;
+  --hf: var(--sans);
+  --hc: var(--premium-impact);
+  --ht: uppercase;
+}
+
 .msb .topper [slot="headline"] {
   --hs: 8vw;
   --hw: normal;
   --hl: 1.1em;
   --hf: var(--premium-serif);
+  --hc: var(--premium-tc);
+  --ht: none;
   margin: 0;
 }
 
@@ -52,14 +62,6 @@
   .msb .topper [slot="headline"] {
     --hs: 54px;
   }
-}
-
-.msb .topper h3 {
-  --hs: 13px;
-  --hw: normal;
-  --hf: var(--sans);
-  --hc: var(--premium-impact);
-  --ht: uppercase;
 }
 
 .msb .topper li {

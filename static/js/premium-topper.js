@@ -26,6 +26,12 @@ class PremiumTopper extends HTMLElement {
         margin: 0;
       }
 
+      /* Temporary fix pre-1.15.16 */
+      slot[name="headline"]::slotted(.h1) {
+        --hc: var(--premium-tc) !important;
+        --ht: none !important;
+      }
+
       .container {
         display: grid;
         gap: var(--gap);
@@ -139,7 +145,7 @@ class PremiumTopper extends HTMLElement {
     const endpoint = `https://storage.googleapis.com/mc-high-impact/prodx/premium-topper/docs/${this.dataset.id}.json`;
     const response = await fetch(endpoint);
     const data = await response.json();
-    
+
     // Inject the content
     this.insertAdjacentHTML("afterbegin", data?.html.portal);
 
@@ -169,8 +175,18 @@ class PremiumTopper extends HTMLElement {
         break;
     }
 
-    // Clean up a bit
-    this.querySelectorAll("h1").forEach(ele => ele.slot="headline");
+    // Swap H1 elements for Dana/SEO
+    this.querySelectorAll("h1").forEach(ele => {
+      let h3 = document.createElement("h3");
+      h3.classList.add("h1");
+      h3.innerHTML = ele.innerHTML;
+      h3.slot = "headline";
+
+      ele.replaceWith(h3);
+    });
+
+    // Append a hash to all links for analytics
+    this.querySelectorAll("a").forEach(ele => ele.hash = "subtopper");
 
     // Show it up
     this.classList.add("loaded");
