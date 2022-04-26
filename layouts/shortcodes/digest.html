@@ -1,10 +1,11 @@
 {{- $label := .Get "label" -}}
 {{- $class := .Get "class" -}}
+{{- $kicker := default "OPINION" (.Get "kicker") -}}
 
 <div class="digest">
   <div class="paper {{ $class }}">
     <a href="#" class="label {{ $label }}">
-      <span class="h5">OPINION</span>
+      <span class="h5">{{ $kicker }}</span>
     </a>
     {{- if eq $label "sticky" }}
     <article class="card">
@@ -36,6 +37,10 @@
       <h2 class="h3"><a href="#">Letters: Readers discuss teen drinking, tax-cut benefits in Missouri and student protests</a></h2>
       <time>March 16, 2018 4:08 pm</time>
     </article>
+    <article class="package">
+      <h2 class="h3"><a href="#">Administration unveils steps to boost racial equity in govt</a></h2>
+      <time>March 16, 2018 4:08 pm</time>
+    </article>
   </div>
-  <a href="#" class="more-link">MORE OPINION</a>
+  <a href="#" class="more-link">MORE {{ $kicker }}</a>
 </div>
