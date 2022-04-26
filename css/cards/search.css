@@ -40,3 +40,9 @@
     grid-column: auto;
   }
 }
+
+/* Results */
+
+.load-more {
+  justify-content: center;
+}

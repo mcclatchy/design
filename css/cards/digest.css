@@ -4,8 +4,7 @@
 
 .digest {
   display: grid;
-  grid-template-rows: 1fr auto;
-  grid-gap: 15px;
+  gap: 15px;
   align-self: start;
 }
 
