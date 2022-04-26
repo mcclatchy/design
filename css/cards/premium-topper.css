@@ -42,7 +42,6 @@
 
 .msb .topper h3 {
   --hs: 13px;
-  --hw: normal;
   --hf: var(--sans);
   --hc: var(--premium-impact);
   --ht: uppercase;
