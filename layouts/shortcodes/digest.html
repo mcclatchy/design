@@ -1,10 +1,11 @@
 {{- $label := .Get "label" -}}
 {{- $class := .Get "class" -}}
+{{- $kicker := default "SECTION" (.Get "kicker") -}}
 
 <div class="digest">
   <div class="paper {{ $class }}">
     <a href="#" class="label {{ $label }}">
-      <span class="h5">OPINION</span>
+      <span class="h5">{{ $kicker }}</span>
     </a>
     {{- if eq $label "sticky" }}
     <article class="card">
