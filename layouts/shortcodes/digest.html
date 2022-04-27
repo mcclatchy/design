@@ -1,6 +1,6 @@
 {{- $label := .Get "label" -}}
 {{- $class := .Get "class" -}}
-{{- $kicker := default "SECTION" (.Get "kicker") -}}
+{{- $kicker := default "OPINION" (.Get "kicker") -}}
 
 <div class="digest">
   <div class="paper {{ $class }}">
@@ -42,5 +42,5 @@
       <time>March 16, 2018 4:08 pm</time>
     </article>
   </div>
-  <a href="#" class="more-link">MORE OPINION</a>
+  <a href="#" class="more-link">MORE {{ $kicker }}</a>
 </div>

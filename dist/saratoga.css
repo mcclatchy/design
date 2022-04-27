@@ -703,7 +703,7 @@ section, .section {
 }
 
 .expander.open:after {
-  transform: rotateX(180deg);
+  transform: scaleY(-1);
 }
 
 /**
@@ -1409,11 +1409,20 @@ html.msb .masthead {
 /**
  * Light DOM styles for the portal
  */
+.msb .topper h3 {
+  --hs: 13px;
+  --hf: var(--sans);
+  --hc: var(--premium-impact);
+  --ht: uppercase;
+}
+
 .msb .topper [slot=headline] {
   --hs: 8vw;
   --hw: normal;
   --hl: 1.1em;
   --hf: var(--premium-serif);
+  --hc: var(--premium-tc);
+  --ht: none;
   margin: 0;
 }
 
@@ -1422,14 +1431,6 @@ html.msb .masthead {
     --hs: 54px;
   }
 }
-.msb .topper h3 {
-  --hs: 13px;
-  --hw: normal;
-  --hf: var(--sans);
-  --hc: var(--premium-impact);
-  --ht: uppercase;
-}
-
 .msb .topper li {
   padding-left: 1em;
 }
@@ -2534,6 +2535,28 @@ form[id^=bx-form] {
 
 .videoIngest .card.read-next {
   display: block;
+}
+
+.partner-label {
+  position: relative;
+  font: 700 1.8rem var(--serif);
+  grid-column: 1/-1;
+}
+
+.partner-label::before {
+  content: "";
+  display: block;
+  height: 4px;
+  background-color: #ddd;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+}
+
+.partner-label span {
+  position: relative;
+  padding-right: 15px;
+  background-color: var(--body-background);
 }
 
 .impact2020 .kicker {

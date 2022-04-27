@@ -130,3 +130,25 @@ form[id^=bx-form] {
 .videoIngest .card.read-next {
   display: block;
 }
+
+.partner-label {
+  position: relative;
+  font: 700 1.8rem var(--serif);
+  grid-column: 1/-1;
+}
+
+.partner-label::before {
+  content: "";
+  display: block;
+  height: 4px;
+  background-color: #ddd;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+}
+
+.partner-label span {
+  position: relative;
+  padding-right: 15px;
+  background-color: var(--body-background);
+}
