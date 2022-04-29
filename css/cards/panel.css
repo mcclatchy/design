@@ -6,6 +6,8 @@
   padding: 45px 15px;
   max-width: 100%;
   background-color: var(--paper-color);
+  color: var(--tc);
+  font-family: var(--sans);
   --hf: var(--sans);
   --hw: bold;
   --ht: uppercase;
