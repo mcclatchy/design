@@ -3,8 +3,6 @@ title: "Theming pages in the design system"
 type: theming
 ---
 
-*Overview here talking about CSS custom properties, ES6 modules and custom elements*
-
 The ability to quickly theme and enhance pages is built into the foundation of the design system. We do this by creating layers for each part of our organization and binding them together with some fun tools and techniques. Most atoms and molucules are customizable, using CSS custom properties, and they have default values. These defaults are used in the base layer coming from WPS and make most of our pages, but we can put a layer on top of that base to change it where we want to. Take color for example, which is a configurable part of the paper atom. Click the buttons below to see how changing those properties affects the story card.
 
 <div class="panel">
