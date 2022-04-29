@@ -139,7 +139,7 @@
 <h3 id="enhancements">Enhancements</h3>
 <p>The enhancements layer is a base JavaScript file that can be used by itself or in more complicated cards. Its primary function is to communicate to the other development teams by adding code to the page in a specific place, and for that reason it should be included in all themes and skins.</p>
 <p>It also provides a layer of functionality that NewsX uses in multiple projects, themes and skins including: utilities to remove or replace elements on the page and communicate those changes to the other teams, the valid point insertion concept, media width adjustments and a series nav fix when published across multiple markets. This file should only be used directly by employees that are comfortable working with JavaScript, and will change as business needs change.</p>
-<div class="panel">
+<div class="panel factbox">
   <h4 class="expander tip">Learn more about the code</h4>
 <p>The enhancements file is a native ES6 module that exports a series of utility functions, and is available on all markets through a bucket-to-server sync DevOps set up at the following relative path <a href="https://www.miamiherald.com/static/hi/themes/enhancements.js">/static/hi/themes/enhancements.js</a>. All files are initially stored in a Google Cloud Bucket, providing an additional layer of security.</p>
 <p>To include the file into your own module, import the functions that you want to use with the following syntax.</p>
@@ -156,7 +156,7 @@
 <li>It must integrate with CUE when removing or modifying elements. For example, if a newsroom unchecks &ldquo;Allows Ads&rdquo; for a specific story a theme can provide additional enhancements based on that decision, but the newsroom must make it.</li>
 <li>It must identify itself uniquely in the <code>window.mi.theme</code> object for the other development teams.</li>
 </ol>
-<div class="panel">
+<div class="panel factbox">
   <h4 class="expander tip">Learn more about the code</h4>
 <p>Themes should consist of no more than one CSS file and one JavaScript file. The JavaScript file should be a standard ES module, and must import the enhancements file to initiate the <code>window.mi.theme</code> object. Additional functionality can be imported to accommodate the needs of the theme. Here is the embed code for the premium theme.</p>
 <pre tabindex="0"><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;/static/hi/themes/premium.css&quot;&gt;
@@ -187,7 +187,7 @@ mi.theme.description = &quot;A light theme for enterprise content&quot;;
     And I never talked to anybody about this. Y’all are the first people I’m talking to about anything down there.
   </audible-quote>
 </div>
-<div class="panel">
+<div class="panel factbox">
   <h4 class="expander tip">Learn more about the code</h4>
 <p>There are many ways to make a card, and it may need additional libraries to do what it needs to do. Unless there is a very specific reason, cards should be a custom element with a single JavaScript class file as the blueprint. There are many advantages to this approach.</p>
 <ol>
@@ -267,7 +267,7 @@ mi.theme.description = &quot;A light theme for enterprise content&quot;;
   </div>
 </article>
 
-    <article class="card ">
+    <article class="card d-tablet">
   <figure>
     <a href="https://mcclatchy.github.io/saratoga/food/205504249/">
       <img src="../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
@@ -280,7 +280,7 @@ mi.theme.description = &quot;A light theme for enterprise content&quot;;
   </div>
 </article>
 
-    <article class="card ">
+    <article class="card d-tablet">
   <figure>
     <a href="https://mcclatchy.github.io/saratoga/food/205504249/">
       <img src="../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
@@ -293,7 +293,7 @@ mi.theme.description = &quot;A light theme for enterprise content&quot;;
   </div>
 </article>
 
-    <article class="card ">
+    <article class="card d-tablet">
   <figure>
     <a href="https://mcclatchy.github.io/saratoga/food/205504249/">
       <img src="../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
@@ -306,7 +306,7 @@ mi.theme.description = &quot;A light theme for enterprise content&quot;;
   </div>
 </article>
 
-    <article class="card ">
+    <article class="card d-tablet">
   <figure>
     <a href="https://mcclatchy.github.io/saratoga/food/205504249/">
       <img src="../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
@@ -360,7 +360,7 @@ mi.theme.description = &quot;A light theme for enterprise content&quot;;
   </div>
 </article>
 
-    <article class="card ">
+    <article class="card d-tablet">
   <figure>
     <a href="https://mcclatchy.github.io/saratoga/food/205504249/">
       <img src="../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
@@ -376,7 +376,7 @@ mi.theme.description = &quot;A light theme for enterprise content&quot;;
     <div class="test-card promo">
       <p class="h2">Content goes here</p>
     </div>
-    <article class="card ">
+    <article class="card d-tablet">
   <figure>
     <a href="https://mcclatchy.github.io/saratoga/food/205504249/">
       <img src="../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
@@ -389,7 +389,7 @@ mi.theme.description = &quot;A light theme for enterprise content&quot;;
   </div>
 </article>
 
-    <article class="card ">
+    <article class="card d-tablet">
   <figure>
     <a href="https://mcclatchy.github.io/saratoga/food/205504249/">
       <img src="../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
@@ -402,7 +402,7 @@ mi.theme.description = &quot;A light theme for enterprise content&quot;;
   </div>
 </article>
 
-    <article class="card ">
+    <article class="card d-tablet">
   <figure>
     <a href="https://mcclatchy.github.io/saratoga/food/205504249/">
       <img src="../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">

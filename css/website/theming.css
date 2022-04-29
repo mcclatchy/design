@@ -46,6 +46,11 @@ section.grid {
   --tc: var(--black);
 }
 
+.panel.factbox {
+  box-sizing: border-box;
+  max-width: var(--story-width);
+}
+
 .tip {
   display: grid;
   grid-template-columns: auto 1fr auto;
