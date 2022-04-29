@@ -217,7 +217,7 @@ mi.theme.description = &quot;A light theme for enterprise content&quot;;
 <li>The performance team appends additional elements that are also critical, but may differ depending on the reader. These include ads, zones, vendor content and a whole slew of other things immediately after the page is loaded.</li>
 <li>The NewsX team further enhances individual pages or sets of pages with non-critical custom cards, or in the case of the <code>simple-grid</code> sections mostly negates the work of the performance team. The latter is fine for testing a concept, but not something that should be common practice.</li>
 </ol>
-<p>For all the elements on section pages, including homepages, we&rsquo;ve identified the layer in which they should belong and made an HTML structure that would be easy to organize by team. Here is the result:</p>
+<p>For all the elements on section pages, including homepages, we&rsquo;ve identified the layer in which they should belong and have made an HTML structure that would be easy to organize by team. Here is the result:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080;font-weight:bold">section</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;grid&#34;</span>&gt;
   &lt;<span style="color:#000080;font-weight:bold">article</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;card&#34;</span>&gt;..&lt;/<span style="color:#000080;font-weight:bold">article</span>&gt;
   &lt;<span style="color:#000080;font-weight:bold">article</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;card&#34;</span>&gt;..&lt;/<span style="color:#000080;font-weight:bold">article</span>&gt;
@@ -417,11 +417,18 @@ mi.theme.description = &quot;A light theme for enterprise content&quot;;
 
   </section>
 </div>
+<h3 id="custom-cards">Custom cards</h3>
+<p>Custom cards are very similar to those made for story pages, but need to move themselves into the correct position. We have created a new <code>&lt;custom-card&gt;</code> element to make this easy, and initiate the communication with the other development layers. This element is very basic, and simply moves whatever HTML placed inside it into position. When we couple this with the flexibility of the CSS grid, we can change the page very quickly in many different ways without touching any other layer.</p>
+<p>Custom cards can also be extended to provide more advanced functionality, like digests built from API data or visualizations connected to the Google Workspace app.</p>
+<div class="panel factbox">
+  <h4 class="expander tip">Learn more about the code</h4>
+<p><code>&lt;custom-card&gt;</code> is a custom element that provides functionality for the order attribute. Changing that attribute, or setting it initially, will move the card into position inside the <code>&lt;section&gt;</code> at the specified index. These values start at zero, so <code>&lt;custom-card order=&quot;5&quot;&gt;...&lt;/custom-card&gt;</code> would be moved into the fifth slot. The order attribute can also be &ldquo;before&rdquo; or &ldquo;after&rdquo; to move the content above or below the <code>&lt;section&gt;</code> element, giving us the full-width panels we use on lab pages. The file is available on all markets at the following path <a href="https://www.kansascity.com/static/hi/cards/custom-card/custom-card.js">/static/hi/cards/custom-card/custom-card.js</a>.</p>
+<p>SDS sets <code>display: contents</code> for the <code>&lt;custom-card&gt;</code> element, allowing us to pretend it&rsquo;s not there when making new cards. Elements that extend it, like the <code>&lt;custom-digest&gt;</code> element on the <a href="../saratoga/decks/topic/">topic page deck</a> can set their own rules.</p>
 <!--
-### Custom cards
 
 ### Extending the base element
 -->
+</div>
 
 </div>
 
