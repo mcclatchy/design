@@ -125,6 +125,12 @@ footer {
 
 fake-ad {
   display: flex;
+  background-color: #ddd;
+  padding: 15px;
+}
+
+#zone-el-2 fake-ad {
+  background-color: unset;
 }
 
 [data-zone="1"] {
