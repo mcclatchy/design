@@ -191,10 +191,10 @@ Take the following two examples. The first is a concept for a marketing card tha
   <section class="grid">
     {{< card >}}
     {{< card >}}
-    {{< card >}}
-    {{< card >}}
-    {{< card >}}
-    {{< card >}}
+    {{< card class="d-tablet" >}}
+    {{< card class="d-tablet" >}}
+    {{< card class="d-tablet" >}}
+    {{< card class="d-tablet" >}}
 
   <div class="load-more">
     <a class="button big impact">Load Card</a>
@@ -216,13 +216,13 @@ That can be done rapidly by making a new HTML element in CUE and adding it to th
   <section class="grid">
     {{< card >}}
     {{< card >}}
-    {{< card >}}
+    {{< card class="d-tablet" >}}
     <div class="test-card promo">
       <p class="h2">Content goes here</p>
     </div>
-    {{< card >}}
-    {{< card >}}
-    {{< card >}}
+    {{< card class="d-tablet" >}}
+    {{< card class="d-tablet" >}}
+    {{< card class="d-tablet" >}}
   </section>
 </div>
 
