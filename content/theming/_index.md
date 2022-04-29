@@ -152,7 +152,7 @@ To counter all these issues, we're using the same model that worked well on the 
 2. The performance team appends additional elements that are also critical, but may differ depending on the reader. These include ads, zones, vendor content and a whole slew of other things immediately after the page is loaded. 
 3. The NewsX team further enhances individual pages or sets of pages with non-critical custom cards, or in the case of the `simple-grid` sections mostly negates the work of the performance team. The latter is fine for testing a concept, but not something that should be common practice.
 
-For all the elements on section pages, including homepages, we've identified the layer in which they should belong and made an HTML structure that would be easy to organize by team. Here is the result:
+For all the elements on section pages, including homepages, we've identified the layer in which they should belong and have made an HTML structure that would be easy to organize by team. Here is the result:
 
 ```html
 <section class="grid">
@@ -226,8 +226,18 @@ That can be done rapidly by making a new HTML element in CUE and adding it to th
   </section>
 </div>
 
-<!--
 ### Custom cards
+
+Custom cards are very similar to those made for story pages, but need to move themselves into the correct position. We have created a new `<custom-card>` element to make this easy, and initiate the communication with the other development layers. This element is very basic, and simply moves whatever HTML placed inside it into position. When we couple this with the flexibility of the CSS grid, we can change the page very quickly in many different ways without touching any other layer. 
+
+Custom cards can also be extended to provide more advanced functionality, like digests built from API data or visualizations connected to the Google Workspace app. 
+
+{{% tip %}}
+`<custom-card>` is a custom element that provides functionality for the order attribute. Changing that attribute, or setting it initially, will move the card into position inside the `<section>` at the specified index. These values start at zero, so `<custom-card order="5">...</custom-card>` would be moved into the fifth slot. The order attribute can also be "before" or "after" to move the content above or below the `<section>` element, giving us the full-width panels we use on lab pages. The file is available on all markets at the following path [/static/hi/cards/custom-card/custom-card.js](https://www.kansascity.com/static/hi/cards/custom-card/custom-card.js).
+
+SDS sets `display: contents` for the `<custom-card>` element, allowing us to pretend it's not there when making new cards. Elements that extend it, like the `<custom-digest>` element on the [topic page deck](/saratoga/decks/topic/) can set their own rules.
+
+<!--
 
 ### Extending the base element
 -->
