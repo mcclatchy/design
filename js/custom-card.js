@@ -35,7 +35,6 @@ class CustomCard extends HTMLElement {
 
   constructor() {
     super();
-    this.section = this.closest("section");
   }
 
   /**
@@ -55,23 +54,25 @@ class CustomCard extends HTMLElement {
    */
 
   updatePosition(val) {
+    const parentElement = document.querySelector(this.dataset.qs) || this.closest("section");
+
     switch(val) {
       case "before":
-        this.section.insertAdjacentElement("beforeBegin", this);
+        parentElement.insertAdjacentElement("beforeBegin", this);
         break;
       case "after":
-        this.section.insertAdjacentElement("afterEnd", this);
+        parentElement.insertAdjacentElement("afterEnd", this);
         break;
       default:
         let index = parseInt(val);
         
         if(Number.isInteger(index)) {
-          let target = this.section.children[index];
+          let target = parentElement.children[index];
 
           if(target) {
             target.insertAdjacentElement("beforebegin", this);
           } else {
-            this.section.appendChild(this);
+            parentElement.appendChild(this);
           }
         } else {
           console.error("custom-card: order should be either 'before', 'after' or an integer");
