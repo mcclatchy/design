@@ -85,6 +85,11 @@
   }
 }
 
+.card.sponsored .kicker {
+  --tc: white;
+  background-color: var(--impact);
+}
+
 /**
  * Horizontal slider for additional content
  */
