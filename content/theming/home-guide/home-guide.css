@@ -1,0 +1,18 @@
+/**
+ * Home guide theme file
+ */
+
+:root {
+  --body-background: #fff;
+  --paper-shadow: none;
+  --page-padding: 30px;
+}
+
+section.grid {
+  max-width: var(--story-width);
+  padding: 0 var(--page-padding);
+}
+
+.package {
+  padding: calc(var(--gap) / 2) 0;
+}

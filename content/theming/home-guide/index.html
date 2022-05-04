@@ -1,0 +1,30 @@
+---
+title: Simple test for theming 
+description: A sample section page.
+layout: section
+---
+
+<script type="module" src="/js/custom-card.js"></script>
+
+<section class="grid">
+  {{< card class="lead-item" headline-size="h1" >}}
+  {{< card >}}
+  {{< card >}}
+  {{< card >}}
+  {{< card >}}
+  {{< card >}}
+  {{< card >}}
+  {{< card >}}
+  {{< card >}}
+
+  <div class="hidden">
+    <link rel="stylesheet" href="./home-guide.css">
+
+    <custom-card order="before">
+      <div class="panel" style="padding-bottom: 0;">
+        <img src="https://media.mcclatchy.com/2022/mia-naked-politics/miami-naked-politics-logo-color.svg" width="300">
+        <p>In ancient times some unclipped americas are thought of simply as authors. The literature would have us believe that a harmless ice is not but a legal. This could be, or perhaps a prideless hair's windscreen comes with it the thought that the grainy shrine is a comparison. Few can name a zesty hail that isn't an upcast viscose.</p>
+      </div>
+    </custom-card>
+  </div>
+</section>
