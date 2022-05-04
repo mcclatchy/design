@@ -4,6 +4,8 @@ description: A sample story page.
 menu: decks
 layout: story
 zones: true
+aliases: 
+  - /saratoga/decks/immersive/
 ---
 
 {{< immersive >}}

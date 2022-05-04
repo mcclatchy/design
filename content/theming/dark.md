@@ -1,6 +1,7 @@
 ---
 title: dark
 description: An impact presentation for media-heavy articles.
+layout: story
 ---
 
 <link rel="stylesheet" href="https://storage.googleapis.com/mc-high-impact/themes/dark.css">

@@ -1,46 +1,48 @@
 ---
-title: topic
-description: The topic layout.
+title: homepage
+description: A sample homepage.
 menu: decks
 layout: section
+aliases:
+  - /saratoga/sample/homepage/
+  - /saratoga/decks/homepage/
 ---
 
-<section class="grid">
-  {{< card >}}
-  {{< card >}}
-  {{< card >}}
-  <fake-ad size="[[970,250],[728,90]]" style="grid-column: 1/-1"></fake-ad>
-  {{< card >}}
-  {{< card >}}
-  {{< card >}}
-  {{< card >}}
-  {{< card >}}
-  {{< card >}}
-  {{< card >}}
-  <fake-ad style="grid-column-start: -2"></fake-ad>
-  {{< card >}}
-  {{< card >}}
-  {{< card >}}
-  {{< card >}}
-  {{< card >}}
-  {{< card >}}
-  {{< card >}}
-  {{< card >}}
-  {{< card >}}
-  {{< card >}}
-  {{< card >}}
+{{< big-news >}}
 
-  <div class="load-more">
-    <a class="button big impact" href="#page2">Load More</a>
+<section class="grid">
+  {{< card class="lead-item" headline-size="h1" >}}
+  {{< digest >}}
+  <fake-ad class="zone" size="[300,600]"></fake-ad>
+  {{< card >}}
+  {{< card >}}
+  {{< card >}}
+  {{< card >}}
+  {{< card >}}
+  {{< card >}}
+  <div class="grid full-width">
+    <fake-ad class="zone" size="[[970,250],[300,600]]"></fake-ad>
+    {{< digest kicker="PARTNER CONTENT" >}}
+    {{< digest kicker="PARTNER CONTENT" >}}
+    {{< digest kicker="PARTNER CONTENT" >}}
+  </div>
+  {{< card >}}
+  {{< card >}}
+  {{< card >}}
+  {{< card >}}
+  {{< card >}}
+  {{< card >}}
+  <fake-ad class="zone"></fake-ad>
+  {{< in-depth >}}
+  <div class="grid full-width">
+    <fake-ad class="zone" size="[[970,250],[300,600]]"></fake-ad>
+    {{< digest label="sticky" >}}
+    {{< digest label="sticky" >}}
+    {{< digest label="sticky" >}}
   </div>
 
   <div class="hidden">
-    <custom-card order="before">
-      <div class="panel" style="--paper-color: white;">
-        <h2>This is a test panel</h2>
-        <p>A sunburnt color's scallion comes with it the thought that the caring square is a risk. Some rushing railwaies are thought of simply as mosquitos. The tiptop ray reveals itself as a chanceful start to those who look. Recent controversy aside, the literature would have us believe that a cordate crib is not but a timbale.</p>
-      </div>
-    </custom-card>
+    <premium-topper class="topper" data-id="jay-test"></premium-topper>
     <custom-card order="6">
       <style>
         .premium {
@@ -69,19 +71,6 @@ layout: section
         <p>The plaguey ball comes from a puling reminder. The woolens could be said to resemble ageless decembers.</p>
         <a href="#" class="button big">SUBSCRIBE</a>
       </div>
-    </custom-card>
-    <custom-card order="10">
-      <style>
-        custom-card .digest {
-          grid-row: span 2;
-          align-self: stretch;
-          grid-template-rows: 1fr auto;
-        }
-      </style>
-      {{< digest >}}
-    </custom-card>
-    <custom-card order="10">
-      {{< digest >}}
     </custom-card>
     <custom-card order="11">
       <style>
@@ -118,6 +107,14 @@ layout: section
         <img src="https://media.mcclatchy.com/creatives/skylines/kentucky.jpg">
         <h1>Special Project</h1>
         <p>Their washer was, in this moment, an uncleansed find. Some rigid distributors are thought of simply as dictionaries. The literature would have us believe that a gated connection is not but a periodical.</p>
+      </div>
+    </custom-card>
+    <custom-card order="17">
+      <div class="paper promo package" style="align-content: center;">
+        <h5 class="h1">Get the latest headlines delivered directly to your inbox</h5>
+        <p class="summary">Sign up for Morning Rush and get all the news you need to start your day.</p>
+        <input type="email" placeholder="Enter your email address">
+        <button class="button">Submit</button>
       </div>
     </custom-card>
     <custom-card order="after">

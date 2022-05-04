@@ -4,6 +4,8 @@ description: A sample opinion story page.
 menu: decks
 layout: story
 zones: true
+aliases: 
+  - /saratoga/decks/opinion-story/
 ---
 
 {{% opinion-banner %}}

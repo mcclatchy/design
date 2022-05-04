@@ -1,6 +1,5 @@
 ---
 title: "Theming pages in the design system"
-type: theming
 ---
 
 The ability to quickly theme and enhance pages is built into the foundation of the design system. We do this by creating layers for each part of our organization and binding them together with some fun tools and techniques. Most atoms and molucules are customizable, using CSS custom properties, and they have default values. These defaults are used in the base layer coming from WPS and make most of our pages, but we can put a layer on top of that base to change it where we want to. Take color for example, which is a configurable part of the paper atom. Click the buttons below to see how changing those properties affects the story card.
@@ -175,11 +174,11 @@ Hopefully it's easy to see the pattern and how the teams are organized. This is 
 
 Much like the `simple-grid` concept, the primary layout for all section pages, including homepages and topic pages, is our standard grid. CSS grid allows us to change the presentaion of each card, or group of cards, at the card level without needing to re-define the structure. We've got three decks to highlight how we can use this to our advantage, and we're exluding the flags, navigation and footer from this explanation.
 
-The [section deck](/saratoga/decks/section/) represents the bare minimum display coming from WPS. These are the elements that are absolutely critical to our business: articles, a digest and ads.
+The [section deck](/decks/section/) represents the bare minimum display coming from WPS. These are the elements that are absolutely critical to our business: articles, a digest and ads.
 
-The [topic page](/saratoga/decks/topic/) adds a few custom cards and starts to resemble the labs pages. All of these custom elements and digests can be created and delivered by any of the three teams, depending on the business need.
+The [topic page](/decks/topic/) adds a few custom cards and starts to resemble the labs pages. All of these custom elements and digests can be created and delivered by any of the three teams, depending on the business need.
 
-Finally, [the homepage](/saratoga/decks/homepage/) shows custom cards in addition to more complex elements that group cards and define their own space. In this case the partner content digests are a group that, on desktop, fill all three columns and control the layout independently. 
+Finally, [the homepage](/decks/homepage/) shows custom cards in addition to more complex elements that group cards and define their own space. In this case the partner content digests are a group that, on desktop, fill all three columns and control the layout independently. 
 
 So how does this help us?
 

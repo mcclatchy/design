@@ -4,6 +4,8 @@ description: A sample AMP story page.
 menu: decks
 layout: story
 zones: true
+aliases:
+  - /saratoga/decks/amp-story/
 ---
 
 {{% header %}}

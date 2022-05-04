@@ -14,7 +14,7 @@
   <div id="zone-el-2" class="zone" data-zone="1"></div>
   {{ end }}
 
-  {{ partial "decks/masthead" . }}
+  {{ partial "masthead" . }}
 
   <!-- the wrapper was added by the front-end team -->
   <div class="server-rendered">
@@ -77,9 +77,9 @@
     </section>
   </div>
 
-  {{ partial "decks/footer" . }}
+  {{ partial "footer" . }}
 
   {{- if .Params.zones }}
-    {{ partial "decks/zones" . }}
+    {{ partial "zones" . }}
   {{- end }}
 {{- end }}
