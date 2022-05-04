@@ -3,6 +3,4 @@ title: Our Team
 aliases: [/about/]
 ---
 
-# Our Team
-
-The Product Experience Team is a group of multi-disciplinary creative professionals who work collaboratively to build user-centered digital products in McClatchy. "ProdX" works on news, product, UX and marketing projects. As designers, writers, UX researchers and front-end developers, ProdX created McClatchy's first design system and continues to craft story-telling in newsrooms through immersive, interactive design and data visualization. The group has redesigned all products and continues to iterate based on user needs; this includes leading product strategy on websites, apps, and newsletters, to highlight a few.
+The News Experiences Team emphasizes one core value: we are News team, which means the team acts quickly and as independently as possible to create new functionality and products around our core journalism mission. We work with our partners to develop enterprise solutions only when we’re sure of the effectiveness of an initiative. We also create innovative story-telling, beautiful visuals and data visualizations with our colleagues in newsrooms.
