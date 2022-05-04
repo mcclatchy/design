@@ -2,25 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://mcclatchy.github.io/design/saratoga/decks/colors-qa/</loc>
+    <loc>https://mcclatchy.github.io/design/theming/colors/</loc>
     <lastmod>2020-09-15T08:07:04-05:00</lastmod>
   </url><url>
     <loc>https://mcclatchy.github.io/design/</loc>
     <lastmod>2020-09-15T08:07:04-05:00</lastmod>
   </url><url>
-    <loc>https://mcclatchy.github.io/design/saratoga/</loc>
+    <loc>https://mcclatchy.github.io/design/theming/</loc>
     <lastmod>2020-09-15T08:07:04-05:00</lastmod>
   </url><url>
     <loc>https://mcclatchy.github.io/design/saratoga/colors/</loc>
     <lastmod>2019-05-13T10:03:00-05:00</lastmod>
   </url><url>
+    <loc>https://mcclatchy.github.io/design/saratoga/</loc>
+    <lastmod>2019-05-13T10:03:00-05:00</lastmod>
+  </url><url>
     <loc>https://mcclatchy.github.io/design/saratoga/account-sub-nav/</loc>
   </url><url>
-    <loc>https://mcclatchy.github.io/design/saratoga/decks/amp-story/</loc>
+    <loc>https://mcclatchy.github.io/design/decks/amp-story/</loc>
   </url><url>
     <loc>https://mcclatchy.github.io/design/email/modules/apps-module/</loc>
   </url><url>
-    <loc>https://mcclatchy.github.io/design/saratoga/decks/author-bio/</loc>
+    <loc>https://mcclatchy.github.io/design/decks/author-bio/</loc>
   </url><url>
     <loc>https://mcclatchy.github.io/design/saratoga/author-card/</loc>
   </url><url>
@@ -48,6 +51,8 @@
   </url><url>
     <loc>https://mcclatchy.github.io/design/theming/dark/</loc>
   </url><url>
+    <loc>https://mcclatchy.github.io/design/decks/</loc>
+  </url><url>
     <loc>https://mcclatchy.github.io/design/email/overview/description/</loc>
   </url><url>
     <loc>https://mcclatchy.github.io/design/saratoga/digest/</loc>
@@ -70,9 +75,9 @@
   </url><url>
     <loc>https://mcclatchy.github.io/design/saratoga/form/</loc>
   </url><url>
-    <loc>https://mcclatchy.github.io/design/saratoga/decks/free-trial/</loc>
+    <loc>https://mcclatchy.github.io/design/decks/free-trial/</loc>
   </url><url>
-    <loc>https://mcclatchy.github.io/design/saratoga/decks/gallery/</loc>
+    <loc>https://mcclatchy.github.io/design/decks/gallery/</loc>
   </url><url>
     <loc>https://mcclatchy.github.io/design/saratoga/gallery/</loc>
   </url><url>
@@ -102,9 +107,9 @@
   </url><url>
     <loc>https://mcclatchy.github.io/design/saratoga/header/</loc>
   </url><url>
-    <loc>https://mcclatchy.github.io/design/saratoga/decks/homepage/</loc>
+    <loc>https://mcclatchy.github.io/design/decks/homepage/</loc>
   </url><url>
-    <loc>https://mcclatchy.github.io/design/saratoga/decks/immersive/</loc>
+    <loc>https://mcclatchy.github.io/design/decks/immersive/</loc>
   </url><url>
     <loc>https://mcclatchy.github.io/design/saratoga/immersive/</loc>
   </url><url>
@@ -142,7 +147,7 @@
   </url><url>
     <loc>https://mcclatchy.github.io/design/saratoga/more-link/</loc>
   </url><url>
-    <loc>https://mcclatchy.github.io/design/saratoga/decks/my-account/</loc>
+    <loc>https://mcclatchy.github.io/design/decks/my-account/</loc>
   </url><url>
     <loc>https://mcclatchy.github.io/design/email/templates/newsletter/</loc>
   </url><url>
@@ -150,7 +155,7 @@
   </url><url>
     <loc>https://mcclatchy.github.io/design/saratoga/offer-details/</loc>
   </url><url>
-    <loc>https://mcclatchy.github.io/design/saratoga/decks/opinion/</loc>
+    <loc>https://mcclatchy.github.io/design/decks/opinion/</loc>
   </url><url>
     <loc>https://mcclatchy.github.io/design/email/atoms/p/</loc>
   </url><url>
@@ -164,29 +169,29 @@
   </url><url>
     <loc>https://mcclatchy.github.io/design/saratoga/paper/</loc>
   </url><url>
-    <loc>https://mcclatchy.github.io/design/saratoga/decks/paywall/</loc>
+    <loc>https://mcclatchy.github.io/design/decks/paywall/</loc>
   </url><url>
     <loc>https://mcclatchy.github.io/design/theming/premium/</loc>
   </url><url>
     <loc>https://mcclatchy.github.io/design/saratoga/progress/</loc>
   </url><url>
-    <loc>https://mcclatchy.github.io/design/saratoga/decks/purchase-flow/sign-up/</loc>
+    <loc>https://mcclatchy.github.io/design/decks/purchase-flow/sign-up/</loc>
   </url><url>
-    <loc>https://mcclatchy.github.io/design/saratoga/decks/purchase-flow/confirmation/</loc>
+    <loc>https://mcclatchy.github.io/design/decks/purchase-flow/confirmation/</loc>
   </url><url>
-    <loc>https://mcclatchy.github.io/design/saratoga/decks/purchase-flow/new-payment/</loc>
+    <loc>https://mcclatchy.github.io/design/decks/purchase-flow/new-payment/</loc>
   </url><url>
-    <loc>https://mcclatchy.github.io/design/saratoga/decks/purchase-flow/review-order/</loc>
+    <loc>https://mcclatchy.github.io/design/decks/purchase-flow/review-order/</loc>
   </url><url>
-    <loc>https://mcclatchy.github.io/design/saratoga/decks/purchase-flow/sign-in/</loc>
+    <loc>https://mcclatchy.github.io/design/decks/purchase-flow/sign-in/</loc>
   </url><url>
     <loc>https://mcclatchy.github.io/design/saratoga/purchase-info-dsp/</loc>
   </url><url>
     <loc>https://mcclatchy.github.io/design/saratoga/read-next/</loc>
   </url><url>
-    <loc>https://mcclatchy.github.io/design/saratoga/decks/registration/</loc>
+    <loc>https://mcclatchy.github.io/design/decks/registration/</loc>
   </url><url>
-    <loc>https://mcclatchy.github.io/design/saratoga/decks/registration-confirmation/</loc>
+    <loc>https://mcclatchy.github.io/design/decks/registration-confirmation/</loc>
   </url><url>
     <loc>https://mcclatchy.github.io/design/saratoga/related-stories/</loc>
   </url><url>
@@ -194,9 +199,9 @@
   </url><url>
     <loc>https://mcclatchy.github.io/design/saratoga/review-order/</loc>
   </url><url>
-    <loc>https://mcclatchy.github.io/design/saratoga/decks/search/</loc>
+    <loc>https://mcclatchy.github.io/design/decks/search/</loc>
   </url><url>
-    <loc>https://mcclatchy.github.io/design/saratoga/decks/section/</loc>
+    <loc>https://mcclatchy.github.io/design/decks/section/</loc>
   </url><url>
     <loc>https://mcclatchy.github.io/design/saratoga/section/</loc>
   </url><url>
@@ -204,27 +209,27 @@
   </url><url>
     <loc>https://mcclatchy.github.io/design/saratoga/series-nav/</loc>
   </url><url>
+    <loc>https://mcclatchy.github.io/design/theming/home-guide/</loc>
+  </url><url>
     <loc>https://mcclatchy.github.io/design/email/atoms/small/</loc>
   </url><url>
     <loc>https://mcclatchy.github.io/design/saratoga/social-media/</loc>
   </url><url>
     <loc>https://mcclatchy.github.io/design/email/atoms/spacing/</loc>
   </url><url>
-    <loc>https://mcclatchy.github.io/design/saratoga/decks/story/</loc>
+    <loc>https://mcclatchy.github.io/design/decks/story/</loc>
   </url><url>
-    <loc>https://mcclatchy.github.io/design/saratoga/decks/subscription-offers/</loc>
+    <loc>https://mcclatchy.github.io/design/decks/subscription-offers/</loc>
   </url><url>
     <loc>https://mcclatchy.github.io/design/saratoga/promo/</loc>
   </url><url>
     <loc>https://mcclatchy.github.io/design/email/atoms/text-modifiers/</loc>
   </url><url>
-    <loc>https://mcclatchy.github.io/design/theming/</loc>
-  </url><url>
     <loc>https://mcclatchy.github.io/design/saratoga/time/</loc>
   </url><url>
     <loc>https://mcclatchy.github.io/design/saratoga/timeline/</loc>
   </url><url>
-    <loc>https://mcclatchy.github.io/design/saratoga/decks/topic/</loc>
+    <loc>https://mcclatchy.github.io/design/decks/topic/</loc>
   </url><url>
     <loc>https://mcclatchy.github.io/design/saratoga/transparency/</loc>
   </url><url>
