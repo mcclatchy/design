@@ -10,9 +10,22 @@
 
 section.grid {
   max-width: var(--story-width);
-  padding: 0 var(--page-padding);
+  padding: var(--page-padding);
 }
 
-.package {
-  padding: calc(var(--gap) / 2) 0;
+article.card:nth-of-type(n+2) {
+  box-shadow: 0 -2px 2px -2px var(--gray);
+  padding-top: var(--gap);
+}
+
+article.card .package {
+  padding: calc(var(--gap) / 2) 0 0;
+}
+
+.kicker {
+  border: none;
+  padding: 0;
+  font: bold .9rem/1em var(--sans);
+  color: var(--gray);
+  text-transform: uppercase;
 }
