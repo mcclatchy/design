@@ -2,6 +2,8 @@
 {{- $class := .Get "class" -}}
 {{- $headlineSize := default "h3" (.Get "headline-size") -}}
 {{- $kickerSize := default "h6" (.Get "kicker-size") -}}
+{{- $img := default "/img/kitten.jpg" (.Get "img" ) -}}
+{{- $headline := default "Kitten clings for life as man awaits rescue from Florence." (.Get "headline") -}}
 
 <article class="card {{ .Get "class" }}">
   {{- if not (in $hide "figure") }}
@@ -10,7 +12,7 @@
     <div class="label sticky"><h5 class="impact">READ NEXT</h5></div>
     {{- end }}
     <a href="https://mcclatchy.github.io/saratoga/food/205504249/">
-      <img src="/img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
+      <img src="{{ $img }}" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
     </a>
   </figure>
   {{- end }}
@@ -18,7 +20,7 @@
     {{- if not (in $hide "kicker") }}
     <a class="kicker {{ $kickerSize }}" href="https://mcclatchy.github.io/saratoga/food/">FOOD</a>
     {{- end }}
-    <h2 class="{{ $headlineSize }}"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
+    <h2 class="{{ $headlineSize }}"><a href="#">{{ $headline }}</a></h2>
     {{- if in $class "lead-item" }}
     <p class="summary">As far as we can estimate, a baboon is a vaulting blow. An effuse feet's objective comes with it the thought that the quaggy discussion is a rub. The amount is a growth. The literature would have us believe that a dreggy hate is not but a nephew.</p>
     {{- end }}
