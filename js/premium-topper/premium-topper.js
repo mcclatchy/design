@@ -2,6 +2,8 @@
  * Premium Topper
  */
 
+import "./exclusive-card.js";
+
 class PremiumTopper extends HTMLElement {
 
   /**
@@ -15,15 +17,11 @@ class PremiumTopper extends HTMLElement {
       :host {
         display: block;
         --hf: var(--premium-serif);
+        --half-gap: calc(var(--gap) / 2);
       }
 
       :host(.loaded) ::slotted(*) {
         opacity: 1 !important;
-      }
-
-      slot {
-        display: block;
-        margin: 0;
       }
 
       /* Temporary fix pre-1.15.16 */
@@ -60,6 +58,40 @@ class PremiumTopper extends HTMLElement {
         padding-top: 56.25%;
       }
 
+      .exclusives {
+        overflow: hidden;
+      }
+
+      .exclusives .label {
+        display: block;
+        font-weight: bold;
+        padding-bottom: var(--spread);
+        border-bottom: 1px solid #ffffff30;
+      }
+
+      .slider {
+        width: auto;
+        overflow-x: scroll;
+      }
+
+      .row {
+        display: inline-flex;
+        align-items: center;
+        padding: var(--half-gap) 0;
+      }
+
+      .slider::-webkit-scrollbar {
+        height: 3px;
+      }
+
+      .slider::-webkit-scrollbar-thumb {
+        background: #ffffff30;
+      }
+
+      .slider::--webkit-scrollbar-track {
+        background: transparent;
+      }
+
       @media(min-width: 768px) {
         .container {
           grid-template-columns: 1fr 1fr;
@@ -67,7 +99,8 @@ class PremiumTopper extends HTMLElement {
           grid-template-areas:
             "label label"
             "headline media"
-            "content media";
+            "content media"
+            "exclusives exclusives";
         }
 
         .label {
@@ -85,14 +118,36 @@ class PremiumTopper extends HTMLElement {
         .content {
           grid-area: content;
         }
+
+        .exclusives {
+          grid-area: exclusives;
+        }
       }
     </style>
 
     <div class="container grid">
-      <h4 class="label"><b>Your community portal:</b> what you need to know</h4>
-      <slot name="headline" class="headline"></slot>
-      <slot name="media" class="media"></slot>
-      <slot class="content" class="content"></slot>
+      <span class="label"><b>Your community portal:</b> what you need to know</span>
+
+      <div class="headline">
+        <slot name="headline"></slot>
+      </div>
+
+      <div class="media">
+        <slot name="media"></slot>
+      </div>
+
+      <div class="content">
+        <slot></slot>
+      </div>
+
+      <div class="exclusives">
+        <span class="label">Insider Exclusives</span>
+        <div class="slider">
+          <div class="row">
+            <slot name="exclusives"></slot>
+          </div>
+        </div>
+      </div>
     </div>
     `;
     return t;
@@ -145,18 +200,18 @@ class PremiumTopper extends HTMLElement {
     const endpoint = `https://storage.googleapis.com/mc-high-impact/prodx/premium-topper/docs/${this.dataset.id}.json`;
     const response = await fetch(endpoint);
     const data = await response.json();
-
+    
     // Inject the content
     this.insertAdjacentHTML("afterbegin", data?.html.portal);
 
     // Add in the media
-    switch(data?.media?.type) {
+    switch(data.media?.type) {
       case "photo":
         if(data.media.url) {
           this.insertAdjacentHTML("beforeend", `
           <figure slot="media">
             <img src="${data.media.url}">
-            <figcaption>${data.media.caption} <span class="byline">${data.media.photographer.toUpperCase()}</span></figcaption>
+            <figcaption>${data.media?.caption || ""} <span class="byline">${data.media.photographer?.toUpperCase() || ""}</span></figcaption>
           </figure>`);
         } else {
           console.warn("No image source for premium topper");
@@ -169,10 +224,29 @@ class PremiumTopper extends HTMLElement {
             <div class="embed-video-wrapper">
               <iframe src="${data.media.url}"></iframe>
             </div>
-            <figcaption>${data.media.caption} <span class="byline">${data.media.photographer.toUpperCase()}</span></figcaption>
+            <figcaption>${data.media?.caption || ""} <span class="byline">${data.media.photographer?.toUpperCase() || ""}</span></figcaption>
           </figure>`);
         }
         break;
+    }
+
+    // Add any exclusives
+    if(data.exclusives.length) {
+      data.exclusives.forEach(e => {
+        this.insertAdjacentHTML("beforeend", `
+          <exclusive-card slot="exclusives">
+
+            ${e.thumbnail ? `
+            <img slot="media" src="${e.thumbnail}">
+            ` : ''}
+
+            <p><b>${e.title}</b></p>
+            <p><a href="${e.url}">${e.summary}</a></p>
+          </exclusive-card>
+        `);
+      });
+    } else {
+      this.shadowRoot.querySelector(".exclusives").remove();
     }
 
     // Swap H1 elements for Dana/SEO
