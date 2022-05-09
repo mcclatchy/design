@@ -125,7 +125,7 @@ footer {
 
 fake-ad {
   display: flex;
-  background-color: #ddd;
+  background-color: var(--ad-background);
   padding: 15px;
 }
 
