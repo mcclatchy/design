@@ -252,7 +252,7 @@ class PremiumTopper extends HTMLElement {
             ` : ''}
 
             <p><b>${e.title}</b></p>
-            <p><a href="${e.url}">${e.summary}</a></p>
+            <p><a href="${e.url}">${e.summary || e.caption || ""}</a></p>
           </exclusive-card>
         `);
       });
