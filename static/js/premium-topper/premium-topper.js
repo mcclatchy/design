@@ -123,6 +123,17 @@ class PremiumTopper extends HTMLElement {
           grid-area: exclusives;
         }
       }
+
+      @media(min-width: 1024px) {
+        .row {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+        }
+
+        .row ::slotted(exclusive-card) {
+          grid-template-columns: 1fr 60px;
+        }
+      }
     </style>
 
     <div class="container grid">
@@ -232,7 +243,7 @@ class PremiumTopper extends HTMLElement {
 
     // Add any exclusives
     if(data.exclusives.length) {
-      data.exclusives.forEach(e => {
+      data.exclusives.slice(0, 3).forEach(e => {
         this.insertAdjacentHTML("beforeend", `
           <exclusive-card slot="exclusives">
 
@@ -241,7 +252,7 @@ class PremiumTopper extends HTMLElement {
             ` : ''}
 
             <p><b>${e.title}</b></p>
-            <p><a href="${e.url}">${e.summary}</a></p>
+            <p><a href="${e.url}">${e.summary || e.caption || ""}</a></p>
           </exclusive-card>
         `);
       });
