@@ -51,13 +51,13 @@ class FakeAd extends HTMLElement {
 
       @media(min-width: 660px) {
         :host([columns="2"]), :host([columns="3"]) {
-          grid-column: 1/-1;
+          grid-column: span 2;
         }
       }
 
       @media(min-width: 990px) {
         :host([columns="3"]) {
-          grid-column: 1/-1;
+          grid-column: span 3;
         }
       }
       

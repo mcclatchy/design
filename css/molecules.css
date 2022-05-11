@@ -85,11 +85,6 @@
   }
 }
 
-.card.sponsored .kicker {
-  --tc: white;
-  background-color: var(--impact);
-}
-
 /**
  * Horizontal slider for additional content
  */
@@ -125,7 +120,8 @@
  */
 
 section, .section {
-  display: block;
+  display: grid;
+  gap: calc(var(--gap) / 2);
   position: relative;
   max-width: var(--section-width);
   margin: var(--gap) auto;
@@ -157,6 +153,21 @@ section, .section {
   .section-label {
     padding: 0;
   }
+}
+
+/**
+ * Grid
+ */
+
+.grid {
+  display: grid;
+  grid-template-columns: var(--columns);
+  gap: var(--gap);
+  grid-auto-flow: dense;
+}
+
+.grid > .package:not(.no-img) {
+  --gap: 0px;
 }
 
 /**

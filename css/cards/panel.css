@@ -3,11 +3,9 @@
  */
 
 .panel {
-  padding: 45px var(--page-padding);
+  padding: 45px 15px;
   max-width: 100%;
   background-color: var(--paper-color);
-  color: var(--tc);
-  font-family: var(--sans);
   --hf: var(--sans);
   --hw: bold;
   --ht: uppercase;
@@ -21,11 +19,6 @@
 .panel > * {
   max-width: var(--story-width);
   margin: 20px auto;
-  color: var(--tc);
-}
-
-.panel > img {
-  display: block;
 }
 
 .panel .grid {
