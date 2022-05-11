@@ -32,7 +32,7 @@ class PremiumTopper extends HTMLElement {
 
       .container {
         display: grid;
-        gap: var(--gap);
+        gap: var(--half-gap);
         max-width: var(--section-width);
         margin: 0 auto;
       }
@@ -95,7 +95,6 @@ class PremiumTopper extends HTMLElement {
       @media(min-width: 768px) {
         .container {
           grid-template-columns: 1fr 1fr;
-          grid-template-rows: auto auto 1fr;
           grid-template-areas:
             "label label"
             "headline media"
@@ -121,6 +120,15 @@ class PremiumTopper extends HTMLElement {
 
         .exclusives {
           grid-area: exclusives;
+        }
+
+        /* Photo layout changes */
+        :host([data-media=photo]) .container {
+          grid-template-columns: 2fr 1fr;
+        }
+
+        :host([data-media=photo]) .content {
+          max-width: 700px;
         }
       }
 
@@ -183,12 +191,12 @@ class PremiumTopper extends HTMLElement {
   constructor() {
     super();
 
+    // Subscriber flag
+    this.subscriber = document.documentElement.classList.contains("msb");
+
     // Add the Shadow DOM
     this.attachShadow({ mode: "open" });
     this.shadowRoot.appendChild(this.template.content.cloneNode(true));
-
-    // Fetch the data
-    this.render();
   }
 
   /**
@@ -196,8 +204,13 @@ class PremiumTopper extends HTMLElement {
    */
 
   connectedCallback() {
-    if(!this.moved) {
+    if(!this.subscriber) {
+      this.hidden = true;
+    } 
+    else if(!this.moved) {
+      this.render();
       this.move();
+      this.hidden = false;
     }
   }
 
@@ -211,6 +224,9 @@ class PremiumTopper extends HTMLElement {
     const endpoint = `https://storage.googleapis.com/mc-high-impact/prodx/premium-topper/docs/${this.dataset.id}.json`;
     const response = await fetch(endpoint);
     const data = await response.json();
+
+    // Adjust the layout for the type of media
+    this.dataset.media = data.media?.type;
     
     // Inject the content
     this.insertAdjacentHTML("afterbegin", data?.html.portal);
@@ -252,7 +268,7 @@ class PremiumTopper extends HTMLElement {
             ` : ''}
 
             <p><b>${e.title}</b></p>
-            <p><a href="${e.url}">${e.summary || e.caption || ""}</a></p>
+            <p>${e.summary || e.caption || ""}</p>
           </exclusive-card>
         `);
       });
