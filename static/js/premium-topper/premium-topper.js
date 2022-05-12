@@ -18,10 +18,19 @@ class PremiumTopper extends HTMLElement {
         display: block;
         --hf: var(--premium-serif);
         --half-gap: calc(var(--gap) / 2);
+        --sans: "Noto Sans", "Inter", sans-serif;
+      }
+
+      :host:after {
+        display: none !important;
       }
 
       :host(.loaded) ::slotted(*) {
         opacity: 1 !important;
+      }
+
+      :host(.has-exclusives) {
+        padding-bottom: 0 !important;
       }
 
       /* Temporary fix pre-1.15.16 */
@@ -32,27 +41,27 @@ class PremiumTopper extends HTMLElement {
 
       .container {
         display: grid;
-        gap: var(--half-gap);
+        grid-gap: var(--half-gap) var(--gap);
         max-width: var(--section-width);
         margin: 0 auto;
       }
 
-      .content {
-        max-width: 450px;
-      }
-
       .label {
-        font: 400 13px var(--sans);
+        font: 400 14px var(--sans);
         color: var(--premium-impact);
         text-transform: uppercase;
         margin: 0;
       }
 
-      .content::slotted(*) {
+      .content ::slotted(*) {
         margin-top: 0;
       }
 
-      .media::slotted(.pt-video) {
+      .content ::slotted(h3) {
+        font: 700 14px var(--sans) !important;
+      }
+
+      .media ::slotted(.pt-video) {
         position: relative;
         width: 100%;
         padding-top: 56.25%;
@@ -95,6 +104,7 @@ class PremiumTopper extends HTMLElement {
       @media(min-width: 768px) {
         .container {
           grid-template-columns: 1fr 1fr;
+          grid-template-rows: auto auto 1fr auto;
           grid-template-areas:
             "label label"
             "headline media"
@@ -108,6 +118,7 @@ class PremiumTopper extends HTMLElement {
 
         .headline {
           grid-area: headline;
+          max-width: 600px;
         }
         
         .media {
@@ -122,13 +133,21 @@ class PremiumTopper extends HTMLElement {
           grid-area: exclusives;
         }
 
-        /* Photo layout changes */
-        :host([data-media=photo]) .container {
+        /* Media layout changes */
+
+        :host(.photo-media) .container {
           grid-template-columns: 2fr 1fr;
+          grid-gap: var(--half-gap) calc(var(--gap) * 1.5);
         }
 
-        :host([data-media=photo]) .content {
-          max-width: 700px;
+        /* Exclusives only layout changes */
+        :host(.exclusives-only) .container {
+          grid-template-rows: unset;
+          grid-template-areas: "exclusives exclusives";
+        }
+
+        :host(.exclusives-only) .com-portal {
+          display: none;
         }
       }
 
@@ -145,7 +164,7 @@ class PremiumTopper extends HTMLElement {
     </style>
 
     <div class="container grid">
-      <span class="label"><b>Your community portal:</b> what you need to know</span>
+      <span class="label com-portal"><b>Your community portal:</b> what you need to know</span>
 
       <div class="headline">
         <slot name="headline"></slot>
@@ -225,16 +244,14 @@ class PremiumTopper extends HTMLElement {
     const response = await fetch(endpoint);
     const data = await response.json();
 
-    // Adjust the layout for the type of media
-    this.dataset.media = data.media?.type;
-    
     // Inject the content
     this.insertAdjacentHTML("afterbegin", data?.html.portal);
 
-    // Add in the media
+    // Add media
     switch(data.media?.type) {
       case "photo":
         if(data.media.url) {
+          this.classList.add("photo-media");
           this.insertAdjacentHTML("beforeend", `
           <figure slot="media">
             <img src="${data.media.url}">
@@ -246,6 +263,7 @@ class PremiumTopper extends HTMLElement {
         break;
       case "video":
         if(data.media.url) {
+          this.classList.add("video-media");
           this.insertAdjacentHTML("beforeend", `
           <figure slot="media">
             <div class="embed-video-wrapper">
@@ -257,8 +275,14 @@ class PremiumTopper extends HTMLElement {
         break;
     }
 
-    // Add any exclusives
-    if(data.exclusives.length) {
+    // Add exclusives
+    if(data.exclusives?.length) {
+      this.classList.add("has-exclusives");
+
+      if(!data.portal.length) {
+        this.classList.add("exclusives-only");
+      }
+
       data.exclusives.slice(0, 3).forEach(e => {
         this.insertAdjacentHTML("beforeend", `
           <exclusive-card slot="exclusives">

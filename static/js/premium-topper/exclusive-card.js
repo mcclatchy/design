@@ -14,7 +14,7 @@ class ExclusiveCard extends HTMLElement {
     <style>
       :host {
         display: grid;
-        grid-template-columns: 225px 60px;
+        grid-template-columns: 300px 60px;
         grid-gap: var(--spread, 10px);
         align-self: stretch;
         padding: 0px var(--half-gap);
