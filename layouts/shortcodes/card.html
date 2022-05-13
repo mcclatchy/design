@@ -21,7 +21,7 @@
     <a class="kicker {{ $kickerSize }}" href="https://mcclatchy.github.io/saratoga/food/">FOOD</a>
     {{- end }}
     <h2 class="{{ $headlineSize }}"><a href="#">{{ $headline }}</a></h2>
-    {{- if in $class "lead-item" }}
+    {{- if or (in $class "lead-item") (in $class "in-depth") }}
     <p class="summary">As far as we can estimate, a baboon is a vaulting blow. An effuse feet's objective comes with it the thought that the quaggy discussion is a rub. The amount is a growth. The literature would have us believe that a dreggy hate is not but a nephew.</p>
     {{- end }}
     <div class="time">{{ if in $class "sponsored" -}} sponsored content {{- else -}} March 16, 2018 11:33 am {{- end }}</div>

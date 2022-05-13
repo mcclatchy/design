@@ -8,41 +8,16 @@ aliases:
 ---
 
 <section class="grid">
-  {{< card >}}
-  {{< card >}}
-  {{< card >}}
-  <fake-ad size="[[970,250],[728,90]]" style="grid-column: 1/-1"></fake-ad>
-  {{< card >}}
-  {{< card >}}
-  {{< card >}}
-  {{< card >}}
-  {{< card >}}
-  {{< card >}}
-  {{< card >}}
-  <fake-ad style="grid-column-start: -2"></fake-ad>
-  {{< card >}}
-  {{< card >}}
-  {{< card >}}
-  {{< card >}}
-  {{< card >}}
-  {{< card >}}
-  {{< card >}}
-  {{< card >}}
-  {{< card >}}
-  {{< card >}}
-  {{< card >}}
 
-  <div class="load-more">
-    <a class="button big impact" href="#page2">Load More</a>
-  </div>
-
-  <div class="hidden">
+  <!-- Option banner group (now hidden by default) -->
+  <div class="option-banners" hidden>
     <custom-card order="before">
       <div class="panel" style="--paper-color: white;">
         <h2>This is a test panel</h2>
         <p>A sunburnt color's scallion comes with it the thought that the caring square is a risk. Some rushing railwaies are thought of simply as mosquitos. The tiptop ray reveals itself as a chanceful start to those who look. Recent controversy aside, the literature would have us believe that a cordate crib is not but a timbale.</p>
       </div>
     </custom-card>
+
     <custom-card order="6">
       <style>
         .premium {
@@ -57,7 +32,7 @@ aliases:
 
         @media(min-width: 660px) {
           .premium {
-            grid-column: span 2;
+            grid-column: 1/span 2;
           }
         }
 
@@ -72,6 +47,7 @@ aliases:
         <a href="#" class="button big">SUBSCRIBE</a>
       </div>
     </custom-card>
+
     <custom-card order="10">
       <style>
         custom-card .digest {
@@ -82,9 +58,11 @@ aliases:
       </style>
       {{< digest >}}
     </custom-card>
+
     <custom-card order="10">
       {{< digest >}}
     </custom-card>
+
     <custom-card order="11">
       <style>
         .special-project {
@@ -122,6 +100,7 @@ aliases:
         <p>Their washer was, in this moment, an uncleansed find. Some rigid distributors are thought of simply as dictionaries. The literature would have us believe that a gated connection is not but a periodical.</p>
       </div>
     </custom-card>
+
     <custom-card order="after">
       <div class="panel" style="--paper-color: white;">
         <h2>This is a test panel</h2>
@@ -129,4 +108,37 @@ aliases:
       </div>
     </custom-card>
   </div>
+  <!-- End option banners group -->
+
+  <!-- Start main card loop coming from WPS -->
+  {{< card >}}
+  {{< card >}}
+  {{< card >}}
+  <fake-ad size="[[970,250],[728,90]]" style="grid-column: 1/-1"></fake-ad>
+  {{< card >}}
+  {{< card >}}
+  {{< card >}}
+  {{< card >}}
+  {{< card >}}
+  {{< card >}}
+  {{< card >}}
+  <fake-ad style="grid-column-start: -2"></fake-ad>
+  {{< card >}}
+  {{< card >}}
+  {{< card >}}
+  {{< card >}}
+  {{< card >}}
+  {{< card >}}
+  {{< card >}}
+  {{< card >}}
+  {{< card >}}
+  {{< card >}}
+  {{< card >}}
+  <!-- End main card loop -->
+
+  <!-- Load more functionality adds cards to the parent section -->
+  <div class="load-more">
+    <a class="button big impact" href="#page2">Load More</a>
+  </div>
+
 </section>

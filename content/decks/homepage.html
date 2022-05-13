@@ -8,42 +8,15 @@ aliases:
   - /saratoga/decks/homepage/
 ---
 
+
 {{< big-news >}}
 
 <section class="grid">
-  {{< card class="lead-item" headline-size="h1" >}}
-  <fake-ad class="zone" size="[300,600]"></fake-ad>
-  {{< digest >}}
-  {{< card >}}
-  {{< card >}}
-  {{< card >}}
-  {{< card >}}
-  {{< card >}}
-  {{< card >}}
-  <div class="grid full-width">
-    <fake-ad class="zone" size="[[970,250],[300,600]]"></fake-ad>
-    {{< digest kicker="PARTNER CONTENT" >}}
-    {{< digest kicker="PARTNER CONTENT" >}}
-    {{< digest kicker="PARTNER CONTENT" >}}
-  </div>
-  {{< card >}}
-  {{< card >}}
-  {{< card >}}
-  {{< card >}}
-  {{< card >}}
-  {{< card >}}
-  <fake-ad class="zone"></fake-ad>
-  {{< in-depth >}}
-  <div class="grid full-width">
-    <fake-ad class="zone" size="[[970,250],[300,600]]"></fake-ad>
-    {{< digest label="sticky" >}}
-    {{< digest label="sticky" >}}
-    {{< digest label="sticky" >}}
-  </div>
 
-  <div class="hidden">
-    <!-- <premium-topper class="topper" data-id="exclusives-only"></premium-topper> -->
+  <!-- Option banner group (now hidden by default) -->
+  <div class="option-banners" hidden>
     <premium-topper class="topper" data-id="1at5xhMgQNOVYBpiSmJqstOiuB9Iwk6_vYu_Tbh6UnWY"></premium-topper>
+
     <custom-card order="6">
       <style>
         .premium {
@@ -73,6 +46,7 @@ aliases:
         <a href="#" class="button big">SUBSCRIBE</a>
       </div>
     </custom-card>
+
     <custom-card order="11">
       <style>
         .special-project {
@@ -110,6 +84,7 @@ aliases:
         <p>Their washer was, in this moment, an uncleansed find. Some rigid distributors are thought of simply as dictionaries. The literature would have us believe that a gated connection is not but a periodical.</p>
       </div>
     </custom-card>
+
     <custom-card order="17">
       <div class="paper promo package" style="align-content: center;">
         <h5 class="h1">Get the latest headlines delivered directly to your inbox</h5>
@@ -118,6 +93,7 @@ aliases:
         <button class="button">Submit</button>
       </div>
     </custom-card>
+    
     <custom-card order="after">
       <div class="panel" style="--paper-color: white;">
         <h2>This is a test panel</h2>
@@ -125,4 +101,38 @@ aliases:
       </div>
     </custom-card>
   </div>
+  <!-- End option banners group -->
+
+  <!-- Start main card loop coming from WPS -->
+  {{< card class="lead-item" headline-size="h1" >}}
+  <fake-ad class="zone" size="[300,600]"></fake-ad>
+  {{< digest >}}
+  {{< card >}}
+  {{< card >}}
+  {{< card >}}
+  {{< card >}}
+  {{< card >}}
+  {{< card >}}
+  <div class="grid full-width">
+    <fake-ad class="zone" size="[[970,250],[300,600]]"></fake-ad>
+    {{< digest kicker="PARTNER CONTENT" >}}
+    {{< digest kicker="PARTNER CONTENT" >}}
+    {{< digest kicker="PARTNER CONTENT" >}}
+  </div>
+  {{< card >}}
+  {{< card >}}
+  {{< card >}}
+  {{< card >}}
+  {{< card >}}
+  {{< card >}}
+  <fake-ad class="zone"></fake-ad>
+  {{< in-depth >}}
+  <div class="grid full-width">
+    <fake-ad class="zone" size="[[970,250],[300,600]]"></fake-ad>
+    {{< digest label="sticky" >}}
+    {{< digest label="sticky" >}}
+    {{< digest label="sticky" >}}
+  </div>
+  <!-- End main card loop -->
+
 </section>

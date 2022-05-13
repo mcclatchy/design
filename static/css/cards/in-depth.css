@@ -7,15 +7,12 @@
 }
 
 .in-depth .package {
+  --hs: 1.75rem;
   --hw: bold;
 }
 
 .card.in-depth figure {
 	min-height: 400px;
-}
-
-.in-depth .h1 {
-  font-size: 1.75rem;
 }
 
 .in-depth .image-link-macro {
