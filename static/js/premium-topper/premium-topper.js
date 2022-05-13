@@ -21,16 +21,8 @@ class PremiumTopper extends HTMLElement {
         --sans: "Noto Sans", "Inter", sans-serif;
       }
 
-      :host:after {
-        display: none !important;
-      }
-
       :host(.loaded) ::slotted(*) {
         opacity: 1 !important;
-      }
-
-      :host(.has-exclusives) {
-        padding-bottom: 0 !important;
       }
 
       /* Temporary fix pre-1.15.16 */
@@ -67,6 +59,8 @@ class PremiumTopper extends HTMLElement {
         padding-top: 56.25%;
       }
 
+      /* Exclusives */
+
       .exclusives {
         overflow: hidden;
       }
@@ -99,6 +93,17 @@ class PremiumTopper extends HTMLElement {
 
       .slider::--webkit-scrollbar-track {
         background: transparent;
+      }
+
+      :host(.exclusives-only) {
+        padding-bottom: 0 !important;
+      }
+
+      :host(.exclusives-only) .container > .label,
+      :host(.exclusives-only) .headline,
+      :host(.exclusives-only) .content,
+      :host(.exclusives-only) .media {
+        display: none;
       }
 
       @media(min-width: 768px) {
@@ -141,13 +146,10 @@ class PremiumTopper extends HTMLElement {
         }
 
         /* Exclusives only layout changes */
+
         :host(.exclusives-only) .container {
           grid-template-rows: unset;
           grid-template-areas: "exclusives exclusives";
-        }
-
-        :host(.exclusives-only) .com-portal {
-          display: none;
         }
       }
 
@@ -164,7 +166,7 @@ class PremiumTopper extends HTMLElement {
     </style>
 
     <div class="container grid">
-      <span class="label com-portal"><b>Your community portal:</b> what you need to know</span>
+      <span class="label"><b>Your community portal:</b> what you need to know</span>
 
       <div class="headline">
         <slot name="headline"></slot>
@@ -248,7 +250,7 @@ class PremiumTopper extends HTMLElement {
     this.insertAdjacentHTML("afterbegin", data?.html.portal);
 
     // Add media
-    switch(data.media?.type) {
+    switch(data.media.type) {
       case "photo":
         if(data.media.url) {
           this.classList.add("photo-media");
@@ -277,8 +279,8 @@ class PremiumTopper extends HTMLElement {
 
     // Add exclusives
     if(data.exclusives?.length) {
-      this.classList.add("has-exclusives");
 
+      // Exclusives only has some custom styles
       if(!data.portal.length) {
         this.classList.add("exclusives-only");
       }
