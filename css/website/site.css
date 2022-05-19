@@ -115,9 +115,9 @@ footer {
  * Not included in SDS build
  */
 
-#zone-el-2 {
-  padding: 15px 0;
-}
+/* #zone-el-2 { */
+/*   padding: 15px 0; */
+/* } */
 
 /**
  * Story deck styles
@@ -125,6 +125,22 @@ footer {
 
 fake-ad {
   display: flex;
+  background-color: var(--ad-background);
+  padding: 15px;
+}
+
+.sponsored.card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f2b6be70;
+}
+
+#zone-el-2 fake-ad {
+  background-color: unset;
 }
 
 [data-zone="1"] {
