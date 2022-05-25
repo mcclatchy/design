@@ -54,26 +54,25 @@
           <a href="#" class="more-link">KEEP READING</a>
         </div>
       </div>
+
       {{ template "shortcodes/digest.html" }}
-    </section>
-    <section>
-      <div class="grid">
-        {{- range seq 5 }}
-          {{ template "shortcodes/card.html" }}
-        {{- end }}
-        <article class="card">
-          <figure>
-            <a href="#">
-              <img src="/img/lanterns.jpg" width="1140" height="641" alt="Lanterns floating in a body of water" loading="lazy">
-            </a>
-          </figure>
-          <div class="package">
-            <a class="kicker h6 impact" href="#">SPONSORED CONTENT</a>
-            <h3><a href="#">Lorem ipsum dolor sit amet.</a></h3>
-            <time>BY FIRST LAST AS SEEN ON SITE</time>
-          </div>
-        </article>
-      </div>
+
+      {{- range seq 5 }}
+        {{ template "shortcodes/card.html" }}
+      {{- end }}
+
+      <article class="card">
+        <figure>
+          <a href="#">
+            <img src="/img/lanterns.jpg" width="1140" height="641" alt="Lanterns floating in a body of water" loading="lazy">
+          </a>
+        </figure>
+        <div class="package">
+          <a class="kicker h6 impact" href="#">SPONSORED CONTENT</a>
+          <h3><a href="#">Lorem ipsum dolor sit amet.</a></h3>
+          <time>BY FIRST LAST AS SEEN ON SITE</time>
+        </div>
+      </article>
     </section>
   </div>
 

@@ -10,6 +10,7 @@
   --premium-serif: "DM Serif Display", serif;
   /* Spacing and alignment */
   --gap: 30px;
+  --half-gap: calc(var(--gap) / 2);
   --spread: 10px;
   --page-padding: 15px;
   --section-width: 1140px;
@@ -24,6 +25,7 @@
   --premium-tc: white;
   --premium-impact: #ffd71a;
   --body-background: #f4f4f4;
+  --ad-background: #e6e6e6;
   /* Link and button defaults */
   --lc: inherit;
   --ld: none;
@@ -195,7 +197,8 @@ summary, .summary {
 
 .more-link {
   display: inline-block;
-  font: 700 0.875rem/1em var(--sans);
+  justify-self: end;
+  font: 700 0.75rem/1em var(--sans);
   text-transform: uppercase;
   color: var(--tc, var(--gray));
   text-decoration: none;
@@ -591,6 +594,11 @@ figcaption, .caption {
     align-items: center;
   }
 }
+.card.sponsored .kicker {
+  --tc: white;
+  background-color: var(--impact);
+}
+
 /**
  * Horizontal slider for additional content
  */
@@ -622,8 +630,7 @@ figcaption, .caption {
  * Section concept for layout stacking
  */
 section, .section {
-  display: grid;
-  gap: calc(var(--gap) / 2);
+  display: block;
   position: relative;
   max-width: var(--section-width);
   margin: var(--gap) auto;
@@ -656,20 +663,6 @@ section, .section {
     padding: 0;
   }
 }
-/**
- * Grid
- */
-.grid {
-  display: grid;
-  grid-template-columns: var(--columns);
-  gap: var(--gap);
-  grid-auto-flow: dense;
-}
-
-.grid > .package:not(.no-img) {
-  --gap: 0px;
-}
-
 /**
  * Expander 
  */
@@ -1187,6 +1180,52 @@ html.msb .masthead {
   }
 }
 /**
+ * Section grid
+ */
+.grid {
+  display: grid;
+  grid-template-columns: var(--columns);
+  gap: var(--gap);
+  grid-auto-flow: dense;
+}
+
+.grid > .package:not(.no-img) {
+  --gap: 0px;
+}
+
+.grid > .full-width,
+.grid > .in-depth {
+  grid-column: 1/-1;
+}
+
+@media (min-width: 660px) {
+  .grid .lead-item {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+
+  .grid .digest {
+    align-self: stretch;
+    grid-row: span 2;
+  }
+}
+/**
+ * Load more button
+ */
+.load-more {
+  grid-column: 1/-1;
+  display: flex;
+  justify-content: center;
+}
+
+/**
+ * Custom card test
+ */
+custom-card {
+  display: contents;
+}
+
+/**
  * Story body
  */
 .story-body {
@@ -1377,7 +1416,7 @@ html.msb .masthead {
   position: relative;
   background-color: var(--premium-bc);
   color: var(--premium-tc);
-  padding: calc(var(--gap) * 2) var(--page-padding);
+  padding: var(--gap) var(--page-padding);
   font: 1rem/1.5em var(--sans);
   --tc: white;
   --lc: white;
@@ -1541,6 +1580,15 @@ html.msb .masthead {
 }
 
 /**
+ * Zone treatment for section grids
+ */
+.section.grid .zone {
+  grid-column-end: -1;
+  background-color: var(--ad-background);
+  padding: var(--half-gap);
+}
+
+/**
  * Custom changes
  */
 #zone-el-2 {
@@ -1557,19 +1605,22 @@ html.msb .masthead {
  */
 .digest {
   display: grid;
-  gap: 15px;
-  align-self: start;
+  grid-template-rows: 1fr auto;
+  background-color: var(--paper-color, white);
+  box-shadow: var(--paper-shadow);
+  color: var(--tc);
+}
+
+.digest .paper {
+  --paper-shadow: none;
 }
 
 .digest .more-link {
-  padding: 0 15px;
+  align-self: end;
+  padding: 15px 15px 10px;
+  --tc: var(--black);
 }
 
-@media (min-width: 600px) {
-  .digest .more-link {
-    padding: 0;
-  }
-}
 /**
  * Immersive media card
  * Note: this could be made smaller with custom properties later
@@ -1673,11 +1724,6 @@ html.msb .masthead {
     grid-column: auto;
   }
 }
-/* Results */
-.load-more {
-  justify-content: center;
-}
-
 /**
  * Header package
  */
@@ -2056,15 +2102,12 @@ section.big-news {
 }
 
 .in-depth .package {
+  --hs: 1.75rem;
   --hw: bold;
 }
 
 .card.in-depth figure {
   min-height: 400px;
-}
-
-.in-depth .h1 {
-  font-size: 1.75rem;
 }
 
 .in-depth .image-link-macro {
@@ -2148,13 +2191,12 @@ section.big-news {
 
 .section-nav {
   padding: 0;
-  max-width: 1170px;
+  grid-column: 1/-1;
   --lc: #707070;
 }
 
 .section-nav .title {
   margin: 0;
-  padding: 0 15px;
 }
 
 .section-nav .title:after {
@@ -2164,16 +2206,15 @@ section.big-news {
 
 .section-nav .expander.open + .icons {
   display: flex;
+  grid-gap: 30px;
   flex-wrap: wrap;
 }
 
 .section-nav .icons {
+  padding-top: 15px;
+  flex-wrap: wrap;
   --lc: var(--tc, #707070);
   --lhc: var(--tc, #222);
-}
-
-.section-nav .icons > * {
-  padding: 0 15px;
 }
 
 @media (max-width: 600px) {
@@ -2380,9 +2421,11 @@ section.big-news {
  * Panel
  */
 .panel {
-  padding: 45px 15px;
+  padding: 45px var(--page-padding);
   max-width: 100%;
   background-color: var(--paper-color);
+  color: var(--tc);
+  font-family: var(--sans);
   --hf: var(--sans);
   --hw: bold;
   --ht: uppercase;
@@ -2396,6 +2439,11 @@ section.big-news {
 .panel > * {
   max-width: var(--story-width);
   margin: 20px auto;
+  color: var(--tc);
+}
+
+.panel > img {
+  display: block;
 }
 
 .panel .grid {
