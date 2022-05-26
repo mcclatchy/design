@@ -52,6 +52,10 @@
   color: #d63031;
 }
 
+.cap-width {
+  max-width: var(--cap-width, 400px);
+}
+
 /**
  * Display classes
  */
