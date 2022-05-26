@@ -117,6 +117,10 @@
   --img-size: 100%;
 }
 
+.square-img {
+  /* height: min(var(--img-size, 90px), 100%); */
+}
+
 .circle-img {
   border-radius: 50%;
 }
