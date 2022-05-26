@@ -1,7 +1,7 @@
 .inline-cta {
   text-align: left;
   align-self: center;
-  max-width: var(--cap-width, 400px);
+  max-width: var(--cap-width, 100%);
   --spread: 10px;
 }
 

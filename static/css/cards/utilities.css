@@ -53,7 +53,7 @@
 }
 
 .cap-width {
-  max-width: var(--cap-width, 400px);
+  max-width: var(--cap-width, 100%);
 }
 
 /**
@@ -104,22 +104,24 @@
  * Forced image crops
  */
 
+.cropped-img,
 .square-img,
 .circle-img {
   position: relative;
   overflow: hidden;
-  width: max(var(--img-size, 90px), 100%);
+  width: var(--img-size, 90px);
+  height: var(--img-size, 90px);
 }
 
-.square-img {
-  height: min(var(--img-size, 90px), 100%);
+.cropped-img {
+  --img-size: 100%;
 }
 
 .circle-img {
-  height: var(--img-size, 90px);
   border-radius: 50%;
 }
 
+.cropped-img img,
 .square-img img,
 .circle-img img {
   position: absolute;

@@ -13,6 +13,7 @@
 .zone.grid.combo {
   place-items: center;
   grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+  --cap-width: calc(var(--story-width) / 2);
 }
 
 /**
