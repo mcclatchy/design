@@ -21,7 +21,7 @@ class PremiumTopper extends HTMLElement {
         --sans: "Noto Sans", "Inter", sans-serif;
       }
 
-      :host(.loaded) ::slotted(*) {
+      :host ::slotted(*) {
         opacity: 1 !important;
       }
 
@@ -226,19 +226,29 @@ class PremiumTopper extends HTMLElement {
 
   connectedCallback() {
     if(!this.subscriber) {
-      this.hidden = true;
+      this.remove();
     } 
     else if(!this.moved) {
-      this.render();
-      this.move();
-      this.hidden = false;
+      // Render now returns a promise to better handle different outcomes
+      let render = this.render();
+
+      render.catch(err => {
+        console.warn(err);
+        this.remove();
+      });
+
+      render.then(() => {
+        this.move();
+        this.hidden = false;
+      });
     }
   }
 
   /**
    * Fetches a structure from the ProdX app
    *
-   * Note: prolly need to check for a bas status message here
+   * This function now returns a promise so we can handle errors more efficiently
+   * and use them to determine visibility.
    */
 
   async render() {
@@ -282,7 +292,15 @@ class PremiumTopper extends HTMLElement {
 
       // Exclusives only has some custom styles
       if(!data.portal.length) {
-        this.classList.add("exclusives-only");
+        let bigNews = document.querySelector(".big-news");
+
+        // We made the call to programmatically hide the topper if
+        // there are only exclusives and if Big News is on the page
+        if(bigNews) {
+          return Promise.reject("premium-topper: exclusive-only with big-news will not render");
+        } else {
+          this.classList.add("exclusives-only");
+        }
       }
 
       data.exclusives.slice(0, 3).forEach(e => {
@@ -316,7 +334,11 @@ class PremiumTopper extends HTMLElement {
     this.querySelectorAll("a").forEach(ele => ele.hash = "subtopper");
 
     // Show it up
+    // This ties to SDS so please do not remove without a release
     this.classList.add("loaded");
+
+    // Return a successful promise
+    return Promise.resolve(true);
   }
 
   /**
@@ -334,7 +356,7 @@ class PremiumTopper extends HTMLElement {
     header.insertAdjacentElement("afterend", this);
     
     // Clean up the empty parent (if there)
-    if(parentSection.children.length == 0) {
+    if(parentSection?.children.length == 0) {
       parentSection.remove();
     }
   }
