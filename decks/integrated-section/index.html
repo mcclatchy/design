@@ -289,7 +289,7 @@
 
 <script type="module">
   const parterRate = .7;
-  const cards = document.querySelectorAll("article.card");
+  const cards = document.querySelectorAll("article.card:not(.lead-item)");
 
   cards.forEach(card => {
     if(Math.random() < parterRate) {
@@ -315,7 +315,7 @@
 </div>
 
 
-  <article class="card ">
+  <article class="card lead-item">
   <figure>
     <a href="https://mcclatchy.github.io/saratoga/food/205504249/">
       <img src="../../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
@@ -323,7 +323,8 @@
   </figure>
   <div class="package">
     <a class="kicker h6" href="https://mcclatchy.github.io/saratoga/food/">FOOD</a>
-    <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
+    <h2 class="h1"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
+    <p class="summary">As far as we can estimate, a baboon is a vaulting blow. An effuse feet's objective comes with it the thought that the quaggy discussion is a rub. The amount is a growth. The literature would have us believe that a dreggy hate is not but a nephew.</p>
     <div class="time">March 16, 2018 11:33 am</div>
   </div>
 </article>
