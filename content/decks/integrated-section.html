@@ -43,6 +43,7 @@ layout: section
     padding-top: 56.25%;
     position: relative;
     background: linear-gradient(transparent, transparent 30%, var(--paper-color, white) 70%);
+    justify-content: end;
     align-self: stretch;
     --hf: var(--sans);
     --hw: bold;
@@ -51,6 +52,10 @@ layout: section
   .kicker {
     padding: 0;
     border: none;
+  }
+
+  .card .package .time {
+    flex: none;
   }
 
   .card.lead-item {
@@ -65,10 +70,6 @@ layout: section
 
   .card.lead-item .summary {
     display: none;
-  }
-
-  .card.lead-item .package .time {
-    flex: none;
   }
 
   .card.sponsored {
