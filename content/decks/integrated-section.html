@@ -11,8 +11,11 @@ layout: section
   }
 
   .grid {
+    gap: 20px;
+    justify-content: center;
+    grid-auto-rows: 250px;
+    --paper-shadown: none;Kitten clings for life as man awaits rescue from Florence.
     --columns: repeat(auto-fit, 300px);
-    gap: 10px;
   }
 
   .card {
@@ -39,8 +42,6 @@ layout: section
   }
 
   .card .package {
-    position: relative;
-    padding-top: 56.25%;
     position: relative;
     background: linear-gradient(transparent, transparent 30%, var(--paper-color, white) 70%);
     justify-content: end;
@@ -80,6 +81,11 @@ layout: section
   .card.sponsored .kicker {
     background-color: unset;
   }
+
+  .load-more {
+    align-self: start;
+    margin: var(--gap) auto;
+  }
 </style>
 
 <script type="module">
@@ -97,8 +103,6 @@ layout: section
 <section class="grid">
   <!-- Option banner group (now hidden by default) -->
   <div class"option-banners" hidden></div>
-
-  {{< section-nav >}}
 
   {{< card class="lead-item" headline-size="h1" >}}
   {{< card >}}
@@ -143,8 +147,8 @@ layout: section
   {{< card >}}
   {{< card >}}
   {{< card >}}
-
-  <div class="load-more">
-    <a class="button big impact" href="#page2">Load More</a>
-  </div>
 </section>
+
+<div class="load-more">
+  <a class="button big impact" href="#page2">Load More</a>
+</div>
