@@ -293,8 +293,11 @@
   }
 
   .grid {
+    gap: 20px;
+    justify-content: center;
+    grid-auto-rows: 250px;
+    --paper-shadown: none;Kitten clings for life as man awaits rescue from Florence.
     --columns: repeat(auto-fit, 300px);
-    gap: 10px;
   }
 
   .card {
@@ -321,8 +324,6 @@
   }
 
   .card .package {
-    position: relative;
-    padding-top: 56.25%;
     position: relative;
     background: linear-gradient(transparent, transparent 30%, var(--paper-color, white) 70%);
     justify-content: end;
@@ -362,6 +363,11 @@
   .card.sponsored .kicker {
     background-color: unset;
   }
+
+  .load-more {
+    align-self: start;
+    margin: var(--gap) auto;
+  }
 </style>
 
 <script type="module">
@@ -379,18 +385,6 @@
 <section class="grid">
   <!-- Option banner group (now hidden by default) -->
   <div class"option-banners" hidden></div>
-
-  
-<div class="section-nav">
-  <h1 class="expander title h1" onclick="this.classList.toggle('open')">Sports</h1>
-  <div class="icons summary">
-    <a href="#">NFL</a>
-    <a href="#">MLB</a>
-    <a href="#">NBA</a>
-    <a href="#">College</a>
-  </div>
-</div>
-
 
   <article class="card lead-item">
   <figure>
@@ -916,11 +910,11 @@
   </div>
 </article>
 
-
-  <div class="load-more">
-    <a class="button big impact" href="#page2">Load More</a>
-  </div>
 </section>
+
+<div class="load-more">
+  <a class="button big impact" href="#page2">Load More</a>
+</div>
 
 
   <footer class="impact">
