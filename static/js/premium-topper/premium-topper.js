@@ -15,10 +15,14 @@ class PremiumTopper extends HTMLElement {
     t.innerHTML = `
     <style>
       :host {
-        display: block;
+        display: none !important;
         --hf: var(--premium-serif);
         --half-gap: calc(var(--gap) / 2);
         --sans: "Noto Sans", "Inter", sans-serif;
+      }
+
+      :host(.loaded) {
+        display: block !important;
       }
 
       :host ::slotted(*) {
@@ -239,7 +243,6 @@ class PremiumTopper extends HTMLElement {
 
       render.then(() => {
         this.move();
-        this.hidden = false;
       });
     }
   }
@@ -333,10 +336,6 @@ class PremiumTopper extends HTMLElement {
     // Append a hash to all links for analytics
     this.querySelectorAll("a").forEach(ele => ele.hash = "subtopper");
 
-    // Show it up
-    // This ties to SDS so please do not remove without a release
-    this.classList.add("loaded");
-
     // Return a successful promise
     return Promise.resolve(true);
   }
@@ -354,6 +353,10 @@ class PremiumTopper extends HTMLElement {
 
     // Move it
     header.insertAdjacentElement("afterend", this);
+
+    // Show it
+    this.classList.add("loaded");
+    this.hidden = false;
     
     // Clean up the empty parent (if there)
     if(parentSection?.children.length == 0) {
