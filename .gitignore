@@ -6,3 +6,4 @@ package.json.bak
 .htaccess
 .idea
 .hugo_build.lock
+static/hi
