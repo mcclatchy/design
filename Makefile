@@ -29,9 +29,3 @@ public:
 
 clean:
 	rm dist/*
-
-labs:
-	rsync -rvzL --update -e ssh static/labs/ mcc.mi:labs/
-
-hi:
-	rsync -rzvL --update -e ssh hi/ mcc.mi:hi/
