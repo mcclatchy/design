@@ -6,7 +6,7 @@ class FakeAd extends HTMLElement {
 
   // Watch a couple of attributes for changes
   static get observedAttributes() {
-    return ["order", "columns", "size"];
+    return ["order", "size"];
   }
 
   // Updating the order shifts where the ad sits in the grid
@@ -22,19 +22,6 @@ class FakeAd extends HTMLElement {
     }
   }
 
-  // Updating the columns changes how many the ad will use
-  get columns() {
-    return this.getAttribute("columns");
-  }
-
-  set columns(val) {
-    if(val) {
-      this.setAttribute("columns", val);
-    } else {
-      this.removeAttribute("columns");
-    }
-  }
-
   // Shadow DOM template
   get template() {
     let t = document.createElement("template");
@@ -43,24 +30,12 @@ class FakeAd extends HTMLElement {
       :host {
         --color: #f2b6be;
 
-        display: flex;
+        display: flex !important;
         align-items: center;
         justify-content: center;
         order: var(--order);
       }
 
-      @media(min-width: 660px) {
-        :host([columns="2"]), :host([columns="3"]) {
-          grid-column: 1/-1;
-        }
-      }
-
-      @media(min-width: 990px) {
-        :host([columns="3"]) {
-          grid-column: 1/-1;
-        }
-      }
-      
       .ad {
         display: none;
         background-color: var(--color);
@@ -111,9 +86,6 @@ class FakeAd extends HTMLElement {
       case "order":
         this.style.setProperty("--order", nv);
         break;
-      case "columns":
-        // Handled with CSS instead
-        break;
       case "size":
         this.renderAd(...this.size);
         break;
@@ -160,12 +132,6 @@ class FakeAd extends HTMLElement {
     let zone = this.closest(".zone");
     if(zone) {
       zone.style.setProperty("--height", `${height}px`);
-    }
-
-    if(width <= 300) {
-      this.columns = 1;
-    } else {
-      this.columns = 3;
     }
   }
 
