@@ -16,6 +16,10 @@
   --cap-width: calc(var(--story-width) / 2);
 }
 
+.zone:empty {
+  display: none;
+}
+
 /**
  * Zone treatment for section grids
  */
