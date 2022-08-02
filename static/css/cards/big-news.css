@@ -10,7 +10,7 @@ section.big-news {
 
 .big-news .latest {
   margin: 0;
-  padding: 15px 15px 0;
+  padding: 15px 15px 5px;
 }
 
 .big-news .h1 {

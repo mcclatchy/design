@@ -5,7 +5,7 @@
 :root {
   /* Fonts */
   font: 16px/1.5rem var(--serif);
-  --sans: "Inter", sans-serif;
+  --sans: "Noto Sans", sans-serif;
   --serif: "Noto Serif", serif;
   --premium-serif: "DM Serif Display", serif;
 
