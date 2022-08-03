@@ -5,7 +5,7 @@
 :root {
   /* Fonts */
   font: 16px/1.5rem var(--serif);
-  --sans: "Inter", sans-serif;
+  --sans: "Noto Sans", sans-serif;
   --serif: "Noto Serif", serif;
   --premium-serif: "DM Serif Display", serif;
   /* Spacing and alignment */
@@ -1235,6 +1235,15 @@ html.msb .masthead {
     grid-column: span 2;
   }
 
+  .grid .first-column {
+    grid-column-start: 1;
+  }
+
+  .grid .second-column,
+.grid .third-column {
+    grid-column-start: 2;
+  }
+
   .grid .lead-item {
     grid-column: span 2;
     grid-row: span 2;
@@ -1243,6 +1252,11 @@ html.msb .masthead {
   .grid .digest {
     align-self: stretch;
     grid-row: span 2;
+  }
+}
+@media (min-width: 990px) {
+  .grid .third-column {
+    grid-column-start: 3;
   }
 }
 /**
@@ -2090,7 +2104,7 @@ section.big-news {
 
 .big-news .latest {
   margin: 0;
-  padding: 15px 15px 0;
+  padding: 15px 15px 5px;
 }
 
 .big-news .h1 {

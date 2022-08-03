@@ -2,8 +2,8 @@
 {{- $class := .Get "class" -}}
 {{- $kicker := default "OPINION" (.Get "kicker") -}}
 
-<div class="digest">
-  <div class="paper {{ $class }}">
+<div class="digest {{ $class }}">
+  <div class="paper">
     <a href="#" class="label {{ $label }}">
       <span class="h5">{{ $kicker }}</span>
     </a>
