@@ -10,23 +10,17 @@ This is the smallest method of creating a grid following the design rules, which
 
 We've added a number of utility classes to help set design rules for specific elements directly in the templates that only apply on multi-column layouts.
 
-**.first-column**,  
-**.second-column**,  
-**.third-column**
-
-These will each force an element to start in the corrseponding column.
-
 **.two-rows**
 
 This will force an element to span two rows.
 
 **.two-columns**
 
-This will force an element to span two columns and negates a specific column to protect the design.
+This will force an element to span two columns.
 
 **.three-columns**
 
-These will force an element to span three columns and negates a specific column to protect the design.
+These will force an element to span three columns.
 
 #### Example
 <div class="example grid">
