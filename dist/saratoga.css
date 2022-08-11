@@ -149,6 +149,8 @@ li {
   text-transform: uppercase;
   --ld: none;
   --lhd: none;
+  --lc: var(--tc);
+  --lhc: var(--tc);
 }
 
 time, .time, .byline {
