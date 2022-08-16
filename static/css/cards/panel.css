@@ -16,6 +16,9 @@
 
 .panel.impact {
   --paper-color: #373737;
+  --lc: white;
+  --ld: underline;
+  --lhc: #88B1FC;
 }
 
 .panel > * {
