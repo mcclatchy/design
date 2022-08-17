@@ -1274,7 +1274,14 @@ html.msb .masthead {
 }
 
 /**
- * Custom card test
+ * Custom grid arrangements
+ */
+.partner-digest-group .digest {
+  grid-column: auto;
+}
+
+/**
+ * Custom cards injectable element
  */
 custom-card {
   display: contents;
@@ -2484,6 +2491,9 @@ section.big-news {
 
 .panel.impact {
   --paper-color: #373737;
+  --lc: white;
+  --ld: underline;
+  --lhc: #88B1FC;
 }
 
 .panel > * {
