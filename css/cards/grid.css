@@ -74,7 +74,15 @@
 }
 
 /**
- * Custom card test
+ * Custom grid arrangements
+ */
+
+.partner-digest-group .digest {
+  grid-column: auto;
+}
+
+/**
+ * Custom cards injectable element
  */
 
 custom-card {
