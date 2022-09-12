@@ -382,17 +382,23 @@ label.checkbox {
   display: grid;
   grid-template-columns: min-content auto;
   grid-gap: 8px;
-  align-items: center;
+  align-items: start;
   font-weight: 400;
   cursor: pointer;
+}
+
+label.checkbox input {
+  margin-top: .25em;
 }
 
 label ~ input, 
 label ~ select, 
 label ~ .select,
+label ~ textarea,
 label input,
 label select, 
-label .select {
+label .select,
+label textarea {
   margin-top: 10px;
 }
 
@@ -404,7 +410,7 @@ label + small {
   margin-top: 2px;
 }
 
-input, select, .select {
+input, select, .select, textarea {
   position: relative;
   display: block;
   width: 100%;
