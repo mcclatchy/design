@@ -1,12 +1,18 @@
 .inline-cta {
   text-align: left;
   align-self: center;
-  max-width: var(--cap-width, 100%);
   --spread: 10px;
 }
 
 .inline-cta.package {
-  padding: 0;
+  padding: 30px;
+}
+
+@media(max-width: 629px) {
+  .inline-cta.package {
+    align-items: center;
+    text-align: center;
+  }
 }
 
 .inline-cta .h1 {

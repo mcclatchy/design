@@ -3,17 +3,16 @@
  */
 
 .zone {
+  display: grid;
   clear: both;
+  background-color: var(--ad-background);
 }
 
-.zone.grid {
-  grid-template-columns: minmax(0, 1fr);
-}
-
-.zone.grid.combo {
+.zone.combo {
   place-items: center;
   grid-template-columns: repeat(auto-fit, minmax(300px, auto));
-  --cap-width: calc(var(--story-width) / 2);
+  background-color: var(--ad-background);
+  --gap: 0;
 }
 
 .zone:empty {
@@ -21,12 +20,21 @@
 }
 
 /**
- * Zone treatment for section grids
+ * Zone treatment inside grids
  */
 
 .grid .zone {
   grid-column-end: -1; 
   background-color: var(--ad-background);
+}
+
+/*
+ * Zones inside story bodies
+ */
+
+.story-body > .zone {
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /**
