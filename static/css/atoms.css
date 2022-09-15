@@ -309,11 +309,12 @@ hr {
   padding: .4em 1em;
   border-radius: 3px;
   font: bold 1rem var(--sans);
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
   color: var(--bc);
   background-color: var(--bbc);
   border: 1px solid transparent;
-  text-transform: uppercase;
-  text-decoration: none;
   cursor: pointer;
   --lhc: var(--bc);
   --lhd: none;
