@@ -297,11 +297,12 @@ hr {
   padding: 0.4em 1em;
   border-radius: 3px;
   font: bold 1rem var(--sans);
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
   color: var(--bc);
   background-color: var(--bbc);
   border: 1px solid transparent;
-  text-transform: uppercase;
-  text-decoration: none;
   cursor: pointer;
   --lhc: var(--bc);
   --lhd: none;
@@ -1893,6 +1894,9 @@ html.msb .masthead {
   --hw: bold;
   --ht: uppercase;
   --tf: var(--sans);
+  --lc: #5169B8;
+  --lhc: #31409F;
+  --ld: underline;
 }
 
 .panel.impact {

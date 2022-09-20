@@ -297,11 +297,12 @@ hr {
   padding: 0.4em 1em;
   border-radius: 3px;
   font: bold 1rem var(--sans);
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
   color: var(--bc);
   background-color: var(--bbc);
   border: 1px solid transparent;
-  text-transform: uppercase;
-  text-decoration: none;
   cursor: pointer;
   --lhc: var(--bc);
   --lhd: none;
@@ -1629,17 +1630,8 @@ custom-card {
  * Zones
  */
 .zone {
+  display: grid;
   clear: both;
-}
-
-.zone.grid {
-  grid-template-columns: minmax(0, 1fr);
-}
-
-.zone.grid.combo {
-  place-items: center;
-  grid-template-columns: repeat(auto-fit, minmax(300px, auto));
-  --cap-width: calc(var(--story-width) / 2);
 }
 
 .zone:empty {
@@ -1647,11 +1639,24 @@ custom-card {
 }
 
 /**
- * Zone treatment for section grids
+ * Zone treatment inside grids
  */
 .grid .zone {
   grid-column-end: -1;
   background-color: var(--ad-background);
+}
+
+/*
+ * Zones inside story bodies
+ */
+.story-body > .zone {
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.zone.combo {
+  grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+  justify-items: center;
 }
 
 /**
@@ -2291,15 +2296,21 @@ section.big-news {
 }
 .inline-cta {
   text-align: left;
-  align-self: center;
-  max-width: var(--cap-width, 100%);
+  background-color: var(--ad-background);
   --spread: 10px;
 }
 
 .inline-cta.package {
-  padding: 0;
+  padding: 30px;
+  justify-content: center;
 }
 
+@media (max-width: 629px) {
+  .inline-cta.package {
+    align-items: center;
+    text-align: center;
+  }
+}
 .inline-cta .h1 {
   --hf: var(--serif);
 }
@@ -2487,6 +2498,9 @@ section.big-news {
   --hw: bold;
   --ht: uppercase;
   --tf: var(--sans);
+  --lc: #5169B8;
+  --lhc: #31409F;
+  --ld: underline;
 }
 
 .panel.impact {
