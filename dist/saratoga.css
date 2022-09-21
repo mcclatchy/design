@@ -2719,6 +2719,10 @@ form[id^=bx-form] {
   background-color: var(--body-background);
 }
 
+#newsletter-signUpWidget {
+  --ad-background: var(--impact);
+}
+
 .impact2020 .kicker {
   color: white;
   background-color: #373737;

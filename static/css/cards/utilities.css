@@ -191,3 +191,7 @@ form[id^=bx-form] {
   padding-right: 15px;
   background-color: var(--body-background);
 }
+
+#newsletter-signUpWidget {
+  --ad-background: var(--impact);
+}
