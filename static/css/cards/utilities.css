@@ -193,5 +193,13 @@ form[id^=bx-form] {
 }
 
 #newsletter-signUpWidget {
-  --ad-background: var(--impact);
+  --hc: var(--black);
+  --tc: var(--black);
+  --lc: #3C4D87;
+  --lhc: #5169B8;
+}
+
+#newsletter-signUpWidget .button {
+  --bbc: var(--impact);
+  --bc: white;
 }
