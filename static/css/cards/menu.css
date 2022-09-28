@@ -61,6 +61,7 @@
 .main-nav .expander {
   align-self: stretch;
   justify-content: space-between;
+  text-align: left;
 }
 
 .main-nav .subsection a {
