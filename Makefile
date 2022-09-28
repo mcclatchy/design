@@ -2,18 +2,20 @@
 
 style ?= expanded
 
+current != awk '/version/{print $2}' package.json | egrep -o "([0-9]{1,}\.)+[0-9]{1,}"
+version != echo $(current) | awk -F "." '{ sub($$3, int($$3)+1); print }'
+
 dist:
 	sass --style $(style) --no-source-map builds:dist
 
 release: dist
-	@[ $(v) ] || ( echo ">> v is not set"; exit 1 )
 	git add dist
-	sed -E --in-place=.bak 's/([0-9]+\.){2}([0-9]+)/$(v)/' package.json
+	sed -E --in-place=.bak 's/([0-9]+\.){2}([0-9]+)/$(version))/' package.json
 	git add package.json
-	git commit -m "updating package.json to $(v)"
+	git commit -m "updating package.json to $(version)"
 	git push
-	git tag $(v)
-	git push origin $(v)
+	git tag $(version)
+	git push origin $(version)
 
 live: public
 	rm -rf public/*
