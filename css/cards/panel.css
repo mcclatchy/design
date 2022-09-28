@@ -12,6 +12,9 @@
   --hw: bold;
   --ht: uppercase;
   --tf: var(--sans);
+  --lc: #5169B8;
+  --lhc: #31409F;
+  --ld: underline;
 }
 
 .panel.impact {

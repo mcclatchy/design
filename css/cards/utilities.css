@@ -191,3 +191,15 @@ form[id^=bx-form] {
   padding-right: 15px;
   background-color: var(--body-background);
 }
+
+#newsletter-signUpWidget {
+  --hc: var(--black);
+  --tc: var(--black);
+  --lc: #3C4D87;
+  --lhc: #5169B8;
+}
+
+#newsletter-signUpWidget .button {
+  --bbc: var(--impact);
+  --bc: white;
+}
