@@ -2,7 +2,7 @@
 
 style ?= expanded
 
-current != awk '/version/{print $2}' package.json | egrep -o "([0-9]{1,}\.)+[0-9]{1,}"
+current != awk '/version/{print $$2}' package.json | egrep -o "([0-9]{1,}\.)+[0-9]{1,}"
 version != echo $(current) | awk -F "." '{ sub($$3, int($$3)+1); print }'
 
 dist:
