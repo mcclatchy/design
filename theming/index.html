@@ -43,7 +43,6 @@
     <link rel="stylesheet" href="../css/cards/timeline.css">
     <link rel="stylesheet" href="../css/cards/transparency.css">
     <link rel="stylesheet" href="../css/cards/big-news.css">
-    <link rel="stylesheet" href="../css/cards/in-depth.css">
     <link rel="stylesheet" href="../css/cards/swg-promo.css">
     <link rel="stylesheet" href="../css/cards/read-next.css">
     <link rel="stylesheet" href="../css/cards/section-nav.css">
@@ -99,17 +98,17 @@
 <div class="panel">
   <section class="grid color-example">
     <article class="card ">
-  <figure>
-    <a href="https://mcclatchy.github.io/saratoga/food/205504249/">
-      <img src="../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
-    </a>
-  </figure>
-  <div class="package">
-    <a class="kicker h6" href="https://mcclatchy.github.io/saratoga/food/">FOOD</a>
-    <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
-    <div class="time">March 16, 2018 11:33 am</div>
-  </div>
-</article>
+      <figure>
+        <a href="https://mcclatchy.github.io/saratoga/food/205504249/">
+          <img src="../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
+        </a>
+      </figure>
+      <div class="package">
+        <a class="kicker h6" href="https://mcclatchy.github.io/saratoga/food/">FOOD</a>
+        <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
+        <div class="time">March 16, 2018 11:33 am</div>
+      </div>
+    </article>
 
     <div class="grid" style="--columns: repeat(3, 1fr)">
       <button class="button big impact">Impact</button>
@@ -145,9 +144,9 @@
   <h4 class="expander tip">Learn more about the code</h4>
 <p>The enhancements file is a native ES6 module that exports a series of utility functions, and is available on all markets through a bucket-to-server sync DevOps set up at the following relative path <a href="https://www.miamiherald.com/static/hi/themes/enhancements.js">/static/hi/themes/enhancements.js</a>. All files are initially stored in a Google Cloud Bucket, providing an additional layer of security.</p>
 <p>To include the file into your own module, import the functions that you want to use with the following syntax.</p>
-<pre tabindex="0"><code>import { makePhotosWide, removeNodes } from &quot;/static/hi/themes/enhancements.js&quot;
+<pre tabindex="0"><code>import { makePhotosWide, removeNodes } from &#34;/static/hi/themes/enhancements.js&#34;
 </code></pre><p>You can also import all functions into an <code>enhancements</code> object using this syntax.</p>
-<pre tabindex="0"><code>import * as enhancements from &quot;./enhancements.js&quot;;
+<pre tabindex="0"><code>import * as enhancements from &#34;./enhancements.js&#34;;
 </code></pre><p>Simply importing the file will set up the communication to the other teams using the global <code>window.mi.theme</code> object. This location was chosen by the performance team and cannot change. They are generating analytics reports for pages where this object exists. The help desk team is also aware of the object, and if they get a ticket for a page where it exists, they know to contact NewsX to troubleshoot. This object eliminates a lot of confusion and internal communication between teams, so it&rsquo;s vital that it&rsquo;s included on custom pages and that these functions are used to manipulate the page when possible.</p>
 </div>
 <h3 id="themes">Themes</h3>
@@ -161,21 +160,21 @@
 <div class="panel factbox">
   <h4 class="expander tip">Learn more about the code</h4>
 <p>Themes should consist of no more than one CSS file and one JavaScript file. The JavaScript file should be a standard ES module, and must import the enhancements file to initiate the <code>window.mi.theme</code> object. Additional functionality can be imported to accommodate the needs of the theme. Here is the embed code for the premium theme.</p>
-<pre tabindex="0"><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;/static/hi/themes/premium.css&quot;&gt;
-&lt;script type=&quot;module&quot; src=&quot;/static/hi/themes/premium.js&quot;&gt;&lt;/script&gt;
+<pre tabindex="0"><code>&lt;link rel=&#34;stylesheet&#34; href=&#34;/static/hi/themes/premium.css&#34;&gt;
+&lt;script type=&#34;module&#34; src=&#34;/static/hi/themes/premium.js&#34;&gt;&lt;/script&gt;
 </code></pre><p>After importing the enhancements file, the theme should set a specific name and description so the performance team can use it for their analytics reporting. Here is the top of the premium theme file showing how to do that.</p>
 <pre tabindex="0"><code>/**
  * Premium content skin
  */
 
-import * as enhancements from &quot;./enhancements.js&quot;;
+import * as enhancements from &#34;./enhancements.js&#34;;
 
 /**
  * Set this theme config
  */
 
-mi.theme.name = &quot;premium&quot;;
-mi.theme.description = &quot;A light theme for enterprise content&quot;;
+mi.theme.name = &#34;premium&#34;;
+mi.theme.description = &#34;A light theme for enterprise content&#34;;
 </code></pre><p>Frameworks like React and templating libraries like Vue.js should not be used, as they can negatively impact code written in the other development layers without our knowledge.</p>
 </div>
 <h3 id="skins">Skins</h3>
@@ -220,19 +219,19 @@ mi.theme.description = &quot;A light theme for enterprise content&quot;;
 <li>The NewsX team further enhances individual pages or sets of pages with non-critical custom cards, or in the case of the <code>simple-grid</code> sections mostly negates the work of the performance team. The latter is fine for testing a concept, but not something that should be common practice.</li>
 </ol>
 <p>For all the elements on section pages, including homepages, we&rsquo;ve identified the layer in which they should belong and have made an HTML structure that would be easy to organize by team. Here is the result:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080;font-weight:bold">section</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;grid&#34;</span>&gt;
-  &lt;<span style="color:#000080;font-weight:bold">article</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;card&#34;</span>&gt;..&lt;/<span style="color:#000080;font-weight:bold">article</span>&gt;
-  &lt;<span style="color:#000080;font-weight:bold">article</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;card&#34;</span>&gt;..&lt;/<span style="color:#000080;font-weight:bold">article</span>&gt;
-  &lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;zone-el&#34;</span>&gt;...&lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;
-  &lt;<span style="color:#000080;font-weight:bold">article</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;card&#34;</span>&gt;..&lt;/<span style="color:#000080;font-weight:bold">article</span>&gt;
-  // WPS continues adding elements that all readers should see
-
-  &lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;hidden&#34;</span>&gt;
-    // This area is directly tied to the Banner options group and is used by NewsX
-  &lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;
-&lt;/<span style="color:#000080;font-weight:bold">section</span>&gt;
-// The performance team has a bird&#39;s eye view of the whole page
-</code></pre></div><p>Hopefully it&rsquo;s easy to see the pattern and how the teams are organized. This is very similar to the way the <code>simple-grid</code> concept rebuilds the page, but it&rsquo;s directly incorporated into CUE.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#000080;font-weight:bold">section</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;grid&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#000080;font-weight:bold">article</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;card&#34;</span>&gt;..&lt;/<span style="color:#000080;font-weight:bold">article</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#000080;font-weight:bold">article</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;card&#34;</span>&gt;..&lt;/<span style="color:#000080;font-weight:bold">article</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;zone-el&#34;</span>&gt;...&lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#000080;font-weight:bold">article</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;card&#34;</span>&gt;..&lt;/<span style="color:#000080;font-weight:bold">article</span>&gt;
+</span></span><span style="display:flex;"><span>  // WPS continues adding elements that all readers should see
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;hidden&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    // This area is directly tied to the Banner options group and is used by NewsX
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#000080;font-weight:bold">section</span>&gt;
+</span></span><span style="display:flex;"><span>// The performance team has a bird&#39;s eye view of the whole page
+</span></span></code></pre></div><p>Hopefully it&rsquo;s easy to see the pattern and how the teams are organized. This is very similar to the way the <code>simple-grid</code> concept rebuilds the page, but it&rsquo;s directly incorporated into CUE.</p>
 <h3 id="the-grid">The grid</h3>
 <p>Much like the <code>simple-grid</code> concept, the primary layout for all section pages, including homepages and topic pages, is our standard grid. CSS grid allows us to change the presentaion of each card, or group of cards, at the card level without needing to re-define the structure. We&rsquo;ve got three decks to highlight how we can use this to our advantage, and we&rsquo;re exluding the flags, navigation and footer from this explanation.</p>
 <p>The <a href="../decks/section/">section deck</a> represents the bare minimum display coming from WPS. These are the elements that are absolutely critical to our business: articles, a digest and ads.</p>
@@ -244,82 +243,82 @@ mi.theme.description = &quot;A light theme for enterprise content&quot;;
 <div class="panel grid-example">
   <section class="grid">
     <article class="card ">
-  <figure>
-    <a href="https://mcclatchy.github.io/saratoga/food/205504249/">
-      <img src="../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
-    </a>
-  </figure>
-  <div class="package">
-    <a class="kicker h6" href="https://mcclatchy.github.io/saratoga/food/">FOOD</a>
-    <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
-    <div class="time">March 16, 2018 11:33 am</div>
-  </div>
-</article>
+      <figure>
+        <a href="https://mcclatchy.github.io/saratoga/food/205504249/">
+          <img src="../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
+        </a>
+      </figure>
+      <div class="package">
+        <a class="kicker h6" href="https://mcclatchy.github.io/saratoga/food/">FOOD</a>
+        <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
+        <div class="time">March 16, 2018 11:33 am</div>
+      </div>
+    </article>
 
     <article class="card ">
-  <figure>
-    <a href="https://mcclatchy.github.io/saratoga/food/205504249/">
-      <img src="../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
-    </a>
-  </figure>
-  <div class="package">
-    <a class="kicker h6" href="https://mcclatchy.github.io/saratoga/food/">FOOD</a>
-    <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
-    <div class="time">March 16, 2018 11:33 am</div>
-  </div>
-</article>
+      <figure>
+        <a href="https://mcclatchy.github.io/saratoga/food/205504249/">
+          <img src="../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
+        </a>
+      </figure>
+      <div class="package">
+        <a class="kicker h6" href="https://mcclatchy.github.io/saratoga/food/">FOOD</a>
+        <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
+        <div class="time">March 16, 2018 11:33 am</div>
+      </div>
+    </article>
 
     <article class="card d-tablet">
-  <figure>
-    <a href="https://mcclatchy.github.io/saratoga/food/205504249/">
-      <img src="../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
-    </a>
-  </figure>
-  <div class="package">
-    <a class="kicker h6" href="https://mcclatchy.github.io/saratoga/food/">FOOD</a>
-    <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
-    <div class="time">March 16, 2018 11:33 am</div>
-  </div>
-</article>
+      <figure>
+        <a href="https://mcclatchy.github.io/saratoga/food/205504249/">
+          <img src="../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
+        </a>
+      </figure>
+      <div class="package">
+        <a class="kicker h6" href="https://mcclatchy.github.io/saratoga/food/">FOOD</a>
+        <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
+        <div class="time">March 16, 2018 11:33 am</div>
+      </div>
+    </article>
 
     <article class="card d-tablet">
-  <figure>
-    <a href="https://mcclatchy.github.io/saratoga/food/205504249/">
-      <img src="../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
-    </a>
-  </figure>
-  <div class="package">
-    <a class="kicker h6" href="https://mcclatchy.github.io/saratoga/food/">FOOD</a>
-    <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
-    <div class="time">March 16, 2018 11:33 am</div>
-  </div>
-</article>
+      <figure>
+        <a href="https://mcclatchy.github.io/saratoga/food/205504249/">
+          <img src="../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
+        </a>
+      </figure>
+      <div class="package">
+        <a class="kicker h6" href="https://mcclatchy.github.io/saratoga/food/">FOOD</a>
+        <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
+        <div class="time">March 16, 2018 11:33 am</div>
+      </div>
+    </article>
 
     <article class="card d-tablet">
-  <figure>
-    <a href="https://mcclatchy.github.io/saratoga/food/205504249/">
-      <img src="../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
-    </a>
-  </figure>
-  <div class="package">
-    <a class="kicker h6" href="https://mcclatchy.github.io/saratoga/food/">FOOD</a>
-    <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
-    <div class="time">March 16, 2018 11:33 am</div>
-  </div>
-</article>
+      <figure>
+        <a href="https://mcclatchy.github.io/saratoga/food/205504249/">
+          <img src="../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
+        </a>
+      </figure>
+      <div class="package">
+        <a class="kicker h6" href="https://mcclatchy.github.io/saratoga/food/">FOOD</a>
+        <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
+        <div class="time">March 16, 2018 11:33 am</div>
+      </div>
+    </article>
 
     <article class="card d-tablet">
-  <figure>
-    <a href="https://mcclatchy.github.io/saratoga/food/205504249/">
-      <img src="../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
-    </a>
-  </figure>
-  <div class="package">
-    <a class="kicker h6" href="https://mcclatchy.github.io/saratoga/food/">FOOD</a>
-    <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
-    <div class="time">March 16, 2018 11:33 am</div>
-  </div>
-</article>
+      <figure>
+        <a href="https://mcclatchy.github.io/saratoga/food/205504249/">
+          <img src="../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
+        </a>
+      </figure>
+      <div class="package">
+        <a class="kicker h6" href="https://mcclatchy.github.io/saratoga/food/">FOOD</a>
+        <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
+        <div class="time">March 16, 2018 11:33 am</div>
+      </div>
+    </article>
 
   <div class="load-more">
     <a class="button big impact">Load Card</a>
@@ -337,85 +336,85 @@ mi.theme.description = &quot;A light theme for enterprise content&quot;;
 <div class="panel grid-example">
   <section class="grid">
     <article class="card ">
-  <figure>
-    <a href="https://mcclatchy.github.io/saratoga/food/205504249/">
-      <img src="../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
-    </a>
-  </figure>
-  <div class="package">
-    <a class="kicker h6" href="https://mcclatchy.github.io/saratoga/food/">FOOD</a>
-    <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
-    <div class="time">March 16, 2018 11:33 am</div>
-  </div>
-</article>
+      <figure>
+        <a href="https://mcclatchy.github.io/saratoga/food/205504249/">
+          <img src="../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
+        </a>
+      </figure>
+      <div class="package">
+        <a class="kicker h6" href="https://mcclatchy.github.io/saratoga/food/">FOOD</a>
+        <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
+        <div class="time">March 16, 2018 11:33 am</div>
+      </div>
+    </article>
 
     <article class="card ">
-  <figure>
-    <a href="https://mcclatchy.github.io/saratoga/food/205504249/">
-      <img src="../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
-    </a>
-  </figure>
-  <div class="package">
-    <a class="kicker h6" href="https://mcclatchy.github.io/saratoga/food/">FOOD</a>
-    <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
-    <div class="time">March 16, 2018 11:33 am</div>
-  </div>
-</article>
+      <figure>
+        <a href="https://mcclatchy.github.io/saratoga/food/205504249/">
+          <img src="../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
+        </a>
+      </figure>
+      <div class="package">
+        <a class="kicker h6" href="https://mcclatchy.github.io/saratoga/food/">FOOD</a>
+        <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
+        <div class="time">March 16, 2018 11:33 am</div>
+      </div>
+    </article>
 
     <article class="card d-tablet">
-  <figure>
-    <a href="https://mcclatchy.github.io/saratoga/food/205504249/">
-      <img src="../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
-    </a>
-  </figure>
-  <div class="package">
-    <a class="kicker h6" href="https://mcclatchy.github.io/saratoga/food/">FOOD</a>
-    <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
-    <div class="time">March 16, 2018 11:33 am</div>
-  </div>
-</article>
+      <figure>
+        <a href="https://mcclatchy.github.io/saratoga/food/205504249/">
+          <img src="../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
+        </a>
+      </figure>
+      <div class="package">
+        <a class="kicker h6" href="https://mcclatchy.github.io/saratoga/food/">FOOD</a>
+        <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
+        <div class="time">March 16, 2018 11:33 am</div>
+      </div>
+    </article>
 
     <div class="test-card promo">
       <p class="h2">Content goes here</p>
     </div>
     <article class="card d-tablet">
-  <figure>
-    <a href="https://mcclatchy.github.io/saratoga/food/205504249/">
-      <img src="../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
-    </a>
-  </figure>
-  <div class="package">
-    <a class="kicker h6" href="https://mcclatchy.github.io/saratoga/food/">FOOD</a>
-    <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
-    <div class="time">March 16, 2018 11:33 am</div>
-  </div>
-</article>
+      <figure>
+        <a href="https://mcclatchy.github.io/saratoga/food/205504249/">
+          <img src="../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
+        </a>
+      </figure>
+      <div class="package">
+        <a class="kicker h6" href="https://mcclatchy.github.io/saratoga/food/">FOOD</a>
+        <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
+        <div class="time">March 16, 2018 11:33 am</div>
+      </div>
+    </article>
 
     <article class="card d-tablet">
-  <figure>
-    <a href="https://mcclatchy.github.io/saratoga/food/205504249/">
-      <img src="../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
-    </a>
-  </figure>
-  <div class="package">
-    <a class="kicker h6" href="https://mcclatchy.github.io/saratoga/food/">FOOD</a>
-    <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
-    <div class="time">March 16, 2018 11:33 am</div>
-  </div>
-</article>
+      <figure>
+        <a href="https://mcclatchy.github.io/saratoga/food/205504249/">
+          <img src="../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
+        </a>
+      </figure>
+      <div class="package">
+        <a class="kicker h6" href="https://mcclatchy.github.io/saratoga/food/">FOOD</a>
+        <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
+        <div class="time">March 16, 2018 11:33 am</div>
+      </div>
+    </article>
 
     <article class="card d-tablet">
-  <figure>
-    <a href="https://mcclatchy.github.io/saratoga/food/205504249/">
-      <img src="../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
-    </a>
-  </figure>
-  <div class="package">
-    <a class="kicker h6" href="https://mcclatchy.github.io/saratoga/food/">FOOD</a>
-    <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
-    <div class="time">March 16, 2018 11:33 am</div>
-  </div>
-</article>
+      <figure>
+        <a href="https://mcclatchy.github.io/saratoga/food/205504249/">
+          <img src="../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
+        </a>
+      </figure>
+      <div class="package">
+        <a class="kicker h6" href="https://mcclatchy.github.io/saratoga/food/">FOOD</a>
+        <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
+        <div class="time">March 16, 2018 11:33 am</div>
+      </div>
+    </article>
 
   </section>
 </div>

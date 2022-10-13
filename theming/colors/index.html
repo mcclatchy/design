@@ -43,7 +43,6 @@
     <link rel="stylesheet" href="../../css/cards/timeline.css">
     <link rel="stylesheet" href="../../css/cards/transparency.css">
     <link rel="stylesheet" href="../../css/cards/big-news.css">
-    <link rel="stylesheet" href="../../css/cards/in-depth.css">
     <link rel="stylesheet" href="../../css/cards/swg-promo.css">
     <link rel="stylesheet" href="../../css/cards/read-next.css">
     <link rel="stylesheet" href="../../css/cards/section-nav.css">
@@ -274,35 +273,35 @@
   <a class="button disabled">Disabled</a>
 </div>
 <p>Those are setup using the class directly on the button like so:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080;font-weight:bold">a</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;button impact&#34;</span>&gt;Impact&lt;/<span style="color:#000080;font-weight:bold">a</span>&gt;
-&lt;<span style="color:#000080;font-weight:bold">a</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;button promo&#34;</span>&gt;Promo&lt;/<span style="color:#000080;font-weight:bold">a</span>&gt;
-&lt;<span style="color:#000080;font-weight:bold">a</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;button promo-light&#34;</span>&gt;Promo-light&lt;/<span style="color:#000080;font-weight:bold">a</span>&gt;
-&lt;<span style="color:#000080;font-weight:bold">a</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;button disabled&#34;</span>&gt;Disabled&lt;/<span style="color:#000080;font-weight:bold">a</span>&gt;
-</code></pre></div><p>This works fine and dandy by simply addind the appropriate color and background color directly like so:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.impact {
-  <span style="color:#000080;font-weight:bold">background-color</span>: <span style="color:#00f">#373737</span>;
-  <span style="color:#000080;font-weight:bold">color</span>: <span style="color:#000080;font-weight:bold">white</span>;
-}
-</code></pre></div><p>Things get trickier when we take the concept of impact and promo up a level to the container, which we do frequently. The following CTA works fine with the above rules:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#000080;font-weight:bold">a</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;button impact&#34;</span>&gt;Impact&lt;/<span style="color:#000080;font-weight:bold">a</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#000080;font-weight:bold">a</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;button promo&#34;</span>&gt;Promo&lt;/<span style="color:#000080;font-weight:bold">a</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#000080;font-weight:bold">a</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;button promo-light&#34;</span>&gt;Promo-light&lt;/<span style="color:#000080;font-weight:bold">a</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#000080;font-weight:bold">a</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;button disabled&#34;</span>&gt;Disabled&lt;/<span style="color:#000080;font-weight:bold">a</span>&gt;
+</span></span></code></pre></div><p>This works fine and dandy by simply addind the appropriate color and background color directly like so:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>.impact {
+</span></span><span style="display:flex;"><span>  <span style="color:#000080;font-weight:bold">background-color</span>: <span style="color:#00f">#373737</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#000080;font-weight:bold">color</span>: <span style="color:#000080;font-weight:bold">white</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Things get trickier when we take the concept of impact and promo up a level to the container, which we do frequently. The following CTA works fine with the above rules:</p>
 <div class="package paper promo">
   <h2>Title</h2>
   <p class="summary">Offer text goes here</p>
 </div>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;package paper promo&#34;</span>&gt;
-  &lt;<span style="color:#000080;font-weight:bold">h2</span>&gt;Title&lt;/<span style="color:#000080;font-weight:bold">h2</span>&gt;
-  &lt;<span style="color:#000080;font-weight:bold">p</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;summary&#34;</span>&gt;Offer text goes here&lt;/<span style="color:#000080;font-weight:bold">p</span>&gt;
-&lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;
-</code></pre></div><p>Great, but soon we need to add children who also need a different color treatment, like a button, or a link, or a byline.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;package paper promo&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#000080;font-weight:bold">h2</span>&gt;Title&lt;/<span style="color:#000080;font-weight:bold">h2</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#000080;font-weight:bold">p</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;summary&#34;</span>&gt;Offer text goes here&lt;/<span style="color:#000080;font-weight:bold">p</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;
+</span></span></code></pre></div><p>Great, but soon we need to add children who also need a different color treatment, like a button, or a link, or a byline.</p>
 <div class="package paper promo">
   <h2>Title</h2>
   <p class="summary">Offer text goes here</p>
   <a class="button">OFFER ACTION</a>
 </div>
 <p>Ok .. now the togo food container is starting to get a little funky. How are we going to handle this? Easy enough, we can add additional rules for buttons like so:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.promo .button {
-  <span style="color:#000080;font-weight:bold">color</span>: <span style="color:#000080;font-weight:bold">blue</span>;
-}
-</code></pre></div><p>Wait .. how many elements do we have with a default color .. like 12 .. OK .. impact, promo, light, disabled, 12 times 4 .. 48 rules &hellip;&hellip;. ok?</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>.promo .button {
+</span></span><span style="display:flex;"><span>  <span style="color:#000080;font-weight:bold">color</span>: <span style="color:#000080;font-weight:bold">blue</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Wait .. how many elements do we have with a default color .. like 12 .. OK .. impact, promo, light, disabled, 12 times 4 .. 48 rules &hellip;&hellip;. ok?</p>
 <div class="package paper promo">
   <h2>Title</h2>
   <p class="summary">Offer text goes here</p>
@@ -325,19 +324,19 @@
 <p>For many years developers have used pre-processors like Less and Sass to handle these messes. They do clean up code for the developer, but they don&rsquo;t help at all on payload size. In fact they often make it much much worse because the rule complexity is hidden from us. Custom properties are the new native way of handling funky logic like we have here. I don&rsquo;t have a total handle on best ways to set up larger projects, but this is what I&rsquo;ve discovered so far.</p>
 <p>Placing these properties on bigger boxes themselves provides a very limited advantage over the regular rule, if an advantage exists at all. If you place it on the most basic atom, however, it can be super helpful.</p>
 <p>Take our more-link sample from above. Default rules state that the color of a more-link should be #707070 like so:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.more-link {
-  <span style="color:#000080;font-weight:bold">color</span>: <span style="color:#00f">#707070</span>;
-}
-</code></pre></div><p>This rule is why you see the more-link show up as gray in the promo box above. If we change this just slightly, however, we can set up some options.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.more-link {
-  <span style="color:#000080;font-weight:bold">color</span>: var(--tc, <span style="color:#00f">#707070</span>);
-}
-</code></pre></div><p>This rules states that the more-link should use the <code>--tc</code> (text-color in my head) variable, and if that isn&rsquo;t set to use the standard #707070. This let&rsquo;s us set up rules for cards at the card level, without having to worry about what elements may or may not get thrown into it through the stakeholder review process. Take the promo CTA from before where the link was gray. Instead of thinking about the specific elements that are going to go into the card, using CSS properties we can think about the rules for the card itself.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>.more-link {
+</span></span><span style="display:flex;"><span>  <span style="color:#000080;font-weight:bold">color</span>: <span style="color:#00f">#707070</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>This rule is why you see the more-link show up as gray in the promo box above. If we change this just slightly, however, we can set up some options.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>.more-link {
+</span></span><span style="display:flex;"><span>  <span style="color:#000080;font-weight:bold">color</span>: var(--tc, <span style="color:#00f">#707070</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>This rules states that the more-link should use the <code>--tc</code> (text-color in my head) variable, and if that isn&rsquo;t set to use the standard #707070. This let&rsquo;s us set up rules for cards at the card level, without having to worry about what elements may or may not get thrown into it through the stakeholder review process. Take the promo CTA from before where the link was gray. Instead of thinking about the specific elements that are going to go into the card, using CSS properties we can think about the rules for the card itself.</p>
 <p>In promo cards, the text should be white, which we can now define like so:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.promo {
-  --tc: <span style="color:#000080;font-weight:bold">white</span>;
-}
-</code></pre></div><div class="package paper promo">
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>.promo {
+</span></span><span style="display:flex;"><span>  --tc: <span style="color:#000080;font-weight:bold">white</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><div class="package paper promo">
   <h2>Title</h2>
   <p class="summary">Offer text goes here</p>
   <a class="more-link">OFFER ACTION</a>
@@ -349,12 +348,12 @@
   <a class="more-link">Terms and conditions</a>
 </div>
 <p>Why yes .. yes you can :)</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;package paper promo&#34;</span> <span style="color:#f00">style</span>=<span style="color:#00f">&#34;padding: 30px;&#34;</span>&gt;
-  &lt;<span style="color:#000080;font-weight:bold">h3</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;sans bold&#34;</span> <span style="color:#f00">style</span>=<span style="color:#00f">&#34;line-height: 1.5em&#34;</span>&gt;Get full access to The Sacramento Bee across all your devices. Unlimited Digital Access: Only $0.99 for your first month.&lt;/<span style="color:#000080;font-weight:bold">h3</span>&gt;
-  &lt;<span style="color:#000080;font-weight:bold">a</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;button&#34;</span>&gt;OFFER ACTION&lt;/<span style="color:#000080;font-weight:bold">a</span>&gt;
-  &lt;<span style="color:#000080;font-weight:bold">a</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;more-link&#34;</span>&gt;Terms and conditions&lt;/<span style="color:#000080;font-weight:bold">a</span>&gt;
-&lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;
-</code></pre></div></article>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;package paper promo&#34;</span> <span style="color:#f00">style</span>=<span style="color:#00f">&#34;padding: 30px;&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#000080;font-weight:bold">h3</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;sans bold&#34;</span> <span style="color:#f00">style</span>=<span style="color:#00f">&#34;line-height: 1.5em&#34;</span>&gt;Get full access to The Sacramento Bee across all your devices. Unlimited Digital Access: Only $0.99 for your first month.&lt;/<span style="color:#000080;font-weight:bold">h3</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#000080;font-weight:bold">a</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;button&#34;</span>&gt;OFFER ACTION&lt;/<span style="color:#000080;font-weight:bold">a</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#000080;font-weight:bold">a</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;more-link&#34;</span>&gt;Terms and conditions&lt;/<span style="color:#000080;font-weight:bold">a</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;
+</span></span></code></pre></div></article>
 
     <section class="grid">
       <div class="card read-next col-span-2">

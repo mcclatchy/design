@@ -77,6 +77,12 @@
  * Custom grid arrangements
  */
 
+.digest-group,
+.partner-digest-group {
+  grid-column: 1/-1;
+}
+
+.digest-group .digest,
 .partner-digest-group .digest {
   grid-column: auto;
 }

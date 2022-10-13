@@ -43,7 +43,6 @@
     <link rel="stylesheet" href="../../../css/cards/timeline.css">
     <link rel="stylesheet" href="../../../css/cards/transparency.css">
     <link rel="stylesheet" href="../../../css/cards/big-news.css">
-    <link rel="stylesheet" href="../../../css/cards/in-depth.css">
     <link rel="stylesheet" href="../../../css/cards/swg-promo.css">
     <link rel="stylesheet" href="../../../css/cards/read-next.css">
     <link rel="stylesheet" href="../../../css/cards/section-nav.css">
@@ -102,14 +101,14 @@ Note: Our buttons are coded so that the entire area of the button is clickable a
   <eds-buttons></eds-buttons>
 </div>
 <h3 id="html">HTML</h3>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080;font-weight:bold">table</span> <span style="color:#f00">border</span>=<span style="color:#00f">&#34;0&#34;</span> <span style="color:#f00">cellpadding</span>=<span style="color:#00f">&#34;0&#34;</span> <span style="color:#f00">cellspacing</span>=<span style="color:#00f">&#34;0&#34;</span> <span style="color:#f00">role</span>=<span style="color:#00f">&#34;presentation&#34;</span>&gt;
-  &lt;<span style="color:#000080;font-weight:bold">tr</span>&gt;
-    &lt;<span style="color:#000080;font-weight:bold">td</span> <span style="color:#f00">align</span>=<span style="color:#00f">&#34;center&#34;</span> <span style="color:#f00">valign</span>=<span style="color:#00f">&#34;top&#34;</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;button button-default&#34;</span>&gt;
-      &lt;<span style="color:#000080;font-weight:bold">a</span> <span style="color:#f00">href</span>=<span style="color:#00f">&#34;#&#34;</span> <span style="color:#f00">target</span>=<span style="color:#00f">&#34;_blank&#34;</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;button-a button-default-a&#34;</span>&gt;Button&lt;/<span style="color:#000080;font-weight:bold">a</span>&gt;
-    &lt;/<span style="color:#000080;font-weight:bold">td</span>&gt;
-  &lt;/<span style="color:#000080;font-weight:bold">tr</span>&gt;
-&lt;/<span style="color:#000080;font-weight:bold">table</span>&gt;
-</code></pre></div><h3 id="rules">Rules</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#000080;font-weight:bold">table</span> <span style="color:#f00">border</span>=<span style="color:#00f">&#34;0&#34;</span> <span style="color:#f00">cellpadding</span>=<span style="color:#00f">&#34;0&#34;</span> <span style="color:#f00">cellspacing</span>=<span style="color:#00f">&#34;0&#34;</span> <span style="color:#f00">role</span>=<span style="color:#00f">&#34;presentation&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#000080;font-weight:bold">tr</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#000080;font-weight:bold">td</span> <span style="color:#f00">align</span>=<span style="color:#00f">&#34;center&#34;</span> <span style="color:#f00">valign</span>=<span style="color:#00f">&#34;top&#34;</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;button button-default&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>      &lt;<span style="color:#000080;font-weight:bold">a</span> <span style="color:#f00">href</span>=<span style="color:#00f">&#34;#&#34;</span> <span style="color:#f00">target</span>=<span style="color:#00f">&#34;_blank&#34;</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;button-a button-default-a&#34;</span>&gt;Button&lt;/<span style="color:#000080;font-weight:bold">a</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#000080;font-weight:bold">td</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#000080;font-weight:bold">tr</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#000080;font-weight:bold">table</span>&gt;
+</span></span></code></pre></div><h3 id="rules">Rules</h3>
 <p>Be sure to include the <code>.button</code> and <code>.button-a</code> classes as shown above.</p>
 <p>To change the button color, change the <code>.button-default</code> class to either <code>.button-accent</code> for blue or <code>.button-reverse</code> for white, then change <code>.button-default-a</code> to <code>.button-accent-a</code> (white text on blue button), <code>.button-reverse-a-default</code> (dark gray text on white button) or <code>.button-reverse-a-accent</code> (blue text on white button).</p>
 <p>The text color should match the background color of the card, with the exception of a light gray card, where the button text is white. Please note, the CSS for the button hover effect is in a separate style tag in the framework file with the <code>data-embed</code> attribute added to the style. This prevents the CSS inliner tool from removing this CSS.</p>

@@ -43,7 +43,6 @@
     <link rel="stylesheet" href="../../../css/cards/timeline.css">
     <link rel="stylesheet" href="../../../css/cards/transparency.css">
     <link rel="stylesheet" href="../../../css/cards/big-news.css">
-    <link rel="stylesheet" href="../../../css/cards/in-depth.css">
     <link rel="stylesheet" href="../../../css/cards/swg-promo.css">
     <link rel="stylesheet" href="../../../css/cards/read-next.css">
     <link rel="stylesheet" href="../../../css/cards/section-nav.css">
@@ -97,23 +96,23 @@
 <p>The best example of this is in our footers, where Spanish is shown to subscribers of <em>el Nuevo Herald</em> and English is shown for everywhere else.</p>
 <h3 id="syntax">Syntax</h3>
 <p>This code looks like JavaScript except that every portion of JS has to be contained within the <code>&lt;% %&gt;</code> tag that Adobe Campaign uses. This can be used on the simplest level just using an <code>if</code> statement followed by a single <code>else</code> statement, or can go as specific as needed with multiple <code>else if</code> statements in between. Usually <code>siteName</code> is the parameter we use to determine conditional formatting.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">&lt;% <span style="color:#000080;font-weight:bold">if</span> (siteName == <span style="color:#00f">&#39;site1&#39;</span>) { %&gt;
-	site1 stuff
-&lt;% } <span style="color:#000080;font-weight:bold">else</span> <span style="color:#000080;font-weight:bold">if</span> (siteName == <span style="color:#00f">&#39;site2&#39;</span>) { %&gt;
-	site2 stuff
-&lt;% } <span style="color:#000080;font-weight:bold">else</span> { %&gt;
-	all other sites stuff
-&lt;% } %&gt;
-</code></pre></div><div class="note">
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>&lt;% <span style="color:#000080;font-weight:bold">if</span> (siteName == <span style="color:#00f">&#39;site1&#39;</span>) { %&gt;
+</span></span><span style="display:flex;"><span>	site1 stuff
+</span></span><span style="display:flex;"><span>&lt;% } <span style="color:#000080;font-weight:bold">else</span> <span style="color:#000080;font-weight:bold">if</span> (siteName == <span style="color:#00f">&#39;site2&#39;</span>) { %&gt;
+</span></span><span style="display:flex;"><span>	site2 stuff
+</span></span><span style="display:flex;"><span>&lt;% } <span style="color:#000080;font-weight:bold">else</span> { %&gt;
+</span></span><span style="display:flex;"><span>	all other sites stuff
+</span></span><span style="display:flex;"><span>&lt;% } %&gt;
+</span></span></code></pre></div><div class="note">
 There are 2 operators we are most likely to use: <code>==</code> for "is equal to" and <code>!=</code> for "does not equal."
 </div>
 <p>Sometimes an OR statement might be needed. Set those up like this:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">&lt;% <span style="color:#000080;font-weight:bold">if</span> (recipient.siteName == <span style="color:#00f">&#39;site1&#39;</span> || recipient.siteName == <span style="color:#00f">&#39;site2&#39;</span>) { %&gt;
-	site1 and site2 stuff
-&lt;% } <span style="color:#000080;font-weight:bold">else</span> { %&gt;
-	all other sites stuff
-&lt;% } %&gt;
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>&lt;% <span style="color:#000080;font-weight:bold">if</span> (recipient.siteName == <span style="color:#00f">&#39;site1&#39;</span> || recipient.siteName == <span style="color:#00f">&#39;site2&#39;</span>) { %&gt;
+</span></span><span style="display:flex;"><span>	site1 and site2 stuff
+</span></span><span style="display:flex;"><span>&lt;% } <span style="color:#000080;font-weight:bold">else</span> { %&gt;
+</span></span><span style="display:flex;"><span>	all other sites stuff
+</span></span><span style="display:flex;"><span>&lt;% } %&gt;
+</span></span></code></pre></div>
   </div>
 
   
