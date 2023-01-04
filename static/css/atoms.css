@@ -528,3 +528,15 @@ figcaption, .caption {
 .paper * {
   --paper-shadow: none;
 }
+
+/*
+ * MMN disclaimer for header and footer
+ */
+
+.mmn-company {
+  font: bold 10px var(--sans);
+  text-align: center;
+  color: var(--tc);
+  margin: 0;
+  padding: 1em 0;
+}
