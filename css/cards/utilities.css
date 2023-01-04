@@ -197,7 +197,6 @@ form[id^=bx-form] {
   --tc: var(--black);
   --lc: #3C4D87;
   --lhc: #5169B8;
-  padding: 15px;
 }
 
 #newsletter-signUpWidget .button {

@@ -43,6 +43,7 @@
     <link rel="stylesheet" href="../../css/cards/timeline.css">
     <link rel="stylesheet" href="../../css/cards/transparency.css">
     <link rel="stylesheet" href="../../css/cards/big-news.css">
+    <link rel="stylesheet" href="../../css/cards/in-depth.css">
     <link rel="stylesheet" href="../../css/cards/swg-promo.css">
     <link rel="stylesheet" href="../../css/cards/read-next.css">
     <link rel="stylesheet" href="../../css/cards/section-nav.css">
@@ -63,6 +64,7 @@
     <script defer src="../../js/fake-ad.js"></script>
     
   <script defer src="../../js/navigation.js"></script>
+  <script type="module" src="../../js/custom-card.js"></script>
 
   </head>
 
@@ -139,6 +141,7 @@
       <div class="flag-logo">
         <img class="logo msb-hide" src="../../img/sacramento-bee-black.svg" width="3770" height="300" alt="The Sacramento Bee logo">
         <img class="logo msb-show" src="../../img/sacramento-bee-white.svg" width="3770" height="300" alt="The Sacramento Bee logo">
+        <p class="mmn-company">A McClatchy Media Network Company</p>
       </div>
 
       <div class="flag-left stack h-phone">
@@ -335,8 +338,105 @@
 
   <!-- Option banner group (now hidden by default) -->
   <div class="option-banners" hidden>
-    <script type="module" src="https://storage.googleapis.com/mc-high-impact/cards/featured-carousel/featured-carousel.js"></script>
-    <featured-carousel order="before" data-url="https://www.sacbee.com/webapi-public/v2/sections/93956/content" data-max="5"></featured-carousel>
+    <script type="module" src="https://storage.googleapis.com/mc-high-impact/prodx/premium-topper/premium-topper.js"></script>
+    <premium-topper class="topper" data-id="1at5xhMgQNOVYBpiSmJqstOiuB9Iwk6_vYu_Tbh6UnWY"></premium-topper>
+
+    <style>
+      .partner-content .digest {
+        grid-column: auto;
+      }
+
+      @media(min-width: 990px) {
+        .partner-content .zone {
+          grid-column: 1/-1;
+        }
+      }
+    </style>
+
+    <custom-card order="6">
+      <style>
+        .premium {
+          --paper-color: var(--premium-bc);
+          --tc: var(--premium-tc);
+          --hc: var(--premium-impact);
+          --bbc: white;
+          --bc: var(--black);
+          padding: var(--page-padding);
+          justify-content: center;
+        }
+
+        @media(min-width: 660px) {
+          .premium {
+            grid-column: span 2;
+          }
+        }
+
+        .premium > * {
+          max-width: 450px;
+        }
+      </style>
+
+      <div class="package paper premium">
+        <h3 class="h1">Check out what you're missing</h3>
+        <p>The plaguey ball comes from a puling reminder. The woolens could be said to resemble ageless decembers.</p>
+        <a href="#" class="button big">SUBSCRIBE</a>
+      </div>
+    </custom-card>
+
+    <custom-card order="11">
+      <style>
+        .special-project {
+          grid-column: 1/-1;
+          padding: var(--page-padding);
+          justify-content: center;
+          align-items: center;
+          min-height: 400px;
+          background-color: rgba(0,0,0,0.6);
+          position: relative;
+          overflow: hidden;
+          font-family: var(--sans);
+          text-align: center;
+        }
+
+        .special-project * {
+          position: relative;
+          max-width: var(--story-width);
+        }
+
+        .special-project img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          max-width: unset;
+          object-fit: cover;
+          filter: brightness(0.4);
+        }
+      </style>
+
+      <div class="card impact special-project">
+        <img src="https://media.mcclatchy.com/creatives/skylines/kentucky.jpg">
+        <h1>Special Project</h1>
+        <p>Their washer was, in this moment, an uncleansed find. Some rigid distributors are thought of simply as dictionaries. The literature would have us believe that a gated connection is not but a periodical.</p>
+      </div>
+    </custom-card>
+
+    <custom-card order="17">
+      <div class="paper promo package" style="align-content: center;">
+        <h5 class="h1">Get the latest headlines delivered directly to your inbox</h5>
+        <p class="summary">Sign up for Morning Rush and get all the news you need to start your day.</p>
+        <input type="email" placeholder="Enter your email address">
+        <button class="button">Submit</button>
+      </div>
+    </custom-card>
+    
+    <custom-card order="after">
+      <div class="panel" style="--paper-color: white;">
+        <h2>This is a test panel</h2>
+        <p>A sunburnt color's scallion comes with it the thought that the caring square is a risk. Some rushing railwaies are thought of simply as mosquitos. The tiptop ray reveals itself as a chanceful start to those who look. Recent controversy aside, the literature would have us believe that a cordate crib is not but a timbale.</p>
+      </div>
+    </custom-card>
   </div>
   <!-- End option banners group -->
 
@@ -359,7 +459,7 @@
   <div class="digest ">
     <div class="paper">
       <a href="#" class="label ">
-        <span class="h5">LATEST NEWS</span>
+        <span class="h5">OPINION</span>
       </a>
       <article class="package">
         <h2 class="h3"><a href="#">Kudlow joins White House that sorely needs cooler heads to prevail</a></h2>
@@ -382,36 +482,9 @@
         <time>March 16, 2018 4:08 pm</time>
       </article>
     </div>
-    <a href="#" class="more-link">MORE LATEST NEWS</a>
+    <a href="#" class="more-link">MORE OPINION</a>
   </div>
 
-  <article class="card ">
-    <figure>
-      <a href="https://mcclatchy.github.io/saratoga/food/205504249/">
-        <img src="../../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
-      </a>
-    </figure>
-    <div class="package">
-      <a class="kicker h6" href="https://mcclatchy.github.io/saratoga/food/">FOOD</a>
-      <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
-      <div class="time">March 16, 2018 11:33 am</div>
-    </div>
-  </article>
-
-  <article class="card ">
-    <figure>
-      <a href="https://mcclatchy.github.io/saratoga/food/205504249/">
-        <img src="../../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
-      </a>
-    </figure>
-    <div class="package">
-      <a class="kicker h6" href="https://mcclatchy.github.io/saratoga/food/">FOOD</a>
-      <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
-      <div class="time">March 16, 2018 11:33 am</div>
-    </div>
-  </article>
-
-  <fake-ad class="zone"></fake-ad>
   <article class="card ">
     <figure>
       <a href="https://mcclatchy.github.io/saratoga/food/205504249/">
@@ -511,26 +584,42 @@
     </div>
   </article>
 
-  <fake-ad class="zone"></fake-ad>
-  <div class="partner-digest-group grid">
-    <div class="partner-label">
-      <span>From our partners</span>
+  <article class="card ">
+    <figure>
+      <a href="https://mcclatchy.github.io/saratoga/food/205504249/">
+        <img src="../../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
+      </a>
+    </figure>
+    <div class="package">
+      <a class="kicker h6" href="https://mcclatchy.github.io/saratoga/food/">FOOD</a>
+      <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
+      <div class="time">March 16, 2018 11:33 am</div>
     </div>
+  </article>
+
+  <article class="card ">
+    <figure>
+      <a href="https://mcclatchy.github.io/saratoga/food/205504249/">
+        <img src="../../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
+      </a>
+    </figure>
+    <div class="package">
+      <a class="kicker h6" href="https://mcclatchy.github.io/saratoga/food/">FOOD</a>
+      <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
+      <div class="time">March 16, 2018 11:33 am</div>
+    </div>
+  </article>
+
+  <div class="partner-content grid three-columns">
+    <fake-ad class="zone two-rows" size="[[970,250],[300,600]]"></fake-ad>
     <div class="digest ">
       <div class="paper">
-        <a href="#" class="label sticky">
+        <a href="#" class="label ">
           <span class="h5">PARTNER CONTENT</span>
         </a>
-        <article class="card">
-          <figure>
-            <a href="#">
-              <img src="https://pics.mcclatchyinteractive.com/opinion/gi1163/picture205928719/ALTERNATES/LANDSCAPE_640/AP_18073734498485" srcset="https://pics.mcclatchyinteractive.com/opinion/gi1163/picture205928719/ALTERNATES/LANDSCAPE_1140/AP_18073734498485 1140w"> 
-            </a>
-          </figure>
-          <div class="package">
-            <h2 class="h3"><a href="#">Kudlow joins White House that sorely needs cooler heads to prevail</a></h2>
-            <time>March 19, 2018 5:34 pm</time>
-          </div>
+        <article class="package">
+          <h2 class="h3"><a href="#">Kudlow joins White House that sorely needs cooler heads to prevail</a></h2>
+          <time>March 19, 2018 5:34 pm</time>
         </article>
         <article class="package">
           <h2 class="h3"><a href="#">The Episcopal Church changed course for our LGBT members</a></h2>
@@ -554,19 +643,12 @@
 
     <div class="digest ">
       <div class="paper">
-        <a href="#" class="label sticky">
+        <a href="#" class="label ">
           <span class="h5">PARTNER CONTENT</span>
         </a>
-        <article class="card">
-          <figure>
-            <a href="#">
-              <img src="https://pics.mcclatchyinteractive.com/opinion/gi1163/picture205928719/ALTERNATES/LANDSCAPE_640/AP_18073734498485" srcset="https://pics.mcclatchyinteractive.com/opinion/gi1163/picture205928719/ALTERNATES/LANDSCAPE_1140/AP_18073734498485 1140w"> 
-            </a>
-          </figure>
-          <div class="package">
-            <h2 class="h3"><a href="#">Kudlow joins White House that sorely needs cooler heads to prevail</a></h2>
-            <time>March 19, 2018 5:34 pm</time>
-          </div>
+        <article class="package">
+          <h2 class="h3"><a href="#">Kudlow joins White House that sorely needs cooler heads to prevail</a></h2>
+          <time>March 19, 2018 5:34 pm</time>
         </article>
         <article class="package">
           <h2 class="h3"><a href="#">The Episcopal Church changed course for our LGBT members</a></h2>
@@ -590,19 +672,12 @@
 
     <div class="digest ">
       <div class="paper">
-        <a href="#" class="label sticky">
+        <a href="#" class="label ">
           <span class="h5">PARTNER CONTENT</span>
         </a>
-        <article class="card">
-          <figure>
-            <a href="#">
-              <img src="https://pics.mcclatchyinteractive.com/opinion/gi1163/picture205928719/ALTERNATES/LANDSCAPE_640/AP_18073734498485" srcset="https://pics.mcclatchyinteractive.com/opinion/gi1163/picture205928719/ALTERNATES/LANDSCAPE_1140/AP_18073734498485 1140w"> 
-            </a>
-          </figure>
-          <div class="package">
-            <h2 class="h3"><a href="#">Kudlow joins White House that sorely needs cooler heads to prevail</a></h2>
-            <time>March 19, 2018 5:34 pm</time>
-          </div>
+        <article class="package">
+          <h2 class="h3"><a href="#">Kudlow joins White House that sorely needs cooler heads to prevail</a></h2>
+          <time>March 19, 2018 5:34 pm</time>
         </article>
         <article class="package">
           <h2 class="h3"><a href="#">The Episcopal Church changed course for our LGBT members</a></h2>
@@ -665,11 +740,65 @@
     </div>
   </article>
 
-  <div class="digest-group grid">
+  <article class="card ">
+    <figure>
+      <a href="https://mcclatchy.github.io/saratoga/food/205504249/">
+        <img src="../../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
+      </a>
+    </figure>
+    <div class="package">
+      <a class="kicker h6" href="https://mcclatchy.github.io/saratoga/food/">FOOD</a>
+      <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
+      <div class="time">March 16, 2018 11:33 am</div>
+    </div>
+  </article>
+
+  <article class="card ">
+    <figure>
+      <a href="https://mcclatchy.github.io/saratoga/food/205504249/">
+        <img src="../../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
+      </a>
+    </figure>
+    <div class="package">
+      <a class="kicker h6" href="https://mcclatchy.github.io/saratoga/food/">FOOD</a>
+      <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
+      <div class="time">March 16, 2018 11:33 am</div>
+    </div>
+  </article>
+
+  <article class="card ">
+    <figure>
+      <a href="https://mcclatchy.github.io/saratoga/food/205504249/">
+        <img src="../../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
+      </a>
+    </figure>
+    <div class="package">
+      <a class="kicker h6" href="https://mcclatchy.github.io/saratoga/food/">FOOD</a>
+      <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
+      <div class="time">March 16, 2018 11:33 am</div>
+    </div>
+  </article>
+
+  <div class="card horizontal in-depth">
+    <figure>
+      <div class="label sticky"><h5>IN DEPTH</h5></div>
+      <a href="#">
+        <img src="https://www.kansas.com/latest-news/6aw7pv/picture225984215/alternates/LANDSCAPE_768/tax-forms.jpg">
+      </a>
+    </figure>
+    <div class="package impact">
+      <a class="kicker h6" href="#">Government &amp; Politics</a>
+      <h3 class="h1"><a href="#">After meeting Brownback’s circle, firm was on ‘right path’ to $61M no-bid contract</a></h3>
+      <summary>Thousands of emails reveal how CGI Technologies landed a $61 million contract to overhaul Kansas tax systems. New Gov. Laura Kelly has promised to crack down on no-bid contracts.</summary>
+    </div>
+  </div>
+
+  <div class="partner-content grid three-columns">
+    <fake-ad class="zone two-rows" size="[[970,250],[300,600]]"></fake-ad>
     <div class="digest ">
       <div class="paper">
         <a href="#" class="label sticky">
-          <span class="h5">BUSINESS</span>
+          <span class="h5">OPINION</span>
         </a>
         <article class="card">
           <figure>
@@ -699,13 +828,13 @@
           <time>March 16, 2018 4:08 pm</time>
         </article>
       </div>
-      <a href="#" class="more-link">MORE BUSINESS</a>
+      <a href="#" class="more-link">MORE OPINION</a>
     </div>
 
     <div class="digest ">
       <div class="paper">
         <a href="#" class="label sticky">
-          <span class="h5">SPORTS</span>
+          <span class="h5">OPINION</span>
         </a>
         <article class="card">
           <figure>
@@ -735,7 +864,7 @@
           <time>March 16, 2018 4:08 pm</time>
         </article>
       </div>
-      <a href="#" class="more-link">MORE SPORTS</a>
+      <a href="#" class="more-link">MORE OPINION</a>
     </div>
 
     <div class="digest ">
@@ -775,55 +904,6 @@
     </div>
 
   </div>
-  <article class="card ">
-    <figure>
-      <a href="https://mcclatchy.github.io/saratoga/food/205504249/">
-        <img src="../../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
-      </a>
-    </figure>
-    <div class="package">
-      <a class="kicker h6" href="https://mcclatchy.github.io/saratoga/food/">FOOD</a>
-      <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
-      <div class="time">March 16, 2018 11:33 am</div>
-    </div>
-  </article>
-
-  <div class="zone">
-    <div id="newsletter-signUpWidget" class="inline-cta package">
-      <h5 class="h1">Today's top headlines</h5>
-      <p class="summary">Sign up for the Afternoon Update and get the day’s biggest stories in your inbox.</p>
-      <input placeholder="Enter email address">
-      <button class="button">SIGN UP</button>
-      <p class="summary">This site is protected by reCAPTCHA and the Google <a href="#">Privacy Policy</a> and <a href="#">Terms of Service</a> apply.</p>
-    </div>
-  </div>
-  <article class="card ">
-    <figure>
-      <a href="https://mcclatchy.github.io/saratoga/food/205504249/">
-        <img src="../../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
-      </a>
-    </figure>
-    <div class="package">
-      <a class="kicker h6" href="https://mcclatchy.github.io/saratoga/food/">FOOD</a>
-      <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
-      <div class="time">March 16, 2018 11:33 am</div>
-    </div>
-  </article>
-
-  <article class="card ">
-    <figure>
-      <a href="https://mcclatchy.github.io/saratoga/food/205504249/">
-        <img src="../../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
-      </a>
-    </figure>
-    <div class="package">
-      <a class="kicker h6" href="https://mcclatchy.github.io/saratoga/food/">FOOD</a>
-      <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
-      <div class="time">March 16, 2018 11:33 am</div>
-    </div>
-  </article>
-
-  <fake-ad class="zone"></fake-ad>
   <!-- End main card loop -->
 
 </section>
@@ -890,6 +970,7 @@
       </div>
     </div>
   </section>
+  <p class="mmn-company">A McClatchy Media Network Company</p>
 </footer>
 <section class="bottom-nav h5">
   <a href="#">COPYRIGHT</a>
