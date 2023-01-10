@@ -203,3 +203,12 @@ form[id^=bx-form] {
   --bbc: var(--impact);
   --bc: white;
 }
+
+/*
+ * WPS breaks from recommended DOM
+ */
+
+[class*=photo=inline] figcaption,
+.inline-video figcaption {
+  padding-top: 10px;
+}
