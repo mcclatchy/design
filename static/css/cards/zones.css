@@ -7,10 +7,6 @@
   clear: both;
 }
 
-.zone:empty {
-  display: none;
-}
-
 /**
  * Zone treatment inside grids
  */
