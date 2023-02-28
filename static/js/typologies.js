@@ -10,13 +10,11 @@ var Typologies = {
     },
     { 
       "zone": "3",
-      "class": "grid combo",
-      "units": ["newsletter", "ad"]
+      "units": ["ad"]
     },
     {
       "zone": "4",
-      "class": "grid combo",
-      "units": ["subscription", "ad"]
+      "units": ["ad"]
     },
     {
       "zone": "5",

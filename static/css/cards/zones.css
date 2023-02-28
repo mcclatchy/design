@@ -21,8 +21,12 @@
  */
 
 .story-body > .zone {
-  padding: 0;
-  margin: 40px auto;
+  display: flex;
+  justify-content: center;
+  background-color: var(--ad-background);
+  max-width: unset;
+  margin: 0;
+  padding: calc(var(--page-padding)) 0; 
   box-sizing: border-box;
 }
 
