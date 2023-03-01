@@ -5,6 +5,8 @@
 .zone {
   display: grid;
   clear: both;
+  background-color: var(--ad-background);
+  padding: var(--page-padding) 0; 
 }
 
 /**
@@ -12,8 +14,7 @@
  */
 
 .grid .zone {
-  grid-column-end: -1; 
-  background-color: var(--ad-background);
+  grid-column-end: -1;
 }
 
 /*
@@ -23,16 +24,18 @@
 .story-body > .zone {
   display: flex;
   justify-content: center;
-  background-color: var(--ad-background);
   max-width: unset;
   margin: 0;
-  padding: calc(var(--page-padding)) 0; 
   box-sizing: border-box;
 }
 
 .zone.combo {
   grid-template-columns: repeat(auto-fit, minmax(300px, auto));
   justify-items: center;
+}
+
+.zone.clear {
+  background-color: unset;
 }
 
 /**
