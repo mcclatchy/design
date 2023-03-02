@@ -111,22 +111,12 @@ footer {
 }
 
 /**
- * Custom spacing for this zone vs live site
- * Not included in SDS build
- */
-
-/* #zone-el-2 { */
-/*   padding: 15px 0; */
-/* } */
-
-/**
  * Story deck styles
  */
 
 fake-ad {
   display: flex;
-  background-color: var(--ad-background);
-  /* padding: 15px; */
+  background-color: var(--zone-background);
 }
 
 #zone-el-2 fake-ad {
