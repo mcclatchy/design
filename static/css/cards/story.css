@@ -132,7 +132,7 @@
 .story-body .mugshot .img-container {
   display: grid;
   grid-template-columns: 125px 1fr;
-  grid-gap: 15px;
+  grid-gap: var(--half-gap);
 }
 
 .story-body .mugshot figcaption {
@@ -147,7 +147,7 @@
 .story-body > .immersive {
   max-width: 100%;
   padding-top: 0;
-  margin-top: 0
+  margin-top: 0;
 }
 
 /**

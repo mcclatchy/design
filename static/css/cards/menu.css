@@ -77,18 +77,12 @@
 .main-nav .expander.open + div a,
 .main-nav .option-label {
   background-color: #222;
-  border-color: #fff;
+  border-color: white;
 }
 
 .main-nav hr {
   border: .5px solid white;
   margin: 30px 0;
-}
-
-.main-nav .flex {
-  display: flex;
-  align-items: center;
-  gap: 10px;
 }
 
 .main-nav .search {
@@ -110,6 +104,10 @@
   display: none;
 }
 
+.main-nav .search form svg {
+  height: 12px;
+}
+
 .main-nav .search input {
   background-color: transparent;
   border: none;
@@ -128,11 +126,6 @@
   width: auto;
 }
 
-.main-nav .search form svg {
-  height: 12px;
-}
-
 .main-nav .search button:hover {
   background-color: unset;
 }
-

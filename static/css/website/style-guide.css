@@ -67,29 +67,6 @@ pre {
  * Style guide main rules.
  */
 
-.example {
-  max-width: 1140px;
-  padding: 15px;
-  background-color: #f4f4f4;
-  --lc: #222;
-}
-
-.example:last-child {
-  margin-bottom: 0;
-}
-
-.example.grid {
-  justify-content: center;
-}
-
-.example.shadow .paper,
-.example.shadow > .card,
-.paper.shadow {
-  box-shadow:
-    0 1px 2px 0 rgba(0, 0, 0, .2),
-    0 1px 5px 0 rgba(0, 0, 0, .13);
-}
-
 .updated {
   display: block;
   font-size: small;

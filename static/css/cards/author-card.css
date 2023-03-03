@@ -39,7 +39,6 @@
 
 .author-card > .flex {
   display: grid;
-  gap: var(--spread);
   grid-area: info;
   justify-items: start;
 }

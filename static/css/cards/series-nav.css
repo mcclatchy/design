@@ -2,10 +2,7 @@
  * Series nav
  */
 
-.series-nav {
-  padding: 0;
-}
-
+.series-nav,
 .series-nav .package {
   padding: 0;
 }
@@ -26,7 +23,9 @@
   width: 80px;
 }
 
-/** Unnecessary in 1.12 */
+/** Unnecessary in 1.12
+Can we omit?
+*/
 .series-nav .article img {
   padding: 0;
 }
