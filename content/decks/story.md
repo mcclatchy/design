@@ -2,8 +2,7 @@
 title: story
 description: A sample story page.
 menu: decks
-layout: story
-zones: true
+layout: article
 aliases:
   - /saratoga/sample/story/
 ---
@@ -20,6 +19,8 @@ They were lost without the [teasing Monday that composed](#) their burn. The isr
 
 Oozy cereals show us how coaches can be clippers. Few can name a pukka noise that isn't a tensing buzzard. It's an undeniable fact, really; some askew biplanes are thought of simply as lynxes. The moustache of an aries becomes a tearing caution.
 
+{{< zone size="[728,400]" >}}
+
 One cannot separate skins from fiercer spandexes. A worthy biology's ethernet comes with it the thought that the passant ocelot is a railway. An eyeliner is a manky forgery. A stick is an away rake.
 
 {{< figure >}}
@@ -32,6 +33,8 @@ Some posit the svelter tie to be less than stockinged. The princely dragon revea
 
 In recent years, the beating geography reveals itself as an unslung fountain to those who look. A balding brandy's lentil comes with it the thought that the undrained appeal is a lizard. They were lost without the bookish offer that composed their thing. A rutabaga is a meteorology from the right perspective.
 
+{{< zone >}}
+
 In ancient times the first rhinal cappelletti is, in its own way, a polish. The hatted leek reveals itself as a southward apple to those who look. The junes could be said to resemble trackless stems. An apartment sees an interest as a herbaged vein.
 
 Nowhere is it disputed that fabled licenses show us how whorls can be boats. A temple is a typhoon's missile. Those elbows are nothing more than boats. A churchy cause is a snake of the mind.
@@ -40,6 +43,8 @@ Those canvases are nothing more than jasons. Far from the truth, their archer wa
 
 Though we assume the latter, authors often misinterpret the competition as an unbraced hovercraft, when in actuality it feels more like an attuned richard. The first crisscross airship is, in its own way, a math. Some fretty citizenships are thought of simply as opinions. Extending this logic, an argument is the condor of a wren.
 
+{{< zone size="[970,250]" >}}
+
 Authors often misinterpret the leopard as a dentoid weight, when in actuality it feels more like a homely shrimp. Before bathrooms, pines were only fingers. In recent years, some posit the staple shallot to be less than abrupt. Some posit the foresaid passenger to be less than undrawn.
 
 One cannot separate butchers from azure dentists. A dreadful jeep without permissions is truly a swiss of breathy songs. This is not to discredit the idea that a cinema sees a cotton as a churchless chick. A rugose girl's trial comes with it the thought that the ringent hail is a frog.
@@ -47,6 +52,8 @@ One cannot separate butchers from azure dentists. A dreadful jeep without permis
 The security is an acrylic. The file of a dad becomes a sonant sidecar. The authors could be said to resemble deltoid sailboats. Scanners are peevish basketballs.
 
 Owners are wordy hardboards. Some posit the dreamlike weeder to be less than licensed. This is not to discredit the idea that an overcoat sees a brace as a makeless musician. Porky statistics show us how almanacs can be kitties.
+
+{{< zone >}}
 
 If this was somewhat unclear, packets are averse lauras. If this was somewhat unclear, those harbors are nothing more than radios. Few can name a fairish attack that isn't a sensate bathtub. A selfish roast without cinemas is truly a craftsman of feisty yews.
 

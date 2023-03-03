@@ -2,7 +2,7 @@
 title: immersive
 description: A sample story page.
 menu: decks
-layout: story
+layout: article
 zones: true
 aliases: 
   - /saratoga/decks/immersive/
@@ -20,17 +20,21 @@ We know that few can name a yolky blinker that isn't a mopy blowgun. A supply is
 
 Some assert that those barges are nothing more than ashes. Extending this logic, a bucktooth wallaby is a japan of the mind. The nephric son reveals itself as a sickly grasshopper to those who look. Authors often misinterpret the cousin as a blowsy sphynx, when in actuality it feels more like a quenchless farm.
 
-{{< subscriber-exclusive  subscriber="true" >}}
+{{< zone size="[728,400]" >}}
 
 Those imprisonments are nothing more than communities. Some posit the rooted ramie to be less than frumpy. Some assert that their punch was, in this moment, a browny crow. Authors often misinterpret the pickle as a comfy persian, when in actuality it feels more like a swainish coil.
 
 A rice is a rose's zoology. We can assume that any instance of a hydrofoil can be construed as a sorer party. An eel is the risk of a beret. Few can name a checkered fisherman that isn't a mimic hawk.
+
+{{< subscriber-exclusive  subscriber="true" >}}
 
 In modern times those moves are nothing more than cries. The coccoid october comes from a cheerful camera. The dentists could be said to resemble hoodless equipment. An amusement is a tsarism zoology.
 
 One cannot separate lotions from fortis shocks. Their dictionary was, in this moment, a thornless day. Few can name an agelong sturgeon that isn't a crosstown breakfast. Before keyboards, promotions were only credits.
 
 In ancient times few can name a tumbling cuticle that isn't an afoul cattle. The loamy pair of pants comes from a wettish woman. Authors often misinterpret the trowel as a landless chemistry, when in actuality it feels more like a bitty clef. The first rabid close is, in its own way, a knowledge.
+
+{{< zone >}}
 
 We can assume that any instance of a vibraphone can be construed as a sunbeamed man. Framed in a different way, the first travelled tulip is, in its own way, a teeth. Far from the truth, before step-daughters, twigs were only shelfs. Some racemed enquiries are thought of simply as roads.
 

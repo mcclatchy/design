@@ -2,8 +2,7 @@
 title: opinion story
 description: A sample opinion story page.
 menu: decks
-layout: story
-zones: true
+layout: article
 aliases: 
   - /saratoga/decks/opinion-story/
 ---
@@ -26,6 +25,8 @@ The dun bedroom comes from a madding bucket. In recent years, the first chalky s
 
 The zeitgeist contends that the literature would have us believe that a maddest acrylic is not but a giant. Osmic icicles show us how litters can be graies. The hat is a bakery. Extending this logic, those volcanos are nothing more than wolfs.
 
+{{< zone >}}
+
 Extending this logic, an angle of the van is assumed to be a fairish appeal. The tideless chain reveals itself as a chemic hat to those who look. A hygienic can hardly be considered a fleeting heat without also being a pint. The tenor of a porch becomes a trophied partner.
 
 As far as we can estimate, a degree is an intoned withdrawal. A hamster is a cream's lyre. Those metals are nothing more than shoemakers. Few can name a handmade tv that isn't a pyknic software.
@@ -33,6 +34,8 @@ As far as we can estimate, a degree is an intoned withdrawal. A hamster is a cre
 What we don't know for sure is whether or not few can name a sweeping goose that isn't a disjunct firewall. We can assume that any instance of a booklet can be construed as a seely turnip. Unfortunately, that is wrong; on the contrary, the tortoise is a viola. Their ounce was, in this moment, an unslain softdrink.
 
 In ancient times those hamsters are nothing more than knights. Their christopher was, in this moment, a trillionth door. If this was somewhat unclear, a knightly home's uganda comes with it the thought that the farrow jaw is a tom-tom. Far from the truth, we can assume that any instance of a colony can be construed as a fifteenth digger.
+
+{{< zone >}}
 
 A beach of the furniture is assumed to be a moody equipment. The reproved temperature comes from a drowsy toast. Some assert that they were lost without the fated fear that composed their disadvantage. A brick is an alate explanation.
 
@@ -50,6 +53,8 @@ Some mucking step-sons are thought of simply as cuts. Authors often misinterpret
 A delivery sees a comparison as a steamy celsius. An onion can hardly be considered a guttate sort without also being a forgery. An occult van is a roast of the mind. The gradely dibble reveals itself as an acock gladiolus to those who look.
 
 Some assert that a wambly cellar without hours is truly a shoulder of weathered ferryboats. Some posit the ferny semicolon to be less than bloodied. Authors often misinterpret the open as a removed polish, when in actuality it feels more like a bleary parenthesis. An agreement is a manicure from the right perspective.
+
+{{< zone >}}
 
 An israel is an erose environment. We can assume that any instance of a mistake can be construed as an agone fireplace. The reeky segment comes from a fledgling jury. We know that few can name a shirtless baseball that isn't a photic battery.
 

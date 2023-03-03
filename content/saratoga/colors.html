@@ -9,17 +9,17 @@ menu: molecule
 <p>Starting with just impact, a normal approach wasn't too bad. It's ok to declare, as an example, in an impact molecule or card that the label should be black text on a white background. That's not a lot of code. It got a little more repetitive when we added the promo concept and then it got really ugly when we started putting these into a story body with its own rules.</p>
 <p>What we have done here instead, using CSS custom properties, is set some defaults for our current cards to eliminate boilerplate code while also giving us a clean place to add new themes without increasing the payload by all that much. Here is the new set of standards for impact card and promo cards.</p>
 
-<section class="example grid">
+<div class="zone">
   {{< digest class="impact">}}
   {{< digest class="promo" >}}
-</section>
+</div>
 
 <p>In the new setup, atoms like links, buttons and labels are listening for these properties. Here is a sampling of the CSS for the impact and promo molecules.</p>
 
 {{< highlight css >}}
 .impact,
 .promo {
-  background-color: #373737;
+  --paper-color: #373737;
   --tc: white;
   --lc: white;
   --lhc: white;
@@ -28,7 +28,7 @@ menu: molecule
 }
 
 .promo {
-  background-color: #31409F;
+  --paper-color: #31409F;
   --bc: #31409F;
 }
 {{< /highlight >}}
@@ -42,7 +42,7 @@ menu: molecule
 }
 
 .purple {
-  background-color: #91096F;
+  --paper-color: #91096F;
   --tc: white;
   --lc: white;
   --lhc: #FFE31A;
@@ -55,7 +55,7 @@ menu: molecule
 }
 
 .charcoal {
-  background-color: #525D54;
+  --paper-color: #525D54;
   --tc: white;
   --lc: #FFDD69;
   --lhc: white;
@@ -69,10 +69,10 @@ menu: molecule
 }
 </style>
 
-<section class="grid example">
+<div class="zone">
   {{< digest class="purple" >}}
   {{< digest class="charcoal" >}}
-</section>
+</div>
 
 <p>Here is the CSS to make those work.</p>
 
@@ -98,19 +98,19 @@ menu: molecule
 
 <p>The same CSS also works for cards, along with any other element that uses our system.</p>
 
-<section class="grid example">
+<div class="zone">
   {{< card >}}
   {{< card class="impact" >}}
   {{< card class="promo" >}}
   {{< card class="purple" >}}
   {{< card class="charcoal" >}}
   {{< card class="slate" >}}
-</section>
+</div>
 
-<section class="grid example">
+<div class="zone">
   {{< read-next >}}
   {{< read-next class="purple" >}}
-</section>
+</div>
 
 <p>Lastly, though we dont' use this in our designs, it was important in the structure that elements inside of a story body could be tailored too. The same rules could be applied to the article header, as an example.</p>
 

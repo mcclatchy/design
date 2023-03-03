@@ -28,17 +28,3 @@ Buttons are designed to be placed in a center-aligned row using browser defaults
 | Size | 1rem (16px) |
 | Border | 1 pixel solid #4a4a4a with a 2-pixel radius |
 | Case | Uppercase |
-
----
-
-## SELECT
-
-Custom selects use a combination of the [expander](../expander) molecule and link-based buttons instead of the native select element for forms. Because they are based on the expander, a toggle of the `open` class will show and remove the option list. Lastly, adding the class `selected` to any of options will make it bold. Different use cases will most likely require different javascript, but we have a [starter script](/js/select.js) for the purposes of this demo.
-
-#### EXAMPLE
-
-<div class="grid" style="grid-template-columns: 300px 1fr;">
-{{< select >}}
-</div>
-
-<script async src="/js/select.js"></script>

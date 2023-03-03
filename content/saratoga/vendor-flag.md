@@ -11,16 +11,16 @@ This card will never be used with the rest of the design system. In order to iso
 <link rel="stylesheet" href="/css/cards/vendor-cards.css">
 
 #### Market logo only example
-<div class="example">
+<div class="zone">
 {{< vendor-flag >}}
 </div>
 
 #### Text example
-<div class="example">
+<div class="zone">
 {{< vendor-flag type="name" >}}
 </div>
 
 #### Logo example
-<div class="example">
+<div class="zone">
 {{< vendor-flag type="logo" >}}
 </div>

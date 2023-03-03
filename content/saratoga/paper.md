@@ -10,7 +10,7 @@ In our digests, the design dictates that there be 15px of space between the labe
 
 #### Example
 
-<div class="example grid">
+<div class="zone">
 {{< digest label="sticky" >}}
 {{< digest >}}
 </div>

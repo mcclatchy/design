@@ -5,6 +5,7 @@
 .timeline-event {
 	border-left: 1px solid var(--tc, #707070);
 	max-width: 500px;
+  position: relative;
   --hf: var(--sans);
   --hw: 600;
   --ht: uppercase;

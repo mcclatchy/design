@@ -1,18 +1,9 @@
 {{ define "head" }}
   <script defer src="/js/navigation.js"></script>
-  <script src="/js/modal.js"></script>
-
-  {{ if isset .Params "zones" }}
-  <script defer src="/js/zones.js"></script>
-  <script defer src="/js/typologies.js"></script>
-  <script defer src="/js/dynamics.js"></script>
-  <script defer src="/js/zone-toggle.js"></script>
-{{ end }}{{ end }}
+{{ end }}
 
 {{ define "content" -}}
-  {{ if isset .Params "zones" }}
-  <div id="zone-el-2" class="zone" data-zone="1"></div>
-  {{ end }}
+  <fake-ad id="zone-el-2" size="[970,250]" class="zone"></fake-ad>
 
   {{ partial "masthead" . }}
 
@@ -77,8 +68,4 @@
   </div>
 
   {{ partial "footer" . }}
-
-  {{- if .Params.zones }}
-    {{ partial "zones" . }}
-  {{- end }}
 {{- end }}

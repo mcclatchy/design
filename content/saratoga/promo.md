@@ -7,6 +7,6 @@ menu: cards
 The promo card is a revenue component that, like the In Depth card, extends the horizontal card molecule but adjusts the flex-grow weights.
 
 #### EXAMPLE
-<div class="example">
+<div class="zone">
 {{< promo >}}
 </div>

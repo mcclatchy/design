@@ -11,14 +11,14 @@
     {{- if in $class "horizontal" }}
     <div class="label sticky"><h5 class="impact">READ NEXT</h5></div>
     {{- end }}
-    <a href="https://mcclatchy.github.io/saratoga/food/205504249/">
+    <a href="#">
       <img src="{{ $img }}" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
     </a>
   </figure>
   {{- end }}
   <div class="package">
     {{- if not (in $hide "kicker") }}
-    <a class="kicker {{ $kickerSize }}" href="https://mcclatchy.github.io/saratoga/food/">FOOD</a>
+    <a class="kicker {{ $kickerSize }}" href="#">FOOD</a>
     {{- end }}
     <h2 class="{{ $headlineSize }}"><a href="#">{{ $headline }}</a></h2>
     {{- if or (in $class "lead-item") (in $class "in-depth") }}

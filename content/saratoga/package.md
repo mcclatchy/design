@@ -8,7 +8,7 @@ The package molecule is the backbone of the design system. Spacing for  most mol
 
 #### Example
 
-<div class="example grid" style="--columns: 400px;">
+<div class="zone" style="--columns: 400px;">
 {{< card >}}
 </div>
 
@@ -26,17 +26,17 @@ If the molecule is used inside a paper molecule, these are the only rules that w
 
 These differences are important. For example, rules for the digest state that there should be 30px of space between each article group, and 15px of space between the label and the headline. This is easily done by stacking `package` molecules.
 
-###### Example
+#### Example
 
-<div class="example grid" style="--columns: 400px;">
+<div class="zone" style="--columns: 400px;">
 {{< digest >}}
 </div>
 
 In a grid of cards, on the other hand, timestamps should line up. We can do this with the `package` molecule as well, needing no additional CSS.  This approach also provides the desired behavior on mobile. When there are no adjacent cards, the space collapses as desired.
 
-###### Example
+#### Example
 
-<div class="example grid">
+<div class="zone">
 {{< card >}}
 {{< card >}}
 </div>

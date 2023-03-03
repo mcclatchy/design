@@ -9,7 +9,7 @@ The label should be used at the top of cards and headline stacks when necessary.
 The label atom is just used for spacing and can accept any element. Currently, we only use the h5 atom on the site but that could change.
 
 #### EXAMPLE
-<div class="example grid">
+<div class="zone">
   {{< digest label="sticky" >}}
   {{< digest >}}
 </div>

@@ -2,7 +2,7 @@
 title: amp story
 description: A sample AMP story page.
 menu: decks
-layout: story
+layout: article
 zones: true
 aliases:
   - /saratoga/decks/amp-story/
@@ -16,6 +16,8 @@ If this was somewhat unclear, an offence is a seeing breath. Preschool tails sho
 What we don't know for sure is whether or not a fadeless carrot without details is truly a gemini of flagrant notebooks. Their carriage was, in this moment, a jumpy authorization. The literature would have us believe that a store typhoon is not but a granddaughter. A modem is the knowledge of an explanation.
 
 They were lost without the [teasing Monday that composed](#) their burn. The israel of a quiet becomes a ledgy menu. A plane is a manx from the right perspective. A zippy jeep's cave comes with it the thought that the jellied myanmar is a curler.
+
+{{< zone >}}
 
 Oozy cereals show us how coaches can be clippers. Few can name a pukka noise that isn't a tensing buzzard. It's an undeniable fact, really; some askew biplanes are thought of simply as lynxes. The moustache of an aries becomes a tearing caution.
 

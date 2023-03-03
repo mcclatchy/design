@@ -23,7 +23,7 @@ This will force an element to span two columns.
 These will force an element to span three columns.
 
 #### Example
-<div class="example grid">
+<div class="zone">
   {{< card >}}
   {{< card >}}
   {{< card >}}

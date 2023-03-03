@@ -12,6 +12,6 @@ This card will never be used with the rest of the design system. In order to iso
 
 #### Example
 
-<div class="example">
+<div class="zone">
 {{< vendor-footer >}}
 </div>

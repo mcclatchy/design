@@ -17,7 +17,7 @@ Property | Value
 --- | ---
 Typeface | Noto Serif
 Weight | 400
-Size | large (18px)
+Size | 20px
 Line Height | 1.5em
 Letter spacing | browser default
 Spacing | browser default, 1em margin above and below

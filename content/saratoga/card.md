@@ -7,7 +7,7 @@ menu: "molecule"
 The card molecule extends the paper base molecule and adds Flexbox. By doing so the size of the card is stretched to match adjacent cards in each row. Card molecules should be the direct children of any Flexbox or Grid container.
 
 #### Example
-<div class="example grid shadow">
+<div class="zone">
   {{< card >}}
   {{< card >}}
 </div>
@@ -17,6 +17,6 @@ The card molecule extends the paper base molecule and adds Flexbox. By doing so 
 The card can also be made horizontal by adding a class with the same name.
 
 #### Example
-<div class="example grid" style="grid-template-rows: 300px;">
+<div class="zone" style="grid-template-rows: 400px;">
   {{< card class="horizontal" >}}
 </div>
