@@ -1,4 +1,4 @@
-.PHONY: dist hi
+.PHONY: dist
 
 style ?= expanded
 

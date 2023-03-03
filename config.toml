@@ -18,20 +18,12 @@ pygmentsStyle = "borland"
 [[menu.main]]
   name = "style guide"
   url = "/saratoga/"
-  weight = 1
 [[menu.main]]
   name = "markets"
   url = "/markets/"
-  weight = 2
 [[menu.main]]
   name = "email"
   url = "/email/"
-  weight = 3
 [[menu.main]]
   name = "theming"
   url = "/theming/"
-  weight = 4
-
-
-# Server settings
-port = 3000
