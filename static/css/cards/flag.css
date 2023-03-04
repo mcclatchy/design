@@ -46,7 +46,7 @@ html.msb .masthead {
     "edition edition edition"
     "logo logo logo"
     "nav nav nav";
-    
+
   --tc: var(--premium-tc);
 }
 
@@ -113,14 +113,14 @@ html.msb .masthead {
 }
 
 .sds-flag .search input {
+  position: relative;
+  bottom: 5px;
   margin-top: 0;
-  background-color: transparent;
   border: none;
   border-bottom: 1px solid transparent;
   padding: 5px 0px;
+  background-color: transparent;
   color: var(--tc);
-  position: relative;
-  bottom: 5px;
 }
 
 .sds-flag .search input:focus,
@@ -217,17 +217,15 @@ html.msb .masthead {
  */
 
 .sds-flag .flag-account {
-  position:relative;
+  position: relative;
 }
 
 .sds-flag .popout {
   position: absolute;
+  z-index: 99;
   top: 100%;
   right: 0px;
   min-width: 210px;
-  font-size: 0.875rem;
-  background-color: white;
-  z-index: 99;
   box-shadow:
     0 3px 6px rgba(0,0,0,0.16),
     0 3px 6px rgba(0,0,0,0.23);
@@ -235,16 +233,18 @@ html.msb .masthead {
   --lc: var(--black);
   --lhc: var(--black);
   --lhd: none;
+  background-color: white;
+  font-size: 0.875rem;
 }
 
 .sds-flag .popout > * {
   display: grid;
   grid-template-columns: 20px 1fr;
   grid-gap: 30px;
-  padding: 15px;
+  align-items: center;
   box-sizing: border-box;
   min-height: 60px;
-  align-items: center;
+  padding: 15px;
 }
 
 .sds-flag .popout a:hover {
