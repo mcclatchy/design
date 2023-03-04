@@ -9,7 +9,7 @@
 }
 
 .transparency > * {
-  margin: 15px auto;
+  	margin: 15px auto;
 	max-width: var(--story-width);
 }
 

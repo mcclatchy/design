@@ -162,8 +162,8 @@ form[id^=bx-form] {
 }
 
 .mi-sticky-player figcaption {
-  font-size: 14px;
   line-height: 15px;
+  font-size: 14px;
 }
 
 .videoIngest .card.read-next {
@@ -172,18 +172,18 @@ form[id^=bx-form] {
 
 .partner-label {
   position: relative;
-  font: 700 1.8rem var(--serif);
   grid-column: 1/-1;
+  font: 700 1.8rem var(--serif);
 }
 
 .partner-label::before {
   content: "";
-  display: block;
-  height: 4px;
-  background-color: #ddd;
   position: absolute;
+  display: block;
   top: 50%;
   width: 100%;
+  height: 4px;
+  background-color: #ddd;
 }
 
 .partner-label span {

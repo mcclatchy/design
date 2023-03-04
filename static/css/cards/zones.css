@@ -3,10 +3,10 @@
  */
 
 .zone {
-  display: block;
   clear: both;
-  background-color: var(--zone-background);
+  display: block;
   padding: var(--page-padding) 0; 
+  background-color: var(--zone-background);
 }
 
 /*
@@ -42,8 +42,8 @@
 
 #zone-el-2 {
   position: relative;
-  background-color: var(--black);
   padding: 15px 0;
+  background-color: var(--black);
 }
 
 #zeus_top-banner {

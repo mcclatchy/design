@@ -6,10 +6,10 @@
 .package, 
 .card {
   display: flex;
+  --display: flex;
   flex-direction: column;
   align-items: start;
   gap: var(--spread);
-  --display: flex;
 }
 
 .stack > *,
@@ -20,9 +20,9 @@
 
 .row {
   display: flex;
+  --display: flex;
   align-items: center;
   gap: var(--spread);
-  --display: flex;
 }
 
 .package {
@@ -48,8 +48,8 @@
 
 .package > .time,
 .package > time {
-  flex: 1 1 auto;
   display: flex;
+  flex: 1 1 auto;
   align-items: end;
 }
 
@@ -75,9 +75,9 @@
 
 .card {
   position: relative;
+  box-shadow: var(--paper-shadow);
   background-color: var(--paper-color, white);
   color: var(--tc);
-  box-shadow: var(--paper-shadow);
 }
 
 .card * {
@@ -120,8 +120,8 @@
 
 .slider {
   text-align: center;
-  overflow-x: scroll;
   white-space: nowrap;
+  overflow-x: scroll;
   scrollbar-width: thin;
   scrollbar-color: 
     var(--scrollbar-foreground, #0007) 
@@ -158,15 +158,15 @@ section, .section {
 #main-content,
 .videoIngest #vueContainer {
   display: block;
+  max-width: unset;
   margin: 0;
   padding: 0;
-  max-width: unset;
 }
 
 .section-label {
   margin: 0;
-  font-weight: bold;
   padding: 0 var(--page-padding);
+  font-weight: bold;
 }
 
 .section-title h5 {
@@ -188,20 +188,20 @@ section, .section {
  */
 
 .expander {
-  cursor: pointer;
   display: flex;
   align-items: center;
   outline: none;
+  cursor: pointer;
 }
 
 .expander:after {
   content: "";
   display: inline-block;
   clip-path: polygon(0% 0%, 50% 80%, 100% 0%, 100% 20%, 50% 100%, 0% 20%, 0% 0%);
-  width: 0.8em;
-  height: 0.48em;
   max-width: 15px;
+  width: 0.8em;
   max-height: 9px;
+  height: 0.48em;
   margin-left: 5px;
   transition: transform .5s ease;
   transform-origin: 50%;
@@ -225,12 +225,12 @@ section, .section {
  */
 
 .social-media {
-  display: flex;
   place-content: center;
+  display: flex;
   gap: 15px;
 }
 
 .social-media svg {
-  height: 20px;
   width: 20px;
+  height: 20px;
 }

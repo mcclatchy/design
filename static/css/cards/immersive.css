@@ -48,16 +48,16 @@
   --lhd: underline;
 }
 
+@media (min-width: 760px) {
+	.immersive .title {
+		font-size: 64px;
+	}
+}
+
 .immersive-summary {
   font-size: larger;
 }
 
 .immersive figcaption {
   padding: 10px 15px 0;
-}
-
-@media (min-width: 760px) {
-	.immersive .title {
-		font-size: 64px;
-	}
 }

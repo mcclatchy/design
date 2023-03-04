@@ -187,8 +187,8 @@ html.msb .masthead {
 
 .logo {
   width: 100%;
-  height: auto;
   max-height: 75px;
+  height: auto;
 }
 
 .flag-nav {
