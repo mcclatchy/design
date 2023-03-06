@@ -1,20 +1,65 @@
 {{ define "head" }}
-<link rel="stylesheet" href="/css/website/style-guide.css">
-<script async src="/js/eds-molecules.js"></script>
-<script async src="/js/eds-layouts.js"></script>
-<script async src="/js/eds-frameworks.js"></script>
-<script async src="/js/eds-newsletter.js"></script>
+<script defer src="/js/rail.js"></script>
+<!-- <script async src="/js/eds-molecules.js"></script> -->
+<!-- <script async src="/js/eds-layouts.js"></script> -->
+<!-- <script async src="/js/eds-frameworks.js"></script> -->
+<!-- <script async src="/js/eds-newsletter.js"></script> -->
 {{ end }}
 
 {{ define "content" }}
-<div class="panels">
-  <div class="paper story-body details">
-    <h2 class="page-header">
-      {{- .Title }}
-    </h2>
+  <div class="story-body paper">
+    <h2>{{ .Title }}</h2>
     {{ .Content }}
   </div>
 
-  {{ partial "email-menu.html" . }}
-</div>
+  <div class="rail">
+    <div class="atoms">
+      <div class="label">
+        <h5>OVERVIEW</h5>
+      </div>
+      {{ partial "menu-items" .Site.Menus.overview }}
+    </div>
+
+    <div class="atoms">
+      <div class="label">
+        <h5>FRAMEWORK</h5>
+      </div>
+      {{ partial "menu-items" .Site.Menus.frameworks }}
+    </div>
+
+    <div class="atoms">
+      <div class="label">
+        <h5>ATOMS</h5>
+      </div>
+      {{ partial "menu-items" .Site.Menus.atoms }}
+    </div>
+
+    <div class="atoms">
+      <div class="label">
+        <h5>MODULES</h5>
+      </div>
+      {{ partial "menu-items" .Site.Menus.modules }}
+    </div>
+
+    <div class="atoms">
+      <div class="label">
+        <h5>LAYOUTS</h5>
+      </div>
+      {{ partial "menu-items" .Site.Menus.layouts }}
+    </div>
+
+    <div class="atoms">
+      <div class="label">
+        <h5>ADOBE CAMPAIGN</h5>
+      </div>
+      {{ partial "menu-items" .Site.Menus.campaign }}
+    </div>
+
+    <div class="atoms">
+      <div class="label">
+        <h5>TEMPLATES</h5>
+      </div>
+      {{ partial "menu-items" .Site.Menus.templates }}
+    </div>
+  </div>
 {{ end }}
