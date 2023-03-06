@@ -1,12 +1,12 @@
 .inline-cta {
   text-align: left;
-  background-color: var(--ad-background);
+  background-color: var(--zone-background);
   --spread: 10px;
 }
 
 .inline-cta.package {
-  padding: 30px;
   justify-content: center;
+  padding: 30px;
 }
 
 @media(max-width: 629px) {

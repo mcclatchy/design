@@ -31,25 +31,19 @@ section.big-news {
   }
 }
 
-.big-news figcaption {
-  padding: 0px 15px;
-}
-
+.big-news figcaption,
 .big-news .grid:not(.featured) {
   padding: 0 15px;
 }
 
-.big-news .grid:not(.featured) .package {
+.big-news .grid:not(.featured) .package,
+.big-news .featured .package {
   padding: 0;
 }
 
 .big-news .featured {
   padding: 15px;
   --paper-shadow: none;
-}
-
-.big-news .featured .package {
-  padding: 0;
 }
 
 @media (min-width: 660px) {

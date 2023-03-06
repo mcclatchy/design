@@ -27,7 +27,7 @@
   --premium-tc: white;
   --premium-impact: #ffd71a;
   --body-background: #f4f4f4;
-  --ad-background: #e6e6e6;
+  --zone-background: #e6e6e6;
 
   /* Link and button defaults */
   --lc: inherit;
@@ -326,9 +326,9 @@ hr {
 
 .button.text,
 .button.ghost {
-  color: var(--bbc);
-  background-color: transparent;
   border: 1px solid var(--bbc);
+  background-color: transparent;
+  color: var(--bbc);
 }
 
 .button.text {
@@ -374,9 +374,9 @@ form.paper {
 
 label { 
   position: relative;
+  display: block;
   font: 700 0.875rem var(--sans);
-  line-height: 1.5; 
-  display: block; 
+  line-height: 1.5;
 }
 
 label.checkbox {
@@ -400,9 +400,9 @@ label .select {
 label small,
 label + small {
   display: block;
+  margin-top: 2px;
   font: 400 0.875rem var(--sans);
   color: var(--text-color, #707070);
-  margin-top: 2px;
 }
 
 input, select, .select {
@@ -411,10 +411,10 @@ input, select, .select {
   width: 100%;
   padding: 10px;
   box-sizing: border-box;
-  font-size: 0.875rem;
   border: 1px solid #989898;
   border-radius: 2px;
   background-color: white;
+  font-size: 0.875rem;
   transition: all .15s ease-in-out;
   cursor: pointer;
 }
@@ -433,10 +433,10 @@ input[type="checkbox"] {
   appearance: none;
   width: 16px;
   height: 16px;
-  padding: 0;
-  border-radius: 0;
   margin: 0;
+  padding: 0;
   outline: none;
+  border-radius: 0;
 }
 
 input[type="checkbox"]:checked {
@@ -449,16 +449,16 @@ input[type="radio"] {
   appearance: none;
   width: 16px;
   height: 16px;
-  border-radius: 50%;
-  border: 1px solid var(--tc, #707070);
-  padding: 0;
   margin: 0;
+  padding: 0;
   outline: none;
+  border: 1px solid var(--tc, #707070);
+  border-radius: 50%;
 }
 
 input[type="radio"]:checked {
-  background-color: white;
   box-shadow: inset 0px 0px 0px 4px #222;
+  background-color: white;
 }
 
 input:focus, select:focus, .focus {
@@ -497,9 +497,9 @@ svg {
 figure {
   position: relative;
   display: grid;
+  flex: none;
   gap: 10px;
   margin: 0;
-  flex: none;
 }
 
 
@@ -520,8 +520,8 @@ figcaption, .caption {
 
 .paper {
   position: relative;
-  background-color: var(--paper-color, white);
   box-shadow: var(--paper-shadow); 
+  background-color: var(--paper-color, white);
   color: var(--tc);
 }
 
@@ -534,9 +534,9 @@ figcaption, .caption {
  */
 
 .mmn-company {
+  margin: 0;
+  padding: 1em 0;
   font: bold 10px var(--sans);
   text-align: center;
   color: var(--tc);
-  margin: 0;
-  padding: 1em 0;
 }

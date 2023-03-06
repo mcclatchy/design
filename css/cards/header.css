@@ -4,7 +4,7 @@
 
 .header {
   display: grid;
-  gap: 15px;
+  gap: var(--half-gap);
   justify-items: center;
   text-align: center;
   --hf: var(--serif);
@@ -18,7 +18,7 @@
 
 .bio {
   display: grid;
-  gap: 15px;
+  gap: var(--half-gap);
 }
 
 .bio .byline {
@@ -74,7 +74,7 @@
 .opinion-banner {
   display: grid;
   grid-template-columns: 35px min-content 1fr;
-  grid-column-gap: 15px;
+  grid-column-gap: var(--half-gap);
   grid-row-gap: 5px;
   max-width: var(--story-width);
   margin: 0 auto;
@@ -82,14 +82,14 @@
   color: white;
 }
 
+.opinion-banner * {
+  margin: 0;
+}
+
 .opinion-banner svg {
   position: relative;
   top: .2em;
   width: 100%;
-}
-
-.opinion-banner * {
-  margin: 0;
 }
 
 @media(max-width: 700px) {

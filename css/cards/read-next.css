@@ -22,8 +22,8 @@
 .read-next .header {
   align-self: stretch;
 	justify-items: start;
-	text-align: left;
 	padding: 0;
+	text-align: left;
 }
 
 .read-next .social-media {

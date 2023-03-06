@@ -5,6 +5,7 @@
 .timeline-event {
 	border-left: 1px solid var(--tc, #707070);
 	max-width: 500px;
+  position: relative;
   --hf: var(--sans);
   --hw: 600;
   --ht: uppercase;
@@ -15,12 +16,12 @@
 	position: absolute;
 	top: 0;
 	left: 0;
+	transform: translate(-9.5px, 12px);
 	width: 18px;
 	height: 18px;
 	box-sizing: border-box;
-	background-color: var(--tc, #707070);
 	border: 4px solid var(--paper-color, white);
 	border-radius: 50%;
-	transform: translate(-9.5px, 12px);
+	background-color: var(--tc, #707070);
 }
 

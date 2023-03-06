@@ -1,19 +1,20 @@
-/**
+/*
  * Zones
  */
 
 .zone {
-  display: grid;
   clear: both;
+  display: block;
+  padding: var(--page-padding) 0; 
+  background-color: var(--zone-background);
 }
 
-/**
+/*
  * Zone treatment inside grids
  */
 
 .grid .zone {
-  grid-column-end: -1; 
-  background-color: var(--ad-background);
+  grid-column-end: -1;
 }
 
 /*
@@ -21,8 +22,8 @@
  */
 
 .story-body > .zone {
-  padding: 0;
-  margin: 40px auto;
+  max-width: unset;
+  margin: 0;
   box-sizing: border-box;
 }
 
@@ -31,14 +32,18 @@
   justify-items: center;
 }
 
-/**
+.zone.clear {
+  background-color: unset;
+}
+
+/*
  * Custom changes
  */
 
 #zone-el-2 {
   position: relative;
-  background-color: var(--black);
   padding: 15px 0;
+  background-color: var(--black);
 }
 
 #zeus_top-banner {

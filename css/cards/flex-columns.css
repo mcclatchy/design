@@ -2,6 +2,12 @@
  * Flexbox grid
  */
 
+.flex {
+  display: flex;
+  gap: var(--spread);
+  align-items: center;
+}
+
 .flex-columns > * {
   margin: 30px 0;
 }

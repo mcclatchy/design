@@ -3,11 +3,11 @@
  */
 
 .panel {
-  padding: 45px var(--page-padding);
   max-width: 100%;
+  padding: 45px var(--page-padding);
   background-color: var(--paper-color);
-  color: var(--tc);
   font-family: var(--sans);
+  color: var(--tc);
   --hf: var(--sans);
   --hw: bold;
   --ht: uppercase;
@@ -35,5 +35,5 @@
 }
 
 .panel .grid {
-  grid-gap: 15px;
+  grid-gap: var(--half-gap);
 }

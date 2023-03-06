@@ -5,9 +5,9 @@
 .topper {
   display: none;
   position: relative;
+  padding: var(--gap) var(--page-padding);
   background-color: var(--premium-bc);
   color: var(--premium-tc);
-  padding: var(--gap) var(--page-padding);
   font: 1rem/1.5em var(--sans);
   --tc: white;
   --lc: white;

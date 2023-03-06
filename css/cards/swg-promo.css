@@ -8,9 +8,9 @@
 }
 
 .card.swg-promo .promo {
+  justify-content: center;
   background-color: var(--promo);
   color: white;
-  justify-content: center;
 }
 
 .card.swg-promo .title {
