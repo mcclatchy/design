@@ -1,14 +1,18 @@
 /*
- * Site structure
+ * Guide structure
  */
 
-body.saratoga,
-body.email {
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  grid-template-areas:
-    "banner banner"
-    "rail main";
+@media(min-width: 769px) {
+  body.saratoga,
+  body.email {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+      "banner banner"
+      "rail main";
+  }
 }
 
 /*
@@ -36,7 +40,6 @@ table {
   width: 100%;
   text-align: left;
   border-spacing: 0;
-  box-sizing: content-box;
   font: 0.875rem var(--sans);
 }
 
@@ -60,12 +63,13 @@ td:first-child {
 .banner {
   grid-area: banner;
   display: grid;
-  padding: 15px;
   grid-gap: 15px;
-  align-items: center;
+  align-content: center;
   justify-items: center;
+  padding: 15px;
   background-color: var(--paper-color, white);
   border-bottom: 2px solid #ddd;
+  box-sizing: border-box;
   --spread: 20px;
 }
 
@@ -73,13 +77,6 @@ td:first-child {
   .banner {
     grid-template-columns: 1fr auto;
     justify-items: start;
-    position: sticky;
-    top: 0;
-    z-index: 3;
-  }
-
-  .decks .banner {
-    position: relative;
   }
 }
 
@@ -99,9 +96,6 @@ td:first-child {
 
 .rail {
   grid-area: rail;
-  position: sticky;
-  top: 70px;
-  height: calc(100vh - 70px);
   overflow: scroll;
   font-family: var(--sans);
   line-height: 1.3em;
@@ -130,7 +124,7 @@ td:first-child {
 
 .story-body {
   grid-area: main;
-  z-index: 2;
+  overflow: scroll;
 }
 
 .story-body > hr {

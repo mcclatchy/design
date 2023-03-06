@@ -1,7 +1,7 @@
 ---
 title: premium
 description: A light theme for enterprise content.
-layout: story
+layout: article
 ---
 
 <link rel="stylesheet" href="https://storage.googleapis.com/mc-high-impact/themes/premium.css">

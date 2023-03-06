@@ -1,5 +1,6 @@
 ---
 title: "McClatchy Email Design System"
+layout: single
 ---
 
 The McClatchy Email Design System (EDS) exists to provide visual alignment of our emails with the Saratoga Design System (SDS) and is organized with an atomic design structure. This system serves to streamline our email design workflow and provide consistency across all email products.

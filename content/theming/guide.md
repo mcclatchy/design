@@ -1,7 +1,7 @@
 ---
 title: guide
 description: A stackable theme for guide-like content.
-layout: story
+layout: article
 ---
 
 <link rel="stylesheet" href="https://storage.googleapis.com/mc-high-impact/themes/guide.css">
