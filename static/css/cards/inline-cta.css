@@ -1,7 +1,9 @@
 .inline-cta {
-  text-align: left;
-  background-color: var(--zone-background);
   --spread: 10px;
+  max-width: var(--story-width);
+  margin: 0 auto;
+  background-color: var(--body-background);
+  text-align: left;
 }
 
 .inline-cta.package {
