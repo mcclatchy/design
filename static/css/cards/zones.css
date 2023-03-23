@@ -5,6 +5,7 @@
 .zone {
   clear: both;
   display: block;
+  position: relative;
   padding: var(--page-padding) 0; 
   background-color: var(--zone-background);
 }
