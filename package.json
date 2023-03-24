@@ -1,6 +1,6 @@
 {
   "name": "saratoga-design-system",
-  "version": "1.16.7",
+  "version": "1.16.8",
   "files": [
     "dist/saratoga.css",
     "dist/dsp.css",
