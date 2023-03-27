@@ -1,4 +1,4 @@
-/**
+/*
  * Section grid
  */
 
@@ -63,7 +63,7 @@
   }
 }
 
-/**
+/*
  * Load more button
  */
 
@@ -73,7 +73,7 @@
   justify-content: center;
 }
 
-/**
+/*
  * Custom grid arrangements
  */
 
@@ -81,10 +81,11 @@
   grid-column: auto;
 }
 
-/**
- * Custom cards injectable element
+/*
+ * Regions are invisible wrappers for Taboola 
+ * dynamic injection, same as custom-cards
  */
 
-custom-card {
+.region, custom-card {
   display: contents;
 }

@@ -5,8 +5,13 @@
 .zone {
   clear: both;
   display: block;
+  position: relative;
   padding: var(--page-padding) 0; 
   background-color: var(--zone-background);
+}
+
+.zone:empty {
+  padding: 0;
 }
 
 /*
@@ -43,7 +48,6 @@
 #zone-el-2 {
   position: relative;
   padding: 15px 0;
-  background-color: var(--black);
 }
 
 #zeus_top-banner {
