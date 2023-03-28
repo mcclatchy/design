@@ -55,7 +55,6 @@ section.grid {
   display: grid;
   grid-template-columns: auto 1fr auto;
   grid-gap: 5px;
-  --hs: 1rem;
   --ht: none;
 }
 

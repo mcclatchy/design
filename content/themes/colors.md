@@ -1,7 +1,7 @@
 ---
 title: "Colors QA"
 date: 2020-09-15T08:07:04-05:00
-layout: article
+layout: story
 aliases: 
   - /saratoga/decks/colors-qa/
 ---

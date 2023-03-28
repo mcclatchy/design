@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-layout="{{ .Params.theme }}">
   <head>
     <title>{{ .Title }}</title>
     <meta name="description" content="{{ .Description }}">
@@ -55,6 +55,10 @@
     <link rel="stylesheet" href="/css/cards/taboola.css">
     <link rel="stylesheet" href="/css/cards/utilities.css">
 
+    <!-- decks/themes -->
+    <link rel="stylesheet" href="/css/decks/premium.css">
+    <link rel="stylesheet" href="/css/decks/guide.css">
+
     <!-- overload for this site -->
     <link rel="stylesheet" href="/css/website/site.css">
 
@@ -64,7 +68,8 @@
     {{ block "head" . }}{{ end }}
   </head>
 
-  <body class="{{ .Type }}" data-template="{{ .Kind }}">
+  {{- $bodyClass := cond (eq .Layout "story") .Layout .Type }}
+  <body class="{{ $bodyClass }}" data-template="{{ .Kind }}">
     <div class="banner">
       <a href="/">
         <img class="logo" src="/img/banner-logo.newsx.svg" width="300" height="76" alt="McClatchy NewsX logo">

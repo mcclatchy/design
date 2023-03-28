@@ -2,6 +2,8 @@
 title: "Theming pages in the design system"
 ---
 
+_Update: We have begun moving certain themes into the design system properly. This is still a good reference for customizing the page using the design system, however, and we will leave it here for now._
+
 The ability to quickly theme and enhance pages is built into the foundation of the design system. We do this by creating layers for each part of our organization and binding them together with some fun tools and techniques. Most atoms and molucules are customizable, using CSS custom properties, and they have default values. These defaults are used in the base layer coming from WPS and make most of our pages, but we can put a layer on top of that base to change it where we want to. Take color for example, which is a configurable part of the paper atom. Click the buttons below to see how changing those properties affects the story card.
 
 <div class="panel">
@@ -66,7 +68,7 @@ Simply importing the file will set up the communication to the other teams using
 
 ### Themes
 
-Each theme is simply a group of enhancments designed around a specific concept or type of story. Two currently working prototypes are the [premium](./premium) and [guide](./guide/) themes, and are designed for enterprise and evergreen content respectively. Themes are created by the NewsX team, but can be implemented by anyone with access to CUE by adding an embed into the related content area in articles. We are also working with the development teams to have these themes added to the layout options dropdown in CUE, similar to the Immersive layout today. That work has been vetted and needs scheduling. 
+Each theme is simply a group of enhancments designed around a specific concept or type of story. Themes are created by the NewsX team, but can be implemented by anyone with access to CUE by adding an embed into the related content area in articles. We are also working with the development teams to have these themes added to the layout options dropdown in CUE, similar to the Immersive layout today. That work has been vetted and needs scheduling. 
 
 The purpose of themes is to empower our journalists with the ability to enhance their stories directly, and by doing so spread the work to a much larger group of people. Because many of the people implementing themes will have little knowledge of how they work or what they are doing to the page, themes should adhere to the following rules.
 
