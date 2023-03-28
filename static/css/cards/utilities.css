@@ -208,7 +208,7 @@ form[id^=bx-form] {
  * WPS breaks from recommended DOM
  */
 
-[class*=photo-inline] figcaption,
+figure .img-container figcaption,
 .inline-video figcaption {
   padding-top: 10px;
 }
