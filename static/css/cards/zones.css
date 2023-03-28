@@ -53,3 +53,9 @@
 #zeus_top-banner {
   padding: 15px 0;
 }
+
+.zone.stn-player {
+  background-color: var(--zone-background);
+  min-height: unset;
+  padding: var(--page-padding) calc((100vw - var(--story-width))/2);
+}
