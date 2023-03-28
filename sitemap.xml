@@ -2,13 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://mcclatchy.github.io/design/theming/colors/</loc>
+    <loc>https://mcclatchy.github.io/design/themes/colors/</loc>
     <lastmod>2020-09-15T08:07:04-05:00</lastmod>
   </url><url>
     <loc>https://mcclatchy.github.io/design/</loc>
     <lastmod>2020-09-15T08:07:04-05:00</lastmod>
   </url><url>
-    <loc>https://mcclatchy.github.io/design/theming/</loc>
+    <loc>https://mcclatchy.github.io/design/themes/</loc>
     <lastmod>2020-09-15T08:07:04-05:00</lastmod>
   </url><url>
     <loc>https://mcclatchy.github.io/design/saratoga/colors/</loc>
@@ -47,7 +47,7 @@
   </url><url>
     <loc>https://mcclatchy.github.io/design/saratoga/correction/</loc>
   </url><url>
-    <loc>https://mcclatchy.github.io/design/theming/dark/</loc>
+    <loc>https://mcclatchy.github.io/design/themes/dark/</loc>
   </url><url>
     <loc>https://mcclatchy.github.io/design/decks/</loc>
   </url><url>
@@ -77,7 +77,7 @@
   </url><url>
     <loc>https://mcclatchy.github.io/design/saratoga/grid/</loc>
   </url><url>
-    <loc>https://mcclatchy.github.io/design/theming/guide/</loc>
+    <loc>https://mcclatchy.github.io/design/themes/guide/</loc>
   </url><url>
     <loc>https://mcclatchy.github.io/design/email/atoms/h1/</loc>
   </url><url>
@@ -153,7 +153,7 @@
   </url><url>
     <loc>https://mcclatchy.github.io/design/saratoga/paper/</loc>
   </url><url>
-    <loc>https://mcclatchy.github.io/design/theming/premium/</loc>
+    <loc>https://mcclatchy.github.io/design/themes/premium/</loc>
   </url><url>
     <loc>https://mcclatchy.github.io/design/saratoga/read-next/</loc>
   </url><url>
@@ -171,7 +171,7 @@
   </url><url>
     <loc>https://mcclatchy.github.io/design/saratoga/series-nav/</loc>
   </url><url>
-    <loc>https://mcclatchy.github.io/design/theming/home-guide/</loc>
+    <loc>https://mcclatchy.github.io/design/themes/home-guide/</loc>
   </url><url>
     <loc>https://mcclatchy.github.io/design/email/atoms/small/</loc>
   </url><url>

@@ -3,11 +3,11 @@
   --lc: #707070;
   --scrollbar-foreground: #70707040;
   --spread: 15px;
+  --h1: x-large;
 }
 
 .section-nav .title {
   margin: 0;
-  --hs: x-large;
 }
 
 .section-nav .slider {

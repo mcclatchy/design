@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-layout="">
   <head>
     <title>Theming pages in the design system</title>
     <meta name="description" content="">
@@ -56,6 +56,10 @@
     <link rel="stylesheet" href="../css/cards/utilities.css">
 
     
+    <link rel="stylesheet" href="../css/decks/premium.css">
+    <link rel="stylesheet" href="../css/decks/guide.css">
+
+    
     <link rel="stylesheet" href="../css/website/site.css">
 
     
@@ -70,8 +74,7 @@
 <script type="module" src="https://storage.googleapis.com/mc-high-impact/cards/custom-card/custom-card.js"></script>
 
   </head>
-
-  <body class="theming" data-template="section">
+  <body class="themes" data-template="section">
     <div class="banner">
       <a href="../">
         <img class="logo" src="../img/banner-logo.newsx.svg" width="300" height="76" alt="McClatchy NewsX logo">
@@ -80,7 +83,7 @@
         <a href="https://mcclatchy.github.io/design/email/">email</a>
         <a href="https://mcclatchy.github.io/design/markets/">markets</a>
         <a href="https://mcclatchy.github.io/design/saratoga/">style guide</a>
-        <a href="https://mcclatchy.github.io/design/theming/">theming</a>
+        <a href="https://mcclatchy.github.io/design/themes/">theming</a>
       </nav>
     </div>
 <div class="paper story-body">
@@ -88,7 +91,8 @@
     <h1>Theming pages in the design system</h1>
   </header>
 
-  <p>The ability to quickly theme and enhance pages is built into the foundation of the design system. We do this by creating layers for each part of our organization and binding them together with some fun tools and techniques. Most atoms and molucules are customizable, using CSS custom properties, and they have default values. These defaults are used in the base layer coming from WPS and make most of our pages, but we can put a layer on top of that base to change it where we want to. Take color for example, which is a configurable part of the paper atom. Click the buttons below to see how changing those properties affects the story card.</p>
+  <p><em>Update: We have begun moving certain themes into the design system properly. This is still a good reference for customizing the page using the design system, however, and we will leave it here for now.</em></p>
+<p>The ability to quickly theme and enhance pages is built into the foundation of the design system. We do this by creating layers for each part of our organization and binding them together with some fun tools and techniques. Most atoms and molucules are customizable, using CSS custom properties, and they have default values. These defaults are used in the base layer coming from WPS and make most of our pages, but we can put a layer on top of that base to change it where we want to. Take color for example, which is a configurable part of the paper atom. Click the buttons below to see how changing those properties affects the story card.</p>
 <div class="panel">
   <section class="grid color-example">
     <article class="card ">
@@ -144,7 +148,7 @@
 </code></pre><p>Simply importing the file will set up the communication to the other teams using the global <code>window.mi.theme</code> object. This location was chosen by the performance team and cannot change. They are generating analytics reports for pages where this object exists. The help desk team is also aware of the object, and if they get a ticket for a page where it exists, they know to contact NewsX to troubleshoot. This object eliminates a lot of confusion and internal communication between teams, so it&rsquo;s vital that it&rsquo;s included on custom pages and that these functions are used to manipulate the page when possible.</p>
 </div>
 <h3 id="themes">Themes</h3>
-<p>Each theme is simply a group of enhancments designed around a specific concept or type of story. Two currently working prototypes are the <a href="./premium">premium</a> and <a href="./guide/">guide</a> themes, and are designed for enterprise and evergreen content respectively. Themes are created by the NewsX team, but can be implemented by anyone with access to CUE by adding an embed into the related content area in articles. We are also working with the development teams to have these themes added to the layout options dropdown in CUE, similar to the Immersive layout today. That work has been vetted and needs scheduling.</p>
+<p>Each theme is simply a group of enhancments designed around a specific concept or type of story. Themes are created by the NewsX team, but can be implemented by anyone with access to CUE by adding an embed into the related content area in articles. We are also working with the development teams to have these themes added to the layout options dropdown in CUE, similar to the Immersive layout today. That work has been vetted and needs scheduling.</p>
 <p>The purpose of themes is to empower our journalists with the ability to enhance their stories directly, and by doing so spread the work to a much larger group of people. Because many of the people implementing themes will have little knowledge of how they work or what they are doing to the page, themes should adhere to the following rules.</p>
 <ol>
 <li>It must support all CUE content types and embeds.</li>

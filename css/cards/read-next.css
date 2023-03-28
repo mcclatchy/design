@@ -10,6 +10,7 @@
 @media(min-width: 990px) {
   .read-next {
     grid-column: span 2;
+    grid-row: span 2;
   }
 }
 

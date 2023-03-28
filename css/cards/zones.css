@@ -28,7 +28,7 @@
 
 .story-body > .zone {
   max-width: unset;
-  margin: 0;
+  margin: 40px 0;
   box-sizing: border-box;
 }
 
@@ -45,11 +45,12 @@
  * Custom changes
  */
 
-#zone-el-2 {
-  position: relative;
+#zeus_top-banner {
   padding: 15px 0;
 }
 
-#zeus_top-banner {
-  padding: 15px 0;
+.zone.stn-player {
+  background-color: var(--zone-background);
+  min-height: unset;
+  padding: var(--page-padding) calc((100vw - var(--story-width))/2);
 }

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-layout="">
   <head>
     <title>gallery</title>
     <meta name="description" content="A CSS Grid version using the experimental rail code.">
@@ -56,6 +56,10 @@
     <link rel="stylesheet" href="../../css/cards/utilities.css">
 
     
+    <link rel="stylesheet" href="../../css/decks/premium.css">
+    <link rel="stylesheet" href="../../css/decks/guide.css">
+
+    
     <link rel="stylesheet" href="../../css/website/site.css">
 
     
@@ -66,7 +70,6 @@
   <script type="module" src="../../js/custom-card.js"></script>
 
   </head>
-
   <body class="decks" data-template="page">
     <div class="banner">
       <a href="../../">
@@ -76,7 +79,7 @@
         <a href="https://mcclatchy.github.io/design/email/">email</a>
         <a href="https://mcclatchy.github.io/design/markets/">markets</a>
         <a href="https://mcclatchy.github.io/design/saratoga/">style guide</a>
-        <a href="https://mcclatchy.github.io/design/theming/">theming</a>
+        <a href="https://mcclatchy.github.io/design/themes/">theming</a>
       </nav>
     </div>
   
@@ -289,180 +292,277 @@
 
 </section>
 
-<section>
-  <div class="flex-columns">
-    <div class="main-stage flex-columns">
-      <article class="card ">
-        <figure>
-          <a href="#">
-            <img src="../../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
-          </a>
-        </figure>
-        <div class="package">
-          <a class="kicker h6" href="#">FOOD</a>
-          <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
-          <div class="time">March 16, 2018 11:33 am</div>
-        </div>
-      </article>
-
-      <article class="card ">
-        <figure>
-          <a href="#">
-            <img src="../../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
-          </a>
-        </figure>
-        <div class="package">
-          <a class="kicker h6" href="#">FOOD</a>
-          <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
-          <div class="time">March 16, 2018 11:33 am</div>
-        </div>
-      </article>
-
-      <article class="card ">
-        <figure>
-          <a href="#">
-            <img src="../../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
-          </a>
-        </figure>
-        <div class="package">
-          <a class="kicker h6" href="#">FOOD</a>
-          <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
-          <div class="time">March 16, 2018 11:33 am</div>
-        </div>
-      </article>
-
-      <article class="card ">
-        <figure>
-          <a href="#">
-            <img src="../../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
-          </a>
-        </figure>
-        <div class="package">
-          <a class="kicker h6" href="#">FOOD</a>
-          <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
-          <div class="time">March 16, 2018 11:33 am</div>
-        </div>
-      </article>
-
-      <article class="card ">
-        <figure>
-          <a href="#">
-            <img src="../../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
-          </a>
-        </figure>
-        <div class="package">
-          <a class="kicker h6" href="#">FOOD</a>
-          <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
-          <div class="time">March 16, 2018 11:33 am</div>
-        </div>
-      </article>
-
-      <article class="card ">
-        <figure>
-          <a href="#">
-            <img src="../../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
-          </a>
-        </figure>
-        <div class="package">
-          <a class="kicker h6" href="#">FOOD</a>
-          <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
-          <div class="time">March 16, 2018 11:33 am</div>
-        </div>
-      </article>
-
+<section class="grid">
+  <article class="card ">
+    <figure>
+      <a href="#">
+        <img src="../../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
+      </a>
+    </figure>
+    <div class="package">
+      <a class="kicker h6" href="#">FOOD</a>
+      <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
+      <div class="time">March 16, 2018 11:33 am</div>
     </div>
-    <div class="rail">
-      <fake-ad class="zone" size="[300,600]"></fake-ad>
+  </article>
+
+  <article class="card ">
+    <figure>
+      <a href="#">
+        <img src="../../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
+      </a>
+    </figure>
+    <div class="package">
+      <a class="kicker h6" href="#">FOOD</a>
+      <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
+      <div class="time">March 16, 2018 11:33 am</div>
     </div>
+  </article>
+
+
+  <div class="zone two-rows">
+    <fake-ad size="[300,600]"></fake-ad>
   </div>
-</section>
 
-<section>
-  <div class="flex-columns">
-    <div class="main-stage flex-columns">
-      <article class="card ">
-        <figure>
-          <a href="#">
-            <img src="../../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
-          </a>
-        </figure>
-        <div class="package">
-          <a class="kicker h6" href="#">FOOD</a>
-          <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
-          <div class="time">March 16, 2018 11:33 am</div>
-        </div>
-      </article>
-
-      <article class="card ">
-        <figure>
-          <a href="#">
-            <img src="../../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
-          </a>
-        </figure>
-        <div class="package">
-          <a class="kicker h6" href="#">FOOD</a>
-          <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
-          <div class="time">March 16, 2018 11:33 am</div>
-        </div>
-      </article>
-
-      <article class="card ">
-        <figure>
-          <a href="#">
-            <img src="../../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
-          </a>
-        </figure>
-        <div class="package">
-          <a class="kicker h6" href="#">FOOD</a>
-          <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
-          <div class="time">March 16, 2018 11:33 am</div>
-        </div>
-      </article>
-
-      <article class="card ">
-        <figure>
-          <a href="#">
-            <img src="../../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
-          </a>
-        </figure>
-        <div class="package">
-          <a class="kicker h6" href="#">FOOD</a>
-          <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
-          <div class="time">March 16, 2018 11:33 am</div>
-        </div>
-      </article>
-
-      <article class="card ">
-        <figure>
-          <a href="#">
-            <img src="../../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
-          </a>
-        </figure>
-        <div class="package">
-          <a class="kicker h6" href="#">FOOD</a>
-          <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
-          <div class="time">March 16, 2018 11:33 am</div>
-        </div>
-      </article>
-
-      <article class="card ">
-        <figure>
-          <a href="#">
-            <img src="../../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
-          </a>
-        </figure>
-        <div class="package">
-          <a class="kicker h6" href="#">FOOD</a>
-          <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
-          <div class="time">March 16, 2018 11:33 am</div>
-        </div>
-      </article>
-
+  <article class="card ">
+    <figure>
+      <a href="#">
+        <img src="../../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
+      </a>
+    </figure>
+    <div class="package">
+      <a class="kicker h6" href="#">FOOD</a>
+      <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
+      <div class="time">March 16, 2018 11:33 am</div>
     </div>
-    <div class="rail">
-      <fake-ad class="zone"></fake-ad>
+  </article>
+
+  <article class="card ">
+    <figure>
+      <a href="#">
+        <img src="../../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
+      </a>
+    </figure>
+    <div class="package">
+      <a class="kicker h6" href="#">FOOD</a>
+      <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
+      <div class="time">March 16, 2018 11:33 am</div>
     </div>
+  </article>
+
+  <article class="card ">
+    <figure>
+      <a href="#">
+        <img src="../../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
+      </a>
+    </figure>
+    <div class="package">
+      <a class="kicker h6" href="#">FOOD</a>
+      <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
+      <div class="time">March 16, 2018 11:33 am</div>
+    </div>
+  </article>
+
+  <article class="card ">
+    <figure>
+      <a href="#">
+        <img src="../../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
+      </a>
+    </figure>
+    <div class="package">
+      <a class="kicker h6" href="#">FOOD</a>
+      <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
+      <div class="time">March 16, 2018 11:33 am</div>
+    </div>
+  </article>
+
+  <article class="card ">
+    <figure>
+      <a href="#">
+        <img src="../../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
+      </a>
+    </figure>
+    <div class="package">
+      <a class="kicker h6" href="#">FOOD</a>
+      <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
+      <div class="time">March 16, 2018 11:33 am</div>
+    </div>
+  </article>
+
+  <article class="card ">
+    <figure>
+      <a href="#">
+        <img src="../../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
+      </a>
+    </figure>
+    <div class="package">
+      <a class="kicker h6" href="#">FOOD</a>
+      <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
+      <div class="time">March 16, 2018 11:33 am</div>
+    </div>
+  </article>
+
+  <article class="card ">
+    <figure>
+      <a href="#">
+        <img src="../../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
+      </a>
+    </figure>
+    <div class="package">
+      <a class="kicker h6" href="#">FOOD</a>
+      <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
+      <div class="time">March 16, 2018 11:33 am</div>
+    </div>
+  </article>
+
+  <article class="card ">
+    <figure>
+      <a href="#">
+        <img src="../../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
+      </a>
+    </figure>
+    <div class="package">
+      <a class="kicker h6" href="#">FOOD</a>
+      <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
+      <div class="time">March 16, 2018 11:33 am</div>
+    </div>
+  </article>
+
+  <article class="card ">
+    <figure>
+      <a href="#">
+        <img src="../../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
+      </a>
+    </figure>
+    <div class="package">
+      <a class="kicker h6" href="#">FOOD</a>
+      <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
+      <div class="time">March 16, 2018 11:33 am</div>
+    </div>
+  </article>
+
+
+  <div class="zone">
+    <fake-ad></fake-ad>
   </div>
+
+  <article class="card ">
+    <figure>
+      <a href="#">
+        <img src="../../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
+      </a>
+    </figure>
+    <div class="package">
+      <a class="kicker h6" href="#">FOOD</a>
+      <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
+      <div class="time">March 16, 2018 11:33 am</div>
+    </div>
+  </article>
+
+  <article class="card ">
+    <figure>
+      <a href="#">
+        <img src="../../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
+      </a>
+    </figure>
+    <div class="package">
+      <a class="kicker h6" href="#">FOOD</a>
+      <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
+      <div class="time">March 16, 2018 11:33 am</div>
+    </div>
+  </article>
+
+  <article class="card ">
+    <figure>
+      <a href="#">
+        <img src="../../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
+      </a>
+    </figure>
+    <div class="package">
+      <a class="kicker h6" href="#">FOOD</a>
+      <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
+      <div class="time">March 16, 2018 11:33 am</div>
+    </div>
+  </article>
+
+  <article class="card ">
+    <figure>
+      <a href="#">
+        <img src="../../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
+      </a>
+    </figure>
+    <div class="package">
+      <a class="kicker h6" href="#">FOOD</a>
+      <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
+      <div class="time">March 16, 2018 11:33 am</div>
+    </div>
+  </article>
+
+  <article class="card ">
+    <figure>
+      <a href="#">
+        <img src="../../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
+      </a>
+    </figure>
+    <div class="package">
+      <a class="kicker h6" href="#">FOOD</a>
+      <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
+      <div class="time">March 16, 2018 11:33 am</div>
+    </div>
+  </article>
+
+  <article class="card ">
+    <figure>
+      <a href="#">
+        <img src="../../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
+      </a>
+    </figure>
+    <div class="package">
+      <a class="kicker h6" href="#">FOOD</a>
+      <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
+      <div class="time">March 16, 2018 11:33 am</div>
+    </div>
+  </article>
+
+  <article class="card ">
+    <figure>
+      <a href="#">
+        <img src="../../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
+      </a>
+    </figure>
+    <div class="package">
+      <a class="kicker h6" href="#">FOOD</a>
+      <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
+      <div class="time">March 16, 2018 11:33 am</div>
+    </div>
+  </article>
+
+  <article class="card ">
+    <figure>
+      <a href="#">
+        <img src="../../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
+      </a>
+    </figure>
+    <div class="package">
+      <a class="kicker h6" href="#">FOOD</a>
+      <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
+      <div class="time">March 16, 2018 11:33 am</div>
+    </div>
+  </article>
+
+  <article class="card ">
+    <figure>
+      <a href="#">
+        <img src="../../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
+      </a>
+    </figure>
+    <div class="package">
+      <a class="kicker h6" href="#">FOOD</a>
+      <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
+      <div class="time">March 16, 2018 11:33 am</div>
+    </div>
+  </article>
+
 </section>
 
 

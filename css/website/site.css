@@ -110,6 +110,10 @@ td:first-child {
   border-bottom: 1px solid var(--gray);
 }
 
+.rail .themes {
+  background-color: #E6D3EC;
+}
+
 .rail .cards {
   background-color: #FDFDF6;
 }
@@ -131,13 +135,6 @@ td:first-child {
   margin: 60px auto;
   box-sizing: border-box;
   border-color: #ddd;
-}
-
-.saratoga .zone {
-  display: grid;
-  grid-template-columns: var(--columns);
-  gap: var(--gap);
-  padding: var(--page-padding);
 }
 
 /*

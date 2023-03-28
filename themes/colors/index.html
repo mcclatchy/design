@@ -1,8 +1,8 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-layout="">
   <head>
-    <title>Simple test for theming</title>
-    <meta name="description" content="A sample section page.">
+    <title>Colors QA</title>
+    <meta name="description" content="">
     
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -56,6 +56,10 @@
     <link rel="stylesheet" href="../../css/cards/utilities.css">
 
     
+    <link rel="stylesheet" href="../../css/decks/premium.css">
+    <link rel="stylesheet" href="../../css/decks/guide.css">
+
+    
     <link rel="stylesheet" href="../../css/website/site.css">
 
     
@@ -63,11 +67,9 @@
 
     
   <script defer src="../../js/navigation.js"></script>
-  <script type="module" src="../../js/custom-card.js"></script>
 
   </head>
-
-  <body class="theming" data-template="page">
+  <body class="story" data-template="page">
     <div class="banner">
       <a href="../../">
         <img class="logo" src="../../img/banner-logo.newsx.svg" width="300" height="76" alt="McClatchy NewsX logo">
@@ -76,27 +78,10 @@
         <a href="https://mcclatchy.github.io/design/email/">email</a>
         <a href="https://mcclatchy.github.io/design/markets/">markets</a>
         <a href="https://mcclatchy.github.io/design/saratoga/">style guide</a>
-        <a href="https://mcclatchy.github.io/design/theming/">theming</a>
+        <a href="https://mcclatchy.github.io/design/themes/">theming</a>
       </nav>
-    </div>
-  
-  <div class="upper-nav">
-    <div class="tab active">
-      <a href="#">
-        <img class="logo" src="../../img/miamiherald-logo.svg" alt="Miami Herald Logo" width="300" height="50" loding="lazy">
-        <img class="favicon" src="../../img/miamiherald-favicon.png" alt="Miami Herald Logo" width="96" height="96" loding="lazy">
-      </a>
-    </div>
-    <div class="tab">
-      <a href="#">
-        <img class="logo" src="../../img/miami.com-logo.svg" alt="Miami.com Logo" width="300" height="131" loading="lazy">
-        <img class="favicon" src="../../img/miami.com-favicon.svg" alt="Miami.com Logo" width="150" height="150" loading="lazy">
-      </a>
-    </div>
-  </div>
-
-  <div id="zone-el-2" class="zone" data-zone="2">
-    <fake-ad size="[[970,250],[728,90],[320,50]]"></fake-ad>
+    </div><div class="zone">
+    <fake-ad size="[970,250]"></fake-ad>
   </div>
 
   
@@ -270,155 +255,248 @@
 
 
   
-<script type="module" src="../../js/custom-card.js"></script>
+  <div class="server-rendered">
+    <article class="story-body paper"><style>
+  .package {
+    box-sizing: border-box;
+    padding: 15px;
+  }
+</style>
+<h1 id="color-and-css-custom-properties">Color and CSS Custom Properties</h1>
+<p>The most challenging thing to maintain in SDS is color. Take a button. It can be impact, promo, promo-light or disabled like so.</p>
+<div class="buttons">
+  <a class="button impact">Impact</a>
+  <a class="button promo">Promo</a>
+  <a class="button promo-light">Promo-light</a>
+  <a class="button disabled">Disabled</a>
+</div>
+<p>Those are setup using the class directly on the button like so:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#000080;font-weight:bold">a</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;button impact&#34;</span>&gt;Impact&lt;/<span style="color:#000080;font-weight:bold">a</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#000080;font-weight:bold">a</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;button promo&#34;</span>&gt;Promo&lt;/<span style="color:#000080;font-weight:bold">a</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#000080;font-weight:bold">a</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;button promo-light&#34;</span>&gt;Promo-light&lt;/<span style="color:#000080;font-weight:bold">a</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#000080;font-weight:bold">a</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;button disabled&#34;</span>&gt;Disabled&lt;/<span style="color:#000080;font-weight:bold">a</span>&gt;
+</span></span></code></pre></div><p>This works fine and dandy by simply addind the appropriate color and background color directly like so:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>.impact {
+</span></span><span style="display:flex;"><span>  <span style="color:#000080;font-weight:bold">background-color</span>: <span style="color:#00f">#373737</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#000080;font-weight:bold">color</span>: <span style="color:#000080;font-weight:bold">white</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Things get trickier when we take the concept of impact and promo up a level to the container, which we do frequently. The following CTA works fine with the above rules:</p>
+<div class="package paper promo">
+  <h2>Title</h2>
+  <p class="summary">Offer text goes here</p>
+</div>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;package paper promo&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#000080;font-weight:bold">h2</span>&gt;Title&lt;/<span style="color:#000080;font-weight:bold">h2</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#000080;font-weight:bold">p</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;summary&#34;</span>&gt;Offer text goes here&lt;/<span style="color:#000080;font-weight:bold">p</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;
+</span></span></code></pre></div><p>Great, but soon we need to add children who also need a different color treatment, like a button, or a link, or a byline.</p>
+<div class="package paper promo">
+  <h2>Title</h2>
+  <p class="summary">Offer text goes here</p>
+  <a class="button">OFFER ACTION</a>
+</div>
+<p>Ok .. now the togo food container is starting to get a little funky. How are we going to handle this? Easy enough, we can add additional rules for buttons like so:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>.promo .button {
+</span></span><span style="display:flex;"><span>  <span style="color:#000080;font-weight:bold">color</span>: <span style="color:#000080;font-weight:bold">blue</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Wait .. how many elements do we have with a default color .. like 12 .. OK .. impact, promo, light, disabled, 12 times 4 .. 48 rules &hellip;&hellip;. ok?</p>
+<div class="package paper promo">
+  <h2>Title</h2>
+  <p class="summary">Offer text goes here</p>
+  <a class="button" style="--bc: #222">OFFER ACTION</a>
+</div>
+<p>Wait .. why is that button text black?</p>
+<div class="package paper promo">
+  <h2>Title</h2>
+  <p class="summary">Offer text goes here</p>
+  <a class="more-link" style="--lc: #707070">OFFER ACTION</a>
+</div>
+<p>I&rsquo;m sorry, we&rsquo;re throwing more links in promos now too?</p>
+<p>And you want them to be <em>white</em>?</p>
+<p><strong>That&rsquo;s it, no more rules I&rsquo;m locking everything down!</strong></p>
+<p>&hellip;</p>
+<p>&hellip;</p>
+<p>&hellip;</p>
+<p>No, we don&rsquo;t get to do that we gotta figure this out.</p>
+<h3 id="css-custom-properties-to-the-rescue">CSS Custom Properties to the rescue</h3>
+<p>For many years developers have used pre-processors like Less and Sass to handle these messes. They do clean up code for the developer, but they don&rsquo;t help at all on payload size. In fact they often make it much much worse because the rule complexity is hidden from us. Custom properties are the new native way of handling funky logic like we have here. I don&rsquo;t have a total handle on best ways to set up larger projects, but this is what I&rsquo;ve discovered so far.</p>
+<p>Placing these properties on bigger boxes themselves provides a very limited advantage over the regular rule, if an advantage exists at all. If you place it on the most basic atom, however, it can be super helpful.</p>
+<p>Take our more-link sample from above. Default rules state that the color of a more-link should be #707070 like so:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>.more-link {
+</span></span><span style="display:flex;"><span>  <span style="color:#000080;font-weight:bold">color</span>: <span style="color:#00f">#707070</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>This rule is why you see the more-link show up as gray in the promo box above. If we change this just slightly, however, we can set up some options.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>.more-link {
+</span></span><span style="display:flex;"><span>  <span style="color:#000080;font-weight:bold">color</span>: var(--tc, <span style="color:#00f">#707070</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>This rules states that the more-link should use the <code>--tc</code> (text-color in my head) variable, and if that isn&rsquo;t set to use the standard #707070. This let&rsquo;s us set up rules for cards at the card level, without having to worry about what elements may or may not get thrown into it through the stakeholder review process. Take the promo CTA from before where the link was gray. Instead of thinking about the specific elements that are going to go into the card, using CSS properties we can think about the rules for the card itself.</p>
+<p>In promo cards, the text should be white, which we can now define like so:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>.promo {
+</span></span><span style="display:flex;"><span>  --tc: <span style="color:#000080;font-weight:bold">white</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><div class="package paper promo">
+  <h2>Title</h2>
+  <p class="summary">Offer text goes here</p>
+  <a class="more-link">OFFER ACTION</a>
+</div>
+<p>If we ensure that every atom that sets a change of color does so in this way, not only do we drastically shrink our CSS payload, but we also get a system that works more like stakeholders think. Can I put a button that links to my special page but also one of those arrow things that goes to our terms and conditions?</p>
+<div class="package paper promo" style="padding: 30px;">
+  <h3 class="sans bold" style="line-height: 1.5em">Get full access to The Sacramento Bee across all your devices. Unlimited Digital Access: Only $0.99 for your first month.</h3>
+  <a class="button">OFFER ACTION</a>
+  <a class="more-link">Terms and conditions</a>
+</div>
+<p>Why yes .. yes you can :)</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#000080;font-weight:bold">div</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;package paper promo&#34;</span> <span style="color:#f00">style</span>=<span style="color:#00f">&#34;padding: 30px;&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#000080;font-weight:bold">h3</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;sans bold&#34;</span> <span style="color:#f00">style</span>=<span style="color:#00f">&#34;line-height: 1.5em&#34;</span>&gt;Get full access to The Sacramento Bee across all your devices. Unlimited Digital Access: Only $0.99 for your first month.&lt;/<span style="color:#000080;font-weight:bold">h3</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#000080;font-weight:bold">a</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;button&#34;</span>&gt;OFFER ACTION&lt;/<span style="color:#000080;font-weight:bold">a</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#000080;font-weight:bold">a</span> <span style="color:#f00">class</span>=<span style="color:#00f">&#34;more-link&#34;</span>&gt;Terms and conditions&lt;/<span style="color:#000080;font-weight:bold">a</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#000080;font-weight:bold">div</span>&gt;
+</span></span></code></pre></div></article>
 
-<section class="grid">
-  <article class="card lead-item">
-    <figure>
-      <a href="#">
-        <img src="https://www.sacbee.com/news/business/real-estate-news/y1oz1w/picture261135347/alternates/LANDSCAPE_768/House%20on%207400%20block%20of%20Oak%20Pine%20Lane" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
-      </a>
-    </figure>
-    <div class="package">
-      <a class="kicker h6" href="#">FOOD</a>
-      <h2 class="h1"><a href="#">Flaggy kendos show us how tadpoles can be cauliflowers.</a></h2>
-      <p class="summary">As far as we can estimate, a baboon is a vaulting blow. An effuse feet's objective comes with it the thought that the quaggy discussion is a rub. The amount is a growth. The literature would have us believe that a dreggy hate is not but a nephew.</p>
-      <div class="time">March 16, 2018 11:33 am</div>
-    </div>
-  </article>
-
-  <article class="card ">
-    <figure>
-      <a href="#">
-        <img src="https://www.sacbee.com/news/business/real-estate-news/9t2jxl/picture261126942/alternates/LANDSCAPE_768/unitedrobots-median_Sloughhouse_Rancho_Murieta_Wilton_20220401_20220430_134410955-0-chyron.png" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
-      </a>
-    </figure>
-    <div class="package">
-      <a class="kicker h6" href="#">FOOD</a>
-      <h2 class="h3"><a href="#">Some posit the afoot algeria to be less than unpared.</a></h2>
-      <div class="time">March 16, 2018 11:33 am</div>
-    </div>
-  </article>
-
-  <article class="card ">
-    <figure>
-      <a href="#">
-        <img src="https://www.sacbee.com/news/business/real-estate-news/9t2jxl/picture261126942/alternates/LANDSCAPE_768/unitedrobots-median_Sloughhouse_Rancho_Murieta_Wilton_20220401_20220430_134410955-0-chyron.png" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
-      </a>
-    </figure>
-    <div class="package">
-      <a class="kicker h6" href="#">FOOD</a>
-      <h2 class="h3"><a href="#">This could be, or perhaps one cannot separate subwaies from strifeful flavors.</a></h2>
-      <div class="time">March 16, 2018 11:33 am</div>
-    </div>
-  </article>
-
-  <fake-ad class="zone"></fake-ad>
-  <article class="card ">
-    <figure>
-      <a href="#">
-        <img src="https://www.sacbee.com/news/business/real-estate-news/9t2jxl/picture261126942/alternates/LANDSCAPE_768/unitedrobots-median_Sloughhouse_Rancho_Murieta_Wilton_20220401_20220430_134410955-0-chyron.png" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
-      </a>
-    </figure>
-    <div class="package">
-      <a class="kicker h6" href="#">FOOD</a>
-      <h2 class="h3"><a href="#">Those nancies are nothing more than hooks.</a></h2>
-      <div class="time">March 16, 2018 11:33 am</div>
-    </div>
-  </article>
-
-  <article class="card ">
-    <figure>
-      <a href="#">
-        <img src="https://www.sacbee.com/news/business/real-estate-news/9t2jxl/picture261126942/alternates/LANDSCAPE_768/unitedrobots-median_Sloughhouse_Rancho_Murieta_Wilton_20220401_20220430_134410955-0-chyron.png" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
-      </a>
-    </figure>
-    <div class="package">
-      <a class="kicker h6" href="#">FOOD</a>
-      <h2 class="h3"><a href="#">Some posit the afoot algeria to be less than unpared.</a></h2>
-      <div class="time">March 16, 2018 11:33 am</div>
-    </div>
-  </article>
-
-  <article class="card ">
-    <figure>
-      <a href="#">
-        <img src="https://www.sacbee.com/news/business/real-estate-news/9t2jxl/picture261126942/alternates/LANDSCAPE_768/unitedrobots-median_Sloughhouse_Rancho_Murieta_Wilton_20220401_20220430_134410955-0-chyron.png" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
-      </a>
-    </figure>
-    <div class="package">
-      <a class="kicker h6" href="#">FOOD</a>
-      <h2 class="h3"><a href="#">This could be, or perhaps one cannot separate subwaies from strifeful flavors.</a></h2>
-      <div class="time">March 16, 2018 11:33 am</div>
-    </div>
-  </article>
-
-  <article class="card ">
-    <figure>
-      <a href="#">
-        <img src="https://www.sacbee.com/news/business/real-estate-news/9t2jxl/picture261126942/alternates/LANDSCAPE_768/unitedrobots-median_Sloughhouse_Rancho_Murieta_Wilton_20220401_20220430_134410955-0-chyron.png" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
-      </a>
-    </figure>
-    <div class="package">
-      <a class="kicker h6" href="#">FOOD</a>
-      <h2 class="h3"><a href="#">Those nancies are nothing more than hooks.</a></h2>
-      <div class="time">March 16, 2018 11:33 am</div>
-    </div>
-  </article>
-
-  <article class="card ">
-    <figure>
-      <a href="#">
-        <img src="https://www.sacbee.com/news/business/real-estate-news/9t2jxl/picture261126942/alternates/LANDSCAPE_768/unitedrobots-median_Sloughhouse_Rancho_Murieta_Wilton_20220401_20220430_134410955-0-chyron.png" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
-      </a>
-    </figure>
-    <div class="package">
-      <a class="kicker h6" href="#">FOOD</a>
-      <h2 class="h3"><a href="#">This could be, or perhaps one cannot separate subwaies from strifeful flavors.</a></h2>
-      <div class="time">March 16, 2018 11:33 am</div>
-    </div>
-  </article>
-
-  <article class="card ">
-    <figure>
-      <a href="#">
-        <img src="https://www.sacbee.com/news/business/real-estate-news/9t2jxl/picture261126942/alternates/LANDSCAPE_768/unitedrobots-median_Sloughhouse_Rancho_Murieta_Wilton_20220401_20220430_134410955-0-chyron.png" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
-      </a>
-    </figure>
-    <div class="package">
-      <a class="kicker h6" href="#">FOOD</a>
-      <h2 class="h3"><a href="#">Some posit the afoot algeria to be less than unpared.</a></h2>
-      <div class="time">March 16, 2018 11:33 am</div>
-    </div>
-  </article>
-
-  <fake-ad class="zone"></fake-ad>
-  <fake-ad class="zone" size="[728,90]"></fake-ad>
-
-  <div class="hidden">
-    <link rel="stylesheet" href="./home-guide.css">
-
-    <custom-card order="before">
-      <div class="panel" style="padding-bottom: 0;">
-        <img src="https://media.mcclatchy.com/2022/mia-naked-politics/miami-naked-politics-logo-color.svg" width="300">
-        <p>In ancient times some unclipped americas are thought of simply as authors. The literature would have us believe that a harmless ice is not but a legal. This could be, or perhaps a prideless hair's windscreen comes with it the thought that the grainy shrine is a comparison. Few can name a zesty hail that isn't an upcast viscose.</p>
+    <section class="grid">
+      <div class="card read-next col-span-2">
+        <div class="label sticky"><span class="h5">READ NEXT</span></div>
+        <figure>
+          <img src="https://www.kansascity.com/living/food-drink/come-into-my-kitchen/tl1ycf/picture205504244/ALTERNATES/LANDSCAPE_1140/0321%20cimk%20kuwata%2003022018%20s%20%284%29" alt="Lorem ipsum dolor sit amet" width="1140" height="161" loading="lazy">
+        </figure>
+        <div class="package">
+          <header class="header">
+            <a class="kicker h6" href="#">SECTION</a>
+            <h1><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tempus lorem a</a></h1>
+            <div class="bio">
+              <div>
+                <p class="byline">By <a href="#">John Doe</a> <span class="credit">SAMPLE NEWSPAPER</span></p>
+                <div>
+                  <time>AUG 13, 2018, UPDATED 4 MONTHS AGO</time>
+                </div>
+              </div>
+              <div class="social-media">
+                <a href="#">
+                  <svg data-name="twitter" viewBox="0 0 512 512"><title>Share this story on Twitter</title><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg>
+                </a>
+                <a href="#">
+                  <svg data-name="facebook" viewBox="0 0 264 512"><title>Share this story on Facebook</title><path d="M76.7 512V283H0v-91h76.7v-71.7C76.7 42.4 124.3 0 193.8 0c33.3 0 61.9 2.5 70.2 3.6V85h-48.2c-37.8 0-45.1 18-45.1 44.3V192H256l-11.7 91h-73.6v229"></path></svg>
+                </a>
+                <a href="#">
+                  <svg data-name="envelope" viewBox="0 0 512 512"><title>Email this story</title><path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"></path></svg>
+                </a>
+              </div>
+            </div>
+          </header>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate enim dolor, sit amet lacinia ex lacinia ac. Sed facilisis nulla felis, eget ultricies dolor cursus nec. Cras sodales ligula elementum ipsum elementum gravida.</p>
+          <a href="#" class="more-link">KEEP READING</a>
+        </div>
       </div>
-    </custom-card>
 
-    <custom-card order="10">
-      <div class="viz impact">
-        <p>Custom work placeholder</p>
-      </div>
-    </custom-card>
-
-    <custom-card order="20">
-      <div class="viz impact">
-        <p>Custom work placeholder</p>
-      </div>
-    </custom-card>
+      <div class="digest ">
+  <div class="paper">
+    <a href="#" class="label ">
+      <span class="h5">OPINION</span>
+    </a>
+    <article class="package">
+      <h2 class="h3"><a href="#">Kudlow joins White House that sorely needs cooler heads to prevail</a></h2>
+      <time>March 19, 2018 5:34 pm</time>
+    </article>
+    <article class="package">
+      <h2 class="h3"><a href="#">The Episcopal Church changed course for our LGBT members</a></h2>
+      <time>March 16, 2018 3:42 pm</time>
+    </article>
+    <article class="package">
+      <h2 class="h3"><a href="#">The Kansas Republican Party is taking a stance on transgender identity</a></h2>
+      <time>March 16, 2018 3:58 pm</time>
+    </article>
+    <article class="package">
+      <h2 class="h3"><a href="#">Letters: Readers discuss teen drinking, tax-cut benefits in Missouri and student protests</a></h2>
+      <time>March 16, 2018 4:08 pm</time>
+    </article>
+    <article class="package">
+      <h2 class="h3"><a href="#">Administration unveils steps to boost racial equity in govt</a></h2>
+      <time>March 16, 2018 4:08 pm</time>
+    </article>
   </div>
-</section>
+  <a href="#" class="more-link">MORE OPINION</a>
+</div>
 
+        <article class="card ">
+  <figure>
+    <a href="#">
+      <img src="../../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
+    </a>
+  </figure>
+  <div class="package">
+    <a class="kicker h6" href="#">FOOD</a>
+    <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
+    <div class="time">March 16, 2018 11:33 am</div>
+  </div>
+</article>
+
+        <article class="card ">
+  <figure>
+    <a href="#">
+      <img src="../../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
+    </a>
+  </figure>
+  <div class="package">
+    <a class="kicker h6" href="#">FOOD</a>
+    <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
+    <div class="time">March 16, 2018 11:33 am</div>
+  </div>
+</article>
+
+        <article class="card ">
+  <figure>
+    <a href="#">
+      <img src="../../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
+    </a>
+  </figure>
+  <div class="package">
+    <a class="kicker h6" href="#">FOOD</a>
+    <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
+    <div class="time">March 16, 2018 11:33 am</div>
+  </div>
+</article>
+
+        <article class="card ">
+  <figure>
+    <a href="#">
+      <img src="../../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
+    </a>
+  </figure>
+  <div class="package">
+    <a class="kicker h6" href="#">FOOD</a>
+    <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
+    <div class="time">March 16, 2018 11:33 am</div>
+  </div>
+</article>
+
+        <article class="card ">
+  <figure>
+    <a href="#">
+      <img src="../../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
+    </a>
+  </figure>
+  <div class="package">
+    <a class="kicker h6" href="#">FOOD</a>
+    <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
+    <div class="time">March 16, 2018 11:33 am</div>
+  </div>
+</article>
+
+
+      <article class="card">
+        <figure>
+          <a href="#">
+            <img src="../../img/lanterns.jpg" width="1140" height="641" alt="Lanterns floating in a body of water" loading="lazy">
+          </a>
+        </figure>
+        <div class="package">
+          <a class="kicker h6 impact" href="#">SPONSORED CONTENT</a>
+          <h3><a href="#">Lorem ipsum dolor sit amet.</a></h3>
+          <time>BY FIRST LAST AS SEEN ON SITE</time>
+        </div>
+      </article>
+    </section>
+  </div>
 
   <footer class="impact">
   <section class="footer">
@@ -489,7 +567,6 @@
   <a href="#">PRIVACY POLICY</a>
   <a href="#">TERMS OF SERVICE</a>
 </section>
-
 
     
   </body>

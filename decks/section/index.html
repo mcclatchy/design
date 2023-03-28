@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-layout="">
   <head>
     <title>section</title>
     <meta name="description" content="A sample section page.">
@@ -56,6 +56,10 @@
     <link rel="stylesheet" href="../../css/cards/utilities.css">
 
     
+    <link rel="stylesheet" href="../../css/decks/premium.css">
+    <link rel="stylesheet" href="../../css/decks/guide.css">
+
+    
     <link rel="stylesheet" href="../../css/website/site.css">
 
     
@@ -66,7 +70,6 @@
   <script type="module" src="../../js/custom-card.js"></script>
 
   </head>
-
   <body class="decks" data-template="page">
     <div class="banner">
       <a href="../../">
@@ -76,7 +79,7 @@
         <a href="https://mcclatchy.github.io/design/email/">email</a>
         <a href="https://mcclatchy.github.io/design/markets/">markets</a>
         <a href="https://mcclatchy.github.io/design/saratoga/">style guide</a>
-        <a href="https://mcclatchy.github.io/design/theming/">theming</a>
+        <a href="https://mcclatchy.github.io/design/themes/">theming</a>
       </nav>
     </div>
   
@@ -312,7 +315,11 @@
     </div>
   </article>
 
-  <fake-ad class="zone two-rows" size="[300,600]" data-zone="3"></fake-ad>
+
+  <div class="zone two-rows">
+    <fake-ad size="[300,600]" data-zone="3"></fake-ad>
+  </div>
+
   <div class="digest ">
     <div class="paper">
       <a href="#" class="label ">
@@ -394,7 +401,11 @@
     </div>
   </article>
 
-  <fake-ad class="zone two-rows" size="[300,600]" data-zone="4"></fake-ad>
+
+  <div class="zone two-rows">
+    <fake-ad size="[300,600]" data-zone="4"></fake-ad>
+  </div>
+
   <div class="digest optional-digest">
     <div class="paper">
       <a href="#" class="label ">
@@ -489,46 +500,10 @@
     </div>
   </article>
 
-  <fake-ad class="zone three-columns" size="[[970,250],[728,90]]" data-zone="23" style="--color: cornflowerblue;"></fake-ad>
-  <article class="card ">
-    <figure>
-      <a href="#">
-        <img src="../../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
-      </a>
-    </figure>
-    <div class="package">
-      <a class="kicker h6" href="#">FOOD</a>
-      <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
-      <div class="time">March 16, 2018 11:33 am</div>
-    </div>
-  </article>
 
-  <article class="card ">
-    <figure>
-      <a href="#">
-        <img src="../../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
-      </a>
-    </figure>
-    <div class="package">
-      <a class="kicker h6" href="#">FOOD</a>
-      <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
-      <div class="time">March 16, 2018 11:33 am</div>
-    </div>
-  </article>
-
-  <fake-ad class="zone" data-zone="5"></fake-ad>
-  <article class="card ">
-    <figure>
-      <a href="#">
-        <img src="../../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
-      </a>
-    </figure>
-    <div class="package">
-      <a class="kicker h6" href="#">FOOD</a>
-      <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
-      <div class="time">March 16, 2018 11:33 am</div>
-    </div>
-  </article>
+  <div class="zone three-columns">
+    <fake-ad size="[[970,250],[728,90]]" data-zone="23" style="--color: cornflowerblue;"></fake-ad>
+  </div>
 
   <article class="card ">
     <figure>
@@ -556,20 +531,11 @@
     </div>
   </article>
 
-  <article class="card ">
-    <figure>
-      <a href="#">
-        <img src="../../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
-      </a>
-    </figure>
-    <div class="package">
-      <a class="kicker h6" href="#">FOOD</a>
-      <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
-      <div class="time">March 16, 2018 11:33 am</div>
-    </div>
-  </article>
 
-  <fake-ad class="zone three-columns" size="[[970,250],[728,90]]" data-zone="9"></fake-ad>
+  <div class="zone">
+    <fake-ad data-zone="5"></fake-ad>
+  </div>
+
   <article class="card ">
     <figure>
       <a href="#">
@@ -622,7 +588,68 @@
     </div>
   </article>
 
-  <fake-ad class="zone three-columns" size="[[728,90],[320,50]]" data-zone="10"></fake-ad>
+
+  <div class="zone three-columns">
+    <fake-ad size="[[970,250],[728,90]]" data-zone="9"></fake-ad>
+  </div>
+
+  <article class="card ">
+    <figure>
+      <a href="#">
+        <img src="../../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
+      </a>
+    </figure>
+    <div class="package">
+      <a class="kicker h6" href="#">FOOD</a>
+      <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
+      <div class="time">March 16, 2018 11:33 am</div>
+    </div>
+  </article>
+
+  <article class="card ">
+    <figure>
+      <a href="#">
+        <img src="../../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
+      </a>
+    </figure>
+    <div class="package">
+      <a class="kicker h6" href="#">FOOD</a>
+      <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
+      <div class="time">March 16, 2018 11:33 am</div>
+    </div>
+  </article>
+
+  <article class="card ">
+    <figure>
+      <a href="#">
+        <img src="../../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
+      </a>
+    </figure>
+    <div class="package">
+      <a class="kicker h6" href="#">FOOD</a>
+      <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
+      <div class="time">March 16, 2018 11:33 am</div>
+    </div>
+  </article>
+
+  <article class="card ">
+    <figure>
+      <a href="#">
+        <img src="../../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
+      </a>
+    </figure>
+    <div class="package">
+      <a class="kicker h6" href="#">FOOD</a>
+      <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
+      <div class="time">March 16, 2018 11:33 am</div>
+    </div>
+  </article>
+
+
+  <div class="zone three-columns">
+    <fake-ad size="[[728,90],[320,50]]" data-zone="10"></fake-ad>
+  </div>
+
 
   <div class="load-more">
     <a class="button big impact" href="#page2">Load More</a>

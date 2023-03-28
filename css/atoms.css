@@ -8,6 +8,10 @@
   --sans: "Noto Sans", sans-serif;
   --serif: "Noto Serif", serif;
   --premium-serif: "DM Serif Display", serif;
+  --h1: 1.875rem;
+  --h2: 1.5rem;
+  --h3: 1.2rem;
+  --h4: 1rem;
 
   /* Spacing and alignment */
   --gap: 30px;
@@ -16,6 +20,8 @@
   --page-padding: 15px;
   --section-width: 1140px;
   --story-width: 728px;
+  --story-media-width: var(--story-width);
+  --story-embed-width: var(--story-width);
   --columns: repeat(auto-fit, minmax(300px, 1fr));
 
   /* Colors */
@@ -48,7 +54,10 @@
    * --ht: header transform
    * --hl: header leading
    * --hc: header color
-   * --hs: header size
+   * --h1: H1 header size
+   * --h2: H2 header size
+   * --h3: H3 header size
+   * --h4: H4 header size
    */
 
   /**
@@ -108,19 +117,19 @@ h6, .h6 {
 }
 
 h1, .h1 {
-  font-size: var(--hs, 1.875rem);
+  font-size: var(--h1);
 }
 
 h2, .h2 {
-  font-size: var(--hs, 1.5rem);
+  font-size: var(--h2);
 }
 
 h3, .h3 {
-  font-size: var(--hs, 1.2rem);
+  font-size: var(--h3);
 }
 
 h4, .h4 {
-  font-size: var(--hs, 1rem);
+  font-size: var(--h4);
 }
 
 h5, .h5 {
