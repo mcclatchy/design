@@ -41,14 +41,14 @@
  */
 
 .msb .topper h3 {
-  --hs: 13px;
+  --h3: 13px;
   --hf: var(--sans);
   --hc: var(--premium-impact);
   --ht: uppercase;
 }
 
 .msb .topper [slot="headline"] {
-  --hs: 8vw;
+  --h1: 8vw;
   --hw: normal;
   --hl: 1.1em;
   --hf: var(--premium-serif);
@@ -59,7 +59,7 @@
 
 @media(min-width: 768px) {
   .msb .topper [slot="headline"] {
-    --hs: 54px;
+    --h1: 54px;
   }
 }
 

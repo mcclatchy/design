@@ -1,0 +1,29 @@
+/*
+ * Guide theme
+ */
+
+[data-layout=guide] .story-body > figure,
+[data-layout=guide] .story-body > h3,
+[data-layout=guide] .story-body > h4 {
+  margin: 10px auto;
+}
+
+[data-layout=guide] .story-body > p + figure::before,
+[data-layout=guide] .story-body > p + h3::before {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 100%;
+  max-width: var(--story-body);
+  margin: 60px auto;
+  background: linear-gradient(to right, transparent, #999 50%, transparent);
+}
+
+[data-layout=guide] .story-body > p + figure::before {
+  margin-top: 40px;
+}
+
+[data-layout=guide] .story-body > h3 {
+  font: 400 2rem var(--sans);
+  text-transform: none;
+}

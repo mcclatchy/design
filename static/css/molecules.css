@@ -39,7 +39,7 @@
 }
 
 .package.no-img {
-  --hs: x-large;
+  --h3: x-large;
 }
 
 .package img {
@@ -164,7 +164,7 @@ section, .section {
 }
 
 .section-label {
-  margin: 0;
+  margin: 0 0 10px 0;
   padding: 0 var(--page-padding);
   font-weight: bold;
 }

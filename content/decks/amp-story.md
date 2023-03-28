@@ -2,7 +2,7 @@
 title: amp story
 description: A sample AMP story page.
 menu: decks
-layout: article
+layout: story
 zones: true
 aliases:
   - /saratoga/decks/amp-story/

@@ -2,7 +2,7 @@
 title: opinion story
 description: A sample opinion story page.
 menu: decks
-layout: article
+layout: story
 aliases: 
   - /saratoga/decks/opinion-story/
 ---

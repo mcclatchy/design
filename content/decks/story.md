@@ -2,7 +2,7 @@
 title: story
 description: A sample story page.
 menu: decks
-layout: article
+layout: story
 aliases:
   - /saratoga/sample/story/
 ---
