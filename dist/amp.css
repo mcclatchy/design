@@ -8,6 +8,10 @@
   --sans: "Noto Sans", sans-serif;
   --serif: "Noto Serif", serif;
   --premium-serif: "DM Serif Display", serif;
+  --h1: 1.875rem;
+  --h2: 1.5rem;
+  --h3: 1.2rem;
+  --h4: 1rem;
   /* Spacing and alignment */
   --gap: 30px;
   --half-gap: calc(var(--gap) / 2);
@@ -15,6 +19,8 @@
   --page-padding: 15px;
   --section-width: 1140px;
   --story-width: 728px;
+  --story-media-width: var(--story-width);
+  --story-embed-width: var(--story-width);
   --columns: repeat(auto-fit, minmax(300px, 1fr));
   /* Colors */
   --black: #01101c;
@@ -43,7 +49,10 @@
    * --ht: header transform
    * --hl: header leading
    * --hc: header color
-   * --hs: header size
+   * --h1: H1 header size
+   * --h2: H2 header size
+   * --h3: H3 header size
+   * --h4: H4 header size
    */
   /**
    * Text properties available
@@ -98,19 +107,19 @@ h6, .h6 {
 }
 
 h1, .h1 {
-  font-size: var(--hs, 1.875rem);
+  font-size: var(--h1);
 }
 
 h2, .h2 {
-  font-size: var(--hs, 1.5rem);
+  font-size: var(--h2);
 }
 
 h3, .h3 {
-  font-size: var(--hs, 1.2rem);
+  font-size: var(--h3);
 }
 
 h4, .h4 {
-  font-size: var(--hs, 1rem);
+  font-size: var(--h4);
 }
 
 h5, .h5 {
@@ -563,7 +572,7 @@ figcaption, .caption {
 }
 
 .package.no-img {
-  --hs: x-large;
+  --h3: x-large;
 }
 
 .package img {
@@ -683,7 +692,7 @@ section, .section {
 }
 
 .section-label {
-  margin: 0;
+  margin: 0 0 10px 0;
   padding: 0 var(--page-padding);
   font-weight: bold;
 }
@@ -1234,16 +1243,11 @@ html.msb .masthead {
  * Embeds
  */
 .story-body .embed-infographic {
-  clear: both;
-  margin: 30px auto;
+  max-width: var(--story-embed-width);
 }
 
 .embed-infographic > * {
   max-width: 100%;
-}
-
-.story-body > .story-module {
-  margin: 30px auto;
 }
 
 /**
@@ -1252,6 +1256,7 @@ html.msb .masthead {
 .story-body > figure,
 .story-body > .figure,
 .story-body > .inline-video {
+  max-width: var(--story-media-width);
   margin: 30px auto;
   padding: 0;
 }
@@ -1304,24 +1309,6 @@ html.msb .masthead {
   padding: 0px 15px;
 }
 
-/**
- * Asides
- */
-.story-body aside > * {
-  margin: 30px auto;
-}
-
-@media (min-width: 930px) {
-  .story-body aside > * {
-    float: right;
-    margin: 0 -150px 30px 30px;
-  }
-
-  .story-body aside.left > * {
-    float: left;
-    margin: 0 30px 30px -150px;
-  }
-}
 /**
  * Mugshots
  */
@@ -1781,6 +1768,7 @@ Can we omit?
 @media (min-width: 990px) {
   .read-next {
     grid-column: span 2;
+    grid-row: span 2;
   }
 }
 .read-next .package {
@@ -2125,7 +2113,7 @@ form[id^=bx-form] {
 /*
  * WPS breaks from recommended DOM
  */
-[class*=photo-inline] figcaption,
+figure .img-container figcaption,
 .inline-video figcaption {
   padding-top: 10px;
 }

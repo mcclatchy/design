@@ -8,6 +8,10 @@
   --sans: "Noto Sans", sans-serif;
   --serif: "Noto Serif", serif;
   --premium-serif: "DM Serif Display", serif;
+  --h1: 1.875rem;
+  --h2: 1.5rem;
+  --h3: 1.2rem;
+  --h4: 1rem;
   /* Spacing and alignment */
   --gap: 30px;
   --half-gap: calc(var(--gap) / 2);
@@ -15,6 +19,8 @@
   --page-padding: 15px;
   --section-width: 1140px;
   --story-width: 728px;
+  --story-media-width: var(--story-width);
+  --story-embed-width: var(--story-width);
   --columns: repeat(auto-fit, minmax(300px, 1fr));
   /* Colors */
   --black: #01101c;
@@ -43,7 +49,10 @@
    * --ht: header transform
    * --hl: header leading
    * --hc: header color
-   * --hs: header size
+   * --h1: H1 header size
+   * --h2: H2 header size
+   * --h3: H3 header size
+   * --h4: H4 header size
    */
   /**
    * Text properties available
@@ -98,19 +107,19 @@ h6, .h6 {
 }
 
 h1, .h1 {
-  font-size: var(--hs, 1.875rem);
+  font-size: var(--h1);
 }
 
 h2, .h2 {
-  font-size: var(--hs, 1.5rem);
+  font-size: var(--h2);
 }
 
 h3, .h3 {
-  font-size: var(--hs, 1.2rem);
+  font-size: var(--h3);
 }
 
 h4, .h4 {
-  font-size: var(--hs, 1rem);
+  font-size: var(--h4);
 }
 
 h5, .h5 {
@@ -563,7 +572,7 @@ figcaption, .caption {
 }
 
 .package.no-img {
-  --hs: x-large;
+  --h3: x-large;
 }
 
 .package img {
@@ -683,7 +692,7 @@ section, .section {
 }
 
 .section-label {
-  margin: 0;
+  margin: 0 0 10px 0;
   padding: 0 var(--page-padding);
   font-weight: bold;
 }
@@ -1206,7 +1215,7 @@ html.msb .masthead {
     justify-content: end;
   }
 }
-/**
+/*
  * Section grid
  */
 .grid {
@@ -1265,7 +1274,7 @@ html.msb .masthead {
     grid-row-start: 6;
   }
 }
-/**
+/*
  * Load more button
  */
 .load-more {
@@ -1274,17 +1283,18 @@ html.msb .masthead {
   justify-content: center;
 }
 
-/**
+/*
  * Custom grid arrangements
  */
 .partner-digest-group .digest {
   grid-column: auto;
 }
 
-/**
- * Custom cards injectable element
+/*
+ * Regions are invisible wrappers for Taboola 
+ * dynamic injection, same as custom-cards
  */
-custom-card {
+.region, custom-card {
   display: contents;
 }
 
@@ -1316,16 +1326,11 @@ custom-card {
  * Embeds
  */
 .story-body .embed-infographic {
-  clear: both;
-  margin: 30px auto;
+  max-width: var(--story-embed-width);
 }
 
 .embed-infographic > * {
   max-width: 100%;
-}
-
-.story-body > .story-module {
-  margin: 30px auto;
 }
 
 /**
@@ -1334,6 +1339,7 @@ custom-card {
 .story-body > figure,
 .story-body > .figure,
 .story-body > .inline-video {
+  max-width: var(--story-media-width);
   margin: 30px auto;
   padding: 0;
 }
@@ -1386,24 +1392,6 @@ custom-card {
   padding: 0px 15px;
 }
 
-/**
- * Asides
- */
-.story-body aside > * {
-  margin: 30px auto;
-}
-
-@media (min-width: 930px) {
-  .story-body aside > * {
-    float: right;
-    margin: 0 -150px 30px 30px;
-  }
-
-  .story-body aside.left > * {
-    float: left;
-    margin: 0 30px 30px -150px;
-  }
-}
 /**
  * Mugshots
  */
@@ -1512,14 +1500,14 @@ custom-card {
  * Light DOM styles for the portal
  */
 .msb .topper h3 {
-  --hs: 13px;
+  --h3: 13px;
   --hf: var(--sans);
   --hc: var(--premium-impact);
   --ht: uppercase;
 }
 
 .msb .topper [slot=headline] {
-  --hs: 8vw;
+  --h1: 8vw;
   --hw: normal;
   --hl: 1.1em;
   --hf: var(--premium-serif);
@@ -1530,7 +1518,7 @@ custom-card {
 
 @media (min-width: 768px) {
   .msb .topper [slot=headline] {
-    --hs: 54px;
+    --h1: 54px;
   }
 }
 .msb .topper li {
@@ -1659,7 +1647,7 @@ custom-card {
  */
 .story-body > .zone {
   max-width: unset;
-  margin: 0;
+  margin: 40px 0;
   box-sizing: border-box;
 }
 
@@ -1675,13 +1663,13 @@ custom-card {
 /*
  * Custom changes
  */
-#zone-el-2 {
-  position: relative;
+#zeus_top-banner {
   padding: 15px 0;
 }
 
-#zeus_top-banner {
-  padding: 15px 0;
+stn-player {
+  width: min(var(--story-width), 100%);
+  margin: 0 auto;
 }
 
 /**
@@ -2179,7 +2167,7 @@ section.big-news {
 }
 
 .in-depth .package {
-  --hs: 1.75rem;
+  --h1: 1.75rem;
   --hw: bold;
 }
 
@@ -2239,6 +2227,7 @@ section.big-news {
 @media (min-width: 990px) {
   .read-next {
     grid-column: span 2;
+    grid-row: span 2;
   }
 }
 .read-next .package {
@@ -2271,11 +2260,11 @@ section.big-news {
   --lc: #707070;
   --scrollbar-foreground: #70707040;
   --spread: 15px;
+  --h1: x-large;
 }
 
 .section-nav .title {
   margin: 0;
-  --hs: x-large;
 }
 
 .section-nav .slider {
@@ -2738,7 +2727,7 @@ form[id^=bx-form] {
 /*
  * WPS breaks from recommended DOM
  */
-[class*=photo-inline] figcaption,
+figure .img-container figcaption,
 .inline-video figcaption {
   padding-top: 10px;
 }
@@ -2821,4 +2810,42 @@ form[id^=bx-form] {
  */
 .impact2020 .inline-immersive .title {
   font-size: 48px;
+}
+
+/*
+ * Premium theme
+ */
+[data-layout=premium] .story-body {
+  font-size: 19px;
+  --story-media-width: 920px;
+  --h1: 2.4rem;
+}
+
+/*
+ * Guide theme
+ */
+[data-layout=guide] .story-body > figure,
+[data-layout=guide] .story-body > h3,
+[data-layout=guide] .story-body > h4 {
+  margin: 10px auto;
+}
+
+[data-layout=guide] .story-body > p + figure::before,
+[data-layout=guide] .story-body > p + h3::before {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 100%;
+  max-width: var(--story-body);
+  margin: 60px auto;
+  background: linear-gradient(to right, transparent, #999 50%, transparent);
+}
+
+[data-layout=guide] .story-body > p + figure::before {
+  margin-top: 40px;
+}
+
+[data-layout=guide] .story-body > h3 {
+  font: 400 2rem var(--sans);
+  text-transform: none;
 }
