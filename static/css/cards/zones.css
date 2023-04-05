@@ -49,7 +49,8 @@
   padding: 15px 0;
 }
 
-stn-player {
-  width: min(var(--story-width), 100%);
-  margin: 0 auto;
+.story-body > .zone.stn-player {
+  max-width: var(--story-width);
+  margin: 40px auto;
+  padding: 0;
 }
