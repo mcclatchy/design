@@ -172,7 +172,7 @@ li {
   padding: 5px 8px;
   font-weight: normal;
   color: var(--tc);
-  border: 1px solid var(--tc);
+  border: 1px solid var(--tc, var(--black));
   border-radius: 2px;
   text-transform: uppercase;
   --ld: none;
