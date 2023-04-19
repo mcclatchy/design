@@ -11,141 +11,77 @@ aliases:
 
 {{< big-news >}}
 
+<div class="zone section">
+  <fake-ad size="[970,250]"></fake-ad>
+</div>
+
 <section class="grid">
 
   <!-- Option banner group (now hidden by default) -->
   <div class="option-banners" hidden>
     <script type="module" src="https://storage.googleapis.com/mc-high-impact/prodx/premium-topper/premium-topper.js"></script>
     <premium-topper class="topper" data-id="1at5xhMgQNOVYBpiSmJqstOiuB9Iwk6_vYu_Tbh6UnWY"></premium-topper>
-
-    <style>
-      .partner-content .digest {
-        grid-column: auto;
-      }
-
-      @media(min-width: 990px) {
-        .partner-content .zone {
-          grid-column: 1/-1;
-        }
-      }
-    </style>
-
-    <custom-card order="6">
-      <style>
-        .premium {
-          --paper-color: var(--premium-bc);
-          --tc: var(--premium-tc);
-          --hc: var(--premium-impact);
-          --bbc: white;
-          --bc: var(--black);
-          padding: var(--page-padding);
-          justify-content: center;
-        }
-
-        @media(min-width: 660px) {
-          .premium {
-            grid-column: span 2;
-          }
-        }
-
-        .premium > * {
-          max-width: 450px;
-        }
-      </style>
-
-      <div class="package paper premium">
-        <h3 class="h1">Check out what you're missing</h3>
-        <p>The plaguey ball comes from a puling reminder. The woolens could be said to resemble ageless decembers.</p>
-        <a href="#" class="button big">SUBSCRIBE</a>
-      </div>
-    </custom-card>
-
-    <custom-card order="11">
-      <style>
-        .special-project {
-          grid-column: 1/-1;
-          padding: var(--page-padding);
-          justify-content: center;
-          align-items: center;
-          min-height: 400px;
-          background-color: rgba(0,0,0,0.6);
-          position: relative;
-          overflow: hidden;
-          font-family: var(--sans);
-          text-align: center;
-        }
-
-        .special-project * {
-          position: relative;
-          max-width: var(--story-width);
-        }
-
-        .special-project img {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          max-width: unset;
-          object-fit: cover;
-          filter: brightness(0.4);
-        }
-      </style>
-
-      <div class="card impact special-project">
-        <img src="https://media.mcclatchy.com/creatives/skylines/kentucky.jpg">
-        <h1>Special Project</h1>
-        <p>Their washer was, in this moment, an uncleansed find. Some rigid distributors are thought of simply as dictionaries. The literature would have us believe that a gated connection is not but a periodical.</p>
-      </div>
-    </custom-card>
-
-    <custom-card order="17">
-      <div class="paper promo package" style="align-content: center;">
-        <h5 class="h1">Get the latest headlines delivered directly to your inbox</h5>
-        <p class="summary">Sign up for Morning Rush and get all the news you need to start your day.</p>
-        <input type="email" placeholder="Enter your email address">
-        <button class="button">Submit</button>
-      </div>
-    </custom-card>
-    
-    <custom-card order="after">
-      <div class="panel" style="--paper-color: white;">
-        <h2>This is a test panel</h2>
-        <p>A sunburnt color's scallion comes with it the thought that the caring square is a risk. Some rushing railwaies are thought of simply as mosquitos. The tiptop ray reveals itself as a chanceful start to those who look. Recent controversy aside, the literature would have us believe that a cordate crib is not but a timbale.</p>
-      </div>
-    </custom-card>
   </div>
   <!-- End option banners group -->
 
   <!-- Start main card loop coming from WPS -->
   {{< card class="lead-item" headline-size="h1" >}}
-  <fake-ad class="zone two-rows" size="[300,600]"></fake-ad>
+
+  <div class="zone two-rows">
+    <fake-ad size="[300,600]"></fake-ad>
+  </div>
+  
   {{< digest >}}
+
   {{< card >}}
   {{< card >}}
+
   {{< video-digest >}}
+
+  <!-- 
+    For Taboola regions the "region" wrapper will render
+    the cards as children of the grid
+  -->
   <div class="region">
     {{< card >}}
     {{< card >}}
     {{< card >}}
     {{< card >}}
   </div>
-  <div class="partner-content grid three-columns">
-    <fake-ad class="zone two-rows" size="[[970,250],[300,600]]"></fake-ad>
+
+  <div class="grid three-columns">
+    <div class="partner-label">
+      <span>Videos</span>
+    </div>
+    <div class="three-columns" style="padding-top: 50%; background-color: var(--impact);"></div>
+  </div>
+
+  {{< card >}}
+  {{< card >}}
+
+  <div class="zone">
+    <fake-ad></fake-ad>
+  </div>
+  
+  <div class="grid three-columns partner-digest-group">
+    <div class="partner-label">
+      <span>From our partners</span>
+    </div>
     {{< digest kicker="PARTNER CONTENT" >}}
     {{< digest kicker="PARTNER CONTENT" >}}
     {{< digest kicker="PARTNER CONTENT" >}}
   </div>
+
   {{< card >}}
   {{< card >}}
-  <fake-ad class="zone"></fake-ad>
-  {{< card >}}
-  {{< card >}}
-  {{< card >}}
-  {{< card >}}
+
+  <div class="zone three-columns">
+    <fake-ad size="[970,250]"></fake-ad>
+  </div>
+
   {{< in-depth >}}
-  <div class="partner-content grid three-columns">
-    <fake-ad class="zone two-rows" size="[[970,250],[300,600]]"></fake-ad>
+
+  <div class="grid three-columns digest-group">
     {{< digest label="sticky" >}}
     {{< digest label="sticky" >}}
     {{< digest label="sticky" >}}
