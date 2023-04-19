@@ -77,7 +77,7 @@
  * Custom grid arrangements
  */
 
-.partner-digest-group .digest {
+[class*=digest-group] .digest {
   grid-column: auto;
 }
 
