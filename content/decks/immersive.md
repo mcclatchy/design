@@ -3,6 +3,7 @@ title: immersive
 description: A sample story page.
 menu: decks
 layout: story
+theme: dark
 zones: true
 aliases: 
   - /saratoga/decks/immersive/

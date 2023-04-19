@@ -27,19 +27,28 @@
   /* Colors */
   --black: #01101c;
   --gray: #707070;
+  --lightgrey: #d3d3d3;
   --impact: #373737;
   --promo: #31409F;
   --premium-bc: #00223e;
   --premium-tc: white;
+  --dark-bc: ;
+  --dark-tc: ;
   --premium-impact: #ffd71a;
   --body-background: #f4f4f4;
   --zone-background: #e6e6e6;
+
+  --primary-color: ;
+  --secondary-color: ;
+  --tertiary-color: ;
 
   /* Link and button defaults */
   --lc: inherit;
   --ld: none;
   --bc: white;
   --bbc: var(--impact);
+
+  /* Label defaults */
 
   /* Paper box shadow */
   --paper-shadow: 
@@ -162,8 +171,8 @@ li {
   display: inline-block;
   padding: 5px 8px;
   font-weight: normal;
-  color: var(--tc, var(--black));
-  border: 1px solid var(--tc, var(--black));
+  color: var(--tc);
+  border: 1px solid var(--tc);
   border-radius: 2px;
   text-transform: uppercase;
   --ld: none;
@@ -382,7 +391,7 @@ form.paper {
 }
 
 label { 
-  position: relative;
+  position: xive;
   display: block;
   font: 700 0.875rem var(--sans);
   line-height: 1.5;
