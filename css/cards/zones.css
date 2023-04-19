@@ -49,8 +49,8 @@
   padding: 15px 0;
 }
 
-.zone.stn-player {
-  background-color: var(--zone-background);
-  min-height: unset;
-  padding: var(--page-padding) calc((100vw - var(--story-width))/2);
+.story-body > .zone.stn-player {
+  max-width: var(--story-width);
+  margin: 40px auto;
+  padding: 0;
 }
