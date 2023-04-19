@@ -1,0 +1,37 @@
+/*
+ * Dark theme
+ */
+
+ [data-layout=dark]:root {
+    --zone-background: #003e71;
+    --body-background: #003e71;
+    --paper-color: var(--premium-bc);
+    color: var(--premium-tc);
+    --tc: var(--premium-tc);
+ }
+
+ [data-layout=dark] .story-body {
+    --lc: #809fff;
+    --lhc: #9ab2ff;
+ }
+
+ [data-layout=dark] figcaption,
+ [data-layout=dark] time,
+ [data-layout=dark] .time,
+ [data-layout=dark] .byline,
+ [data-layout=dark] .byline a,
+ [data-layout=dark] .card a.more-link,
+ [data-layout=dark] .digest a.more-link {
+    color: #d3d3d3;
+ }
+
+[data-layout=dark] .label > *,
+[data-layout=dark] .kicker.impact {
+    color: var(--bbc, var(--impact));
+    background-color: var(--bc, white);
+}
+
+[data-layout=dark] .related-stories {
+    --lc: var(--premium-tc);
+    --lhc: var(--premium-tc);
+}
