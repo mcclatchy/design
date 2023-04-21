@@ -140,9 +140,9 @@
 
 .cnx-lead-wrapper {
   height: auto;
-  padding: 10px 0 15px 0;
   border-top: 8px solid var(--zone-background);
   border-bottom: 3px solid var(--zone-background);
+  /* margin-bottom: 15px; */
 }
 
 .cnx-lead-wrapper::before {
@@ -152,7 +152,7 @@
   font-size: var(--h3);
   font-weight: bold;
   text-transform: uppercase;
-  margin-bottom: 10px;
+  margin: 10px 0;
 }
  
 /*
