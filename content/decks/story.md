@@ -8,7 +8,8 @@ aliases:
 ---
 
 {{% header %}}
-{{< figure >}}
+<!-- {{< figure >}} -->
+{{< ai-video-player >}}
 {{< series-nav >}}
 
 {{< correction >}}
