@@ -27,6 +27,7 @@
   /* Colors */
   --black: #01101c;
   --gray: #707070;
+  --lightgrey: #d3d3d3;
   --impact: #373737;
   --promo: #31409F;
   --premium-bc: #00223e;
@@ -162,7 +163,7 @@ li {
   display: inline-block;
   padding: 5px 8px;
   font-weight: normal;
-  color: var(--tc, var(--black));
+  color: var(--tc);
   border: 1px solid var(--tc, var(--black));
   border-radius: 2px;
   text-transform: uppercase;
