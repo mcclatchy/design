@@ -3,8 +3,8 @@
  */
 
 .related-stories {
-  --lc: #222;
-  --lhc: #222;
+  --lc: var(--tc);
+  --lhc: var(--tc);
 }
 
 .related-stories h5 {

@@ -27,7 +27,7 @@
   /* Colors */
   --black: #01101c;
   --gray: #707070;
-  --lightgrey: #d3d3d3;
+  --lightgray: #d3d3d3;
   --impact: #373737;
   --promo: #31409F;
   --premium-bc: #00223e;
@@ -35,6 +35,7 @@
   --premium-impact: #ffd71a;
   --body-background: #f4f4f4;
   --zone-background: #e6e6e6;
+  --supporting-tc: var(--gray);
 
   /* Link and button defaults */
   --lc: inherit;
@@ -176,7 +177,7 @@ li {
 time, .time, .byline {
   display: inline-block;
   text-transform: uppercase;
-  color: var(--tc, var(--gray));
+  color: var(--supporting-tc);
   font: 0.75rem/1.1em var(--sans);
 }
 
@@ -222,12 +223,12 @@ summary, .summary {
   justify-self: end;
   font: 700 0.75rem/1em var(--sans);
   text-transform: uppercase;
-  color: var(--tc, var(--gray));
+  color: var(--supporting-tc);
   text-decoration: none;
 }
 
 .more-link:hover {
-  color: var(--tc, var(--gray));
+  color: var(--supporting-tc);
   text-decoration: none;
 }
 
@@ -521,7 +522,7 @@ figure img {
 
 figcaption, .caption {
   font: 400 0.875rem/1.4em var(--sans);
-  color: var(--tc, var(--gray))
+  color: var(--supporting-tc);
 }
 
 /**

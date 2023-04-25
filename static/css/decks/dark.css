@@ -8,6 +8,7 @@
     --paper-color: var(--premium-bc);
     color: var(--premium-tc);
     --tc: var(--premium-tc);
+    --supporting-tc: var(--lightgray);
  }
 
  [data-layout=dark] .story-body {
@@ -15,23 +16,7 @@
     --lhc: #9ab2ff;
  }
 
- [data-layout=dark] figcaption,
- [data-layout=dark] time,
- [data-layout=dark] .time,
- [data-layout=dark] .byline,
- [data-layout=dark] .byline a,
- [data-layout=dark] .card a.more-link,
- [data-layout=dark] .digest a.more-link {
-    color: #d3d3d3;
- }
-
-[data-layout=dark] .label > *,
 [data-layout=dark] .kicker.impact {
-    color: var(--bbc, var(--impact));
+    color: var(--paper-color);
     background-color: var(--bc, white);
-}
-
-[data-layout=dark] .related-stories {
-    --lc: var(--premium-tc);
-    --lhc: var(--premium-tc);
 }

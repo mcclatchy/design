@@ -2,10 +2,12 @@
 title: dark
 description: An impact presentation for media-heavy articles.
 layout: story
+theme: dark
+menu: themes
 ---
 
-<link rel="stylesheet" href="https://storage.googleapis.com/mc-high-impact/themes/dark.css">
-<script type="module" src="https://storage.googleapis.com/mc-high-impact/themes/dark.js"></script>
+<!-- <link rel="stylesheet" href="https://storage.googleapis.com/mc-high-impact/themes/dark.css">
+<script type="module" src="https://storage.googleapis.com/mc-high-impact/themes/dark.js"></script> -->
 
 {{< header >}}
 {{< figure >}}
