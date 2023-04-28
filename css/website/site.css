@@ -155,3 +155,30 @@ td:first-child {
   font: 1.2em var(--sans);
   color: white;
 }
+
+/*
+ * Zones
+ */
+
+.zone::before {
+  content: '#' attr(id);
+  display: block;
+  position: absolute;
+  left: 0;
+  top: -1.1em;
+  font: 14px/1em var(--sans);
+  color: #555;
+}
+
+#zone-el-15 {
+  min-height: 600px;
+  background-color: #054164;
+  display: grid;
+  place-items: center;
+}
+
+#zone-el-15::before {
+  content: url("../../img/taboola.svg");
+  display: block;
+  width: 250px;
+}

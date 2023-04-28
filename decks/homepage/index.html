@@ -98,7 +98,8 @@
     </div>
   </div>
 
-  <div id="zone-el-2" class="zone" data-zone="2">
+  <div id="zone-el-1" class="zone-el hidden"></div>
+  <div id="zone-el-2" class="zone-el zone">
     <fake-ad size="[[970,250],[728,90],[320,50]]"></fake-ad>
   </div>
 
@@ -273,7 +274,6 @@
 
 
   
-
 <section class="big-news paper">
   <a href="#" class="label"><h5 class="impact">HURRICANE FLORENCE</h5></a>
   <h5 class="latest">LATEST NEWS</h5>
@@ -330,7 +330,7 @@
 </section>
 
 
-<div class="zone section">
+<div id="zone-el-3" class="zone-el zone">
   <fake-ad size="[970,250]"></fake-ad>
 </div>
 
@@ -356,14 +356,14 @@
   </article>
 
 
-  <div class="zone two-rows">
-    <fake-ad size="[300,600]"></fake-ad>
+  <div id="zone-el-5" class="zone-el zone">
+    <fake-ad></fake-ad>
   </div>
   
   <div class="digest ">
     <div class="paper">
       <a href="#" class="label ">
-        <span class="h5">OPINION</span>
+        <span class="h5">LATEST</span>
       </a>
       <article class="package">
         <h2 class="h3"><a href="#">Kudlow joins White House that sorely needs cooler heads to prevail</a></h2>
@@ -386,7 +386,7 @@
         <time>March 16, 2018 4:08 pm</time>
       </article>
     </div>
-    <a href="#" class="more-link">MORE OPINION</a>
+    <a href="#" class="more-link">MORE LATEST</a>
   </div>
 
 
@@ -417,51 +417,33 @@
   </article>
 
 
-  <div class="digest">
+  <div class="digest ">
     <div class="paper">
-      <a href="#" class="label">
-        <span class="h5">VIDEOS</span>
+      <a href="#" class="label ">
+        <span class="h5">TRENDING STORIES</span>
       </a>
-      <div class="package" style="padding-bottom: 0;">
-        <p class="summary gray" style="margin: 0;">McClatchy provides these videos in partnership with content providers. McClatchy earns revenue through this relationship.</p>
-      </div>
-      <article class="package thumb">
-        <div class="square-img">
-          <img src="../../img/kitten.jpg">
-        </div>
+      <article class="package">
         <h2 class="h3"><a href="#">Kudlow joins White House that sorely needs cooler heads to prevail</a></h2>
         <time>March 19, 2018 5:34 pm</time>
       </article>
-      <article class="package thumb">
-        <div class="square-img">
-          <img src="../../img/kitten.jpg">
-        </div>
+      <article class="package">
         <h2 class="h3"><a href="#">The Episcopal Church changed course for our LGBT members</a></h2>
         <time>March 16, 2018 3:42 pm</time>
       </article>
-      <article class="package thumb">
-        <div class="square-img">
-          <img src="../../img/kitten.jpg">
-        </div>
+      <article class="package">
         <h2 class="h3"><a href="#">The Kansas Republican Party is taking a stance on transgender identity</a></h2>
         <time>March 16, 2018 3:58 pm</time>
       </article>
-      <article class="package thumb">
-        <div class="square-img">
-          <img src="../../img/kitten.jpg">
-        </div>
+      <article class="package">
         <h2 class="h3"><a href="#">Letters: Readers discuss teen drinking, tax-cut benefits in Missouri and student protests</a></h2>
         <time>March 16, 2018 4:08 pm</time>
       </article>
-      <article class="package thumb">
-        <div class="square-img">
-          <img src="../../img/kitten.jpg">
-        </div>
+      <article class="package">
         <h2 class="h3"><a href="#">Administration unveils steps to boost racial equity in govt</a></h2>
         <time>March 16, 2018 4:08 pm</time>
       </article>
     </div>
-    <a href="#" class="more-link">MORE VIDEOS</a>
+    <a href="#" class="more-link">MORE TRENDING STORIES</a>
   </div>
 
 
@@ -558,22 +540,29 @@
   </article>
 
 
-  <div class="zone">
+  <div id="zone-el-6" class="zone-el zone">
     <fake-ad></fake-ad>
   </div>
   
-  <div class="grid three-columns partner-digest-group">
+  <div class="partner-digest-group">
     <div class="partner-label">
       <span>From our partners</span>
     </div>
     <div class="digest ">
       <div class="paper">
-        <a href="#" class="label ">
-          <span class="h5">PARTNER CONTENT</span>
+        <a href="#" class="label sticky">
+          <span class="h5">NATIONAL STORIES</span>
         </a>
-        <article class="package">
-          <h2 class="h3"><a href="#">Kudlow joins White House that sorely needs cooler heads to prevail</a></h2>
-          <time>March 19, 2018 5:34 pm</time>
+        <article class="card">
+          <figure>
+            <a href="#">
+              <img src="https://pics.mcclatchyinteractive.com/opinion/gi1163/picture205928719/ALTERNATES/LANDSCAPE_640/AP_18073734498485" srcset="https://pics.mcclatchyinteractive.com/opinion/gi1163/picture205928719/ALTERNATES/LANDSCAPE_1140/AP_18073734498485 1140w"> 
+            </a>
+          </figure>
+          <div class="package">
+            <h2 class="h3"><a href="#">Kudlow joins White House that sorely needs cooler heads to prevail</a></h2>
+            <time>March 19, 2018 5:34 pm</time>
+          </div>
         </article>
         <article class="package">
           <h2 class="h3"><a href="#">The Episcopal Church changed course for our LGBT members</a></h2>
@@ -592,17 +581,24 @@
           <time>March 16, 2018 4:08 pm</time>
         </article>
       </div>
-      <a href="#" class="more-link">MORE PARTNER CONTENT</a>
+      <a href="#" class="more-link">MORE NATIONAL STORIES</a>
     </div>
 
     <div class="digest ">
       <div class="paper">
-        <a href="#" class="label ">
-          <span class="h5">PARTNER CONTENT</span>
+        <a href="#" class="label sticky">
+          <span class="h5">BETTING</span>
         </a>
-        <article class="package">
-          <h2 class="h3"><a href="#">Kudlow joins White House that sorely needs cooler heads to prevail</a></h2>
-          <time>March 19, 2018 5:34 pm</time>
+        <article class="card">
+          <figure>
+            <a href="#">
+              <img src="https://pics.mcclatchyinteractive.com/opinion/gi1163/picture205928719/ALTERNATES/LANDSCAPE_640/AP_18073734498485" srcset="https://pics.mcclatchyinteractive.com/opinion/gi1163/picture205928719/ALTERNATES/LANDSCAPE_1140/AP_18073734498485 1140w"> 
+            </a>
+          </figure>
+          <div class="package">
+            <h2 class="h3"><a href="#">Kudlow joins White House that sorely needs cooler heads to prevail</a></h2>
+            <time>March 19, 2018 5:34 pm</time>
+          </div>
         </article>
         <article class="package">
           <h2 class="h3"><a href="#">The Episcopal Church changed course for our LGBT members</a></h2>
@@ -621,17 +617,24 @@
           <time>March 16, 2018 4:08 pm</time>
         </article>
       </div>
-      <a href="#" class="more-link">MORE PARTNER CONTENT</a>
+      <a href="#" class="more-link">MORE BETTING</a>
     </div>
 
     <div class="digest ">
       <div class="paper">
-        <a href="#" class="label ">
-          <span class="h5">PARTNER CONTENT</span>
+        <a href="#" class="label sticky">
+          <span class="h5">THE STREET</span>
         </a>
-        <article class="package">
-          <h2 class="h3"><a href="#">Kudlow joins White House that sorely needs cooler heads to prevail</a></h2>
-          <time>March 19, 2018 5:34 pm</time>
+        <article class="card">
+          <figure>
+            <a href="#">
+              <img src="https://pics.mcclatchyinteractive.com/opinion/gi1163/picture205928719/ALTERNATES/LANDSCAPE_640/AP_18073734498485" srcset="https://pics.mcclatchyinteractive.com/opinion/gi1163/picture205928719/ALTERNATES/LANDSCAPE_1140/AP_18073734498485 1140w"> 
+            </a>
+          </figure>
+          <div class="package">
+            <h2 class="h3"><a href="#">Kudlow joins White House that sorely needs cooler heads to prevail</a></h2>
+            <time>March 19, 2018 5:34 pm</time>
+          </div>
         </article>
         <article class="package">
           <h2 class="h3"><a href="#">The Episcopal Church changed course for our LGBT members</a></h2>
@@ -650,7 +653,7 @@
           <time>March 16, 2018 4:08 pm</time>
         </article>
       </div>
-      <a href="#" class="more-link">MORE PARTNER CONTENT</a>
+      <a href="#" class="more-link">MORE THE STREET</a>
     </div>
 
   </div>
@@ -682,8 +685,8 @@
   </article>
 
 
-  <div class="zone three-columns">
-    <fake-ad size="[970,250]"></fake-ad>
+  <div id="zone-el-8" class="zone-el zone">
+    <fake-ad></fake-ad>
   </div>
 
   <div class="card horizontal in-depth">
@@ -701,11 +704,11 @@
   </div>
 
 
-  <div class="grid three-columns digest-group">
+  <div class="digest-group">
     <div class="digest ">
       <div class="paper">
         <a href="#" class="label sticky">
-          <span class="h5">OPINION</span>
+          <span class="h5">SPORTS</span>
         </a>
         <article class="card">
           <figure>
@@ -735,13 +738,13 @@
           <time>March 16, 2018 4:08 pm</time>
         </article>
       </div>
-      <a href="#" class="more-link">MORE OPINION</a>
+      <a href="#" class="more-link">MORE SPORTS</a>
     </div>
 
     <div class="digest ">
       <div class="paper">
         <a href="#" class="label sticky">
-          <span class="h5">OPINION</span>
+          <span class="h5">LOCAL</span>
         </a>
         <article class="card">
           <figure>
@@ -771,7 +774,7 @@
           <time>March 16, 2018 4:08 pm</time>
         </article>
       </div>
-      <a href="#" class="more-link">MORE OPINION</a>
+      <a href="#" class="more-link">MORE LOCAL</a>
     </div>
 
     <div class="digest ">
@@ -811,9 +814,42 @@
     </div>
 
   </div>
+
+  <article class="card ">
+    <figure>
+      <a href="#">
+        <img src="../../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
+      </a>
+    </figure>
+    <div class="package">
+      <a class="kicker h6" href="#">FOOD</a>
+      <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
+      <div class="time">March 16, 2018 11:33 am</div>
+    </div>
+  </article>
+
+  <article class="card ">
+    <figure>
+      <a href="#">
+        <img src="../../img/kitten.jpg" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
+      </a>
+    </figure>
+    <div class="package">
+      <a class="kicker h6" href="#">FOOD</a>
+      <h2 class="h3"><a href="#">Kitten clings for life as man awaits rescue from Florence.</a></h2>
+      <div class="time">March 16, 2018 11:33 am</div>
+    </div>
+  </article>
+
+
+  <div id="zone-el-9" class="zone-el zone">
+    <fake-ad></fake-ad>
+  </div>
   <!-- End main card loop -->
 
 </section>
+
+<div id="zone-el-15" class="zone-el"></div>
 
 
   <footer class="impact">
