@@ -8,35 +8,31 @@ aliases:
   - /saratoga/decks/homepage/
 ---
 
-
 {{< big-news >}}
 
-<div class="zone section">
+<div id="zone-el-3" class="zone-el zone">
   <fake-ad size="[970,250]"></fake-ad>
 </div>
 
 <section class="grid">
 
   <!-- Option banner group (now hidden by default) -->
-  <div class="option-banners" hidden>
-    <script type="module" src="https://storage.googleapis.com/mc-high-impact/prodx/premium-topper/premium-topper.js"></script>
-    <premium-topper class="topper" data-id="1at5xhMgQNOVYBpiSmJqstOiuB9Iwk6_vYu_Tbh6UnWY"></premium-topper>
-  </div>
+  <div class="option-banners" hidden></div>
   <!-- End option banners group -->
 
   <!-- Start main card loop coming from WPS -->
   {{< card class="lead-item" headline-size="h1" >}}
 
-  <div class="zone two-rows">
-    <fake-ad size="[300,600]"></fake-ad>
+  <div id="zone-el-5" class="zone-el zone">
+    <fake-ad></fake-ad>
   </div>
   
-  {{< digest >}}
+  {{< digest kicker="LATEST" >}}
 
   {{< card >}}
   {{< card >}}
 
-  {{< video-digest >}}
+  {{< digest kicker="TRENDING STORIES" >}}
 
   <!-- 
     For Taboola regions the "region" wrapper will render
@@ -59,33 +55,42 @@ aliases:
   {{< card >}}
   {{< card >}}
 
-  <div class="zone">
+  <div id="zone-el-6" class="zone-el zone">
     <fake-ad></fake-ad>
   </div>
   
-  <div class="grid three-columns partner-digest-group">
+  <div class="partner-digest-group">
     <div class="partner-label">
       <span>From our partners</span>
     </div>
-    {{< digest kicker="PARTNER CONTENT" >}}
-    {{< digest kicker="PARTNER CONTENT" >}}
-    {{< digest kicker="PARTNER CONTENT" >}}
+    {{< digest label="sticky" kicker="NATIONAL STORIES" >}}
+    {{< digest label="sticky" kicker="BETTING" >}}
+    {{< digest label="sticky" kicker="THE STREET" >}}
   </div>
 
   {{< card >}}
   {{< card >}}
 
-  <div class="zone three-columns">
-    <fake-ad size="[970,250]"></fake-ad>
+  <div id="zone-el-8" class="zone-el zone">
+    <fake-ad></fake-ad>
   </div>
 
   {{< in-depth >}}
 
-  <div class="grid three-columns digest-group">
-    {{< digest label="sticky" >}}
-    {{< digest label="sticky" >}}
-    {{< digest label="sticky" >}}
+  <div class="digest-group">
+    {{< digest label="sticky" kicker="SPORTS" >}}
+    {{< digest label="sticky" kicker="LOCAL" >}}
+    {{< digest label="sticky" kicker="OPINION" >}}
+  </div>
+
+  {{< card >}}
+  {{< card >}}
+
+  <div id="zone-el-9" class="zone-el zone">
+    <fake-ad></fake-ad>
   </div>
   <!-- End main card loop -->
 
 </section>
+
+<div id="zone-el-15" class="zone-el"></div>

@@ -142,8 +142,8 @@
   height: auto;
   border-top: 8px solid var(--tertiary-body-color);
   border-bottom: 3px solid var(--tertiary-body-color);
-  margin-bottom: var(--gap);
   padding-bottom: 10px;
+  box-sizing: border-box;
 }
 
 .cnx-lead-wrapper::before {

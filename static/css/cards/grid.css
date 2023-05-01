@@ -77,6 +77,10 @@
  * Custom grid arrangements
  */
 
+[class*=digest-group] {
+  display: contents;
+}
+
 [class*=digest-group] .digest {
   grid-column: auto;
 }
