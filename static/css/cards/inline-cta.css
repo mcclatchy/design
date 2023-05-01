@@ -28,8 +28,8 @@
 
 .impact .inline-cta {
   padding: 15px;
-  --bc: #222;
-  --bbc: white;
-  --ld: underline;
-  --lhc: #b4bbe8;
+  --button-color: #222;
+  --button-background-color: var(--secondary-body-color);
+  --link-decoration: underline;
+  --link-hover-color: #b4bbe8;
 }

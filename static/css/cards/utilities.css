@@ -4,11 +4,12 @@
 
 .cutout {
   background-color: var(--bodyBackground);
+  /* background-color: var(--body-color); */
 }
 
 .gray {
-  color: var(--tc, var(--gray));
-  --bbc: var(--tc, var(--gray));
+  color: var(--text-color, var(--gray));
+  --bbc: var(--text-color, var(--gray));
 }
 
 .no-caps {
@@ -195,13 +196,13 @@ form[id^=bx-form] {
 #newsletter-signUpWidget {
   --hc: var(--black);
   --tc: var(--black);
-  --lc: #3C4D87;
-  --lhc: #5169B8;
+  --link-color: #3C4D87;
+  --link-hover-color: #5169B8;
 }
 
 #newsletter-signUpWidget .button {
-  --bbc: var(--impact);
-  --bc: white;
+  --button-background-color: var(--impact);
+  --button-color: white;
 }
 
 /*

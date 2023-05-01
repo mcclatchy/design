@@ -3,7 +3,7 @@
  */
 
 .in-depth {
-  background-color: var(--paper-color, #373737);
+  background-color: var(--tertiary-text-color);
 }
 
 .in-depth .package {

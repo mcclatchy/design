@@ -3,7 +3,8 @@
  */
 
 .timeline-event {
-	border-left: 1px solid var(--tc, #707070);
+	border-left: 1px solid var(--text-color, var(--gray));
+	/* border-left: 1px solid var(--secondary-text-color); */
 	max-width: 500px;
   position: relative;
   --hf: var(--sans);

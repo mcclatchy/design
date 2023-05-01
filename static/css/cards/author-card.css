@@ -14,8 +14,8 @@
   font-family: var(--sans);
   font-size: 0.875rem;
   align-items: center;
-  --lc: var(--gray);
-  --ld: none;
+  --link-color: var(--secondary-text-color);
+  --link-decoration: none;
   --ht: none;
   --gap: 0;
 }
@@ -80,7 +80,7 @@
 }
 
 .author-bio .h6 {
-  color: var(--gray);
+  color: var(--secondary-text-color);
 }
 
 @media(min-width: 600px) {

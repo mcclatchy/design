@@ -4,6 +4,10 @@
  * Note: this card could use a DOM refresher
  */
 
+ footer {
+  background-color: var(--dark-gray);
+ }
+
 .footer {
   margin: 0 auto;
   padding: var(--page-padding);
@@ -50,6 +54,10 @@
 .footer .social svg {
   width: 35px;
   height: 35px;
+}
+
+.footer .more-link {
+  color: white;
 }
 
 .footer-links {

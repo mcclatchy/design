@@ -71,6 +71,7 @@ td:first-child {
   border-bottom: 2px solid #ddd;
   box-sizing: border-box;
   --spread: 20px;
+  color: black;
 }
 
 @media(min-width: 769px) {

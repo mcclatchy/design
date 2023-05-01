@@ -1,7 +1,8 @@
 .section-nav {
   grid-column: 1/-1;
-  --lc: #707070;
-  --scrollbar-foreground: #70707040;
+  /* --link-color: #707070; */
+  --link-color: var(--secondary-text-color);
+  --scrollbar-foreground: var(--secondary-text-color);
   --spread: 15px;
   --h1: x-large;
 }
@@ -18,8 +19,8 @@
   padding-top: 10px;
   font: 12px var(--sans);
   text-transform: uppercase;
-  --lc: var(--tc, #707070);
-  --lhc: var(--tc, #222);
+  /* --link-color: var(--text-color, var(--secondary-text-color)); */
+  --link-hover-color: var(--text-color, #222);
 }
 
 .section-nav .row:empty {

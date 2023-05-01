@@ -3,20 +3,16 @@
  */
 
  [data-layout=dark]:root {
-    --zone-background: #003e71;
-    --body-background: #003e71;
-    --paper-color: var(--premium-bc);
-    color: var(--premium-tc);
-    --tc: var(--premium-tc);
-    --supporting-tc: var(--lightgray);
+    --text-color: var(--white);
+    --secondary-text-color: var(--lightgray);
+    --body-color: #00223e;
+    --secondary-body-color: var(--black); /* paper color */
+    --tertiary-body-color: #002d52;
+    --primary: ; /* hue */
+    --emphasis: var(--text-color);
  }
 
- [data-layout=dark] .story-body {
-    --lc: #809fff;
-    --lhc: #9ab2ff;
+ [data-layout=dark] .story-body p {
+    --link-color: #809fff;
+    --link-hover-color: #9ab2ff;
  }
-
-[data-layout=dark] .kicker.impact {
-    color: var(--paper-color);
-    background-color: var(--bc, white);
-}

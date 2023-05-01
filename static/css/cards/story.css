@@ -131,7 +131,7 @@
  */
 
 .story-body .panel {
-  --paper-color: var(--body-background);
+  background-color: var(--body-color);
 }
 
 /*
@@ -140,8 +140,8 @@
 
 .cnx-lead-wrapper {
   height: auto;
-  border-top: 8px solid var(--zone-background);
-  border-bottom: 3px solid var(--zone-background);
+  border-top: 8px solid var(--tertiary-body-color);
+  border-bottom: 3px solid var(--tertiary-body-color);
   margin-bottom: var(--gap);
   padding-bottom: 10px;
 }

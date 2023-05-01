@@ -10,7 +10,7 @@
 
 body.story .masthead,
 body.wirestory .masthead {
-  --paper-color: white;
+  background-color: white;
 }
 
 html.msb .masthead {
@@ -141,6 +141,7 @@ html.msb .masthead {
 
 .flag-account .button {
   font-size: 1em;
+  color: white;
 }
 
 .flag-account .button:hover {

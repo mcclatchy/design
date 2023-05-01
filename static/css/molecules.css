@@ -27,15 +27,15 @@
 
 .package {
   padding: calc(var(--gap) / 2);
-  color: var(--tc);
+  color: var(--text-color);
   flex: 1;
   --ht: none;
   --hw: normal;
   --hf: var(--serif);
-  --ld: none;
-  --lhd: underline;
-  --lc: var(--lc, inherit);
-  --lhc: var(--lc, inherit);
+  --link-decoration: none;
+  --link-hover-decoration: underline;
+  /* --link-color: var(--link-color, inherit);
+  --link-hover-color: var(--link-color, inherit); */
 }
 
 .package.no-img {
@@ -76,8 +76,8 @@
 .card {
   position: relative;
   box-shadow: var(--paper-shadow);
-  background-color: var(--paper-color, white);
-  color: var(--tc);
+  background-color: var(--secondary-body-color);
+  color: var(--text-color);
 }
 
 .card * {
@@ -110,8 +110,8 @@
 }
 
 .card.sponsored .kicker {
-  --tc: white;
-  background-color: var(--impact);
+  --text-color: white;
+  background-color: var(--emphasis);
 }
 
 /**

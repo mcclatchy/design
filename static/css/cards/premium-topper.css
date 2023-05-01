@@ -9,10 +9,10 @@
   background-color: var(--premium-bc);
   color: var(--premium-tc);
   font: 1rem/1.5em var(--sans);
-  --tc: white;
-  --lc: white;
-  --ld: underline;
-  --lhc: var(--premium-impact);
+  --text-color: white;
+  --link-color: white;
+  --link-decoration: underline;
+  --link-hover-color: var(--premium-impact);
 }
 
 .msb .topper:not(.loaded) {

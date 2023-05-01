@@ -5,23 +5,24 @@
 .panel {
   max-width: 100%;
   padding: 45px var(--page-padding);
-  background-color: var(--paper-color);
+  background-color: var(--secondary-body-color);
   font-family: var(--sans);
-  color: var(--tc);
+  color: var(--text-color);
   --hf: var(--sans);
   --hw: bold;
   --ht: uppercase;
   --tf: var(--sans);
-  --lc: #5169B8;
-  --lhc: #31409F;
-  --ld: underline;
+  --link-color: #5169B8;
+  --link-hover-color: #31409F;
+  --link-decoration: underline;
 }
 
 .panel.impact {
-  --paper-color: #373737;
-  --lc: white;
-  --ld: underline;
-  --lhc: #88B1FC;
+  --secondary-body-color: var(--emphasis);
+  --text-color: white;
+  --link-color: var(--secondary-body-color);
+  --link-decoration: underline;
+  --link-hover-color: #88B1FC;
 }
 
 .panel > * {
