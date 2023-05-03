@@ -469,13 +469,13 @@ input:focus, select:focus, .focus {
 }
 
 .password-label:after {
-  content: "";
+  content: "\f070";
   font: 400 14px Font Awesome\ 5 Free;
   cursor: pointer;
 }
 
 .password-label.active:after {
-  content: "";
+  content: "\f06e";
 }
 
 /**
@@ -654,7 +654,7 @@ figcaption, .caption {
   white-space: nowrap;
   overflow-x: scroll;
   scrollbar-width: thin;
-  scrollbar-color: var(--scrollbar-foreground, #0007) var(--scrollbar-background, transparent);
+  scrollbar-color: var(--scrollbar-foreground, rgba(0, 0, 0, 0.4666666667)) var(--scrollbar-background, transparent);
 }
 
 .slider .row {
@@ -666,7 +666,7 @@ figcaption, .caption {
 }
 
 .slider::-webkit-scrollbar-thumb {
-  background: var(--scrollbar-foreground, #0007);
+  background: var(--scrollbar-foreground, rgba(0, 0, 0, 0.4666666667));
 }
 
 .slider::--webkit-scrollbar-track {
@@ -705,7 +705,6 @@ section, .section {
   section, .section {
     padding: 0 var(--page-padding);
   }
-
   .section-label {
     padding: 0;
   }
@@ -807,7 +806,6 @@ html.msb .masthead {
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "menu account" "left right" "logo logo" "nav nav";
   }
-
   .msb .sds-flag {
     grid-template-areas: "menu account" "left right" "edition edition" "logo logo" "nav nav";
   }
@@ -817,7 +815,6 @@ html.msb .masthead {
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-areas: "menu . account" "left logo right" "nav nav nav";
   }
-
   .msb .sds-flag {
     grid-template-areas: "menu edition account" "left logo right" "nav nav nav";
   }
@@ -1199,7 +1196,6 @@ html.msb .masthead {
     flex-direction: row;
     justify-content: space-around;
   }
-
   .bottom-nav {
     display: flex;
     justify-content: center;
@@ -1210,7 +1206,6 @@ html.msb .masthead {
   .footer {
     grid-template-columns: 340px 1fr;
   }
-
   .footer-links {
     justify-content: end;
   }
@@ -1240,9 +1235,8 @@ html.msb .masthead {
   .grid .two-columns {
     grid-column: span 2;
   }
-
   .grid .three-columns,
-.grid .full-width {
+  .grid .full-width {
     grid-column: 1/-1;
   }
 }
@@ -1254,17 +1248,14 @@ html.msb .masthead {
     grid-column-end: span 2;
     grid-row: span 2;
   }
-
   .grid .digest {
     align-self: stretch;
     grid-column: 1;
     grid-row-end: span 2;
   }
-
   .grid .in-depth {
     grid-column: 1/-1;
   }
-
   .grid .optional-digest {
     grid-row-start: 8;
   }
@@ -1286,6 +1277,10 @@ html.msb .masthead {
 /*
  * Custom grid arrangements
  */
+.grid [class*=digest-group] {
+  display: contents;
+}
+
 [class*=digest-group] .digest {
   grid-column: auto;
 }
@@ -1369,20 +1364,19 @@ html.msb .masthead {
 
 @media (max-width: 768px) {
   .story-body > figure,
-.story-body > .figure {
+  .story-body > .figure {
     max-width: 100%;
   }
-
   .story-body figcaption,
-.story-body figure .package,
-.story-body .figure .package {
+  .story-body figure .package,
+  .story-body .figure .package {
     padding: 0px 15px;
   }
 }
 @media (max-width: 990px) {
   .story-body .wide figcaption,
-.story-body figure.wide .package,
-.story-body .figure.wide .package {
+  .story-body figure.wide .package,
+  .story-body .figure.wide .package {
     padding: 0px 15px;
   }
 }
@@ -1430,13 +1424,23 @@ html.msb .masthead {
  * Connatix AI generated lead video
  */
 .cnx-lead-wrapper {
-  height: auto !important;
-  /* margin-bottom: 15px; */
-  padding: 10px 0 15px 0;
+  height: auto;
+  margin: 0 15px;
   border-top: 8px solid var(--zone-background);
   border-bottom: 3px solid var(--zone-background);
+  padding-bottom: 10px;
+  box-sizing: border-box;
 }
 
+@media (min-width: 768px) {
+  /* 
+   * This happens often. 
+   * We should figure out something that scales better.
+   */
+  .cnx-lead-wrapper {
+    margin: 0;
+  }
+}
 .cnx-lead-wrapper::before {
   content: "From our partners";
   display: block;
@@ -1444,7 +1448,7 @@ html.msb .masthead {
   font-size: var(--h3);
   font-weight: bold;
   text-transform: uppercase;
-  margin-bottom: 10px;
+  margin: 10px 0;
 }
 
 /*
@@ -1603,40 +1607,32 @@ html.msb .masthead {
     flex-wrap: wrap;
     margin: -15px;
   }
-
   .flex-columns.reverse {
     flex-direction: row-reverse;
   }
-
   .flex-columns > * {
     flex: 1 1 300px;
     margin: 15px;
   }
-
   .flex-columns > zeus-ad {
     flex: none;
     padding: 15px;
   }
-
   .flex-columns > .flex-columns {
     margin: 0;
   }
-
   .flex-columns .main-stage {
     flex: 2 1 660px;
     align-self: flex-start;
   }
-
   .flex-columns .rail {
     flex-basis: 330px;
     align-self: flex-start;
   }
-
   /** Special cases **/
   .lead-section .main-stage > :first-child {
     flex-basis: 100%;
   }
-
   .main-stage > .flex-columns + .flex-columns {
     padding-top: 15px;
   }
@@ -1654,6 +1650,10 @@ html.msb .masthead {
 
 .zone:empty {
   padding: 0;
+}
+
+.zone.contents {
+  display: contents;
 }
 
 /*
@@ -1813,7 +1813,6 @@ html.msb .masthead {
   .search-form {
     grid-template-columns: 1fr 140px 200px;
   }
-
   .search-form .select {
     grid-column: auto;
   }
@@ -1912,7 +1911,6 @@ html.msb .masthead {
   .opinion-banner {
     grid-template-columns: 35px 1fr;
   }
-
   .opinion-banner svg {
     grid-row: span 2;
   }
@@ -2067,16 +2065,13 @@ Can we omit?
     grid-template-columns: auto 3fr 2fr;
     grid-template-areas: "thumb info contact" "thumb bio contact";
   }
-
   .author-bio .a-details {
     align-self: end;
   }
-
   .author-bio .thumb {
     width: 160px;
     height: 160px;
   }
-
   .author-bio .a-social {
     justify-self: end;
   }
@@ -2233,7 +2228,6 @@ section.big-news {
   .card.swg-promo {
     grid-template-columns: 2fr 1fr;
   }
-
   .card.swg-promo > :first-child {
     min-height: 200px;
   }
@@ -2391,7 +2385,6 @@ section.big-news {
   .upper-nav .tab .favicon {
     display: none;
   }
-
   .upper-nav .tab .logo {
     display: block;
   }
@@ -2618,9 +2611,8 @@ section.big-news {
   .h-tablet {
     display: none;
   }
-
   .h-phone,
-.d-tablet {
+  .d-tablet {
     display: var(--display, block);
   }
 }
@@ -2628,7 +2620,6 @@ section.big-news {
   .h-desktop {
     display: none;
   }
-
   .d-desktop {
     display: var(--display, block);
   }
