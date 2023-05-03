@@ -1347,13 +1347,23 @@ html.msb .masthead {
  * Connatix AI generated lead video
  */
 .cnx-lead-wrapper {
-  height: auto !important;
-  /* margin-bottom: 15px; */
-  padding: 10px 0 15px 0;
+  height: auto;
+  margin: 0 15px;
   border-top: 8px solid var(--zone-background);
   border-bottom: 3px solid var(--zone-background);
+  padding-bottom: 10px;
+  box-sizing: border-box;
 }
 
+@media (min-width: 768px) {
+  /* 
+   * This happens often. 
+   * We should figure out something that scales better.
+   */
+  .cnx-lead-wrapper {
+    margin: 0;
+  }
+}
 .cnx-lead-wrapper::before {
   content: "From our partners";
   display: block;
@@ -1361,7 +1371,7 @@ html.msb .masthead {
   font-size: var(--h3);
   font-weight: bold;
   text-transform: uppercase;
-  margin-bottom: 10px;
+  margin: 10px 0;
 }
 
 /*

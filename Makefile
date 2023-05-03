@@ -10,12 +10,12 @@ dist:
 
 release: dist
 	git add dist
-	@ sed -E --in-place=.bak 's/([0-9]+\.){2}([0-9]+)/$(version)/' package.json
-	git add package.json
-	git commit -m "updating package.json to $(version)"
-	git push
-	git tag $(version)
-	git push origin $(version)
+	@ sed -i.bak -E 's/([0-9]+\.){2}([0-9]+)/$(version)/' package.json
+	# git add package.json
+	# git commit -m "updating package.json to $(version)"
+	# git push
+	# git tag $(version)
+	# git push origin $(version)
 
 live: public
 	rm -rf public/*
