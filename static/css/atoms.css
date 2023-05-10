@@ -24,6 +24,8 @@
   --story-embed-width: var(--story-width);
   --columns: repeat(auto-fit, minmax(300px, 1fr));
 
+  --
+
   /* Colors */
   --black: #01101c;
   --white: #fff;
