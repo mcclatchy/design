@@ -29,17 +29,17 @@
   padding: calc(var(--gap) / 2);
   color: var(--text-color);
   flex: 1;
-  --ht: none;
-  --hw: normal;
-  --hf: var(--serif);
+  --header-transform: none;
+  --header-weight: normal;
+  --header-font: var(--serif);
   --link-decoration: none;
   --link-hover-decoration: underline;
-  /* --link-color: var(--link-color, inherit);
-  --link-hover-color: var(--link-color, inherit); */
+  --link-color: var(--link-color, inherit);
+  --link-hover-color: var(--link-hover-color, inherit);
 }
 
 .package.no-img {
-  --h3: x-large;
+  --h3-size: x-large;
 }
 
 .package img {

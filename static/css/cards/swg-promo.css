@@ -3,8 +3,8 @@
  */
 
 .card.swg-promo .package {
-  --hw: 400;
-  --hf: var(--sans);
+  --header-weight: 400;
+  --header-font: var(--sans);
 }
 
 .card.swg-promo .promo {
@@ -14,7 +14,7 @@
 }
 
 .card.swg-promo .title {
-  --hw: bold;
+  --header-weight: bold;
   font-size: 48px;
 }
 

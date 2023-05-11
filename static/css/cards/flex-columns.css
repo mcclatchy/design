@@ -17,7 +17,7 @@
 }
 
 .flex-columns .lead-item .package {
-  --hw: bold;
+  --header-weight: bold;
 }
 
 @media (min-width: 690px) {

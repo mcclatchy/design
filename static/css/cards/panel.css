@@ -8,10 +8,10 @@
   background-color: var(--secondary-body-color);
   font-family: var(--sans);
   color: var(--text-color);
-  --hf: var(--sans);
-  --hw: bold;
-  --ht: uppercase;
-  --tf: var(--sans);
+  --header-font: var(--sans);
+  --header-weight: bold;
+  --header-transform: uppercase;
+  /* --tf: var(--sans); */
   --link-color: #5169B8;
   --link-hover-color: #31409F;
   --link-decoration: underline;

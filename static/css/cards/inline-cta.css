@@ -2,7 +2,7 @@
   --spread: 10px;
   max-width: var(--story-width);
   margin: 0 auto;
-  background-color: var(--body-background);
+  background-color: var(--body-color);
   text-align: left;
 }
 
@@ -19,7 +19,7 @@
 }
 
 .inline-cta .h1 {
-  --hf: var(--serif);
+  --header-font: var(--serif);
 }
 
 .inline-cta input {

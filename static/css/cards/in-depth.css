@@ -7,8 +7,8 @@
 }
 
 .in-depth .package {
-  --h1: 1.75rem;
-  --hw: bold;
+  --h1-size: 1.75rem;
+  --header-weight: bold;
 }
 
 .card.in-depth figure {

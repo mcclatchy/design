@@ -48,6 +48,12 @@
   --link-hover-decoration: underline;
 }
 
+.immersive .kicker {
+  --link-color: white;
+  --link-hover-color: white;
+  --link-decoration: none;
+}
+
 @media (min-width: 760px) {
 	.immersive .title {
 		font-size: 64px;

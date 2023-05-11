@@ -26,7 +26,7 @@
 /** Unnecessary in 1.12
 Can we omit?
 */
-/* .series-nav .article img {
+.series-nav .article img {
   padding: 0;
 }
 
@@ -35,4 +35,4 @@ Can we omit?
   max-width: 375px;
   margin: 0;
   padding: 0 15px;
-} */
+}

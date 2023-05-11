@@ -41,25 +41,25 @@
  */
 
 .msb .topper h3 {
-  --h3: 13px;
-  --hf: var(--sans);
-  --hc: var(--premium-impact);
-  --ht: uppercase;
+  --h3-size: 13px;
+  --header-font: var(--sans);
+  --header-c:olor var(--premium-impact);
+  --header-transform: uppercase;
 }
 
 .msb .topper [slot="headline"] {
-  --h1: 8vw;
-  --hw: normal;
-  --hl: 1.1em;
-  --hf: var(--premium-serif);
-  --hc: var(--premium-tc);
-  --ht: none;
+  --h1-size: 8vw;
+  --header-weight: normal;
+  --hl-size: 1.1em;
+  --header-font: var(--premium-serif);
+  --header-color: var(--premium-tc);
+  --header-transform: none;
   margin: 0;
 }
 
 @media(min-width: 768px) {
   .msb .topper [slot="headline"] {
-    --h1: 54px;
+    --h1-size: 54px;
   }
 }
 

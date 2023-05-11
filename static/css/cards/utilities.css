@@ -9,7 +9,7 @@
 
 .gray {
   color: var(--text-color, var(--gray));
-  --bbc: var(--text-color, var(--gray));
+  --button-background-color: var(--text-color, var(--gray));
 }
 
 .no-caps {
@@ -23,22 +23,22 @@
 
 .serif {
   font-family: var(--serif);
-  --hf: var(--serif);
+  --header-font: var(--serif);
 }
 
 .sans {
   font-family: var(--sans);
-  --hf: var(--sans);
+  --header-font: var(--sans);
 }
 
 .bold {
   font-weight: bold;
-  --hw: bold;
+  --header-weight: bold;
 }
 
 .soft {
   font-weight: normal;
-  --hw: normal;
+  --header-weight: normal;
 }
 
 .small {
@@ -194,8 +194,8 @@ form[id^=bx-form] {
 }
 
 #newsletter-signUpWidget {
-  --hc: var(--black);
-  --tc: var(--black);
+  --header-color: var(--black);
+  --text-color: var(--black);
   --link-color: #3C4D87;
   --link-hover-color: #5169B8;
 }

@@ -16,7 +16,7 @@
   align-items: center;
   --link-color: var(--secondary-text-color);
   --link-decoration: none;
-  --ht: none;
+  --header-transform: none;
   --gap: 0;
 }
 
@@ -63,7 +63,7 @@
     "thumb info"
     "bio bio"
     "contact contact";
-  --hw: 400;
+  --header-weight: 400;
 }
 
 .author-bio .a-details {

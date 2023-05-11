@@ -22,8 +22,8 @@
   padding: 0;
   max-width: 340px;
   align-self: start;
-  --hf: var(--sans);
-  --hw: bold;
+  --header-font: var(--sans);
+  --header-weight: bold;
 }
 
 .footer svg,
@@ -57,7 +57,7 @@
 }
 
 .footer .more-link {
-  color: white;
+  color: var(--secondary-body-color);
 }
 
 .footer-links {
