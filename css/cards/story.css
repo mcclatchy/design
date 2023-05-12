@@ -135,28 +135,6 @@
 }
 
 /*
- * Connatix AI generated lead video
- */
-
-.cnx-lead-wrapper {
-  height: auto;
-  border-top: 8px solid var(--zone-background);
-  border-bottom: 3px solid var(--zone-background);
-  padding-bottom: 10px;
-  box-sizing: border-box;
-}
-
-.cnx-lead-wrapper::before {
-  content: "From our partners";
-  display: block;
-  font-family: var(--sans);
-  font-size: var(--h3);
-  font-weight: bold;
-  text-transform: uppercase;
-  margin: 10px 0;
-}
- 
-/*
  * AMP stuff
  */
 

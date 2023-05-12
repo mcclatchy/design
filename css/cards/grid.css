@@ -77,7 +77,7 @@
  * Custom grid arrangements
  */
 
-[class*=digest-group] {
+.grid [class*=digest-group] {
   display: contents;
 }
 
