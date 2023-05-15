@@ -3,7 +3,7 @@
 style ?= expanded
 
 version = $(error Missing version number)
-current != grep -Eo "([0-9]{1,}\.?){3}" package.json
+current = $(shell grep -Eo '([0-9]{1,}\.?){3}' package.json)
 
 dist:
 	sass --style $(style) --no-source-map builds:dist
