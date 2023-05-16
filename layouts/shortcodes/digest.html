@@ -1,9 +1,14 @@
 {{- $label := .Get "label" -}}
 {{- $class := .Get "class" -}}
 {{- $kicker := default "OPINION" (.Get "kicker") -}}
+{{- $region := .Get "region" -}}
 
 <div class="digest {{ $class }}">
+  {{- with $region }}
+  <div class="paper" data-tb-region="{{.}}">
+  {{- else }}
   <div class="paper">
+  {{- end -}}
     <a href="#" class="label {{ $label }}">
       <span class="h5">{{ $kicker }}</span>
     </a>
