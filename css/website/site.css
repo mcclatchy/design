@@ -141,8 +141,9 @@ td:first-child {
  * Region showcase
  */
 
-.region > :after {
-  content: "region item";
+[data-tb-region] > .card:after,
+[data-tb-region] > .package:after {
+  content: "";
   display: block;
   position: absolute;
   top: 0;
