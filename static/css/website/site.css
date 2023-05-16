@@ -141,6 +141,11 @@ td:first-child {
  * Region showcase
  */
 
+[data-tb-region] > .card,
+[data-tb-region] > .package {
+  position: relative;
+}
+
 [data-tb-region] > .card:after,
 [data-tb-region] > .package:after {
   content: "";
