@@ -1,29 +1,52 @@
-{{- $hide := .Get "hide" -}}
 {{- $class := .Get "class" -}}
 {{- $headlineSize := default "h3" (.Get "headline-size") -}}
-{{- $kickerSize := default "h6" (.Get "kicker-size") -}}
 {{- $img := default "/img/kitten.jpg" (.Get "img" ) -}}
 {{- $headline := default "Kitten clings for life as man awaits rescue from Florence." (.Get "headline") -}}
 
-<article class="card {{ .Get "class" }}">
-  {{- if not (in $hide "figure") }}
+{{- if .Get "taboola" }}
+<article class="card {{ .Get "class" }}" data-tb-region-item>
   <figure>
+
     {{- if in $class "horizontal" }}
     <div class="label sticky"><h5 class="impact">READ NEXT</h5></div>
-    {{- end }}
-    <a href="#">
-      <img src="{{ $img }}" alt="Kitten clings for life during Hurricane Florence" width="1140" height="641" loading="lazy">
+    {{ end -}}
+
+    <a href="#" data-tb-link>
+      <img src="{{ $img }}" alt="alt text" width="1140" height="641" loading="lazy">
     </a>
   </figure>
-  {{- end }}
   <div class="package">
-    {{- if not (in $hide "kicker") }}
-    <a class="kicker {{ $kickerSize }}" href="#">FOOD</a>
-    {{- end }}
+    <a class="kicker h6" href="#" data-tb-category>FOOD</a>
+    <h2 class="{{ $headlineSize }}"><a href="#" data-tb-link data-tb-title>{{ $headline }}</a></h2>
+
+    {{- if or (in $class "lead-item") (in $class "in-depth") }}
+    <p class="summary" data-tb-description>As far as we can estimate, a baboon is a vaulting blow. An effuse feet's objective comes with it the thought that the quaggy discussion is a rub. The amount is a growth. The literature would have us believe that a dreggy hate is not but a nephew.</p>
+    {{ end -}}
+
+    <div class="time" data-tb-date>{{ if in $class "sponsored" -}} sponsored content {{- else -}} March 16, 2018 11:33 am {{- end }}</div>
+  </div>
+</article>
+{{- else }}
+<article class="card {{ .Get "class" }}">
+  <figure>
+
+    {{- if in $class "horizontal" }}
+    <div class="label sticky"><h5 class="impact">READ NEXT</h5></div>
+    {{ end -}}
+
+    <a href="#">
+      <img src="{{ $img }}" alt="alt text" width="1140" height="641" loading="lazy">
+    </a>
+  </figure>
+  <div class="package">
+    <a class="kicker h6" href="#">FOOD</a>
     <h2 class="{{ $headlineSize }}"><a href="#">{{ $headline }}</a></h2>
+
     {{- if or (in $class "lead-item") (in $class "in-depth") }}
     <p class="summary">As far as we can estimate, a baboon is a vaulting blow. An effuse feet's objective comes with it the thought that the quaggy discussion is a rub. The amount is a growth. The literature would have us believe that a dreggy hate is not but a nephew.</p>
-    {{- end }}
+    {{ end -}}
+
     <div class="time">{{ if in $class "sponsored" -}} sponsored content {{- else -}} March 16, 2018 11:33 am {{- end }}</div>
   </div>
 </article>
+{{ end -}}
