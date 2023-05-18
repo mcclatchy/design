@@ -141,13 +141,11 @@ td:first-child {
  * Region showcase
  */
 
-[data-tb-region] > .card,
-[data-tb-region] > .package {
+[data-tb-region-item] {
   position: relative;
 }
 
-[data-tb-region] > .card:after,
-[data-tb-region] > .package:after {
+[data-tb-region-item]:after {
   content: "";
   display: block;
   position: absolute;
