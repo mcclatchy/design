@@ -24,11 +24,12 @@
   --story-embed-width: var(--story-width);
   --columns: repeat(auto-fit, minmax(300px, 1fr));
 
-  --space-unit: 15px;
-  --space-xs: 10px;
-  --space-s: var(--space-unit);
-  --space-m: (var(--space-unit)*2);
-  --space-lg: ;
+  --column-gap: ;
+  --row-gap: ;
+
+  --space: 15px;
+  --space-sm: calc(var(--space)*2/3);
+  --space-lg: calc(var(--space)*2);
 
   /* Colors */
   --black: #01101c;
@@ -419,7 +420,7 @@ form > *, .checkbox-group > * {
 }
 
 form.paper {
-  padding: calc(var(--gap) / 2);
+  padding: var(--half-gap);
 }
 
 label { 
