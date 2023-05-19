@@ -6,8 +6,6 @@
   clear: both;
   display: block;
   position: relative;
-  padding: var(--page-padding) 0; 
-  background-color: var(--zone-background);
 }
 
 .zone:empty {
@@ -16,6 +14,11 @@
 
 .zone.contents {
   display: contents;
+}
+
+.zone[data-type="ad"] {
+  padding: var(--page-padding) 0; 
+  background-color: var(--zone-background);
 }
 
 /*
