@@ -142,8 +142,12 @@ td:first-child {
  * Region showcase
  */
 
-.region > :after {
-  content: "region item";
+[data-tb-region-item] {
+  position: relative;
+}
+
+[data-tb-region-item]:after {
+  content: "";
   display: block;
   position: absolute;
   top: 0;

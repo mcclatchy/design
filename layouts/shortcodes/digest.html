@@ -1,10 +1,54 @@
 {{- $label := .Get "label" -}}
-{{- $class := .Get "class" -}}
 {{- $kicker := default "OPINION" (.Get "kicker") -}}
+{{- $region := default false (.Get "region") -}}
 
-<div class="digest {{ $class }}">
+{{ with $region }}
+<div class="digest">
+  <div class="paper" data-tb-region="{{ $region }}">
+    <a href="#" class="label">
+      <span class="h5">{{ $kicker }}</span>
+    </a>
+    {{- if eq $label "sticky" }}
+    <article class="card" data-tb-region-item>
+      <figure>
+        <a href="#" data-tb-link>
+          <img src="https://pics.mcclatchyinteractive.com/opinion/gi1163/picture205928719/ALTERNATES/LANDSCAPE_640/AP_18073734498485" srcset="https://pics.mcclatchyinteractive.com/opinion/gi1163/picture205928719/ALTERNATES/LANDSCAPE_1140/AP_18073734498485 1140w"> 
+        </a>
+      </figure>
+      <div class="package">
+        <h2 class="h3"><a href="#" data-tb-title data-tb-link>Kudlow joins White House that sorely needs cooler heads to prevail</a></h2>
+        <time>March 19, 2018 5:34 pm</time>
+      </div>
+    </article>
+    {{- else }}
+    <article class="package" data-tb-region-item>
+      <h2 class="h3"><a href="#" data-tb-title data-tb-link>Kudlow joins White House that sorely needs cooler heads to prevail</a></h2>
+      <time>March 19, 2018 5:34 pm</time>
+    </article>
+    {{- end }}
+    <article class="package" data-tb-region-item>
+      <h2 class="h3"><a href="#" data-tb-title data-tb-link>The Episcopal Church changed course for our LGBT members</a></h2>
+      <time>March 16, 2018 3:42 pm</time>
+    </article>
+    <article class="package" data-tb-region-item>
+      <h2 class="h3"><a href="#" data-tb-title data-tb-link>The Kansas Republican Party is taking a stance on transgender identity</a></h2>
+      <time>March 16, 2018 3:58 pm</time>
+    </article>
+    <article class="package" data-tb-region-item>
+      <h2 class="h3"><a href="#" data-tb-title data-tb-link>Letters: Readers discuss teen drinking, tax-cut benefits in Missouri and student protests</a></h2>
+      <time>March 16, 2018 4:08 pm</time>
+    </article>
+    <article class="package" data-tb-region-item>
+      <h2 class="h3"><a href="#" data-tb-title data-tb-link>Administration unveils steps to boost racial equity in govt</a></h2>
+      <time>March 16, 2018 4:08 pm</time>
+    </article>
+  </div>
+  <a href="#" class="more-link">MORE IN {{ $kicker }}</a>
+</div>
+{{- else }}
+<div class="digest">
   <div class="paper">
-    <a href="#" class="label {{ $label }}">
+    <a href="#" class="label">
       <span class="h5">{{ $kicker }}</span>
     </a>
     {{- if eq $label "sticky" }}
@@ -42,5 +86,6 @@
       <time>March 16, 2018 4:08 pm</time>
     </article>
   </div>
-  <a href="#" class="more-link">MORE {{ $kicker }}</a>
+  <a href="#" class="more-link">MORE IN {{ $kicker }}</a>
 </div>
+{{- end }}

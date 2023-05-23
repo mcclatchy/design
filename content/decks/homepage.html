@@ -21,28 +21,32 @@ aliases:
   <!-- End option banners group -->
 
   <!-- Start main card loop coming from WPS -->
-  {{< card class="lead-item" headline-size="h1" >}}
+  <div class="region" data-tb-region="FocalImage">
+    {{< card class="lead-item" headline-size="h1" taboola=true >}}
+  </div>
 
   <div id="zone-el-5" class="zone-el zone">
     <fake-ad></fake-ad>
   </div>
   
-  {{< digest kicker="LATEST" >}}
+  {{< digest kicker="LATEST" region="latest" >}}
 
-  {{< card >}}
-  {{< card >}}
+  <div class="region" data-tb-region="BigSix-Top">
+    {{< card taboola=true >}}
+    {{< card taboola=true >}}
+  </div>
 
-  {{< digest kicker="TRENDING STORIES" >}}
+  {{< digest kicker="TRENDING STORIES" region="trending-stories" >}}
 
   <!-- 
     For Taboola regions the "region" wrapper will render
     the cards as children of the grid
   -->
-  <div class="region">
-    {{< card >}}
-    {{< card >}}
-    {{< card >}}
-    {{< card >}}
+  <div class="region" data-tb-region="BigSix-Bottom">
+    {{< card taboola=true >}}
+    {{< card taboola=true >}}
+    {{< card taboola=true >}}
+    {{< card taboola=true >}}
   </div>
 
   <div class="grid three-columns">
@@ -78,9 +82,9 @@ aliases:
   {{< in-depth >}}
 
   <div class="digest-group">
-    {{< digest label="sticky" kicker="SPORTS" >}}
-    {{< digest label="sticky" kicker="LOCAL" >}}
-    {{< digest label="sticky" kicker="OPINION" >}}
+    {{< digest label="sticky" kicker="SPORTS" region="sports" >}}
+    {{< digest label="sticky" kicker="LOCAL" region="local">}}
+    {{< digest label="sticky" kicker="OPINION" region="opinion">}}
   </div>
 
   {{< card >}}
