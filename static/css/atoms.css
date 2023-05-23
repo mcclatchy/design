@@ -43,8 +43,6 @@
   --premium-bc: #00223e;
   --premium-tc: white;
   --premium-impact: #ffd71a;
-  /* --body-background: #f4f4f4;
-  --zone-background: #e6e6e6; */
 
   --text-color: var(--black);
   --secondary-text-color: var(--gray);
@@ -57,11 +55,6 @@
 
 
   /* Link and button defaults */
-  /* --lc: inherit;
-  --ld: none;
-  --bc: white;
-  --bbc: var(--impact); */
-
   --link-color: var(--text-color);
   --link-decoration: none;
   --button-color: var(--secondary-text-color);
@@ -75,15 +68,6 @@
   /**
    * Header properties available
    *
-   * --hf: header family
-   * --hw: header weigth
-   * --ht: header transform
-   * --hl: header leading
-   * --hc: header color
-   * --h1: H1 header size
-   * --h2: H2 header size
-   * --h3: H3 header size
-   * --h4: H4 header size
    * --header-family: header family
    * --header-weight: header weigth
    * --header-transform: header transform
@@ -105,10 +89,6 @@
   /**
    * Link properties available
    *
-   * --lc: link color
-   * --ld: link decoration
-   * --lhc: link hover color
-   * --lhd: link hover decoration
    * --link-color: link color
    * --link-decoration: link decoration
    * --link-hover-color: link hover color
@@ -118,8 +98,6 @@
   /**
    * Button properties available
    *
-   * --bc: button color
-   * --bbc: button background color
    * --button-color: button color
    * --button-background-color: button background color
    */
