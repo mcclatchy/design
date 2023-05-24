@@ -1,0 +1,18 @@
+/*
+ * Dark elegant theme
+ */
+
+ [data-layout=dark]:root {
+    --text-color: var(--white);
+    --secondary-text-color: var(--lightgray);
+    --body-color: #00223e;
+    --secondary-body-color: var(--black); /* paper color */
+    --tertiary-body-color: #002d52;
+    --primary: ; /* hue */
+    --emphasis: var(--text-color);
+ }
+
+ [data-layout=dark] .story-body p {
+    --link-color: #809fff;
+    --link-hover-color: #9ab2ff;
+ }

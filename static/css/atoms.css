@@ -60,6 +60,9 @@
   --button-color: var(--secondary-text-color);
   --button-background-color: var(--emphasis);
 
+  --story-link-color: ;
+  --story-link-hover-color: ;
+
   /* Paper box shadow */
   --paper-shadow: 
     0 1px 2px 0 rgba(0, 0, 0, .2), 
