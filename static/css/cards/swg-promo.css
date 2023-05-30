@@ -4,7 +4,7 @@
 
 .card.swg-promo .package {
   --header-weight: 400;
-  --header-font: var(--sans);
+  --header-family: var(--sans);
 }
 
 .card.swg-promo .promo {

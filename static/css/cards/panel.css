@@ -5,10 +5,10 @@
 .panel {
   max-width: 100%;
   padding: 45px var(--page-padding);
-  background-color: var(--secondary-body-color);
+  background-color: var(--paper-color);
   font-family: var(--sans);
   color: var(--text-color);
-  --header-font: var(--sans);
+  --header-family: var(--sans);
   --header-weight: bold;
   --header-transform: uppercase;
   /* --tf: var(--sans); */
@@ -28,7 +28,7 @@
 .panel > * {
   max-width: var(--story-width);
   margin: 20px auto;
-  color: var(--tc);
+  color: var(--text-color);
 }
 
 .panel > img {

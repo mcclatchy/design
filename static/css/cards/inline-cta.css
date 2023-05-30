@@ -19,7 +19,7 @@
 }
 
 .inline-cta .h1 {
-  --header-font: var(--serif);
+  --header-family: var(--serif);
 }
 
 .inline-cta input {

@@ -23,12 +23,12 @@
 
 .serif {
   font-family: var(--serif);
-  --header-font: var(--serif);
+  --header-family: var(--serif);
 }
 
 .sans {
   font-family: var(--sans);
-  --header-font: var(--sans);
+  --header-family: var(--sans);
 }
 
 .bold {
@@ -159,7 +159,7 @@ form[id^=bx-form] {
 }
 
 .mi-sticky-player {
-  --ht: none;
+  --header-transform: none;
 }
 
 .mi-sticky-player figcaption {

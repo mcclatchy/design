@@ -40,10 +40,10 @@ section.grid {
 }
 
 .custom {
-  --bbc: lightblue;
-  --bc: var(--black);
+  --button-background-color: lightblue;
+  --button-color: var(--black);
   --paper-color: lightblue;
-  --tc: var(--black);
+  --text-color: var(--black);
 }
 
 .panel.factbox {
@@ -55,7 +55,7 @@ section.grid {
   display: grid;
   grid-template-columns: auto 1fr auto;
   grid-gap: 5px;
-  --ht: none;
+  --header-transform: none;
 }
 
 .tip + * {

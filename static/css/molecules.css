@@ -31,7 +31,7 @@
   flex: 1;
   --header-transform: none;
   --header-weight: normal;
-  --header-font: var(--serif);
+  --header-family: var(--serif);
   --link-decoration: none;
   --link-hover-decoration: underline;
   --link-color: var(--link-color, inherit);
@@ -76,7 +76,7 @@
 .card {
   position: relative;
   box-shadow: var(--paper-shadow);
-  background-color: var(--secondary-body-color);
+  background-color: var(--paper-color);
   color: var(--text-color);
 }
 

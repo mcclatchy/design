@@ -5,7 +5,7 @@
 .story-body {
   display: flow-root;
   font: 18px/1.5em var(--serif);
-  --header-font: var(--sans);
+  --header-family: var(--sans);
   --header-transform: uppercase;
   --link-color: #5169B8;
   --link-hover-color: #31409F;

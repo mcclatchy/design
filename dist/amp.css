@@ -8,10 +8,10 @@
   --sans: "Noto Sans", sans-serif;
   --serif: "Noto Serif", serif;
   --premium-serif: "DM Serif Display", serif;
-  --h1: 1.875rem;
-  --h2: 1.5rem;
-  --h3: 1.2rem;
-  --h4: 1rem;
+  --h1-size: 1.875rem;
+  --h2-size: 1.5rem;
+  --h3-size: 1.2rem;
+  --h4-size: 1rem;
   /* Spacing and alignment */
   --gap: 30px;
   --half-gap: calc(var(--gap) / 2);
@@ -33,10 +33,10 @@
   --body-background: #f4f4f4;
   --zone-background: #e6e6e6;
   /* Link and button defaults */
-  --lc: inherit;
-  --ld: none;
-  --bc: white;
-  --bbc: var(--impact);
+  --link-color: inherit;
+  --link-decoration: none;
+  --button-color: white;
+  --button-background-color: var(--impact);
   /* Paper box shadow */
   --paper-shadow:
     0 1px 2px 0 rgba(0, 0, 0, .2),
@@ -44,35 +44,35 @@
   /**
    * Header properties available
    *
-   * --hf: header family
-   * --hw: header weigth
-   * --ht: header transform
-   * --hl: header leading
-   * --hc: header color
-   * --h1: H1 header size
-   * --h2: H2 header size
-   * --h3: H3 header size
-   * --h4: H4 header size
+   * --header-family: header family
+   * --header-weight: header weigth
+   * --header-transform: header transform
+   * --header-leading: header leading
+   * --header-color: header color
+   * --h1-size: H1 header size
+   * --h2-size: H2 header size
+   * --h3-size: H3 header size
+   * --h4-size: H4 header size
    */
   /**
    * Text properties available
    *
-   * --tc: text color
-   * --fc: fill color (inline svg)
+   * --text-color: text color
+   * --fill-color: fill color (inline svg)
    */
   /**
    * Link properties available
    *
-   * --lc: link color
-   * --ld: link decoration
-   * --lhc: link hover color
-   * --lhd: link hover decoration
+   * --link-color: link color
+   * --link-decoration: link decoration
+   * --link-hover-color: link hover color
+   * --link-hover-decoration: link hover decoration
    */
   /**
    * Button properties available
    *
-   * --bc: button color
-   * --bbc: button background color
+   * --button-color: button color
+   * --button-background-color: button background color
    */
 }
 
@@ -99,11 +99,11 @@ h3, .h3,
 h4, .h4,
 h5, .h5,
 h6, .h6 {
-  font-family: var(--hf, inherit);
-  font-weight: var(--hw, bold);
-  text-transform: var(--ht, none);
-  line-height: var(--hl, 1.2em);
-  color: var(--hc, var(--tc));
+  font-family: var(--header-family, inherit);
+  font-weight: var(--header-weight, bold);
+  text-transform: var(--header-transform, none);
+  line-height: var(--header-leading, 1.2em);
+  color: var(--header-color, var(--text-color));
 }
 
 h1, .h1 {
@@ -131,13 +131,13 @@ h6, .h6 {
 }
 
 a {
-  color: var(--lc);
-  text-decoration: var(--ld);
+  color: var(--link-color);
+  text-decoration: var(--link-decoration);
 }
 
 a:hover {
-  color: var(--lhc, var(--lc));
-  text-decoration: var(--lhd, var(--ld));
+  color: var(--link-hover-color, var(--link-color));
+  text-decoration: var(--link-hover-decoration, var(--link-decoration));
 }
 
 ul, ol {
@@ -152,20 +152,20 @@ li {
   display: inline-block;
   padding: 5px 8px;
   font-weight: normal;
-  color: var(--tc, var(--black));
-  border: 1px solid var(--tc, var(--black));
+  color: var(--text-color, var(--black));
+  border: 1px solid var(--text-color, var(--black));
   border-radius: 2px;
   text-transform: uppercase;
-  --ld: none;
-  --lhd: none;
-  --lc: var(--tc);
-  --lhc: var(--tc);
+  --link-decoration: none;
+  --link-hover-decoration: none;
+  --link-color: var(--text-color);
+  --link-hover-color: var(--text-color);
 }
 
 time, .time, .byline {
   display: inline-block;
   text-transform: uppercase;
-  color: var(--tc, var(--gray));
+  color: var(--text-color, var(--gray));
   font: 0.75rem/1.1em var(--sans);
 }
 
@@ -186,14 +186,14 @@ summary, .summary {
   margin: 0;
   display: grid;
   place-items: center;
-  --ld: none;
+  --link-decoration: none;
 }
 
 .label > * {
   margin: 0;
   padding: 5px 10px;
-  color: var(--bc, white);
-  background-color: var(--bbc, var(--impact));
+  color: var(--button-color, white);
+  background-color: var(--button-bacground-color, var(--impact));
   font: bold 0.875rem var(--sans);
   line-height: 1em;
 }
@@ -211,12 +211,12 @@ summary, .summary {
   justify-self: end;
   font: 700 0.75rem/1em var(--sans);
   text-transform: uppercase;
-  color: var(--tc, var(--gray));
+  color: var(--text-color, var(--gray));
   text-decoration: none;
 }
 
 .more-link:hover {
-  color: var(--tc, var(--gray));
+  color: var(--text-color, var(--gray));
   text-decoration: none;
 }
 
@@ -235,12 +235,12 @@ summary, .summary {
   display: block;
   font: italic 0.875rem var(--sans);
   text-transform: uppercase;
-  color: var(--tc, #757575);
+  color: var(--text-color, #757575);
 }
 
 hr {
   align-self: stretch;
-  border: 0.5px solid var(--tc, #707070);
+  border: 0.5px solid var(--text-color, #707070);
 }
 
 /**
@@ -253,42 +253,42 @@ hr {
 [disabled] {
   background-color: var(--impact);
   --paper-color: var(--impact);
-  --tc: white;
-  --fc: white;
-  --bc: white;
-  --hc: white;
-  --lhc: white;
-  --bbc: var(--impact);
+  --text-color: white;
+  --fill-color: white;
+  --button-color: white;
+  --header-color: white;
+  --link-hover-color: white;
+  --button-background-color: var(--impact);
 }
 
 .impact .button,
 .impact .label {
-  --bc: var(--impact);
-  --bbc: white;
+  --button-color: var(--impact);
+  --button-background-color: white;
 }
 
 .promo {
   background-color: var(--promo);
   --paper-color: var(--promo);
-  --bbc: var(--promo);
+  --button-background-color: var(--promo);
 }
 
 .promo .button,
 .promo .label {
-  --bc: var(--promo);
-  --bbc: white;
+  --button-color: var(--promo);
+  --button-background-color: white;
 }
 
 .promo-light {
   background-color: #5169B8;
   --paper-color: #5169B8;
-  --bbc: #5169B8;
+  --button-background-color: #5169B8;
 }
 
 .promo-light .button,
 .promo-light .label {
-  --bc: #5169B8;
-  --bbc: white;
+  --button-color: #5169B8;
+  --button-background-color: white;
 }
 
 .disabled, [disabled] {
@@ -309,12 +309,12 @@ hr {
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
-  color: var(--bc);
-  background-color: var(--bbc);
+  color: var(--button-color);
+  background-color: var(--button-background-color);
   border: 1px solid transparent;
   cursor: pointer;
-  --lhc: var(--bc);
-  --lhd: none;
+  --link-hover-color: var(--button-color);
+  --link-hover-decoration: none;
 }
 
 .button.big {
@@ -323,9 +323,9 @@ hr {
 
 .button.text,
 .button.ghost {
-  border: 1px solid var(--bbc);
+  border: 1px solid var(--button-background-color);
   background-color: transparent;
-  color: var(--bbc);
+  color: var(--button-background-color);
 }
 
 .button.text {
@@ -348,7 +348,7 @@ form, .checkbox-group {
   grid-template-columns: 1fr;
   grid-gap: 30px;
   text-align: left;
-  color: var(--tc);
+  color: var(--text-color);
 }
 
 .checkbox-group {
@@ -448,7 +448,7 @@ input[type=radio] {
   margin: 0;
   padding: 0;
   outline: none;
-  border: 1px solid var(--tc, #707070);
+  border: 1px solid var(--text-color, #707070);
   border-radius: 50%;
 }
 
@@ -482,7 +482,7 @@ input:focus, select:focus, .focus {
  * Inline SVG
  */
 svg {
-  fill: var(--fc, var(--tc));
+  fill: var(--fill-color, var(--text-color));
 }
 
 /** 
@@ -504,7 +504,7 @@ figure img {
 
 figcaption, .caption {
   font: 400 0.875rem/1.4em var(--sans);
-  color: var(--tc, var(--gray));
+  color: var(--text-color, var(--gray));
 }
 
 /**
@@ -514,7 +514,7 @@ figcaption, .caption {
   position: relative;
   box-shadow: var(--paper-shadow);
   background-color: var(--paper-color, white);
-  color: var(--tc);
+  color: var(--text-color);
 }
 
 .paper * {
@@ -529,7 +529,7 @@ figcaption, .caption {
   padding: 1em 0;
   font: bold 10px var(--sans);
   text-align: center;
-  color: var(--tc);
+  color: var(--text-color);
 }
 
 /**
@@ -560,19 +560,19 @@ figcaption, .caption {
 
 .package {
   padding: calc(var(--gap) / 2);
-  color: var(--tc);
+  color: var(--text-color);
   flex: 1;
-  --ht: none;
-  --hw: normal;
-  --hf: var(--serif);
-  --ld: none;
-  --lhd: underline;
-  --lc: var(--lc, inherit);
-  --lhc: var(--lc, inherit);
+  --header-transform: none;
+  --header-weight: normal;
+  --header-family: var(--serif);
+  --link-decoration: none;
+  --link-hover-decoration: underline;
+  --link-color: var(--link-color, inherit);
+  --link-hover-color: var(--link-color, inherit);
 }
 
 .package.no-img {
-  --h3: x-large;
+  --h3-size: x-large;
 }
 
 .package img {
@@ -610,7 +610,7 @@ figcaption, .caption {
   position: relative;
   box-shadow: var(--paper-shadow);
   background-color: var(--paper-color, white);
-  color: var(--tc);
+  color: var(--text-color);
 }
 
 .card * {
@@ -642,7 +642,7 @@ figcaption, .caption {
   }
 }
 .card.sponsored .kicker {
-  --tc: white;
+  --text-color: white;
   background-color: var(--impact);
 }
 
@@ -776,8 +776,8 @@ body.wirestory .masthead {
 
 html.msb .masthead {
   --paper-color: var(--premium-bc);
-  --tc: var(--premium-tc);
-  --lc: var(--premium-tc);
+  --text-color: var(--premium-tc);
+  --link-color: var(--premium-tc);
   --border-color: var(--premium-tc);
 }
 
@@ -790,16 +790,16 @@ html.msb .masthead {
   padding: var(--page-padding);
   padding-bottom: 0;
   font: bold 13px/1em var(--sans);
-  color: var(--tc);
+  color: var(--text-color);
   /* Custom properties for kids */
   --spread: 15px;
-  --ld: none;
-  --tc: var(--black);
+  --link-decoration: none;
+  --text-color: var(--black);
 }
 
 .msb .sds-flag {
   grid-template-areas: "menu . account" "edition edition edition" "logo logo logo" "nav nav nav";
-  --tc: var(--premium-tc);
+  --text-color: var(--premium-tc);
 }
 
 @media (min-width: 768px) {
@@ -854,23 +854,23 @@ html.msb .masthead {
   border-bottom: 1px solid transparent;
   padding: 5px 0px;
   background-color: transparent;
-  color: var(--tc);
+  color: var(--text-color);
 }
 
 .sds-flag .search input:focus,
 .sds-flag .search input:not(:placeholder-shown) {
   box-shadow: none;
   outline: none;
-  border-color: var(--tc);
+  border-color: var(--text-color);
 }
 
 .flag-account {
   grid-area: account;
   place-self: end;
   min-height: 30px;
-  --bc: var(--premium-tc);
-  --bbc: var(--premium-bc);
-  --lhd: underline;
+  --button-color: var(--premium-tc);
+  --button-background-color: var(--premium-bc);
+  --link-hover-decoration: underline;
 }
 
 .flag-account .button {
@@ -878,14 +878,14 @@ html.msb .masthead {
 }
 
 .flag-account .button:hover {
-  --bc: var(--premium-impact);
+  --button-color: var(--premium-impact);
 }
 
 .flag-left {
   grid-area: left;
   font-size: 14px;
   --spread: 7px;
-  --lhd: underline;
+  --link-hover-decoration: underline;
 }
 
 .flag-right {
@@ -894,7 +894,7 @@ html.msb .masthead {
   align-items: end;
   font-size: 14px;
   --spread: 7px;
-  --lhd: underline;
+  --link-hover-decoration: underline;
 }
 
 .flag-edition {
@@ -931,7 +931,7 @@ html.msb .masthead {
   border-bottom: 1px solid var(--border-color, var(--black));
   font-size: 16px;
   padding: 17px 0 15px;
-  --lhd: underline;
+  --link-hover-decoration: underline;
   /* Hides the bottom border for decks without the premium topper */
   position: relative;
   top: 1px;
@@ -959,10 +959,10 @@ html.msb .masthead {
   right: 0px;
   min-width: 210px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  --tc: var(--black);
-  --lc: var(--black);
-  --lhc: var(--black);
-  --lhd: none;
+  --text-color: var(--black);
+  --link-color: var(--black);
+  --link-hover-color: var(--black);
+  --link-hover-decoration: none;
   background-color: white;
   font-size: 0.875rem;
 }
@@ -1140,8 +1140,8 @@ html.msb .masthead {
   padding: 0;
   max-width: 340px;
   align-self: start;
-  --hf: var(--sans);
-  --hw: bold;
+  --header-family: var(--sans);
+  --header-weight: bold;
 }
 
 .footer svg,
@@ -1221,12 +1221,12 @@ html.msb .masthead {
 .story-body {
   display: flow-root;
   font: 18px/1.5em var(--serif);
-  --hf: var(--sans);
-  --ht: uppercase;
-  --lc: #5169B8;
-  --lhc: #31409F;
-  --ld: underline;
-  color: var(--tc);
+  --header-family: var(--sans);
+  --header-transform: uppercase;
+  --link-color: #5169B8;
+  --link-hover-color: #31409F;
+  --link-decoration: underline;
+  color: var(--text-color);
 }
 
 .story-body > * {
@@ -1399,7 +1399,7 @@ html.msb .masthead {
   justify-content: flex-end;
   text-align: center;
   padding-bottom: 30px;
-  --bbc: transparent;
+  --button-background-color: transparent;
 }
 
 .immersive .content > * {
@@ -1419,10 +1419,10 @@ html.msb .masthead {
 .immersive .title {
   font: 700 2.5em/1.1em var(--serif);
   text-transform: none;
-  --lc: white;
-  --lhc: white;
-  --ld: none;
-  --lhd: underline;
+  --link-color: white;
+  --link-hover-color: white;
+  --link-decoration: none;
+  --link-hover-decoration: underline;
 }
 
 @media (min-width: 760px) {
@@ -1446,9 +1446,9 @@ html.msb .masthead {
   gap: var(--half-gap);
   justify-items: center;
   text-align: center;
-  --hf: var(--serif);
-  --hw: bold;
-  --ht: none;
+  --header-family: var(--serif);
+  --header-weight: bold;
+  --header-transform: none;
 }
 
 .header > * {
@@ -1546,11 +1546,11 @@ html.msb .masthead {
 }
 
 .series-nav hr {
-  border-color: var(--tc, #dfdfdf);
+  border-color: var(--text-color, #dfdfdf);
 }
 
 .series-nav .summary {
-  color: var(--tc, #707070);
+  color: var(--text-color, #707070);
 }
 
 .series-nav .article {
@@ -1587,8 +1587,8 @@ Can we omit?
  * Related stories
  */
 .related-stories {
-  --lc: #222;
-  --lhc: #222;
+  --link-color: #222;
+  --link-hover-color: #222;
 }
 
 .related-stories h5 {
@@ -1612,9 +1612,9 @@ Can we omit?
   font-family: var(--sans);
   font-size: 0.875rem;
   align-items: center;
-  --lc: var(--gray);
-  --ld: none;
-  --ht: none;
+  --link-color: var(--gray);
+  --link-decoration: none;
+  --header-transform: none;
   --gap: 0;
 }
 
@@ -1657,7 +1657,7 @@ Can we omit?
   grid-template-columns: auto 1fr;
   grid-row-gap: var(--spread);
   grid-template-areas: "thumb info" "bio bio" "contact contact";
-  --hw: 400;
+  --header-weight: 400;
 }
 
 .author-bio .a-details {
@@ -1720,17 +1720,17 @@ Can we omit?
 }
 
 .question {
-  --hf: var(--serif);
-  --hw: 400;
-  --ht: none;
+  --header-family: var(--serif);
+  --header-weight: 400;
+  --header-transform: none;
 }
 
 /**
  * SWG Promo card
  */
 .card.swg-promo .package {
-  --hw: 400;
-  --hf: var(--sans);
+  --header-weight: 400;
+  --header-family: var(--sans);
 }
 
 .card.swg-promo .promo {
@@ -1740,7 +1740,7 @@ Can we omit?
 }
 
 .card.swg-promo .title {
-  --hw: bold;
+  --header-weight: bold;
   font-size: 48px;
 }
 
@@ -1872,27 +1872,27 @@ Can we omit?
   padding: 45px var(--page-padding);
   background-color: var(--paper-color);
   font-family: var(--sans);
-  color: var(--tc);
-  --hf: var(--sans);
-  --hw: bold;
-  --ht: uppercase;
+  color: var(--text-color);
+  --header-family: var(--sans);
+  --header-weight: bold;
+  --header-transform: uppercase;
   --tf: var(--sans);
-  --lc: #5169B8;
-  --lhc: #31409F;
-  --ld: underline;
+  --link-color: #5169B8;
+  --link-hover-color: #31409F;
+  --link-decoration: underline;
 }
 
 .panel.impact {
   --paper-color: #373737;
-  --lc: white;
-  --ld: underline;
-  --lhc: #88B1FC;
+  --link-color: white;
+  --link-decoration: underline;
+  --link-hover-color: #88B1FC;
 }
 
 .panel > * {
   max-width: var(--story-width);
   margin: 20px auto;
-  color: var(--tc);
+  color: var(--text-color);
 }
 
 .panel > img {
@@ -1920,8 +1920,8 @@ Can we omit?
 }
 
 .gray {
-  color: var(--tc, var(--gray));
-  --bbc: var(--tc, var(--gray));
+  color: var(--text-color, var(--gray));
+  --button-background-color: var(--text-color, var(--gray));
 }
 
 .no-caps {
@@ -1935,22 +1935,22 @@ Can we omit?
 
 .serif {
   font-family: var(--serif);
-  --hf: var(--serif);
+  --header-family: var(--serif);
 }
 
 .sans {
   font-family: var(--sans);
-  --hf: var(--sans);
+  --header-family: var(--sans);
 }
 
 .bold {
   font-weight: bold;
-  --hw: bold;
+  --header-weight: bold;
 }
 
 .soft {
   font-weight: normal;
-  --hw: normal;
+  --header-weight: normal;
 }
 
 .small {
@@ -2064,7 +2064,7 @@ form[id^=bx-form] {
 }
 
 .mi-sticky-player {
-  --ht: none;
+  --header-transform: none;
 }
 
 .mi-sticky-player figcaption {
@@ -2099,15 +2099,15 @@ form[id^=bx-form] {
 }
 
 #newsletter-signUpWidget {
-  --hc: var(--black);
-  --tc: var(--black);
-  --lc: #3C4D87;
-  --lhc: #5169B8;
+  --header-color: var(--black);
+  --text-color: var(--black);
+  --link-color: #3C4D87;
+  --link-hover-color: #5169B8;
 }
 
 #newsletter-signUpWidget .button {
-  --bbc: var(--impact);
-  --bc: white;
+  --button-background-color: var(--impact);
+  --button-color: white;
 }
 
 /*

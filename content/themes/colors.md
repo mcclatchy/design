@@ -77,7 +77,7 @@ Wait .. how many elements do we have with a default color .. like 12 .. OK .. im
 <div class="package paper promo">
   <h2>Title</h2>
   <p class="summary">Offer text goes here</p>
-  <a class="button" style="--bc: #222">OFFER ACTION</a>
+  <a class="button" style="--button-color: #222">OFFER ACTION</a>
 </div>
 
 Wait .. why is that button text black?
@@ -85,7 +85,7 @@ Wait .. why is that button text black?
 <div class="package paper promo">
   <h2>Title</h2>
   <p class="summary">Offer text goes here</p>
-  <a class="more-link" style="--lc: #707070">OFFER ACTION</a>
+  <a class="more-link" style="--link-color: #707070">OFFER ACTION</a>
 </div>
 
 I'm sorry, we're throwing more links in promos now too? 
@@ -120,17 +120,17 @@ This rule is why you see the more-link show up as gray in the promo box above. I
 
 ```css
 .more-link {
-  color: var(--tc, #707070);
+  color: var(--text-color, #707070);
 }
 ```
 
-This rules states that the more-link should use the `--tc` (text-color in my head) variable, and if that isn't set to use the standard #707070. This let's us set up rules for cards at the card level, without having to worry about what elements may or may not get thrown into it through the stakeholder review process. Take the promo CTA from before where the link was gray. Instead of thinking about the specific elements that are going to go into the card, using CSS properties we can think about the rules for the card itself. 
+This rules states that the more-link should use the `--text-color` (text-color in my head) variable, and if that isn't set to use the standard #707070. This let's us set up rules for cards at the card level, without having to worry about what elements may or may not get thrown into it through the stakeholder review process. Take the promo CTA from before where the link was gray. Instead of thinking about the specific elements that are going to go into the card, using CSS properties we can think about the rules for the card itself. 
 
 In promo cards, the text should be white, which we can now define like so:
 
 ```css
 .promo {
-  --tc: white;
+  --text-color: white;
 }
 ```
 

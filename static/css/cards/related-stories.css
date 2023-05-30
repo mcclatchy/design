@@ -3,8 +3,8 @@
  */
 
 .related-stories {
-  /* --lc: var(--tc);
-  --lhc: var(--tc); */
+  /* --link-color: var(--text-color);
+  --link-hover-color: var(--text-color); */
 }
 
 .related-stories h5 {

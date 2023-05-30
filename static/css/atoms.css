@@ -53,6 +53,8 @@
   --primary: ; /* hue / link color? */
   --emphasis: var(--dark-gray);
 
+  --paper-color: var(var(--secondary-body-color));
+
 
   /* Link and button defaults */
   --link-color: var(--text-color);
@@ -85,8 +87,8 @@
   /**
    * Text properties available
    *
-   * --tc: text color
-   * --fc: fill color (inline svg)
+   * --text-color: text color
+   * --fill-color: fill color (inline svg)
    */
 
   /**
@@ -132,7 +134,7 @@ h3, .h3,
 h4, .h4,
 h5, .h5,
 h6, .h6 {
-  font-family: var(--header-font, inherit);
+  font-family: var(--header-family, inherit);
   font-weight: var(--header-weight, bold);
   text-transform: var(--header-transform, none);
   line-height: var(--header-leading, 1.2em);
@@ -484,7 +486,7 @@ input[type="radio"] {
   margin: 0;
   padding: 0;
   outline: none;
-  border: 1px solid var(--tc, #707070);
+  border: 1px solid var(--text-color, #707070);
   border-radius: 50%;
 }
 
@@ -553,7 +555,7 @@ figcaption, .caption {
 .paper {
   position: relative;
   box-shadow: var(--paper-shadow); 
-  background-color: var(--secondary-body-color);
+  background-color: var(--paper-color);
   color: var(--text-color);
 }
 

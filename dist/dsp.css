@@ -53,13 +53,13 @@
   padding: 0px 15px 10px 15px;
   font: 400 14px var(--sans);
   text-transform: uppercase;
-  color: var(--tc, #707070);
+  color: var(--text-color, #707070);
   border-bottom: 3px solid transparent;
   margin: 0;
 }
 
 .progress .active {
-  color: var(--tc, #222222);
+  color: var(--text-color, #222222);
   font-weight: 700;
   border-color: #222222;
 }
@@ -71,9 +71,9 @@
   padding: 0;
   max-width: 600px;
   font: 16px var(--sans);
-  --hf: var(--sans);
-  --hw: bold;
-  --ht: none;
+  --header-family: var(--sans);
+  --header-weight: bold;
+  --header-transform: none;
 }
 
 .page-title .secure {
@@ -104,12 +104,12 @@
  ****/
 .dsp-offer {
   font: 0.875rem var(--sans);
-  --hf: var(--serif);
-  --ht: none;
-  --hw: bold;
+  --header-family: var(--serif);
+  --header-transform: none;
+  --header-weight: bold;
   --spread: 5px;
-  --lc: var(--promo);
-  --lhc: var(--promo);
+  --link-color: var(--promo);
+  --link-hover-color: var(--promo);
   position: relative;
   display: grid;
   grid-gap: 15px;
@@ -191,10 +191,10 @@
   font: 0.875rem var(--sans);
   --padding: 30px;
   --spread: 10px;
-  --lc: var(--promo);
-  --lhc: var(--promo);
-  --bc: white;
-  --bbc: var(--promo);
+  --link-color: var(--promo);
+  --link-hover-color: var(--promo);
+  --button-color: white;
+  --button-background-color: var(--promo);
   text-align: center;
   align-items: unset;
 }
@@ -205,7 +205,7 @@
 }
 
 .paywall-offer .more-link {
-  --tc: var(--promo);
+  --text-color: var(--promo);
 }
 
 .account-header {
@@ -215,13 +215,13 @@
   border-top: 1px solid #EBEBEB;
   max-width: 900px;
   margin: 0 auto;
-  --ht: none;
+  --header-transform: none;
 }
 
 .account-header small {
   display: block;
   font-weight: 700;
-  color: var(--tc, #707070);
+  color: var(--text-color, #707070);
   text-transform: uppercase;
   align-self: center;
 }
@@ -237,10 +237,10 @@
   text-transform: uppercase;
   text-align: center;
   font: 400 14px var(--sans);
-  --lc: #31409f;
-  --lhc: #5169B8;
-  --ld: none;
-  --lhd: none;
+  --link-color: #31409f;
+  --link-hover-color: #5169B8;
+  --link-decoration: none;
+  --link-hover-decoration: none;
 }
 
 .tab.active {
@@ -272,10 +272,10 @@
   }
 }
 .flag.dsp .links {
-  --lc: #707070;
-  --lhc: #222;
-  --ld: none;
-  --lhd: none;
+  --link-color: #707070;
+  --link-hover-color: #222;
+  --link-decoration: none;
+  --link-hover-decoration: none;
   align-items: center;
   font: bold 0.875rem var(--sans);
   text-transform: uppercase;
@@ -377,7 +377,7 @@
   padding: 30px 50px 30px 15px;
   align-items: unset;
   --spread: 15px;
-  --ld: underline;
+  --link-decoration: underline;
 }
 
 .s-modal .close {
@@ -472,7 +472,7 @@ section.dsp {
 
 .paywall-expander {
   font: 700 0.875rem var(--sans);
-  --tc: var(--promo);
+  --text-color: var(--promo);
   display: inline-block;
   text-align: center;
 }
@@ -509,8 +509,8 @@ section.dsp {
 .subscription-offers {
   --ts: 0.875rem;
   --tf: var(--sans);
-  --hf: var(--sans);
-  --hw: 700;
+  --header-family: var(--sans);
+  --header-weight: 700;
 }
 
 .subscription-offers .redeem-code {
@@ -518,8 +518,8 @@ section.dsp {
   margin: 0 auto;
   align-items: center;
   --ps: 30px;
-  --hf: var(--sans);
-  --hw: bold;
+  --header-family: var(--sans);
+  --header-weight: bold;
 }
 
 .subscription-offers form {
@@ -542,7 +542,7 @@ section.dsp {
 }
 /* Hero at the top of the sub offer page */
 .dsp-hero {
-  --tc: white;
+  --text-color: white;
   --pa: center;
   --padding: 60px 30px;
   min-height: 320px;
@@ -598,7 +598,7 @@ section.dsp {
 .review-order .secure {
   text-align: center;
   text-transform: uppercase;
-  color: var(--tc, var(--gray));
+  color: var(--text-color, var(--gray));
 }
 
 .review-order .flex {
@@ -614,8 +614,8 @@ section.dsp {
   align-items: center;
   padding: 0;
   --ps: 15px;
-  --hf: var(--sans);
-  --hw: 700;
+  --header-family: var(--sans);
+  --header-weight: 700;
 }
 
 /**
@@ -632,8 +632,8 @@ section.dsp {
 }
 
 .purchase-confirmation .page-title .more-link {
-  --lc: var(--promo);
-  --lhc: var(--promo);
+  --link-color: var(--promo);
+  --link-hover-color: var(--promo);
   --ts: 0.875rem;
 }
 
@@ -667,8 +667,8 @@ section.dsp {
   text-align: center;
   --ts: 14px;
   --tf: var(--sans);
-  --ld: underline;
-  --lhd: underline;
+  --link-decoration: underline;
+  --link-hover-decoration: underline;
 }
 
 .dsp-modal .button {
@@ -680,8 +680,8 @@ section.dsp {
 }
 
 .dsp-modal .button.text {
-  --bc: white;
-  --bbc: transparent;
+  --button-color: white;
+  --button-background-color: transparent;
 }
 
 /**

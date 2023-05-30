@@ -42,7 +42,7 @@
 
 .msb .topper h3 {
   --h3-size: 13px;
-  --header-font: var(--sans);
+  --header-family: var(--sans);
   --header-c:olor var(--premium-impact);
   --header-transform: uppercase;
 }
@@ -50,8 +50,8 @@
 .msb .topper [slot="headline"] {
   --h1-size: 8vw;
   --header-weight: normal;
-  --hl-size: 1.1em;
-  --header-font: var(--premium-serif);
+  --header-leading-size: 1.1em;
+  --header-family: var(--premium-serif);
   --header-color: var(--premium-tc);
   --header-transform: none;
   margin: 0;

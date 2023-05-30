@@ -23,9 +23,9 @@
 
 .market .h1,
 .market .h2 {
-  --ht: none;
-  --hf: var(--serif);
-  --hw: normal;
+  --header-transform: none;
+  --header-family: var(--serif);
+  --header-weight: normal;
   font-size: 3rem;
   letter-spacing: -.08em;
 }
@@ -57,7 +57,7 @@
 }
 
 .impact {
-  --paper-color: #707070;
+  --secondary-body-color: #707070;
   padding: 5px;
 }
 
@@ -66,7 +66,7 @@
 }
 
 .lowercase {
-  --ht: none;
+  --header-transform: none;
 }
 
 .vertical {

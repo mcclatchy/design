@@ -7,7 +7,7 @@
   gap: var(--half-gap);
   justify-items: center;
   text-align: center;
-  --header-font: var(--serif);
+  --header-family: var(--serif);
   --header-weight: bold;
   --header-transform: none;
 }

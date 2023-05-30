@@ -18,7 +18,7 @@
 }
 
 .question {
-	--header-font: var(--serif);
+	--header-family: var(--serif);
 	--header-weight: 400;
 	--header-transform: none;
 }

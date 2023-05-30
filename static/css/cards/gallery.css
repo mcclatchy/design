@@ -11,7 +11,7 @@
 
 .gallery .package {
   --header-weight: 400;
-  --header-font: var(--sans);
+  --header-family: var(--sans);
 }
 
 .gallery-panel {
