@@ -235,7 +235,7 @@ summary, .summary {
   display: block;
   font: italic 0.875rem var(--sans);
   text-transform: uppercase;
-  color: var(--text-color, #757575);
+  color: var(--text-color, var(--muted));
 }
 
 hr {
@@ -292,7 +292,7 @@ hr {
 }
 
 .disabled, [disabled] {
-  --paper-color: #757575;
+  --paper-color: var(--muted);
   cursor: not-allowed;
 }
 

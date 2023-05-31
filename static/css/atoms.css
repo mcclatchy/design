@@ -38,6 +38,9 @@
   --gray: #707070;
   --lightgray: #d3d3d3;
 
+  --muted: #757575;
+  --accent: ;
+
   --impact: #373737;
   --promo: #31409F;
   --premium-bc: #00223e;
@@ -270,7 +273,7 @@ summary, .summary {
   display: block;
   font: italic 0.875rem var(--sans);
   text-transform: uppercase;
-  color: var(--text-color, #757575);
+  color: var(--text-color, var(--muted));
 }
 
 hr {
@@ -373,7 +376,7 @@ hr {
  }
  
  .disabled, [disabled] {
-   --paper-color: #757575;
+   --paper-color: var(--muted);
    cursor: not-allowed;
  }
 
