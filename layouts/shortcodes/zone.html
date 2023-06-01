@@ -1,3 +1,5 @@
-<div class="zone">
+{{- $type := default "ad" (.Get "type") -}}
+
+<div class="zone" data-type="{{ $type }}">
   <fake-ad size="{{ .Get "size" }}"></fake-ad>
 </div>

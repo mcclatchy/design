@@ -28,8 +28,6 @@ class FakeAd extends HTMLElement {
     t.innerHTML = `
     <style>
       :host {
-        --color: #f2b6be;
-
         display: flex !important;
         align-items: center;
         justify-content: center;
@@ -38,7 +36,7 @@ class FakeAd extends HTMLElement {
 
       .ad {
         display: none;
-        background-color: var(--color);
+        background-color: var(--color, #f2b6be);
         font-family: var(--font-family, var(--sans));
         font-size: 24px;
       }
