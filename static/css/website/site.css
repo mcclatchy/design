@@ -166,13 +166,17 @@ td:first-child {
  */
 
 .zone::before {
-  content: '#' attr(id); /* revisit? */
+  content: attr(id);
   display: block;
   position: absolute;
-  left: 0;
-  top: -1.1em;
+  left: 5px;
+  top: 5px;
   font: 14px/1em var(--sans);
-  color: #555;
+  color: #777;
+}
+
+.zone[data-type=editorial] {
+  --color: cornflowerblue;
 }
 
 #zone-el-15 {
