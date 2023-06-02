@@ -7,8 +7,8 @@
   font: 18px/1.5em var(--serif);
   --header-family: var(--sans);
   --header-transform: uppercase;
-  --link-color: #5169B8;
-  --link-hover-color: #31409F;
+  --link-color: var(--link-detail-color);
+  --link-hover-color: var(--link-detail-hover-color);
   --link-decoration: underline;
   color: var(--text-color);
 }

@@ -12,8 +12,8 @@
   --header-weight: bold;
   --header-transform: uppercase;
   /* --tf: var(--sans); */
-  --link-color: #5169B8;
-  --link-hover-color: #31409F;
+  --link-color: var(--link-detail-color);
+  --link-hover-color: var(--link-detail-hover-color);
   --link-decoration: underline;
 }
 

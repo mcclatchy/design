@@ -10,9 +10,11 @@
     --tertiary-body-color: #002d52;
     --primary: ; /* hue */
     --emphasis: var(--text-color);
+    --link-detail-color: #809fff;
+    --link-detail-hover-color: #9ab2ff;
  }
 
- [data-layout=dark] .story-body p {
+ /* [data-layout=dark] .story-body p {
     --link-color: #809fff;
     --link-hover-color: #9ab2ff;
- }
+ } */

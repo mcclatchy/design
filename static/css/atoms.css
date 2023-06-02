@@ -56,7 +56,7 @@
   --primary: ; /* hue / link color? */
   --emphasis: var(--dark-gray);
 
-  --paper-color: var(var(--secondary-body-color));
+  --paper-color: var(--secondary-body-color);
 
 
   /* Link and button defaults */
@@ -65,8 +65,8 @@
   --button-color: var(--secondary-text-color);
   --button-background-color: var(--emphasis);
 
-  --story-link-color: ;
-  --story-link-hover-color: ;
+  --link-detail-color: #5169B8;
+  --link-detail-hover-color: #31409F;
 
   /* Paper box shadow */
   --paper-shadow: 
