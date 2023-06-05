@@ -3,8 +3,9 @@
  */
 
 .masthead {
-  --paper-color: transparent;
+  --paper-color: white;
   --paper-shadow: none;
+  --link-color: black;
   z-index: 2;
 }
 

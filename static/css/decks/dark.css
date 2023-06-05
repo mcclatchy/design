@@ -5,6 +5,7 @@
  [data-layout=dark]:root {
     --text-color: var(--white);
     --secondary-text-color: var(--lightgray);
+    --tertiary-text-color: #f2f2f2;
     --body-color: #00223e;
     --secondary-body-color: var(--black); /* paper color */
     --tertiary-body-color: #002d52;
@@ -13,8 +14,3 @@
     --link-detail-color: #809fff;
     --link-detail-hover-color: #9ab2ff;
  }
-
- /* [data-layout=dark] .story-body p {
-    --link-color: #809fff;
-    --link-hover-color: #9ab2ff;
- } */
