@@ -28,7 +28,7 @@
 
 .impact .inline-cta {
   padding: 15px;
-  --button-color: #222;
+  --button-color: var(--text-color);
   --button-background-color: var(--secondary-body-color);
   --link-decoration: underline;
   --link-hover-color: #b4bbe8;

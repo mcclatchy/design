@@ -20,7 +20,7 @@
   font: 12px var(--sans);
   text-transform: uppercase;
   /* --link-color: var(--text-color, var(--secondary-text-color)); */
-  --link-hover-color: var(--text-color, #222);
+  --link-hover-color: var(--text-color);
 }
 
 .section-nav .row:empty {
