@@ -47,6 +47,16 @@
   --premium-tc: white;
   --premium-impact: #ffd71a;
 
+  --brand-black: #241f21;
+  --light-brown: #f7efe0;
+  --dark-brown: #a4906e;
+  --light-orange: #fee4d0;
+  --dark-orange: #e49162;
+  --light-green: #ebf7da;
+  --dark-green: #9ea472;
+  --light-blue: #c3d8e4;
+  --dark-blue: #273f57;
+
   --text-color: var(--black);
   --secondary-text-color: var(--gray);
   --tertiary-text-color: var(--dark-gray);
@@ -59,9 +69,9 @@
   --paper-color: var(--secondary-body-color);
 
   /* RGBA Colors */
-  --base-color: 1 16 28;
+  /* --base-color: 1 16 28;
   --color-primary: rgb(from var(--base-color) r g b / .5);
-  --color-darker:
+  --color-darker: */
 
 
   /* Link and button defaults */
