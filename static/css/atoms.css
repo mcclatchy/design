@@ -58,6 +58,11 @@
 
   --paper-color: var(--secondary-body-color);
 
+  /* RGBA Colors */
+  --base-color: 1 16 28;
+  --color-primary: rgb(from var(--base-color) r g b / .5);
+  --color-darker:
+
 
   /* Link and button defaults */
   --link-color: var(--text-color);
@@ -494,7 +499,7 @@ input[type="radio"] {
 }
 
 input[type="radio"]:checked {
-  box-shadow: inset 0px 0px 0px 4px #222;
+  box-shadow: inset 0px 0px 0px 4px var(--text-color);
   background-color: white;
 }
 
