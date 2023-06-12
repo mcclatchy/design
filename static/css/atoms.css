@@ -31,11 +31,30 @@
   --space-sm: calc(var(--space)*2/3);
   --space-lg: calc(var(--space)*2);
 
-  /* Colors */
-  --black: #01101c;
-  --white: #fff;
-  --dark-gray: #373737;
+  /* 
+   * Colors 
+   * Simplifying for conversation 
+   */
+
+  --black: #241f21;
+  --white: #ffffff;
   --gray: #707070;
+  --light-brown: #f7efe0;
+  --dark-brown: #a4906e;
+  --light-orange: #fee4d0;
+  --dark-orange: #e49162;
+  --light-green: #ebf7da;
+  --dark-green: #9ea472;
+  --light-blue: #c3d8e4;
+  --dark-blue: #273f57;
+
+
+  /* ---------------------------------------------------- */
+
+  /* --black: #01101c; */
+  /* --white: #fff; */
+  --dark-gray: #373737;
+  /* --gray: #707070; */
   --lightgray: #d3d3d3;
 
   --muted: #757575;
@@ -47,15 +66,7 @@
   --premium-tc: white;
   --premium-impact: #ffd71a;
 
-  --brand-black: #241f21;
-  --light-brown: #f7efe0;
-  --dark-brown: #a4906e;
-  --light-orange: #fee4d0;
-  --dark-orange: #e49162;
-  --light-green: #ebf7da;
-  --dark-green: #9ea472;
-  --light-blue: #c3d8e4;
-  --dark-blue: #273f57;
+  /* --brand-black: #241f21; */
 
   --text-color: var(--black);
   --secondary-text-color: var(--gray);
@@ -75,10 +86,10 @@
 
 
   /* Link and button defaults */
-  --link-color: var(--text-color);
-  --link-decoration: none;
-  --button-color: var(--secondary-text-color);
-  --button-background-color: var(--emphasis);
+  /* --link-color: var(--text-color); */
+  /* --link-decoration: none; */
+  /* --button-color: var(--secondary-text-color); */
+  /* --button-background-color: var(--emphasis); */
 
   --link-detail-color: #5169B8;
   --link-detail-hover-color: #31409F;
