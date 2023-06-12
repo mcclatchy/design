@@ -68,10 +68,10 @@
 
   --paper-color: var(--secondary-body-color);
 
-  /* RGBA Colors */
-  /* --base-color: 1 16 28;
+  /* RGBA Colors */ 
+  --base-color: 1 16 28;
   --color-primary: rgb(from var(--base-color) r g b / .5);
-  --color-darker: */
+  --color-darker: ;
 
 
   /* Link and button defaults */
