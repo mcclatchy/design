@@ -14,8 +14,9 @@
   --h4-size: 1rem;
 
   /* Spacing and alignment */
-  --gap: 30px;
-  --half-gap: calc(var(--gap) / 2);
+  --column-gap: 30px;
+  --row-gap: 30px;
+  --gap: var(--column-gap) var(--row-gap);
   --spread: 10px;
   --page-padding: 15px;
   --section-width: 1140px;
@@ -24,11 +25,10 @@
   --story-embed-width: var(--story-width);
   --columns: repeat(auto-fit, minmax(300px, 1fr));
 
-  --column-gap: ;
-  --row-gap: ;
 
-  --space: 15px;
-  --space-sm: calc(var(--space)*2/3);
+  --space: 30px;
+  --space-xs: calc(var(--space)/3);
+  --space-sm: calc(var(--space)/2);
   --space-lg: calc(var(--space)*2);
 
   /* 
@@ -74,7 +74,6 @@
   --body-color: #f4f4f4;
   --secondary-body-color: #ffffff; /* paper color */
   --tertiary-body-color: #e6e6e6;
-  --primary: ; /* hue / link color? */
   --emphasis: var(--dark-gray);
 
   --paper-color: var(--secondary-body-color);
@@ -82,7 +81,7 @@
   /* RGBA Colors */ 
   --base-color: 1 16 28;
   --color-primary: rgb(from var(--base-color) r g b / .5);
-  --color-darker: ;
+  --color-darker: ; 
 
 
   /* Link and button defaults */
