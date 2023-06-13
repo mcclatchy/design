@@ -158,8 +158,9 @@
 }
 
 .card.sponsored .kicker {
-  --text-color: white;
+  /* --text-color: white; */
   background-color: var(--emphasis);
+  filter: invert(100%);
 }
 
 /**
@@ -172,7 +173,7 @@
   overflow-x: scroll;
   scrollbar-width: thin;
   scrollbar-color: 
-    var(--scrollbar-foreground, #0007) 
+    var(--scrollbar-foreground, var(--black)); 
     var(--scrollbar-background, transparent);
 }
 
@@ -275,7 +276,7 @@ section, .section {
 .social-media {
   place-content: center;
   display: flex;
-  gap: 15px;
+  gap: var(--social-media-gap, var(--gap)/2);
 }
 
 .social-media svg {

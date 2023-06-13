@@ -34,7 +34,7 @@
 
 .footer .icon {
   border-radius: 20%;
-  background-color: white;
+  background-color: var(--white);
 }
 
 .footer .icon img {
