@@ -173,7 +173,7 @@
   overflow-x: scroll;
   scrollbar-width: thin;
   scrollbar-color: 
-    var(--scrollbar-foreground, var(--black)); 
+    var(--scrollbar-foreground, var(--black)) 
     var(--scrollbar-background, transparent);
 }
 
