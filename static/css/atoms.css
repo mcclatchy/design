@@ -8,17 +8,17 @@
   --sans: "Noto Sans", sans-serif;
   --serif: "Noto Serif", serif;
   --premium-serif: "DM Serif Display", serif;
-  --h1-size: 1.875rem;
+  --h1-size: 1.875rem; 
   --h2-size: 1.5rem;
   --h3-size: 1.2rem;
   --h4-size: 1rem;
 
   /* Spacing and alignment */
-  --space-unit: 30px;
-  --space-xs: calc(var(--space-unit)/3);
-  --space-sm: calc(var(--space-unit)/2);
-  --space-md: var(--space-unit);
-  --space-lg: calc(var(--space-unit)*2);
+  --space: 30px;
+  --space-xs: calc(var(--space)/3);
+  --space-sm: calc(var(--space)/2);
+  --space-md: var(--space);
+  --space-lg: calc(var(--space)*2);
 
   --row-gap: var(--space-md);
   --column-gap: var(--space-md);
@@ -31,16 +31,15 @@
   --story-embed-width: var(--story-width);
   --columns: repeat(auto-fit, minmax(300px, 1fr));
 
-
-
   /* 
    * Colors 
    * Simplifying for conversation 
    */
 
   --black: #241f21;
+  --gray: #707070; /* 7:1 ratio on black and white, maybe a derivative? */
   --white: #ffffff;
-  --gray: #707070;
+
   --light-brown: #f7efe0;
   --dark-brown: #a4906e;
   --light-orange: #fee4d0;
@@ -50,9 +49,18 @@
   --light-blue: #c3d8e4;
   --dark-blue: #273f57;
 
-  --text-color: ;
-  --body-color: ;
-  --paper-color: ;
+  --primary-text-color: var(--black);
+  --secondary-text-color: var(--gray);
+  --background-color: #f4f4f4;
+  --secondary-background-color: var(--white);
+  --link-color: ;
+  --button-color: ; /* opposite */
+
+  --base: 0.44; /* grey #707070 */
+  --tint: 0; 
+  --luminosity: calc(var(--base)+var(--tint));
+  --accent: 0 0 var(--luminosity);
+
 
 
   /* ---------------------------------------------------- */
@@ -61,7 +69,6 @@
   --lightgray: #d3d3d3;
 
   --muted: #757575;
-  --accent: ;
 
   --impact: #373737;
   --promo: #31409F;
@@ -79,7 +86,7 @@
   --tertiary-body-color: #e6e6e6;
   --emphasis: var(--dark-gray);
 
-  --paper-color: var(--secondary-body-color);
+  /* --paper-color: var(--secondary-body-color); */
 
   /* RGBA Colors */ 
   --base-color: 1 16 28;
@@ -147,7 +154,7 @@
 
 body {
   margin: 0;
-  background-color: var(--body-color);
+  background-color: var(--background-color);
   color: var(--text-color);
 }
 
@@ -202,8 +209,8 @@ a {
 }
 
 a:hover {
-  color: var(--link-hover-color, var(--link-color));
-  text-decoration: var(--link-hover-decoration, var(--link-decoration));
+  color: var(--link-hover-color);
+  text-decoration: var(--link-hover-decoration);
 }
 
 ul, ol {
@@ -219,7 +226,7 @@ li {
   padding: 5px 8px;
   font-weight: normal;
   color: var(--text-color);
-  filter: invert(100%);
+  /* filter: invert(100%); */
   border: 1px solid var(--text-color);
   border-radius: 2px;
   text-transform: uppercase;
@@ -232,7 +239,7 @@ li {
 time, .time, .byline {
   display: inline-block;
   text-transform: uppercase;
-  color: var(--text-color, var(--secondary-text-color));
+  color: var(--secondary-text-color);
   font: 0.75rem/1.1em var(--sans);
 }
 
@@ -259,8 +266,8 @@ summary, .summary {
 .label > * {
   margin: 0;
   padding: 5px 10px;
-  color: var(--secondary-body-color);
-  background-color: var(--emphasis);
+  color: var(--secondary-background-color);
+  background-color: var(--secondary-text-color);
   font: bold 0.875rem var(--sans);
   line-height: 1em;
 }
@@ -302,12 +309,12 @@ summary, .summary {
   display: block;
   font: italic 0.875rem var(--sans);
   text-transform: uppercase;
-  color: var(--text-color, var(--muted));
+  color: var(--secondary-text-color);
 }
 
 hr {
   align-self: stretch;
-  border: .5px solid var(--text-color, var(--gray));
+  border: .5px solid var(--secondary-text-color);
 }
 
 /**
@@ -435,7 +442,7 @@ form > *, .checkbox-group > * {
 }
 
 form.paper {
-  padding: var(--half-gap);
+  padding: var(--space-sm);
 }
 
 label { 
@@ -460,7 +467,7 @@ label ~ .select,
 label input,
 label select, 
 label .select {
-  margin-top: 10px;
+  margin-top: var(--space-xs);
 }
 
 label small,
@@ -566,6 +573,8 @@ figure {
   flex: none;
   gap: 10px;
   margin: 0;
+  background-color: var(--figure-background-color, var(--gray));
+  color: var(--figure-color);
 }
 
 
@@ -577,8 +586,6 @@ figure img {
 
 figcaption, .caption {
   font: 400 0.875rem/1.4em var(--sans);
-  /* color: var(--caption-color, rgba(var(--text-color), 0.5)); */
-  /* color: var(--caption-color, rgb(from var(--text-color) r g b / 50%)); */
   color: var(--caption-color, var(--gray));
 }
 
@@ -589,7 +596,7 @@ figcaption, .caption {
 .paper {
   position: relative;
   box-shadow: var(--paper-shadow); 
-  background-color: var(--paper-color);
+  background-color: var(--paper-color, var(--secondary-background-color));
   color: var(--paper-text-color, var(--text-color));
 }
 

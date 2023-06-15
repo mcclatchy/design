@@ -5,9 +5,8 @@
 .digest {
   display: grid;
   grid-template-rows: 1fr auto;
-  background-color: var(--paper-color);
+  background-color: var(--secondary-background-color);
   box-shadow: var(--paper-shadow);
-  /* color: var(--text-color); */
 }
 
 .digest .paper {
@@ -17,5 +16,4 @@
 .digest .more-link {
   align-self: end;
   padding: 15px 15px 10px;
-  /* --text-color: var(--black); */
 }
