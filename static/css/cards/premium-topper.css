@@ -41,14 +41,14 @@
  */
 
 .msb .topper h3 {
-  --h3-size: 13px;
+  --h3: 13px;
   --header-family: var(--sans);
   --header-c:olor var(--premium-impact);
   --header-transform: uppercase;
 }
 
 .msb .topper [slot="headline"] {
-  --h1-size: 8vw;
+  --h1: 8vw;
   --header-weight: normal;
   --header-leading-size: 1.1em;
   --header-family: var(--premium-serif);
@@ -59,7 +59,7 @@
 
 @media(min-width: 768px) {
   .msb .topper [slot="headline"] {
-    --h1-size: 54px;
+    --h1: 54px;
   }
 }
 

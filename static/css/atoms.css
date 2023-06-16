@@ -8,10 +8,12 @@
   --sans: "Noto Sans", sans-serif;
   --serif: "Noto Serif", serif;
   --premium-serif: "DM Serif Display", serif;
-  --h1-size: 1.875rem; 
-  --h2-size: 1.5rem;
-  --h3-size: 1.2rem;
-  --h4-size: 1rem;
+
+  --font-base: 1rem;
+  --h1: calc(var(--font-base)*1.875); 
+  --h2: calc(var(--font-base)*1.5);
+  --h3: calc(var(--font-base)*1.2);
+  --h4: var(--font-base);
 
   /* Spacing and alignment */
   --space: 30px;
@@ -56,10 +58,12 @@
   --link-color: ;
   --button-color: ; /* opposite */
 
-  --base: 0.44; /* grey #707070 */
-  --tint: 0; 
-  --luminosity: calc(var(--base)+var(--tint));
-  --accent: 0 0 var(--luminosity);
+  --luminosity: 0.44; /* grey #707070 */
+  --hsl: 0 0 var(--luminosity);
+  /* --accent: hsl(var(--hsl)); */
+
+  --tint: 1;
+  --accent: hsla(0, 0%, 44%, var(--tint));
 
 
 
@@ -67,7 +71,6 @@
 
   --dark-gray: #373737;
   --lightgray: #d3d3d3;
-
   --muted: #757575;
 
   --impact: #373737;
@@ -75,8 +78,6 @@
   --premium-bc: #00223e;
   --premium-tc: white;
   --premium-impact: #ffd71a;
-
-  /* --brand-black: #241f21; */
 
   --text-color: var(--black);
   --secondary-text-color: var(--gray);
@@ -116,10 +117,10 @@
    * --header-transform: header transform
    * --header-leading: header leading
    * --header-color: header color
-   * --h1-size: H1 header size
-   * --h2-size: H2 header size
-   * --h3-size: H3 header size
-   * --h4-size: H4 header size
+   * --h1: H1 header size
+   * --h2: H2 header size
+   * --h3: H3 header size
+   * --h4: H4 header size
    */
 
   /**
@@ -180,19 +181,19 @@ h6, .h6 {
 }
 
 h1, .h1 {
-  font-size: var(--h1-size);
+  font-size: var(--h1);
 }
 
 h2, .h2 {
-  font-size: var(--h2-size);
+  font-size: var(--h2);
 }
 
 h3, .h3 {
-  font-size: var(--h3-size);
+  font-size: var(--h3);
 }
 
 h4, .h4 {
-  font-size: var(--h4-size);
+  font-size: var(--h4);
 }
 
 h5, .h5 {
@@ -573,7 +574,8 @@ figure {
   flex: none;
   gap: 10px;
   margin: 0;
-  background-color: var(--figure-background-color, var(--gray));
+  --tint: 0.5;
+  background-color:  var(--accent);
   color: var(--figure-color);
 }
 

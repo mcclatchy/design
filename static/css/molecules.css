@@ -92,7 +92,7 @@
 /* } */
 
 .package.no-img {
-  --h3-size: x-large;
+  --h3: x-large;
 }
 
 .package img {
