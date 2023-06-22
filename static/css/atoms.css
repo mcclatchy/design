@@ -81,8 +81,6 @@
   --secondary-body-color: #ffffff; /* paper color */
   --emphasis: var(--dark-gray);
 
-  /* --paper-color: var(--secondary-body-color); */
-
   /* Link and button defaults */
   /* --link-color: var(--text-color); */
   /* --link-decoration: none; */
@@ -362,12 +360,12 @@ hr {
  [disabled] {
    background-color: var(--emphasis);
    --paper-color: var(--emphasis);
-   --text-color: var(--secondary-body-color);
-   --fill-color: var(--secondary-body-color);
-   --button-color: var(--secondary-body-color);
-   --hover-color: var(--secondary-body-color);
-   --link-hover-color: var(--secondary-body-color);
-   --button-background-color: var(--emphasis);
+   --text-color: var(--secondary-background-color);
+   --fill-color: var(--secondary-background-color);
+   --button-color: var(--secondary-background-color);
+   --hover-color: var(--secondary-background-color);
+   --link-hover-color: var(--secondary-background-color);
+   --button-background-color: var(--text-color);
  }
  
  .impact .button,

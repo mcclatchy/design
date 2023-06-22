@@ -6,7 +6,7 @@
 
  footer {
   background-color: var(--dark-gray);
-  --text-color: var(--white);
+  --text-color: var(--secondary-background-color);
  }
 
 .footer {
@@ -57,8 +57,9 @@
   height: 35px;
 }
 
-.footer .more-link {
-  color: var(--secondary-body-color);
+.footer .more-link,
+.footer .summary {
+  color: var(--secondary-background-color);
 }
 
 .footer-links {

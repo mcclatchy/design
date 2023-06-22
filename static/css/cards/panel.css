@@ -18,9 +18,9 @@
 }
 
 .panel.impact {
-  --secondary-body-color: var(--emphasis);
+  --secondary-background-color: var(--emphasis);
   --text-color: white;
-  --link-color: var(--secondary-body-color);
+  --link-color: var(--secondary-background-color);
   --link-decoration: underline;
   --link-hover-color: #88B1FC;
 }

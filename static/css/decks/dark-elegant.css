@@ -5,8 +5,8 @@
  [data-layout=dark]:root {
     --text-color: var(--white);
     --secondary-text-color: var(--lightgray);
-    --body-color: #00223e;
-    --secondary-body-color: var(--black); /* paper color */
+    --background-color: #00223e;
+    --secondary-background-color: var(--black); /* paper color */
     --zone-background-color: #002d52;
     --primary: ; /* hue */
     --emphasis: var(--text-color);
