@@ -58,12 +58,9 @@
   --link-color: ;
   --button-color: ; /* opposite */
 
-  --luminosity: 0.44; /* grey #707070 */
-  --hsl: 0 0 var(--luminosity);
-  /* --accent: hsl(var(--hsl)); */
-
-  --tint: 1;
-  --accent: hsla(0, 0%, 44%, var(--tint));
+  --luminosity: 44%; /* grey #707070 */
+  --alpha: 1;
+  --accent: hsla(0, 0%, var(--luminosity), var(--alpha));
 
 
 
