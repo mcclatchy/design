@@ -108,7 +108,7 @@
 .story-body .mugshot .img-container {
   display: grid;
   grid-template-columns: 125px 1fr;
-  grid-gap: var(--size-sm);
+  grid-gap: var(--space-sm);
 }
 
 .story-body .mugshot figcaption {

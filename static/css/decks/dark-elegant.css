@@ -7,7 +7,7 @@
     --secondary-text-color: var(--lightgray);
     --body-color: #00223e;
     --secondary-body-color: var(--black); /* paper color */
-    --tertiary-body-color: #002d52;
+    --zone-background-color: #002d52;
     --primary: ; /* hue */
     --emphasis: var(--text-color);
  }
@@ -15,4 +15,7 @@
  [data-layout=dark] .story-body p {
     --link-color: #809fff;
     --link-hover-color: #9ab2ff;
+ }
+
+ [data-layout=dark] .zone {
  }

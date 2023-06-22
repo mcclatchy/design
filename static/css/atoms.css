@@ -51,7 +51,7 @@
   --light-blue: #c3d8e4;
   --dark-blue: #273f57;
 
-  --primary-text-color: var(--black);
+  --text-color: var(--black);
   --secondary-text-color: var(--gray);
   --background-color: #f4f4f4;
   --secondary-background-color: var(--white);
@@ -79,7 +79,6 @@
   --tertiary-text-color: var(--dark-gray);
   --body-color: #f4f4f4;
   --secondary-body-color: #ffffff; /* paper color */
-  --tertiary-body-color: #e6e6e6;
   --emphasis: var(--dark-gray);
 
   /* --paper-color: var(--secondary-body-color); */
@@ -564,7 +563,6 @@ figure {
   gap: 10px;
   margin: 0;
   --tint: 0.5;
-  background-color:  var(--accent);
   color: var(--figure-color);
 }
 
@@ -573,6 +571,7 @@ figure img {
   display: block;
   width: 100%;
   height: auto;
+  background-color:  var(--accent);
 }
 
 figcaption, .caption {

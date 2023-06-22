@@ -4,7 +4,7 @@
 
 .header {
   display: grid;
-  gap: var(--size-sm);
+  gap: var(--space-sm);
   justify-items: center;
   text-align: center;
   --header-family: var(--serif);
@@ -18,7 +18,7 @@
 
 .bio {
   display: grid;
-  gap: var(--size-sm);
+  gap: var(--space-sm);
 }
 
 .bio .byline {
@@ -74,7 +74,7 @@
 .opinion-banner {
   display: grid;
   grid-template-columns: 35px min-content 1fr;
-  grid-column-gap: var(--size-sm);
+  grid-column-gap: var(--space-sm);
   grid-row-gap: 5px;
   max-width: var(--story-width);
   margin: 0 auto;

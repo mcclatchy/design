@@ -36,5 +36,5 @@
 }
 
 .panel .grid {
-  grid-gap: var(--size-sm);
+  grid-gap: var(--space-sm);
 }
