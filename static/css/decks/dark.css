@@ -6,9 +6,9 @@
     --text-color: var(--white);
     --secondary-text-color: var(--lightgray);
     --tertiary-text-color: #f2f2f2;
-    --background-color: #00223e;
+    --background-color: #393134;
     --secondary-background-color: var(--black); /* paper color */
-    --zone-background-color: #002d52;
+    --zone-background-color: #2f282b;
     --emphasis: var(--text-color);
     --link-detail-color: #809fff;
     --link-detail-hover-color: #9ab2ff;
