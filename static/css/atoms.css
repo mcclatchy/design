@@ -55,7 +55,6 @@
   --secondary-text-color: var(--gray);
   --background-color: #f4f4f4;
   --secondary-background-color: var(--white);
-  --link-color: ;
 
   --luminosity: 44%; /* grey #707070 */
   --alpha: 1;
@@ -76,9 +75,6 @@
   --text-color: var(--black);
   --secondary-text-color: var(--gray);
   --emphasis: var(--dark-gray);
-
-  --link-detail-color: #5169B8;
-  --link-detail-hover-color: #31409F;
 
   /* Paper box shadow */
   --paper-shadow: 
@@ -181,12 +177,12 @@ h6, .h6 {
 }
 
 a {
-  color: var(--link-color);
+  color: var(--link-color, #5169B8);
   text-decoration: var(--link-decoration);
 }
 
 a:hover {
-  color: var(--link-hover-color);
+  color: var(--link-hover-color, #31409F);
   text-decoration: var(--link-hover-decoration);
 }
 

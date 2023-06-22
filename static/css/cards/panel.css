@@ -12,8 +12,8 @@
   --header-weight: bold;
   --header-transform: uppercase;
   /* --tf: var(--sans); */
-  --link-color: var(--link-detail-color);
-  --link-hover-color: var(--link-detail-hover-color);
+  /* --link-color: var(--text-color);
+  --link-hover-color: var(--link-detail-hover-color); */
   --link-decoration: underline;
 }
 

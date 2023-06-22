@@ -89,6 +89,8 @@ td:first-child {
 .banner nav a {
   font: bold small var(--sans);
   text-transform: uppercase;
+  --link-color: var(--black);
+  --link-hover-color: var(--black);
 }
 
 /*
