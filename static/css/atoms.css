@@ -39,7 +39,7 @@
    */
 
   --black: #241f21;
-  --gray: #707070; /* 7:1 ratio on black and white, maybe a derivative? */
+  --gray: #707070; /* 7:1 ratio on black and white */
   --white: #ffffff;
 
   --light-brown: #f7efe0;
@@ -56,12 +56,10 @@
   --background-color: #f4f4f4;
   --secondary-background-color: var(--white);
   --link-color: ;
-  --button-color: ; /* opposite */
 
   --luminosity: 44%; /* grey #707070 */
   --alpha: 1;
   --accent: hsla(0, 0%, var(--luminosity), var(--alpha));
-
 
 
   /* ---------------------------------------------------- */
@@ -85,12 +83,6 @@
   --emphasis: var(--dark-gray);
 
   /* --paper-color: var(--secondary-body-color); */
-
-  /* RGBA Colors */ 
-  --base-color: 1 16 28;
-  --color-primary: rgb(from var(--base-color) r g b / .5);
-  --color-darker: ; 
-
 
   /* Link and button defaults */
   /* --link-color: var(--text-color); */
@@ -329,8 +321,8 @@ hr {
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
-  color: var(--button-color);
-  background-color: var(--button-background-color);
+  color: var(--button-color, var(--background-color));
+  background-color: var(--button-background-color, var(--primary-text-color));
   border: 1px solid transparent;
   cursor: pointer;
   --link-hover-color: var(--button-color);
