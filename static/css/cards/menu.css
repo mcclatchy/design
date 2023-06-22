@@ -50,7 +50,7 @@
 
 .main-nav button:hover,
 .main-nav a:hover {
-  background-color: var(--tertiary-text-color);
+  background-color: var(--secondary-text-color);
 }
 
 .main-nav a,
@@ -71,7 +71,7 @@
 
 .main-nav .subsection a {
   padding: 10px 30px 10px 45px;
-  color: #989898;
+  color: var(--background-color);
 }
 
 .main-nav .subsection a:hover {
@@ -81,7 +81,7 @@
 .main-nav .expander.open,
 .main-nav .expander.open + div a,
 .main-nav .option-label {
-  background-color: var(--tertiary-text-color);
+  background-color: var(--secondary-text-color);
   border-color: var(--secondary-background-color);
 }
 

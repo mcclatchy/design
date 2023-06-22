@@ -66,7 +66,6 @@
 
   --dark-gray: #373737;
   --lightgray: #d3d3d3;
-  --muted: #757575;
 
   --impact: #373737;
   --promo: #31409F;
@@ -76,16 +75,7 @@
 
   --text-color: var(--black);
   --secondary-text-color: var(--gray);
-  --tertiary-text-color: var(--dark-gray);
-  --body-color: #f4f4f4;
-  --secondary-body-color: #ffffff; /* paper color */
   --emphasis: var(--dark-gray);
-
-  /* Link and button defaults */
-  /* --link-color: var(--text-color); */
-  /* --link-decoration: none; */
-  /* --button-color: var(--secondary-text-color); */
-  /* --button-background-color: var(--emphasis); */
 
   --link-detail-color: #5169B8;
   --link-detail-hover-color: #31409F;
@@ -399,7 +389,7 @@ hr {
  }
  
  .disabled, [disabled] {
-   --paper-color: var(--muted);
+   --paper-color: var(--gray);
    cursor: not-allowed;
  }
 

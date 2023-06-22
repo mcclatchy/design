@@ -201,7 +201,7 @@ form[id^=bx-form] {
 }
 
 #newsletter-signUpWidget .button {
-  --button-background-color: var(--impact);
+  --button-background-color: var(--dark-gray);
   --button-color: white;
 }
 

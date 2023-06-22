@@ -3,12 +3,13 @@
  */
 
 .in-depth {
-  background-color: var(--tertiary-text-color);
+  background-color: var(--emphasis);
 }
 
 .in-depth .package {
   --h1: 1.75rem;
   --header-weight: bold;
+  color: var(--text-color);
 }
 
 .card.in-depth figure {
