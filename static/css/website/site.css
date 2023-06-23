@@ -125,6 +125,11 @@ td:first-child {
   background-color: #ECF5FF;
 }
 
+.rail a {
+  --link-color: var(--text-color);
+  --link-hover-color: var(--text-color);
+}
+
 /*
  * Story
  */
