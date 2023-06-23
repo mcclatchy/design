@@ -1,6 +1,5 @@
 .section-nav {
   grid-column: 1/-1;
-  /* --link-color: #707070; */
   --link-color: var(--secondary-text-color);
   --scrollbar-foreground: var(--secondary-text-color);
   --spread: 15px;
@@ -19,7 +18,6 @@
   padding-top: 10px;
   font: 12px var(--sans);
   text-transform: uppercase;
-  /* --link-color: var(--text-color, var(--secondary-text-color)); */
   --link-hover-color: var(--text-color);
 }
 

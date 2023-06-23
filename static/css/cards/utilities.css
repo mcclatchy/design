@@ -3,8 +3,7 @@
  */
 
 .cutout {
-  background-color: var(--bodyBackground);
-  /* background-color: var(--body-color); */
+  background-color: var(--background-color);
 }
 
 .gray {

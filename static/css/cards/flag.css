@@ -199,6 +199,7 @@ html.msb .masthead {
   border-bottom: 1px solid var(--border-color, var(--black));
   font-size: 16px;
   padding: 17px 0 15px;
+  --link-hover-color: var(--text-color);
   --link-hover-decoration: underline;
 
   /* Hides the bottom border for decks without the premium topper */

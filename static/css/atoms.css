@@ -56,10 +56,10 @@
   --background-color: #f4f4f4;
   --secondary-background-color: var(--white);
 
+  /* still a working idea, ok with omitting */
   --luminosity: 44%; /* grey #707070 */
   --alpha: 1;
   --accent: hsla(0, 0%, var(--luminosity), var(--alpha));
-
 
   /* ---------------------------------------------------- */
 
@@ -197,21 +197,20 @@ li {
   padding: 5px 8px;
   font-weight: normal;
   color: var(--text-color);
-  /* filter: invert(100%); */
   border: 1px solid var(--text-color);
   border-radius: 2px;
   text-transform: uppercase;
-  --link-decoration: none;
-  --link-hover-decoration: none;
   --link-color: var(--text-color);
   --link-hover-color: var(--text-color);
+  --link-decoration: none;
+  --link-hover-decoration: none;
 }
 
 time, .time, .byline {
   display: inline-block;
-  text-transform: uppercase;
   color: var(--secondary-text-color);
   font: 0.75rem/1.1em var(--sans);
+  text-transform: uppercase;
 }
 
 .byline a {
@@ -303,7 +302,7 @@ hr {
   text-transform: uppercase;
   text-decoration: none;
   color: var(--button-color, var(--background-color));
-  background-color: var(--button-background-color, var(--primary-text-color));
+  background-color: var(--button-background-color, var(--text-color));
   border: 1px solid transparent;
   cursor: pointer;
   --link-hover-color: var(--button-color);
@@ -544,7 +543,6 @@ figure {
   flex: none;
   gap: 10px;
   margin: 0;
-  --tint: 0.5;
   color: var(--figure-color);
 }
 

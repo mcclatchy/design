@@ -163,8 +163,8 @@
 }
 
 .card.sponsored .kicker {
+  background-color: var(--text-color);
   --text-color: var(--secondary-background-color);
-  background-color: var(--emphasis);
 }
 
 /**
