@@ -163,9 +163,8 @@
 }
 
 .card.sponsored .kicker {
-  /* --text-color: white; */
-  /* background-color: var(--emphasis); */
-  filter: invert(100%);
+  --text-color: var(--secondary-background-color);
+  background-color: var(--emphasis);
 }
 
 /**
