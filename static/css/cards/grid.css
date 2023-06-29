@@ -5,12 +5,12 @@
 .grid {
   display: grid;
   grid-template-columns: var(--columns);
-  gap: var(--gap);
-  grid-auto-flow: dense;
+  gap: var(--grid-row-gap) var(--grid-column-gap);
+  grid-auto-flow: var(--grid-flow, dense);
 }
 
 .grid > .package:not(.no-img) {
-  --gap: 0px;
+  --package-padding: 0px;
 }
 
 /*
@@ -73,6 +73,12 @@
   justify-content: center;
 }
 
+.load-more .impact {
+  /* class needs removed in WPS */
+  color: var(--paper-color);
+  background-color: var(--text-color);
+}
+
 /*
  * Custom grid arrangements
  */
@@ -92,4 +98,12 @@
 
 .region, custom-card {
   display: contents;
+}
+
+/*
+ * Packages as direct children (related)
+ */
+
+.grid > .package {
+  padding: 0;
 }

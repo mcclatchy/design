@@ -3,13 +3,13 @@
  */
 
 :root {
-  /* Fonts */
-  font: 16px/1.5rem var(--serif);
+  /* Typography */
+  font: var(--font-base)/1.5rem var(--serif);
+  --font-base: 16px;
   --sans: "Noto Sans", sans-serif;
   --serif: "Noto Serif", serif;
   --premium-serif: "DM Serif Display", serif;
 
-  --font-base: 1rem;
   --h1: calc(var(--font-base)*1.875); 
   --h2: calc(var(--font-base)*1.5);
   --h3: calc(var(--font-base)*1.2);
@@ -19,29 +19,24 @@
   --space: 30px;
   --space-xs: calc(var(--space)/3);
   --space-sm: calc(var(--space)/2);
-  --space-md: var(--space);
+  /* --space-md: var(--space); */
   --space-lg: calc(var(--space)*2);
 
-  --row-gap: var(--space-md);
-  --column-gap: var(--space-md);
-  --gap: var(--space-md);
-  --spread: var(--space-xs);
-  --page-padding: var(--space-s);
+  --grid-row-gap: var(--space);
+  --grid-column-gap: var(--space);
+  /* --gap: var(--space-md); */
+  /* --spread: var(--space-xs); */
+  --page-padding: var(--space-sm);
   --section-width: 1140px;
   --story-width: 728px;
   --story-media-width: var(--story-width);
   --story-embed-width: var(--story-width);
   --columns: repeat(auto-fit, minmax(300px, 1fr));
 
-  /* 
-   * Colors 
-   * Simplifying for conversation 
-   */
-
+  /* Colors */
   --black: #241f21;
-  --gray: #707070; /* 7:1 ratio on black and white */
+  --gray: #707070;
   --white: #ffffff;
-
   --light-brown: #f7efe0;
   --dark-brown: #a4906e;
   --light-orange: #fee4d0;
@@ -51,33 +46,49 @@
   --light-blue: #c3d8e4;
   --dark-blue: #273f57;
 
+  /* Generic color properties */
+  --background-color: #f4f4f4;
+  --zone-background-color: #e6e6e6;
   --text-color: var(--black);
   --secondary-text-color: var(--gray);
-  --background-color: #f4f4f4;
-  --secondary-background-color: var(--white);
+  /* --secondary-background-color: var(--white); */
 
-  /* still a working idea, ok with omitting */
-  --luminosity: 44%; /* grey #707070 */
-  --alpha: 1;
-  --accent: hsla(0, 0%, var(--luminosity), var(--alpha));
+  /* Premium color properties */
+  --premium-blue: #00223e;
+  --premium-text-color: var(--white);
+  --premium-secondary-text-color: #ffd71a;
+  /* custom elements still rely on these */
+  --premium-bc: var(--premium-blue);
+  --premium-tc: var(--premium-text-color);
+  --premium-impact: var(--premium-secondary-text-color);
 
-  /* ---------------------------------------------------- */
+  /* Link properties */
+  --link-color: #5169B8;
+  --link-decoration: none;
 
-  --dark-gray: #373737;
-  --lightgray: #d3d3d3;
-
-  --impact: #373737;
-  --promo: #31409F;
-  --premium-bc: #00223e;
-  --premium-tc: white;
-  --premium-impact: #ffd71a;
-
-  --emphasis: var(--dark-gray);
-
-  /* Paper box shadow */
+  /* Paper properties */
+  --paper-color: var(--white);
   --paper-shadow: 
     0 1px 2px 0 rgba(0, 0, 0, .2), 
     0 1px 5px 0 rgba(0, 0, 0, .13);
+
+  /* still a working idea, ok with omitting */
+  /* --luminosity: 44%; /1* grey #707070 *1/ */
+  /* --alpha: 1; */
+  /* --accent: hsla(0, 0%, var(--luminosity), var(--alpha)); */
+
+  /* ---------------------------------------------------- */
+
+  /* --dark-gray: #373737; */
+  /* --lightgray: #d3d3d3; */
+
+  /* --impact: #373737; */
+  /* --promo: #31409F; */
+  /* --premium-bc: #00223e; */
+  /* --premium-tc: white; */
+  /* --premium-impact: #ffd71a; */
+
+  /* --emphasis: var(--dark-gray); */
 
   /**
    * Header properties available
@@ -175,13 +186,16 @@ h6, .h6 {
 }
 
 a {
-  color: var(--link-color, #5169B8);
+  /* color: var(--link-color, #5169B8); */
+  color: var(--link-color);
   text-decoration: var(--link-decoration);
+  /* text-decoration: var(--link-decoration, none); */
 }
 
 a:hover {
-  color: var(--link-hover-color, #31409F);
-  text-decoration: var(--link-hover-decoration);
+  /* color: var(--link-hover-color, #31409F); */
+  color: var(--link-hover-color, var(--link-color));
+  text-decoration: var(--link-hover-decoration, var(--link-decoration));
 }
 
 ul, ol {
@@ -200,10 +214,14 @@ li {
   border: 1px solid var(--text-color);
   border-radius: 2px;
   text-transform: uppercase;
-  --link-color: var(--text-color);
-  --link-hover-color: var(--text-color);
-  --link-decoration: none;
-  --link-hover-decoration: none;
+  /* --link-color: var(--text-color); */
+  /* --link-hover-color: var(--text-color); */
+  /* --link-decoration: none; */
+  /* --link-hover-decoration: none; */
+}
+
+.kicker:hover {
+  text-decoration: none;
 }
 
 time, .time, .byline {
@@ -236,8 +254,8 @@ summary, .summary {
 .label > * {
   margin: 0;
   padding: 5px 10px;
-  color: var(--secondary-background-color);
-  background-color: var(--secondary-text-color);
+  color: var(--paper-color);
+  background-color: var(--text-color);
   font: bold 0.875rem var(--sans);
   line-height: 1em;
 }
@@ -301,12 +319,16 @@ hr {
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
-  color: var(--button-color, var(--background-color));
+  color: var(--button-color, var(--paper-color));
   background-color: var(--button-background-color, var(--text-color));
   border: 1px solid transparent;
   cursor: pointer;
-  --link-hover-color: var(--button-color);
-  --link-hover-decoration: none;
+}
+
+.button:hover {
+  text-decoration: none;
+  color: var(--button-hover-color, var(--paper-color));
+  background-color: var(--button-background-hover-color, var(--text-color));
 }
 
 .button.big {
@@ -315,18 +337,18 @@ hr {
 
 .button.text,
 .button.ghost {
-  border: 1px solid var(--emphasis);
+  border: 1px solid var(--text-color);
   background-color: transparent;
-  color: var(--emphasis);
+  color: var(--text-color);
 }
 
 .button.text {
   border: none;
 }
 
-.button.pill {
-  border-radius: 1.5em;
-}
+/* .button.pill { */
+/*   border-radius: 1.5em; */
+/* } */
 
 .button > img {
   display: block;
@@ -336,55 +358,72 @@ hr {
  * Color schemes
  */
 
- .impact, 
- .promo,
- .promo-light,
- .disabled,
- [disabled] {
-   background-color: var(--emphasis);
-   --paper-color: var(--emphasis);
-   --text-color: var(--secondary-background-color);
-   --fill-color: var(--secondary-background-color);
-   --button-color: var(--secondary-background-color);
-   --hover-color: var(--secondary-background-color);
-   --link-hover-color: var(--secondary-background-color);
-   --button-background-color: var(--text-color);
- }
+.impact {
+  --paper-color: var(--black);
+  --text-color: var(--white);
+  --secondary-text-color: var(--text-color);
+}
+
+.promo {
+  --paper-color: var(--dark-blue);
+  --text-color: var(--white);
+  --secondary-text-color: var(--text-color);
+}
+
+.disabled, [disabled] {
+  --paper-color: var(--gray);
+   pointer-events: none;
+}
+
+ /* .impact, */ 
+ /* .promo, */
+ /* .promo-light, */
+ /* .disabled, */
+ /* [disabled] { */
+ /*   background-color: var(--emphasis); */
+ /*   --paper-color: var(--emphasis); */
+ /*   --text-color: var(--secondary-background-color); */
+ /*   --fill-color: var(--secondary-background-color); */
+ /*   --button-color: var(--secondary-background-color); */
+ /*   --hover-color: var(--secondary-background-color); */
+ /*   --link-hover-color: var(--secondary-background-color); */
+ /*   --button-background-color: var(--text-color); */
+ /* } */
  
- .impact .button,
- .impact .label {
-   --button-color: var(--emphasis);
-   --button-background-color: white;
- }
+ /* .impact .button, */
+ /* .impact .label { */
+ /*   --button-color: var(--emphasis); */
+ /*   --button-background-color: white; */
+ /* } */
  
- .promo {
-   background-color: var(--promo);
-   --paper-color: var(--promo);
-   --button-background-color: var(--promo);
- }
+ /* .promo { */
+ /*   background-color: var(--promo); */
+ /*   --paper-color: var(--promo); */
+ /*   --button-background-color: var(--promo); */
+ /* } */
  
- .promo .button,
- .promo .label {
-   --button-color: var(--promo);
-   --button-background-color: white;
- }
+ /* .promo .button, */
+ /* .promo .label { */
+ /*   --button-color: var(--promo); */
+ /*   --button-background-color: white; */
+ /* } */
  
- .promo-light {
-   background-color: #5169B8;
-   --paper-color: #5169B8;
-   --button-background-color: #5169B8;
- }
+ /* .promo-light { */
+ /*   background-color: #5169B8; */
+ /*   --paper-color: #5169B8; */
+ /*   --button-background-color: #5169B8; */
+ /* } */
  
- .promo-light .button,
- .promo-light .label {
-   --button-color: #5169B8;
-   --button-background-color: white;
- }
+ /* .promo-light .button, */
+ /* .promo-light .label { */
+ /*   --button-color: #5169B8; */
+ /*   --button-background-color: white; */
+ /* } */
  
- .disabled, [disabled] {
-   --paper-color: var(--gray);
-   cursor: not-allowed;
- }
+ /* .disabled, [disabled] { */
+ /*   --paper-color: var(--gray); */
+ /*   cursor: not-allowed; */
+ /* } */
 
 /**
  * Form elements
@@ -454,9 +493,10 @@ input, select, .select {
   width: 100%;
   padding: 10px;
   box-sizing: border-box;
-  border: 1px solid #989898;
+  border: 1px solid var(--text-color);
   border-radius: 2px;
-  background-color: white;
+  color: var(--text-color);
+  background-color: var(--paper-color);
   font-size: 0.875rem;
   transition: all .15s ease-in-out;
   cursor: pointer;
@@ -543,7 +583,6 @@ figure {
   flex: none;
   gap: 10px;
   margin: 0;
-  color: var(--figure-color);
 }
 
 
@@ -551,12 +590,12 @@ figure img {
   display: block;
   width: 100%;
   height: auto;
-  background-color:  var(--accent);
+  background-color: var(--figure-background-color, var(--background-color));
 }
 
 figcaption, .caption {
   font: 400 0.875rem/1.4em var(--sans);
-  color: var(--caption-color, var(--gray));
+  color: var(--caption-color, var(--secondary-text-color));
 }
 
 /**
@@ -566,8 +605,8 @@ figcaption, .caption {
 .paper {
   position: relative;
   box-shadow: var(--paper-shadow); 
-  background-color: var(--paper-color, var(--secondary-background-color));
-  color: var(--paper-text-color, var(--text-color));
+  background-color: var(--paper-color);
+  color: var(--text-color);
 }
 
 .paper * {

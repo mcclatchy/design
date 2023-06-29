@@ -189,7 +189,7 @@ form[id^=bx-form] {
 .partner-label span {
   position: relative;
   padding-right: 15px;
-  background-color: var(--body-background);
+  background-color: var(--background-color);
 }
 
 #newsletter-signUpWidget {
@@ -199,10 +199,10 @@ form[id^=bx-form] {
   --link-hover-color: #5169B8;
 }
 
-#newsletter-signUpWidget .button {
-  --button-background-color: var(--dark-gray);
-  --button-color: white;
-}
+/* #newsletter-signUpWidget .button { */
+/*   --button-background-color: var(--gray); */
+/*   --button-color: white; */
+/* } */
 
 /*
  * WPS breaks from recommended DOM

@@ -15,10 +15,11 @@ body.wirestory .masthead {
 }
 
 html.msb .masthead {
-  --paper-color: var(--premium-bc);
-  --text-color: var(--premium-tc);
-  --link-color: var(--premium-tc);
-  --border-color: var(--premium-tc);
+  --paper-color: var(--premium-blue);
+  --text-color: var(--premium-text-color);
+  --link-color: var(--premium-text-color);
+  --border-color: var(--premium-text-color);
+  --fill-color: var(--premium-text-color);
 }
 
 .sds-flag {
@@ -176,11 +177,11 @@ html.msb .masthead {
   content: "";
   width: 30px;
   height: 1px;
-  background-color: var(--premium-impact);
+  background-color: var(--premium-secondary-text-color);
 }
 
 .msb .flag-edition {
-  color: var(--premium-impact);
+  color: var(--premium-secondary-text-color);
 }
 
 .flag-logo {

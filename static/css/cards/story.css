@@ -10,7 +10,8 @@
   /* --link-color: var(--link-detail-color);
   --link-hover-color: var(--link-detail-hover-color);
   --link-decoration: underline; */
-  color: var(--text-color);
+  color: var(--story-text-color, var(--text-color));
+  background-color: var(--story-background-color, var(--paper-color));
 }
 
 .story-body > * {

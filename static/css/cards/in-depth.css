@@ -3,13 +3,18 @@
  */
 
 .in-depth {
-  background-color: var(--emphasis);
+  --paper-color: var(--black);
+  --text-color: white;
+}
+
+.in-depth .label > * {
+  color: var(--text-color);
+  background-color: var(--paper-color);
 }
 
 .in-depth .package {
   --h1: 1.75rem;
   --header-weight: bold;
-  color: var(--text-color);
 }
 
 .card.in-depth figure {

@@ -1,19 +1,20 @@
 /**
  * Footer
  *
- * Note: this card could use a DOM refresher
+ * This card is essentially frozen, and I've hard-coded several
+ * of the spacing properties to ensure theming doesn't affect them.
  */
 
  footer {
-  background-color: var(--dark-gray);
-  --text-color: var(--secondary-background-color);
+  background-color: var(--paper-color);
+  color: var(--text-color);
  }
 
 .footer {
   margin: 0 auto;
   padding: var(--page-padding);
   display: grid;
-  gap: var(--gap);
+  gap: 30px;
   font: 16px var(--sans);
 }
 
@@ -25,6 +26,12 @@
   align-self: start;
   --header-family: var(--sans);
   --header-weight: bold;
+}
+
+.footer .flex {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .footer svg,
@@ -57,10 +64,10 @@
   height: 35px;
 }
 
-.footer .more-link,
-.footer .summary {
-  color: var(--secondary-background-color);
-}
+/* .footer .more-link, */
+/* .footer .summary { */
+/*   color: var(--secondary-background-color); */
+/* } */
 
 .footer-links {
   display: flex;
@@ -80,6 +87,7 @@
 .bottom-nav a {
   display: block;
   padding: 15px;
+  --link-color: var(--text-color);
 }
 
 @media (min-width: 600px) {

@@ -5,7 +5,7 @@
 {{ with $region }}
 <div class="digest">
   <div class="paper" data-tb-region="{{ $region }}">
-    <a href="#" class="label">
+    <a href="#" class="label {{ $label }}">
       <span class="h5">{{ $kicker }}</span>
     </a>
     {{- if eq $label "sticky" }}
@@ -48,7 +48,7 @@
 {{- else }}
 <div class="digest">
   <div class="paper">
-    <a href="#" class="label">
+    <a href="#" class="label {{ $label }}">
       <span class="h5">{{ $kicker }}</span>
     </a>
     {{- if eq $label "sticky" }}

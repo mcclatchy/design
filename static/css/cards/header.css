@@ -19,21 +19,25 @@
 .bio {
   display: grid;
   gap: var(--space-sm);
+  justify-items: center;
+  /* justify-content: center; */
+  text-align: center;
+  line-height: 1.2em;
 }
 
 .bio .byline {
   margin: 0;
 }
 
-@media (min-width: 600px) {
-  .header .bio {
-    display: flex;
-    justify-self: stretch;
-    align-items: center;
-    justify-content: space-between;
-    text-align: left;
-  }
-}
+/* @media (min-width: 600px) { */
+/*   .header .bio { */
+/*     display: flex; */
+/*     justify-self: stretch; */
+/*     align-items: center; */
+/*     justify-content: space-between; */
+/*     text-align: left; */
+/*   } */
+/* } */
 
 /**
  * Opinion changes

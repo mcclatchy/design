@@ -14,6 +14,7 @@
   font-family: var(--sans);
   font-size: 0.875rem;
   align-items: center;
+  --package-padding: var(--space-sm) 0;
   --link-color: var(--secondary-text-color);
   --link-decoration: none;
   --header-transform: none;
@@ -63,6 +64,7 @@
     "thumb info"
     "bio bio"
     "contact contact";
+  --package-padding: 0;
   --header-weight: 400;
 }
 
