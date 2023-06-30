@@ -93,3 +93,11 @@
 .region, custom-card {
   display: contents;
 }
+
+/*
+ * Options banner is at the top of all grids
+ */
+
+.option-banners {
+  grid-column: 1/-1;
+}
