@@ -4,8 +4,8 @@
 
 .panel {
   max-width: 100%;
-  padding: var(--space-lg) var(--page-padding);
-  background-color: var(--paper-color);
+  padding: var(--panel-padding, var(--space-lg)) var(--page-padding);
+  background-color: var(--panel-color, var(--paper-color));
   font-family: var(--sans);
   color: var(--text-color);
   --header-family: var(--sans);
@@ -24,7 +24,7 @@
   /* --text-color: white; */
   /* --link-color: var(--secondary-background-color); */
   /* --link-decoration: underline; */
-  --link-color: var(--secondary-text-color);
+  --link-color: var(--text-color);
   --link-hover-color: #88B1FC;
 }
 

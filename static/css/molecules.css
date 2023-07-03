@@ -135,9 +135,9 @@
 /*   color: var(--text-color); */
 /* } */
 
-.card * {
-  --paper-shadow: none;
-}
+/* .card * { */
+/*   --paper-shadow: none; */
+/* } */
 
 .card figure,
 .card .video,

@@ -8,7 +8,7 @@
 }
 
 .series-nav hr {
-  border-color: var(--text-color, #dfdfdf);
+  border-color: var(--series-nav-color, var(--gray));
 }
 
 .series-nav .summary {

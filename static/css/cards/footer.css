@@ -6,8 +6,8 @@
  */
 
  footer {
-  background-color: var(--paper-color);
-  color: var(--text-color);
+  background-color: var(--footer-color, var(--paper-color));
+  color: var(--footer-text-color, var(--text-color));
  }
 
 .footer {
@@ -40,10 +40,10 @@
   width: 30px;
 }
 
-.footer .icon {
-  border-radius: 20%;
-  background-color: var(--white);
-}
+/* .footer .icon { */
+/*   border-radius: 20%; */
+/*   background-color: var(--white); */
+/* } */
 
 .footer .icon img {
   display: block;

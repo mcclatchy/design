@@ -5,15 +5,16 @@
 .digest {
   display: grid;
   grid-template-rows: 1fr auto;
-  background-color: var(--paper-color);
+  background-color: var(--card-color, var(--paper-color));
   box-shadow: var(--paper-shadow);
 }
 
-.digest .paper {
-  --paper-shadow: none;
-}
+/* .digest .paper { */
+/*   --paper-shadow: none; */
+/* } */
 
 .digest .more-link {
   align-self: end;
   padding: 15px 15px 10px;
+  padding: var(--space-sm) var(--space-sm) var(--space-xs);
 }

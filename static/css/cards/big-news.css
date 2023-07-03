@@ -48,7 +48,7 @@ section.big-news {
 }
 
 .big-news .featured {
-  padding: 15px;
+  padding: var(--space-sm);
   --paper-shadow: none;
 }
 

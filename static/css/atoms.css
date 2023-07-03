@@ -33,7 +33,7 @@
 
   /* Colors */
   --black: #241f21;
-  --gray: #707070;
+  --gray: #e6e6e6;
   --white: #ffffff;
   --light-brown: #f7efe0;
   --dark-brown: #a4906e;
@@ -46,9 +46,9 @@
 
   /* Generic color properties */
   --background-color: #f4f4f4;
-  --zone-background-color: #e6e6e6;
   --text-color: var(--black);
-  --secondary-text-color: var(--gray);
+  --secondary-text-color: #707070;
+  /* --zone-background-color: #e6e6e6; */
   /* --secondary-background-color: var(--white); */
 
   /* Premium color properties */
@@ -592,7 +592,7 @@ figure img {
   display: block;
   width: 100%;
   height: auto;
-  background-color: var(--figure-background-color, var(--zone-background-color));
+  background-color: var(--figure-background-color, var(--gray));
 }
 
 figcaption, .caption {
@@ -611,7 +611,9 @@ figcaption, .caption {
   color: var(--text-color);
 }
 
-.paper * {
+.paper *,
+.card *, 
+.digest * {
   --paper-shadow: none;
 }
 

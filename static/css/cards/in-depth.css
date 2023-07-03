@@ -4,7 +4,7 @@
 
 .in-depth {
   --paper-color: var(--black);
-  --text-color: white;
+  --text-color: var(--white);
 }
 
 .in-depth .label > * {

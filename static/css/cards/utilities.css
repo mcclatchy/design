@@ -189,7 +189,7 @@ form[id^=bx-form] {
 .partner-label span {
   position: relative;
   padding-right: 15px;
-  background-color: var(--background-color);
+  background-color: var(--gray);
 }
 
 #newsletter-signUpWidget {

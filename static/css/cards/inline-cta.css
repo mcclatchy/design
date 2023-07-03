@@ -3,7 +3,7 @@
   max-width: var(--story-width);
   margin: 0 auto;
   /* background-color: var(--background-color); */
-  background-color: var(--zone-background-color);
+  background-color: var(--gray);
   color: var(--text-color);
   text-align: left;
 }
