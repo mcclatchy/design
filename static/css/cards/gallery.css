@@ -10,7 +10,7 @@
 }
 
 .gallery .package {
-  --header-weight: 400;
+  /* --header-weight: 400; */
   --header-family: var(--sans);
 }
 

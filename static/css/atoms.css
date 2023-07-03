@@ -24,8 +24,6 @@
 
   --grid-row-gap: var(--space);
   --grid-column-gap: var(--space);
-  /* --gap: var(--space-md); */
-  /* --spread: var(--space-xs); */
   --page-padding: var(--space-sm);
   --section-width: 1140px;
   --story-width: 728px;
@@ -57,10 +55,6 @@
   --premium-blue: #00223e;
   --premium-text-color: var(--white);
   --premium-secondary-text-color: #ffd71a;
-  /* custom elements still rely on these */
-  --premium-bc: var(--premium-blue);
-  --premium-tc: var(--premium-text-color);
-  --premium-impact: var(--premium-secondary-text-color);
 
   /* Link properties */
   --link-color: #5169B8;
@@ -71,6 +65,13 @@
   --paper-shadow: 
     0 1px 2px 0 rgba(0, 0, 0, .2), 
     0 1px 5px 0 rgba(0, 0, 0, .13);
+
+  /* Deprecated. Used in older custom elements. */
+  --gap: var(--space-md);
+  --spread: var(--space-xs);
+  --premium-bc: var(--premium-blue);
+  --premium-tc: var(--premium-text-color);
+  --premium-impact: var(--premium-secondary-text-color);
 
   /* still a working idea, ok with omitting */
   /* --luminosity: 44%; /1* grey #707070 *1/ */
@@ -362,6 +363,7 @@ hr {
   --paper-color: var(--black);
   --text-color: var(--white);
   --secondary-text-color: var(--text-color);
+  --zone-background-color: #373737;
 }
 
 .promo {
@@ -581,7 +583,7 @@ figure {
   position: relative;
   display: grid;
   flex: none;
-  gap: 10px;
+  gap: var(--space-xs);
   margin: 0;
 }
 
@@ -590,7 +592,7 @@ figure img {
   display: block;
   width: 100%;
   height: auto;
-  background-color: var(--figure-background-color, var(--background-color));
+  background-color: var(--figure-background-color, var(--zone-background-color));
 }
 
 figcaption, .caption {

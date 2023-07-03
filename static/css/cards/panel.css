@@ -4,7 +4,7 @@
 
 .panel {
   max-width: 100%;
-  padding: 45px var(--page-padding);
+  padding: var(--space-lg) var(--page-padding);
   background-color: var(--paper-color);
   font-family: var(--sans);
   color: var(--text-color);
@@ -15,13 +15,16 @@
   /* --link-color: var(--text-color);
   --link-hover-color: var(--link-detail-hover-color); */
   --link-decoration: underline;
+  --grid-row-gap: var(--space-sm);
+  --grid-column-gap: var(--space-sm);
 }
 
 .panel.impact {
-  --secondary-background-color: var(--emphasis);
-  --text-color: white;
-  --link-color: var(--secondary-background-color);
-  --link-decoration: underline;
+  /* --secondary-background-color: var(--emphasis); */
+  /* --text-color: white; */
+  /* --link-color: var(--secondary-background-color); */
+  /* --link-decoration: underline; */
+  --link-color: var(--secondary-text-color);
   --link-hover-color: #88B1FC;
 }
 
@@ -35,6 +38,6 @@
   display: block;
 }
 
-.panel .grid {
-  grid-gap: var(--space-sm);
-}
+/* .panel .grid { */
+/*   grid-gap: var(--space-sm); */
+/* } */

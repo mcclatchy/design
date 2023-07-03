@@ -3,7 +3,7 @@
  */
 
 .masthead {
-  --paper-color: white;
+  --paper-color: var(--background-color);
   --paper-shadow: none;
   --link-color: black;
   z-index: 2;
@@ -11,7 +11,7 @@
 
 body.story .masthead,
 body.wirestory .masthead {
-  background-color: white;
+  --paper-color: white;
 }
 
 html.msb .masthead {
@@ -37,7 +37,7 @@ html.msb .masthead {
   color: var(--text-color);
 
   /* Custom properties for kids */
-  --spread: 15px;
+  /* --spread: 15px; */
   --link-decoration: none;
   --text-color: var(--black);
 }
@@ -49,7 +49,7 @@ html.msb .masthead {
     "logo logo logo"
     "nav nav nav";
 
-  --text-color: var(--premium-tc);
+  --text-color: var(--premium-text-color);
 }
 
 @media(min-width: 768px) {
@@ -101,7 +101,7 @@ html.msb .masthead {
 
 .flag-menu {
   grid-area: menu;
-  --spread: 15px;
+  --row-gap: 15px;
 }
 
 .flag-menu button,
@@ -111,7 +111,7 @@ html.msb .masthead {
 }
 
 .sds-flag .search {
-  --spread: 10px;
+  --row-gap: 10px;
 }
 
 .sds-flag .search input {
@@ -136,24 +136,26 @@ html.msb .masthead {
   grid-area: account;
   place-self: end;
   min-height: 30px;
-  --button-color: var(--premium-tc);
-  --button-background-color: var(--premium-bc);
-  --link-hover-decoration: underline;
+  /* --button-color: var(--premium-text-color); */
+  /* --button-background-color: var(--premium-blue); */
+  /* --link-hover-decoration: underline; */
 }
 
 .flag-account .button {
   font-size: 1em;
-  color: white;
+  /* color: white; */
+  --button-color: var(--white);
+  --button-hover-color: var(--premium-secondary-text-color);
 }
 
-.flag-account .button:hover {
-  --button-color: var(--premium-impact);
-}
+/* .flag-account .button:hover { */
+/*   --button-color: var(--premium-impact); */
+/* } */
 
 .flag-left {
   grid-area: left;
   font-size: 14px;
-  --spread: 7px;
+  --statck-gap: 7px;
   --link-hover-decoration: underline;
 }
 
@@ -162,7 +164,7 @@ html.msb .masthead {
   justify-self: end;
   align-items: end;
   font-size: 14px;
-  --spread: 7px;
+  --stack-gap: 7px;
   --link-hover-decoration: underline;
 }
 
@@ -209,7 +211,7 @@ html.msb .masthead {
 }
 
 .msb .flag-nav {
-  --scrollbar-foreground: var(--premium-impact);
+  --scrollbar-foreground: var(--premium-secondary-text-color);
 }
 
 .flag-nav .separator ~ * {

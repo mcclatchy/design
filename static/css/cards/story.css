@@ -61,10 +61,10 @@
   margin-top: 0;
 }
 
-.story-body figure,
-.story-body .figure {
-  --spread: 10px;
-}
+/* .story-body figure, */
+/* .story-body .figure { */
+/*   --spread: 10px; */
+/* } */
 
 .story-body figure .package,
 .story-body .figure .package {

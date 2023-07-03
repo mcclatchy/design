@@ -49,7 +49,7 @@
 
 .header.opinion .bio {
   display: grid;
-  gap: var(--spread);
+  gap: var(--space-xs);
   justify-items: center;
   justify-content: center;
   text-align: center;
