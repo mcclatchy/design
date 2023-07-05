@@ -3,7 +3,7 @@
  */
 
 .timeline-event {
-	border-left: 1px solid var(--timeline-border-color, var(--gray));
+	border-left: 1px solid var(--timeline-border-color, var(--secondary-text-color));
 	max-width: var(--timeline-max-width, 500px);
 	position: relative;
 	--header-family: var(--sans);
@@ -20,8 +20,8 @@
 	width: 18px;
 	height: 18px;
 	box-sizing: border-box;
-	background-color: var(--timeline-border-color, var(--gray));
-	border: 4px solid var(--timeline-border-color, var(--gray));
+	background-color: var(--timeline-border-color, var(--secondary-text-color));
+	border: 4px solid var(--timeline-border-color, var(--secondary-text-color));
 	border-radius: 50%;
 }
 

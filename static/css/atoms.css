@@ -48,6 +48,7 @@
   --background-color: #f4f4f4;
   --text-color: var(--black);
   --secondary-text-color: #707070;
+  --media-background-color: var(--gray);
   /* --zone-background-color: #e6e6e6; */
   /* --secondary-background-color: var(--white); */
 
@@ -592,7 +593,7 @@ figure img {
   display: block;
   width: 100%;
   height: auto;
-  background-color: var(--figure-background-color, var(--gray));
+  background-color: var(--figure-background-color, var(--media-background-color));
 }
 
 figcaption, .caption {
