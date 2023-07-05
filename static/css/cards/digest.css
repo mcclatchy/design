@@ -9,10 +9,6 @@
   box-shadow: var(--paper-shadow);
 }
 
-/* .digest .paper { */
-/*   --paper-shadow: none; */
-/* } */
-
 .digest .more-link {
   align-self: end;
   padding: 15px 15px 10px;

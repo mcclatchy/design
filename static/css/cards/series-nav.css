@@ -23,13 +23,6 @@
   width: 80px;
 }
 
-/** Unnecessary in 1.12
-Can we omit?
-*/
-.series-nav .article img {
-  padding: 0;
-}
-
 .series-nav .article h4 {
   flex: 1;
   max-width: 375px;

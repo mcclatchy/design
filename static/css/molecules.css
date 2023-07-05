@@ -31,67 +31,8 @@
   --header-transform: none;
   --link-color: var(--text-color);
   --link-decoration: none;
-  /* --link-hover-color: var(--text-color); */
   --link-hover-decoration: underline;
 }
-
-/*
- * Card is the real element we'll use mostly
- */
-
-.card {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: var(--card-align, start);
-  gap: var(--card-gap, var(--space-xs));
-  background-color: var(--card-color, var(--paper-color));
-  color: var(--card-text-color, var(--text-color));
-  box-shadow: var(--paper-shadow);
-}
-
-/*
- * ---------------------------------------------
- * The rest of this stuff needs to be incorporated of course
- * ---------------------------------------------
- */
-
-/* .stack, */ 
-/* .package, */ 
-/* .card { */
-/*   display: flex; */
-/*   --display: flex; */
-/*   flex-direction: column; */
-/*   align-items: start; */
-/*   gap: var(--spread); */
-/* } */
-
-.stack > *,
-.row > *,
-.package > *,
-.card > * {
-  margin: 0;
-}
-
-/* .row { */
-/*   display: flex; */
-/*   --display: flex; */
-/*   align-items: center; */
-/*   gap: var(--spread); */
-/* } */
-
-/* .package { */
-/*   padding: var(--half-gap); */
-/*   color: var(--text-color); */
-/*   flex: 1; */
-/*   --header-transform: none; */
-/*   --header-weight: normal; */
-/*   --header-family: var(--serif); */
-/*   --link-decoration: none; */
-/*   --link-hover-decoration: underline; */
-/*   --link-color: var(--link-color, inherit); */
-/*   --link-hover-color: var(--link-hover-color, inherit); */
-/* } */
 
 .package.no-img {
   --h3: x-large;
@@ -127,17 +68,20 @@
 .package.thumb > .time {
   align-self: end;
 }
+/*
+ * Card is the real element we'll use mostly
+ */
 
-/* .card { */
-/*   position: relative; */
-/*   box-shadow: var(--paper-shadow); */
-/*   background-color: var(--paper-color); */
-/*   color: var(--text-color); */
-/* } */
-
-/* .card * { */
-/*   --paper-shadow: none; */
-/* } */
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: var(--card-align, start);
+  gap: var(--card-gap, var(--space-xs));
+  background-color: var(--card-color, var(--paper-color));
+  color: var(--card-text-color, var(--text-color));
+  box-shadow: var(--paper-shadow);
+}
 
 .card figure,
 .card .video,
@@ -167,6 +111,17 @@
 .card.sponsored .kicker {
   background-color: var(--text-color);
   --text-color: var(--secondary-background-color);
+}
+
+/*
+ * Children for all concepts
+ */
+
+.stack > *,
+.row > *,
+.package > *,
+.card > * {
+  margin: 0;
 }
 
 /**

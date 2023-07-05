@@ -73,8 +73,8 @@
   justify-content: center;
 }
 
+/* class needs removed in WPS */
 .load-more .impact {
-  /* class needs removed in WPS */
   color: var(--paper-color);
   background-color: var(--text-color);
 }

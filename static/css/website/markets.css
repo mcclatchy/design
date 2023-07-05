@@ -4,14 +4,6 @@
   align-content: start;
 }
 
-/* .panel:nth-child(odd) { */
-/*   --paper-color: #d4d4d4; */
-/* } */
-
-/* .panel:nth-child(even) { */
-/*   --paper-color: #c4c4c4; */
-/* } */
-
 .market {
   display: grid;
   gap: 20px;
@@ -57,7 +49,6 @@
 }
 
 .impact {
-  /* --secondary-background-color: var(--gray); */
   padding: 5px;
 }
 

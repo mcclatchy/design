@@ -8,8 +8,8 @@ section.big-news {
   padding: 0;
 }
 
+/* better handled by removing the impact class in WPS */
 .big-news .label .impact {
-  /* better handled by removing the impact class in WPS */
   color: var(--text-color);
   background-color: var(--paper-color);
 }

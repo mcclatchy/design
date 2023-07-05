@@ -1,6 +1,5 @@
 /**
  * Menu
- * + Goes underneath the footer code in decks.css
  */
 
 .main-nav {
@@ -49,11 +48,6 @@
   font-weight: bold;
 }
 
-/* .main-nav button:hover, */
-/* .main-nav a:hover { */
-/*   background-color: var(--secondary-text-color); */
-/* } */
-
 .main-nav a,
 .main-nav .option-label {
   display: block;
@@ -84,17 +78,13 @@
 .main-nav .option-label {
   background-color: black;
   border-color: var(--nav-text-color, var(--white));
-  /* background-color: var(--secondary-text-color); */
-  /* border-color: var(--secondary-background-color); */
 }
 
 .main-nav .search {
-  /* background-color: var(--secondary-text-color); */
   height: 58px;
 }
 
 .main-nav .search form {
-  /* border-bottom: 1px solid var(--secondary-background-color); */
   border-bottom: 1px solid var(--nav-text-color, var(--white));
   width: 100%;
   display: none;
@@ -115,7 +105,6 @@
 .main-nav .search input {
   background-color: transparent;
   border: none;
-  /* color: var(--secondary-background-color); */
   color: var(--nav-text-color, var(--white));
   padding-left: 0px;
   margin: 0;

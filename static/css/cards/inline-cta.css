@@ -1,8 +1,6 @@
 .inline-cta {
-  /* --spread: 10px; */
   max-width: var(--story-width);
   margin: 0 auto;
-  /* background-color: var(--background-color); */
   background-color: var(--media-background-color);
   color: var(--text-color);
   text-align: left;
@@ -27,12 +25,3 @@
 .inline-cta input {
   align-self: stretch;
 }
-
-/* .impact.inline-cta { */
-  /* --zone-background-color: var(--black); */
-  /* padding: 15px; */
-  /* --button-color: var(--text-color); */
-  /* --button-background-color: var(--secondary-background-color); */
-  /* --link-decoration: underline; */
-  /* --link-hover-color: #b4bbe8; */
-/* } */

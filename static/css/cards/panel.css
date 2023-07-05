@@ -11,19 +11,12 @@
   --header-family: var(--sans);
   --header-weight: bold;
   --header-transform: uppercase;
-  /* --tf: var(--sans); */
-  /* --link-color: var(--text-color);
-  --link-hover-color: var(--link-detail-hover-color); */
   --link-decoration: underline;
   --grid-row-gap: var(--space-sm);
   --grid-column-gap: var(--space-sm);
 }
 
 .panel.impact {
-  /* --secondary-background-color: var(--emphasis); */
-  /* --text-color: white; */
-  /* --link-color: var(--secondary-background-color); */
-  /* --link-decoration: underline; */
   --link-color: var(--text-color);
   --link-hover-color: #88B1FC;
 }
@@ -37,7 +30,3 @@
 .panel > img {
   display: block;
 }
-
-/* .panel .grid { */
-/*   grid-gap: var(--space-sm); */
-/* } */

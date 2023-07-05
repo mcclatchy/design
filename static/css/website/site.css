@@ -90,7 +90,6 @@ td:first-child {
   font: bold small var(--sans);
   text-transform: uppercase;
   --link-color: var(--text-color);
-  /* --link-hover-color: var(--black); */
 }
 
 /*
@@ -104,7 +103,6 @@ td:first-child {
   line-height: 1.3em;
   background-color: var(--zone-background-color);
   --stack-gap: 5px;
-  /* --gap: 15px; */
 }
 
 .rail > div {
@@ -113,18 +111,6 @@ td:first-child {
   padding: 0 15px 15px;
   border-bottom: 1px solid var(--text-color);
 }
-
-/* .rail .themes { */
-/*   background-color: #E6D3EC; */
-/* } */
-
-/* .rail .cards { */
-/*   background-color: #FDFDF6; */
-/* } */
-
-/* .rail .molecules { */
-/*   background-color: #ECF5FF; */
-/* } */
 
 .rail a {
   --link-color: var(--text-color);

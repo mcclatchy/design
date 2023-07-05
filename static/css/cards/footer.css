@@ -40,11 +40,6 @@
   width: 30px;
 }
 
-/* .footer .icon { */
-/*   border-radius: 20%; */
-/*   background-color: var(--white); */
-/* } */
-
 .footer .icon img {
   display: block;
   margin: 1px 0 0 1px;
@@ -63,11 +58,6 @@
   width: 35px;
   height: 35px;
 }
-
-/* .footer .more-link, */
-/* .footer .summary { */
-/*   color: var(--secondary-background-color); */
-/* } */
 
 .footer-links {
   display: flex;

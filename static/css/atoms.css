@@ -49,8 +49,6 @@
   --text-color: var(--black);
   --secondary-text-color: #707070;
   --media-background-color: var(--gray);
-  /* --zone-background-color: #e6e6e6; */
-  /* --secondary-background-color: var(--white); */
 
   /* Premium color properties */
   --premium-blue: #00223e;
@@ -73,61 +71,6 @@
   --premium-bc: var(--premium-blue);
   --premium-tc: var(--premium-text-color);
   --premium-impact: var(--premium-secondary-text-color);
-
-  /* still a working idea, ok with omitting */
-  /* --luminosity: 44%; /1* grey #707070 *1/ */
-  /* --alpha: 1; */
-  /* --accent: hsla(0, 0%, var(--luminosity), var(--alpha)); */
-
-  /* ---------------------------------------------------- */
-
-  /* --dark-gray: #373737; */
-  /* --lightgray: #d3d3d3; */
-
-  /* --impact: #373737; */
-  /* --promo: #31409F; */
-  /* --premium-bc: #00223e; */
-  /* --premium-tc: white; */
-  /* --premium-impact: #ffd71a; */
-
-  /* --emphasis: var(--dark-gray); */
-
-  /**
-   * Header properties available
-   *
-   * --header-family: header family
-   * --header-weight: header weigth
-   * --header-transform: header transform
-   * --header-leading: header leading
-   * --header-color: header color
-   * --h1: H1 header size
-   * --h2: H2 header size
-   * --h3: H3 header size
-   * --h4: H4 header size
-   */
-
-  /**
-   * Text properties available
-   *
-   * --text-color: text color
-   * --fill-color: fill color (inline svg)
-   */
-
-  /**
-   * Link properties available
-   *
-   * --link-color: link color
-   * --link-decoration: link decoration
-   * --link-hover-color: link hover color
-   * --link-hover-decoration: link hover decoration
-   */
-
-  /**
-   * Button properties available
-   *
-   * --button-color: button color
-   * --button-background-color: button background color
-   */
 }
 
 @media(min-width: 768px) {
@@ -188,14 +131,11 @@ h6, .h6 {
 }
 
 a {
-  /* color: var(--link-color, #5169B8); */
   color: var(--link-color);
   text-decoration: var(--link-decoration);
-  /* text-decoration: var(--link-decoration, none); */
 }
 
 a:hover {
-  /* color: var(--link-hover-color, #31409F); */
   color: var(--link-hover-color, var(--link-color));
   text-decoration: var(--link-hover-decoration, var(--link-decoration));
 }
@@ -216,10 +156,6 @@ li {
   border: 1px solid var(--text-color);
   border-radius: 2px;
   text-transform: uppercase;
-  /* --link-color: var(--text-color); */
-  /* --link-hover-color: var(--text-color); */
-  /* --link-decoration: none; */
-  /* --link-hover-decoration: none; */
 }
 
 .kicker:hover {
@@ -348,10 +284,6 @@ hr {
   border: none;
 }
 
-/* .button.pill { */
-/*   border-radius: 1.5em; */
-/* } */
-
 .button > img {
   display: block;
 }
@@ -377,56 +309,6 @@ hr {
   --paper-color: var(--gray);
    pointer-events: none;
 }
-
- /* .impact, */ 
- /* .promo, */
- /* .promo-light, */
- /* .disabled, */
- /* [disabled] { */
- /*   background-color: var(--emphasis); */
- /*   --paper-color: var(--emphasis); */
- /*   --text-color: var(--secondary-background-color); */
- /*   --fill-color: var(--secondary-background-color); */
- /*   --button-color: var(--secondary-background-color); */
- /*   --hover-color: var(--secondary-background-color); */
- /*   --link-hover-color: var(--secondary-background-color); */
- /*   --button-background-color: var(--text-color); */
- /* } */
- 
- /* .impact .button, */
- /* .impact .label { */
- /*   --button-color: var(--emphasis); */
- /*   --button-background-color: white; */
- /* } */
- 
- /* .promo { */
- /*   background-color: var(--promo); */
- /*   --paper-color: var(--promo); */
- /*   --button-background-color: var(--promo); */
- /* } */
- 
- /* .promo .button, */
- /* .promo .label { */
- /*   --button-color: var(--promo); */
- /*   --button-background-color: white; */
- /* } */
- 
- /* .promo-light { */
- /*   background-color: #5169B8; */
- /*   --paper-color: #5169B8; */
- /*   --button-background-color: #5169B8; */
- /* } */
- 
- /* .promo-light .button, */
- /* .promo-light .label { */
- /*   --button-color: #5169B8; */
- /*   --button-background-color: white; */
- /* } */
- 
- /* .disabled, [disabled] { */
- /*   --paper-color: var(--gray); */
- /*   cursor: not-allowed; */
- /* } */
 
 /**
  * Form elements

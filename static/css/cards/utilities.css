@@ -117,10 +117,6 @@
   --img-size: 100%;
 }
 
-.square-img {
-  /* height: min(var(--img-size, 90px), 100%); */
-}
-
 .circle-img {
   border-radius: 50%;
 }
@@ -198,11 +194,6 @@ form[id^=bx-form] {
   --link-color: #3C4D87;
   --link-hover-color: #5169B8;
 }
-
-/* #newsletter-signUpWidget .button { */
-/*   --button-background-color: var(--gray); */
-/*   --button-color: white; */
-/* } */
 
 /*
  * WPS breaks from recommended DOM
