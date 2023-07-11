@@ -178,6 +178,10 @@ td:first-child {
   --color: cornflowerblue;
 }
 
+#zone-el-2 {
+  height: 250px;
+}
+
 #zone-el-15 {
   min-height: 600px;
   background-color: #054164;
