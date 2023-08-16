@@ -1,52 +1,33 @@
 {{- $class := .Get "class" -}}
 {{- $headlineSize := default "h3" (.Get "headline-size") -}}
-{{- $img := default "/img/kitten.jpg" (.Get "img" ) -}}
-{{- $headline := default "Kitten clings for life as man awaits rescue from Florence." (.Get "headline") -}}
+{{- $taboola := .Get "taboola" }}
 
-{{- if .Get "taboola" }}
-<article class="card {{ .Get "class" }}" data-tb-region-item>
+{{- .Page.Scratch.Add "cardIndex" 1 }}
+{{- $current := int (.Page.Scratch.Get "cardIndex") }}
+{{- $story := index .Site.Data.news.items (sub $current 1) }}
+
+{{- with $story }}
+<article class="card {{ $class }}" {{- if $taboola }} data-tb-region-item {{- end }}>
+  {{- $img := default "/img/kitten.jpg" (replace .lead_media.thumbnail "FREE" "LANDSCAPE") }}
   <figure>
-
-    {{- if in $class "horizontal" }}
-    <div class="label sticky"><h5 class="impact">READ NEXT</h5></div>
-    {{ end -}}
-
-    <a href="#" data-tb-link>
-      <img src="{{ $img }}" alt="alt text" width="1140" height="641" loading="lazy">
+    <a href="#" {{- if $taboola }} data-tb-link {{- end }}>
+      <img src="{{ $img }}" alt="{{ .lead_media.caption }}" width="1140" height="641" loading="lazy">
     </a>
   </figure>
   <div class="package">
-    <a class="kicker h6" href="#" data-tb-category>FOOD</a>
-    <h2 class="{{ $headlineSize }}"><a href="#" data-tb-link data-tb-title>{{ $headline }}</a></h2>
-
-    {{- if or (in $class "lead-item") (in $class "in-depth") }}
-    <p class="summary" data-tb-description>As far as we can estimate, a baboon is a vaulting blow. An effuse feet's objective comes with it the thought that the quaggy discussion is a rub. The amount is a growth. The literature would have us believe that a dreggy hate is not but a nephew.</p>
+    <h2 class="caps h6">
+      <a class="kicker" href="#" {{- if $taboola }} data-tb-category {{- end }}>{{ .home_section.name }}</a>
+    </h2>
+    <h3 class="{{ $headlineSize }}">
+      <a href="#" {{- if $taboola }} data-tb-link data-tb-title {{- end }}>{{ .title }}</a>
+    </h3>
+    
+    {{- if in $class "lead-item" }}
+    <p class="summary" {{- if $taboola }} data-tb-description {{- end }}>{{ .summary }}</p>
     {{ end -}}
 
-    <div class="time" data-tb-date>{{ if in $class "sponsored" -}} sponsored content {{- else -}} March 16, 2018 11:33 am {{- end }}</div>
+    {{- $pubdate := (time (int .modified_date)).Format "Jan 2, 2006 3:04 PM" }}
+    <div class="time" {{- if $taboola }} data-tb-date {{- end }}>{{ if in $class "sponsored" -}} sponsored content {{- else -}} {{ $pubdate }} {{- end }}</div>
   </div>
 </article>
-{{- else }}
-<article class="card {{ .Get "class" }}">
-  <figure>
-
-    {{- if in $class "horizontal" }}
-    <div class="label sticky"><h5 class="impact">READ NEXT</h5></div>
-    {{ end -}}
-
-    <a href="#">
-      <img src="{{ $img }}" alt="alt text" width="1140" height="641" loading="lazy">
-    </a>
-  </figure>
-  <div class="package">
-    <a class="kicker h6" href="#">FOOD</a>
-    <h2 class="{{ $headlineSize }}"><a href="#">{{ $headline }}</a></h2>
-
-    {{- if or (in $class "lead-item") (in $class "in-depth") }}
-    <p class="summary">As far as we can estimate, a baboon is a vaulting blow. An effuse feet's objective comes with it the thought that the quaggy discussion is a rub. The amount is a growth. The literature would have us believe that a dreggy hate is not but a nephew.</p>
-    {{ end -}}
-
-    <div class="time">{{ if in $class "sponsored" -}} sponsored content {{- else -}} March 16, 2018 11:33 am {{- end }}</div>
-  </div>
-</article>
-{{ end -}}
+{{- end }}
