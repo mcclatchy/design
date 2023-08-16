@@ -38,6 +38,7 @@
 .footer .icon {
   height: 30px;
   width: 30px;
+  --fill-color: var(--text-color);
 }
 
 .footer .icon img {
@@ -67,6 +68,7 @@
 }
 
 .footer-links .package {
+  --link-color: var(--header-color);
   padding: 0;
 }
 

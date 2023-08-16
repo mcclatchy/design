@@ -5,9 +5,11 @@
 :root {
   /* Typography */
   font: var(--font-base)/1.5rem var(--serif);
-  --font-base: 16px;
-  --sans: "Noto Sans", sans-serif;
-  --serif: "Noto Serif", serif;
+  --font-base: 18px;
+  --sans: Verdana, sans-serif;
+  /* --sans: "Noto Sans", Verdana, sans-serif; */
+  --serif: Georgia, serif;
+  /* --serif: "Noto Serif", Georgia, serif; */
   --premium-serif: "DM Serif Display", serif;
 
   --h1: calc(var(--font-base)*1.875); 
@@ -33,7 +35,7 @@
 
   /* Colors */
   --black: #241f21;
-  --gray: #e6e6e6;
+  --gray: #EEF1F6;
   --white: #ffffff;
   --light-brown: #f7efe0;
   --dark-brown: #a4906e;
@@ -45,9 +47,10 @@
   --dark-blue: #273f57;
 
   /* Generic color properties */
-  --background-color: #f4f4f4;
-  --text-color: var(--black);
-  --secondary-text-color: #707070;
+  --background-color: var(--gray);
+  --text-color: #4F5864;
+  --header-color: #1F2933;
+  --secondary-text-color: #616E7C;
   --media-background-color: var(--gray);
 
   /* Premium color properties */
@@ -56,14 +59,12 @@
   --premium-secondary-text-color: #ffd71a;
 
   /* Link properties */
-  --link-color: #5169B8;
+  --link-color: #132DAD;
   --link-decoration: none;
 
   /* Paper properties */
   --paper-color: var(--white);
-  --paper-shadow: 
-    0 1px 2px 0 rgba(0, 0, 0, .2), 
-    0 1px 5px 0 rgba(0, 0, 0, .13);
+  --paper-shadow: none;
 
   /* Deprecated. Used in older custom elements. */
   --gap: var(--space-md);
@@ -102,8 +103,9 @@ h6, .h6 {
   font-family: var(--header-family, inherit);
   font-weight: var(--header-weight, bold);
   text-transform: var(--header-transform, none);
-  line-height: var(--header-leading, 1.2em);
-  color: var(--header-color, var(--text-color));
+  line-height: var(--header-leading, 1.3em);
+  color: var(--header-color);
+  --link-color: var(--header-color);
 }
 
 h1, .h1 {
@@ -152,6 +154,7 @@ li {
   display: inline-block;
   padding: 5px 8px;
   font-weight: normal;
+  background-color: var(--paper-color);
   color: var(--text-color);
   border: 1px solid var(--text-color);
   border-radius: 2px;
@@ -159,6 +162,7 @@ li {
 }
 
 .kicker:hover {
+  color: var(--text-color);
   text-decoration: none;
 }
 
@@ -210,13 +214,12 @@ summary, .summary {
   display: inline-block;
   justify-self: end;
   font: 700 0.75rem/1em var(--sans);
-  text-transform: uppercase;
-  color: var(--secondary-text-color);
+  /* text-transform: uppercase; */
+  color: var(--more-link-color, var(--link-color));
   text-decoration: none;
 }
 
-.more-link:hover {
-  color: var(--secondary-text-color);
+.more-link:hover { 
   text-decoration: none;
 }
 
@@ -295,6 +298,7 @@ hr {
 .impact {
   --paper-color: var(--black);
   --text-color: var(--white);
+  --header-color: var(--white);
   --secondary-text-color: var(--text-color);
   --zone-background-color: #373737;
 }
@@ -455,7 +459,7 @@ input:focus, select:focus, .focus {
  */
 
 svg {
-  fill: var(--fill-color, var(--text-color));
+  fill: var(--fill-color, var(--link-color));
 }
 
 /** 

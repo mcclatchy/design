@@ -29,7 +29,6 @@
   --header-family: var(--serif);
   --header-weight: normal;
   --header-transform: none;
-  --link-color: var(--text-color);
   --link-decoration: none;
   --link-hover-decoration: underline;
 }

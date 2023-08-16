@@ -4,6 +4,8 @@
 
 [data-layout=premium] .story-body {
   font-size: 19px;
+  font-family: "Noto Serif", serif;
+  line-height: 1.5em;
   --story-media-width: 920px;
   --h1: 2.4rem;
 }

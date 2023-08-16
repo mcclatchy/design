@@ -15,7 +15,6 @@
   font-size: 0.875rem;
   align-items: center;
   --package-padding: var(--space-sm) 0;
-  --link-color: var(--secondary-text-color);
   --link-decoration: none;
   --header-transform: none;
   --gap: 0;

@@ -4,11 +4,11 @@
 
  [data-layout=dark]:root {
     --text-color: var(--white);
+    --header-color: var(--white);
     --secondary-text-color: var(--lightgray);
     --background-color: #393134;
-    --secondary-background-color: var(--black); /* paper color */
+    --paper-color: var(--black);
     --zone-background-color: #2f282b;
     --emphasis: var(--text-color);
     --link-color: #809fff;
-    --link-hover-color: #9ab2ff;
  }
