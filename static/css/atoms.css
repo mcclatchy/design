@@ -6,10 +6,8 @@
   /* Typography */
   font: var(--font-base)/1.5rem var(--serif);
   --font-base: 18px;
-  --sans: Verdana, sans-serif;
-  /* --sans: "Noto Sans", Verdana, sans-serif; */
-  --serif: Georgia, serif;
-  /* --serif: "Noto Serif", Georgia, serif; */
+  --sans: "Noto Sans", Verdana, sans-serif;
+  --serif: "Noto Serif", Georgia, serif;
   --premium-serif: "DM Serif Display", serif;
 
   --h1: calc(var(--font-base)*1.875); 
