@@ -78,7 +78,11 @@
  */
 
 .grid [class*=digest-group] {
-  display: contents;
+  /* display: contents; */
+  display: grid;
+  grid-template-columns: var(--columns);
+  grid-column: 1/-1;
+  gap: var(--gap);
 }
 
 [class*=digest-group] .digest {
