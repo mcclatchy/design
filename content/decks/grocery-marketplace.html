@@ -5,85 +5,24 @@ layout: section
 ---
 
 <style>
-  .sds-flag {
-    border-bottom: 1px solid var(--border-color, var(--black));
-  }
-
-  .flag-nav {
-    display: none;
-  }
-
-  .zone:before {
-    display: none;
+  .gm-window {
+    display: block;
+    width: 100vw;
+    height: var(--height, 100vh);
   }
 </style>
 
-<!-- Start GPT Tag -->
-<script async src='https://securepubads.g.doubleclick.net/tag/js/gpt.js'></script>
-<script>
-window.googletag = window.googletag || {cmd: []};
-googletag.cmd.push(function() {
-  googletag.defineSlot('/7675/MCI.site_test/preprint', 'fluid', 'div-gpt-ad-9377457-1')
-    .setTargeting('slot', ['store1'])
-    .addService(googletag.pubads());
-  googletag.defineSlot('/7675/MCI.site_test/preprint', 'fluid', 'div-gpt-ad-9377457-2')
-    .setTargeting('slot', ['store2'])
-    .addService(googletag.pubads());
-  googletag.defineSlot('/7675/MCI.site_test/preprint', 'fluid', 'div-gpt-ad-9377457-3')
-    .setTargeting('slot', ['store3'])
-    .addService(googletag.pubads());
-  googletag.defineSlot('/7675/MCI.site_test/preprint', 'fluid', 'div-gpt-ad-9377457-4')
-    .setTargeting('slot', ['store4'])
-    .addService(googletag.pubads());
-  googletag.defineSlot('/7675/MCI.site_test/preprint', 'fluid', 'div-gpt-ad-9377457-5')
-    .setTargeting('slot', ['store5'])
-    .addService(googletag.pubads());
-  googletag.defineSlot('/7675/MCI.site_test/preprint', 'fluid', 'div-gpt-ad-9377457-6')
-    .setTargeting('slot', ['store6'])
-    .addService(googletag.pubads());
-  googletag.defineSlot('/7675/MCI.site_test/preprint', 'fluid', 'div-gpt-ad-9377457-7')
-    .setTargeting('slot', ['store7'])
-    .addService(googletag.pubads());
-  googletag.defineSlot('/7675/MCI.site_test/preprint', 'fluid', 'div-gpt-ad-9377457-8')
-    .setTargeting('slot', ['store8'])
-    .addService(googletag.pubads());
-  googletag.defineSlot('/7675/MCI.site_test/preprint', 'fluid', 'div-gpt-ad-9377457-9')
-    .setTargeting('slot', ['store9'])
-    .addService(googletag.pubads());
-
-  googletag.pubads().enableSingleRequest();
-  googletag.enableServices();
-});
-</script>
-<!-- End GPT Tag -->
-
-<style>
-  .grocery .zone {
-    min-height: 250px;
-    grid-column: auto;
-    padding: 0;
-  }
-
-  #zone-el-2 { 
-    display: none;
-  }
-</style>
-
-<section class="grid grocery">
-  <div id="div-gpt-ad-9377457-1" class="zone"></div>
-  <div id="div-gpt-ad-9377457-2" class="zone"></div>
-  <div id="div-gpt-ad-9377457-3" class="zone"></div>
-  <div id="div-gpt-ad-9377457-4" class="zone"></div>
-  <div id="div-gpt-ad-9377457-5" class="zone"></div>
-  <div id="div-gpt-ad-9377457-6" class="zone"></div>
-  <div id="div-gpt-ad-9377457-7" class="zone"></div>
-  <div id="div-gpt-ad-9377457-8" class="zone"></div>
-  <div id="div-gpt-ad-9377457-9" class="zone"></div>
-</section>
+<iframe class="gm-window" src="https://app.redpepperdigital.net/a10/publications/home/6519"></iframe>
 
 <script>
-  let zones = document.querySelectorAll(".zone");
-  zones.forEach(z => {
-    googletag.cmd.push(function() { googletag.display(z.id); });
+  const gmw = document.querySelector(".gm-window");
+
+  window.addEventListener("message", e => {
+    if(e.origin.includes("app.redpepperdigital.net")) {
+      if(e.data.event == "frame") {
+        gmw.style.setProperty("--height", `${e.data.height}px`);
+      }
+    }
   });
 </script>
+

@@ -1,91 +1,29 @@
-{{- $label := .Get "label" -}}
-{{- $kicker := default "OPINION" (.Get "kicker") -}}
+{{- $label := .Get "label" }}
+{{- $kicker := default "NEWS" (.Get "kicker") }}
+{{- $feed := default "news" (.Get "feed") }}
 {{- $region := default false (.Get "region") -}}
 
-{{ with $region }}
 <div class="digest">
-  <div class="paper" data-tb-region="{{ $region }}">
+  <div class="paper" {{- with $region }} data-tb-region="{{ $region }}" {{- end }}>
     <a href="#" class="label {{ $label }}">
       <span class="h5">{{ $kicker }}</span>
     </a>
-    {{- if eq $label "sticky" }}
-    <article class="card" data-tb-region-item>
+    {{- with (index .Site.Data $feed).items }}
+    {{- range $index, $story := first 5 . }}
+    <article class="card" {{- with $region }} data-tb-region-item {{- end }}>
+      {{- if and (eq $label "sticky") (eq $index 0) }}
+      {{- $img := default "/img/kitten.jpg" (replace .lead_media.thumbnail "FREE" "LANDSCAPE") }}
       <figure>
-        <a href="#" data-tb-link>
-          <img src="https://pics.mcclatchyinteractive.com/opinion/gi1163/picture205928719/ALTERNATES/LANDSCAPE_640/AP_18073734498485" srcset="https://pics.mcclatchyinteractive.com/opinion/gi1163/picture205928719/ALTERNATES/LANDSCAPE_1140/AP_18073734498485 1140w"> 
+        <a href="#" {{- with $region }} data-tb-link {{- end }}>
+          <img src="{{ $img }}" alt="{{ .lead_media.caption }}" width="1140" height="641" loading="lazy">
         </a>
       </figure>
+      {{- end }}
       <div class="package">
-        <h2 class="h3"><a href="#" data-tb-title data-tb-link>Kudlow joins White House that sorely needs cooler heads to prevail</a></h2>
-        <time>March 19, 2018 5:34 pm</time>
+        <h2 class="h3"><a href="#" {{- with $region }} data-tb-title data-tb-link {{- end }}>{{ $story.title }}</a></h2>
+        <div class="time">{{ (time (int $story.modified_date)).Format "Jan 2, 2006 3:04 PM" }}</div>
       </div>
     </article>
-    {{- else }}
-    <article class="package" data-tb-region-item>
-      <h2 class="h3"><a href="#" data-tb-title data-tb-link>Kudlow joins White House that sorely needs cooler heads to prevail</a></h2>
-      <time>March 19, 2018 5:34 pm</time>
-    </article>
-    {{- end }}
-    <article class="package" data-tb-region-item>
-      <h2 class="h3"><a href="#" data-tb-title data-tb-link>The Episcopal Church changed course for our LGBT members</a></h2>
-      <time>March 16, 2018 3:42 pm</time>
-    </article>
-    <article class="package" data-tb-region-item>
-      <h2 class="h3"><a href="#" data-tb-title data-tb-link>The Kansas Republican Party is taking a stance on transgender identity</a></h2>
-      <time>March 16, 2018 3:58 pm</time>
-    </article>
-    <article class="package" data-tb-region-item>
-      <h2 class="h3"><a href="#" data-tb-title data-tb-link>Letters: Readers discuss teen drinking, tax-cut benefits in Missouri and student protests</a></h2>
-      <time>March 16, 2018 4:08 pm</time>
-    </article>
-    <article class="package" data-tb-region-item>
-      <h2 class="h3"><a href="#" data-tb-title data-tb-link>Administration unveils steps to boost racial equity in govt</a></h2>
-      <time>March 16, 2018 4:08 pm</time>
-    </article>
+    {{- end }}{{ end }}
   </div>
-  <a href="#" class="more-link">MORE IN {{ $kicker }}</a>
 </div>
-{{- else }}
-<div class="digest">
-  <div class="paper">
-    <a href="#" class="label {{ $label }}">
-      <span class="h5">{{ $kicker }}</span>
-    </a>
-    {{- if eq $label "sticky" }}
-    <article class="card">
-      <figure>
-        <a href="#">
-          <img src="https://pics.mcclatchyinteractive.com/opinion/gi1163/picture205928719/ALTERNATES/LANDSCAPE_640/AP_18073734498485" srcset="https://pics.mcclatchyinteractive.com/opinion/gi1163/picture205928719/ALTERNATES/LANDSCAPE_1140/AP_18073734498485 1140w"> 
-        </a>
-      </figure>
-      <div class="package">
-        <h2 class="h3"><a href="#">Kudlow joins White House that sorely needs cooler heads to prevail</a></h2>
-        <time>March 19, 2018 5:34 pm</time>
-      </div>
-    </article>
-    {{- else }}
-    <article class="package">
-      <h2 class="h3"><a href="#">Kudlow joins White House that sorely needs cooler heads to prevail</a></h2>
-      <time>March 19, 2018 5:34 pm</time>
-    </article>
-    {{- end }}
-    <article class="package">
-      <h2 class="h3"><a href="#">The Episcopal Church changed course for our LGBT members</a></h2>
-      <time>March 16, 2018 3:42 pm</time>
-    </article>
-    <article class="package">
-      <h2 class="h3"><a href="#">The Kansas Republican Party is taking a stance on transgender identity</a></h2>
-      <time>March 16, 2018 3:58 pm</time>
-    </article>
-    <article class="package">
-      <h2 class="h3"><a href="#">Letters: Readers discuss teen drinking, tax-cut benefits in Missouri and student protests</a></h2>
-      <time>March 16, 2018 4:08 pm</time>
-    </article>
-    <article class="package">
-      <h2 class="h3"><a href="#">Administration unveils steps to boost racial equity in govt</a></h2>
-      <time>March 16, 2018 4:08 pm</time>
-    </article>
-  </div>
-  <a href="#" class="more-link">MORE IN {{ $kicker }}</a>
-</div>
-{{- end }}

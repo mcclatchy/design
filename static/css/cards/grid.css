@@ -84,7 +84,11 @@
  */
 
 .grid [class*=digest-group] {
-  display: contents;
+  /* display: contents; */
+  display: grid;
+  grid-template-columns: var(--columns);
+  grid-column: 1/-1;
+  gap: var(--space);
 }
 
 [class*=digest-group] .digest {
@@ -101,9 +105,9 @@
 }
 
 /*
- * Packages as direct children (related)
+ * Options banner is at the top of all grids
  */
 
-.grid > .package {
-  padding: 0;
+.option-banners {
+  grid-column: 1/-1;
 }

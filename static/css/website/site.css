@@ -133,45 +133,8 @@ td:first-child {
 }
 
 /*
- * Region showcase
- */
-
-/* [data-tb-region-item] { */
-/*   position: relative; */
-/* } */
-
-/* [data-tb-region-item]:after { */
-/*   content: ""; */
-/*   display: block; */
-/*   position: absolute; */
-/*   top: 0; */
-/*   left: 0; */
-/*   width: 100%; */
-/*   height: 100%; */
-/*   padding: 15px; */
-/*   box-sizing: border-box; */
-/*   background-color: rgba(0, 0, 255, 0.6); */
-/*   font: 1.2em var(--sans); */
-/*   color: white; */
-/* } */
-
-/*
  * Zones
  */
-
-/* .zone::before { */
-/*   content: attr(id); */
-/*   display: block; */
-/*   position: absolute; */
-/*   left: 5px; */
-/*   top: 5px; */
-/*   font: 14px/1em var(--sans); */
-/*   color: #777; */
-/* } */
-
-.zone[data-type=editorial] {
-  --color: cornflowerblue;
-}
 
 #zone-el-2 {
   height: 250px;
@@ -188,4 +151,23 @@ td:first-child {
   content: url("../../img/taboola.svg");
   display: block;
   width: 250px;
+}
+
+/*
+ * Taboola region overlays
+ */
+
+[data-layout=taboola] [data-tb-region-item]:after {
+  content: attr(data-region);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  font: bold 18px var(--sans);
+  background-color: rgba(5,65,100,0.9);
+  color: white;
+  border: 1px solid white;
 }
