@@ -1286,8 +1286,13 @@ html.msb .masthead {
 /*
  * Custom grid arrangements
  */
-.grid [class*=digest-group] {
-  display: contents;
+[class*=digest-group] {
+  display: grid;
+  grid-column: 1/-1;
+  grid-template-columns: var(--columns);
+  grid-gap: var(--gap);
+  margin: 0;
+  padding: 0;
 }
 
 [class*=digest-group] .digest {
@@ -2715,6 +2720,11 @@ form[id^=bx-form] {
   font: 700 1.8rem var(--serif);
 }
 
+@media (max-width: 600px) {
+  .partner-label {
+    margin: 0 var(--page-padding);
+  }
+}
 .partner-label::before {
   content: "";
   position: absolute;

@@ -2082,6 +2082,11 @@ form[id^=bx-form] {
   font: 700 1.8rem var(--serif);
 }
 
+@media (max-width: 600px) {
+  .partner-label {
+    margin: 0 var(--page-padding);
+  }
+}
 .partner-label::before {
   content: "";
   position: absolute;
