@@ -83,12 +83,13 @@
  * Custom grid arrangements
  */
 
-.grid [class*=digest-group] {
-  /* display: contents; */
+[class*=digest-group] {
   display: grid;
-  grid-template-columns: var(--columns);
   grid-column: 1/-1;
-  gap: var(--space);
+  grid-template-columns: var(--columns);
+  grid-gap: var(--gap);
+  margin: 0;
+  padding: 0;
 }
 
 [class*=digest-group] .digest {

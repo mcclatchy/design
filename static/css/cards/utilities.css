@@ -173,13 +173,13 @@ form[id^=bx-form] {
   color: var(--header-color)
 }
 
-@media(max-width: 660px) {
+@media(max-width: 600px) {
   .partner-label {
-    padding: 0 var(--space-sm);
+    margin: 0 var(--page-padding);
   }
 }
 
-/* .partner-label::before {
+.partner-label::before {
   content: "";
   position: absolute;
   display: block;
