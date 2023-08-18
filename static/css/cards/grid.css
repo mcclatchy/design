@@ -77,15 +77,13 @@
  * Custom grid arrangements
  */
 
-.grid [class*=digest-group],
 [class*=digest-group] {
   display: grid;
   grid-column: 1/-1;
   grid-template-columns: var(--columns);
-  padding: 0;
   grid-gap: var(--gap);
-  width: min(var(--section-width), 100%);
   margin: 0;
+  padding: 0;
 }
 
 [class*=digest-group] .digest {
