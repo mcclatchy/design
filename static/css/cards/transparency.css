@@ -5,7 +5,7 @@
 .transparency {
 	max-width: 100%;
 	padding: 15px;
-	background-color: var(--media-background-color);
+	background-color: var(--background-color);
 }
 
 .transparency > * {

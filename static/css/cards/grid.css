@@ -87,7 +87,7 @@
   display: grid;
   grid-column: 1/-1;
   grid-template-columns: var(--columns);
-  grid-gap: var(--gap);
+  grid-gap: var(--grid-row-gap) var(--grid-column-gap);
   margin: 0;
   padding: 0;
 }
