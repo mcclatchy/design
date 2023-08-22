@@ -26,6 +26,7 @@
 
 .bio .byline {
   margin: 0;
+  padding-bottom: var(--space-xs);
 }
 
 /**

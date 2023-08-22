@@ -259,8 +259,8 @@ hr {
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
-  color: var(--button-color, var(--paper-color));
-  background-color: var(--button-background-color, var(--text-color));
+  color: var(--button-color, var(--text-color));
+  background-color: var(--button-background-color, var(--background-color));
   border: 1px solid transparent;
   cursor: pointer;
 }
@@ -300,11 +300,14 @@ hr {
   --header-color: var(--white);
   --secondary-text-color: var(--text-color);
   --zone-background-color: #373737;
+  --background-color: var(--black);
 }
 
 .promo {
   --paper-color: var(--dark-blue);
+  --background-color: var(--dark-blue);
   --text-color: var(--white);
+  --header-color: var(--text-color);
   --secondary-text-color: var(--text-color);
 }
 

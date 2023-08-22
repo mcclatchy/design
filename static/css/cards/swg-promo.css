@@ -9,7 +9,7 @@
 
 .card.swg-promo .promo {
   justify-content: center;
-  background-color: var(--promo);
+  background-color: var(--dark-blue);
   color: white;
 }
 

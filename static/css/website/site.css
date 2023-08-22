@@ -20,7 +20,7 @@
  */
 
 code {
-  background-color: #ddd;
+  background-color: var(--media-background-color);
   padding: 2px 5px;
 }
 
@@ -53,7 +53,7 @@ th {
 
 td:first-child {
   font-weight: bold;
-  width: 150px;
+  width: 250px;
 }
 
 /*
