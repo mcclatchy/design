@@ -5,7 +5,7 @@
 .story-body {
   display: flow-root;
   font: var(--story-font, 16px/2em var(--sans));
-  line-height: 1.5em;
+  line-height: 1.6em;
   color: var(--story-text-color, var(--text-color));
   background-color: var(--story-background-color, var(--paper-color));
   --header-family: var(--story-subhead-family, var(--sans));

@@ -34,6 +34,7 @@
   /* Colors */
   --black: #241f21;
   --gray: #EEF1F6;
+  --darkgray: #4F5864;
   --white: #ffffff;
   --light-brown: #f7efe0;
   --dark-brown: #a4906e;
@@ -48,8 +49,8 @@
   --background-color: var(--gray);
   --text-color: #4F5864;
   --header-color: #1F2933;
-  --secondary-text-color: #616E7C;
-  --media-background-color: var(--gray);
+  --secondary-text-color: var(--darkgray);
+  --media-background-color: #e1e6ef;
 
   /* Premium color properties */
   --premium-blue: #00223e;
