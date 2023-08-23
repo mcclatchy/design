@@ -74,10 +74,10 @@
 }
 
 /* class needs removed in WPS */
-.load-more .impact {
+/* .load-more .impact {
   color: var(--paper-color);
   background-color: var(--text-color);
-}
+} */
 
 /*
  * Custom grid arrangements

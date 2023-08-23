@@ -19,6 +19,6 @@ Typeface | Noto Sans
 Weight | 700
 Size | 0.875rem (14px)
 Line height | 1.5em
-Color | #707070
+Color | #132dad
 Case | uppercase
 Letter spacing | Default
