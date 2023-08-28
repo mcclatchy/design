@@ -3,12 +3,25 @@
  */
 
 .in-depth {
-  background-color: var(--paper-color, #373737);
+  /* --paper-color: var(--black); */
+  /* --text-color: var(--white); */
+  background-color: var(--text-color);
+  /* color: var(--paper-color); */
+}
+
+.in-depth .label > * {
+  color: var(--paper-color);
+  background-color: var(--text-color);
 }
 
 .in-depth .package {
   --h1: 1.75rem;
-  --hw: bold;
+  --header-weight: bold;
+  color: var(--paper-color);
+}
+
+.in-depth h3 a {
+  color: var(--paper-color);
 }
 
 .card.in-depth figure {

@@ -5,12 +5,12 @@
 .grid {
   display: grid;
   grid-template-columns: var(--columns);
-  gap: var(--gap);
-  grid-auto-flow: dense;
+  gap: var(--grid-row-gap) var(--grid-column-gap);
+  grid-auto-flow: var(--grid-flow, dense);
 }
 
 .grid > .package:not(.no-img) {
-  --gap: 0px;
+  --package-padding: 0px;
 }
 
 /*
@@ -73,16 +73,23 @@
   justify-content: center;
 }
 
+/* class needs removed in WPS */
+/* .load-more .impact {
+  color: var(--paper-color);
+  background-color: var(--text-color);
+} */
+
 /*
  * Custom grid arrangements
  */
 
-.grid [class*=digest-group] {
-  /* display: contents; */
+[class*=digest-group] {
   display: grid;
-  grid-template-columns: var(--columns);
   grid-column: 1/-1;
-  gap: var(--gap);
+  grid-template-columns: var(--columns);
+  grid-gap: var(--grid-row-gap) var(--grid-column-gap);
+  margin: 0;
+  padding: 0;
 }
 
 [class*=digest-group] .digest {

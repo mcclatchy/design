@@ -4,15 +4,15 @@
 
 .series-nav,
 .series-nav .package {
-  padding: 0;
+  /* padding: 0;  */
 }
 
 .series-nav hr {
-  border-color: var(--tc, #dfdfdf);
+  border-color: var(--series-nav-color, var(--secondary-text-color));
 }
 
 .series-nav .summary {
-  color: var(--tc, #707070);
+  color: var(--secondary-text-color);
 }
 
 .series-nav .article {
@@ -21,13 +21,6 @@
 
 .series-nav .article figure {
   width: 80px;
-}
-
-/** Unnecessary in 1.12
-Can we omit?
-*/
-.series-nav .article img {
-  padding: 0;
 }
 
 .series-nav .article h4 {

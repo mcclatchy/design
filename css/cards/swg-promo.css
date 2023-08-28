@@ -3,18 +3,18 @@
  */
 
 .card.swg-promo .package {
-  --hw: 400;
-  --hf: var(--sans);
+  --header-weight: 400;
+  --header-family: var(--sans);
 }
 
 .card.swg-promo .promo {
   justify-content: center;
-  background-color: var(--promo);
+  background-color: var(--dark-blue);
   color: white;
 }
 
 .card.swg-promo .title {
-  --hw: bold;
+  --header-weight: bold;
   font-size: 48px;
 }
 

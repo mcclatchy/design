@@ -1,0 +1,13 @@
+/*
+ * Dark theme
+ */
+
+ [data-layout=dark]:root {
+    --text-color: var(--white);
+    --secondary-text-color: var(--gray);
+    --background-color: #393134;
+    --media-background-color: #393134;
+    --paper-color: var(--black);
+    --zone-background-color: #2f282b;
+    --link-color: #809fff;
+ }

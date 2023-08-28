@@ -5,13 +5,12 @@
 .gallery {
   align-items: unset;
   font-family: var(--sans);
-  color: var(--gray);
-  --hc: var(--black);
+  color: var(--secondary-text-color);
+  --header-color: var(--text-color);
 }
 
 .gallery .package {
-  --hw: 400;
-  --hf: var(--sans);
+  --header-family: var(--sans);
 }
 
 .gallery-panel {
