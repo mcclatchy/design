@@ -59,7 +59,7 @@
   margin-top: 0;
 }
 
-.story-body figure .package,
+/* .story-body figure .package,
 .story-body .figure .package {
   padding: 0px;
 }
@@ -89,7 +89,7 @@
 .story-body figure.full-bleed .package,
 .story-body .figure.full-bleed .package {
   padding: 0px var(--space-sm);
-}
+} */
 
 /**
  * Mugshots
