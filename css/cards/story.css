@@ -4,7 +4,7 @@
 
 .story-body {
   display: flow-root;
-  font: var(--story-font, 18px/2em var(--sans));
+  font: var(--story-font, 18px/2em var(--serif));
   line-height: 1.6em;
   color: var(--story-text-color, var(--text-color));
   background-color: var(--story-background-color, var(--paper-color));
@@ -43,7 +43,7 @@
 .story-body > .inline-video {
   max-width: var(--story-media-width);
   margin: 30px auto;
-  padding: 0;
+  /* padding: 0; */
 }
 
 .story-body .wide {
@@ -59,7 +59,7 @@
   margin-top: 0;
 }
 
-.story-body figure .package,
+/* .story-body figure .package,
 .story-body .figure .package {
   padding: 0px;
 }
@@ -89,7 +89,7 @@
 .story-body figure.full-bleed .package,
 .story-body .figure.full-bleed .package {
   padding: 0px var(--space-sm);
-}
+} */
 
 /**
  * Mugshots
