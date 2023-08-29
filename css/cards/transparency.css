@@ -3,14 +3,14 @@
  */
 
 .transparency {
-	max-width: 100%;
-	padding: 15px;
-	background-color: var(--background-color);
+	/* max-width: 100%; */
 }
 
 .transparency > * {
-  	margin: 15px auto;
+  	margin: 0;
+	padding: 15px;
 	max-width: var(--story-width);
+	background-color: var(--background-color);
 }
 
 .transparency .expander {
@@ -21,4 +21,8 @@
 	--header-family: var(--serif);
 	--header-weight: 400;
 	--header-transform: none;
+}
+
+.question h3 {
+	margin: 0;
 }
