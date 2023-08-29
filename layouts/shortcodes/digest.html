@@ -21,12 +21,15 @@
       {{- end }}
       <div class="package">
         <h2 class="h3"><a href="#" {{- with $region }} data-tb-title data-tb-link {{- end }}>{{ $story.title }}</a></h2>
+        {{- if and (eq $label "sticky") (eq $index 0) }}
+        <p class="summary">{{ .summary }}</p>
+        {{- end }}
         <div class="time">{{ (time (int $story.modified_date)).Format "Jan 2, 2006 3:04 PM" }}</div>
       </div>
     </article>
     {{- end }}{{ end }}
-    <a href="https://www.kansascity.com/latest-news/" class="more-link " data-tb-category="" data-tb-link="">
-      More in {{ $kicker }}
-    </a>
   </div>
+  <a href="https://www.kansascity.com/latest-news/" class="more-link " data-tb-category="" data-tb-link="">
+    More in {{ $kicker }}
+  </a>
 </div>

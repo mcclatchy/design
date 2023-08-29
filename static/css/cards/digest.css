@@ -7,10 +7,22 @@
   grid-template-rows: 1fr auto;
   background-color: var(--card-color, var(--paper-color));
   box-shadow: var(--paper-shadow);
+  padding: var(--digest-padding, var(--space-sm));
+  --card-padding: var(--space-sm) 0;
+}
+
+.digest .card {
+  border-top: 2px solid var(--background-color);
+}
+
+.digest .card:first-of-type {
+  border-top: none;
 }
 
 .digest .more-link {
   align-self: end;
-  padding: 15px 15px 10px;
-  padding: var(--space-sm) var(--space-sm) var(--space-xs);
+  padding-top: var(--digest-padding, var(--space-sm));
+  /* padding: 15px 15px 10px; */
+  /* padding: var(--space-sm) var(--space-sm) var(--space-xs); */
+  /* padding: var(--space-sm); */
 }
