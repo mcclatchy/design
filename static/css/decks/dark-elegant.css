@@ -2,13 +2,12 @@
  * Dark elegant theme
  */
 
- [data-layout=dark]:root {
+ [data-layout=dark-elegant]:root {
     --text-color: var(--white);
     --secondary-text-color: var(--lightgray);
     --background-color: #00223e;
     --secondary-background-color: var(--black); /* paper color */
     --zone-background-color: #2f282b;
-    --emphasis: var(--text-color);
     --link-color: #809fff;
     --link-hover-color: #9ab2ff;
  }
