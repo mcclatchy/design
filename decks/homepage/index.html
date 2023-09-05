@@ -1,6 +1,12 @@
 <!doctype html>
-<html lang="en" data-layout="">
+<html lang="en" data-layout="" class="msb">
   <head>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Noto+Sans:wght@400;700&family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=fallback" rel="stylesheet">
+
+    
     <title>homepage</title>
     <meta name="description" content="A sample homepage.">
     
@@ -44,13 +50,13 @@
     <link rel="stylesheet" href="../../css/cards/transparency.css">
     <link rel="stylesheet" href="../../css/cards/big-news.css">
     <link rel="stylesheet" href="../../css/cards/in-depth.css">
-    <link rel="stylesheet" href="../../css/cards/swg-promo.css">
+    
     <link rel="stylesheet" href="../../css/cards/read-next.css">
     <link rel="stylesheet" href="../../css/cards/section-nav.css">
     <link rel="stylesheet" href="../../css/cards/inline-cta.css">
     <link rel="stylesheet" href="../../css/cards/upper-nav.css">
     <link rel="stylesheet" href="../../css/cards/gallery.css">
-    <link rel="stylesheet" href="../../css/cards/sponsor.css">
+    
     <link rel="stylesheet" href="../../css/cards/panel.css">
     <link rel="stylesheet" href="../../css/cards/taboola.css">
     <link rel="stylesheet" href="../../css/cards/utilities.css">
@@ -58,6 +64,7 @@
     
     <link rel="stylesheet" href="../../css/decks/premium.css">
     <link rel="stylesheet" href="../../css/decks/guide.css">
+    <link rel="stylesheet" href="../../css/decks/dark.css">
 
     
     <link rel="stylesheet" href="../../css/website/site.css">
@@ -82,7 +89,6 @@
         <a href="https://mcclatchy.github.io/design/email/">email</a>
         <a href="https://mcclatchy.github.io/design/markets/">markets</a>
         <a href="https://mcclatchy.github.io/design/saratoga/">style guide</a>
-        <a href="https://mcclatchy.github.io/design/themes/">theming</a>
       </nav>
     </div>
   
@@ -177,7 +183,7 @@
 
 <div id="main-nav" class="main-nav sans summary impact">
   <button class="summary flex" onclick="closeNavigation()">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512"><title>Close navigation panel</title><path d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z" fill="white"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512"><title>Close navigation panel</title><path d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"/></svg>
     <span class="h5 icon-label">SECTIONS</span>
   </button>
   <div class="search flex" onclick="this.classList.add('open')">
@@ -273,8 +279,8 @@
   <a href="#">Niche pub</a>
 </div>
 
-<section class="big-news paper" data-tb-region="big news">
-  <a href="#" class="label"><h5 class="impact">HURRICANE FLORENCE</h5></a>
+<!-- <section class="big-news paper" data-tb-region="big news">
+  <a href="#" class="label"><h5>HURRICANE FLORENCE</h5></a>
   <h5 class="latest">LATEST NEWS</h5>
   <div class="grid" data-children="3">
     <article class="package" data-tb-region-item>
@@ -329,11 +335,11 @@
     </article>
   </div>
 </section>
+ -->
 
-
-<div id="zone-el-3" class="zone-el zone" data-type="ad">
-  <fake-ad size="[970,250]"></fake-ad>
-</div>
+<!-- <div id="zone-el-3" class="zone-el zone" data-type="ad"> -->
+<!--   <fake-ad size="[970,250]"></fake-ad> -->
+<!-- </div> -->
 
 <section class="grid">
 
@@ -372,7 +378,7 @@
   <div class="digest">
     <div class="paper" data-tb-region="latest">
       <a href="#" class="label ">
-        <span class="h5">LATEST</span>
+        <span class="h5">Latest</span>
       </a>
       <article class="card" data-tb-region-item>
         <div class="package">
@@ -405,6 +411,9 @@
         </div>
       </article>
     </div>
+    <a href="https://www.kansascity.com/latest-news/" class="more-link " data-tb-category="" data-tb-link="">
+      More in Latest
+    </a>
   </div>
 
 
@@ -450,7 +459,7 @@
   <div class="digest">
     <div class="paper" data-tb-region="trending-stories">
       <a href="#" class="label ">
-        <span class="h5">TRENDING STORIES</span>
+        <span class="h5">Trending Stories</span>
       </a>
       <article class="card" data-tb-region-item>
         <div class="package">
@@ -483,6 +492,9 @@
         </div>
       </article>
     </div>
+    <a href="https://www.kansascity.com/latest-news/" class="more-link " data-tb-category="" data-tb-link="">
+      More in Trending Stories
+    </a>
   </div>
 
 
@@ -510,7 +522,7 @@
     </article>
 
     
-    <article class="card " data-tb-region-item>
+    <article class="card impact" data-tb-region-item>
       <figure>
         <a href="#" data-tb-link>
           <img src="https://www.kansascity.com/latest-news/rre5yk/picture278250818/alternates/LANDSCAPE_1140/KCM_DollyPartonKansas_08142%20%285%29" alt="Dolly Parton speaks about the Imagination Library at White Theatre at the Jewish Community Center on Monday, Aug. 14, 2023, in Overland Park, Kan." width="1140" height="641" loading="lazy">
@@ -531,7 +543,7 @@
 
   <div class="region" data-tb-region="NewRegion4">
     
-    <article class="card " data-tb-region-item>
+    <article class="card promo" data-tb-region-item>
       <figure>
         <a href="#" data-tb-link>
           <img src="https://www.miamiherald.com/latest-news/8sz2iu/picture278280128/alternates/LANDSCAPE_1140/ruins%20of%20synagogu_fitted.jpeg" alt="The ancient synagogue was discovered near the Black Sea in Russia, experts said." width="1140" height="641" loading="lazy">
@@ -575,7 +587,7 @@
     <div class="partner-label">
       <span>Videos</span>
     </div>
-    <div class="three-columns" style="padding-top: 50%; background-color: var(--impact);"></div>
+    <div class="three-columns" style="padding-top: 50%; background-color: var(--black);"></div>
   </div>
 
   <div class="region" data-tb-region="NewRegion6">
@@ -610,7 +622,7 @@
     <div class="digest">
       <div class="paper">
         <a href="#" class="label sticky">
-          <span class="h5">NATIONAL SPORTS</span>
+          <span class="h5">National Sports</span>
         </a>
         <article class="card">
           <figure>
@@ -620,6 +632,7 @@
           </figure>
           <div class="package">
             <h2 class="h3"><a href="#">McLaurin Praises Rookie Forbes: ‘He’s a Competitor!’</a></h2>
+            <p class="summary">Terry McLaurin is recognizing the work Washington Commanders rookie Emmanuel Forbes is putting in during training camp.</p>
             <div class="time">Aug 16, 2023 4:15 PM</div>
           </div>
         </article>
@@ -648,12 +661,15 @@
           </div>
         </article>
       </div>
+      <a href="https://www.kansascity.com/latest-news/" class="more-link " data-tb-category="" data-tb-link="">
+        More in National Sports
+      </a>
     </div>
 
     <div class="digest">
       <div class="paper">
         <a href="#" class="label sticky">
-          <span class="h5">BETTING</span>
+          <span class="h5">Betting</span>
         </a>
         <article class="card">
           <figure>
@@ -663,6 +679,7 @@
           </figure>
           <div class="package">
             <h2 class="h3"><a href="#">2023 Genesis Invitational Betting: Picks, Odds, Predictions &amp; Best Bets</a></h2>
+            <p class="summary">The PGA Tour takes center stage this weekend with a loaded field ready to go at iconic Riviera Country Club for the Genesis Invitational.</p>
             <div class="time">Feb 15, 2023 1:00 PM</div>
           </div>
         </article>
@@ -691,49 +708,56 @@
           </div>
         </article>
       </div>
+      <a href="https://www.kansascity.com/latest-news/" class="more-link " data-tb-category="" data-tb-link="">
+        More in Betting
+      </a>
     </div>
 
     <div class="digest">
       <div class="paper">
         <a href="#" class="label sticky">
-          <span class="h5">THE STREET</span>
+          <span class="h5">The Street</span>
         </a>
         <article class="card">
           <figure>
             <a href="#">
-              <img src="https://www.mcclatchy-wires.com/incoming/u5dpg5/picture263361128/alternates/LANDSCAPE_1140/spirit-jetblue-frontier.jpg" alt="" width="1140" height="641" loading="lazy">
+              <img src="https://www.mcclatchy-wires.com/incoming/ngxb50/picture278988004/alternates/LANDSCAPE_1140/a117864f-5148-49a4-aaaa-5f1b3290ea03" alt="‘We Be All Night!’. Sweet P looked like a Spice Girl with her precious pigtails." width="1140" height="641" loading="lazy">
             </a>
           </figure>
           <div class="package">
-            <h2 class="h3"><a href="#">You may want to avoid this one airline for your Labor Day travels</a></h2>
-            <div class="time">Aug 16, 2023 3:23 PM</div>
+            <h2 class="h3"><a href="#">3 Generations of ​the Kardashian-Jenner Family Attend Beyonce’s Birthday Concert! See Photos</a></h2>
+            <p class="summary"></p>
+            <div class="time">Sep 5, 2023 2:13 PM</div>
           </div>
         </article>
         <article class="card">
           <div class="package">
-            <h2 class="h3"><a href="#">Morningstar’s view of Buffett’s homebuilder stocks</a></h2>
-            <div class="time">Aug 16, 2023 2:45 PM</div>
+            <h2 class="h3"><a href="#">Why Leona Lewis Wore Red to the 2023 Venice amfAR Gala</a></h2>
+            <div class="time">Sep 5, 2023 1:54 PM</div>
           </div>
         </article>
         <article class="card">
           <div class="package">
-            <h2 class="h3"><a href="#">Kroger, Costco, and Walmart rival Aldi buys 400 grocery stores</a></h2>
-            <div class="time">Aug 16, 2023 2:45 PM</div>
+            <h2 class="h3"><a href="#">Every Star at Beyonce’s Birthday Show: Meghan Markle, Lizzo and More</a></h2>
+            <div class="time">Sep 5, 2023 1:50 PM</div>
           </div>
         </article>
         <article class="card">
           <div class="package">
-            <h2 class="h3"><a href="#">Wayfair, Mattress Firm face bankruptcy risk</a></h2>
-            <div class="time">Aug 16, 2023 2:24 PM</div>
+            <h2 class="h3"><a href="#">Fall TV Preview 2023: Inside the Must-Watch New and Returning Shows</a></h2>
+            <div class="time">Sep 5, 2023 11:56 AM</div>
           </div>
         </article>
         <article class="card">
           <div class="package">
-            <h2 class="h3"><a href="#">Their bags are packed but they’re not ready to go.</a></h2>
-            <div class="time">Aug 16, 2023 2:10 PM</div>
+            <h2 class="h3"><a href="#">Vote: Which was the best high school football play in the country? (9/5/2023)</a></h2>
+            <div class="time">Sep 5, 2023 2:28 PM</div>
           </div>
         </article>
       </div>
+      <a href="https://www.kansascity.com/latest-news/" class="more-link " data-tb-category="" data-tb-link="">
+        More in The Street
+      </a>
     </div>
 
   </div>
@@ -746,7 +770,7 @@
     <div class="digest">
       <div class="paper" data-tb-region="sports">
         <a href="#" class="label sticky">
-          <span class="h5">SPORTS</span>
+          <span class="h5">Sports</span>
         </a>
         <article class="card" data-tb-region-item>
           <figure>
@@ -756,6 +780,7 @@
           </figure>
           <div class="package">
             <h2 class="h3"><a href="#" data-tb-title data-tb-link>Renovated KU football stadium will be one of the best, NFL Pro Bowler &amp; former QB say</a></h2>
+            <p class="summary">What do Jayhawk legends Chris Harris and Todd Reesing think of the Kansas football stadium renovation plans? Harris says they’re NFL-level.</p>
             <div class="time">Aug 15, 2023 8:02 PM</div>
           </div>
         </article>
@@ -784,12 +809,15 @@
           </div>
         </article>
       </div>
+      <a href="https://www.kansascity.com/latest-news/" class="more-link " data-tb-category="" data-tb-link="">
+        More in Sports
+      </a>
     </div>
 
     <div class="digest">
       <div class="paper" data-tb-region="local">
         <a href="#" class="label sticky">
-          <span class="h5">LOCAL</span>
+          <span class="h5">Local</span>
         </a>
         <article class="card" data-tb-region-item>
           <figure>
@@ -799,6 +827,7 @@
           </figure>
           <div class="package">
             <h2 class="h3"><a href="#" data-tb-title data-tb-link>Husband shows wife a winning lottery ticket after work. ‘Her mouth dropped wide open’</a></h2>
+            <p class="summary">Iowa Lottery says man used two small prizes to buy another ticket after work and he won $100,000 prize. He and wife shocked by his winnings.</p>
             <div class="time">Aug 15, 2023 5:04 PM</div>
           </div>
         </article>
@@ -827,12 +856,15 @@
           </div>
         </article>
       </div>
+      <a href="https://www.kansascity.com/latest-news/" class="more-link " data-tb-category="" data-tb-link="">
+        More in Local
+      </a>
     </div>
 
     <div class="digest">
       <div class="paper" data-tb-region="opinion">
         <a href="#" class="label sticky">
-          <span class="h5">OPINION</span>
+          <span class="h5">Opinion</span>
         </a>
         <article class="card" data-tb-region-item>
           <figure>
@@ -842,6 +874,7 @@
           </figure>
           <div class="package">
             <h2 class="h3"><a href="#" data-tb-title data-tb-link>Investments in mental health care will help alleviate California’s homelessness crisis | Opinion</a></h2>
+            <p class="summary">California Gov. Gavin Newsom and the Legislature are seeking to reform the Mental Health Services Act to alleviate chronic homelessness.</p>
             <div class="time">Aug 15, 2023 7:00 AM</div>
           </div>
         </article>
@@ -870,6 +903,9 @@
           </div>
         </article>
       </div>
+      <a href="https://www.kansascity.com/latest-news/" class="more-link " data-tb-category="" data-tb-link="">
+        More in Opinion
+      </a>
     </div>
 
   </div>
@@ -1124,7 +1160,11 @@
           <svg viewBox="0 0 264 512"><title>Go to our Facebook page</title><path d="M215.8 85H264V3.6C255.7 2.5 227.1 0 193.8 0 124.3 0 76.7 42.4 76.7 120.3V192H0v91h76.7v229h94V283h73.6l11.7-91h-85.3v-62.7c0-26.3 7.3-44.3 45.1-44.3z"/></svg>
         </a>
         <a href="#twitter">
-          <svg viewBox="0 0 512 512"><title>Go to our Twitter page</title><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+          <svg viewBox="0 0 1200 1227">
+            <title>Go to our X page</title>
+            <path d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z"/>
+          </svg>
+          
         </a>
         <a href="#youtube">
           <svg viewBox="0 0 576 512"><title>Go to our YouTube page</title><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg>

@@ -14,9 +14,9 @@
   font-family: var(--sans);
   font-size: 0.875rem;
   align-items: center;
-  --lc: var(--gray);
-  --ld: none;
-  --ht: none;
+  --package-padding: var(--space-sm) 0;
+  --link-decoration: none;
+  --header-transform: none;
   --gap: 0;
 }
 
@@ -58,12 +58,13 @@
 .author-bio {
   padding: 0 var(--page-padding);
   grid-template-columns: auto 1fr;
-  grid-row-gap: var(--spread);
+  grid-row-gap: var(--space-xs);
   grid-template-areas:
     "thumb info"
     "bio bio"
     "contact contact";
-  --hw: 400;
+  --package-padding: 0;
+  --header-weight: 400;
 }
 
 .author-bio .a-details {
@@ -80,7 +81,7 @@
 }
 
 .author-bio .h6 {
-  color: var(--gray);
+  color: var(--secondary-text-color);
 }
 
 @media(min-width: 600px) {

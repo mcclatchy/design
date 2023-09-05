@@ -5,17 +5,24 @@
 .digest {
   display: grid;
   grid-template-rows: 1fr auto;
-  background-color: var(--paper-color, white);
+  background-color: var(--card-color, var(--paper-color));
   box-shadow: var(--paper-shadow);
-  color: var(--tc);
+  padding: var(--digest-padding, var(--space));
+  --card-padding: var(--space-sm) 0;
 }
 
-.digest .paper {
-  --paper-shadow: none;
+.digest .card {
+  border-top: 2px solid var(--background-color);
+}
+
+.digest .card:first-of-type {
+  border-top: none;
 }
 
 .digest .more-link {
   align-self: end;
-  padding: 15px 15px 10px;
-  --tc: var(--black);
+  padding-top: var(--digest-padding, var(--space));
+  /* padding: 15px 15px 10px; */
+  /* padding: var(--space-sm) var(--space-sm) var(--space-xs); */
+  /* padding: var(--space-sm); */
 }

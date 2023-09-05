@@ -50,7 +50,7 @@ body {
 }
 
 .market-logo:not(:first-child) {
-  border-left: 2px solid #222;
+  border-left: 2px solid var(--text-color);
   max-width: 50%;
 }
 
@@ -84,7 +84,7 @@ body {
 .links a {
   padding: 15px;
   font: 600 14px/1em "McClatchy Sans", sans-serif;
-  color: #222;
+  color: var(--text-color);
   text-decoration: none;
 }
 

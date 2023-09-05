@@ -1,6 +1,12 @@
 <!doctype html>
-<html lang="en" data-layout="">
+<html lang="en" data-layout="" class="msb">
   <head>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Noto+Sans:wght@400;700&family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=fallback" rel="stylesheet">
+
+    
     <title>color themes</title>
     <meta name="description" content="An explanation of custom properties and color.">
     
@@ -44,13 +50,13 @@
     <link rel="stylesheet" href="../../css/cards/transparency.css">
     <link rel="stylesheet" href="../../css/cards/big-news.css">
     <link rel="stylesheet" href="../../css/cards/in-depth.css">
-    <link rel="stylesheet" href="../../css/cards/swg-promo.css">
+    
     <link rel="stylesheet" href="../../css/cards/read-next.css">
     <link rel="stylesheet" href="../../css/cards/section-nav.css">
     <link rel="stylesheet" href="../../css/cards/inline-cta.css">
     <link rel="stylesheet" href="../../css/cards/upper-nav.css">
     <link rel="stylesheet" href="../../css/cards/gallery.css">
-    <link rel="stylesheet" href="../../css/cards/sponsor.css">
+    
     <link rel="stylesheet" href="../../css/cards/panel.css">
     <link rel="stylesheet" href="../../css/cards/taboola.css">
     <link rel="stylesheet" href="../../css/cards/utilities.css">
@@ -58,6 +64,7 @@
     
     <link rel="stylesheet" href="../../css/decks/premium.css">
     <link rel="stylesheet" href="../../css/decks/guide.css">
+    <link rel="stylesheet" href="../../css/decks/dark.css">
 
     
     <link rel="stylesheet" href="../../css/website/site.css">
@@ -81,7 +88,6 @@
         <a href="https://mcclatchy.github.io/design/email/">email</a>
         <a href="https://mcclatchy.github.io/design/markets/">markets</a>
         <a href="https://mcclatchy.github.io/design/saratoga/">style guide</a>
-        <a href="https://mcclatchy.github.io/design/themes/">theming</a>
       </nav>
     </div>
   <div class="story-body paper">
@@ -128,6 +134,9 @@
         </div>
       </article>
     </div>
+    <a href="https://www.kansascity.com/latest-news/" class="more-link " data-tb-category="" data-tb-link="">
+      More in NEWS
+    </a>
   </div>
 
   <div class="digest">
@@ -166,6 +175,9 @@
         </div>
       </article>
     </div>
+    <a href="https://www.kansascity.com/latest-news/" class="more-link " data-tb-category="" data-tb-link="">
+      More in NEWS
+    </a>
   </div>
 
 </div>
@@ -175,33 +187,37 @@
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>.impact,
 </span></span><span style="display:flex;"><span>.promo {
 </span></span><span style="display:flex;"><span>  --paper-color: <span style="color:#00f">#373737</span>;
-</span></span><span style="display:flex;"><span>  --tc: <span style="color:#000080;font-weight:bold">white</span>;
-</span></span><span style="display:flex;"><span>  --lc: <span style="color:#000080;font-weight:bold">white</span>;
-</span></span><span style="display:flex;"><span>  --lhc: <span style="color:#000080;font-weight:bold">white</span>;
-</span></span><span style="display:flex;"><span>  --bc: <span style="color:#00f">#222</span>;
-</span></span><span style="display:flex;"><span>  --bbc: <span style="color:#000080;font-weight:bold">white</span>;
+</span></span><span style="display:flex;"><span>  --header-color: <span style="color:#000080;font-weight:bold">white</span>;
+</span></span><span style="display:flex;"><span>  --text-color: <span style="color:#000080;font-weight:bold">white</span>;
+</span></span><span style="display:flex;"><span>  --secondary-text-color: <span style="color:#000080;font-weight:bold">white</span>;
+</span></span><span style="display:flex;"><span>  --link-color: <span style="color:#000080;font-weight:bold">white</span>;
+</span></span><span style="display:flex;"><span>  --link-hover-color: <span style="color:#000080;font-weight:bold">white</span>;
+</span></span><span style="display:flex;"><span>  --button-color: <span style="color:#00f">#222</span>;
+</span></span><span style="display:flex;"><span>  --button-background-color: <span style="color:#000080;font-weight:bold">white</span>;
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>.promo {
 </span></span><span style="display:flex;"><span>  --paper-color: <span style="color:#00f">#31409F</span>;
-</span></span><span style="display:flex;"><span>  --bc: <span style="color:#00f">#31409F</span>;
+</span></span><span style="display:flex;"><span>  --button-color: <span style="color:#00f">#31409F</span>;
 </span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
 
 <p>This setup allows us to expand in the future for different ad campaigns. Here is a quick sample.</p>
 
 <style>
 .read-next {
-  --bbc: #373737;
-  --bc: white;
+  --button-background-color: #373737;
+  --button-color: white;
 }
 
 .purple {
   --paper-color: #91096F;
-  --tc: white;
-  --lc: white;
-  --lhc: #FFE31A;
-  --bc: white;
-  --bbc: #09932D;
+  --header-color: white;
+  --text-color: white;
+  --secondary-text-color: white;
+  --link-color: white;
+  --link-hover-color: #FFE31A;
+  --button-color: white;
+  --button-background-color: #09932D;
 }
 
 .purple * {
@@ -210,16 +226,18 @@
 
 .charcoal {
   --paper-color: #525D54;
-  --tc: white;
-  --lc: #FFDD69;
-  --lhc: white;
-  --bc: #7A8A0E;
-  --bbc: white;
+  --header-color: white;
+  --text-color: white;
+  --secondary-text-color: white;
+  --link-color: #FFDD69;
+  --link-hover-color: white;
+  --button-color: #7A8A0E;
+  --button-background-color: white;
 }
 
 .slate {
   background-color: #EBEAE4;
-  --bbc: #719281;
+  --button-background-color: #719281;
 }
 </style>
 
@@ -260,6 +278,9 @@
         </div>
       </article>
     </div>
+    <a href="https://www.kansascity.com/latest-news/" class="more-link " data-tb-category="" data-tb-link="">
+      More in NEWS
+    </a>
   </div>
 
   <div class="digest">
@@ -298,6 +319,9 @@
         </div>
       </article>
     </div>
+    <a href="https://www.kansascity.com/latest-news/" class="more-link " data-tb-category="" data-tb-link="">
+      More in NEWS
+    </a>
   </div>
 
 </div>
@@ -306,20 +330,24 @@
 
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>.purple {
 </span></span><span style="display:flex;"><span>  <span style="color:#000080;font-weight:bold">background-color</span>: <span style="color:#00f">#91096F</span>;
-</span></span><span style="display:flex;"><span>  --tc: <span style="color:#000080;font-weight:bold">white</span>;
-</span></span><span style="display:flex;"><span>  --lc: <span style="color:#000080;font-weight:bold">white</span>;
-</span></span><span style="display:flex;"><span>  --lhc: <span style="color:#00f">#FFE31A</span>;
-</span></span><span style="display:flex;"><span>  --bc: <span style="color:#000080;font-weight:bold">white</span>;
-</span></span><span style="display:flex;"><span>  --bbc: <span style="color:#00f">#09932D</span>;
+</span></span><span style="display:flex;"><span>  --header-color: <span style="color:#000080;font-weight:bold">white</span>;
+</span></span><span style="display:flex;"><span>  --text-color: <span style="color:#000080;font-weight:bold">white</span>;
+</span></span><span style="display:flex;"><span>  --secondary-text-color: <span style="color:#000080;font-weight:bold">white</span>;
+</span></span><span style="display:flex;"><span>  --link-color: <span style="color:#000080;font-weight:bold">white</span>;
+</span></span><span style="display:flex;"><span>  --link-hover-color: <span style="color:#00f">#FFE31A</span>;
+</span></span><span style="display:flex;"><span>  --button-color: <span style="color:#000080;font-weight:bold">white</span>;
+</span></span><span style="display:flex;"><span>  --button-background-color: <span style="color:#00f">#09932D</span>;
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>.charcoal {
 </span></span><span style="display:flex;"><span>  <span style="color:#000080;font-weight:bold">background-color</span>: <span style="color:#00f">#525D54</span>;
-</span></span><span style="display:flex;"><span>  --tc: <span style="color:#000080;font-weight:bold">white</span>;
-</span></span><span style="display:flex;"><span>  --lc: <span style="color:#00f">#FFDD69</span>;
-</span></span><span style="display:flex;"><span>  --lhc: <span style="color:#000080;font-weight:bold">white</span>;
-</span></span><span style="display:flex;"><span>  --bc: <span style="color:#00f">#7A8A0E</span>;
-</span></span><span style="display:flex;"><span>  --bbc: <span style="color:#000080;font-weight:bold">white</span>;
+</span></span><span style="display:flex;"><span>  --header-color: <span style="color:#000080;font-weight:bold">white</span>;
+</span></span><span style="display:flex;"><span>  --text-color: <span style="color:#000080;font-weight:bold">white</span>;
+</span></span><span style="display:flex;"><span>  --secondary-text-color: <span style="color:#000080;font-weight:bold">white</span>;
+</span></span><span style="display:flex;"><span>  --link-color: <span style="color:#00f">#FFDD69</span>;
+</span></span><span style="display:flex;"><span>  --link-hover-color: <span style="color:#000080;font-weight:bold">white</span>;
+</span></span><span style="display:flex;"><span>  --button-color: <span style="color:#00f">#7A8A0E</span>;
+</span></span><span style="display:flex;"><span>  --button-background-color: <span style="color:#000080;font-weight:bold">white</span>;
 </span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
 
 <p>The same CSS also works for cards, along with any other element that uses our system.</p>
@@ -602,20 +630,6 @@
         <h5>THEMES</h5>
       </div>
       
-<div class="stack">
-  <h4>
-    <a href="https://mcclatchy.github.io/design/themes/guide/">guide</a>
-  </h4>
-  <p class="small">A stackable theme for guide-like content.</p>
-</div>
-
-<div class="stack">
-  <h4>
-    <a href="https://mcclatchy.github.io/design/themes/premium/">premium</a>
-  </h4>
-  <p class="small">A light theme for enterprise content.</p>
-</div>
-
 
     </div>
 
@@ -819,13 +833,6 @@
     <a href="https://mcclatchy.github.io/design/saratoga/series-nav/">series-nav</a>
   </h4>
   <p class="small">Series nav for article pages.</p>
-</div>
-
-<div class="stack">
-  <h4>
-    <a href="https://mcclatchy.github.io/design/saratoga/promo/">swg-promo</a>
-  </h4>
-  <p class="small">Promo card for story and section pages</p>
 </div>
 
 <div class="stack">

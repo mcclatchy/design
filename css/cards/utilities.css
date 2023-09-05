@@ -3,12 +3,12 @@
  */
 
 .cutout {
-  background-color: var(--bodyBackground);
+  background-color: var(--background-color);
 }
 
 .gray {
-  color: var(--tc, var(--gray));
-  --bbc: var(--tc, var(--gray));
+  color: var(--text-color, var(--gray));
+  --button-background-color: var(--text-color, var(--gray));
 }
 
 .no-caps {
@@ -22,22 +22,22 @@
 
 .serif {
   font-family: var(--serif);
-  --hf: var(--serif);
+  --header-family: var(--serif);
 }
 
 .sans {
   font-family: var(--sans);
-  --hf: var(--sans);
+  --header-family: var(--sans);
 }
 
 .bold {
   font-weight: bold;
-  --hw: bold;
+  --header-weight: bold;
 }
 
 .soft {
   font-weight: normal;
-  --hw: normal;
+  --header-weight: normal;
 }
 
 .small {
@@ -117,10 +117,6 @@
   --img-size: 100%;
 }
 
-.square-img {
-  /* height: min(var(--img-size, 90px), 100%); */
-}
-
 .circle-img {
   border-radius: 50%;
 }
@@ -158,7 +154,7 @@ form[id^=bx-form] {
 }
 
 .mi-sticky-player {
-  --ht: none;
+  --header-transform: none;
 }
 
 .mi-sticky-player figcaption {
@@ -174,6 +170,13 @@ form[id^=bx-form] {
   position: relative;
   grid-column: 1/-1;
   font: 700 1.8rem var(--serif);
+  color: var(--header-color)
+}
+
+@media(max-width: 600px) {
+  .partner-label {
+    margin: 0 var(--page-padding);
+  }
 }
 
 .partner-label::before {
@@ -184,24 +187,19 @@ form[id^=bx-form] {
   width: 100%;
   height: 4px;
   background-color: #ddd;
-}
+} 
 
 .partner-label span {
   position: relative;
   padding-right: 15px;
-  background-color: var(--body-background);
+  background-color: var(--background-color);
 }
 
 #newsletter-signUpWidget {
-  --hc: var(--black);
-  --tc: var(--black);
-  --lc: #3C4D87;
-  --lhc: #5169B8;
-}
-
-#newsletter-signUpWidget .button {
-  --bbc: var(--impact);
-  --bc: white;
+  --header-color: var(--black);
+  --text-color: var(--black);
+  --link-color: #3C4D87;
+  --link-hover-color: #5169B8;
 }
 
 /*

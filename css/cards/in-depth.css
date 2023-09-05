@@ -2,16 +2,29 @@
  * In Depth card
  */
 
-.in-depth {
-  background-color: var(--paper-color, #373737);
-}
+/* .in-depth { */
+/*   --paper-color: var(--black); */
+/*   --text-color: var(--white); */
+/*   /1* background-color: var(--text-color); *1/ */
+/*   /1* color: var(--paper-color); *1/ */
+/* } */
+
+/* .in-depth .label > * { */
+/*   color: var(--paper-color); */
+/*   background-color: var(--text-color); */
+/* } */
 
 .in-depth .package {
   --h1: 1.75rem;
-  --hw: bold;
+  --header-weight: bold;
+  /* color: var(--paper-color); */
 }
 
-.card.in-depth figure {
+.in-depth h3 a {
+  /* color: var(--paper-color); */
+}
+
+.in-depth figure {
 	min-height: 400px;
 }
 

@@ -1,41 +1,37 @@
 /**
- * Vertical and horizontal stacks
+ * Stack and row generics
  */
 
-.stack, 
-.package, 
-.card {
+.stack {
   display: flex;
-  --display: flex;
   flex-direction: column;
-  align-items: start;
-  gap: var(--spread);
-}
-
-.stack > *,
-.package > *,
-.card > * {
-  margin: 0;
+  gap: var(--stack-gap, var(--space-sm));
+  --display: flex;
 }
 
 .row {
   display: flex;
+  align-items: var(--row-align, center);
+  gap: var(--row-gap, var(--space-sm));
   --display: flex;
-  align-items: center;
-  gap: var(--spread);
 }
 
+/*
+ * Packages are stacks, but introduce some typography rules
+ */
+
 .package {
-  padding: calc(var(--gap) / 2);
-  color: var(--tc);
-  flex: 1;
-  --ht: none;
-  --hw: normal;
-  --hf: var(--serif);
-  --ld: none;
-  --lhd: underline;
-  --lc: var(--lc, inherit);
-  --lhc: var(--lc, inherit);
+  display: flex;
+  flex-direction: column;
+  gap: var(--package-gap, var(--space-sm));
+  align-items: var(--package-align, start);
+  padding: var(--package-padding, var(--space));
+  --header-family: var(--serif);
+  --header-weight: normal;
+  --header-transform: none;
+  --link-color: var(--text-color);
+  --link-decoration: none;
+  --link-hover-decoration: underline;
 }
 
 .package.no-img {
@@ -72,16 +68,21 @@
 .package.thumb > .time {
   align-self: end;
 }
+/*
+ * Card is the real element we'll use mostly
+ */
 
 .card {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: var(--card-align, start);
+  gap: var(--card-gap, var(--space));
+  padding: var(--card-padding, var(--space));
+  background-color: var(--card-color, var(--paper-color));
+  color: var(--card-text-color, var(--text-color));
   box-shadow: var(--paper-shadow);
-  background-color: var(--paper-color, white);
-  color: var(--tc);
-}
-
-.card * {
-  --paper-shadow: none;
+  --package-padding: 0;
 }
 
 .card figure,
@@ -110,8 +111,19 @@
 }
 
 .card.sponsored .kicker {
-  --tc: white;
-  background-color: var(--impact);
+  background-color: var(--text-color);
+  --text-color: var(--secondary-background-color);
+}
+
+/*
+ * Children for all concepts
+ */
+
+.stack > *,
+.row > *,
+.package > *,
+.card > * {
+  margin: 0;
 }
 
 /**
@@ -124,7 +136,7 @@
   overflow-x: scroll;
   scrollbar-width: thin;
   scrollbar-color: 
-    var(--scrollbar-foreground, #0007) 
+    var(--scrollbar-foreground, var(--black)) 
     var(--scrollbar-background, transparent);
 }
 
@@ -152,7 +164,7 @@ section, .section {
   display: block;
   position: relative;
   max-width: var(--section-width);
-  margin: var(--gap) auto;
+  margin: var(--space) auto;
 }
 
 #main-content,
@@ -227,10 +239,11 @@ section, .section {
 .social-media {
   place-content: center;
   display: flex;
-  gap: 15px;
+  gap: var(--social-media-gap, var(--space-sm));
 }
 
 .social-media svg {
+  display: block;
   width: 20px;
   height: 20px;
 }

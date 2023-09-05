@@ -4,36 +4,29 @@
 
 .panel {
   max-width: 100%;
-  padding: 45px var(--page-padding);
-  background-color: var(--paper-color);
+  padding: var(--panel-padding, var(--space-lg)) var(--page-padding);
+  background-color: var(--panel-color, var(--paper-color));
   font-family: var(--sans);
-  color: var(--tc);
-  --hf: var(--sans);
-  --hw: bold;
-  --ht: uppercase;
-  --tf: var(--sans);
-  --lc: #5169B8;
-  --lhc: #31409F;
-  --ld: underline;
+  color: var(--text-color);
+  --header-family: var(--sans);
+  --header-weight: bold;
+  --header-transform: uppercase;
+  --link-decoration: underline;
+  --grid-row-gap: var(--space-sm);
+  --grid-column-gap: var(--space-sm);
 }
 
 .panel.impact {
-  --paper-color: #373737;
-  --lc: white;
-  --ld: underline;
-  --lhc: #88B1FC;
+  --link-color: var(--text-color);
+  --link-hover-color: #88B1FC;
 }
 
 .panel > * {
   max-width: var(--story-width);
   margin: 20px auto;
-  color: var(--tc);
+  color: var(--text-color);
 }
 
 .panel > img {
   display: block;
-}
-
-.panel .grid {
-  grid-gap: var(--half-gap);
 }

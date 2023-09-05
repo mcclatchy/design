@@ -787,9 +787,9 @@
 
     <style>
       lab-panel {
-        --hf: var(--sans);
-        --hw: bold;
-        --ht: uppercase;
+        --header-family: var(--sans);
+        --header-weight: bold;
+        --header-transform: uppercase;
       }
 
       lab-panel:nth-of-type(even) {

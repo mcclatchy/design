@@ -1,10 +1,13 @@
 /**
  * Flexbox grid
+ *
+ * Deprecated. Should be removed once no longer used.
  */
 
 .flex {
   display: flex;
-  gap: var(--spread);
+  /* gap: var(--space-xs); */
+  gap: var(--space-sm);
   align-items: center;
 }
 
@@ -17,7 +20,7 @@
 }
 
 .flex-columns .lead-item .package {
-  --hw: bold;
+  --header-weight: bold;
 }
 
 @media (min-width: 690px) {

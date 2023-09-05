@@ -4,7 +4,6 @@
 
 .read-next {
   font: medium/1.5em var(--sans);
-  --spread: 10px;
 }
 
 @media(min-width: 990px) {
@@ -25,6 +24,14 @@
 	justify-items: start;
 	padding: 0;
 	text-align: left;
+}
+
+.read-next .bio {
+  grid-template-columns: 1fr auto;
+  justify-self: stretch;
+  align-items: center;
+  justify-items: start;
+  text-align: left;
 }
 
 .read-next .social-media {

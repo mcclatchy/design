@@ -11,7 +11,7 @@
 }
 
 .impact2020 .impact .kicker {
-  color: #222;
+  color: var(--text-color);
   background-color: white;
 }
 

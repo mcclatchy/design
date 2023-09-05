@@ -3,8 +3,9 @@
  */
 
 .masthead {
-  --paper-color: transparent;
+  --paper-color: var(--background-color);
   --paper-shadow: none;
+  --link-color: black;
   z-index: 2;
 }
 
@@ -14,10 +15,11 @@ body.wirestory .masthead {
 }
 
 html.msb .masthead {
-  --paper-color: var(--premium-bc);
-  --tc: var(--premium-tc);
-  --lc: var(--premium-tc);
-  --border-color: var(--premium-tc);
+  --paper-color: var(--premium-blue);
+  --text-color: var(--premium-text-color);
+  --link-color: var(--premium-text-color);
+  --border-color: var(--premium-text-color);
+  --fill-color: var(--premium-text-color);
 }
 
 .sds-flag {
@@ -32,12 +34,11 @@ html.msb .masthead {
   padding: var(--page-padding);
   padding-bottom: 0;
   font: bold 13px/1em var(--sans);
-  color: var(--tc);
+  color: var(--text-color);
 
   /* Custom properties for kids */
-  --spread: 15px;
-  --ld: none;
-  --tc: var(--black);
+  --link-decoration: none;
+  --text-color: var(--black);
 }
 
 .msb .sds-flag {
@@ -47,7 +48,7 @@ html.msb .masthead {
     "logo logo logo"
     "nav nav nav";
 
-  --tc: var(--premium-tc);
+  --text-color: var(--premium-text-color);
 }
 
 @media(min-width: 768px) {
@@ -99,7 +100,7 @@ html.msb .masthead {
 
 .flag-menu {
   grid-area: menu;
-  --spread: 15px;
+  --row-gap: 15px;
 }
 
 .flag-menu button,
@@ -109,7 +110,7 @@ html.msb .masthead {
 }
 
 .sds-flag .search {
-  --spread: 10px;
+  --row-gap: 10px;
 }
 
 .sds-flag .search input {
@@ -120,38 +121,33 @@ html.msb .masthead {
   border-bottom: 1px solid transparent;
   padding: 5px 0px;
   background-color: transparent;
-  color: var(--tc);
+  color: var(--text-color);
 }
 
 .sds-flag .search input:focus,
 .sds-flag .search input:not(:placeholder-shown) {
   box-shadow: none;
   outline: none;
-  border-color: var(--tc);
+  border-color: var(--text-color);
 }
 
 .flag-account {
   grid-area: account;
   place-self: end;
   min-height: 30px;
-  --bc: var(--premium-tc);
-  --bbc: var(--premium-bc);
-  --lhd: underline;
 }
 
 .flag-account .button {
   font-size: 1em;
-}
-
-.flag-account .button:hover {
-  --bc: var(--premium-impact);
+  --button-color: var(--white);
+  --button-hover-color: var(--premium-secondary-text-color);
 }
 
 .flag-left {
   grid-area: left;
   font-size: 14px;
-  --spread: 7px;
-  --lhd: underline;
+  --statck-gap: 7px;
+  --link-hover-decoration: underline;
 }
 
 .flag-right {
@@ -159,8 +155,8 @@ html.msb .masthead {
   justify-self: end;
   align-items: end;
   font-size: 14px;
-  --spread: 7px;
-  --lhd: underline;
+  --stack-gap: 7px;
+  --link-hover-decoration: underline;
 }
 
 .flag-edition {
@@ -174,11 +170,11 @@ html.msb .masthead {
   content: "";
   width: 30px;
   height: 1px;
-  background-color: var(--premium-impact);
+  background-color: var(--premium-secondary-text-color);
 }
 
 .msb .flag-edition {
-  color: var(--premium-impact);
+  color: var(--premium-secondary-text-color);
 }
 
 .flag-logo {
@@ -197,7 +193,8 @@ html.msb .masthead {
   border-bottom: 1px solid var(--border-color, var(--black));
   font-size: 16px;
   padding: 17px 0 15px;
-  --lhd: underline;
+  --link-hover-color: var(--text-color);
+  --link-hover-decoration: underline;
 
   /* Hides the bottom border for decks without the premium topper */
   position: relative;
@@ -205,7 +202,7 @@ html.msb .masthead {
 }
 
 .msb .flag-nav {
-  --scrollbar-foreground: var(--premium-impact);
+  --scrollbar-foreground: var(--premium-secondary-text-color);
 }
 
 .flag-nav .separator ~ * {
@@ -229,10 +226,10 @@ html.msb .masthead {
   box-shadow:
     0 3px 6px rgba(0,0,0,0.16),
     0 3px 6px rgba(0,0,0,0.23);
-  --tc: var(--black);
-  --lc: var(--black);
-  --lhc: var(--black);
-  --lhd: none;
+  --text-color: var(--black);
+  --link-color: var(--black);
+  --link-hover-color: var(--black);
+  --link-hover-decoration: none;
   background-color: white;
   font-size: 0.875rem;
 }

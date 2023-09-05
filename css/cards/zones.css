@@ -1,31 +1,44 @@
 /*
  * Zones
+ * 
+ * Deprecated the `.zone` class due to ad-blockers.
  */
 
-.zone {
-  clear: both;
-  display: block;
-  position: relative;
+/* .zone { */
+/*   clear: both; */
+/*   display: block; */
+/*   position: relative; */
+/* } */
+
+/* .zone:empty { */
+/*   padding: 0; */
+/* } */
+
+/* .zone.contents { */
+/*   display: contents; */
+/* } */
+
+[data-type="ad"] {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  /* padding: var(--page-padding) 0; */ 
+  padding: var(--space) 0; 
+  background-color: var(--zone-background-color, var(--media-background-color));
 }
 
-.zone:empty {
-  padding: 0;
-}
-
-.zone.contents {
-  display: contents;
-}
-
-.zone[data-type="ad"] {
-  padding: var(--page-padding) 0; 
-  background-color: var(--zone-background);
+@media(max-width: 600px) {
+  [data-type="ad"] {
+    background-color: var(--zone-background-color, var(--background-color));
+  }
 }
 
 /*
  * Zone treatment inside grids
  */
 
-.grid .zone {
+/* .grid .zone { */
+.grid [data-type="ad"] {
   grid-column-end: -1;
 }
 
@@ -33,10 +46,18 @@
  * Zones inside story bodies
  */
 
-.story-body > .zone {
-  max-width: unset;
-  margin: 40px 0;
+/* .story-body > .zone { */
+/*   max-width: unset; */
+/*   margin: 40px 0; */
+/*   box-sizing: border-box; */
+/* } */
+
+.story-body [data-type="ad"] {
   box-sizing: border-box;
+  margin: var(--space-lg) 0;
+  padding: 0;
+  max-width: unset;
+  --zone-background-color: transparent;
 }
 
 .zone.combo {
@@ -44,9 +65,9 @@
   justify-items: center;
 }
 
-.zone.clear {
-  background-color: unset;
-}
+/* .zone.clear { */
+/*   background-color: unset; */
+/* } */
 
 /*
  * Custom changes
@@ -56,7 +77,7 @@
   padding: 15px 0;
 }
 
-.story-body > .zone.stn-player {
+.story-body > .stn-player {
   max-width: var(--story-width);
   margin: 40px auto;
   padding: 0;

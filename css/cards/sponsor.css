@@ -1,7 +1,7 @@
 .sponsor {
   display: grid;
   grid-template-columns: 75px minmax(0, 1fr);
-  grid-gap: var(--gap);
+  gap: var(--grid-row-gap) var(--grid-column-gap);
 }
 
 .sponsor img {
@@ -12,5 +12,4 @@
 .sponsor .package {
   justify-content: center;
   font: 0.875rem var(--sans);
-  --gap: 0;
 }

@@ -4,18 +4,17 @@
 
 .story-body {
   display: flow-root;
-  font: 18px/1.5em var(--serif);
-  --hf: var(--sans);
-  --ht: uppercase;
-  --lc: #5169B8;
-  --lhc: #31409F;
-  --ld: underline;
-  color: var(--tc);
+  font: var(--story-font, 18px/2em var(--serif));
+  line-height: 1.6em;
+  color: var(--story-text-color, var(--text-color));
+  background-color: var(--story-background-color, var(--paper-color));
+  --header-family: var(--story-subhead-family, var(--sans));
+  --header-transform: var(--story-subhead-transform, uppercase);
 }
 
 .story-body > * {
   max-width: var(--story-width);
-  margin: 20px auto;
+  margin: var(--space) auto;
   padding: 0 var(--page-padding);
 }
 
@@ -44,11 +43,11 @@
 .story-body > .inline-video {
   max-width: var(--story-media-width);
   margin: 30px auto;
-  padding: 0;
+  /* padding: 0; */
 }
 
 .story-body .wide {
-  max-width: 970px;
+  max-width: max(970px, var(--story-media-width));
 }
 
 .story-body .full-bleed {
@@ -60,12 +59,7 @@
   margin-top: 0;
 }
 
-.story-body figure,
-.story-body .figure {
-  --spread: 10px;
-}
-
-.story-body figure .package,
+/* .story-body figure .package,
 .story-body .figure .package {
   padding: 0px;
 }
@@ -79,7 +73,7 @@
   .story-body figcaption,
   .story-body figure .package,
   .story-body .figure .package {
-    padding: 0px 15px;
+    padding: 0px var(--space-sm);
   }
 }
 
@@ -87,28 +81,28 @@
   .story-body .wide figcaption,
   .story-body figure.wide .package,
   .story-body .figure.wide .package {
-    padding: 0px 15px;
+    padding: 0px var(--space-sm);
   }
 }
 
 .story-body .full-bleed figcaption,
 .story-body figure.full-bleed .package,
 .story-body .figure.full-bleed .package {
-  padding: 0px 15px;
-}
+  padding: 0px var(--space-sm);
+} */
 
 /**
  * Mugshots
  */
 
 .story-body .mugshot {
-  padding: 0 15px;
+  padding: 0 var(--space-sm);
 }
 
 .story-body .mugshot .img-container {
   display: grid;
   grid-template-columns: 125px 1fr;
-  grid-gap: var(--half-gap);
+  grid-gap: var(--space-sm);
 }
 
 .story-body .mugshot figcaption {
@@ -131,7 +125,7 @@
  */
 
 .story-body .panel {
-  --paper-color: var(--body-background);
+  background-color: var(--background-color);
 }
 
 /*
@@ -170,4 +164,3 @@
 .story-body .lead-item figcaption {
   padding-top: 10px;
 }
-
