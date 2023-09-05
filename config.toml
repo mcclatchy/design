@@ -24,6 +24,3 @@ pygmentsStyle = "borland"
 [[menu.main]]
   name = "email"
   url = "/email/"
-[[menu.main]]
-  name = "theming"
-  url = "/themes/"

@@ -295,10 +295,10 @@ hr {
   border: none;
 }
 
-.button.promo:hover {
-  background-color: var(--link-color);
-  color: var(--paper-color);
-}
+/* .button.promo:hover { */
+/*   background-color: var(--link-color); */
+/*   color: var(--paper-color); */
+/* } */
 
 .button > img {
   display: block;
