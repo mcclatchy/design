@@ -267,7 +267,8 @@ hr {
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
-  color: var(--button-color, var(--background-color));
+  /* color: var(--button-color, var(--background-color)); */
+  color: var(--button-color, var(--paper-color));
   background-color: var(--button-background-color, var(--text-color));
   border: 1px solid transparent;
   cursor: pointer;
@@ -307,12 +308,14 @@ hr {
  * Color schemes
  */
 
-.impact {
-  --text-color: var(--paper-color);
-  --secondary-text-color: var(--paper-color);
-  background-color: var(--impact-background-color, var(--black));
-  color: var(--paper-color);
-  --link-color: var(--paper-color);
+.impact, .in-depth {
+  /* --text-color: var(--paper-color); */
+  /* --secondary-text-color: var(--paper-color); */
+  --paper-color: var(--impact-color, var(--black));
+  --text-color: var(--impact-text-color, var(--white));
+  --secondary-text-color: var(--impact-text-color, var(--white));
+  /* color: var(--paper-color); */
+  /* --link-color: var(--impact-text-color, var(--white)); */
   /* --paper-color: var(--black); */
   /* --text-color: var(--white); */
   /* --zone-background-color: #373737; */
@@ -320,9 +323,11 @@ hr {
 }
 
 .promo {
-  background-color: var(--link-color);
-  color: var(--paper-color);
-  --secondary-text-color: var(--text-color);
+  /* background-color: var(--link-color); */
+  /* color: var(--paper-color); */
+  --paper-color: var(--promo-color, var(--dark-blue));
+  --text-color: var(--promo-text-color, var(--white));
+  --secondary-text-color: var(--promo-text-color, var(--white));
 }
 
 .disabled, [disabled] {
