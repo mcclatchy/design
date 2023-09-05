@@ -5,14 +5,14 @@
 .stack {
   display: flex;
   flex-direction: column;
-  gap: var(--stack-gap, var(--space-xs));
+  gap: var(--stack-gap, var(--space-sm));
   --display: flex;
 }
 
 .row {
   display: flex;
   align-items: var(--row-align, center);
-  gap: var(--row-gap, var(--space-xs));
+  gap: var(--row-gap, var(--space-sm));
   --display: flex;
 }
 
@@ -23,12 +23,13 @@
 .package {
   display: flex;
   flex-direction: column;
-  gap: var(--package-gap, var(--space-xs));
+  gap: var(--package-gap, var(--space-sm));
   align-items: var(--package-align, start);
-  padding: var(--package-padding, var(--space-sm));
+  padding: var(--package-padding, var(--space));
   --header-family: var(--serif);
   --header-weight: normal;
   --header-transform: none;
+  --link-color: var(--text-color);
   --link-decoration: none;
   --link-hover-decoration: underline;
 }
@@ -76,8 +77,8 @@
   display: flex;
   flex-direction: column;
   align-items: var(--card-align, start);
-  gap: var(--card-gap, var(--space-sm));
-  padding: var(--card-padding, var(--space-sm));
+  gap: var(--card-gap, var(--space));
+  padding: var(--card-padding, var(--space));
   background-color: var(--card-color, var(--paper-color));
   color: var(--card-text-color, var(--text-color));
   box-shadow: var(--paper-shadow);

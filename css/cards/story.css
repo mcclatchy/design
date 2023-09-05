@@ -14,7 +14,7 @@
 
 .story-body > * {
   max-width: var(--story-width);
-  margin: 20px auto;
+  margin: var(--space) auto;
   padding: 0 var(--page-padding);
 }
 

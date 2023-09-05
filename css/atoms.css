@@ -16,15 +16,18 @@
   --h4: var(--font-base);
 
   /* Spacing and alignment */
-  --space: 30px;
-  --space-xs: calc(var(--space)/3);
+  --space: 20px;
+  /* --space-xs: calc(var(--space)/3); */
   --space-sm: calc(var(--space)/2);
   /* --space-md: var(--space); */
-  --space-lg: calc(var(--space)*2);
+  --space-lg: calc(var(--space)*3);
 
-  --grid-row-gap: var(--space-sm);
-  --grid-column-gap: var(--space-sm);
-  --page-padding: var(--space-sm);
+  /* --grid-row-gap: var(--space-sm); */
+  /* --grid-column-gap: var(--space-sm); */
+  /* --page-padding: var(--space-sm); */
+  --grid-row-gap: var(--space);
+  --grid-column-gap: var(--space);
+  --page-padding: var(--space);
   --section-width: 1140px;
   --story-width: 728px;
   --story-media-width: var(--story-width);
@@ -50,7 +53,9 @@
   --text-color: #1F2933;
   /* --header-color: #1F2933; */
   --secondary-text-color: var(--darkgray);
-  --media-background-color: #e1e6ef;
+  /* --media-background-color: #e1e6ef; */
+  --media-background-color: #E1E5EC;
+  
 
   /* Premium color properties */
   --premium-blue: var(--dark-blue);
@@ -66,8 +71,8 @@
   --paper-shadow: none;
 
   /* Deprecated. Used in older custom elements. */
-  --gap: var(--space-md);
-  --spread: var(--space-xs);
+  --gap: var(--space);
+  --spread: var(--space-sm);
   --premium-bc: var(--premium-blue);
   --premium-tc: var(--premium-text-color);
   --premium-impact: var(--premium-secondary-text-color);
@@ -267,7 +272,8 @@ hr {
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
-  color: var(--button-color, var(--background-color));
+  /* color: var(--button-color, var(--background-color)); */
+  color: var(--button-color, var(--paper-color));
   background-color: var(--button-background-color, var(--text-color));
   border: 1px solid transparent;
   cursor: pointer;
@@ -294,10 +300,10 @@ hr {
   border: none;
 }
 
-.button.promo:hover {
-  background-color: var(--link-color);
-  color: var(--paper-color);
-}
+/* .button.promo:hover { */
+/*   background-color: var(--link-color); */
+/*   color: var(--paper-color); */
+/* } */
 
 .button > img {
   display: block;
@@ -307,12 +313,14 @@ hr {
  * Color schemes
  */
 
-.impact {
-  --text-color: var(--paper-color);
-  --secondary-text-color: var(--paper-color);
-  background-color: var(--impact-background-color, var(--black));
-  color: var(--paper-color);
-  --link-color: var(--paper-color);
+.impact, .in-depth {
+  /* --text-color: var(--paper-color); */
+  /* --secondary-text-color: var(--paper-color); */
+  --paper-color: var(--impact-color, var(--black));
+  --text-color: var(--impact-text-color, var(--white));
+  --secondary-text-color: var(--impact-text-color, var(--white));
+  /* color: var(--paper-color); */
+  /* --link-color: var(--impact-text-color, var(--white)); */
   /* --paper-color: var(--black); */
   /* --text-color: var(--white); */
   /* --zone-background-color: #373737; */
@@ -320,9 +328,11 @@ hr {
 }
 
 .promo {
-  background-color: var(--link-color);
-  color: var(--paper-color);
-  --secondary-text-color: var(--text-color);
+  /* background-color: var(--link-color); */
+  /* color: var(--paper-color); */
+  --paper-color: var(--promo-color, var(--dark-blue));
+  --text-color: var(--promo-text-color, var(--white));
+  --secondary-text-color: var(--promo-text-color, var(--white));
 }
 
 .disabled, [disabled] {
@@ -486,7 +496,8 @@ figure {
   position: relative;
   display: grid;
   flex: none;
-  gap: var(--space-xs);
+  /* gap: var(--space-xs); */
+  gap: var(--space-sm);
   margin: 0;
 }
 
@@ -495,7 +506,7 @@ figure img {
   display: block;
   width: 100%;
   height: auto;
-  background-color: var(--figure-background-color, var(--media-background-color));
+  background-color: var(--media-background-color);
 }
 
 figcaption, .caption {

@@ -2,16 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://mcclatchy.github.io/design/themes/colors/</loc>
-    <lastmod>2020-09-15T08:07:04-05:00</lastmod>
+    <loc>https://mcclatchy.github.io/design/saratoga/colors/</loc>
+    <lastmod>2019-05-13T10:03:00-05:00</lastmod>
   </url><url>
     <loc>https://mcclatchy.github.io/design/</loc>
-    <lastmod>2020-09-15T08:07:04-05:00</lastmod>
-  </url><url>
-    <loc>https://mcclatchy.github.io/design/themes/</loc>
-    <lastmod>2020-09-15T08:07:04-05:00</lastmod>
-  </url><url>
-    <loc>https://mcclatchy.github.io/design/saratoga/colors/</loc>
     <lastmod>2019-05-13T10:03:00-05:00</lastmod>
   </url><url>
     <loc>https://mcclatchy.github.io/design/saratoga/</loc>
@@ -47,8 +41,6 @@
   </url><url>
     <loc>https://mcclatchy.github.io/design/saratoga/correction/</loc>
   </url><url>
-    <loc>https://mcclatchy.github.io/design/themes/dark/</loc>
-  </url><url>
     <loc>https://mcclatchy.github.io/design/decks/</loc>
   </url><url>
     <loc>https://mcclatchy.github.io/design/email/overview/description/</loc>
@@ -78,8 +70,6 @@
     <loc>https://mcclatchy.github.io/design/saratoga/grid/</loc>
   </url><url>
     <loc>https://mcclatchy.github.io/design/decks/grocery-marketplace/</loc>
-  </url><url>
-    <loc>https://mcclatchy.github.io/design/themes/guide/</loc>
   </url><url>
     <loc>https://mcclatchy.github.io/design/email/atoms/h1/</loc>
   </url><url>
@@ -155,8 +145,6 @@
   </url><url>
     <loc>https://mcclatchy.github.io/design/saratoga/paper/</loc>
   </url><url>
-    <loc>https://mcclatchy.github.io/design/themes/premium/</loc>
-  </url><url>
     <loc>https://mcclatchy.github.io/design/saratoga/read-next/</loc>
   </url><url>
     <loc>https://mcclatchy.github.io/design/saratoga/related-stories/</loc>
@@ -172,8 +160,6 @@
     <loc>https://mcclatchy.github.io/design/saratoga/section-nav/</loc>
   </url><url>
     <loc>https://mcclatchy.github.io/design/saratoga/series-nav/</loc>
-  </url><url>
-    <loc>https://mcclatchy.github.io/design/themes/home-guide/</loc>
   </url><url>
     <loc>https://mcclatchy.github.io/design/email/atoms/small/</loc>
   </url><url>

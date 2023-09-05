@@ -7,7 +7,7 @@
   grid-template-rows: 1fr auto;
   background-color: var(--card-color, var(--paper-color));
   box-shadow: var(--paper-shadow);
-  padding: var(--digest-padding, var(--space-sm));
+  padding: var(--digest-padding, var(--space));
   --card-padding: var(--space-sm) 0;
 }
 
@@ -21,7 +21,7 @@
 
 .digest .more-link {
   align-self: end;
-  padding-top: var(--digest-padding, var(--space-sm));
+  padding-top: var(--digest-padding, var(--space));
   /* padding: 15px 15px 10px; */
   /* padding: var(--space-sm) var(--space-sm) var(--space-xs); */
   /* padding: var(--space-sm); */

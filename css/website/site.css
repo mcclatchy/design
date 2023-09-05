@@ -57,6 +57,14 @@ td:first-child {
 }
 
 /*
+ * Zone tweaks
+ */
+
+[data-type=editorial] {
+  --color: teal;
+}
+
+/*
  * Banner/flag (site version)
  */
 
