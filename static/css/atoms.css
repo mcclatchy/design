@@ -238,13 +238,13 @@ summary, .summary {
 .more-link:after {
   content: "\2794";
   display: inline-block;
-  transform: translateY(-.05em) translateX(4px);
-  transition: transform .6s ease;
+  /* transform: translateY(-.05em) translateX(4px); */
+  /* transition: transform .6s ease; */
 }
 
-.more-link:hover:after {
-  transform: translateY(-.05em) translateX(8px);
-}
+/* .more-link:hover:after { */
+/*   transform: translateY(-.05em) translateX(8px); */
+/* } */
 
 .dateline {
   display: block;
