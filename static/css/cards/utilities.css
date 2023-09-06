@@ -203,10 +203,21 @@ form[id^=bx-form] {
 }
 
 /*
- * WPS breaks from recommended DOM
+ * WPS breaks from recommended DOM that need fixing
+ *
+ * Other notes:
+ * + Immersive layout needs to be removed
+ * + The opinion banner needs a DOM change in WPS
  */
 
 figure .img-container figcaption,
 .inline-video figcaption {
   padding-top: 10px;
 }
+
+/* class needs removed in WPS */
+.load-more .impact {
+  color: var(--paper-color);
+  background-color: var(--text-color);
+}
+
