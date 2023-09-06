@@ -175,7 +175,7 @@ form[id^=bx-form] {
 
 @media(max-width: 600px) {
   .partner-label {
-    margin: 0 var(--page-padding);
+    margin: var(--page-padding);
   }
 }
 
