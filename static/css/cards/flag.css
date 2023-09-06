@@ -15,11 +15,11 @@ body.wirestory .masthead {
 }
 
 html.msb .masthead {
-  --paper-color: var(--premium-blue);
-  --text-color: var(--premium-text-color);
-  --link-color: var(--premium-text-color);
-  --border-color: var(--premium-text-color);
-  --fill-color: var(--premium-text-color);
+  --paper-color: var(--sub-blue);
+  --text-color: var(--sub-text-color);
+  --link-color: var(--sub-text-color);
+  --border-color: var(--sub-text-color);
+  --fill-color: var(--sub-text-color);
 }
 
 .sds-flag {
@@ -48,7 +48,7 @@ html.msb .masthead {
     "logo logo logo"
     "nav nav nav";
 
-  --text-color: var(--premium-text-color);
+  --text-color: var(--sub-text-color);
 }
 
 @media(min-width: 768px) {
@@ -140,7 +140,7 @@ html.msb .masthead {
 .flag-account .button {
   font-size: 1em;
   --button-color: var(--white);
-  --button-hover-color: var(--premium-secondary-text-color);
+  --button-hover-color: var(--sub-secondary-text-color);
 }
 
 .flag-left {
@@ -170,11 +170,11 @@ html.msb .masthead {
   content: "";
   width: 30px;
   height: 1px;
-  background-color: var(--premium-secondary-text-color);
+  background-color: var(--sub-secondary-text-color);
 }
 
 .msb .flag-edition {
-  color: var(--premium-secondary-text-color);
+  color: var(--sub-secondary-text-color);
 }
 
 .flag-logo {
@@ -202,7 +202,7 @@ html.msb .masthead {
 }
 
 .msb .flag-nav {
-  --scrollbar-foreground: var(--premium-secondary-text-color);
+  --scrollbar-foreground: var(--sub-secondary-text-color);
 }
 
 .flag-nav .separator ~ * {
