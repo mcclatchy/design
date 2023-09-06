@@ -120,6 +120,10 @@ td:first-child {
   border-bottom: 1px solid var(--text-color);
 }
 
+.rail h5 {
+  margin-bottom: 0;
+}
+
 .rail a {
   --link-color: var(--text-color);
   --link-hover-color: var(--text-color);
