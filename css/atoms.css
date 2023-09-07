@@ -319,6 +319,7 @@ hr {
   --paper-color: var(--impact-color, var(--black));
   --text-color: var(--impact-text-color, var(--white));
   --secondary-text-color: var(--impact-text-color, var(--white));
+  --fill-color: var(--impact-text-color, var(--white));
   /* color: var(--paper-color); */
   /* --link-color: var(--impact-text-color, var(--white)); */
   /* --paper-color: var(--black); */
@@ -333,12 +334,14 @@ hr {
   --paper-color: var(--promo-color, var(--dark-blue));
   --text-color: var(--promo-text-color, var(--white));
   --secondary-text-color: var(--promo-text-color, var(--white));
+  --fill-color: var(--impact-text-color, var(--white));
 }
 
 .subonly {
   --paper-color: var(--sub-blue);
   --text-color: var(--sub-text-color);
   --secondary-text-color: var(--sub-secondary-text-color);
+  --fill-color: var(--impact-text-color, var(--white));
 }
 
 .disabled, [disabled] {

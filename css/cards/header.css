@@ -39,7 +39,7 @@
 
 .header.opinion .bio {
   display: grid;
-  gap: var(--space-xs);
+  gap: var(--space-sm);
   justify-items: center;
   justify-content: center;
   text-align: center;
@@ -70,10 +70,12 @@
   grid-template-columns: 35px min-content 1fr;
   grid-column-gap: var(--space-sm);
   grid-row-gap: 5px;
+  align-items: center;
   max-width: var(--story-width);
   margin: 0 auto;
   padding: 15px;
-  color: white;
+  background-color: var(--paper-color);
+  color: var(--text-color);
 }
 
 .opinion-banner * {
@@ -89,6 +91,7 @@
 @media(max-width: 700px) {
   .opinion-banner {
     grid-template-columns: 35px 1fr;
+    align-items: start;
   }
 
   .opinion-banner svg {
