@@ -148,8 +148,9 @@ td:first-child {
  * Zones
  */
 
-#zone-el-2 {
-  height: 250px;
+#zone-el-2,
+#zone-el-5 {
+  min-height: 250px;
 }
 
 #zone-el-15 {

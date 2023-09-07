@@ -5,13 +5,14 @@
 {{- .Page.Scratch.Add "cardIndex" 1 }}
 {{- $current := int (.Page.Scratch.Get "cardIndex") }}
 {{- $story := index .Site.Data.news.items (sub $current 1) }}
+{{- $loading := default "lazy" (.Get "loading") }}
 
 {{- with $story }}
 <article class="card {{ $class }}" {{- if $taboola }} data-tb-region-item {{- end }}>
   {{- $img := default "/img/kitten.jpg" (replace .lead_media.thumbnail "FREE" "LANDSCAPE") }}
   <figure>
     <a href="#" {{- if $taboola }} data-tb-link {{- end }}>
-      <img src="{{ $img }}" alt="{{ .lead_media.caption }}" width="1140" height="641" loading="lazy">
+      <img src="{{ $img }}" alt="{{ .lead_media.caption }}" width="1140" height="641" loading="{{ $loading }}">
     </a>
   </figure>
   <div class="package">
