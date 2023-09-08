@@ -156,7 +156,7 @@ li {
 }
 
 .kicker {
-  /* text-transform: uppercase; */
+  text-transform: uppercase;
   font-size: 0.6rem;
 }
 
@@ -197,6 +197,7 @@ summary, .summary {
 
 .label, .label .h5 {
   font: bold 14px/1em var(--sans);
+  text-transform: uppercase;
   color: var(--secondary-text-color);
 }
 
@@ -230,7 +231,7 @@ summary, .summary {
   font: 700 0.75rem/1em var(--sans);
   color: var(--more-link-color, var(--link-color));
   text-decoration: none;
-  /* text-transform: uppercase; */
+  text-transform: uppercase;
 }
 
 .more-link:hover { 
