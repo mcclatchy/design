@@ -120,6 +120,10 @@ td:first-child {
   border-bottom: 1px solid var(--text-color);
 }
 
+.rail h5 {
+  margin-bottom: 0;
+}
+
 .rail a {
   --link-color: var(--text-color);
   --link-hover-color: var(--text-color);
@@ -144,8 +148,9 @@ td:first-child {
  * Zones
  */
 
-#zone-el-2 {
-  height: 250px;
+#zone-el-2,
+#zone-el-5 {
+  min-height: 250px;
 }
 
 #zone-el-15 {

@@ -36,7 +36,8 @@
 
   /* Colors */
   --black: #241f21;
-  --gray: #EEF1F6;
+  /* --gray: #EEF1F6; */
+  --gray: #f5f7fa;
   --darkgray: #4F5864;
   --white: #ffffff;
   --light-brown: #f7efe0;
@@ -54,13 +55,14 @@
   /* --header-color: #1F2933; */
   --secondary-text-color: var(--darkgray);
   /* --media-background-color: #e1e6ef; */
-  --media-background-color: #E1E5EC;
+  /* --media-background-color: #E1E5EC; */
+  --media-background-color: #e9ecf0;
   
-
-  /* Premium color properties */
-  --premium-blue: var(--dark-blue);
-  --premium-text-color: var(--white);
-  --premium-secondary-text-color: #ffd71a;
+  /* Subscriber color properties */
+  /* --sub-blue: var(--dark-blue); */
+  --sub-blue: #00223e;
+  --sub-text-color: var(--white);
+  --sub-secondary-text-color: #ffd71a;
 
   /* Link properties */
   --link-color: #132DAD;
@@ -73,9 +75,9 @@
   /* Deprecated. Used in older custom elements. */
   --gap: var(--space);
   --spread: var(--space-sm);
-  --premium-bc: var(--premium-blue);
-  --premium-tc: var(--premium-text-color);
-  --premium-impact: var(--premium-secondary-text-color);
+  --premium-bc: var(--sub-blue);
+  --premium-tc: var(--sub-text-color);
+  --premium-impact: var(--sub-secondary-text-color);
 }
 
 /* @media(min-width: 768px) { */
@@ -154,7 +156,7 @@ li {
 }
 
 .kicker {
-  /* text-transform: uppercase; */
+  text-transform: uppercase;
   font-size: 0.6rem;
 }
 
@@ -195,6 +197,7 @@ summary, .summary {
 
 .label, .label .h5 {
   font: bold 14px/1em var(--sans);
+  text-transform: uppercase;
   color: var(--secondary-text-color);
 }
 
@@ -228,7 +231,7 @@ summary, .summary {
   font: 700 0.75rem/1em var(--sans);
   color: var(--more-link-color, var(--link-color));
   text-decoration: none;
-  /* text-transform: uppercase; */
+  text-transform: uppercase;
 }
 
 .more-link:hover { 
@@ -238,13 +241,13 @@ summary, .summary {
 .more-link:after {
   content: "\2794";
   display: inline-block;
-  transform: translateY(-.05em) translateX(4px);
-  transition: transform .6s ease;
+  /* transform: translateY(-.05em) translateX(4px); */
+  /* transition: transform .6s ease; */
 }
 
-.more-link:hover:after {
-  transform: translateY(-.05em) translateX(8px);
-}
+/* .more-link:hover:after { */
+/*   transform: translateY(-.05em) translateX(8px); */
+/* } */
 
 .dateline {
   display: block;
@@ -319,6 +322,7 @@ hr {
   --paper-color: var(--impact-color, var(--black));
   --text-color: var(--impact-text-color, var(--white));
   --secondary-text-color: var(--impact-text-color, var(--white));
+  --fill-color: var(--impact-text-color, var(--white));
   /* color: var(--paper-color); */
   /* --link-color: var(--impact-text-color, var(--white)); */
   /* --paper-color: var(--black); */
@@ -333,6 +337,14 @@ hr {
   --paper-color: var(--promo-color, var(--dark-blue));
   --text-color: var(--promo-text-color, var(--white));
   --secondary-text-color: var(--promo-text-color, var(--white));
+  --fill-color: var(--impact-text-color, var(--white));
+}
+
+.subonly {
+  --paper-color: var(--sub-blue);
+  --text-color: var(--sub-text-color);
+  --secondary-text-color: var(--sub-secondary-text-color);
+  --fill-color: var(--impact-text-color, var(--white));
 }
 
 .disabled, [disabled] {

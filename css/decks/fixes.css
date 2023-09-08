@@ -1,0 +1,53 @@
+/**
+ * Purple Tuesdays
+ *
+ * Note: these things are very old and may be dead
+ */
+
+form[id^=bx-form] {
+  display: block;
+}
+
+.mi-sticky-player {
+  --header-transform: none;
+}
+
+.mi-sticky-player figcaption {
+  line-height: 15px;
+  font-size: 14px;
+}
+
+.videoIngest .card.read-next {
+  display: block;
+}
+
+#newsletter-signUpWidget {
+  --header-color: var(--black);
+  --text-color: var(--black);
+  --link-color: #3C4D87;
+  --link-hover-color: #5169B8;
+}
+
+/*
+ * WPS breaks from recommended DOM that need fixing
+ *
+ * Other notes:
+ * + Immersive layout needs to be removed
+ * + The opinion banner needs a DOM change in WPS
+ */
+
+.card .card {
+  --card-padding: 0;
+}
+
+figure .img-container figcaption,
+.inline-video figcaption {
+  padding-top: 10px;
+}
+
+/* class needs removed in WPS */
+.load-more .impact {
+  color: var(--paper-color);
+  background-color: var(--text-color);
+}
+

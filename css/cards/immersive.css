@@ -1,6 +1,6 @@
 /**
  * Immersive media card
- * Note: this could be made smaller with custom properties later
+ * Note: This needs to be removed from the system
  */
 
 .immersive {
@@ -67,3 +67,10 @@
 .immersive figcaption {
   padding: 10px 15px 0;
 }
+
+.story-body > .immersive {
+  max-width: 100%;
+  margin-top: 0;
+  padding: 0;
+}
+
