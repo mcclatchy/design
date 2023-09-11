@@ -1,3 +1,50 @@
+/*
+ * Card is the element we'll use mostly
+ */
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: var(--card-align, start);
+  gap: var(--card-gap, var(--space));
+  padding: var(--card-padding, var(--space));
+  background-color: var(--card-color, var(--paper-color));
+  color: var(--card-text-color, var(--text-color));
+  box-shadow: var(--paper-shadow);
+  /* --package-padding: 0; */
+}
+
+.card figure,
+.card .video,
+.card .playlist-carousel-wrapper {
+  align-self: stretch;
+}
+
+.card.horizontal figure img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 20%;
+}
+
+@media(min-width: 660px) {
+  .card.horizontal {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 15px;
+    align-items: center;
+  }
+}
+
+.card.sponsored .kicker {
+  background-color: var(--text-color);
+  --text-color: var(--secondary-background-color);
+}
+
 /**
  * Stack and row generics
  */
@@ -25,7 +72,8 @@
   flex-direction: column;
   gap: var(--package-gap, var(--space-sm));
   align-items: var(--package-align, start);
-  padding: var(--package-padding, var(--space));
+  /* padding: var(--package-padding, var(--space)); */
+  padding: var(--package-padding, 0);
   --header-family: var(--serif);
   --header-weight: normal;
   --header-transform: none;
@@ -68,53 +116,6 @@
 .package.thumb > .time {
   align-self: end;
 }
-/*
- * Card is the real element we'll use mostly
- */
-
-.card {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: var(--card-align, start);
-  gap: var(--card-gap, var(--space));
-  padding: var(--card-padding, var(--space));
-  background-color: var(--card-color, var(--paper-color));
-  color: var(--card-text-color, var(--text-color));
-  box-shadow: var(--paper-shadow);
-  --package-padding: 0;
-}
-
-.card figure,
-.card .video,
-.card .playlist-carousel-wrapper {
-  align-self: stretch;
-}
-
-.card.horizontal figure img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: 50% 20%;
-}
-
-@media(min-width: 660px) {
-  .card.horizontal {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 15px;
-    align-items: center;
-  }
-}
-
-.card.sponsored .kicker {
-  background-color: var(--text-color);
-  --text-color: var(--secondary-background-color);
-}
-
 /*
  * Children for all concepts
  */
@@ -246,4 +247,37 @@ section, .section {
   display: block;
   width: 20px;
   height: 20px;
+}
+
+/*
+ * Partner labels
+ */
+
+.partner-label {
+  position: relative;
+  grid-column: 1/-1;
+  font: 700 1.8rem var(--serif);
+  color: var(--header-color)
+}
+
+@media(max-width: 600px) {
+  .partner-label {
+    margin: var(--page-padding);
+  }
+}
+
+.partner-label::before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 50%;
+  width: 100%;
+  height: 4px;
+  background-color: #ddd;
+} 
+
+.partner-label span {
+  position: relative;
+  padding-right: 15px;
+  background-color: var(--background-color);
 }

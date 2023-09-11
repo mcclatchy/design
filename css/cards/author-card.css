@@ -63,7 +63,7 @@
     "thumb info"
     "bio bio"
     "contact contact";
-  --package-padding: 0;
+  /* --package-padding: 0; */
   --header-weight: 400;
 }
 

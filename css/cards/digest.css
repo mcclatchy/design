@@ -8,7 +8,9 @@
   background-color: var(--card-color, var(--paper-color));
   box-shadow: var(--paper-shadow);
   padding: var(--digest-padding, var(--space));
-  --card-padding: var(--space-sm) 0;
+  /* --card-padding: var(--space-sm) 0; */
+  --card-padding: 0;
+  --package-padding: var(--space-sm) 0;
 }
 
 .digest .card {
@@ -25,4 +27,9 @@
   /* padding: 15px 15px 10px; */
   /* padding: var(--space-sm) var(--space-sm) var(--space-xs); */
   /* padding: var(--space-sm); */
+}
+
+.digest .label {
+  display: block;
+  padding-bottom: var(--space-sm);
 }
