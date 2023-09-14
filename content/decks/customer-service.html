@@ -1,0 +1,167 @@
+---
+title: customer service
+description: The new customer service page
+menu: decks
+layout: section
+---
+
+<style>
+  :root {
+    --body-background: white;
+  }
+
+  .cs-grid {
+    display: grid;
+    grid-gap: var(--space);
+    max-width: var(--section-width);
+    margin: 0 auto;
+    padding: var(--space);
+    --impact: #373737;
+    --space: 30px;
+    --link-color: var(--black);
+  }
+
+  .cs-grid * {
+    margin: 0;
+  }
+
+  .cs-button {
+    display: block;
+    padding: 15px var(--space);
+    color: white;
+    background-color: var(--impact);
+    font: bold 20px/normal var(--sans);
+    text-align: center;
+    border-radius: 4px;
+  }
+
+  .cs-button:hover {
+    color: white;
+  }
+
+  .cs-box {
+    display: block;
+    border: 1px solid var(--impact);
+    grid-column: 1/-1;
+  }
+
+  .cs-box iframe {
+    display: block;
+  }
+
+  .cs-header {
+    display: block;
+    padding: 15px var(--space);
+    color: white;
+    background-color: var(--impact);
+    font: bold 20px/normal var(--sans);
+    text-align: center;
+  }
+
+  .cs-list {
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: var(--columns);
+    padding: var(--space);
+  }
+
+  .cs-list > a {
+    padding: 0 var(--item-padding);
+  }
+
+  .cs-contact {
+    padding: var(--space);
+  }
+  
+  .cs-info {
+    margin-bottom: var(--space);
+  }
+
+  .cs-contact span {
+    display: block;
+  }
+
+  .cs-text {
+    grid-column: 1/-1;
+    text-align: center;
+  }
+
+  @media(min-width: 728px) {
+    .cs-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media(min-width: 990px) {
+    .cs-list {
+      text-align: center;
+    }
+
+    .cs-contact {
+      text-align: center;
+    }
+
+    .cs-contact span {
+      display: inline-block;
+    }
+
+    .cs-contact span:before {
+      content: "|";
+      display: inline-block;
+      margin: 0 10px;
+    }
+  }
+
+</style>
+
+<div class="cs-grid">
+  <h2 class="cs-text">How can we help?</h2>
+  <div class="cs-box">
+    <span class="cs-header">Your Account</span>
+    <div class="cs-list">
+      <a href="#">Account Overview</a>
+      <a href="#">Make a Payment</a>
+      <a href="#">Report Delivery Issue</a>
+      <a href="#">Pause Delivery (Vacation Hold)</a>
+      <a href="#">Update Address</a>
+      <a href="#">Sign up for eBilling</a>
+      <a href="#">Sign up for EZPay</a>
+      <a href="#">View Bill</a>
+      <a href="#">Cancel Subscription</a>
+    </div>
+  </div>
+
+  <p class="cs-text">For chat assistance, click the <a href="#"><b>subscription help</b></a> button on the right-hand side of the page.</p>
+
+  <a class="cs-button" href="#">Start a Subscription</a>
+  <a class="cs-button" href="#">Advertise with Us</a>
+  <a class="cs-button" href="#">Place a Classifed Ad</a>
+  <a class="cs-button" href="#">Place an Obituary</a>
+  <a class="cs-button" href="#">Licensing and Permissions</a>
+  <a class="cs-button" href="#">Staff Listing</a>
+
+  <div class="cs-box cs-wide">
+    <span class="cs-header">Customer Care</span>
+    <div class="cs-contact">
+      <p class="cs-info">
+       Call us at <a href="tel:800-532-5350">800-532-5350</a>
+       <span>Mon - Fri 7am - 4pm</span>
+       <span>Sun 7am - 11am</span>
+       <span>Closed Saturday</span>
+      </p>
+      <a href="#">Send us an email</a>
+    </div>
+  </div>
+
+  <div class="cs-box cs-wide">
+    <span class="cs-header">Account Management and Feedback</span>
+    <div class="cs-contact">
+      <p>To report story feedback or corrections, please include section and page number:</p>
+    </div>
+    <iframe src="https://airtable.com/embed/shrxCBypiOgcpTuSh?backgroundColor=gray&amp;prefill_fldOlZR39NymxAh7Z=CLT&amp;hide_fldOlZR39NymxAh7Z=true" 
+      frameborder="0" 
+      width="100%" 
+      height="533" 
+      style="background:transparent;border:1px solid #ccc;"></iframe>
+  </div>
+</div>
