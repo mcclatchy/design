@@ -183,4 +183,5 @@ td:first-child {
   background-color: rgba(5,65,100,0.9);
   color: white;
   border: 1px solid white;
+  box-sizing: border-box;
 }
