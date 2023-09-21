@@ -255,4 +255,5 @@ html.msb .masthead {
 
 .sds-flag .popout svg {
   width: 20px;
+  fill: inherit;
 }
