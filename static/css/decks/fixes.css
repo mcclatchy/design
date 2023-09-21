@@ -47,7 +47,20 @@ figure .img-container figcaption,
 
 /* class needs removed in WPS */
 .load-more .impact {
-  color: var(--paper-color);
-  background-color: var(--text-color);
+  color: var(--text-color);
+  background-color: var(--paper-color);
 }
 
+/* class needs removed in WPS */
+.digest .label .impact {
+  --secondary-text-color: var(--dark-gray);
+}
+
+/*
+ * Fixes related to custom cards
+ */
+custom-digest {
+  padding: var(--digest-padding, var(--space));
+  --card-padding: 0;
+  --package-padding: var(--space-sm) 0;
+}
