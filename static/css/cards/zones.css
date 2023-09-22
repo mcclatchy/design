@@ -4,25 +4,7 @@
  * Deprecated the `.zone` class due to ad-blockers.
  */
 
-/* .zone { */
-/*   clear: both; */
-/*   display: block; */
-/*   position: relative; */
-/* } */
-
-/* .zone:empty { */
-/*   padding: 0; */
-/* } */
-
-/* .zone.contents { */
-/*   display: contents; */
-/* } */
-
 [data-type="ad"] {
-  /* display: grid; */
-  /* align-items: center; */
-  /* justify-items: center; */
-  /* padding: var(--page-padding) 0; */ 
   padding: var(--space) 0; 
   background-color: var(--zone-background-color, var(--media-background-color));
 }
@@ -46,12 +28,6 @@
  * Zones inside story bodies
  */
 
-/* .story-body > .zone { */
-/*   max-width: unset; */
-/*   margin: 40px 0; */
-/*   box-sizing: border-box; */
-/* } */
-
 .story-body [data-type="ad"] {
   box-sizing: border-box;
   margin: var(--space-lg) 0;
@@ -64,10 +40,6 @@
   grid-template-columns: repeat(auto-fit, minmax(300px, auto));
   justify-items: center;
 }
-
-/* .zone.clear { */
-/*   background-color: unset; */
-/* } */
 
 /*
  * Custom changes
