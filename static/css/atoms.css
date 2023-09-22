@@ -199,6 +199,7 @@ summary, .summary {
   font: bold 14px/1em var(--sans);
   text-transform: uppercase;
   color: var(--secondary-text-color);
+  margin: 0;
 }
 
 /* .label { */

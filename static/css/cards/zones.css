@@ -19,9 +19,9 @@
 /* } */
 
 [data-type="ad"] {
-  display: grid;
-  align-items: center;
-  justify-items: center;
+  /* display: grid; */
+  /* align-items: center; */
+  /* justify-items: center; */
   /* padding: var(--page-padding) 0; */ 
   padding: var(--space) 0; 
   background-color: var(--zone-background-color, var(--media-background-color));

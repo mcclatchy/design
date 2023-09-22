@@ -57,6 +57,7 @@
 
 .story-body > .full-bleed:first-child {
   margin-top: 0;
+  background-color: var(--paper-color);
 }
 
 /* .story-body figure .package,

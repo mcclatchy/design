@@ -45,6 +45,10 @@
   --text-color: var(--secondary-background-color);
 }
 
+.card > .package {
+  flex: 1;
+}
+
 /**
  * Stack and row generics
  */

@@ -32,7 +32,8 @@
   --columns: repeat(auto-fit, minmax(300px, 1fr));
   /* Colors */
   --black: #241f21;
-  --gray: #EEF1F6;
+  /* --gray: #EEF1F6; */
+  --gray: #f5f7fa;
   --darkgray: #4F5864;
   --white: #ffffff;
   --light-brown: #f7efe0;
@@ -49,7 +50,8 @@
   /* --header-color: #1F2933; */
   --secondary-text-color: var(--darkgray);
   /* --media-background-color: #e1e6ef; */
-  --media-background-color: #E1E5EC;
+  /* --media-background-color: #E1E5EC; */
+  --media-background-color: #e9ecf0;
   /* Subscriber color properties */
   /* --sub-blue: var(--dark-blue); */
   --sub-blue: #00223e;
@@ -143,7 +145,7 @@ li {
 }
 
 .kicker {
-  /* text-transform: uppercase; */
+  text-transform: uppercase;
   font-size: 0.6rem;
 }
 
@@ -182,7 +184,9 @@ summary, .summary {
 
 .label, .label .h5 {
   font: bold 14px/1em var(--sans);
+  text-transform: uppercase;
   color: var(--secondary-text-color);
+  margin: 0;
 }
 
 /* .label { */
@@ -212,7 +216,7 @@ summary, .summary {
   font: 700 0.75rem/1em var(--sans);
   color: var(--more-link-color, var(--link-color));
   text-decoration: none;
-  /* text-transform: uppercase; */
+  text-transform: uppercase;
 }
 
 .more-link:hover {
@@ -569,6 +573,10 @@ figcaption, .caption {
 .card.sponsored .kicker {
   background-color: var(--text-color);
   --text-color: var(--secondary-background-color);
+}
+
+.card > .package {
+  flex: 1;
 }
 
 /**
@@ -1022,6 +1030,7 @@ html.msb .masthead {
 
 .sds-flag .popout svg {
   width: 20px;
+  fill: inherit;
 }
 
 /**
@@ -1413,6 +1422,7 @@ footer {
 
 .story-body > .full-bleed:first-child {
   margin-top: 0;
+  background-color: var(--paper-color);
 }
 
 /* .story-body figure .package,
@@ -1685,9 +1695,9 @@ footer {
 /*   display: contents; */
 /* } */
 [data-type=ad] {
-  display: grid;
-  align-items: center;
-  justify-items: center;
+  /* display: grid; */
+  /* align-items: center; */
+  /* justify-items: center; */
   /* padding: var(--page-padding) 0; */
   padding: var(--space) 0;
   background-color: var(--zone-background-color, var(--media-background-color));
@@ -1749,25 +1759,41 @@ footer {
 .digest {
   display: grid;
   grid-template-rows: 1fr auto;
+  grid-gap: var(--space);
   background-color: var(--card-color, var(--paper-color));
   box-shadow: var(--paper-shadow);
   padding: var(--digest-padding, var(--space));
   /* --card-padding: var(--space-sm) 0; */
   --card-padding: 0;
-  --package-padding: var(--space-sm) 0;
+  --card-gap: var(--space-sm);
+  /* --package-padding: var(--space-sm) 0; */
+  --package-padding: 0;
 }
 
-.digest .card {
-  border-top: 2px solid var(--background-color);
+.digest > .paper {
+  display: grid;
+  grid-gap: var(--space);
+  align-content: start;
+  background-color: var(--card-color, var(--paper-color));
 }
 
-.digest .card:first-of-type {
-  border-top: none;
-}
-
+/* .digest > .paper > .card + .card::before { */
+/*   content: ""; */
+/*   display: block; */
+/*   width: 100%; */
+/*   position: absolute; */
+/*   top: calc(var(--space-sm) * -1); */
+/*   border-top: 2px solid var(--grid-rule-color, var(--background-color)); */
+/* } */
+/* .digest .card { */
+/*   border-top: 2px solid var(--background-color); */
+/* } */
+/* .digest .card:first-of-type { */
+/*   border-top: none; */
+/* } */
 .digest .more-link {
   align-self: end;
-  padding-top: var(--digest-padding, var(--space));
+  /* padding-top: var(--digest-padding, var(--space)); */
   /* padding: 15px 15px 10px; */
   /* padding: var(--space-sm) var(--space-sm) var(--space-xs); */
   /* padding: var(--space-sm); */
@@ -1775,7 +1801,7 @@ footer {
 
 .digest .label {
   display: block;
-  padding-bottom: var(--space-sm);
+  /* padding-bottom: var(--space-sm); */
 }
 
 /**
@@ -2453,6 +2479,7 @@ section.big-news {
   align-items: unset;
   font-family: var(--sans);
   color: var(--secondary-text-color);
+  padding: 0;
   --header-color: var(--text-color);
 }
 
@@ -2760,8 +2787,54 @@ figure .img-container figcaption,
 
 /* class needs removed in WPS */
 .load-more .impact {
-  color: var(--paper-color);
-  background-color: var(--text-color);
+  color: var(--text-color);
+  background-color: var(--paper-color);
+}
+
+/* class needs removed in WPS */
+.digest .label .impact {
+  --secondary-text-color: var(--dark-gray);
+}
+
+/*
+ * Fixes related to custom cards
+ */
+custom-digest {
+  padding: var(--digest-padding, var(--space));
+  --card-padding: 0;
+  --package-padding: var(--space-sm) 0;
+}
+
+/*
+ * Digests need a cleanup in WPS
+ */
+.digest .card * {
+  order: 2;
+}
+
+.digest .card .label {
+  order: 1;
+  padding-bottom: var(--space-sm);
+}
+
+/*
+ * Nativo needs altering on their side
+ */
+.ntv-hp .ntvAdChoicesLink {
+  display: contents;
+}
+
+.ntv-hp .kicker {
+  padding: 4px 6px;
+  margin-top: -4px;
+}
+
+/*
+ * Load more buttons
+ */
+.button.big.impact.hcentered {
+  background-color: var(--impact-color, var(--black));
+  color: var(--impact-text-color, var(--white));
 }
 
 .impact2020 .kicker {

@@ -64,3 +64,38 @@ custom-digest {
   --card-padding: 0;
   --package-padding: var(--space-sm) 0;
 }
+
+/*
+ * Digests need a cleanup in WPS
+ */
+
+.digest .card * {
+  order: 2;
+}
+
+.digest .card .label {
+  order: 1;
+  padding-bottom: var(--space-sm);
+}
+
+/*
+ * Nativo needs altering on their side
+ */
+
+.ntv-hp .ntvAdChoicesLink {
+  display: contents;
+}
+
+.ntv-hp .kicker {
+  padding: 4px 6px;
+  margin-top: -4px;
+}
+
+/*
+ * Load more buttons
+ */
+
+.button.big.impact.hcentered {
+  background-color: var(--impact-color, var(--black));
+  color: var(--impact-text-color, var(--white));
+}

@@ -5,25 +5,44 @@
 .digest {
   display: grid;
   grid-template-rows: 1fr auto;
+  grid-gap: var(--space);
   background-color: var(--card-color, var(--paper-color));
   box-shadow: var(--paper-shadow);
   padding: var(--digest-padding, var(--space));
   /* --card-padding: var(--space-sm) 0; */
   --card-padding: 0;
-  --package-padding: var(--space-sm) 0;
+  --card-gap: var(--space-sm);
+  /* --package-padding: var(--space-sm) 0; */
+  --package-padding: 0;
 }
 
-.digest .card {
-  border-top: 2px solid var(--background-color);
+.digest > .paper {
+  display: grid;
+  grid-gap: var(--space);
+  align-content: start;
+  background-color: var(--card-color, var(--paper-color));
 }
 
-.digest .card:first-of-type {
-  border-top: none;
-}
+/* .digest > .paper > .card + .card::before { */
+/*   content: ""; */
+/*   display: block; */
+/*   width: 100%; */
+/*   position: absolute; */
+/*   top: calc(var(--space-sm) * -1); */
+/*   border-top: 2px solid var(--grid-rule-color, var(--background-color)); */
+/* } */
+
+/* .digest .card { */
+/*   border-top: 2px solid var(--background-color); */
+/* } */
+
+/* .digest .card:first-of-type { */
+/*   border-top: none; */
+/* } */
 
 .digest .more-link {
   align-self: end;
-  padding-top: var(--digest-padding, var(--space));
+  /* padding-top: var(--digest-padding, var(--space)); */
   /* padding: 15px 15px 10px; */
   /* padding: var(--space-sm) var(--space-sm) var(--space-xs); */
   /* padding: var(--space-sm); */
@@ -31,5 +50,5 @@
 
 .digest .label {
   display: block;
-  padding-bottom: var(--space-sm);
+  /* padding-bottom: var(--space-sm); */
 }
