@@ -99,3 +99,13 @@ custom-digest {
   background-color: var(--impact-color, var(--black));
   color: var(--impact-text-color, var(--white));
 }
+
+/*
+ * Search buttons
+ * impact class needs removed in WPS 
+ */
+
+.search-form button {
+  --paper-color: var(--white);
+  --text-color: var(--black);
+}
