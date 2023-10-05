@@ -58,7 +58,7 @@
 .author-bio {
   padding: 0 var(--page-padding);
   grid-template-columns: auto 1fr;
-  grid-row-gap: var(--space-xs);
+  grid-row-gap: var(--space-sm);
   grid-template-areas:
     "thumb info"
     "bio bio"
