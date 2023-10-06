@@ -112,6 +112,19 @@ custom-digest {
 }
 
 /*
+ * Input and submit button nested under impact
+ * impact class needs removed in WPS 
+ */
+
+ .impact form input {
+    background-color: white;
+ }
+
+ .impact form .button {
+    color: white;
+ }
+
+/*
  * Breaking news banner text
  * impact class needs removed in WPS 
  */
