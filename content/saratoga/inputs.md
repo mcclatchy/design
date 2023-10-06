@@ -48,7 +48,7 @@ Inputs are designed to be placed in a center-aligned form that is 100% of the pa
     <label class="checkbox"><input type="radio" name="radio"> Radio Button</label>
   </div> 
   
-  <button id="button" type="submit" class="button promo">submit</button>   
+  <button id="button" type="submit" class="button">submit</button>   
 </form>  
 
 #### RULES
