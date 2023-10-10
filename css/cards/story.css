@@ -43,7 +43,6 @@
 .story-body > .inline-video {
   max-width: var(--story-media-width);
   margin: 30px auto;
-  /* padding: 0; */
 }
 
 .story-body .wide {
@@ -57,39 +56,8 @@
 
 .story-body > .full-bleed:first-child {
   margin-top: 0;
+  background-color: var(--paper-color);
 }
-
-/* .story-body figure .package,
-.story-body .figure .package {
-  padding: 0px;
-}
-
-@media(max-width: 768px) {
-  .story-body > figure,
-  .story-body > .figure {
-    max-width: 100%;
-  }
-
-  .story-body figcaption,
-  .story-body figure .package,
-  .story-body .figure .package {
-    padding: 0px var(--space-sm);
-  }
-}
-
-@media(max-width: 990px) {
-  .story-body .wide figcaption,
-  .story-body figure.wide .package,
-  .story-body .figure.wide .package {
-    padding: 0px var(--space-sm);
-  }
-}
-
-.story-body .full-bleed figcaption,
-.story-body figure.full-bleed .package,
-.story-body .figure.full-bleed .package {
-  padding: 0px var(--space-sm);
-} */
 
 /**
  * Mugshots

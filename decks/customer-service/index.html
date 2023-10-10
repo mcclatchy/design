@@ -7,8 +7,8 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Noto+Sans:wght@400;700&family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=fallback" rel="stylesheet">
 
     
-    <title>integrated section mock</title>
-    <meta name="description" content="">
+    <title>customer service</title>
+    <meta name="description" content="The new customer service page">
     
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -281,516 +281,58 @@
   <a href="#">Niche pub</a>
 </div>
 
-<script type="module" src="../../js/custom-card.js"></script>
+<link rel="stylesheet" href="../../css/decks/customer-service.css">
 
-<style>
-  :root {
-    --section-width: calc(1230px + var(--page-padding));
-  }
-
-  .grid {
-    gap: 20px;
-    justify-content: center;
-    grid-auto-rows: 250px;
-    --paper-shadow: none;
-    --columns: repeat(auto-fit, 300px);
-  }
-
-  .card {
-    min-height: 250px;
-  }
-
-  .card figure {
-    position: absolute;
-    width: 100%;
-    height: 80%;
-    transition: opacity .1s;
-  }
-
-  .card figure img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: 50% 20%;
-  }
-
-  .card:hover figure {
-    opacity: 0.4;
-  }
-
-  .card .package {
-    position: relative;
-    background: linear-gradient(transparent, transparent 30%, var(--paper-color, white) 70%);
-    justify-content: end;
-    align-self: stretch;
-    --header-family: var(--sans);
-    --header-weight: bold;
-  }
-
-  .kicker {
-    padding: 0;
-    border: none;
-  }
-
-  .card .package .time {
-    flex: none;
-  }
-
-  .card.lead-item {
-    grid-row: auto !important;
-  }
-
-  .card.lead-item .package {
-    padding-top: var(--gap);
-    justify-content: end;
-    --header-size: 1.2rem;
-  }
-
-  .card.lead-item .summary {
-    display: none;
-  }
-
-  .card.sponsored {
-    --paper-color: #038698;
-    --text-color: white;
-  }
-
-  .card.sponsored .kicker {
-    background-color: unset;
-  }
-
-  .load-more {
-    align-self: start;
-    margin: var(--gap) auto;
-  }
-</style>
-
-<script type="module">
-  const parterRate = .7;
-  const cards = document.querySelectorAll("article.card:not(.lead-item)");
-
-  cards.forEach(card => {
-    if(Math.random() < parterRate) {
-      card.classList.add("sponsored");
-    }
-  });
-</script>
-
-
-<section class="grid">
-  <!-- Option banner group (now hidden by default) -->
-  <div class"option-banners" hidden></div>
-
-  
-  <article class="card lead-item">
-    <figure>
-      <a href="#">
-        <img src="https://www.kansascity.com/latest-news/tloi8r/picture278282118/alternates/LANDSCAPE_1140/PR081023JamesHolston.jpg" alt="James Holston, 61, with his oversized check." width="1140" height="641" loading="lazy">
-      </a>
-    </figure>
-    <div class="package">
-      <h2 class="caps h6">
-        <a class="kicker" href="#">National</a>
-      </h2>
-      <h3 class="h1">
-        <a href="#">Husband shows wife a winning lottery ticket after work. ‘Her mouth dropped wide open’</a>
-      </h3>
-      <p class="summary">Iowa Lottery says man used two small prizes to buy another ticket after work and he won $100,000 prize. He and wife shocked by his winnings.</p>
-      
-      <div class="time">Aug 15, 2023 3:04 PM</div>
+<div class="cs-grid">
+  <h2 class="h2">How can we help?</h2>
+  <div class="cs-box">
+    <span class="cs-header">Your Account</span>
+    <div class="cs-list">
+      <a href="#">Account Overview</a>
+      <a href="#">Make a Payment</a>
+      <a href="#">Report Delivery Issue</a>
+      <a href="#">Pause Delivery (Vacation Hold)</a>
+      <a href="#">Update Address</a>
+      <a href="#">Sign up for eBilling</a>
+      <a href="#">Sign up for EZPay</a>
+      <a href="#">View Bill</a>
+      <a href="#">Cancel Subscription</a>
     </div>
-  </article>
+  </div>
 
-  
-  <article class="card ">
-    <figure>
-      <a href="#">
-        <img src="https://www.miamiherald.com/latest-news/thlrbp/picture278282068/alternates/LANDSCAPE_1140/martin-sanchez-Tzoe6VCvQYg-unsplash.jpg" alt="The rare heart condition was a symptom of long COVID, a condition that occurs after an infection and persists for months." width="1140" height="641" loading="lazy">
-      </a>
-    </figure>
-    <div class="package">
-      <h2 class="caps h6">
-        <a class="kicker" href="#">Coronavirus</a>
-      </h2>
-      <h3 class="h3">
-        <a href="#">Man’s legs turn purple when he stands up. It’s a rare long COVID symptom, doctors say</a>
-      </h3>
-      <div class="time">Aug 15, 2023 2:59 PM</div>
+  <p class="cs-text">For chat assistance, click the <a href="#"><b>subscription help</b></a> button on the right-hand side of the page.</p>
+
+  <a class="cs-button" href="#">Start a Subscription</a>
+  <a class="cs-button" href="#">Advertise with Us</a>
+  <a class="cs-button" href="#">Place a Classifed Ad</a>
+  <a class="cs-button" href="#">Place an Obituary</a>
+  <a class="cs-button" href="#">Licensing and Permissions</a>
+  <a class="cs-button" href="#">Staff Listing</a>
+
+  <div class="cs-box cs-wide">
+    <span class="cs-header">Customer Care</span>
+    <div class="cs-contact">
+      <p class="cs-info">
+       Call us at <a href="tel:800-532-5350">800-532-5350</a>
+       <span>Mon - Fri 7am - 4pm</span>
+       <span>Sun 7am - 11am</span>
+       <span>Closed Saturday</span>
+      </p>
+      <a href="#">Send us an email</a>
     </div>
-  </article>
+  </div>
 
-  
-  <article class="card ">
-    <figure>
-      <a href="#">
-        <img src="https://www.charlotteobserver.com/news/nation-world/national/2atc9j/picture272773855/alternates/LANDSCAPE_1140/RTT-policeHandcuffs.jpg" alt="Handcuffs, thumb prints" width="1140" height="641" loading="lazy">
-      </a>
-    </figure>
-    <div class="package">
-      <h2 class="caps h6">
-        <a class="kicker" href="#">North Carolina</a>
-      </h2>
-      <h3 class="h3">
-        <a href="#">Remains found two years after man vanished, cops say. Now SC man charged with murder</a>
-      </h3>
-      <div class="time">Aug 15, 2023 2:49 PM</div>
+  <div class="cs-box cs-wide">
+    <span class="cs-header">Account Management and Feedback</span>
+    <div class="cs-contact">
+      <p>To report story feedback or corrections, please include section and page number:</p>
     </div>
-  </article>
-
-  
-  <article class="card ">
-    <figure>
-      <a href="#">
-        <img src="https://www.kansascity.com/news/local/community/lsjournal/jors7i/picture278281628/alternates/LANDSCAPE_1140/bus" alt="The Missouri Supreme Court upheld the state’s anti-truancy school attendance law." width="1140" height="641" loading="lazy">
-      </a>
-    </figure>
-    <div class="package">
-      <h2 class="caps h6">
-        <a class="kicker" href="#">Government &amp; Politics</a>
-      </h2>
-      <h3 class="h3">
-        <a href="#">Missouri Supreme Court upholds law allowing jailing of parents over kids’ missed school</a>
-      </h3>
-      <div class="time">Aug 15, 2023 2:32 PM</div>
-    </div>
-  </article>
-
-  <fake-ad class="zone"></fake-ad>
-  
-  <article class="card ">
-    <figure>
-      <a href="#">
-        <img src="https://www.kansascity.com/latest-news/rre5yk/picture278250818/alternates/LANDSCAPE_1140/KCM_DollyPartonKansas_08142%20%285%29" alt="Dolly Parton speaks about the Imagination Library at White Theatre at the Jewish Community Center on Monday, Aug. 14, 2023, in Overland Park, Kan." width="1140" height="641" loading="lazy">
-      </a>
-    </figure>
-    <div class="package">
-      <h2 class="caps h6">
-        <a class="kicker" href="#">Government &amp; Politics</a>
-      </h2>
-      <h3 class="h3">
-        <a href="#">Dolly comes to Kansas. Parton promotes reading program as it expands to JoCo, WyCo</a>
-      </h3>
-      <div class="time">Aug 15, 2023 2:28 PM</div>
-    </div>
-  </article>
-
-  
-  <article class="card ">
-    <figure>
-      <a href="#">
-        <img src="https://www.miamiherald.com/latest-news/8sz2iu/picture278280128/alternates/LANDSCAPE_1140/ruins%20of%20synagogu_fitted.jpeg" alt="The ancient synagogue was discovered near the Black Sea in Russia, experts said." width="1140" height="641" loading="lazy">
-      </a>
-    </figure>
-    <div class="package">
-      <h2 class="caps h6">
-        <a class="kicker" href="#">World</a>
-      </h2>
-      <h3 class="h3">
-        <a href="#">Richly decorated synagogue — one of the oldest — unearthed. See its marble treasures</a>
-      </h3>
-      <div class="time">Aug 15, 2023 2:23 PM</div>
-    </div>
-  </article>
-
-  
-  <article class="card ">
-    <figure>
-      <a href="#">
-        <img src="https://www.kansascity.com/latest-news/y71jlh/picture256256667/alternates/LANDSCAPE_1140/jay%20ashcroft.JPG" alt="Missouri Secretary of State Jay Ashcroft" width="1140" height="641" loading="lazy">
-      </a>
-    </figure>
-    <div class="package">
-      <h2 class="caps h6">
-        <a class="kicker" href="#">Government &amp; Politics</a>
-      </h2>
-      <h3 class="h3">
-        <a href="#">After Trump indictment, Ashcroft dodges how he would handle interference in Missouri</a>
-      </h3>
-      <div class="time">Aug 15, 2023 2:12 PM</div>
-    </div>
-  </article>
-
-  
-  <article class="card ">
-    <figure>
-      <a href="#">
-        <img src="https://www.kansascity.com/latest-news/hf3wxf/picture262029222/alternates/LANDSCAPE_1140/wheeler%20downtown%20airport%20photo.JPG" alt="A federal grand jury in Kansas City has indicted a 34-year-old Efren Torres-Rodriguez of Olathe following a high-speed police chase down a runway at the Wheeler Downtown Airport in Kansas City. This Google Maps Street View image of the airport is from 2021." width="1140" height="641" loading="lazy">
-      </a>
-    </figure>
-    <div class="package">
-      <h2 class="caps h6">
-        <a class="kicker" href="#">Crime</a>
-      </h2>
-      <h3 class="h3">
-        <a href="#">Judge sentences Olathe man who led pursuit on KC’s Charles B. Wheeler Airport runway</a>
-      </h3>
-      <div class="time">Aug 15, 2023 2:01 PM</div>
-    </div>
-  </article>
-
-  
-  <article class="card ">
-    <figure>
-      <a href="#">
-        <img src="https://www.kansascity.com/latest-news/8x7prb/picture278248523/alternates/LANDSCAPE_1140/EricMeyer_outside_Luke.jpg" alt="Eric Meyer, the editor and publisher of the Marion County Record, stands outside the newspaper’s office on Monday. The office and Meyer’s home were raided by police on Friday." width="1140" height="641" loading="lazy">
-      </a>
-    </figure>
-    <div class="package">
-      <h2 class="caps h6">
-        <a class="kicker" href="#">Kansas</a>
-      </h2>
-      <h3 class="h3">
-        <a href="#">Latest on Kansas newspaper raid: KBI takes over case; what to know about privacy law</a>
-      </h3>
-      <div class="time">Aug 15, 2023 1:50 PM</div>
-    </div>
-  </article>
-
-  
-  <article class="card ">
-    <figure>
-      <a href="#">
-        <img src="https://www.kansascity.com/latest-news/aqrp98/picture278253198/alternates/LANDSCAPE_1140/Capture.JPG" alt="Front pages hang on a wall at the Marion County Record, where police served a search warrant Friday." width="1140" height="641" loading="lazy">
-      </a>
-    </figure>
-    <div class="package">
-      <h2 class="caps h6">
-        <a class="kicker" href="#">Government &amp; Politics</a>
-      </h2>
-      <h3 class="h3">
-        <a href="#">KBI takes lead in Marion investigation following police raid of local newspaper</a>
-      </h3>
-      <div class="time">Aug 15, 2023 1:50 PM</div>
-    </div>
-  </article>
-
-  <fake-ad class="zone"></fake-ad>
-  
-  <article class="card ">
-    <figure>
-      <a href="#">
-        <img src="https://www.kansascity.com/latest-news/41omoh/picture278279608/alternates/LANDSCAPE_1140/download%20%281%29.png" alt="An image from surveillance video from inside the Marion County Record newspaper in central Kansas shows police officers executing a search warrant on Friday, Aug. 11, 2023." width="1140" height="641" loading="lazy">
-      </a>
-    </figure>
-    <div class="package">
-      <h2 class="caps h6">
-        <a class="kicker" href="#">Crime</a>
-      </h2>
-      <h3 class="h3">
-        <a href="#">Read the search warrant that police used to raid the Marion County Record’s offices</a>
-      </h3>
-      <div class="time">Aug 15, 2023 1:50 PM</div>
-    </div>
-  </article>
-
-  
-  <article class="card ">
-    <figure>
-      <a href="#">
-        <img src="https://www.kansascity.com/latest-news/8x7prb/picture278248523/alternates/LANDSCAPE_1140/EricMeyer_outside_Luke.jpg" alt="Eric Meyer, the editor and publisher of the Marion County Record, stands outside the newspaper’s office on Monday. The office and Meyer’s home were raided by police on Friday." width="1140" height="641" loading="lazy">
-      </a>
-    </figure>
-    <div class="package">
-      <h2 class="caps h6">
-        <a class="kicker" href="#">Kansas</a>
-      </h2>
-      <h3 class="h3">
-        <a href="#">Raided Kansas newspaper is known for aggressively covering small town’s many disputes</a>
-      </h3>
-      <div class="time">Aug 15, 2023 1:50 PM</div>
-    </div>
-  </article>
-
-  
-  <article class="card ">
-    <figure>
-      <a href="#">
-        <img src="https://www.charlotteobserver.com/news/nation-world/national/zg46tf/picture263422383/alternates/LANDSCAPE_1140/RTT-ambulanceNight" alt="A child has died after being hit by a car in North Myrtle Beach Tuesday. The incident happened in the Timber Ridge Community after 4 p.m." width="1140" height="641" loading="lazy">
-      </a>
-    </figure>
-    <div class="package">
-      <h2 class="caps h6">
-        <a class="kicker" href="#">Texas</a>
-      </h2>
-      <h3 class="h3">
-        <a href="#">Fight over who will pay for beer ends with shooting at child’s birthday, Texas cops say</a>
-      </h3>
-      <div class="time">Aug 15, 2023 1:48 PM</div>
-    </div>
-  </article>
-
-  
-  <article class="card ">
-    <figure>
-      <a href="#">
-        <img src="https://www.star-telegram.com/latest-news/14gme/picture278278783/alternates/LANDSCAPE_1140/Collage%20Maker-15-Aug-2023-03-02-PM-713_fitted.jpeg" alt="Boaters spotted massive sea creature swimming in the Texas Gulf, so they jumped in the water for a closer look, video shows." width="1140" height="641" loading="lazy">
-      </a>
-    </figure>
-    <div class="package">
-      <h2 class="caps h6">
-        <a class="kicker" href="#">Texas</a>
-      </h2>
-      <h3 class="h3">
-        <a href="#">Massive sea creature with over 3,000 teeth spotted near Texas coast, video shows</a>
-      </h3>
-      <div class="time">Aug 15, 2023 1:46 PM</div>
-    </div>
-  </article>
-
-  
-  <article class="card ">
-    <figure>
-      <a href="#">
-        <img src="https://pics.mcclatchyinteractive.com/news/nation-world/national/7l3h2z/picture276461516/alternates/LANDSCAPE_1140/RTTcurrency" alt="An 18-year-old Maryland man won a lottery prize from a ticket purchased by his father." width="1140" height="641" loading="lazy">
-      </a>
-    </figure>
-    <div class="package">
-      <h2 class="caps h6">
-        <a class="kicker" href="#">National</a>
-      </h2>
-      <h3 class="h3">
-        <a href="#">Son helps 78-year-old North Carolina dad confirm big Powerball prize. ‘It was real’</a>
-      </h3>
-      <div class="time">Aug 15, 2023 1:46 PM</div>
-    </div>
-  </article>
-
-  
-  <article class="card ">
-    <figure>
-      <a href="#">
-        <img src="https://www.sacbee.com/news/nation-world/national/k45scw/picture278272213/alternates/LANDSCAPE_1140/Kitten_Rescue.jpg" alt="Two kittens were found in a driver’s engine on Aug. 14 in Phoenix, troopers said. Authorities removed her passenger tire to retrieve the cats." width="1140" height="641" loading="lazy">
-      </a>
-    </figure>
-    <div class="package">
-      <h2 class="caps h6">
-        <a class="kicker" href="#">National</a>
-      </h2>
-      <h3 class="h3">
-        <a href="#">Driver pulls over to check noises coming from engine and finds ‘joyriding’ stowaways</a>
-      </h3>
-      <div class="time">Aug 15, 2023 1:42 PM</div>
-    </div>
-  </article>
-
-  
-  <article class="card ">
-    <figure>
-      <a href="#">
-        <img src="https://img.connatix.com/bb0d82cb-df10-4847-b3c7-dedd095f0353/1_th.jpg" alt="" width="1140" height="641" loading="lazy">
-      </a>
-    </figure>
-    <div class="package">
-      <h2 class="caps h6">
-        <a class="kicker" href="#">News</a>
-      </h2>
-      <h3 class="h3">
-        <a href="#">Video shows police raid at Marion County Record newsroom in Kansas</a>
-      </h3>
-      <div class="time">Aug 15, 2023 1:31 PM</div>
-    </div>
-  </article>
-
-  <fake-ad class="zone"></fake-ad>
-  
-  <article class="card ">
-    <figure>
-      <a href="#">
-        <img src="https://www.star-telegram.com/latest-news/6wis6f/picture278275718/alternates/LANDSCAPE_1140/1.jpg" alt="The interior of the home is like nothing you’ve ever seen before" width="1140" height="641" loading="lazy">
-      </a>
-    </figure>
-    <div class="package">
-      <h2 class="caps h6">
-        <a class="kicker" href="#">National</a>
-      </h2>
-      <h3 class="h3">
-        <a href="#">The inside of this house for sale looks like a luxurious cave. See the Wisconsin digs</a>
-      </h3>
-      <div class="time">Aug 15, 2023 1:26 PM</div>
-    </div>
-  </article>
-
-  
-  <article class="card ">
-    <figure>
-      <a href="#">
-        <img src="https://www.kansascity.com/latest-news/hy7i6x/picture271805992/alternates/LANDSCAPE_1140/IMG_5591.jpg" alt="One tailgate party on Sunday centered on “Vandy Reid,” a custom van with its own Instagram account and fan following." width="1140" height="641" loading="lazy">
-      </a>
-    </figure>
-    <div class="package">
-      <h2 class="caps h6">
-        <a class="kicker" href="#">Chiefs</a>
-      </h2>
-      <h3 class="h3">
-        <a href="#">Arrowhead isn’t the highest-ranked NFL stadium on this tailgating list. Here’s why</a>
-      </h3>
-      <div class="time">Aug 15, 2023 1:09 PM</div>
-    </div>
-  </article>
-
-  
-  <article class="card ">
-    <figure>
-      <a href="#">
-        <img src="https://www.kansascity.com/latest-news/qq3fbn/picture273353955/alternates/LANDSCAPE_1140/OP%20fire%20sunday_fitted.jpeg" alt="Overland Park fire crews arrived at 3 a.m. to the Sheridan Ridge Townhomes apartment complex following calls of a fire. After two hours the heavy smoke and fire in the attic were brought under control. No injuries were reported." width="1140" height="641" loading="lazy">
-      </a>
-    </figure>
-    <div class="package">
-      <h2 class="caps h6">
-        <a class="kicker" href="#">Crime</a>
-      </h2>
-      <h3 class="h3">
-        <a href="#">Months after Overland Park apartment fire, Missouri suspect arrested, charged with arson</a>
-      </h3>
-      <div class="time">Aug 15, 2023 1:07 PM</div>
-    </div>
-  </article>
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-</section>
-
-<div class="load-more">
-  <a class="button big impact" href="#page2">Load More</a>
+    <iframe src="https://airtable.com/embed/shrxCBypiOgcpTuSh?backgroundColor=gray&amp;prefill_fldOlZR39NymxAh7Z=CLT&amp;hide_fldOlZR39NymxAh7Z=true" 
+      frameborder="0" 
+      width="100%" 
+      height="533" 
+      style="background:transparent;border:1px solid #ccc;"></iframe>
+  </div>
 </div>
 <footer class="impact">
   <section class="footer">
