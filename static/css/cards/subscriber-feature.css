@@ -1,22 +1,6 @@
-.subscriber-feature {
-    border: 1px solid var(--sub-blue, #00223e);
-    border-left: none;
-    border-right: none;
-    padding: 0;
-}
-
-.info {
-    display: grid;
-    justify-content: center;
-    gap: var(--space-sm, 10px);
-    grid-column: 1/-1;
-    padding: var(--space, var(--gap, 20px));
-    padding-bottom: 0;
-    text-align: center;
-}
-
 .sub-feature {
     display: flex;
+    justify-content: center;
     align-items: center;
     gap: var(--space-sm, 10px);
     margin: 0 auto;
@@ -30,11 +14,4 @@
     width: 30px;
     height: 1px;
     background-color: var(--sub-blue, #00223e);
-}
-
-.subscriber-feature .h2 {
-    font-family: var(--serif);
-    text-transform: none;
-    text-align: center;
-    margin: 0;
 }

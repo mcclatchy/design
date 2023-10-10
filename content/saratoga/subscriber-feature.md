@@ -1,10 +1,10 @@
 ---
 title: "subscriber-feature"
-description: "Used to show content only available to subscribers."
-menu: cards
+description: "Distinguishes content available only to subscribers."
+menu: atom
 ---
 
-A reusable molecule to visually distinguish subscriber exclusive content,utilizing top and bottom borders and a centered header with before and after psuedo elements as styling to denote.
+A reusable atom to visually distinguish subscriber exclusive content,utilizing a centered header with before and after psuedo elements.
 
 #### Example
 {{< subscriber-feature >}}
