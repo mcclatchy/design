@@ -9,6 +9,7 @@
 	--header-family: var(--sans);
 	--header-weight: 600;
 	--header-transform: uppercase;
+	padding: var(--timeline-padding, calc(var(--space)*2/3) var(--space));
 }
 
 .timeline-event:before {
