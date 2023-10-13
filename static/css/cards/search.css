@@ -24,6 +24,10 @@
   --button-background-color: transparent;
 }
 
+.search-form .select .button:hover {
+  color: var(--button-color);
+}
+
 .search-form .select .options a {
   display: block;
   padding: 20px 0 0;
