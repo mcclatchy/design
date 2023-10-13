@@ -2116,11 +2116,21 @@ section.big-news {
 }
 
 .in-depth figure {
-  min-height: 400px;
+  grid-template-rows: max-content;
+  align-self: stretch;
+}
+
+.in-depth .label {
+  padding-bottom: var(--space-sm);
 }
 
 .in-depth .image-link-macro {
   position: initial;
+  min-height: 400px;
+}
+
+.in-depth.card.horizontal figure img {
+  position: relative;
 }
 
 .in-depth time,
