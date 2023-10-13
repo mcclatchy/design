@@ -106,7 +106,7 @@ custom-digest {
  */
 
 .search-form button,
-.swg-promo button.impact {
+.swg-promo .button.impact {
   --paper-color: var(--white);
   --text-color: var(--black);
 }
