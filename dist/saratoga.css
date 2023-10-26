@@ -1154,7 +1154,6 @@ footer {
 }
 
 .footer-links .package {
-  --link-color: var(--header-color);
   padding: 0;
 }
 
@@ -1697,6 +1696,7 @@ footer {
 .immersive .title {
   font: 700 2.5em/1.1em var(--serif);
   text-transform: none;
+  color: white;
   --link-color: white;
   --link-hover-color: white;
   --link-decoration: none;
@@ -2093,7 +2093,7 @@ section.big-news {
 }
 
 .big-news .h1 {
-  font: 700 2.5rem/1em var(--serif);
+  font: 700 2.5rem/1.2em var(--serif);
   text-align: center;
   align-self: center;
 }
@@ -2717,6 +2717,13 @@ custom-digest {
  */
 #brzpushpermission {
   --link-color: none;
+}
+
+/*
+ * Video detail page oddness
+ */
+.video-detail + .package {
+  padding-top: var(--space);
 }
 
 .impact2020 .kicker {

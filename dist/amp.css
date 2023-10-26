@@ -1154,7 +1154,6 @@ footer {
 }
 
 .footer-links .package {
-  --link-color: var(--header-color);
   padding: 0;
 }
 
@@ -1348,6 +1347,7 @@ footer {
 .immersive .title {
   font: 700 2.5em/1.1em var(--serif);
   text-transform: none;
+  color: white;
   --link-color: white;
   --link-hover-color: white;
   --link-decoration: none;
