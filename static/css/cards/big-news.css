@@ -8,10 +8,20 @@ section.big-news {
   padding: 0;
 }
 
+.big-news .label {
+  display: block;
+  padding: var(--space) var(--space) 0;
+  text-align: center;
+}
+
+.big-news .label .h5 {
+  margin: 0;
+}
+
 /* better handled by removing the impact class in WPS */
 .big-news .label .impact {
-  color: var(--text-color);
-  background-color: var(--paper-color);
+  color: inherit;
+  background-color: transparent;
 }
 
 .big-news .latest {
@@ -23,6 +33,7 @@ section.big-news {
   font: 700 2.5rem/1.2em var(--serif);
   text-align: center;
   align-self: center;
+  padding: var(--space);
 }
 
 @media (min-width: 768px) {
@@ -37,6 +48,10 @@ section.big-news {
   }
 }
 
+.big-news .grid {
+  --grid-row-gap: var(--space);
+}
+
 .big-news figcaption,
 .big-news .grid:not(.featured) {
   padding: 0 15px;
@@ -48,7 +63,8 @@ section.big-news {
 }
 
 .big-news .featured {
-  padding: var(--space-sm);
+  padding: var(--space);
+  --card-padding: 0;
   --paper-shadow: none;
 }
 
