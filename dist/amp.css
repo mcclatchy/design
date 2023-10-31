@@ -1247,6 +1247,14 @@ footer {
 }
 
 /**
+ * Inline video 
+ */
+.story-body > .inline-video {
+  box-sizing: border-box;
+  max-width: calc(var(--story-media-width) + (var(--page-padding) * 2));
+}
+
+/**
  * Mugshots
  */
 .story-body .mugshot {

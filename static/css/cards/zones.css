@@ -19,7 +19,6 @@
  * Zone treatment inside grids
  */
 
-/* .grid .zone { */
 .grid [data-type="ad"] {
   grid-column-end: -1;
 }
