@@ -42,6 +42,7 @@
 .immersive .title {
 	font: 700 2.5em/1.1em var(--serif);
 	text-transform: none;
+  color: white;
   --link-color: white;
   --link-hover-color: white;
   --link-decoration: none;

@@ -143,3 +143,11 @@ custom-digest {
   --link-color: none;
 }
 
+
+/*
+ * Video detail page oddness
+ */
+
+.video-detail + .package {
+  padding-top: var(--space);
+}

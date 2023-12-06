@@ -68,7 +68,6 @@
 }
 
 .footer-links .package {
-  --link-color: var(--header-color);
   padding: 0;
 }
 
