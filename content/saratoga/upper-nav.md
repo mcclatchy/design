@@ -8,4 +8,4 @@ The upper-nav element links verticals and nichce products to the parent publicat
 
 #### EXAMPLE
 
-*The upper-nav is included in our [story deck](../decks/story) and is better represented there.*
+*The upper-nav is included in our [section deck](../decks/section) and is better represented there.*
