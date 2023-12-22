@@ -26,12 +26,10 @@ html.msb .masthead {
   display: grid;
   gap: var(--space-sm);
   grid-template-areas:
-    "menu account"
-    "logo logo"
-    "nav nav";
+    "menu logo account";
   align-items: center;
   margin: 0 auto;
-  padding: 0 var(--page-padding);
+  padding:  var(--space-sm) var(--page-padding);
   font: 13px/1em var(--sans);
   color: var(--text-color);
 
@@ -41,49 +39,16 @@ html.msb .masthead {
 }
 
 .msb .sds-flag {
-  grid-template-areas:
-    "menu . account"
-    "edition edition edition"
-    "logo logo logo"
-    "nav nav nav";
-
   --text-color: var(--sub-text-color);
 }
 
 @media(min-width: 768px) {
   .sds-flag {
-    grid-template-columns: 1fr 1fr;
+    /* grid-template-columns: 1fr 1fr; */
     grid-template-areas:
-      "menu account"
-      "left right"
-      "logo logo"
-      "nav nav";
-  }
-
-  .msb .sds-flag {
-    grid-template-areas:
-      "menu account"
-      "left right"
-      "edition edition"
-      "logo logo"
-      "nav nav"
-  }
-}
-
-@media(min-width: 1024px) {
-  .sds-flag {
-    grid-template-columns: 1fr 2fr 1fr;
-    grid-template-areas:
-      "menu . account"
-      "left logo right"
-      "nav nav nav";
-  }
-
-  .msb .sds-flag {
-    grid-template-areas:
-      "menu edition account"
-      "left logo right"
-      "nav nav nav"
+      "left logo account"
+      "menu nav right";
+    padding-bottom: 0;
   }
 }
 
@@ -142,6 +107,10 @@ html.msb .masthead {
   --button-hover-color: var(--sub-secondary-text-color);
 }
 
+.flag-account .expander::after {
+  display: none;
+}
+
 .flag-left {
   grid-area: left;
   font-size: 14px;
@@ -188,8 +157,6 @@ html.msb .masthead {
 
 .flag-nav {
   grid-area: nav;
-  display: flex;
-  justify-content: space-between;
   border-top: 1px solid var(--border-color, var(--black));
   border-bottom: 1px solid var(--border-color, var(--black));
   font-size: 14px;
