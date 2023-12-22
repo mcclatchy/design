@@ -24,16 +24,15 @@ html.msb .masthead {
 
 .sds-flag {
   display: grid;
-  gap: 15px;
+  gap: var(--space-sm);
   grid-template-areas:
     "menu account"
     "logo logo"
     "nav nav";
   align-items: center;
   margin: 0 auto;
-  padding: var(--page-padding);
-  padding-bottom: 0;
-  font: bold 13px/1em var(--sans);
+  padding: 0 var(--page-padding);
+  font: 13px/1em var(--sans);
   color: var(--text-color);
 
   /* Custom properties for kids */
@@ -183,16 +182,19 @@ html.msb .masthead {
 
 .logo {
   width: 100%;
-  max-height: 75px;
+  max-height: 30px;
   height: auto;
 }
 
 .flag-nav {
   grid-area: nav;
-  border-top: 2px solid var(--border-color, var(--black));
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid var(--border-color, var(--black));
   border-bottom: 1px solid var(--border-color, var(--black));
-  font-size: 16px;
-  padding: 17px 0 15px;
+  font-size: 14px;
+  text-transform: uppercase;
+  padding: var(--space-sm) 0;
   --link-hover-color: var(--text-color);
   --link-hover-decoration: underline;
 
