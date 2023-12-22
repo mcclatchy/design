@@ -4,8 +4,8 @@
 
 .main-nav {
   z-index: 20;
-  position: fixed;
-  top: 445px;
+  position: absolute;
+  top: 446px;
   left: 0;
   bottom: 0;
   width: 260px;
