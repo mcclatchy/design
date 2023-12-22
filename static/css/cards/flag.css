@@ -28,6 +28,7 @@ html.msb .masthead {
   grid-template-areas:
     "menu logo account";
   align-items: center;
+  max-width: var(--section-width);
   margin: 0 auto;
   padding:  var(--space-sm) var(--page-padding);
   font: 13px/1em var(--sans);
@@ -64,14 +65,23 @@ html.msb .masthead {
 
 /* Menu toggle styles */
 button.menu-toggle {
-	color: var(--text-color);
-	transition: all 0.25s ease-in-out;
+  height: 100%;
+  transition: all 0.25s ease-in-out;
+}
+
+.menu-toggle.opened {
+  padding: 0 var(--space-sm);
+  background: var(--text-color);
 }
 
 .icon-menu-toggle {
 	width: 2em;
 	height: 2em;
   top: 0;
+}
+
+.menu-toggle.opened .icon-menu-toggle {
+  fill: var(--paper-color);
 }
 
 /* Animate menu icon (lines) */
@@ -109,6 +119,7 @@ button.menu-toggle {
 .flag-menu {
   grid-area: menu;
   --row-gap: 15px;
+  height: 100%;
 }
 
 .flag-menu button,
