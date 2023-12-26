@@ -51,7 +51,8 @@
 
 .main-nav a,
 .main-nav .option-label {
-  display: block;
+  display: flex;
+  gap: var(--space-sm);
 }
 
 .main-nav hr {

@@ -24,6 +24,7 @@ html.msb .masthead {
 
 .sds-flag {
   display: grid;
+  position: relative;
   gap: var(--space-sm);
   grid-template-areas:
     "menu logo account";
