@@ -45,10 +45,6 @@
   cursor: pointer;
 }
 
-.main-nav button {
-  font-weight: bold;
-}
-
 .main-nav a,
 .main-nav .option-label {
   display: flex;
@@ -57,6 +53,14 @@
 
 .main-nav hr {
   border: .5px solid var(--nav-text-color, var(--gray));
+}
+
+.main-nav .h5 {
+  padding: var(--space) 0;
+}
+
+.main-nav .h6 {
+  font-weight: bold;
 }
 
 .main-nav .expander {
@@ -113,4 +117,8 @@
 
 .main-nav .search button:hover {
   background-color: unset;
+}
+
+#affiliated-brands {
+  --package-gap: 0;
 }
