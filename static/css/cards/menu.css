@@ -69,28 +69,18 @@
   text-align: left;
 }
 
-.main-nav .expander.open,
-.main-nav .expander.open + div a,
 .main-nav .option-label {
   border-color: var(--nav-text-color, var(--white));
 }
 
 .main-nav .search {
+  margin-top: var(--space-sm);
   height: 58px;
 }
 
 .main-nav .search form {
   border-bottom: 1px solid var(--nav-text-color, var(--white));
   width: 100%;
-  display: none;
-}
-
-.main-nav .search.open form {
-  display: flex;
-}
-
-.main-nav .search.open > :not(form) {
-  display: none;
 }
 
 .main-nav .search form svg {
@@ -111,7 +101,8 @@
 }
 
 .main-nav .search button {
-  padding: 0;
+  position: absolute;
+  right: 30px;
   width: auto;
 }
 
