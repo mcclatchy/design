@@ -8,8 +8,7 @@
   top: 446px;
   left: 0;
   bottom: 0;
-  width: 260px;
-  padding: 0 var(--space);
+  width: 390px;
   --text-color: var(--black);
   --link-color: var(--text-color);
   background-color: var(--nav-color, var(--white));
@@ -17,6 +16,7 @@
   -webkit-overflow-scrolling: touch;
   transform: translateX(-150%);
   transition: transform .4s ease;
+  --package-gap: 0;
 }
 
 .main-nav:hover :focus {
@@ -25,6 +25,10 @@
 
 .main-nav.open {
   transform: translateX(0);
+}
+
+.main-nav > * {
+  padding: var(--space-sm) var(--space);
 }
 
 .main-nav svg {
@@ -37,12 +41,18 @@
 .main-nav .search,
 .main-nav .option-label {
   width: 100%;
+  padding-top: var(--space-sm);
+  padding-bottom: var(--space-sm);
   box-sizing: border-box;
-  padding: var(--space-sm) 0;
   border: none;
   border-radius: 0;
   background-color: transparent;
   cursor: pointer;
+}
+
+
+.main-nav button {
+  padding: 0;
 }
 
 .main-nav a,
@@ -53,10 +63,6 @@
 
 .main-nav hr {
   border: .5px solid var(--nav-text-color, var(--gray));
-}
-
-.main-nav .h5 {
-  padding: var(--space) 0;
 }
 
 .main-nav .h6 {
@@ -110,6 +116,8 @@
   background-color: unset;
 }
 
-#affiliated-brands {
-  --package-gap: 0;
+@media(max-width: 767px) {
+  .main-nav {
+    width: 100%;
+  }
 }
