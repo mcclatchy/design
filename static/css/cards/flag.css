@@ -31,13 +31,17 @@ html.msb .masthead {
   align-items: center;
   max-width: var(--section-width);
   margin: 0 auto;
-  padding:  var(--space-sm) var(--page-padding);
+  padding: 0;
   font: 13px/1em var(--sans);
   color: var(--text-color);
 
   /* Custom properties for kids */
   --link-decoration: none;
   --text-color: var(--black);
+}
+
+.sds-flag > * {
+  padding: var(--space-sm);
 }
 
 .msb .sds-flag {
@@ -50,7 +54,11 @@ html.msb .masthead {
     grid-template-areas:
       "left logo account"
       "menu nav right";
-    padding-bottom: 0;
+    padding:  var(--space-sm) var(--page-padding) 0;
+  }
+
+  .sds-flag > * {
+    padding: 0;
   }
 }
 
