@@ -25,7 +25,7 @@ html.msb .masthead {
 .sds-flag {
   display: grid;
   position: relative;
-  gap: var(--space-sm);
+  gap: 0;
   grid-template-areas:
     "menu logo account";
   align-items: center;
@@ -53,8 +53,9 @@ html.msb .masthead {
     /* grid-template-columns: 1fr 1fr; */
     grid-template-areas:
       "left logo account"
+      "line line line"
       "menu nav right";
-    padding:  var(--space-sm) var(--page-padding) 0;
+    padding: 0 var(--page-padding);
   }
 
   .sds-flag > * {
@@ -86,7 +87,8 @@ button.menu-toggle {
 .icon-menu-toggle {
 	width: 2em;
 	height: 2em;
-  top: 0;
+  padding-top: 3px;
+
 }
 
 .menu-toggle.opened .icon-menu-toggle {
@@ -131,6 +133,12 @@ button.menu-toggle {
   height: 100%;
 }
 
+.flag-line {
+  grid-area: line;
+  height: 1px;
+  background-color: var(--text-color);
+}
+
 .flag-menu button,
 .flag-menu form,
 .flag-menu svg {
@@ -162,7 +170,7 @@ button.menu-toggle {
 .flag-account {
   grid-area: account;
   place-self: end;
-  min-height: 30px;
+  align-self: center;
 }
 
 .flag-account .button {
@@ -175,18 +183,19 @@ button.menu-toggle {
   display: none;
 }
 
-.flag-left {
+.flag-eedition {
   grid-area: left;
   font-size: 14px;
   --statck-gap: 7px;
   --link-hover-decoration: underline;
 }
 
-.flag-right {
+.flag-weather {
   grid-area: right;
   justify-self: end;
   align-items: end;
   font-size: 14px;
+  padding-left: var(--space);
   --stack-gap: 7px;
   --link-hover-decoration: underline;
 }
@@ -211,6 +220,7 @@ button.menu-toggle {
 
 .flag-logo {
   grid-area: logo;
+  padding: var(--space-sm) 0;
 }
 
 .logo {
@@ -221,7 +231,6 @@ button.menu-toggle {
 
 .flag-nav {
   grid-area: nav;
-  border-top: 1px solid var(--border-color, var(--black));
   border-bottom: 1px solid var(--border-color, var(--black));
   font-size: 14px;
   text-transform: uppercase;
