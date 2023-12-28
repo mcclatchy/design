@@ -186,8 +186,12 @@ button.menu-toggle {
 .flag-eedition {
   grid-area: left;
   font-size: 14px;
-  --statck-gap: 7px;
   --link-hover-decoration: underline;
+}
+
+.flag-eedition a {
+  display: flex;
+  gap: var(--space-sm)
 }
 
 .flag-weather {
@@ -196,26 +200,6 @@ button.menu-toggle {
   align-items: end;
   font-size: 14px;
   padding-left: var(--space);
-  --stack-gap: 7px;
-  --link-hover-decoration: underline;
-}
-
-.flag-edition {
-  grid-area: edition;
-  place-self: center;
-  font: bold 13px/1em var(--sans);
-}
-
-.flag-edition:before,
-.flag-edition:after {
-  content: "";
-  width: 30px;
-  height: 1px;
-  background-color: var(--sub-secondary-text-color);
-}
-
-.msb .flag-edition {
-  color: var(--sub-secondary-text-color);
 }
 
 .flag-logo {
