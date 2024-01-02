@@ -50,7 +50,7 @@
   --media-background-color: #e9ecf0;
   
   /* Subscriber color properties */
-  --sub-blue: #00223e;
+  --sub-blue: #0F1521;
   --sub-text-color: var(--white);
   --sub-secondary-text-color: #ffd71a;
 
@@ -78,6 +78,10 @@ body {
 
 body.freeze {
   overflow: hidden;
+}
+
+body.freeze .server-rendered {
+  filter: brightness(0.7);
 }
 
 /**
