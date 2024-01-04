@@ -248,6 +248,7 @@ button.menu-toggle {
   top: 100%;
   right: 0px;
   min-width: 210px;
+  --paper-color: var(--white);
   --text-color: var(--black);
   --link-color: var(--black);
   --link-hover-color: var(--black);
@@ -271,6 +272,13 @@ button.menu-toggle {
 .sds-flag .popout svg {
   width: 20px;
   fill: inherit;
+}
+
+.sds-flag .popout button {
+  display: block;
+  background-color: var(--black);
+  font-size: 14px;
+  margin: var(--space-sm) auto;
 }
 
 @media (max-width: 767px) {
