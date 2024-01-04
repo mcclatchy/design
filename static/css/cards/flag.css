@@ -69,12 +69,12 @@ html.msb .masthead {
 
 .sds-flag button {
   padding: 0;
-  background-color: transparent;
   border: none;
 }
 
 /* Menu toggle styles */
 button.menu-toggle {
+  background-color: transparent;
   height: 100%;
   transition: all 0.25s ease-in-out;
 }
@@ -276,7 +276,7 @@ button.menu-toggle {
 
 .sds-flag .popout button {
   display: block;
-  background-color: var(--black);
+  font-weight: 600;
   font-size: 14px;
   margin: var(--space-sm) auto;
 }
