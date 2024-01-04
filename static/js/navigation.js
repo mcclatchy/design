@@ -23,7 +23,7 @@ navButton.onclick = function() {
 document.addEventListener('DOMContentLoaded', function () {
   // Get the target div and the preceding divs
   const targetDiv = document.getElementById('main-nav');
-  const precedingDivs = document.querySelectorAll('.banner, .upper-nav, #zone-el-2, #mastheadVueContainer');
+  const precedingDivs = document.querySelectorAll('.banner, .upper-nav, #mastheadVueContainer');
 
   // Calculate the sum of heights of preceding divs
   let totalHeight = 0;
