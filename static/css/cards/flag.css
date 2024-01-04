@@ -127,6 +127,10 @@ button.menu-toggle {
 	overflow: hidden;
 }
 
+.nav-close {
+  display: none;
+}
+
 .flag-menu {
   grid-area: menu;
   --row-gap: 15px;
