@@ -32,13 +32,14 @@ html.msb .masthead {
 .sds-flag {
   display: grid;
   position: relative;
-  gap: 0;
+  gap: 0 var(--space);
   grid-template-areas:
     "menu logo account";
   grid-template-columns: min-content;
   align-items: center;
   max-width: var(--section-width);
   margin: 0 auto;
+  padding: 0 var(--page-padding);
   font: 13px/1em var(--sans);
   color: var(--text-color);
 
@@ -47,26 +48,17 @@ html.msb .masthead {
   --text-color: var(--black);
 }
 
-.sds-flag > * {
-  padding: var(--space-sm);
-}
-
 .msb .sds-flag {
   --text-color: var(--sub-text-color);
 }
 
 @media(min-width: 768px) {
   .sds-flag {
-    grid-template-columns: unset;
+    grid-template-columns: 1fr var(--story-width) 1fr;
     grid-template-areas:
       "left logo account"
       "line line line"
       "menu nav right";
-    padding: 0 var(--page-padding);
-  }
-
-  .sds-flag > * {
-    padding: 0;
   }
 }
 
@@ -100,38 +92,6 @@ button.menu-toggle {
 
 .menu-toggle.opened .icon-menu-toggle {
   fill: var(--paper-color);
-}
-
-/* Animate menu icon (lines) */
-.svg-menu-toggle .line {
-  opacity: 1;
-  transform: rotate(0) translateY(0) translateX(0);
-  transform-origin: 1em 1em;
-  transition: transform 0.3s ease-in-out, opacity 0.2s ease-in-out;
-}
-.svg-menu-toggle .line-1 {
-  transform-origin: 1em 2.5em;
-}
-.svg-menu-toggle .line-3 {
-  transform-origin: 1em 4.5em;
-}
-.menu-toggle.opened .svg-menu-toggle .line-1 {
-  transform: rotate(42deg) translateY(0) translateX(0);
-}
-.menu-toggle.opened .svg-menu-toggle .line-2 {
-  opacity: 0;
-}
-.menu-toggle.opened .svg-menu-toggle .line-3 {
-  transform: rotate(-45deg) translateY(0em) translateX(0em);
-}
-
-/* Text meant only for screen readers. */
-.screen-reader-text {
-	clip: rect(1px, 1px, 1px, 1px);
-	position: absolute !important;
-	height: 1px;
-	width: 1px;
-	overflow: hidden;
 }
 
 .nav-close {
@@ -210,7 +170,6 @@ button.menu-toggle {
   justify-self: end;
   align-items: end;
   font-size: 14px;
-  padding-left: var(--space);
 }
 
 .flag-logo {
