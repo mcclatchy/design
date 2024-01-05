@@ -72,26 +72,21 @@ html.msb .masthead {
 }
 
 /* Menu toggle styles */
-button.menu-toggle {
+button.menu-toggle, .msb-show {
   background-color: transparent;
   height: 100%;
   transition: all 0.25s ease-in-out;
 }
 
-.menu-toggle.opened {
+.menu-toggle.opened, .msb-show.opened {
   padding: 0 var(--space-sm);
   background: var(--text-color);
+  --fill-color: var(--paper-color);
 }
 
 .icon-menu-toggle {
-	width: 2em;
-	height: 2em;
   padding-top: 3px;
 
-}
-
-.menu-toggle.opened .icon-menu-toggle {
-  fill: var(--paper-color);
 }
 
 .nav-close {
@@ -100,7 +95,6 @@ button.menu-toggle {
 
 .flag-menu {
   grid-area: menu;
-  --row-gap: 15px;
   height: 100%;
 }
 
@@ -142,12 +136,17 @@ button.menu-toggle {
   grid-area: account;
   place-self: end;
   align-self: center;
+  height: 100%;
 }
 
 .flag-account .button {
   font-size: 1em;
   --button-color: var(--white);
   --button-hover-color: var(--sub-secondary-text-color);
+}
+
+.flag-account .msb-hide {
+  margin: auto 0;
 }
 
 .flag-account .expander::after {
