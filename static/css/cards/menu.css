@@ -119,6 +119,8 @@
 
 @media(max-width: 767px) {
   .main-nav {
+    top: 53px;
+    height: calc(100% - 53px);
     width: 100%;
   }
 }
