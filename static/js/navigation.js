@@ -19,22 +19,6 @@ navButton.onclick = function() {
     
 };
 
-// Set menu top positioning
-document.addEventListener('DOMContentLoaded', function () {
-  // Get the target div and the preceding divs
-  const targetDiv = document.getElementById('main-nav');
-  const precedingDivs = document.querySelectorAll('.banner, .upper-nav, #mastheadVueContainer');
-
-  // Calculate the sum of heights of preceding divs
-  let totalHeight = 0;
-  precedingDivs.forEach(div => {
-      totalHeight += div.offsetHeight + parseInt(getComputedStyle(div).marginBottom);
-  });
-
-  // Set the top position of the target div
-  targetDiv.style.top = totalHeight - 1 + 'px';
-});
-
 function toggleSearchForm() {
   document.querySelectorAll(".flag").forEach(d => {
     d.classList.toggle("searching");
