@@ -2,6 +2,13 @@
  * Flag styles
  */
 
+#mastheadVueContainer {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 20;
+}
+
 .masthead {
   --paper-color: var(--background-color);
   --paper-shadow: none;
@@ -69,12 +76,12 @@ html.msb .masthead {
 
 .sds-flag button {
   padding: 0;
-  background-color: transparent;
   border: none;
 }
 
 /* Menu toggle styles */
 button.menu-toggle {
+  background-color: transparent;
   height: 100%;
   transition: all 0.25s ease-in-out;
 }
@@ -125,6 +132,10 @@ button.menu-toggle {
 	height: 1px;
 	width: 1px;
 	overflow: hidden;
+}
+
+.nav-close {
+  display: none;
 }
 
 .flag-menu {
@@ -248,6 +259,7 @@ button.menu-toggle {
   top: 100%;
   right: 0px;
   min-width: 210px;
+  --paper-color: var(--white);
   --text-color: var(--black);
   --link-color: var(--black);
   --link-hover-color: var(--black);
@@ -271,6 +283,13 @@ button.menu-toggle {
 .sds-flag .popout svg {
   width: 20px;
   fill: inherit;
+}
+
+.sds-flag .popout button {
+  display: block;
+  font-weight: 600;
+  font-size: 14px;
+  margin: var(--space-sm) auto;
 }
 
 @media (max-width: 767px) {
