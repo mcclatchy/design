@@ -253,6 +253,10 @@ button.menu-toggle, .msb-show {
 }
 
 @media (max-width: 767px) {
+  .logo {
+    width: auto;
+  }
+  
   .popout {
     width: 100%;
     padding: 0;
