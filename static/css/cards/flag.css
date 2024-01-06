@@ -54,7 +54,7 @@ html.msb .masthead {
 
 @media(min-width: 768px) {
   .sds-flag {
-    grid-template-columns: 1fr var(--story-width) 1fr;
+    grid-template-columns: 1fr auto 1fr;
     grid-template-areas:
       "left logo account"
       "line line line"
@@ -177,15 +177,17 @@ button.menu-toggle, .msb-show {
 }
 
 .logo {
-  width: 100%;
+  width: auto;
   max-height: 26px;
   height: auto;
+  margin: 0 auto;
 }
 
 .flag-nav {
   grid-area: nav;
   font-size: 14px;
   text-transform: uppercase;
+  max-width: var(--story-width);
   padding: var(--space-sm) 0;
   --link-hover-color: var(--text-color);
   --link-hover-decoration: underline;
