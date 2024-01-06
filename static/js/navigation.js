@@ -34,3 +34,13 @@ function toggleSubMenu() {
 function toggleMSB() {
   document.documentElement.classList.toggle("msb");
 }
+
+function showNavigation() {
+  document.querySelector("#main-nav").classList.add("open");
+  document.body.classList.add("freeze");
+}
+
+function closeNavigation() {
+  document.querySelector("#main-nav").classList.remove("open");
+  document.body.classList.remove("freeze");
+}

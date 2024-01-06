@@ -29,7 +29,7 @@ html.msb .masthead {
   --fill-color: var(--sub-text-color);
 }
 
-.sds-flag {
+.flag {
   display: grid;
   position: relative;
   gap: 0 var(--space);
@@ -48,12 +48,12 @@ html.msb .masthead {
   --text-color: var(--black);
 }
 
-.msb .sds-flag {
+.msb .flag {
   --text-color: var(--sub-text-color);
 }
 
 @media(min-width: 768px) {
-  .sds-flag {
+  .flag {
     grid-template-columns: 1fr auto 1fr;
     grid-template-areas:
       "left logo account"
@@ -66,7 +66,7 @@ html.msb .masthead {
  * Children
  */
 
-.sds-flag button {
+.flag button {
   padding: 0;
   border: none;
 }
@@ -110,11 +110,11 @@ button.menu-toggle, .msb-show {
   cursor: pointer;
 }
 
-.sds-flag .search {
+.flag .search {
   --row-gap: 10px;
 }
 
-.sds-flag .search input {
+.flag .search input {
   position: relative;
   bottom: 5px;
   margin-top: 0;
@@ -125,8 +125,8 @@ button.menu-toggle, .msb-show {
   color: var(--text-color);
 }
 
-.sds-flag .search input:focus,
-.sds-flag .search input:not(:placeholder-shown) {
+.flag .search input:focus,
+.flag .search input:not(:placeholder-shown) {
   box-shadow: none;
   outline: none;
   border-color: var(--text-color);
@@ -209,11 +209,11 @@ button.menu-toggle, .msb-show {
  * Account popout
  */
 
-.sds-flag .flag-account {
+.flag .flag-account {
   position: relative;
 }
 
-.sds-flag .popout {
+.flag .popout {
   position: absolute;
   z-index: 99;
   top: 100%;
@@ -227,7 +227,7 @@ button.menu-toggle, .msb-show {
   background-color: white;
 }
 
-.sds-flag .popout > * {
+.flag .popout > * {
   display: grid;
   grid-template-columns: 20px 1fr;
   grid-gap: var(--space-sm);
@@ -236,16 +236,16 @@ button.menu-toggle, .msb-show {
   padding: var(--space-sm);
 }
 
-.sds-flag .popout a:hover {
+.flag .popout a:hover {
   background-color: #ddd;
 }
 
-.sds-flag .popout svg {
+.flag .popout svg {
   width: 20px;
   fill: inherit;
 }
 
-.sds-flag .popout button {
+.flag .popout button {
   display: block;
   font-weight: 600;
   font-size: 14px;
