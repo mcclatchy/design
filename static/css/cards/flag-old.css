@@ -2,26 +2,6 @@
  * Flag styles
  */
 
-/* .masthead { */
-/*   --paper-color: var(--background-color); */
-/*   --paper-shadow: none; */
-/*   --link-color: black; */
-/*   z-index: 2; */
-/* } */
-
-/* body.story .masthead, */
-/* body.wirestory .masthead { */
-/*   --paper-color: white; */
-/* } */
-
-/* html.msb .masthead { */
-/*   --paper-color: var(--sub-blue); */
-/*   --text-color: var(--sub-text-color); */
-/*   --link-color: var(--sub-text-color); */
-/*   --border-color: var(--sub-text-color); */
-/*   --fill-color: var(--sub-text-color); */
-/* } */
-
 .sds-flag {
   display: grid;
   gap: 15px;
@@ -193,12 +173,6 @@
   border-bottom: 1px solid var(--border-color, var(--black));
   font-size: 16px;
   padding: 17px 0 15px;
-  /* --link-hover-color: var(--text-color); */
-  /* --link-hover-decoration: underline; */
-
-  /* Hides the bottom border for decks without the premium topper */
-  /* position: relative; */
-  /* top: 1px; */
 }
 
 .msb .sds-flag .flag-nav {

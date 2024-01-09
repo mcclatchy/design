@@ -3,23 +3,18 @@
  */
 
 .main-nav {
-  /* z-index: 20; */
-  /* position: absolute; */
   position: fixed;
-  /* top: 100%; */
-  /* top: 81px; */
   top: var(--flag-height);
   left: 0;
   bottom: 0;
   width: var(--menu-width);
-  /* height: calc(100vh - 76px); */
   height: calc(100vh - var(--flag-height));
   --text-color: var(--black);
   --link-color: var(--text-color);
   background-color: var(--nav-color, var(--white));
   overflow: scroll;
   -webkit-overflow-scrolling: touch;
-  transform: translateX(-200%);
+  transform: translateX(-150%);
   transition: transform .4s ease;
   --package-gap: 0;
 }
@@ -120,15 +115,3 @@
 .main-nav .search button:hover {
   background-color: unset;
 }
-
-/* Replaced with custom properties */
-/* @media(max-width: 767px) { */
-  /* .main-nav { */
-    /* top: 53px; */
-    /* height: calc(100% - 53px); */
-    /* width: 100%; */
-    /* top: 40px; */
-    /* height: calc(100vh - 40px); */
-    /* width: 100vw; */
-  /* } */
-/* } */

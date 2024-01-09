@@ -36,19 +36,9 @@ html.msb .masthead {
     "top"
     "line"
     "bottom";
-  /* gap: 0 var(--space); */
-  /* grid-template-areas: */
-  /*   "top" */
-  /*   "middle" */
-  /*   "bottom"; */
-  /* grid-template-rows: auto auto auto; */
-  /* grid-template-columns: 1; */
-  /* align-items: center; */
   max-width: var(--section-width);
-  /* min-height: 40px; */
   margin: 0 auto;
   padding: 0 var(--page-padding);
-  /* font: 13px/1em var(--sans); */
   font: 14px/1em var(--sans);
   color: var(--text-color);
 
@@ -96,44 +86,6 @@ html.msb .masthead {
   grid-area: bottom;
 }
 
-/* .flag-top { */
-/*   grid-template-areas: */ 
-/*   "left logo account"; */
-/*   grid-area: top; */
-/* } */
-
-/* .flag-middle { */
-/*   grid-template-areas: */ 
-/*   "line line line"; */
-/*   grid-area: middle; */
-/* } */
-
-/* .flag-bottom { */
-/*   grid-template-areas: */ 
-/*   "menu nav right"; */
-/*   grid-area: bottom; */
-/* } */
-
-/* @media(max-width: 767px) { */
-/*   .flag { */
-/*     grid-template-columns: auto 1fr; */
-/*     grid-template-areas: */
-/*       "bottom top"; */
-/*   } */
-
-/*   .flag-row { */
-/*     grid-template-columns: auto min-content; */
-/*   } */
-
-/*   .flag-top { */
-/*     grid-template-areas: "logo account"; */
-/*   } */
-
-/*   .flag-bottom { */
-/*     grid-template-areas: " menu menu"; */
-/*   } */
-/* } */
-
 /**
  * Buttons
  */
@@ -149,17 +101,10 @@ html.msb .masthead {
   transition: all 0.25s ease-in-out;
 }
 
-/* .flag-menu button, */
-/* .flag-menu form, */
-/* .flag-menu svg { */
-/*   cursor: pointer; */
-/* } */
-
 .flag .button.expander:after {
   display: none;
 }
 
-/* .menu-toggle.opened, .msb-show.opened { */
 .flag .button.open,
 .flag .button.opened {
   padding: 0 var(--space-sm);
@@ -173,7 +118,6 @@ html.msb .masthead {
 
 .flag-eedition {
   grid-area: left;
-  /* font-size: 14px; */
   --link-hover-decoration: underline;
 }
 
@@ -184,16 +128,12 @@ html.msb .masthead {
 
 .flag-logo {
   grid-area: middle;
-  /* padding: var(--space-sm) 0; */
 }
 
 .logo {
-  /* width: 100%; */
-  /* max-height: 20px; */
-  /* height: auto; */
   display: block;
-  height: 20px;
   width: auto;
+  height: 20px;
   margin: 0 auto;
 }
 
@@ -202,24 +142,7 @@ html.msb .masthead {
   grid-area: right;
   justify-self: end;
   align-self: stretch;
-  /* display: flex; */
-  /* align-self: center; */
-  /* height: 100%; */
 }
-
-/* .flag-account .button { */
-  /* font-size: 1em; */
-  /* --button-color: var(--white); */
-  /* --button-hover-color: var(--sub-secondary-text-color); */
-/* } */
-
-/* .flag-account .msb-hide { */
-/*   margin: auto 0; */
-/* } */
-
-/* .flag-account .expander::after { */
-/*   display: none; */
-/* } */
 
 /**
  * Bottom row
@@ -228,14 +151,11 @@ html.msb .masthead {
 .flag-menu {
   grid-area: left;
   align-self: stretch;
-  /* height: 100%; */
 }
 
 .flag-nav {
   grid-area: middle;
-  /* font-size: 14px; */
   text-transform: uppercase;
-  /* max-width: var(--story-width); */
   padding: var(--space-sm) 0;
   --link-hover-color: var(--text-color);
   --link-hover-decoration: underline;
@@ -256,8 +176,6 @@ html.msb .masthead {
 .flag-weather {
   grid-area: right;
   justify-self: end;
-  /* align-items: end; */
-  /* font-size: 14px; */
 }
 
 /**
@@ -296,57 +214,18 @@ html.msb .masthead {
   }
 }
 
-
-
-
-
-/**
- * Children
- */
-
-/* Menu toggle styles */
-/* button.menu-toggle, .msb-show { */
-/*   background-color: transparent; */
-/*   height: 100%; */
-/*   transition: all 0.25s ease-in-out; */
-/* } */
-
-/* .menu-toggle.opened, .msb-show.opened { */
-/*   padding: 0 var(--space-sm); */
-/*   background: var(--text-color); */
-/*   --fill-color: var(--paper-color); */
-/* } */
-
-/* .icon-menu-toggle { */
-/*   padding-top: 3px; */
-
-/* } */
-
-/* .nav-close { */
-/*   display: none; */
-/* } */
-
 /**
  * Account popout
  */
 
-/* .flag .flag-account { */
-/*   position: relative; */
-/* } */
-
 .flag .popout {
-  /* display: none; */
-  /* position: absolute; */
-  /* top: calc(100% - 36px); */
   display: block;
   position: fixed;
-  /* top: calc(100% - 36px); */
   top: 40px;
   right: 0px;
   width: var(--menu-width);
   height: calc(100vh - 40px);
   padding: var(--space-sm) 0;
-  /* min-width: 210px; */
   --paper-color: var(--white);
   --text-color: var(--black);
   --link-color: var(--black);
