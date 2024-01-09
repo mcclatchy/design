@@ -2,8 +2,16 @@
   <script defer src="/js/navigation.js"></script>
 {{ end }}
 
+{{ define "banner" }}
+  <!-- removed for sticky nav -->
+{{ end }}
+
 {{ define "content" -}}
-{{ partial "masthead" . }}
+  {{ if eq .Params.flag "old" }}
+    {{ partial "masthead-old" . }}
+  {{ else }}
+    {{ partial "masthead" . }}
+  {{ end }}
   <div class="zone" id="zone-el-2" data-type="ad">
     <fake-ad size="[970,250]"></fake-ad>
   </div>

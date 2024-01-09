@@ -3,13 +3,17 @@
  */
 
 .main-nav {
-  z-index: 20;
-  position: absolute;
-  top: 100%;
+  /* z-index: 20; */
+  /* position: absolute; */
+  position: fixed;
+  /* top: 100%; */
+  /* top: 81px; */
+  top: var(--flag-height);
   left: 0;
   bottom: 0;
-  width: 390px;
-  height: calc(100vh - 76px);
+  width: var(--menu-width);
+  /* height: calc(100vh - 76px); */
+  height: calc(100vh - var(--flag-height));
   --text-color: var(--black);
   --link-color: var(--text-color);
   background-color: var(--nav-color, var(--white));
@@ -117,10 +121,14 @@
   background-color: unset;
 }
 
-@media(max-width: 767px) {
-  .main-nav {
-    top: 53px;
-    height: calc(100% - 53px);
-    width: 100%;
-  }
-}
+/* Replaced with custom properties */
+/* @media(max-width: 767px) { */
+  /* .main-nav { */
+    /* top: 53px; */
+    /* height: calc(100% - 53px); */
+    /* width: 100%; */
+    /* top: 40px; */
+    /* height: calc(100vh - 40px); */
+    /* width: 100vw; */
+  /* } */
+/* } */
