@@ -51,6 +51,11 @@
   --text-color: var(--sub-text-color);
 }
 
+/* backward compatability */
+.sds-flag + .main-nav {
+  --flag-height: 0px;
+}
+
 @media(min-width: 768px) {
   .sds-flag {
     grid-template-columns: 1fr 1fr;

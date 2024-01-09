@@ -3,10 +3,17 @@
  */
 
 #mastheadVueContainer {
+  z-index: 99;
+}
+
+#mastheadVueContainer.updated-flag {
   position: sticky;
-  position: -webkit-sticky;
+  /* position: -webkit-sticky; */
   top: 0;
-  z-index: 20;
+}
+
+body.freeze #mastheadVueContainer.updated-flag ~ * {
+  filter: brightness(0.7);
 }
 
 .masthead {
@@ -31,7 +38,7 @@ html.msb .masthead {
 
 .flag {
   display: grid;
-  position: relative;
+  position: sticky;
   grid-template-areas: 
     "top"
     "line"
@@ -44,6 +51,7 @@ html.msb .masthead {
   /* grid-template-rows: auto auto auto; */
   /* grid-template-columns: 1; */
   /* align-items: center; */
+  top: 0px;
   max-width: var(--section-width);
   /* min-height: 40px; */
   margin: 0 auto;

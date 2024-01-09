@@ -16,7 +16,7 @@ document.querySelector("#menu-toggle").onclick = function() {
 }
 
 // Account button click
-document.querySelector('.flag-account .button').onclick = function() {
+document.querySelector('.flag-account .expander').onclick = function() {
   this.classList.toggle("open");
 
   if( this.classList.contains("open") ) {

@@ -81,9 +81,9 @@ body.freeze {
   overflow: hidden;
 }
 
-body.freeze .server-rendered {
-  filter: brightness(0.7);
-}
+/* body.freeze .server-rendered { */
+/*   filter: brightness(0.7); */
+/* } */
 
 /**
  * Typography
