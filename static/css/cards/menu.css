@@ -4,12 +4,12 @@
 
 .main-nav {
   z-index: 20;
-  position: fixed;
-  top: 82px;
+  position: absolute;
+  top: 100%;
   left: 0;
   bottom: 0;
   width: 390px;
-  height: calc(100% - 82px);
+  height: calc(100vh - 76px);
   --text-color: var(--black);
   --link-color: var(--text-color);
   background-color: var(--nav-color, var(--white));
@@ -32,6 +32,10 @@
   padding: var(--space-sm) var(--space);
 }
 
+.main-nav .h5 {
+  color: var(--black)
+}
+
 .main-nav svg {
   height: 20px;
   --fill-color: var(--text-color);
@@ -39,8 +43,7 @@
 
 .main-nav button,
 .main-nav a,
-.main-nav .search,
-.main-nav .option-label {
+.main-nav .search {
   width: 100%;
   padding-top: var(--space-sm);
   padding-bottom: var(--space-sm);
@@ -56,14 +59,16 @@
   padding: 0;
 }
 
-.main-nav a,
-.main-nav .option-label {
+.main-nav a {
   display: flex;
   gap: var(--space-sm);
 }
 
 .main-nav hr {
   border: .5px solid var(--nav-text-color, var(--gray));
+  border-color: var(--media-background-color);
+  margin: var(--space-sm) var(--space);
+  padding: 0;
 }
 
 .main-nav .h6 {
@@ -76,13 +81,8 @@
   text-align: left;
 }
 
-.main-nav .option-label {
-  border-color: var(--nav-text-color, var(--white));
-}
-
 .main-nav .search {
   margin-top: var(--space-sm);
-  height: 58px;
 }
 
 .main-nav .search form {

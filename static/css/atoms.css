@@ -52,7 +52,7 @@
   /* Subscriber color properties */
   --sub-blue: #0F1521;
   --sub-text-color: var(--white);
-  --sub-secondary-text-color: #ffd71a;
+  --sub-secondary-text-color: var(--gray);
 
   /* Link properties */
   --link-color: #132DAD;
