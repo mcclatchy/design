@@ -10,6 +10,7 @@
   position: sticky;
   /* position: -webkit-sticky; */
   top: 0;
+  border-bottom: 1px solid var(--media-background-color);
 }
 
 body.freeze #mastheadVueContainer.updated-flag ~ * {
