@@ -116,3 +116,11 @@
 .main-nav .search button:hover {
   background-color: unset;
 }
+
+/**
+ * Purple Tuesday for flag transition
+ */
+
+#closenavigation path {
+  fill: var(--text-color);
+}
