@@ -2,258 +2,237 @@
  * Flag styles
  */
 
- .masthead {
-    --paper-color: var(--background-color);
-    --paper-shadow: none;
-    --link-color: black;
-    z-index: 2;
-  }
-  
-  body.story .masthead,
-  body.wirestory .masthead {
-    --paper-color: white;
-  }
-  
-  html.msb .masthead {
-    --paper-color: var(--sub-blue);
-    --text-color: var(--sub-text-color);
-    --link-color: var(--sub-text-color);
-    --border-color: var(--sub-text-color);
-    --fill-color: var(--sub-text-color);
-  }
-  
+.sds-flag {
+  display: grid;
+  gap: 15px;
+  grid-template-areas:
+  "menu account"
+  "logo logo"
+  "nav nav";
+  align-items: center;
+  margin: 0 auto;
+  padding: var(--page-padding);
+  padding-bottom: 0;
+  font: bold 13px/1em var(--sans);
+  color: var(--text-color);
+
+  /* Custom properties for kids */
+  --link-decoration: none;
+  --text-color: var(--black);
+}
+
+.msb .sds-flag {
+  grid-template-areas:
+  "menu . account"
+  "edition edition edition"
+  "logo logo logo"
+  "nav nav nav";
+
+  --text-color: var(--sub-text-color);
+}
+
+/* backward compatability */
+.sds-flag + .main-nav {
+  --flag-height: 0px;
+}
+
+@media(min-width: 768px) {
   .sds-flag {
-    display: grid;
-    gap: 15px;
+    grid-template-columns: 1fr 1fr;
     grid-template-areas:
-      "menu account"
-      "logo logo"
-      "nav nav";
-    align-items: center;
-    margin: 0 auto;
-    padding: var(--page-padding);
-    padding-bottom: 0;
-    font: bold 13px/1em var(--sans);
-    color: var(--text-color);
-  
-    /* Custom properties for kids */
-    --link-decoration: none;
-    --text-color: var(--black);
+    "menu account"
+    "left right"
+    "logo logo"
+    "nav nav";
   }
-  
+
   .msb .sds-flag {
     grid-template-areas:
-      "menu . account"
-      "edition edition edition"
-      "logo logo logo"
-      "nav nav nav";
-  
-    --text-color: var(--sub-text-color);
+    "menu account"
+    "left right"
+    "edition edition"
+    "logo logo"
+    "nav nav"
   }
-  
-  @media(min-width: 768px) {
-    .sds-flag {
-      grid-template-columns: 1fr 1fr;
-      grid-template-areas:
-        "menu account"
-        "left right"
-        "logo logo"
-        "nav nav";
-    }
-  
-    .msb .sds-flag {
-      grid-template-areas:
-        "menu account"
-        "left right"
-        "edition edition"
-        "logo logo"
-        "nav nav"
-    }
+}
+
+@media(min-width: 1024px) {
+  .sds-flag {
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas:
+    "menu . account"
+    "left logo right"
+    "nav nav nav";
   }
-  
-  @media(min-width: 1024px) {
-    .sds-flag {
-      grid-template-columns: 1fr 2fr 1fr;
-      grid-template-areas:
-        "menu . account"
-        "left logo right"
-        "nav nav nav";
-    }
-  
-    .msb .sds-flag {
-      grid-template-areas:
-        "menu edition account"
-        "left logo right"
-        "nav nav nav"
-    }
+
+  .msb .sds-flag {
+    grid-template-areas:
+    "menu edition account"
+    "left logo right"
+    "nav nav nav"
   }
-  
-  /**
-   * Children
-   */
-  
-  .sds-flag button {
-    padding: 0;
-    background-color: transparent;
-    border: none;
-  }
-  
-  .flag-menu {
-    grid-area: menu;
-    --row-gap: 15px;
-  }
-  
-  .flag-menu button,
-  .flag-menu form,
-  .flag-menu svg {
-    cursor: pointer;
-  }
-  
-  .sds-flag .search {
-    --row-gap: 10px;
-  }
-  
-  .sds-flag .search input {
-    position: relative;
-    bottom: 5px;
-    margin-top: 0;
-    border: none;
-    border-bottom: 1px solid transparent;
-    padding: 5px 0px;
-    background-color: transparent;
-    color: var(--text-color);
-  }
-  
-  .sds-flag .search input:focus,
-  .sds-flag .search input:not(:placeholder-shown) {
-    box-shadow: none;
-    outline: none;
-    border-color: var(--text-color);
-  }
-  
-  .flag-account {
-    grid-area: account;
-    place-self: end;
-    min-height: 30px;
-  }
-  
-  .flag-account .button {
-    font-size: 1em;
-    --button-color: var(--white);
-    --button-hover-color: var(--sub-secondary-text-color);
-  }
-  
-  .flag-left {
-    grid-area: left;
-    font-size: 14px;
-    --statck-gap: 7px;
-    --link-hover-decoration: underline;
-  }
-  
-  .flag-right {
-    grid-area: right;
-    justify-self: end;
-    align-items: end;
-    font-size: 14px;
-    --stack-gap: 7px;
-    --link-hover-decoration: underline;
-  }
-  
-  .flag-edition {
-    grid-area: edition;
-    place-self: center;
-    font: bold 13px/1em var(--sans);
-  }
-  
-  .flag-edition:before,
-  .flag-edition:after {
-    content: "";
-    width: 30px;
-    height: 1px;
-    background-color: var(--sub-secondary-text-color);
-  }
-  
-  .msb .flag-edition {
-    color: var(--sub-secondary-text-color);
-  }
-  
-  .flag-logo {
-    grid-area: logo;
-  }
-  
-  .logo {
-    width: 100%;
-    max-height: 75px;
-    height: auto;
-  }
-  
-  .flag-nav {
-    grid-area: nav;
-    border-top: 2px solid var(--border-color, var(--black));
-    border-bottom: 1px solid var(--border-color, var(--black));
-    font-size: 16px;
-    padding: 17px 0 15px;
-    --link-hover-color: var(--text-color);
-    --link-hover-decoration: underline;
-  
-    /* Hides the bottom border for decks without the premium topper */
-    position: relative;
-    top: 1px;
-  }
-  
-  .msb .flag-nav {
-    --scrollbar-foreground: var(--sub-secondary-text-color);
-  }
-  
-  .flag-nav .separator ~ * {
-    font-weight: normal;
-  }
-  
-  /**
-   * Account popout
-   */
-  
-  .sds-flag .flag-account {
-    position: relative;
-  }
-  
-  .sds-flag .popout {
-    position: absolute;
-    z-index: 99;
-    top: 100%;
-    right: 0px;
-    min-width: 210px;
-    box-shadow:
-      0 3px 6px rgba(0,0,0,0.16),
-      0 3px 6px rgba(0,0,0,0.23);
-    --text-color: var(--black);
-    --link-color: var(--black);
-    --link-hover-color: var(--black);
-    --link-hover-decoration: none;
-    background-color: white;
-    font-size: 0.875rem;
-  }
-  
-  .sds-flag .popout > * {
-    display: grid;
-    grid-template-columns: 20px 1fr;
-    grid-gap: 30px;
-    align-items: center;
-    box-sizing: border-box;
-    min-height: 60px;
-    padding: 15px;
-  }
-  
-  .sds-flag .popout a:hover {
-    background-color: #ddd;
-  }
-  
-  .sds-flag .popout .user {
-    min-height: 72px;
-    border-bottom: 1px solid #A1A1A1;
-  }
-  
-  .sds-flag .popout svg {
-    width: 20px;
-    fill: inherit;
-  }
+}
+
+/**
+ * Children
+ */
+
+.sds-flag button {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+}
+
+.sds-flag .flag-menu {
+  grid-area: menu;
+  --row-gap: 15px;
+}
+
+.sds-flag .flag-menu button,
+.sds-flag .flag-menu form,
+.sds-flag .flag-menu svg {
+  cursor: pointer;
+}
+
+.sds-flag .search {
+  --row-gap: 10px;
+}
+
+.sds-flag .search input {
+  position: relative;
+  bottom: 5px;
+  margin-top: 0;
+  border: none;
+  border-bottom: 1px solid transparent;
+  padding: 5px 0px;
+  background-color: transparent;
+  color: var(--text-color);
+}
+
+.sds-flag .search input:focus,
+.sds-flag .search input:not(:placeholder-shown) {
+  box-shadow: none;
+  outline: none;
+  border-color: var(--text-color);
+}
+
+.sds-flag .flag-account {
+  grid-area: account;
+  place-self: end;
+  min-height: 30px;
+}
+
+.sds-flag .flag-account .button {
+  font-size: 1em;
+  --button-color: var(--white);
+  --button-hover-color: var(--sub-secondary-text-color);
+}
+
+.sds-flag .flag-left {
+  grid-area: left;
+  font-size: 14px;
+  --statck-gap: 7px;
+  --link-hover-decoration: underline;
+}
+
+.sds-flag .flag-right {
+  grid-area: right;
+  justify-self: end;
+  align-items: end;
+  font-size: 14px;
+  --stack-gap: 7px;
+  --link-hover-decoration: underline;
+}
+
+.sds-flag .flag-edition {
+  grid-area: edition;
+  place-self: center;
+  font: bold 13px/1em var(--sans);
+}
+
+.sds-flag .flag-edition:before,
+.sds-flag .flag-edition:after {
+  content: "";
+  width: 30px;
+  height: 1px;
+  background-color: var(--sub-secondary-text-color);
+}
+
+.msb .sds-flag .flag-edition {
+  color: var(--sub-secondary-text-color);
+}
+
+.sds-flag .flag-logo {
+  grid-area: logo;
+}
+
+.sds-flag .logo {
+  width: 100%;
+  max-height: 75px;
+  height: auto;
+}
+
+.sds-flag .flag-nav {
+  grid-area: nav;
+  border-top: 2px solid var(--border-color, var(--black));
+  border-bottom: 1px solid var(--border-color, var(--black));
+  font-size: 16px;
+  padding: 17px 0 15px;
+}
+
+.msb .sds-flag .flag-nav {
+  --scrollbar-foreground: var(--sub-secondary-text-color);
+}
+
+.sds-flag .flag-nav .separator ~ * {
+  font-weight: normal;
+}
+
+/**
+ * Account popout
+ */
+
+.sds-flag .flag-account {
+  position: relative;
+}
+
+.sds-flag .popout {
+  position: absolute;
+  z-index: 99;
+  top: 100%;
+  right: 0px;
+  min-width: 210px;
+  box-shadow:
+  0 3px 6px rgba(0,0,0,0.16),
+  0 3px 6px rgba(0,0,0,0.23);
+  --text-color: var(--black);
+  --link-color: var(--black);
+  --link-hover-color: var(--black);
+  --link-hover-decoration: none;
+  background-color: white;
+  font-size: 0.875rem;
+}
+
+.sds-flag .popout > * {
+  display: grid;
+  grid-template-columns: 20px 1fr;
+  grid-gap: 30px;
+  align-items: center;
+  box-sizing: border-box;
+  min-height: 60px;
+  padding: 15px;
+}
+
+.sds-flag .popout a:hover {
+  background-color: #ddd;
+}
+
+.sds-flag .popout .user {
+  min-height: 72px;
+  border-bottom: 1px solid #A1A1A1;
+}
+
+.sds-flag .popout svg {
+  width: 20px;
+  fill: inherit;
+}

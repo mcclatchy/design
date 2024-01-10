@@ -25,6 +25,7 @@
   --page-padding: var(--space);
   --section-width: 1140px;
   --story-width: 728px;
+  --menu-width: 390px;
   --story-media-width: var(--story-width);
   --story-embed-width: var(--story-width);
   --columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -78,10 +79,6 @@ body {
 
 body.freeze {
   overflow: hidden;
-}
-
-body.freeze .server-rendered {
-  filter: brightness(0.7);
 }
 
 /**

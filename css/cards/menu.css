@@ -3,21 +3,21 @@
  */
 
 .main-nav {
-  z-index: 20;
-  position: absolute;
-  top: 100%;
+  position: fixed;
+  top: var(--flag-height);
   left: 0;
   bottom: 0;
-  width: 390px;
-  height: calc(100vh - 76px);
+  width: var(--menu-width);
+  height: calc(100vh - var(--flag-height));
   --text-color: var(--black);
   --link-color: var(--text-color);
   background-color: var(--nav-color, var(--white));
   overflow: scroll;
   -webkit-overflow-scrolling: touch;
-  transform: translateX(-200%);
+  transform: translateX(-150%);
   transition: transform .4s ease;
   --package-gap: 0;
+  z-index: 99;
 }
 
 .main-nav:hover :focus {
@@ -56,6 +56,7 @@
 
 
 .main-nav .subsection button {
+  color: var(--text-color);
   padding: 0;
 }
 
@@ -117,10 +118,10 @@
   background-color: unset;
 }
 
-@media(max-width: 767px) {
-  .main-nav {
-    top: 53px;
-    height: calc(100% - 53px);
-    width: 100%;
-  }
+/**
+ * Purple Tuesday for flag transition
+ */
+
+#closenavigation path {
+  fill: var(--text-color);
 }
