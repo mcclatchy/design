@@ -4,14 +4,13 @@
 
 #mastheadVueContainer {
   z-index: 99;
-  --flag-height: 0;
+  --flag-height: 0px; /* different location in production */
 }
 
 #mastheadVueContainer.updated-flag {
   position: sticky;
   top: 0;
   border-bottom: 1px solid var(--media-background-color);
-  --flag-height: 81;
 }
 
 body.freeze #mastheadVueContainer.updated-flag ~ * {
@@ -22,6 +21,7 @@ body.freeze #mastheadVueContainer.updated-flag ~ * {
   --paper-color: var(--background-color);
   --paper-shadow: none;
   --link-color: black;
+  --flag-height: 81px;
 }
 
 body.story .masthead,
