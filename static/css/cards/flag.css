@@ -69,7 +69,7 @@ html.msb .masthead {
   grid-template-areas: "left middle right";
   gap: 0 var(--space);
   align-items: center;
-  height: 40px;
+  height: 44px;
 }
 
 .flag-row + .flag-row {
@@ -168,7 +168,8 @@ html.msb .masthead {
 .flag-nav {
   grid-area: middle;
   text-transform: uppercase;
-  padding: var(--space-sm) 0;
+  /* padding: var(--space-sm) 0; */
+  padding: 13px 0;
   --link-hover-color: var(--text-color);
   --link-hover-decoration: underline;
 
