@@ -2,35 +2,28 @@
  * In Depth card
  */
 
-/* .in-depth { */
-/*   --paper-color: var(--black); */
-/*   --text-color: var(--white); */
-/*   /1* background-color: var(--text-color); *1/ */
-/*   /1* color: var(--paper-color); *1/ */
-/* } */
-
-/* .in-depth .label > * { */
-/*   color: var(--paper-color); */
-/*   background-color: var(--text-color); */
-/* } */
-
 .in-depth .package {
   --h1: 1.75rem;
   --h3: 1.75rem;
   --header-weight: bold;
-  /* color: var(--paper-color); */
-}
-
-.in-depth h3 a {
-  /* color: var(--paper-color); */
 }
 
 .in-depth figure {
-	min-height: 400px;
+  grid-template-rows: max-content;
+  align-self: stretch;
+}
+
+.in-depth .label {
+	padding-bottom: var(--space-sm);
 }
 
 .in-depth .image-link-macro {
   position: initial;
+	min-height: 400px;
+}
+
+.in-depth.card.horizontal figure img {
+  position: relative;
 }
 
 .in-depth time,

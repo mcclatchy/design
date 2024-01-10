@@ -47,7 +47,107 @@ figure .img-container figcaption,
 
 /* class needs removed in WPS */
 .load-more .impact {
-  color: var(--paper-color);
-  background-color: var(--text-color);
+  color: var(--text-color);
+  background-color: var(--paper-color);
 }
 
+/* class needs removed in WPS */
+.digest .label .impact {
+  --secondary-text-color: var(--dark-gray);
+}
+
+/*
+ * Fixes related to custom cards
+ */
+custom-digest {
+  padding: var(--digest-padding, var(--space));
+  --card-padding: 0;
+  --package-padding: var(--space-sm) 0;
+}
+
+/*
+ * Digests need a cleanup in WPS
+ */
+
+.digest .card * {
+  order: 2;
+}
+
+.digest .card .label {
+  order: 1;
+  padding-bottom: var(--space-sm);
+}
+
+/*
+ * Nativo needs altering on their side
+ */
+
+.ntv-hp .ntvAdChoicesLink {
+  display: contents;
+}
+
+.ntv-hp .kicker {
+  padding: 4px 6px;
+  margin-top: -4px;
+}
+
+/*
+ * Load more buttons
+ */
+
+.button.big.impact.hcentered {
+  background-color: var(--impact-color, var(--black));
+  color: var(--impact-text-color, var(--white));
+}
+
+/*
+ * Search and Promo buttons
+ * impact class needs removed in WPS 
+ */
+
+.search-form button,
+.swg-promo .button.impact {
+  --paper-color: var(--white);
+  --text-color: var(--black);
+}
+
+/*
+ * Input and submit button nested under impact
+ * impact class needs removed in WPS 
+ */
+
+ .impact form input {
+    background-color: white;
+ }
+
+ .impact form .button {
+    color: white;
+ }
+
+/*
+ * Breaking news banner text
+ * impact class needs removed in WPS 
+ */
+
+ .breaking-news-organism.impact a {
+  color: inherit;
+}
+
+
+/*
+ * Braze notification modal
+ * to be integrated into the system
+ */
+
+ #brzpushpermission {
+  --link-color: none;
+}
+
+
+/*
+ * Video detail page oddness
+ */
+
+.video-detail + .package {
+  padding-top: var(--space);
+}

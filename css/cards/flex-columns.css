@@ -6,7 +6,6 @@
 
 .flex {
   display: flex;
-  /* gap: var(--space-xs); */
   gap: var(--space-sm);
   align-items: center;
 }

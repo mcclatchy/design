@@ -1,15 +1,29 @@
-/**
- * Sample placeholder
- */
+// Set menu button to click
+document.querySelector("#menu-toggle").onclick = function() {
+  const nav = document.querySelector("#main-nav");
+  
+  this.classList.toggle("opened");
 
-function showNavigation() {
-  document.querySelector("#main-nav").classList.add("open");
-  document.body.classList.add("freeze");
+  if(this.classList.contains("opened")) {
+    this.ariaExpanded = true;
+    nav.classList.add("open");
+    document.body.classList.add("freeze");
+  } else {
+    this.ariaExpanded = false;
+    nav.classList.remove("open");
+    document.body.classList.remove("freeze");
+  }
 }
 
-function closeNavigation() {
-  document.querySelector("#main-nav").classList.remove("open");
-  document.body.classList.remove("freeze");
+// Account button click
+document.querySelector('.flag-account .expander').onclick = function() {
+  this.classList.toggle("open");
+
+  if( this.classList.contains("open") ) {
+    document.body.classList.add("freeze");
+  } else {
+    document.body.classList.remove("freeze");
+  }
 }
 
 function toggleSearchForm() {
@@ -26,4 +40,14 @@ function toggleSubMenu() {
 
 function toggleMSB() {
   document.documentElement.classList.toggle("msb");
+}
+
+function showNavigation() {
+  document.querySelector("#main-nav").classList.add("open");
+  document.body.classList.add("freeze");
+}
+
+function closeNavigation() {
+  document.querySelector("#main-nav").classList.remove("open");
+  document.body.classList.remove("freeze");
 }

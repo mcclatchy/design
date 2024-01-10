@@ -3,6 +3,7 @@
   z-index: 11;
   display: flex;
   background-color: var(--body-background);
+  height: 44px;
 }
 
 .upper-nav .tab {
@@ -42,6 +43,10 @@
 }
 
 @media (min-width: 768px) {
+  .upper-nav {
+    height: 35px;
+  }
+
   .upper-nav .tab .favicon {
     display: none;
   }

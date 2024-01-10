@@ -12,7 +12,6 @@
   background-color: var(--card-color, var(--paper-color));
   color: var(--card-text-color, var(--text-color));
   box-shadow: var(--paper-shadow);
-  /* --package-padding: 0; */
 }
 
 .card figure,
@@ -45,6 +44,10 @@
   --text-color: var(--secondary-background-color);
 }
 
+.card > .package {
+  flex: 1;
+}
+
 /**
  * Stack and row generics
  */
@@ -72,7 +75,6 @@
   flex-direction: column;
   gap: var(--package-gap, var(--space-sm));
   align-items: var(--package-align, start);
-  /* padding: var(--package-padding, var(--space)); */
   padding: var(--package-padding, 0);
   --header-family: var(--serif);
   --header-weight: normal;

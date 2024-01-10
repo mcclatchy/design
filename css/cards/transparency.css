@@ -2,10 +2,6 @@
  * Transparency
  */
 
-.transparency {
-	/* max-width: 100%; */
-}
-
 .transparency > * {
  	margin: 0;
 	padding: var(--space);

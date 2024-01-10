@@ -3,18 +3,21 @@
  */
 
 .main-nav {
-  z-index: 20;
   position: fixed;
-  top: 0;
+  top: var(--flag-height);
   left: 0;
   bottom: 0;
-  width: 260px;
-  padding-bottom: 30px;
-  background-color: var(--nav-color, var(--black));
+  width: var(--menu-width);
+  height: calc(100vh - var(--flag-height));
+  --text-color: var(--black);
+  --link-color: var(--text-color);
+  background-color: var(--nav-color, var(--white));
   overflow: scroll;
   -webkit-overflow-scrolling: touch;
   transform: translateX(-150%);
   transition: transform .4s ease;
+  --package-gap: 0;
+  z-index: 99;
 }
 
 .main-nav:hover :focus {
@@ -25,37 +28,51 @@
   transform: translateX(0);
 }
 
+.main-nav > * {
+  padding: var(--space-sm) var(--space);
+}
+
+.main-nav .h5 {
+  color: var(--black)
+}
+
 .main-nav svg {
   height: 20px;
+  --fill-color: var(--text-color);
 }
 
 .main-nav button,
 .main-nav a,
-.main-nav .search,
-.main-nav .option-label {
+.main-nav .search {
   width: 100%;
+  padding-top: var(--space-sm);
+  padding-bottom: var(--space-sm);
   box-sizing: border-box;
-  padding: 15px 30px 15px 25px;
   border: none;
-  border-left: 5px solid transparent;
   border-radius: 0;
   background-color: transparent;
   cursor: pointer;
-  color: var(--nav-text-color, var(--white));
 }
 
-.main-nav button {
-  font-weight: bold;
+
+.main-nav .subsection button {
+  padding: 0;
 }
 
-.main-nav a,
-.main-nav .option-label {
-  display: block;
+.main-nav a {
+  display: flex;
+  gap: var(--space-sm);
 }
 
 .main-nav hr {
-  border: .5px solid var(--nav-text-color, var(--white));
-  margin: 30px 0;
+  border: .5px solid var(--nav-text-color, var(--gray));
+  border-color: var(--media-background-color);
+  margin: var(--space-sm) var(--space);
+  padding: 0;
+}
+
+.main-nav .h6 {
+  font-weight: bold;
 }
 
 .main-nav .expander {
@@ -64,38 +81,13 @@
   text-align: left;
 }
 
-.main-nav .subsection a {
-  padding: 10px 30px 10px 45px;
-  color: var(--nav-section-text-color, var(--gray));
-}
-
-.main-nav .subsection a:hover {
-  color: var(--nav-text-color, var(--white));
-}
-
-.main-nav .expander.open,
-.main-nav .expander.open + div a,
-.main-nav .option-label {
-  background-color: black;
-  border-color: var(--nav-text-color, var(--white));
-}
-
 .main-nav .search {
-  height: 58px;
+  margin-top: var(--space-sm);
 }
 
 .main-nav .search form {
   border-bottom: 1px solid var(--nav-text-color, var(--white));
   width: 100%;
-  display: none;
-}
-
-.main-nav .search.open form {
-  display: flex;
-}
-
-.main-nav .search.open > :not(form) {
-  display: none;
 }
 
 .main-nav .search form svg {
@@ -103,23 +95,32 @@
 }
 
 .main-nav .search input {
-  background-color: transparent;
+  background-color: var(--gray);
   border: none;
-  color: var(--nav-text-color, var(--white));
-  padding-left: 0px;
+  color: var(--nav-text-color, var(--text-color));
   margin: 0;
   flex: 1;
 }
 
 .main-nav .search ::placeholder {
-  color: var(--nav-section-text-color, var(--gray));
+  font-size: 13.5px;
+  color: var(--nav-section-text-color, var(--text-color));
 }
 
 .main-nav .search button {
-  padding: 0;
+  position: absolute;
+  right: 30px;
   width: auto;
 }
 
 .main-nav .search button:hover {
   background-color: unset;
+}
+
+/**
+ * Purple Tuesday for flag transition
+ */
+
+#closenavigation path {
+  fill: var(--text-color);
 }
