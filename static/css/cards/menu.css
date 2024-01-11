@@ -125,3 +125,7 @@
 #closenavigation path {
   fill: var(--text-color);
 }
+
+#searchTitle {
+  display: none;
+}
