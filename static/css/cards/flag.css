@@ -4,13 +4,14 @@
 
 #mastheadVueContainer {
   z-index: 99;
-  --flag-height: 0px; /* different location in production */
+  --flag-height: 0;
 }
 
 #mastheadVueContainer.updated-flag {
   position: sticky;
   top: 0;
   border-bottom: 1px solid var(--media-background-color);
+  --flag-height: 89px;
 }
 
 body.freeze #mastheadVueContainer.updated-flag ~ * {
@@ -21,7 +22,6 @@ body.freeze #mastheadVueContainer.updated-flag ~ * {
   --paper-color: var(--background-color);
   --paper-shadow: none;
   --link-color: black;
-  --flag-height: 81px;
 }
 
 body.story .masthead,
@@ -69,7 +69,7 @@ html.msb .masthead {
   grid-template-areas: "left middle right";
   gap: 0 var(--space);
   align-items: center;
-  height: 44px;
+  height: var(--flag-row-height, 44px);
 }
 
 .flag-row + .flag-row {
@@ -197,7 +197,7 @@ html.msb .masthead {
 
 @media( max-width: 767px ) {
   .masthead {
-    --flag-height: 40px;
+    --flag-height: 44px;
     --menu-width: 100vw;
   }
 
@@ -234,10 +234,10 @@ html.msb .masthead {
 .flag .popout {
   display: block;
   position: fixed;
-  top: 40px;
+  top: 44px;
   right: 0px;
   width: var(--menu-width);
-  height: calc(100vh - 40px);
+  height: calc(100vh - 44px);
   padding: var(--space-sm) 0;
   --paper-color: var(--white);
   --text-color: var(--black);
