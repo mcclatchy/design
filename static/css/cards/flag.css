@@ -14,7 +14,7 @@
   --flag-height: 89px;
 }
 
-body.freeze #main-mastheadVueContainer .updated-flag ~ * {
+body.freeze #main-mastheadVueContainer.newMastheadContainer ~ * {
   filter: brightness(0.7);
 }
 
