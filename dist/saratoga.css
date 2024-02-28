@@ -747,7 +747,7 @@ section, .section {
   --flag-height: 89px;
 }
 
-body.freeze #mastheadVueContainer.updated-flag ~ * {
+body.freeze #main-mastheadVueContainer.newMastheadContainer ~ * {
   filter: brightness(0.7);
 }
 
@@ -976,10 +976,6 @@ html.msb .masthead {
   align-items: center;
   box-sizing: border-box;
   padding: var(--space-sm) var(--space);
-}
-
-.flag .popout a:hover {
-  background-color: #ddd;
 }
 
 .flag .popout svg {
