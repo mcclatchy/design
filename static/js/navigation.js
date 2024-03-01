@@ -1,29 +1,35 @@
-// Set menu button to click
-document.querySelector("#menu-toggle").onclick = function() {
-  const nav = document.querySelector("#main-nav");
-  
-  this.classList.toggle("opened");
+const menuToggleButton = document.querySelector("#menu-toggle");
+const accountToggleButton = document.querySelector('.flag-account .expander');
 
-  if(this.classList.contains("opened")) {
-    this.ariaExpanded = true;
-    nav.classList.add("open");
-    document.body.classList.add("freeze");
-  } else {
-    this.ariaExpanded = false;
-    nav.classList.remove("open");
+let menuOpen = false;
+let accountOpen = false;
+
+function toggleFreeze() {
+  if (!menuOpen && !accountOpen) {
     document.body.classList.remove("freeze");
+  } else {
+    document.body.classList.add("freeze");
   }
 }
 
-// Account button click
-document.querySelector('.flag-account .expander').onclick = function() {
-  this.classList.toggle("open");
+// Set menu button to click
+menuToggleButton.onclick = function() {
+  const nav = document.querySelector("#main-nav");
+  this.classList.toggle("opened");
+  this.ariaExpanded = this.classList.contains("opened");
 
-  if( this.classList.contains("open") ) {
-    document.body.classList.add("freeze");
-  } else {
-    document.body.classList.remove("freeze");
-  }
+  menuOpen = this.classList.contains("opened");
+  nav.classList.toggle("open", menuOpen);
+
+  toggleFreeze();
+}
+
+// Account button click
+accountToggleButton.onclick = function() {
+  this.classList.toggle("open");
+  accountOpen = this.classList.contains("open");
+
+  toggleFreeze();
 }
 
 function toggleSearchForm() {
