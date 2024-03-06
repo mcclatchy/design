@@ -14,16 +14,6 @@
   --flag-height: 89px;
 }
 
-body.freeze #main-mastheadVueContainer.newMastheadContainer::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: #000;
-  opacity: .3;
-  z-index: 1;
-}
-
 .masthead {
   --paper-color: var(--background-color);
   --paper-shadow: none;
