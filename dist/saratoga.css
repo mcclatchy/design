@@ -747,10 +747,6 @@ section, .section {
   --flag-height: 89px;
 }
 
-body.freeze #main-mastheadVueContainer.newMastheadContainer ~ * {
-  filter: brightness(0.7);
-}
-
 .masthead {
   --paper-color: var(--background-color);
   --paper-shadow: none;
@@ -2840,6 +2836,42 @@ section.big-news {
   display: none;
 }
 
+/**
+ * Promo banner beneath nav for demo purposes only. 
+ * Banner is styled by Performance team, as there are 
+ * various banners throughout the year.
+ */
+#promo-banner-demo {
+  --row-gap: var(--space);
+  justify-content: center;
+  background-color: var(--black);
+  color: var(--white);
+  height: 35px;
+}
+
+#promo-banner-demo h3 {
+  font-size: 19px;
+  font-weight: normal;
+}
+
+#promo-banner-demo .button {
+  width: 88px;
+  height: 26px;
+  font-size: 12px;
+  --button-background-color: var(--white);
+  --button-color: var(--black);
+  --button-hover-color: var(--button-color);
+  padding: 5px 10px;
+}
+
+@media (max-width: 659px) {
+  #promo-banner-demo h3 {
+    font-size: 16px;
+  }
+  #promo-banner-demo .button {
+    display: none;
+  }
+}
 /**
  * Purple Tuesdays
  *
