@@ -4,7 +4,7 @@
  * team, as there are various banners throughout the year.
  */
 
-#promo-banner {
+#promo-banner-demo {
     --row-gap: var(--space);
     justify-content: center;
     background-color: var(--black);
@@ -12,12 +12,12 @@
     height: 35px;
 }
 
-#promo-banner h3 {
+#promo-banner-demo h3 {
     font-size: 19px;
     font-weight: normal;
 }
 
-#promo-banner .button {
+#promo-banner-demo .button {
     width: 88px;
     height: 26px;
     font-size: 12px;
@@ -29,11 +29,11 @@
 
 @media(max-width: 659px) {
 
-    #promo-banner h3 {
+    #promo-banner-demo h3 {
         font-size: 16px;
     }
 
-    #promo-banner .button {
+    #promo-banner-demo .button {
         display: none;
     }
 }
