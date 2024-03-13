@@ -208,7 +208,7 @@ html.msb .masthead {
     padding: 0 var(--space-sm);
   }
   
-  .flag .msb-hide a {
+  .flag .msb-hide a:last-of-type {
     padding-right: var(--space-sm);
   }
 
