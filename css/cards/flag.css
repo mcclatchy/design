@@ -204,9 +204,12 @@ html.msb .masthead {
     grid-template-areas: "bottom top";
   }
 
-  .flag .button,
-  .flag .msb-hide {
+  .flag .button {
     padding: 0 var(--space-sm);
+  }
+  
+  .flag .msb-hide a {
+    padding-right: var(--space-sm);
   }
 
   .flag-top {
