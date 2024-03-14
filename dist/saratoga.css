@@ -862,10 +862,15 @@ html.msb .masthead {
 .logo {
   display: block;
   width: auto;
-  height: 20px;
+  height: 25px;
   margin: 0 auto;
 }
 
+@media (max-width: 660px) {
+  .logo {
+    height: 20px;
+  }
+}
 .flag-account {
   display: flex;
   grid-area: right;
@@ -927,7 +932,7 @@ html.msb .masthead {
   .flag .button {
     padding: 0 var(--space-sm);
   }
-  .flag .msb-hide a {
+  .flag .msb-hide a:last-of-type {
     padding-right: var(--space-sm);
   }
   .flag-top {
