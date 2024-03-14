@@ -141,6 +141,12 @@ html.msb .masthead {
   margin: 0 auto;
 }
 
+@media(max-width: 660px) {
+  .logo {
+    height: 20px;
+  }
+}
+
 .flag-account {
   display: flex;
   grid-area: right;
