@@ -593,7 +593,7 @@ figcaption, .caption {
 .slider {
   text-align: center;
   white-space: nowrap;
-  overflow-x: scroll;
+  overflow-x: auto;
   scrollbar-width: thin;
   scrollbar-color: var(--scrollbar-foreground, var(--black)) var(--scrollbar-background, transparent);
 }
