@@ -868,9 +868,13 @@ html.msb .masthead {
 
 @media (max-width: 660px) {
   .logo {
-    height: 20px;
+    height: 18px;
   }
 }
+.subscribe-link {
+  font-weight: bold;
+}
+
 .flag-account {
   display: flex;
   grid-area: right;
@@ -903,7 +907,7 @@ html.msb .masthead {
 }
 
 .msb .flag-nav {
-  --scrollbar-foreground: var(--sub-secondary-text-color);
+  --scrollbar-foreground: var(--secondary-text-color);
 }
 
 .flag-nav .separator ~ * {
@@ -925,7 +929,7 @@ html.msb .masthead {
   }
   .flag {
     padding: 0;
-    column-gap: var(--space-sm);
+    column-gap: 0;
     grid-template-columns: auto 1fr;
     grid-template-areas: "bottom top";
   }
@@ -938,6 +942,7 @@ html.msb .masthead {
   .flag-top {
     grid-template-columns: auto 1fr;
     grid-template-areas: "middle right";
+    gap: var(--space-sm);
   }
   .flag-bottom {
     grid-template-columns: 1fr;
@@ -998,6 +1003,7 @@ html.msb .masthead {
 @media (max-width: 767px) {
   .logo {
     width: auto;
+    max-width: 170px;
     margin-left: 0;
   }
   .popout {
