@@ -10,9 +10,9 @@
   --serif: "Noto Serif", Georgia, serif;
   --premium-serif: "DM Serif Display", serif;
 
-  --h1: calc(var(--font-base)*1.875); 
-  --h2: calc(var(--font-base)*1.5);
-  --h3: calc(var(--font-base)*1.1);
+  --h1: calc(var(--font-base)*2.5); 
+  --h2: calc(var(--font-base)*1.667);
+  --h3: calc(var(--font-base)*1.112);
   --h4: var(--font-base);
 
   /* Spacing and alignment */
@@ -56,12 +56,12 @@
   --sub-secondary-text-color: var(--gray);
 
   /* Link properties */
-  --link-color: #132DAD;
+  --link-color: #3C578C;
   --link-decoration: none;
 
   /* Paper properties */
-  --paper-color: var(--white);
-  --paper-shadow: none;
+  /* --paper-color: var(--white); */
+  /* --paper-shadow: none; */
 
   /* Deprecated. Used in older custom elements. */
   --gap: var(--space);
@@ -112,6 +112,7 @@ h3, .h3 {
 
 h4, .h4 {
   font-size: var(--h4);
+  --header-family: var(--sans);
 }
 
 h5, .h5 {
@@ -165,16 +166,17 @@ summary, .summary {
   font: 0.75rem var(--sans);
 }
 
-.label, .label .h5 {
-  font: bold 14px/1em var(--sans);
+.label, .label .h3 {
+  /* font: bold 14px/1em var(--sans); */
+  font-family: var(--sans);
   text-transform: uppercase;
   color: var(--secondary-text-color);
-  margin: 0;
+  /* margin: 0; */
 }
 
 .more-link {
   display: inline-block;
-  justify-self: end;
+  /* justify-self: end; */
   font: 700 0.75rem/1em var(--sans);
   color: var(--more-link-color, var(--link-color));
   text-decoration: none;
