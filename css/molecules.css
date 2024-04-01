@@ -8,8 +8,8 @@
   flex-direction: column;
   align-items: var(--card-align, start);
   gap: var(--card-gap, var(--space));
-  /* padding: var(--card-padding, var(--space)); */
-  /* background-color: var(--card-color, var(--paper-color)); */
+  padding: var(--card-padding, var(--space));
+  background-color: var(--card-color, var(--paper-color));
   color: var(--card-text-color, var(--text-color));
   box-shadow: var(--paper-shadow);
 }

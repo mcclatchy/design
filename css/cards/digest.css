@@ -6,9 +6,9 @@
   display: grid;
   grid-template-rows: 1fr auto;
   grid-gap: var(--space);
-  /* background-color: var(--card-color, var(--paper-color)); */
-  /* box-shadow: var(--paper-shadow); */
-  /* padding: var(--digest-padding, var(--space)); */
+  background-color: var(--card-color, var(--paper-color));
+  box-shadow: var(--paper-shadow);
+  padding: var(--digest-padding, var(--space));
   --card-padding: 0;
   --card-gap: var(--space-sm);
   --package-padding: 0;
@@ -18,11 +18,11 @@
   display: grid;
   grid-gap: var(--space);
   align-content: start;
-  /* background-color: var(--card-color, var(--paper-color)); */
+  background-color: var(--card-color, var(--paper-color));
 }
 
 .digest .more-link {
-  /* align-self: end; */
+  align-self: end;
 }
 
 .digest .label {

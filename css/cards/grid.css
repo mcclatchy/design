@@ -49,7 +49,7 @@
   }
 
   .grid .digest {
-    align-self: start;
+    align-self: stretch;
     grid-column: 1;
     grid-row-end: span 2;
   }
