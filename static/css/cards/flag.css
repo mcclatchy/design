@@ -2,7 +2,7 @@
  * Flag styles
  */
 
-#mastheadVueContainer {
+ #mastheadVueContainer {
   z-index: 99;
   --flag-height: 0;
 }
@@ -136,19 +136,16 @@ html.msb .masthead {
 
 .logo {
   display: block;
-  width: auto;
-  height: 25px;
+  width: 100%;
+  height: 100%;
+  max-height: 25px;
   margin: 0 auto;
 }
 
 @media(max-width: 660px) {
   .logo {
-    height: 18px;
+    max-height: 18px;
   }
-}
-
-.subscribe-link {
-  font-weight: bold;
 }
 
 .flag-account {
@@ -156,6 +153,7 @@ html.msb .masthead {
   grid-area: right;
   justify-self: end;
   align-self: stretch;
+  text-wrap: nowrap;
 }
 
 .msb-hide {
@@ -185,7 +183,7 @@ html.msb .masthead {
 }
 
 .msb .flag-nav {
-  --scrollbar-foreground: var(--secondary-text-color);
+  --scrollbar-foreground: var(--sub-secondary-text-color);
 }
 
 .flag-nav .separator ~ * {
@@ -209,7 +207,7 @@ html.msb .masthead {
 
   .flag {
     padding: 0;
-    column-gap: 0;
+    column-gap: var(--space-sm);
     grid-template-columns: auto 1fr;
     grid-template-areas: "bottom top";
   }
@@ -225,7 +223,6 @@ html.msb .masthead {
   .flag-top {
     grid-template-columns: auto 1fr;
     grid-template-areas: "middle right";
-    gap: var(--space-sm);
   }
 
   .flag-bottom {
@@ -288,12 +285,6 @@ html.msb .masthead {
 }
 
 @media (max-width: 767px) {
-  .logo {
-    width: auto;
-    max-width: 170px;
-    margin-left: 0;
-  }
-  
   .popout {
     width: 100%;
     padding: 0;
