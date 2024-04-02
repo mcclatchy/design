@@ -116,6 +116,12 @@ html.msb .masthead {
   --fill-color: var(--paper-color);
 }
 
+@media(max-width: 767px) {
+  .flag .flag-menu .button.opened {
+    margin-right: var(--space-sm);
+  }
+}
+
 /**
  * Top row
  */
