@@ -1146,6 +1146,7 @@ html.msb .masthead {
 
 .sds-flag .flag-logo {
   grid-area: logo;
+  max-height: unset;
 }
 
 .sds-flag .logo {
