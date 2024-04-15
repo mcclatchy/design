@@ -805,6 +805,7 @@ html.msb .masthead {
  */
 .flag-top {
   grid-area: top;
+  grid-template-columns: 1fr 250px 1fr;
 }
 
 .flag-line {
@@ -857,23 +858,16 @@ html.msb .masthead {
 
 .flag-logo {
   grid-area: middle;
-  width: 100%;
-  height: 100%;
-  max-height: 25px;
+  align-items: center;
 }
 
 .logo {
-  width: 100%;
-  height: 100%;
   display: block;
-  /* margin: 0 auto; */
+  max-width: 100%;
+  max-height: 25px;
+  margin: auto;
 }
 
-@media (max-width: 660px) {
-  .flag-logo {
-    max-height: 18px;
-  }
-}
 .subscribe-link {
   font-weight: bold;
 }
@@ -902,7 +896,6 @@ html.msb .masthead {
   grid-area: middle;
   text-transform: uppercase;
   padding: var(--space-sm) 0;
-  /* padding: 13px 0; */
   --link-hover-color: var(--text-color);
   --link-hover-decoration: underline;
   /* Hides the bottom border for decks without the premium topper */
@@ -944,7 +937,7 @@ html.msb .masthead {
     padding-right: var(--space-sm);
   }
   .flag-top {
-    grid-template-columns: auto 1fr;
+    grid-template-columns: 200px 1fr;
     grid-template-areas: "middle right";
     gap: var(--space-sm);
   }
@@ -954,6 +947,24 @@ html.msb .masthead {
   }
   .flag-line {
     display: none;
+  }
+}
+/**
+ * Smaller mobile sizes
+ */
+@media (max-width: 500px) {
+  .flag-top {
+    grid-template-columns: 160px 1fr;
+  }
+}
+@media (max-width: 400px) {
+  .flag-top {
+    grid-template-columns: 115px 1fr;
+  }
+}
+@media (max-width: 350px) {
+  .flag-top {
+    grid-template-columns: 110px 1fr;
   }
 }
 /**
@@ -1146,6 +1157,7 @@ html.msb .masthead {
 
 .sds-flag .flag-logo {
   grid-area: logo;
+  max-height: unset;
 }
 
 .sds-flag .logo {
