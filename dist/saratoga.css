@@ -843,6 +843,11 @@ html.msb .masthead {
   --fill-color: var(--paper-color);
 }
 
+@media (max-width: 767px) {
+  .flag .flag-menu .button.opened {
+    margin-right: var(--space-sm);
+  }
+}
 /**
  * Top row
  */
@@ -1228,9 +1233,7 @@ html.msb .masthead {
   fill: inherit;
 }
 
-/**
- * Menu
- */
+/* Menu */
 .main-nav {
   position: fixed;
   top: var(--flag-height);
@@ -1238,14 +1241,15 @@ html.msb .masthead {
   bottom: 0;
   width: var(--menu-width);
   height: calc(100vh - var(--flag-height));
+  color: var(--black);
   --text-color: var(--black);
-  --link-color: var(--text-color);
+  --link-color: var(--black);
+  --fill-color: var(--black);
   background-color: var(--nav-color, var(--white));
   overflow: scroll;
   -webkit-overflow-scrolling: touch;
   transform: translateX(-150%);
   transition: transform 0.4s ease;
-  --package-gap: 0;
   z-index: 99;
 }
 
@@ -1257,22 +1261,21 @@ html.msb .masthead {
   transform: translateX(0);
 }
 
-.main-nav > * {
+.main-nav > *,
+.main-nav .subsection > * {
   padding: var(--space-sm) var(--space);
-}
-
-.main-nav .h5 {
-  color: var(--black);
 }
 
 .main-nav svg {
   height: 20px;
-  --fill-color: var(--text-color);
 }
 
 .main-nav button,
 .main-nav a,
-.main-nav .search {
+.main-nav .search,
+.main-nav .option-label,
+.main-nav .subsection a,
+.main-nav .option-label {
   width: 100%;
   padding-top: var(--space-sm);
   padding-bottom: var(--space-sm);
@@ -1283,31 +1286,44 @@ html.msb .masthead {
   cursor: pointer;
 }
 
-.main-nav .subsection button {
-  color: var(--text-color);
+.main-nav .subsection {
   padding: 0;
+}
+
+.main-nav .subsection-menu {
+  background-color: var(--gray);
+}
+
+.main-nav .subsection-menu a {
+  font-weight: normal;
+}
+
+.main-nav .option-label:after {
+  content: "";
+  border-bottom: 1px solid #d9d9d9;
+  width: 40px;
+  display: block;
+  padding-top: 15px;
+  margin-bottom: 5px;
 }
 
 .main-nav a {
   display: flex;
   gap: var(--space-sm);
+  font-weight: bold;
 }
 
 .main-nav hr {
-  border: 0.5px solid var(--nav-text-color, var(--gray));
-  border-color: var(--media-background-color);
+  border: 1px solid var(--nav-text-color, var(--gray));
   margin: var(--space-sm) var(--space);
   padding: 0;
-}
-
-.main-nav .h6 {
-  font-weight: bold;
 }
 
 .main-nav .expander {
   align-self: stretch;
   justify-content: space-between;
   text-align: left;
+  font-weight: bold;
 }
 
 .main-nav .search {
@@ -1346,9 +1362,20 @@ html.msb .masthead {
   background-color: unset;
 }
 
-/**
- * Purple Tuesday for flag transition
- */
+.main-nav .h5 {
+  color: #4B5972;
+}
+
+.main-nav .h6 {
+  font-weight: bold;
+}
+
+.main-nav img {
+  background-color: var(--gray);
+  padding: var(--space-sm);
+}
+
+/* Purple Tuesday for flag transition */
 #closenavigation path {
   fill: var(--text-color);
 }
