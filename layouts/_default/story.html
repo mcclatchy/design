@@ -7,19 +7,12 @@
 {{ end }}
 
 {{ define "content" -}}
-  {{ if eq .Params.flag "old" }}
-    <div class="zone" id="zone-el-2" data-type="ad">
-      <fake-ad size="[970,250]"></fake-ad>
-    </div>
-    {{ partial "masthead-old" . }}
-  {{ else }}
-    {{ partial "masthead" . }}
-    <!-- banner for demo purposes -->
-    {{ partial "promo-banner" . }}
-    <div class="zone" id="zone-el-2" data-type="ad">
-      <fake-ad size="[970,250]"></fake-ad>
-    </div>
-  {{ end }}
+  {{ partial "masthead" . }}
+  {{ partial "promo-banner" . }}
+
+  <div class="zone" id="zone-el-2" data-type="ad">
+    <fake-ad size="[970,250]"></fake-ad>
+  </div>
 
   <!-- the wrapper was added by the front-end team -->
   <div class="server-rendered">
