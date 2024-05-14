@@ -826,8 +826,8 @@ html.msb .masthead {
   height: 100%;
   align-self: stretch;
   padding: 0;
-  border: none;
   background-color: transparent;
+  border: none;
   border-radius: 0;
   transition: all 0.25s ease-in-out;
 }
@@ -1283,6 +1283,7 @@ html.msb .masthead {
   border: none;
   border-radius: 0;
   background-color: transparent;
+  color: var(--text-color);
   cursor: pointer;
 }
 
