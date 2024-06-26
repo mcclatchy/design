@@ -23,6 +23,12 @@
   height: 250px;
 }
 
+@media(max-width: 667px) {
+  #zone-el-2 {
+    height: 90px;
+  }
+}
+
 /*
  * Zone treatment inside grids
  */
