@@ -1883,9 +1883,15 @@ footer {
  * Leaderboard ad zone height set for CLS
  */
 #zone-el-2 {
-  height: 250px;
+  box-sizing: border-box;
+  height: 290px;
 }
 
+@media (max-width: 991px) {
+  #zone-el-2 {
+    height: 130px;
+  }
+}
 @media (max-width: 667px) {
   #zone-el-2 {
     height: 90px;
