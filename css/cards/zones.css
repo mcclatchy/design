@@ -20,12 +20,13 @@
  */
 
 #zone-el-2 {
-  height: 250px;
+  box-sizing: border-box;
+  height: 290px;
 }
 
 @media(max-width: 667px) {
   #zone-el-2 {
-    height: 90px;
+    height: 140px;
   }
 }
 
