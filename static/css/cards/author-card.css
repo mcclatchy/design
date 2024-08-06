@@ -22,7 +22,7 @@
 
 .author-card .thumb {
   position: relative;
-  background-color: #ECEEF2;
+  background-color: var(--media-background-color);
   width: 80px;
   height: 80px;
   box-sizing: border-box;
