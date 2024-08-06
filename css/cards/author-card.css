@@ -23,17 +23,17 @@
 .author-card .thumb {
   position: relative;
   background-color: var(--media-background-color);
-  width: 80px;
-  height: 80px;
+  width: 70px;
+  height: 70px;
   box-sizing: border-box;
   grid-area: thumb;
   border-radius: 50%;
 }
 
-.author-card .thumb .intials {
+.author-card .thumb .initials {
   align-content: center;
   height: 100%;
-  font-size: 36px;
+  font-size: 24px;
   font-weight: 700;
   text-align: center;
 }
