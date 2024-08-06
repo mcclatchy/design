@@ -22,10 +22,20 @@
 
 .author-card .thumb {
   position: relative;
-  width: 80px;
-  height: 80px;
+  background-color: var(--media-background-color);
+  width: 70px;
+  height: 70px;
   box-sizing: border-box;
   grid-area: thumb;
+  border-radius: 50%;
+}
+
+.author-card .thumb .initials {
+  align-content: center;
+  height: 100%;
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
 }
 
 .author-card .thumb img {
