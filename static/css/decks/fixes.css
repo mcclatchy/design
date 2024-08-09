@@ -151,3 +151,83 @@ custom-digest {
 .video-detail + .package {
   padding-top: var(--space);
 }
+
+
+/*
+ * Viafoura
+ */
+
+ .viafoura {
+  --dark-text-on-default-color: #0F1521;
+  color: #0F1521;
+  font-size: 16px;
+ }
+
+ .viafoura p, .zone-el .viafoura span.vf-dropdown-button__text, .zone-el .viafoura em.vf-post-name-button__username {
+  font-size: 16px;
+ }
+
+ .viafoura .all-comments p, .viafoura .vf-post-name-button__username {
+  font-size: 14px;
+ }
+
+ .viafoura nav.vf-tabbed-nav .vf-label-text, .vf-follow-button__text {
+  font-size: 12px;
+ }
+
+ .zone-el .viafoura .vf-label,
+ .viafoura time,
+ .viafoura .vf-comment-actions {
+  font-size: 10px;
+ }
+
+ .viafoura h2.vf-heading-text {
+  font-family: "Noto Sans";
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+ }
+
+ #commentingIntro, .v3-comments__post-form {
+  border-top: 1px solid #ECEEF2;
+  margin: 20px 0;
+  padding-top: 20px;
+ }
+
+ .viafoura nav.vf-tabbed-nav .vf-label-text, .zone-el .viafoura span.vf-dropdown-button__text, .zone-el .viafoura em.vf-post-name-button__username {
+  font-weight: 700;
+ }
+
+ .viafoura .vf3-comments__bottom-action .vf-load-more.vf-label-text button.vf-button.vf-load-more__button.vf-loader-button, .zone-el .viafoura button.big.button {
+  background-color: #4D5970;
+  color: white;
+  font: 700 16px/24px 'Noto Sans', sans-serif;
+  text-transform: uppercase;
+  padding: 10px 20px;
+ }
+
+ .viafoura .vf3-comments__bottom-action .vf-load-more.vf-label-text button.vf-button.vf-load-more__button.vf-loader-button:hover, .zone-el .viafoura button.big.button:hover {
+  color: #B0CBFF;
+ }
+
+ .viafoura p.vf-secondary-text, .zone-el .viafoura .vf-comments-trending-articles[data-v-1e6aff7f] .vf-trending-articles__header {
+  font-size: 14px;
+  font-weight: 400;
+ }
+
+ .viafoura .vf-button.is-size-tiny[data-v-7870d8ba] {
+  padding: 5px 10px;
+ }
+
+ .viafoura .vf-post-form__new-content[data-v-45fba7ae] {
+  margin-bottom: 20px;
+  padding: 0;
+ }
+
+ .viafoura .vf-content-focus-container--default[data-v-2917e5f4] {
+  padding: 5px 0;
+ }
+
+ .vf-actions-authentication, .viafoura .vf-post-form__new-content[data-v-45fba7ae] .vf-content-layout__right::before, .viafoura .vf-post-form__new-content[data-v-45fba7ae] .vf-content-layout__right::after {
+  display: none;
+ }
