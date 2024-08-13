@@ -232,8 +232,8 @@ custom-digest {
  }
 
  @media(max-width: 480px) {
-  .viafoura .vf-comment-header, .viafoura .vf-comment-header__actions {
-    display: block;
+  .viafoura .vf-comment-header {
+    flex-direction: column;
   }
   .viafoura .vf-follow-button {
     margin: 10px 0;
