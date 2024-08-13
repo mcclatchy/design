@@ -214,13 +214,13 @@ custom-digest {
   font-weight: 400;
  }
 
- .viafoura .vf-button.is-size-tiny {
-  padding: 5px 10px;
- }
-
  .viafoura .vf-post-form__new-content {
   margin-bottom: 20px;
   padding: 0;
+ }
+
+ .viafoura .vf-button.is-size-tiny {
+  padding: 5px 10px;
  }
 
  .viafoura .vf-content-focus-container--default {
