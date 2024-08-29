@@ -31,6 +31,14 @@
 }
 
 /*
+ * Zone 7 sponsored ad
+ */
+
+ #zone-el-7 {
+  grid-column: 1/-1;
+}
+
+/*
  * Zone treatment inside grids
  */
 
