@@ -172,7 +172,7 @@ custom-digest {
   font-size: 14px;
  }
 
- .viafoura nav.vf-tabbed-nav .vf-label-text, .viafoura .vf-follow-button__text, .viafoura .vf-dropdown-button__text {
+ .viafoura nav.vf-tabbed-nav .vf-nav-label .vf-label-text, .viafoura .vf-follow-button__text, .viafoura .vf-dropdown-button__text {
   font-size: 12px;
  }
 
@@ -233,9 +233,10 @@ custom-digest {
 
  @media(max-width: 480px) {
   .viafoura .vf-comment-header {
+    align-items: flex-start;
     flex-direction: column;
   }
-  .viafoura .vf-follow-button {
-    margin: 10px 0;
+  .viafoura .vf-comment-header .vf-comment-header__actions {
+    align-items: start;
   }
- }
+}
