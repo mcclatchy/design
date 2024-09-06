@@ -214,7 +214,7 @@ custom-digest {
   font-weight: 400;
  }
 
- .viafoura .vf-post-form__new-content {
+ .viafoura div.vf-post-form__new-content[data-v-45fba7ae] {
   margin-bottom: 20px;
   padding: 0;
  }
