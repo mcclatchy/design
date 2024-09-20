@@ -151,3 +151,92 @@ custom-digest {
 .video-detail + .package {
   padding-top: var(--space);
 }
+
+
+/*
+ * Viafoura
+ */
+
+ .viafoura {
+  --dark-text-on-default-color: #0F1521;
+  color: #0F1521;
+  font-family: 'Noto Sans' sans-serif;
+  font-size: 16px;
+ }
+
+ .viafoura p, .viafoura .vf-post-name-button__username {
+  font-size: 16px;
+ }
+
+ .viafoura .all-comments p, .viafoura .vf-post-name-button__username {
+  font-size: 14px;
+ }
+
+ .viafoura nav.vf-tabbed-nav .vf-nav-label .vf-label-text, .viafoura .vf-follow-button__text, .viafoura .vf-dropdown-button__text {
+  font-size: 12px;
+ }
+
+ .viafoura .vf-label, .viafoura time, .viafoura .vf-comment-actions {
+  font-size: 10px;
+ }
+
+ .viafoura h2.vf-heading-text {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+ }
+
+ .viafoura #commentingIntro, .viafoura .v3-comments__post-form {
+  border-top: 1px solid #ECEEF2;
+  margin: 20px 0;
+  padding-top: 20px;
+ }
+
+ .viafoura .vf-tabbed-nav .vf-label-text, .viafoura .vf-dropdown-button__text, .viafoura .vf-post-name-button__username {
+  font-weight: 700;
+ }
+
+ .viafoura .vf3-comments__bottom-action .vf-load-more.vf-label-text button.vf-button.vf-load-more__button.vf-loader-button, .viafoura button.big.button {
+  background-color: #4D5970;
+  color: white;
+  font: 700 16px/24px 'Noto Sans', sans-serif;
+  text-transform: uppercase;
+  padding: 10px 20px;
+ }
+
+ .viafoura .vf3-comments__bottom-action .vf-load-more.vf-label-text button.vf-button.vf-load-more__button.vf-loader-button:hover, .viafoura button.big.button:hover {
+  color: #B0CBFF;
+ }
+
+ .viafoura .vf-secondary-text, .viafoura .vf-comments-trending-articles .vf-trending-articles__header {
+  font-size: 14px;
+  font-weight: 400;
+ }
+
+ .viafoura div.vf-post-form__new-content[data-v-45fba7ae] {
+  margin-bottom: 20px;
+  padding: 0;
+ }
+
+ .viafoura .vf-button.is-size-tiny {
+  padding: 5px 10px;
+ }
+
+ .viafoura .vf-content-focus-container--default {
+  padding: 5px 0;
+ }
+
+ .viafoura .vf-actions-authentication, .viafoura .vf-post-form__new-content .vf-content-layout__right::before, .viafoura .vf-post-form__new-content .vf-content-layout__right::after {
+  display: none;
+ }
+
+ @media(max-width: 480px) {
+  .viafoura .vf-comment-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .viafoura .vf-comment-header .vf-comment-header__actions {
+    align-items: start;
+  }
+}

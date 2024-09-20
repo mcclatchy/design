@@ -43,7 +43,7 @@ html.msb .masthead {
   max-width: var(--section-width);
   margin: 0 auto;
   padding: 0 var(--page-padding);
-  font: 14px/1em var(--sans);
+  font: 13px/1em var(--sans);
   color: var(--text-color);
 
   /* Custom properties for kids */
