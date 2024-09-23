@@ -153,7 +153,7 @@
 
 .quote blockquote {
   margin: 0;
-  font: 30px/1.2em var(--serif);
+  font: 24px/1.2em var(--sans);
 }
 
 .quote blockquote p {
