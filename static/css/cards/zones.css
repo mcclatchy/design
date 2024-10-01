@@ -36,6 +36,12 @@
 
  #zone-el-7 {
   grid-column: 1/-1;
+  padding: 0;
+  --zone-background-color: transparent;
+}
+
+.header #zone-el-7 {
+  margin: 0;
 }
 
 /*
