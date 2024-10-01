@@ -232,10 +232,11 @@ custom-digest {
  }
 
  @media(max-width: 480px) {
-  .viafoura .vf-comment-header {
+  .viafoura header.vf-comment-header[data-v-ddad5b80] {
     align-items: flex-start;
     flex-direction: column;
   }
+  
   .viafoura .vf-comment-header .vf-comment-header__actions {
     align-items: start;
   }
