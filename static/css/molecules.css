@@ -48,6 +48,10 @@
   flex: 1;
 }
 
+.card .package .summary {
+  font: var(--serif);
+}
+
 /**
  * Stack and row generics
  */
@@ -76,8 +80,8 @@
   gap: var(--package-gap, var(--space-sm));
   align-items: var(--package-align, start);
   padding: var(--package-padding, 0);
-  --header-family: var(--serif);
-  --header-weight: normal;
+  --header-family: var(--sans);
+  --header-weight: bold;
   --header-transform: none;
   --link-color: var(--text-color);
   --link-decoration: none;
@@ -118,6 +122,7 @@
 .package.thumb > .time {
   align-self: end;
 }
+
 /*
  * Children for all concepts
  */
@@ -258,7 +263,7 @@ section, .section {
 .partner-label {
   position: relative;
   grid-column: 1/-1;
-  font: 700 1.8rem var(--serif);
+  font: 700 1.55rem var(--sans);
   color: var(--header-color)
 }
 

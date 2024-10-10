@@ -9,7 +9,7 @@ The byline and credit rules should have this standard anywhere attribution appli
 #### EXAMPLE
 <div>
   <p class="byline">By <a href="#">John Doe</a> 
-    <span class="credit">SAMPLE NEWSPAPER</span>
+    <span class="credit">Sample Newspaper</span>
   </p>
 </div>
 

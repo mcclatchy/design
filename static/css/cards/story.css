@@ -9,7 +9,7 @@
   color: var(--story-text-color, var(--text-color));
   background-color: var(--story-background-color, var(--paper-color));
   --header-family: var(--story-subhead-family, var(--sans));
-  --header-transform: var(--story-subhead-transform, uppercase);
+  --header-transform: var(--story-subhead-transform, inherit);
 }
 
 .story-body > * {
