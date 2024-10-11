@@ -15,7 +15,7 @@ section.big-news {
 }
 
 .big-news .label .h5 {
-  font-size: 1.11rem;
+  font-size: 1.33rem;
   margin: 0;
 }
 
@@ -26,35 +26,30 @@ section.big-news {
 }
 
 .big-news .latest {
+  font: bold 20px / 1em var(--sans);
   margin: 0;
-  padding: 15px 15px 5px;
+  padding: 15px;
 }
 
 .big-news .h1 {
-  font: 700 2.5rem/1.2em var(--sans);
+  font: 700 2rem/1.2em var(--sans);
   text-align: center;
   align-self: center;
   padding: var(--space);
 }
 
-@media (min-width: 768px) {
-  .big-news .h1 {
-    font-size: 3rem;
-  }
-}
-
 @media (min-width: 1140px) {
   .big-news .h1 {
-    font-size: 6.1rem;
+    font-size: 2.67rem;
   }
 
   .big-news .label .h5 {
-    font-size: 2.22rem;
+    font-size: 1.33rem;
     margin: 0;
   }
 
   .big-news figcaption {
-    font: 1.33rem var(--serif);
+    font: 0.78rem var(--serif);
   }
 }
 
