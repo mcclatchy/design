@@ -1924,6 +1924,10 @@ footer {
   --zone-background-color: transparent;
 }
 
+.header #zone-el-7 {
+  margin: 0;
+}
+
 /*
  * Zone treatment inside grids
  */
