@@ -43,6 +43,7 @@
   --dark-green: #9ea472;
   --light-blue: #c3d8e4;
   --dark-blue: #273f57;
+  --red: #AB0909;
 
   /* Generic color properties */
   --background-color: var(--gray);
@@ -100,6 +101,12 @@ h6, .h6 {
 
 h1, .h1 {
   font-size: var(--h1);
+}
+
+@media (max-width: 599px) {
+  h1, .h1 {
+    letter-spacing: -0.3px;
+  }
 }
 
 h2, .h2 {
