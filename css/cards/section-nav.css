@@ -16,7 +16,7 @@
 
 .section-nav .row {
   padding-top: 10px;
-  font: 12px var(--sans);
+  font: 14px var(--sans);
   text-transform: uppercase;
   --link-hover-color: var(--text-color);
 }

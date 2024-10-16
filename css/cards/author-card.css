@@ -83,6 +83,7 @@
 .author-bio .summary {
   grid-area: bio;
   align-self: start;
+  font-size: 0.89rem;
 }
 
 .author-bio .a-social {
