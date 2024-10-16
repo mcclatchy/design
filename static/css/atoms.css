@@ -170,7 +170,7 @@ time, .time, .byline {
 }
 
 summary, .summary {
-  font: 0.89rem var(--sans);
+  font: 0.75rem var(--sans);
 }
 
 .label, .label .h5 {

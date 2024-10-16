@@ -49,7 +49,7 @@
 }
 
 .card .package .summary {
-  font: var(--serif);
+  font-family: var(--serif);
 }
 
 /**
