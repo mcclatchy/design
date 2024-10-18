@@ -264,7 +264,7 @@ section, .section {
   position: relative;
   grid-column: 1/-1;
   font: 700 1.55rem var(--sans);
-  color: var(--header-color)
+  color: var(--secondary-text-color)
 }
 
 @media(max-width: 600px) {
