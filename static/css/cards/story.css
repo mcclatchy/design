@@ -22,6 +22,10 @@
   margin: 40px auto;
 }
 
+.story-body h3 {
+  font-size: var(--h2);
+}
+
 /**
  * Embeds
  */
