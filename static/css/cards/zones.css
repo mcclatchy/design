@@ -9,12 +9,6 @@
   background-color: var(--zone-background-color, var(--media-background-color));
 }
 
-@media(max-width: 600px) {
-  [data-type="ad"] {
-    background-color: var(--zone-background-color, var(--background-color));
-  }
-}
-
 /*
  * Leaderboard ad zone height set for CLS
  */
