@@ -55,6 +55,7 @@
 
 .author-card .summary {
   grid-area: bio;
+  font-size: 0.89rem;
 }
 
 .author-card .byline {

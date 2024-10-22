@@ -101,6 +101,16 @@
 }
 
 /*
+ * Padding for video gallery on mobile
+ */
+
+@media(max-width: 600px) {
+  #media-gallery-video-gallery .wps-player-wrap {
+    padding: 0 var(--space);
+  }
+}
+
+/*
  * Regions are invisible wrappers for Taboola 
  * dynamic injection, same as custom-cards
  */
