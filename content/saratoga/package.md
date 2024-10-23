@@ -16,8 +16,8 @@ The package molecule is the backbone of the design system. Spacing for  most mol
 
 The basic rules are simple:
 
-* 15px of padding on all sides
-* 10px of space between all direct children.
+* 0px of padding on all sides
+* 10px of space gap between all direct children.
 
 If the molecule is used inside a paper molecule, these are the only rules that will be applied. If the molecule is used inside of a card molecule or any other Flexbox or Grid container, the additional rules are applied:
 

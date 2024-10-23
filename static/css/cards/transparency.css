@@ -9,6 +9,10 @@
 	background-color: var(--background-color);
 }
 
+.transparency h3 {
+	font-size: 0.89rem;
+}
+
 .transparency .expander {
 	justify-content: space-between;
 }

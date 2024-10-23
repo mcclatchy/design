@@ -273,17 +273,16 @@ section, .section {
   }
 }
 
-.partner-label::before {
+.partner-label::after {
   content: "";
   display: block;
   width: 100%;
   height: 1px;
   background-color: #AFB9CA;
-  margin-bottom: 15px;
+  margin-top: 15px;
 } 
 
 .partner-label span {
   position: relative;
   padding-right: 15px;
-  background-color: var(--background-color);
 }
