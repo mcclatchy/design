@@ -11,7 +11,7 @@
   --premium-serif: "DM Serif Display", serif;
 
   --h1: calc(var(--font-base)*1.55); 
-  --h2: calc(var(--font-base)*1.55);
+  --h2: calc(var(--font-base)*1.33);
   --h3: calc(var(--font-base)*0.89);
   --h4: var(--font-base);
 
@@ -460,6 +460,7 @@ figure img {
 
 figcaption, .caption {
   font: 400 0.667rem/1.4em var(--sans);
+  line-height: 18px;
   color: var(--caption-color, var(--secondary-text-color));
 }
 
