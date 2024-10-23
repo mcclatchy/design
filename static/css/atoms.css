@@ -11,7 +11,7 @@
   --premium-serif: "DM Serif Display", serif;
 
   --h1: calc(var(--font-base)*1.55); 
-  --h2: calc(var(--font-base)*1.55);
+  --h2: calc(var(--font-base)*1.33);
   --h3: calc(var(--font-base)*0.89);
   --h4: var(--font-base);
 
