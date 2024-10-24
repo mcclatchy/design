@@ -9,8 +9,8 @@
   --serif: "Noto Serif", Georgia, serif;
   --premium-serif: "DM Serif Display", serif;
   --h1: calc(var(--font-base)*1.55);
-  --h2: calc(var(--font-base)*1.55);
-  --h3: calc(var(--font-base)*0.9);
+  --h2: calc(var(--font-base)*1.33);
+  --h3: calc(var(--font-base)*0.89);
   --h4: var(--font-base);
   /* Spacing and alignment */
   --space: 20px;
@@ -90,13 +90,9 @@ h6, .h6 {
 
 h1, .h1 {
   font-size: var(--h1);
+  letter-spacing: -0.3px;
 }
 
-@media (max-width: 599px) {
-  h1, .h1 {
-    letter-spacing: -0.3px;
-  }
-}
 h2, .h2 {
   font-size: var(--h2);
 }
@@ -117,6 +113,17 @@ h6, .h6 {
   font: 0.75rem var(--sans);
 }
 
+@media (max-width: 599px) {
+  h1, .h1 {
+    font-size: var(--h2);
+  }
+  h2, .h2 {
+    font-size: 1.22rem;
+  }
+  h3, .h3 {
+    font-size: var(--font-base);
+  }
+}
 a {
   color: var(--link-color);
   text-decoration: var(--link-decoration);
@@ -436,6 +443,7 @@ figure img {
 
 figcaption, .caption {
   font: 400 0.667rem/1.4em var(--sans);
+  line-height: 18px;
   color: var(--caption-color, var(--secondary-text-color));
 }
 
@@ -722,28 +730,27 @@ section, .section {
   position: relative;
   grid-column: 1/-1;
   font: 700 1.55rem var(--sans);
-  color: var(--header-color);
+  color: var(--secondary-text-color);
 }
 
 @media (max-width: 600px) {
   .partner-label {
+    font-size: 1.22rem;
     margin: var(--page-padding);
   }
 }
-.partner-label::before {
+.partner-label::after {
   content: "";
-  position: absolute;
   display: block;
-  top: 50%;
   width: 100%;
-  height: 4px;
-  background-color: #ddd;
+  height: 1px;
+  background-color: #AFB9CA;
+  margin-top: 15px;
 }
 
 .partner-label span {
   position: relative;
   padding-right: 15px;
-  background-color: var(--background-color);
 }
 
 /**
@@ -1594,6 +1601,14 @@ footer {
 }
 
 /*
+ * Padding for video gallery on mobile
+ */
+@media (max-width: 600px) {
+  #media-gallery-video-gallery .wps-player-wrap {
+    padding: 0 var(--space);
+  }
+}
+/*
  * Regions are invisible wrappers for Taboola 
  * dynamic injection, same as custom-cards
  */
@@ -1614,7 +1629,7 @@ footer {
 .story-body {
   display: flow-root;
   font: var(--story-font, 18px/2em var(--serif));
-  line-height: 1.6em;
+  line-height: 1.66em;
   color: var(--story-text-color, var(--text-color));
   background-color: var(--story-background-color, var(--paper-color));
   --header-family: var(--story-subhead-family, var(--sans));
@@ -1628,7 +1643,11 @@ footer {
 }
 
 .story-body > .header {
-  margin: 40px auto;
+  margin: 40px auto 20px;
+}
+
+.story-body h3 {
+  font-size: var(--h2);
 }
 
 /**
@@ -1929,11 +1948,6 @@ footer {
   background-color: var(--zone-background-color, var(--media-background-color));
 }
 
-@media (max-width: 600px) {
-  [data-type=ad] {
-    background-color: var(--zone-background-color, var(--background-color));
-  }
-}
 /*
  * Leaderboard ad zone height set for CLS
  */
@@ -2268,11 +2282,16 @@ footer {
 }
 
 .correction {
+  box-sizing: border-box;
+  background-color: var(--media-background-color);
+  padding: var(--space);
   margin-bottom: 30px;
 }
 
-.correction p {
-  font-style: italic;
+.correction p, .correction time {
+  font-family: var(--sans);
+  font-size: 12px;
+  line-height: normal;
 }
 
 /**
@@ -2286,6 +2305,19 @@ footer {
   margin-top: 15px;
 }
 
+@media (max-width: 689px) {
+  .related-stories .package::after {
+    content: "";
+    border-bottom: 1px solid #d9d9d9;
+    width: 40px;
+    display: block;
+    margin-bottom: var(--space-sm);
+    padding-top: 5px;
+  }
+  .related-stories .package:last-child::after {
+    display: none;
+  }
+}
 /**
  * Author card
  *
@@ -2340,6 +2372,7 @@ footer {
 
 .author-card .summary {
   grid-area: bio;
+  font-size: var(--font-base);
 }
 
 .author-card .byline {
@@ -2433,16 +2466,24 @@ footer {
   background-color: var(--background-color);
 }
 
+.transparency h3 {
+  font-size: 0.78rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
 .transparency .expander {
   justify-content: space-between;
 }
 
 .transparency .summary {
-  font-size: 0.89rem;
+  font-size: var(--font-base);
+  font-family: var(--serif);
+  line-height: 30px;
 }
 
 .question {
-  --header-family: var(--serif);
+  --header-family: var(--sans);
   --header-weight: 400;
   --header-transform: none;
 }
