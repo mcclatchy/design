@@ -1596,6 +1596,11 @@ footer {
   padding: 0;
 }
 
+@media (max-width: 599px) {
+  [class*=digest-group] {
+    background-color: var(--paper-color);
+  }
+}
 [class*=digest-group] .digest {
   grid-column: auto;
 }
@@ -2194,9 +2199,6 @@ footer {
 .header.opinion .bio {
   display: grid;
   gap: var(--space-sm);
-  justify-items: center;
-  justify-content: center;
-  text-align: center;
 }
 
 .header.opinion .bio .thumb {
@@ -2297,8 +2299,14 @@ footer {
 /**
  * Related stories
  */
+.related-stories h3 {
+  font-size: 0.89rem;
+}
+
 .related-stories h5 {
+  font-size: 1.11rem;
   margin-top: 0;
+  margin-bottom: var(--space);
 }
 
 .related-stories hr {
