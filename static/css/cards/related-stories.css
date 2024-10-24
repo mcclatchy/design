@@ -2,8 +2,14 @@
  * Related stories
  */
 
+.related-stories h3 {
+  font-size: 0.89rem;
+}
+
 .related-stories h5 {
+  font-size: 1.11rem;
   margin-top: 0;
+  margin-bottom: var(--space);
 }
 
 .related-stories hr {
