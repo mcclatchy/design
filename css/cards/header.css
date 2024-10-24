@@ -35,9 +35,6 @@
 .header.opinion .bio {
   display: grid;
   gap: var(--space-sm);
-  justify-items: center;
-  justify-content: center;
-  text-align: center;
 }
 
 .header.opinion .bio .thumb {

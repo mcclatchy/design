@@ -96,6 +96,12 @@
   padding: 0;
 }
 
+@media(max-width: 599px) {
+  [class*=digest-group] {
+    background-color: var(--paper-color);
+  }
+}
+
 [class*=digest-group] .digest {
   grid-column: auto;
 }
