@@ -10,7 +10,9 @@
 }
 
 .transparency h3 {
-	font-size: 0.89rem;
+	font-size: 0.78rem;
+	font-weight: bold;
+	text-transform: uppercase;
 }
 
 .transparency .expander {
@@ -18,11 +20,13 @@
 }
 
 .transparency .summary {
-  font-size: 0.89rem;
+	font-size: var(--font-base);
+	font-family: var(--serif);
+	line-height: 30px;
 }
 
 .question {
-	--header-family: var(--serif);
+	--header-family: var(--sans);
 	--header-weight: 400;
 	--header-transform: none;
 }

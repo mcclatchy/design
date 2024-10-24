@@ -9,3 +9,18 @@
 .related-stories hr {
   margin-top: 15px;
 }
+
+@media(max-width: 689px) {
+  .related-stories .package::after {
+    content: '';
+    border-bottom: 1px solid #d9d9d9;
+    width: 40px;
+    display: block;
+    margin-bottom: var(--space-sm);
+    padding-top: 5px;
+  }
+
+  .related-stories .package:last-child::after {
+    display: none;
+  }
+}
