@@ -53,7 +53,7 @@ figure .img-container figcaption,
 
 /* class needs removed in WPS */
 .digest .label .impact {
-  --secondary-text-color: var(--dark-gray);
+  --impact-text-color: var(--darkgray);
 }
 
 /*
