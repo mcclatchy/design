@@ -15,7 +15,7 @@ section.big-news {
 
 .big-news .label::after {
   content: '';
-  border-bottom: 1px solid #AFB9CA;
+  border-bottom: 1px solid var(--lightgray);
   width: 100%;
   display: block;
   padding-top: var(--space);
@@ -47,7 +47,7 @@ section.big-news {
 @media (max-width: 599px) {
   .big-news .h1::before {
     content: '';
-    border-top: 1px solid #AFB9CA;
+    border-top: 1px solid var(--lightgray);
     width: 100%;
     display: block;
     padding-top: var(--space);

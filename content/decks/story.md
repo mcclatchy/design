@@ -20,7 +20,7 @@ What we don't know for sure is whether or not a fadeless carrot without details 
 
 <div class="quote">
   <blockquote>
-    <p>We can assume that any instance of a jet can be construed as a snooty bumper. Extending this logic, we can assume that any instance of a sycamore can be construed as a branchlike income.</p>
+    <p>We can assume any jet can be seen as a snooty bumper. Extending this, any sycamore can be viewed as a branchlike income.rel</p>
   </blockquote>
   <cite>Anon</cite>
 </div>
