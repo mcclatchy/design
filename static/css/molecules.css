@@ -48,7 +48,8 @@
   flex: 1;
 }
 
-.card .package .summary {
+.card .package .summary,
+.card .package summary {
   font-family: var(--serif);
 }
 
