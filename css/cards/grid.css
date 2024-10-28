@@ -21,6 +21,7 @@
 
 .grid .lead-item .summary {
   font-size: 0.89rem;
+  color: var(--secondary-text-color);
 }
 
 /*

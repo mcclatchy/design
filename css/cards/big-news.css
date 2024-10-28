@@ -65,7 +65,7 @@ section.big-news {
   }
 
   .big-news figcaption {
-    font: 0.78rem var(--serif);
+    font: 0.78rem var(--sans);
   }
 }
 

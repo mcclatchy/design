@@ -184,7 +184,7 @@ summary, .summary {
 .label, .label .h5 {
   font: bold 20px/1em var(--sans);
   text-transform: uppercase;
-  color: var(--secondary-text-color);
+  color: var(--text-color);
   margin: 0;
 }
 
