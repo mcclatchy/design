@@ -34,6 +34,7 @@
   --black: #241f21;
   --gray: #f5f7fa;
   --darkgray: #4B5972;
+  --lightgray: #afb9ca;
   --white: #ffffff;
   --light-brown: #f7efe0;
   --dark-brown: #a4906e;
@@ -183,7 +184,7 @@ summary, .summary {
 .label, .label .h5 {
   font: bold 20px/1em var(--sans);
   text-transform: uppercase;
-  color: var(--text-color);
+  color: var(--secondary-text-color);
   margin: 0;
 }
 
@@ -284,6 +285,11 @@ hr {
   --text-color: var(--sub-text-color);
   --secondary-text-color: var(--sub-secondary-text-color);
   --fill-color: var(--impact-text-color, var(--white));
+}
+
+.subonly .kicker,
+.subonly .time {
+  --secondary-text-color: var(--lightgray);
 }
 
 .disabled, [disabled] {

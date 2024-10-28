@@ -158,6 +158,7 @@
 .quote blockquote {
   margin: 0;
   font: bold 24px/1.2em var(--sans);
+  letter-spacing: -0.3px;
 }
 
 .quote blockquote p {

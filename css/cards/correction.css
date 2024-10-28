@@ -1,6 +1,4 @@
 .correction {
-  box-sizing: border-box;
-  background-color: var(--media-background-color);
   padding: var(--space);
   margin-bottom: 30px;
 }

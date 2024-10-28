@@ -10,7 +10,7 @@
 }
 
 .transparency h3 {
-	font-size: 0.78rem;
+	font-size: 1.11rem;
 	font-weight: bold;
 	text-transform: uppercase;
 }
@@ -32,5 +32,6 @@
 }
 
 .question h3 {
+	text-transform: none;
 	margin: 0;
 }
