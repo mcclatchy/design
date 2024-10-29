@@ -264,6 +264,7 @@ section, .section {
   position: relative;
   grid-column: 1/-1;
   font: 700 1.55rem var(--sans);
+  text-transform: capitalize;
 }
 
 @media(max-width: 600px) {
