@@ -19,8 +19,12 @@
   }
 }
 
-.grid .lead-item .summary {
-  font-size: 0.89rem;
+.grid .lead-item .kicker {
+  font-size: 1.11rem;
+}
+
+.grid .lead-item .summary,
+.grid .lead-item summary {
   font-family: var(--serif);
   color: var(--secondary-text-color);
 }
