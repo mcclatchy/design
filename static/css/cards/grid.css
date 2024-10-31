@@ -19,6 +19,16 @@
   }
 }
 
+.grid .lead-item .kicker {
+  font-size: 1.11rem;
+}
+
+.grid .lead-item .summary,
+.grid .lead-item summary {
+  font-family: var(--serif);
+  color: var(--secondary-text-color);
+}
+
 /*
  * Utilities 
  */
@@ -92,8 +102,24 @@
   padding: 0;
 }
 
+@media(max-width: 599px) {
+  [class*=digest-group] {
+    background-color: var(--paper-color);
+  }
+}
+
 [class*=digest-group] .digest {
   grid-column: auto;
+}
+
+/*
+ * Padding for video gallery on mobile
+ */
+
+@media(max-width: 600px) {
+  #media-gallery-video-gallery .wps-player-wrap {
+    padding: 0 var(--space);
+  }
 }
 
 /*

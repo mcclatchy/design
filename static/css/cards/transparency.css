@@ -9,16 +9,29 @@
 	background-color: var(--background-color);
 }
 
+.transparency h3 {
+	font-size: 1.11rem;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
 .transparency .expander {
 	justify-content: space-between;
 }
 
+.transparency .summary {
+	font-size: var(--font-base);
+	font-family: var(--serif);
+	line-height: 30px;
+}
+
 .question {
-	--header-family: var(--serif);
+	--header-family: var(--sans);
 	--header-weight: 400;
 	--header-transform: none;
 }
 
 .question h3 {
+	text-transform: none;
 	margin: 0;
 }

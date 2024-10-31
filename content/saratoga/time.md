@@ -8,7 +8,7 @@ Timestamps are always displayed on their own line, so `<time>` is converted to a
 
 #### EXAMPLE
 <div>
-  <time>DECEMBER 27, 2018 01:27 PM</time>
+  <time>December 27, 2024 01:27 PM</time>
 </div>
 
 #### RULES
@@ -17,8 +17,8 @@ Property | Value
 --- | ---
 Typeface | Noto Sans
 Weight | 400
-Size | 0.75rem (12px)
-Line height | 1.5em
+Size | 0.778rem (14px)
+Line height | Auto
 Case | Uppercase
 Letter spacing | Default
-Color | #707070
+Color | #4B5972

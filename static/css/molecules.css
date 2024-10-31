@@ -48,6 +48,10 @@
   flex: 1;
 }
 
+.card .package .summary {
+  font-family: var(--serif);
+}
+
 /**
  * Stack and row generics
  */
@@ -76,8 +80,8 @@
   gap: var(--package-gap, var(--space-sm));
   align-items: var(--package-align, start);
   padding: var(--package-padding, 0);
-  --header-family: var(--serif);
-  --header-weight: normal;
+  --header-family: var(--sans);
+  --header-weight: bold;
   --header-transform: none;
   --link-color: var(--text-color);
   --link-decoration: none;
@@ -118,6 +122,7 @@
 .package.thumb > .time {
   align-self: end;
 }
+
 /*
  * Children for all concepts
  */
@@ -258,28 +263,27 @@ section, .section {
 .partner-label {
   position: relative;
   grid-column: 1/-1;
-  font: 700 1.8rem var(--serif);
-  color: var(--header-color)
+  font: 700 1.55rem var(--sans);
+  text-transform: capitalize;
 }
 
 @media(max-width: 600px) {
   .partner-label {
+    font-size: 1.22rem;
     margin: var(--page-padding);
   }
 }
 
-.partner-label::before {
+.partner-label::after {
   content: "";
-  position: absolute;
   display: block;
-  top: 50%;
   width: 100%;
-  height: 4px;
-  background-color: #ddd;
+  height: 1px;
+  background-color: var(--lightgray);
+  margin-top: 15px;
 } 
 
 .partner-label span {
   position: relative;
   padding-right: 15px;
-  background-color: var(--background-color);
 }

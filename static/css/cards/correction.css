@@ -1,7 +1,10 @@
 .correction {
+  padding: var(--space);
   margin-bottom: 30px;
 }
 
-.correction p {
-  font-style: italic;
+.correction p, .correction time {
+  font-family: var(--sans);
+  font-size: 12px;
+  line-height: normal;
 }

@@ -16,15 +16,15 @@ The package molecule is the backbone of the design system. Spacing for  most mol
 
 The basic rules are simple:
 
-* 15px of padding on all sides
-* 10px of space between all direct children.
+* 0px of padding on all sides
+* 10px of space gap between all direct children.
 
 If the molecule is used inside a paper molecule, these are the only rules that will be applied. If the molecule is used inside of a card molecule or any other Flexbox or Grid container, the additional rules are applied:
 
 * The molecule will stretch to fill its container
 * If the last child is a time atom that atom is stretched to align with the bottom of the container.
 
-These differences are important. For example, rules for the digest state that there should be 30px of space between each article group, and 15px of space between the label and the headline. This is easily done by stacking `package` molecules.
+These differences are important. For example, rules for the digest state that there should be 20px of space between each article group, and 10px of space between the label and the headline. This is easily done by stacking `package` molecules.
 
 #### Example
 

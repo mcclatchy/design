@@ -17,8 +17,8 @@ Property | Value
 --- | ---
 Typeface | Noto Sans
 Weight | 700
-Size | 0.875rem (14px)
-Line height | 1.5em
-Color | #132dad
-Case | uppercase
+Size | 0.89rem (16px)
+Line height | Auto
+Color | #68B0F2
+Case | uppercase; sentence
 Letter spacing | Default

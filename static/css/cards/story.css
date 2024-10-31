@@ -5,11 +5,11 @@
 .story-body {
   display: flow-root;
   font: var(--story-font, 18px/2em var(--serif));
-  line-height: 1.6em;
+  line-height: 1.66em;
   color: var(--story-text-color, var(--text-color));
   background-color: var(--story-background-color, var(--paper-color));
   --header-family: var(--story-subhead-family, var(--sans));
-  --header-transform: var(--story-subhead-transform, uppercase);
+  --header-transform: var(--story-subhead-transform, inherit);
 }
 
 .story-body > * {
@@ -19,7 +19,11 @@
 }
 
 .story-body > .header {
-  margin: 40px auto;
+  margin: 40px auto 20px;
+}
+
+.story-body h3 {
+  font-size: var(--h2);
 }
 
 /**
@@ -139,8 +143,6 @@
 .quote {
   display: grid;
   gap: 15px;
-  justify-items: center;
-  text-align: center;
   max-width: 600px;
 }
 
@@ -154,6 +156,7 @@
 .quote blockquote {
   margin: 0;
   font: bold 24px/1.2em var(--sans);
+  letter-spacing: -0.3px;
 }
 
 .quote blockquote p {

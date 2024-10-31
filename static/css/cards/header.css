@@ -5,9 +5,7 @@
 .header {
   display: grid;
   gap: var(--space-sm);
-  justify-items: center;
-  text-align: center;
-  --header-family: var(--serif);
+  --header-family: var(--sans);
   --header-weight: bold;
   --header-transform: none;
 }
@@ -19,8 +17,6 @@
 .bio {
   display: grid;
   gap: var(--space-sm);
-  justify-items: center;
-  text-align: center;
   line-height: 1.2em;
 }
 
@@ -39,9 +35,6 @@
 .header.opinion .bio {
   display: grid;
   gap: var(--space-sm);
-  justify-items: center;
-  justify-content: center;
-  text-align: center;
 }
 
 .header.opinion .bio .thumb {
