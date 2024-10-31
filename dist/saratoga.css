@@ -1960,8 +1960,13 @@ footer {
  * Deprecated the `.zone` class due to ad-blockers.
  */
 [data-type=ad] {
-  padding: var(--space) 0;
   background-color: var(--zone-background-color, var(--media-background-color));
+}
+
+[data-type=ad] > * {
+  position: sticky;
+  top: 0;
+  padding: var(--space) 0;
 }
 
 /*
