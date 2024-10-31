@@ -1284,11 +1284,6 @@ html.msb .masthead {
   outline: none;
 }
 
-.main-nav.summary,
-.main-nav .summary {
-  font-size: 0.75rem;
-}
-
 .main-nav.open {
   transform: translateX(0);
 }
