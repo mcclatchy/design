@@ -15,6 +15,11 @@
     <fake-ad size="[970,250]"></fake-ad>
   </div>
 
+  <!-- Conditionally include the opinion banner -->
+  {{ if eq .Params.type "opinion" }}
+    {{ partial "opinion-banner" . }}
+  {{ end }}
+
   <!-- the wrapper was added by the front-end team -->
   <div class="server-rendered">
     <article class="story-body paper">{{ .Content }}</article>
