@@ -9,8 +9,6 @@
 }
 
 [data-type=ad] > * {
-  position: sticky;
-  top: 0;
   padding: var(--space) 0;
 }
 
@@ -80,4 +78,13 @@
   max-width: var(--story-width);
   margin: 40px auto;
   padding: 0;
+}
+
+.htlad-web-native {
+  padding: 0;
+}
+
+.scrollow > * {
+  position: sticky;
+  top: 70px; /* flag height - padding */
 }
