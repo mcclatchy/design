@@ -2365,7 +2365,6 @@ footer {
   --link-decoration: none;
   --header-transform: none;
   --gap: 0;
-  border-bottom: 0.5px solid #4B5972;
 }
 
 .author-card .thumb {
