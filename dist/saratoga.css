@@ -1991,7 +1991,7 @@ footer {
 /*
  * Zone treatment inside grids
  */
-.grid [data-type=ad] {
+.grid > [data-type=ad] {
   grid-column-end: -1;
 }
 
