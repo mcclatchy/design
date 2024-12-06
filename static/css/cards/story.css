@@ -19,7 +19,13 @@
 }
 
 .story-body > .header {
-  margin: 40px auto 20px;
+  margin: 20px auto 20px;
+}
+
+@media (min-width: 768px) {
+  .story-body > .header {
+    margin-top: 40px;
+  }
 }
 
 .story-body h3 {

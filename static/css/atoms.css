@@ -179,6 +179,7 @@ time, .time, .byline {
 
 summary, .summary {
   font: 0.75rem var(--sans);
+  line-height: 1.5em;
 }
 
 .label, .label .h5 {
