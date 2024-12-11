@@ -468,8 +468,14 @@ figure img {
 
 figcaption, .caption {
   font: 400 0.667rem/1.4em var(--sans);
-  line-height: 18px;
+  line-height: 1.5em;
   color: var(--caption-color, var(--secondary-text-color));
+}
+
+@media(min-width: 768px) {
+  figcaption, .caption {
+    font-size: 0.78rem;
+  }
 }
 
 figcaption .byline {
