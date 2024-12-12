@@ -86,12 +86,13 @@
  */
 
 .story-body .mugshot {
-  padding: 0 var(--space-sm);
+  padding: 0 var(--space);
+  float: revert;
 }
 
 .story-body .mugshot .img-container {
   display: grid;
-  grid-template-columns: 125px 1fr;
+  grid-template-columns: 125px;
   grid-gap: var(--space-sm);
 }
 
