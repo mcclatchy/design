@@ -172,7 +172,8 @@ custom-digest {
 
 .viafoura .vf-follow-button__text,
 .viafoura .vf-post-name-button__username,
-.viafoura h2.vf-subheading-text {
+.viafoura h2.vf-subheading-text,
+.viafoura time.vf-label {
   font-size: 14px;
 }
 
@@ -204,6 +205,10 @@ custom-digest {
 .viafoura .vf-post-name-button__username {
   font-weight: 700;
   text-transform: uppercase;
+}
+
+.viafoura .vf-nav-tab-button--inside-dropdown[data-v-5517aee9] {
+  align-items: center;
 }
 
 .viafoura .vf3-comments__bottom-action .vf-load-more.vf-label-text button.vf-button.vf-load-more__button.vf-loader-button,
