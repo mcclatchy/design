@@ -9,26 +9,45 @@
 
 {{- with $story }}
 <article class="card {{ $class }}" {{- if $taboola }} data-tb-region-item {{- end }}>
-  {{- $img := default "/img/kitten.jpg" (replace .lead_media.thumbnail "FREE" "LANDSCAPE") }}
-  <figure>
-    <a href="#" {{- if $taboola }} data-tb-link {{- end }}>
-      <img src="{{ $img }}" alt="{{ .lead_media.caption }}" width="1140" height="641" loading="{{ $loading }}">
-    </a>
-  </figure>
-  <div class="package">
-    <h2 class="caps h6">
-      <a class="kicker" href="#" {{- if $taboola }} data-tb-category {{- end }}>{{ .home_section.name }}</a>
-    </h2>
-    <h3 class="{{ $headlineSize }}">
-      <a href="#" {{- if $taboola }} data-tb-link data-tb-title {{- end }}>{{ .title }}</a>
-    </h3>
-    
     {{- if in $class "lead-item" }}
-    <p class="summary" {{- if $taboola }} data-tb-description {{- end }}>{{ .summary }}</p>
+    <div class="package">
+      <h2 class="caps h6">
+        <a class="kicker" href="#" {{- if $taboola }} data-tb-category {{- end }}>{{ .home_section.name }}</a>
+      </h2>
+      <h3 class="{{ $headlineSize }}">
+        <a href="#" {{- if $taboola }} data-tb-link data-tb-title {{- end }}>{{ .title }}</a>
+      </h3>
+    </div>
+    {{- $img := default "/img/kitten.jpg" (replace .lead_media.thumbnail "FREE" "LANDSCAPE") }}
+    <figure>
+      <a href="#" {{- if $taboola }} data-tb-link {{- end }}>
+        <img src="{{ $img }}" alt="{{ .lead_media.caption }}" width="1140" height="641" loading="{{ $loading }}">
+      </a>
+    </figure>
+    <div class="package">
+      <p class="summary" {{- if $taboola }} data-tb-description {{- end }}>{{ .summary }}</p>
+      {{- $pubdate := (time (int .modified_date)).Format "Jan 2, 2006 3:04 PM" }}
+      <div class="time" {{- if $taboola }} data-tb-date {{- end }}>{{ if in $class "sponsored" -}} sponsored content {{- else -}} {{ $pubdate }} {{- end }}</div>
+    </div>
+    {{ else }}
+    {{- $img := default "/img/kitten.jpg" (replace .lead_media.thumbnail "FREE" "LANDSCAPE") }}
+    <figure>
+      <a href="#" {{- if $taboola }} data-tb-link {{- end }}>
+        <img src="{{ $img }}" alt="{{ .lead_media.caption }}" width="1140" height="641" loading="{{ $loading }}">
+      </a>
+    </figure>
+    <div class="package">
+      <h2 class="caps h6">
+        <a class="kicker" href="#" {{- if $taboola }} data-tb-category {{- end }}>{{ .home_section.name }}</a>
+      </h2>
+      <h3 class="{{ $headlineSize }}">
+        <a href="#" {{- if $taboola }} data-tb-link data-tb-title {{- end }}>{{ .title }}</a>
+      </h3>
+      {{- $pubdate := (time (int .modified_date)).Format "Jan 2, 2006 3:04 PM" }}
+      <div class="time" {{- if $taboola }} data-tb-date {{- end }}>{{ if in $class "sponsored" -}} sponsored content {{- else -}} {{ $pubdate }} {{- end }}</div>
+    </div>
     {{ end -}}
 
-    {{- $pubdate := (time (int .modified_date)).Format "Jan 2, 2006 3:04 PM" }}
-    <div class="time" {{- if $taboola }} data-tb-date {{- end }}>{{ if in $class "sponsored" -}} sponsored content {{- else -}} {{ $pubdate }} {{- end }}</div>
-  </div>
+    
 </article>
 {{- end }}

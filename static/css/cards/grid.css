@@ -26,7 +26,7 @@
 .grid .lead-item .summary,
 .grid .lead-item summary {
   font-family: var(--serif);
-  color: var(--secondary-text-color);
+  font-size: 0.89em;
 }
 
 /*

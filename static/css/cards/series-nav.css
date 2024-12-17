@@ -7,6 +7,10 @@
   padding: 0; 
 }
 
+.series-nav h3 {
+  font-size: var(--h4);
+}
+
 .series-nav .h6 {
   font-weight: bold;
   text-transform: uppercase;
