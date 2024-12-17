@@ -8,3 +8,5 @@ package.json.bak
 .hugo_build.lock
 static/hi
 wiki
+hugo
+.tool-versions

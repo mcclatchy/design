@@ -11,10 +11,12 @@ aliases:
 
 <section class="grid">
   <!-- Option banner group (now hidden by default) -->
-  <div class"option-banners" hidden></div>
+  <div class="option-banners" hidden></div>
 
   {{< section-nav >}}
 
+
+  {{- .Page.Scratch.Set "cardIndex" 0 }} <!-- Explicitly set the index to zero -->
   {{< card class="lead-item" headline-size="h1" >}}
 
   <div class="zone two-rows" data-type="ad">
@@ -66,7 +68,6 @@ aliases:
   <div class="zone three-columns" data-type="ad">
     <fake-ad size="[[728,90],[320,50]]" data-zone="10"></fake-ad>
   </div>
-
 
   <div class="load-more">
     <a class="button big" href="#page2">Load More</a>
