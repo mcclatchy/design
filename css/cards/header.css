@@ -59,14 +59,14 @@
 
 .opinion-banner {
   display: grid;
-  grid-template-columns: 35px min-content 1fr;
+  grid-template-columns: 30px auto;
   grid-column-gap: var(--space-sm);
   grid-row-gap: 5px;
+  justify-content: center;
   align-items: center;
-  max-width: var(--story-width);
+  max-width: var(--section-width);
   margin: 0 auto;
-  padding: 15px;
-  background-color: var(--paper-color);
+  padding: var(--space-sm);
   color: var(--text-color);
 }
 
@@ -74,10 +74,8 @@
   margin: 0;
 }
 
-.opinion-banner svg {
-  position: relative;
-  top: .2em;
-  width: 100%;
+.opinion-banner p {
+  font: 0.75rem var(--sans);
 }
 
 @media(max-width: 700px) {
