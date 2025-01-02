@@ -1,6 +1,9 @@
 {
   "name": "saratoga-design-system",
   "version": "2.5.5",
+  "scripts": {
+    "version": "sass --style expanded --no-source-map builds:dist"
+  },
   "files": [
     "dist/saratoga.css",
     "dist/dsp.css",
