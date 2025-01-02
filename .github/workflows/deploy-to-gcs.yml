@@ -1,0 +1,40 @@
+name: Deploy to Google Cloud Storage
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  upload-files:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - id: auth
+        name: Authenticate with Google Cloud
+        uses: google-github-actions/auth@v2
+        with:
+          credentials_json: '${{ secrets.GCLOUD_SERVICE_KEY }}'
+
+      - name: Set up Google Cloud SDK
+        uses: google-github-actions/setup-gcloud@v2
+
+      - name: Get minor version
+        run: |
+          export VERSION=$(jq '.version | sub(".[0-9]$"; "") | tonumber' < package.json)
+          echo "version=$VERSION" >> $GITHUB_ENV
+
+      - name: Test version number
+        run: |
+          echo "gs://mc-high-impact/$version/sds"
+
+      # - name: Upload files to Google Cloud Storage
+      #   run: |
+      #     gsutil -m cp -r my_files gs://${{ secrets.GCP_BUCKET_NAME }}
+
+      # - name: List files in bucket (Optional - for verification)
+      #   run: |
+      #     gsutil ls gs://${{ secrets.GCP_BUCKET_NAME }}/my_files
