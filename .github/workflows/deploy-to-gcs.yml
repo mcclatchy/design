@@ -29,13 +29,9 @@ jobs:
           export VERSION=$(jq '.version | sub(".[0-9]$"; "") | tonumber' < package.json)
           echo "version=$VERSION" >> $GITHUB_ENV
 
-      - name: Test version number
+      - name: Sync files to Google Cloud Storage
         run: |
-          echo "gs://mc-high-impact/$version/sds"
-
-      # - name: Upload files to Google Cloud Storage
-      #   run: |
-      #     gsutil -m cp -r my_files gs://${{ secrets.GCP_BUCKET_NAME }}
+          gcloud storage rsync --dry-run --recursive dist gs://mc-high-impact/sds/$version
 
       # - name: List files in bucket (Optional - for verification)
       #   run: |
