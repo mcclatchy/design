@@ -2,7 +2,7 @@
   "name": "saratoga-design-system",
   "version": "2.5.7",
   "scripts": {
-    "build": "sass --style expanded --no-source-map builds:dist",
+    "build": "npx sass --no-source-map builds:dist",
     "version": "npm run build && git add -A dist",
     "postversion": "git push"
   },
@@ -11,5 +11,8 @@
     "dist/dsp.css",
     "dist/amp.css",
     "dist/vendor-cards.css"
-  ]
+  ],
+  "dependencies": {
+    "sass": "^1.83.0"
+  }
 }
