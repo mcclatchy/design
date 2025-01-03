@@ -12,8 +12,8 @@
 
   --h1: calc(var(--font-base)*1.55); 
   --h2: calc(var(--font-base)*1.33);
-  --h3: calc(var(--font-base)*0.89);
-  --h4: var(--font-base);
+  --h3: calc(var(--font-base)*1.11);
+  --h4: calc(var(--font-base)*0.89);
 
   /* Spacing and alignment */
   --space: 20px;
@@ -182,7 +182,7 @@ summary, .summary {
   line-height: 1.5em;
 }
 
-.label, .label .h5 {
+.label, .label .h3 {
   font: bold 20px/1em var(--sans);
   text-transform: uppercase;
   color: var(--text-color);

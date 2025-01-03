@@ -19,10 +19,6 @@
   }
 }
 
-.grid .lead-item .kicker {
-  font-size: 1.11rem;
-}
-
 .grid .lead-item .summary,
 .grid .lead-item summary {
   font-family: var(--serif);
