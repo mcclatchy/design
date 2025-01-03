@@ -2337,6 +2337,11 @@ footer {
 /**
  * Related stories
  */
+.related-stories > *:last-child {
+  border-bottom: 0.5px solid var(--secondary-text-color);
+  padding-bottom: var(--space);
+}
+
 .related-stories h3 {
   font-size: 0.89rem;
 }
@@ -2346,10 +2351,6 @@ footer {
   text-transform: uppercase;
   margin-top: 0;
   margin-bottom: var(--space);
-}
-
-.related-stories hr {
-  margin-top: 15px;
 }
 
 @media (max-width: 674px) {

@@ -31,8 +31,5 @@ jobs:
 
       - name: Sync files to Google Cloud Storage
         run: |
-          gcloud storage rsync --dry-run --recursive dist gs://mc-high-impact/sds/$version
-
-      # - name: List files in bucket (Optional - for verification)
-      #   run: |
-      #     gsutil ls gs://${{ secrets.GCP_BUCKET_NAME }}/my_files
+          gcloud storage rsync --recursive dist gs://mc-high-impact/sds/$version/dist
+          gcloud storage rsync --recursive static/css gs://mc-high-impact/sds/$version/css
