@@ -1,11 +1,9 @@
 name: Deploy to Google Cloud Storage
 
-# on:
-#   push:
-#     branches:
-#       - main
-
-on: workflow_dispatch
+on:
+  push:
+    branches:
+      - master
 
 jobs:
   upload-files:
