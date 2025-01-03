@@ -10,3 +10,4 @@ static/hi
 wiki
 hugo
 .tool-versions
+node_modules
