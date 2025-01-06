@@ -40,6 +40,7 @@
   --light-blue: #c3d8e4;
   --dark-blue: #273f57;
   --red: #AB0909;
+  --purple: #5F41AB;
   /* Generic color properties */
   --background-color: var(--gray);
   --text-color: #1F2933;
@@ -2264,6 +2265,7 @@ footer {
   margin: 0 auto;
   padding: var(--space-sm);
   color: var(--text-color);
+  --fill-color: var(--purple);
 }
 
 .opinion-banner * {
