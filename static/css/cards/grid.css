@@ -20,7 +20,7 @@
 }
 
 .grid .lead-item .kicker {
-  font-size: 1.11rem;
+  font-size: var(--h3);
 }
 
 .grid .lead-item .summary,

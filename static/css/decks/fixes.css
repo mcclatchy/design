@@ -45,17 +45,6 @@ figure .img-container figcaption,
   padding-top: 10px;
 }
 
-/* class needs removed in WPS */
-.load-more .impact {
-  color: var(--text-color);
-  background-color: var(--paper-color);
-}
-
-/* class needs removed in WPS */
-.digest .label .impact {
-  --impact-text-color: var(--darkgray);
-}
-
 /*
  * Fixes related to custom cards
  */
@@ -98,17 +87,6 @@ custom-digest {
 .button.big.impact.hcentered {
   background-color: var(--impact-color, var(--black));
   color: var(--impact-text-color, var(--white));
-}
-
-/*
- * Search and Promo buttons
- * impact class needs removed in WPS 
- */
-
-.search-form button,
-.swg-promo .button.impact {
-  --paper-color: var(--white);
-  --text-color: var(--black);
 }
 
 /*

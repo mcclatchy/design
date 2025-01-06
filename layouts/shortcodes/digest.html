@@ -6,7 +6,7 @@
 <div class="digest">
   <div class="paper" {{- with $region }} data-tb-region="{{ $region }}" {{- end }}>
     <a href="#" class="label {{ $label }}">
-      <span class="h5">{{ $kicker }}</span>
+      <span class="h3">{{ $kicker }}</span>
     </a>
     {{- with (index .Site.Data $feed).items }}
     {{- range $index, $story := first 5 . }}
@@ -20,7 +20,7 @@
       </figure>
       {{- end }}
       <div class="package">
-        <h2 class="h3"><a href="#" {{- with $region }} data-tb-title data-tb-link {{- end }}>{{ $story.title }}</a></h2>
+        <h2 class="h4"><a href="#" {{- with $region }} data-tb-title data-tb-link {{- end }}>{{ $story.title }}</a></h2>
         {{- if and (eq $label "sticky") (eq $index 0) }}
         <p class="summary">{{ .summary }}</p>
         {{- end }}
