@@ -10,8 +10,8 @@
   --premium-serif: "DM Serif Display", serif;
   --h1: calc(var(--font-base)*1.55);
   --h2: calc(var(--font-base)*1.33);
-  --h3: calc(var(--font-base)*0.89);
-  --h4: var(--font-base);
+  --h3: calc(var(--font-base)*1.11);
+  --h4: calc(var(--font-base)*0.89);
   /* Spacing and alignment */
   --space: 20px;
   --space-sm: calc(var(--space)/2);
@@ -170,7 +170,7 @@ summary, .summary {
   line-height: 1.5em;
 }
 
-.label, .label .h5 {
+.label, .label .h3 {
   font: bold 20px/1em var(--sans);
   text-transform: uppercase;
   color: var(--text-color);
@@ -1538,7 +1538,7 @@ footer {
   }
 }
 .grid .lead-item .kicker {
-  font-size: 1.11rem;
+  font-size: var(--h3);
 }
 
 .grid .lead-item .summary,
@@ -2343,11 +2343,11 @@ footer {
 }
 
 .related-stories h3 {
-  font-size: 0.89rem;
+  font-size: var(--h4);
 }
 
 .related-stories h5 {
-  font-size: 1.11rem;
+  font-size: var(--h3);
   text-transform: uppercase;
   margin-top: 0;
   margin-bottom: var(--space);
@@ -3225,17 +3225,6 @@ figure .img-container figcaption,
   padding-top: 10px;
 }
 
-/* class needs removed in WPS */
-.load-more .impact {
-  color: var(--text-color);
-  background-color: var(--paper-color);
-}
-
-/* class needs removed in WPS */
-.digest .label .impact {
-  --impact-text-color: var(--darkgray);
-}
-
 /*
  * Fixes related to custom cards
  */
@@ -3275,16 +3264,6 @@ custom-digest {
 .button.big.impact.hcentered {
   background-color: var(--impact-color, var(--black));
   color: var(--impact-text-color, var(--white));
-}
-
-/*
- * Search and Promo buttons
- * impact class needs removed in WPS 
- */
-.search-form button,
-.swg-promo .button.impact {
-  --paper-color: var(--white);
-  --text-color: var(--black);
 }
 
 /*
