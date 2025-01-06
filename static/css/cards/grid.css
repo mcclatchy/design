@@ -19,6 +19,10 @@
   }
 }
 
+.grid .lead-item .kicker {
+  font-size: var(--h3);
+}
+
 .grid .lead-item .summary,
 .grid .lead-item summary {
   font-family: var(--serif);
