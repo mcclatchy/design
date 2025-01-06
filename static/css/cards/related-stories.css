@@ -8,11 +8,11 @@
 }
 
  .related-stories h3 {
-  font-size: 0.89rem;
+  font-size: var(--h4);
 }
 
 .related-stories h5 {
-  font-size: 1.11rem;
+  font-size: var(--h3);
   text-transform: uppercase;
   margin-top: 0;
   margin-bottom: var(--space);
