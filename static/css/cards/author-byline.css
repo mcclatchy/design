@@ -1,0 +1,51 @@
+/**
+ * Author byline
+ */
+
+ .author-byline {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: start;
+  overflow: hidden;
+  gap: var(--space);
+  font-size: var(--byline-font-size, 14px);
+  font-family: var(--header-family);
+  font-weight: var(--header-weight);
+  text-transform: uppercase;
+  color: var(--byline-color, var(--darkgray));
+  --link-color: var(--darkgray);
+  --line-offset: calc(var(--gap) / 2);
+  --line-thickness: 1px;
+  --line-color: #d9d9d9;
+}
+
+.author-byline > * {
+  position: relative;
+  line-height: normal;
+}
+
+.author-byline > *::before {
+  content: '';
+  position: absolute;
+  background-color: var(--line-color);
+  z-index: 1;
+}
+
+.author-byline > *::before {
+  inline-size: var(--line-thickness);
+  block-size: 100vh;
+  inset-block-start: 0;
+  inset-inline-start: calc(var(--line-offset) * -1);
+}
+
+.author-byline .date,
+.author-byline .time,
+.author-byline time {
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.author-byline .comments {
+  display: inline-flex;
+  gap: var(--space);
+}
