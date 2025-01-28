@@ -2,19 +2,19 @@
  * Related stories
  */
 
-.related-stories h3 {
-  font-size: 0.89rem;
+.related-stories > *:last-child {
+  border-bottom: 0.5px solid var(--secondary-text-color);
+  padding-bottom: var(--space);
+}
+
+ .related-stories h3 {
+  font-size: var(--h4);
 }
 
 .related-stories h5 {
-  font-size: 1.11rem;
-  text-transform: uppercase;
+  font-size: var(--h3);
   margin-top: 0;
   margin-bottom: var(--space);
-}
-
-.related-stories hr {
-  margin-top: 15px;
 }
 
 @media(max-width: 674px) {

@@ -68,6 +68,7 @@
   margin: 0 auto;
   padding: var(--space-sm);
   color: var(--text-color);
+  --fill-color: var(--purple);
 }
 
 .opinion-banner * {
