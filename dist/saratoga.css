@@ -2350,7 +2350,6 @@ footer {
 
 .related-stories h5 {
   font-size: var(--h3);
-  text-transform: uppercase;
   margin-top: 0;
   margin-bottom: var(--space);
 }
@@ -3333,7 +3332,6 @@ custom-digest {
   font-family: "Noto Sans", sans-serif;
   font-size: 20px;
   font-weight: 700;
-  text-transform: uppercase;
 }
 
 .viafoura button.vf-follow-button.vf-button[data-v-632eed25] {
