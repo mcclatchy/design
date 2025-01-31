@@ -158,15 +158,16 @@ li {
 
 .kicker {
   color: var(--secondary-text-color);
-  font-size: 0.667rem;
+  font: 0.667rem/1em var(--sans);
   font-weight: bold;
   text-transform: uppercase;
+  line-height: 1em;
 }
 
 time, .time, .byline {
   display: inline-block;
   color: var(--secondary-text-color);
-  font: 0.778rem/1.1em var(--sans);
+  font: 0.778rem/1em var(--sans);
 }
 
 .byline a {

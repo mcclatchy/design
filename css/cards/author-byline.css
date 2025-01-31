@@ -1,0 +1,57 @@
+/**
+ * Author byline
+ */
+
+ .author-byline {
+  display: grid;
+  gap: var(--byline-gap, 5px);
+  font-size: var(--byline-font-size, 14px);
+  font-family: var(--header-family);
+  color: var(--byline-color, var(--darkgray));
+ }
+
+ .author-name,
+ .article-details .viafoura {
+  font-weight: bold;
+ }
+
+ .article-details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  overflow: hidden;
+  gap: 5px var(--space);
+  --link-color: var(--darkgray);
+  --line-offset: calc(var(--gap) / 2);
+  --line-thickness: 1px;
+  --line-color: #d9d9d9;
+}
+
+.article-details > * {
+  position: relative;
+  line-height: normal;
+}
+
+.article-details > *::before {
+  content: '';
+  position: absolute;
+  background-color: var(--line-color);
+  inline-size: var(--line-thickness);
+  block-size: 100vh;
+  inset-block-start: 0;
+  inset-inline-start: calc(var(--line-offset) * -1);
+  z-index: 1;
+}
+
+.article-details .comments {
+  display: inline-flex;
+  gap: 5px;
+}
+
+.article-details .comments > svg {
+  display: inline-block;
+  align-self: center;
+  height: 1em;
+  padding-top: 2px;
+  --fill-color: var(--byline-color);
+}
