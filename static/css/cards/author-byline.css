@@ -43,11 +43,6 @@
   z-index: 1;
 }
 
-.article details .article-credit,
-.article-details .viafoura {
-  font-size: 14px;
-}
-
 .article-details .comments {
   display: inline-flex;
   gap: 5px;
