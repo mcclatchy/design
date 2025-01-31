@@ -134,9 +134,7 @@ custom-digest {
 
 .viafoura {
   --dark-text-on-default-color: #0F1521;
-  color: #0F1521;
   font-family: 'Noto Sans', sans-serif;
-  font-size: 16px;
 }
 
 .viafoura p,
