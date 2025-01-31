@@ -48,7 +48,10 @@
   gap: 5px;
 }
 
-.article-details .comments svg {
+.article-details .comments > svg {
+  display: inline-block;
   align-self: center;
+  height: 1em;
   padding-top: 2px;
+  --fill-color: var(--byline-color);
 }
