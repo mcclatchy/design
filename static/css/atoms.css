@@ -36,6 +36,7 @@
   --darkgray: #4B5972;
   --lightgray: #afb9ca;
   --white: #ffffff;
+  --blue: #2760D1;
   --light-brown: #f7efe0;
   --dark-brown: #a4906e;
   --light-orange: #fee4d0;
@@ -59,7 +60,7 @@
   --sub-secondary-text-color: var(--gray);
 
   /* Link properties */
-  --link-color: #2760D1;
+  --link-color: var(--blue);
   --link-decoration: none;
 
   /* Paper properties */

@@ -22,6 +22,7 @@
   overflow: hidden;
   gap: 5px var(--space);
   --link-color: var(--darkgray);
+  --more-link-color: var(--blue);
   --line-offset: calc(var(--gap) / 2);
   --line-thickness: 1px;
   --line-color: #d9d9d9;

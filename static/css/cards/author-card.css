@@ -1,123 +1,77 @@
 /**
  * Author card
  *
- * Note: the DOM is quite old and could use some love
  */
 
-.author-card {
+ .author-card {
   display: grid;
-  gap: 15px;
+  gap: var(--space);
   grid-template-columns: auto 1fr;
   grid-template-areas: 
     "thumb info"
     "bio bio";
   font-family: var(--sans);
-  font-size: 0.875rem;
   align-items: center;
-  --package-padding: var(--space-sm) 0;
   --link-decoration: none;
   --header-transform: none;
-  --gap: 0;
+}
+
+@media(max-width: 768px) {
+  .author-card {
+    grid-template-columns: auto;
+    grid-template-areas: 
+    "thumb"
+    "info"
+    "bio";
+  }
+
+  .author-card .more-link::after {
+    display: none;
+  }
 }
 
 .author-card .thumb {
-  position: relative;
-  background-color: var(--media-background-color);
-  width: 70px;
-  height: 70px;
-  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  gap: calc(var(--space)*2);
   grid-area: thumb;
-  border-radius: 50%;
 }
 
 .author-card .thumb .initials {
-  align-content: center;
-  height: 100%;
-  font-size: 24px;
+  background-color: #ECEEF2;
+  flex: 0 0 45px;
+  height: 45px;
+  border-radius: 50%;
+  font-size: 20px;
   font-weight: 700;
   text-align: center;
+  text-transform: uppercase;
+  align-content: center;
 }
 
 .author-card .thumb img {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
 }
 
-.author-card > .flex {
-  display: grid;
+.author-card > .author-info {
   grid-area: info;
-  justify-items: start;
+  --link-color: var(--text-color);
 }
 
-.author-card .summary {
+@media(max-width: 768px) {
+  .author-card > .author-info {
+    padding-left: 0;
+  }
+}
+
+.author-card .social-media {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.author-card .author-description {
   grid-area: bio;
-}
-
-.author-card .byline {
-  margin: 0;
-}
-
-/**
- * Bio version
- */
-
-.author-bio {
-  padding: 0 var(--page-padding);
-  grid-template-columns: auto 1fr;
-  grid-row-gap: var(--space-sm);
-  grid-template-areas:
-    "thumb info"
-    "bio bio"
-    "contact contact";
-  --header-weight: 400;
-}
-
-.author-bio .a-details {
-  grid-area: info;
-}
-
-.author-bio .summary {
-  grid-area: bio;
-  align-self: start;
-  font-size: 0.89rem;
-}
-
-.author-bio .a-social {
-  grid-area: contact;
-}
-
-.author-bio .h6 {
-  color: var(--secondary-text-color);
-}
-
-@media(min-width: 600px) {
-  .author-bio {
-    padding: 0;
-  }
-}
-
-@media(min-width: 768px) {
-  .author-bio {
-    grid-template-columns: auto 3fr 2fr;
-    grid-template-areas: 
-      "thumb info contact"
-      "thumb bio contact";
-  }
-
-  .author-bio .a-details {
-    align-self: end;
-  }
-
-  .author-bio .thumb {
-    width: 160px;
-    height: 160px;
-  }
-
-  .author-bio .a-social {
-    justify-self: end;
-  }
 }
