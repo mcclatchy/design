@@ -10,8 +10,7 @@
   color: var(--byline-color, var(--darkgray));
  }
 
- .author-name,
- .article-details .viafoura {
+ .author-name {
   font-weight: bold;
  }
 
@@ -21,8 +20,6 @@
   justify-content: flex-start;
   overflow: hidden;
   gap: 5px var(--space);
-  --link-color: var(--darkgray);
-  --more-link-color: var(--blue);
   --line-offset: calc(var(--gap) / 2);
   --line-thickness: 1px;
   --line-color: #d9d9d9;
@@ -54,5 +51,5 @@
   align-self: center;
   height: 1em;
   padding-top: 2px;
-  --fill-color: var(--byline-color);
+  --fill-color: var(--byline-color, var(--darkgray));
 }
