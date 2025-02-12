@@ -247,13 +247,12 @@ section, .section {
 .social-media {
   place-content: center;
   display: flex;
+  align-items: center;
   gap: var(--social-media-gap, var(--space-sm));
 }
 
 .social-media svg {
   display: block;
-  width: 20px;
-  height: 20px;
   --fill-color: var(--text-color);
 }
 
