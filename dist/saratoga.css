@@ -31,6 +31,7 @@
   --darkgray: #4B5972;
   --lightgray: #afb9ca;
   --white: #ffffff;
+  --blue: #2760D1;
   --light-brown: #f7efe0;
   --dark-brown: #a4906e;
   --light-orange: #fee4d0;
@@ -51,7 +52,7 @@
   --sub-text-color: var(--white);
   --sub-secondary-text-color: var(--gray);
   /* Link properties */
-  --link-color: #2760D1;
+  --link-color: var(--blue);
   --link-decoration: none;
   /* Paper properties */
   --paper-color: var(--white);
@@ -127,7 +128,7 @@ h6, .h6 {
   }
 }
 a {
-  color: var(--link-color);
+  color: var(--link-color, inherit);
   text-decoration: var(--link-decoration);
 }
 
@@ -184,17 +185,15 @@ summary, .summary {
   align-items: center;
   gap: 5px;
   font: 700 0.89rem/1em var(--sans);
-  color: var(--more-link-color, var(--link-color));
   text-decoration: none;
   text-transform: uppercase;
+  color: var(--more-link-color, var(--link-color));
+  --fill-color: var(--more-link-color);
 }
 
 .more-link:hover {
   text-decoration: none;
-}
-
-.more-link:after {
-  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='8' viewBox='0 0 11 8' fill='none'%3E%3Cpath d='M10.3536 4.35355C10.5488 4.15829 10.5488 3.84171 10.3536 3.64645L7.17157 0.464467C6.97631 0.269205 6.65973 0.269204 6.46447 0.464467C6.2692 0.659729 6.2692 0.976311 6.46447 1.17157L9.29289 4L6.46447 6.82843C6.2692 7.02369 6.2692 7.34027 6.46447 7.53553C6.65973 7.7308 6.97631 7.7308 7.17157 7.53553L10.3536 4.35355ZM-4.37114e-08 4.5L10 4.5L10 3.5L4.37114e-08 3.5L-4.37114e-08 4.5Z' fill='%232760D1'/%3E%3C/svg%3E");
+  color: var(--more-link-color, var(--link-color));
 }
 
 .dateline {
@@ -728,13 +727,13 @@ section, .section {
 .social-media {
   place-content: center;
   display: flex;
+  align-items: center;
   gap: var(--social-media-gap, var(--space-sm));
 }
 
 .social-media svg {
   display: block;
-  width: 20px;
-  height: 20px;
+  --fill-color: var(--text-color);
 }
 
 /*
@@ -2371,113 +2370,68 @@ footer {
 /**
  * Author card
  *
- * Note: the DOM is quite old and could use some love
  */
 .author-card {
   display: grid;
-  gap: 15px;
+  gap: var(--space-sm) var(--space);
   grid-template-columns: auto 1fr;
   grid-template-areas: "thumb info" "bio bio";
   font-family: var(--sans);
-  font-size: 0.875rem;
   align-items: center;
-  --package-padding: var(--space-sm) 0;
-  --link-decoration: none;
-  --header-transform: none;
-  --gap: 0;
 }
 
+@media (max-width: 768px) {
+  .author-card {
+    grid-template-columns: auto;
+    grid-template-areas: "thumb" "info" "bio";
+  }
+  .author-card .more-link::after {
+    display: none;
+  }
+}
 .author-card .thumb {
-  position: relative;
-  background-color: var(--media-background-color);
-  width: 70px;
-  height: 70px;
-  box-sizing: border-box;
+  align-items: center;
   grid-area: thumb;
-  border-radius: 50%;
 }
 
 .author-card .thumb .initials {
-  align-content: center;
-  height: 100%;
-  font-size: 24px;
+  background-color: #ECEEF2;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  font-size: 20px;
   font-weight: 700;
   text-align: center;
+  text-transform: uppercase;
+  align-content: center;
 }
 
 .author-card .thumb img {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
 }
 
-.author-card > .flex {
-  display: grid;
+.author-card > .author-info {
   grid-area: info;
-  justify-items: start;
+  --link-color: var(--text-color);
+  --more-link-color: var(--blue);
 }
 
-.author-card .summary {
+.author-card .opinion svg {
+  vertical-align: middle;
+  --fill-color: var(--purple);
+}
+
+@media (max-width: 768px) {
+  .author-card .opinion svg {
+    display: none;
+  }
+}
+.author-card .author-description {
   grid-area: bio;
 }
 
-.author-card .byline {
-  margin: 0;
-}
-
-/**
- * Bio version
- */
-.author-bio {
-  padding: 0 var(--page-padding);
-  grid-template-columns: auto 1fr;
-  grid-row-gap: var(--space-sm);
-  grid-template-areas: "thumb info" "bio bio" "contact contact";
-  --header-weight: 400;
-}
-
-.author-bio .a-details {
-  grid-area: info;
-}
-
-.author-bio .summary {
-  grid-area: bio;
-  align-self: start;
-  font-size: 0.89rem;
-}
-
-.author-bio .a-social {
-  grid-area: contact;
-}
-
-.author-bio .h6 {
-  color: var(--secondary-text-color);
-}
-
-@media (min-width: 600px) {
-  .author-bio {
-    padding: 0;
-  }
-}
-@media (min-width: 768px) {
-  .author-bio {
-    grid-template-columns: auto 3fr 2fr;
-    grid-template-areas: "thumb info contact" "thumb bio contact";
-  }
-  .author-bio .a-details {
-    align-self: end;
-  }
-  .author-bio .thumb {
-    width: 160px;
-    height: 160px;
-  }
-  .author-bio .a-social {
-    justify-self: end;
-  }
-}
 /**
  * Author byline
  */
@@ -2489,8 +2443,7 @@ footer {
   color: var(--byline-color, var(--darkgray));
 }
 
-.author-name,
-.article-details .viafoura {
+.author-name {
   font-weight: bold;
 }
 
@@ -2500,7 +2453,6 @@ footer {
   justify-content: flex-start;
   overflow: hidden;
   gap: 5px var(--space);
-  --link-color: var(--darkgray);
   --line-offset: calc(var(--gap) / 2);
   --line-thickness: 1px;
   --line-color: #d9d9d9;
@@ -2519,6 +2471,7 @@ footer {
   block-size: 100vh;
   inset-block-start: 0;
   inset-inline-start: calc(var(--line-offset) * -1);
+  height: 25px;
   z-index: 1;
 }
 
@@ -2532,7 +2485,7 @@ footer {
   align-self: center;
   height: 1em;
   padding-top: 2px;
-  --fill-color: var(--byline-color);
+  --fill-color: var(--byline-color, var(--darkgray));
 }
 
 /**
