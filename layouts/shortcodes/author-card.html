@@ -1,20 +1,32 @@
 {{ if eq ($.Get "version") "bio" }}
 
-<div class="author-card author-bio package">
+<div class="author-card author-bio">
   <div class="thumb">
-    <div class="initials">AM</div>
-    <!-- <img src="/img/aaron_moody.jpg" width="400" height="400" alt="Aaron Moody"> -->
+    <!-- <div class="initials">AM</div> -->
+    <img src="/img/aaron_moody.jpg" width="400" height="400" alt="Aaron Moody">
   </div>
-  <div class="a-details package">
-    <!-- <span class="h6 gray">SPORTS REPORTER</span> -->
-    <h3 class="name">Aaron Moody</h3>
+  <div class="article-details">
+    <a class="author-name" href="mailto:amoody@newsobserver.com">Aaron Moody</a>
+    <!-- included if writer is an opinion contributor-->
+    <div class="opinion">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
+      <path d="M0 2.50009C0 1.39691 0.896914 0.5 2.00009 0.5H14.0006C15.1038 0.5 16.0007 1.39691 16.0007 2.50009V11.5005C16.0007 12.6036 15.1038 13.5006 14.0006 13.5006H9.66604L5.80025 16.4007C5.65024 16.5132 5.44711 16.5319 5.27523 16.4476C5.10335 16.3632 5.00022 16.1913 5.00022 16.0007V13.5006H2.00009C0.896914 13.5006 0 12.6036 0 11.5005V2.50009ZM5.00022 4.00015C4.44707 4.00015 4.00017 4.44705 4.00017 5.00019V6.50026C4.00017 7.05341 4.44707 7.5003 5.00022 7.5003H6.00026V7.72844C6.00026 8.09408 5.73462 8.40659 5.37211 8.46909L5.12522 8.50972C4.71583 8.57847 4.44082 8.96286 4.50957 9.37226C4.57832 9.78165 4.96271 10.0567 5.37211 9.98791L5.61899 9.94728C6.70341 9.76602 7.50032 8.82848 7.50032 7.72844V6.50026V5.75023V5.00019C7.50032 4.44705 7.05343 4.00015 6.50028 4.00015H5.00022ZM12.0005 6.50026V5.75023V5.00019C12.0005 4.44705 11.5536 4.00015 11.0005 4.00015H9.50041C8.94726 4.00015 8.50037 4.44705 8.50037 5.00019V6.50026C8.50037 7.05341 8.94726 7.5003 9.50041 7.5003H10.5005V7.72844C10.5005 8.09408 10.2348 8.40659 9.8723 8.46909L9.62542 8.50972C9.21602 8.57847 8.94101 8.96286 9.00976 9.37226C9.07852 9.78165 9.46291 10.0567 9.8723 9.98791L10.1192 9.94728C11.2036 9.76602 12.0005 8.82848 12.0005 7.72844V6.50026Z"/>
+      </svg>
+      Opinion Contributor
+    </div>
+    {{ template "shortcodes/social-media-author.html" }}
+    <div class="author-phone">
+      <svg xmlns="http://www.w3.org/2000/svg" width="15" height="16" viewBox="0 0 15 16" fill="none">
+      <path d="M3.57394 1.02345L3.57415 1.02339C3.88722 0.937861 4.21269 1.08761 4.35239 1.37488L4.36952 1.41599L5.54139 4.22849L5.54148 4.22869C5.65551 4.50205 5.57699 4.81719 5.34662 5.00552L3.9023 6.18617L3.59958 6.43364L3.76676 6.78709C4.79181 8.95415 6.54591 10.7082 8.71296 11.7333L9.06597 11.9003L9.31349 11.5982L10.4971 10.1539L10.4971 10.1539L10.4988 10.1517C10.6831 9.92425 10.9997 9.84403 11.2743 9.95858L11.2745 9.95866L14.087 11.1305L14.088 11.131C14.3994 11.2599 14.5658 11.5996 14.4767 11.9259L14.4766 11.9261L13.7739 14.5028C13.7738 14.503 13.7738 14.5032 13.7737 14.5034C13.6923 14.7976 13.4255 15 13.125 15C6.1531 15 0.5 9.34695 0.5 2.37505C0.5 2.07454 0.702379 1.8078 0.996637 1.72635C0.996832 1.72629 0.997027 1.72624 0.997222 1.72619L3.57394 1.02345Z"/>
+      <path d="M3.57394 1.02345L3.57415 1.02339C3.88722 0.937861 4.21269 1.08761 4.35239 1.37488L4.36952 1.41599L5.54139 4.22849L5.54148 4.22869C5.65551 4.50205 5.57699 4.81719 5.34662 5.00552L3.9023 6.18617L3.59958 6.43364L3.76676 6.78709C4.79181 8.95415 6.54591 10.7082 8.71296 11.7333L9.06597 11.9003L9.31349 11.5982L10.4971 10.1539L10.4971 10.1539L10.4988 10.1517C10.6831 9.92425 10.9997 9.84403 11.2743 9.95858L11.2745 9.95866L14.087 11.1305L14.088 11.131C14.3994 11.2599 14.5658 11.5996 14.4767 11.9259L14.4766 11.9261L13.7739 14.5028C13.7738 14.503 13.7738 14.5032 13.7737 14.5034C13.6923 14.7976 13.4255 15 13.125 15C6.1531 15 0.5 9.34695 0.5 2.37505C0.5 2.07454 0.702379 1.8078 0.996637 1.72635C0.996832 1.72629 0.997027 1.72624 0.997222 1.72619L3.57394 1.02345Z"/>
+      <path d="M3.57394 1.02345L3.57415 1.02339C3.88722 0.937861 4.21269 1.08761 4.35239 1.37488L4.36952 1.41599L5.54139 4.22849L5.54148 4.22869C5.65551 4.50205 5.57699 4.81719 5.34662 5.00552L3.9023 6.18617L3.59958 6.43364L3.76676 6.78709C4.79181 8.95415 6.54591 10.7082 8.71296 11.7333L9.06597 11.9003L9.31349 11.5982L10.4971 10.1539L10.4971 10.1539L10.4988 10.1517C10.6831 9.92425 10.9997 9.84403 11.2743 9.95858L11.2745 9.95866L14.087 11.1305L14.088 11.131C14.3994 11.2599 14.5658 11.5996 14.4767 11.9259L14.4766 11.9261L13.7739 14.5028C13.7738 14.503 13.7738 14.5032 13.7737 14.5034C13.6923 14.7976 13.4255 15 13.125 15C6.1531 15 0.5 9.34695 0.5 2.37505C0.5 2.07454 0.702379 1.8078 0.996637 1.72635C0.996832 1.72629 0.997027 1.72624 0.997222 1.72619L3.57394 1.02345Z" />
+      </svg>
+       000-000-0000
+    </div>
   </div>
-  <div class="summary">
-    <span>Aaron Moody is a sports and general reporter for the News &amp; Observer. Here is a second sentence for the bio because it will probably be longer than this. Maybe even longer I don't know.</span>
-  </div>
-  <div class="a-social package">
-    <span class="h6 connect">Connect with Aaron:</span>
-    {{ template "shortcodes/social-media.html" }}
+  <div class="author-description">
+    <span>Since 1989, David J. Neal’s domain at the Miami Herald has expanded to include writing about Panthers (NHL and FIU), Dolphins, old school animation, food safety, fraud, naughty lawyers, bad doctors and all manner of breaking news. He drinks coladas whole. He does not work Indianapolis 500 Race Day.</span>
+    <a href="#custom-url-from-cue">Support my work with a digital subscription</a>
   </div>
 </div>
 
@@ -23,10 +35,10 @@
 <div class="story-module">
   <div class="author-card">
     <div class="thumb">
-      <div class="initials">AM</div>
-      <!-- <img src="/img/aaron_moody.jpg" width="400" height="400" alt="Aaron Moody"> -->
+      <!-- <div class="initials">AM</div> -->
+      <img src="/img/aaron_moody.jpg" width="400" height="400" alt="Aaron Moody">
     </div>
-    <div class="author-info article-details">
+    <div class="article-details">
       <a class="author-name" href="mailto:amoody@newsobserver.com">Aaron Moody</a>
       <!-- included if writer is an opinion contributor-->
       <div class="opinion">
