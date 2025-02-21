@@ -2430,6 +2430,10 @@ footer {
   line-height: 1.5em;
 }
 
+.author-description a {
+  display: inline-block;
+}
+
 /**
  * Author bio
  *
