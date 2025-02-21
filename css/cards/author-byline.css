@@ -28,6 +28,9 @@
 .article-details > * {
   position: relative;
   line-height: normal;
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
 .article-details > *::before {
@@ -42,15 +45,31 @@
   z-index: 1;
 }
 
-.article-details .comments {
-  display: inline-flex;
-  gap: 5px;
+.article-details svg {
+  align-self: center;
+  vertical-align: middle;
+  height: 1em;
 }
 
-.article-details .comments > svg {
-  display: inline-block;
-  align-self: center;
-  height: 1em;
-  padding-top: 2px;
-  --fill-color: var(--byline-color, var(--darkgray));
+.article-details .opinion {
+  color: var(--darkgray);
+}
+
+@media(max-width: 768px) {
+  .article-details .opinion svg {
+    display: none;
+  }
+}
+
+.article-details .social-media {
+  gap: var(--space-sm);
+}
+
+.article-details .comments {
+  font-weight: bold;
+  --fill-color: var(--text-color);
+}
+
+.article-details .more-link {
+  font-size: 1em;
 }
