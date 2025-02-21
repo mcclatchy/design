@@ -1,123 +1,97 @@
 /**
  * Author card
  *
- * Note: the DOM is quite old and could use some love
  */
 
-.author-card {
+ .author-card {
   display: grid;
-  gap: 15px;
-  grid-template-columns: auto 1fr;
+  gap: var(--space-sm) var(--space);
+  grid-template-columns: auto;
   grid-template-areas: 
-    "thumb info"
-    "bio bio";
+  "thumb"
+  "info"
+  "bio";
   font-family: var(--sans);
-  font-size: 0.875rem;
   align-items: center;
-  --package-padding: var(--space-sm) 0;
-  --link-decoration: none;
-  --header-transform: none;
-  --gap: 0;
+  max-width: 980px;
+}
+
+@media(min-width: 769px) {
+  .author-card {
+    grid-template-columns: auto 1fr;
+    grid-template-areas: 
+      "thumb info"
+      "bio bio";
+  }
 }
 
 .author-card .thumb {
-  position: relative;
-  background-color: var(--media-background-color);
-  width: 70px;
-  height: 70px;
-  box-sizing: border-box;
+  align-items: center;
+  align-self: start;
   grid-area: thumb;
+  width: 45px;
+  height: 45px;
+}
+
+.author-card .thumb img {
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
 }
 
 .author-card .thumb .initials {
-  align-content: center;
-  height: 100%;
-  font-size: 24px;
-  font-weight: 700;
-  text-align: center;
-}
-
-.author-card .thumb img {
-  position: absolute;
-  top: 0;
+  background-color: #ECEEF2;
   width: 100%;
   height: 100%;
-  object-fit: cover;
   border-radius: 50%;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  align-content: center;
 }
 
-.author-card > .flex {
-  display: grid;
+.author-card > .article-details {
   grid-area: info;
-  justify-items: start;
+  font-size: 0.778em;
+  --link-color: var(--text-color);
+  --more-link-color: var(--blue);
 }
 
-.author-card .summary {
+.author-description {
   grid-area: bio;
+  font-size: .67em;
+  line-height: 1.5em;
 }
 
-.author-card .byline {
-  margin: 0;
+.author-description a {
+  display: inline-block;
 }
 
 /**
- * Bio version
+ * Author bio
+ *
  */
 
 .author-bio {
-  padding: 0 var(--page-padding);
-  grid-template-columns: auto 1fr;
-  grid-row-gap: var(--space-sm);
-  grid-template-areas:
-    "thumb info"
-    "bio bio"
-    "contact contact";
-  --header-weight: 400;
+  padding: var(--space) var(--page-padding) 0;
 }
 
-.author-bio .a-details {
-  grid-area: info;
-}
-
-.author-bio .summary {
-  grid-area: bio;
-  align-self: start;
-  font-size: 0.89rem;
-}
-
-.author-bio .a-social {
-  grid-area: contact;
-}
-
-.author-bio .h6 {
-  color: var(--secondary-text-color);
+@media(min-width: 769px) {
+  .author-card.author-bio {
+    grid-template-areas: 
+      "thumb info"
+      "thumb bio";
+  }
 }
 
 @media(min-width: 600px) {
   .author-bio {
-    padding: 0;
+    padding: var(--space) 0;
   }
 }
 
-@media(min-width: 768px) {
-  .author-bio {
-    grid-template-columns: auto 3fr 2fr;
-    grid-template-areas: 
-      "thumb info contact"
-      "thumb bio contact";
-  }
-
-  .author-bio .a-details {
-    align-self: end;
-  }
-
-  .author-bio .thumb {
-    width: 160px;
-    height: 160px;
-  }
-
-  .author-bio .a-social {
-    justify-self: end;
-  }
+.author-bio .thumb {
+  width: 90px;
+  height: 90px;
 }
