@@ -1673,7 +1673,7 @@ footer {
     margin-top: 40px;
   }
 }
-.story-body h3 {
+.story-body > h3:not(.h3) {
   font-size: var(--h2);
 }
 
