@@ -2,13 +2,20 @@
 @use '../static/css/atoms';
 @use '../static/css/molecules';
 
+// Molecules
+@use '../static/css/molucules/items';
+@use '../static/css/molucules/collections';
+@use '../static/css/molucules/containers';
+
 // Base Cards
 @use '../static/css/cards/flag';
 @use '../static/css/cards/flag-old';
 @use '../static/css/cards/menu';
-@use '../static/css/cards/footer';
 @use '../static/css/cards/grid';
 @use '../static/css/cards/story';
+
+// Template/layout
+@use '../static/css/template/footer';
 
 // Individual cards
 @use '../static/css/cards/premium-topper';
