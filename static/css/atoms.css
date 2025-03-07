@@ -22,7 +22,9 @@
   
   --grid-row-gap: var(--space);
   --grid-column-gap: var(--space);
+  --container-gap: calc(var(--space)*2);
   --page-padding: var(--space);
+  --content-width: 1360px;
   --section-width: 1140px;
   --story-width: 728px;
   --menu-width: 390px;

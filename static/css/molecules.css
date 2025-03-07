@@ -246,6 +246,7 @@ section, .section {
 
 .social-media {
   place-content: center;
+  justify-content: flex-start;
   display: flex;
   align-items: center;
   gap: var(--social-media-gap, var(--space-sm));
