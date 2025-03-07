@@ -1,0 +1,16 @@
+/* Items - multiple elements */
+  
+.item {
+  display: grid;
+  gap: var(--item-gap, calc(var(--space-sm)/2));
+  align-content: start;
+  line-height: 1em;
+  --header-transform: none;
+  --link-color: var(--text-color);
+  --link-decoration: none;
+  --link-hover-decoration: underline;
+}
+
+.item >  * {
+  margin: 0;
+}
