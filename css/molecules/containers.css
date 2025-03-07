@@ -1,0 +1,32 @@
+/*
+* Containers - multiple collections
+*/
+
+.container {
+  display: grid;
+  justify-content: start;
+  grid-template-columns: 1fr;
+  gap: var(--container-gap, var(--grid-row-gap) var(--grid-column-gap));
+  grid-auto-flow: var(--grid-flow, dense);
+  align-items: var(--container-align, start);
+  padding: var(--container-padding, 0);
+  background-color: var(--container-background-color, transparent);
+  color: var(--container-text-color, var(--text-color));
+  --link-color: var(--text-color);
+}
+
+@media (min-width: 767px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1040px) {
+  .container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+  
+.container > * {
+  margin: 0;
+}

@@ -1,0 +1,13 @@
+/**
+ * Collections - multiple items
+ */
+
+ .collection {
+  display: grid;
+  align-content: start;
+  gap: var(--space);
+}
+
+.collection > * {
+  margin: 0;
+}
