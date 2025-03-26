@@ -12,23 +12,17 @@
 
 .breaking-news-macro {
   display: flex;
-  justify-content: space-between;
   flex-direction: row;
-  font-family: var(--sans);
-  font-size: 20px;
+  justify-content: space-between;
   max-width: var(--section-width);
-  padding: 15px;
-  margin:0 auto;
+  margin: 0 auto;
+  padding: 10px;
+  font-family: var(--sans);
+  line-height: 1;
 }
 
 .breaking-news-macro h3 {
   margin: 0;
-}
-
-@media (min-width: 690px) {
-  div.breaking-news-macro {
-      padding: 15px;
-  }
 }
 
 .breaking-news-macro div.breaking-title {
