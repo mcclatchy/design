@@ -12,6 +12,7 @@
 
  .author-name {
   font-weight: bold;
+  --link-color: var(--byline-color);
  }
 
  .article-details {
