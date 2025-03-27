@@ -3197,23 +3197,30 @@ section.big-news {
   background-color: var(--red);
   color: var(--white);
   max-width: 100%;
+  height: 50px;
 }
 
 .breaking-news-macro {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
-  max-width: var(--section-width);
-  margin: 0 auto;
-  padding: 10px;
+  flex-direction: row;
   font-family: var(--sans);
+  font-size: 20px;
   line-height: 1;
+  max-width: var(--section-width);
+  padding: 15px;
+  margin: 0 auto;
 }
 
 .breaking-news-macro h3 {
   margin: 0;
 }
 
+@media (min-width: 690px) {
+  div.breaking-news-macro {
+    padding: 15px;
+  }
+}
 .breaking-news-macro div.breaking-title {
   font-weight: bold;
 }
