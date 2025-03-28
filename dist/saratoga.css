@@ -2377,6 +2377,7 @@ footer {
  */
 .author-card {
   display: grid;
+  align-content: start;
   gap: var(--space-sm) var(--space);
   grid-template-columns: auto;
   grid-template-areas: "thumb" "info" "bio";
@@ -3197,7 +3198,6 @@ section.big-news {
   background-color: var(--red);
   color: var(--white);
   max-width: 100%;
-  height: 50px;
 }
 
 .breaking-news-macro {
@@ -3216,11 +3216,6 @@ section.big-news {
   margin: 0;
 }
 
-@media (min-width: 690px) {
-  div.breaking-news-macro {
-    padding: 15px;
-  }
-}
 .breaking-news-macro div.breaking-title {
   font-weight: bold;
 }
