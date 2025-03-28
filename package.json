@@ -1,6 +1,6 @@
 {
   "name": "saratoga-design-system",
-  "version": "2.7.3",
+  "version": "2.7.4",
   "scripts": {
     "build": "npx sass --no-source-map builds:dist",
     "version": "npm run build && git add -A dist",
