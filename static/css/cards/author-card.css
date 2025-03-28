@@ -5,6 +5,7 @@
 
  .author-card {
   display: grid;
+  align-content: start;
   gap: var(--space-sm) var(--space);
   grid-template-columns: auto;
   grid-template-areas: 
