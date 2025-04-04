@@ -70,6 +70,12 @@
   display: inline-block;
 }
 
+@media (max-width: 600px) {
+  .grid:has(.author-card) {
+      --grid-row-gap: var(--space);
+  }
+}
+
 /**
  * Author bio
  *
