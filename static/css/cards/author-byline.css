@@ -52,10 +52,6 @@
   height: 1em;
 }
 
-.article-details .opinion {
-  color: var(--darkgray);
-}
-
 @media(max-width: 768px) {
   .article-details .opinion svg {
     display: none;
