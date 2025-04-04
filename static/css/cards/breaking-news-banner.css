@@ -12,14 +12,13 @@
 
 .breaking-news-macro {
   display: flex;
-  justify-content: space-between;
   flex-direction: row;
-  font-family: var(--sans);
-  font-size: 20px;
-  line-height: 1;
+  justify-content: space-between;
   max-width: var(--section-width);
-  padding: 15px;
-  margin:0 auto;
+  margin: 0 auto;
+  padding: 10px;
+  font-family: var(--sans);
+  line-height: 1;
 }
 
 .breaking-news-macro h3 {
