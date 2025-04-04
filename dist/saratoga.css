@@ -1673,7 +1673,7 @@ footer {
     margin-top: 40px;
   }
 }
-.story-body h3 {
+.story-body > h3:not(.h3) {
   font-size: var(--h2);
 }
 
@@ -2436,6 +2436,11 @@ footer {
   display: inline-block;
 }
 
+@media (max-width: 600px) {
+  .grid:has(.author-card) {
+    --grid-row-gap: var(--space);
+  }
+}
 /**
  * Author bio
  *
@@ -2510,10 +2515,6 @@ footer {
   align-self: center;
   vertical-align: middle;
   height: 1em;
-}
-
-.article-details .opinion {
-  color: var(--darkgray);
 }
 
 @media (max-width: 768px) {
