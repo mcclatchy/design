@@ -2,39 +2,55 @@
  * AI Summary/Key Takeaways
  */
 
-.ai-summary {
-  font-family: var(--sans);
-  /* max-width: 550px; */
-  padding: 1rem;
-  position: relative;
-  background: linear-gradient(0deg, #0FB7FF, #BD56FF);
+.ai-summary-wrapper { 
   padding: 2px;
-  --grid-row-gap: 5px;
-  --secondary-text-color: var(--lightgray);
-  --link-color: var(--text-color);
+  position: relative;
+  border-radius: 3px;
+  background: linear-gradient(0deg, #BD56FF, #0FB7FF);
 }
 
-@media(max-width: 800px) {
-  .ai-summary {
+@media (max-width: 800px) {
+  .ai-summary-wrapper {
     margin: var(--space);
   }
 }
 
-.ai-summary-wrapper {
-  background-color: white;
+.ai-summary {
+  font-family: var(--sans);
+  background-color: var(--paper-color);
   padding: var(--space);
+  --grid-row-gap: 5px;
+  --columns: auto;
+  --secondary-text-color: var(--lightgray);
+  --link-color: var(--text-color);
+}
+
+@media (min-width: 630px) {
+  .ai-summary .grid {
+    grid-auto-flow: column;
+    align-items: baseline;
+  }
 }
 
 .ai-summary .expander {
   justify-content: space-between;
 }
 
+.ai-summary-header {
+  display: flex;
+  gap: var(--space-sm);
+  align-items: center;
+}
+
 .ai-summary p {
-  font-size: 12px;
+  font-size: 0.677em;
   color: var(--darkgray);
   margin: 0;
 }
 
 .ai-summary ul {
-  font-size: 14px;
+  list-style-type: square;
+  font-size: 0.78em;
+  line-height: 1.5em;
+  margin-bottom: 0;
 }
