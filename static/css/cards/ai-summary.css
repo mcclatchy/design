@@ -1,0 +1,40 @@
+/**
+ * AI Summary/Key Takeaways
+ */
+
+.ai-summary {
+  font-family: var(--sans);
+  /* max-width: 550px; */
+  padding: 1rem;
+  position: relative;
+  background: linear-gradient(0deg, #0FB7FF, #BD56FF);
+  padding: 2px;
+  --grid-row-gap: 5px;
+  --secondary-text-color: var(--lightgray);
+  --link-color: var(--text-color);
+}
+
+@media(max-width: 800px) {
+  .ai-summary {
+    margin: var(--space);
+  }
+}
+
+.ai-summary-wrapper {
+  background-color: white;
+  padding: var(--space);
+}
+
+.ai-summary .expander {
+  justify-content: space-between;
+}
+
+.ai-summary p {
+  font-size: 12px;
+  color: var(--darkgray);
+  margin: 0;
+}
+
+.ai-summary ul {
+  font-size: 14px;
+}
