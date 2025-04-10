@@ -10,7 +10,7 @@
 }
 
 @media (max-width: 800px) {
-  .ai-summary-wrapper {
+  .story-body .ai-summary-wrapper {
     margin: var(--space);
   }
 }
