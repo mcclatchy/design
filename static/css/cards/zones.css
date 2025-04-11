@@ -80,6 +80,10 @@
   padding: 0;
 }
 
+[data-type=ad]:has(> .htlad-web-native) {
+  --zone-background-color: var(--paper-color);
+}
+
 .htlad-web-native {
   padding: 0;
 }
