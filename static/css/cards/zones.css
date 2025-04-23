@@ -97,18 +97,26 @@
   height: 106px;
 }
 
-.sticky-leaderboard {
+#zone-el-2.sticky-leaderboard {
   position: fixed;
   top: 90px;
   z-index: 98;
   width: 100vw;
-  height: 90px;
-  padding: 8px 0;
+  height: 106px;
   overflow: hidden;
 }
 
-@media(max-width: 667px) {
-  .sticky-leaderboard {
+#zone-el-2.sticky-leaderboard > * {
+  padding: 8px 0;
+}
+
+@media(max-width: 767px) {
+  #zoneContainer:has(.sticky-leaderboard),
+  #zone-el-2.sticky-leaderboard {
+    height: 66px;
+  }
+
+  #zone-el-2.sticky-leaderboard {
     top: 45px;
   }
 }
