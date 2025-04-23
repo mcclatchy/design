@@ -12,6 +12,7 @@
 
  .author-name {
   font-weight: bold;
+  --link-color: var(--byline-color);
  }
 
  .article-details {
@@ -49,10 +50,6 @@
   align-self: center;
   vertical-align: middle;
   height: 1em;
-}
-
-.article-details .opinion {
-  color: var(--darkgray);
 }
 
 @media(max-width: 768px) {
