@@ -10,6 +10,7 @@ aliases:
 {{% header %}}
 <!-- {{< figure >}} -->
 {{< ai-video-player >}}
+{{< ai-summary >}}
 {{< series-nav >}}
 
 {{< correction >}}
