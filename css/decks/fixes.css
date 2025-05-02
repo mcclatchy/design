@@ -129,7 +129,7 @@ custom-digest {
 }
 
 /*
- * Viafoura
+ * Viafoura - comments vendor
  */
 
 .viafoura {
@@ -161,6 +161,14 @@ custom-digest {
 
 .viafoura button.vf-follow-button.vf-button[data-v-632eed25] {
   padding: 5px 10px;
+}
+
+.viafoura span.vf-follow-button__visible-text[data-v-25cf7183] {
+  position: relative;
+}
+
+.viafoura .vf-follow-button__hidden-text[data-v-25cf7183] {
+  display: none;
 }
 
 .viafoura #commentingIntro,
