@@ -99,7 +99,6 @@
 
 #zone-el-2.sticky-leaderboard {
   position: fixed;
-  top: 90px;
   z-index: 98;
   width: 100vw;
   height: 106px;
@@ -114,9 +113,5 @@
   #zoneContainer:has(.sticky-leaderboard),
   #zone-el-2.sticky-leaderboard {
     height: 66px;
-  }
-
-  #zone-el-2.sticky-leaderboard {
-    top: 45px;
   }
 }
