@@ -3255,6 +3255,7 @@ section.big-news {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  gap: var(--space-sm);
   max-width: var(--section-width);
   margin: 0 auto;
   padding: 10px;
@@ -3271,7 +3272,6 @@ section.big-news {
 }
 
 .breaking-news-macro div.close-breaking-news {
-  padding-left: 20px;
   opacity: 1;
   transition: all 0.6s ease;
   min-width: 10px;
