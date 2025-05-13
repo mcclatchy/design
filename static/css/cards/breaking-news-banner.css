@@ -5,9 +5,10 @@
  */
 
  .breaking-news-organism {
-  --fill-color: var(--white);
   color: var(--white);
   background-color: var(--red);
+  --text-color: var(--white);
+  --fill-color: var(--text-color);
   max-width: 100%;
   height: 41px;
 }
@@ -28,11 +29,11 @@
   margin: 0;
 }
 
-.breaking-news-macro div.breaking-title {
-  font-weight: bold;
+.breaking-title {
+  font-weight: 400;
 }
 
-.breaking-news-macro div.close-breaking-news {
+.close-breaking-news {
   flex: none;
   align-content: center;
   opacity: 1;
