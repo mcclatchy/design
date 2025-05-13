@@ -26,11 +26,12 @@
 }
 
 .breaking-news-macro h3 {
+  font-weight: 400;
   margin: 0;
 }
 
 .breaking-title {
-  font-weight: 400;
+  font-weight: 700;
 }
 
 .close-breaking-news {
