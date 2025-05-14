@@ -115,3 +115,11 @@
     height: 66px;
   }
 }
+
+#sticky_ad_close {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  cursor: pointer;
+  --fill-color: var(--black);
+}
