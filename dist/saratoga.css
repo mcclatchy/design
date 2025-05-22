@@ -3328,10 +3328,9 @@ section.big-news {
   --grid-row-gap: 5px;
   --columns: auto;
   --secondary-text-color: var(--lightgray);
-  --link-color: var(--text-color);
 }
 
-@media (min-width: 630px) {
+@media (min-width: 797px) {
   .ai-summary .grid {
     grid-auto-flow: column;
     align-items: baseline;
@@ -3344,14 +3343,18 @@ section.big-news {
 
 .ai-summary-header {
   display: flex;
-  gap: var(--space-sm);
+  gap: 5px;
   align-items: center;
 }
 
 .ai-summary p {
-  font-size: 0.677em;
+  font-size: 0.67em;
   color: var(--darkgray);
   margin: 0;
+}
+
+.ai-summary p a {
+  display: inline-block;
 }
 
 .ai-summary ul {
