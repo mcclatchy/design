@@ -142,7 +142,7 @@ custom-digest {
   color: white;
   font: 700 16px/24px "Noto Sans",sans-serif;
   text-transform: uppercase;
-  padding: .4em 1em
+  padding: .4em 1em;
 }
 
 .viafoura .vf3-comments__bottom-action .vf-load-more.vf-label-text button.vf-button.vf-load-more__button.vf-loader-button:hover,
