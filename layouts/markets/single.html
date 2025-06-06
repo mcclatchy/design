@@ -21,9 +21,11 @@
   {{ range sort $.Site.Data.markets "sort" }}
 
   {{ $url := default (printf "https://www.%s.com" .domain) .url }}
-  {{ $logos := $.Resources.Match (printf "%s/*.svg" .domain) }}
-  {{ $icons := $.Resources.Match (printf "%s/icons/*.svg" .domain) }}
+  {{ $logos := $.Resources.Match (printf "%s/*" .domain) }}
+  {{ $icons := $.Resources.Match (printf "%s/icons/*" .domain) }}
   {{ $domain := .domain }}
+
+  {{ $logos }}
   
   <div class="panel">
     <div class="market">
