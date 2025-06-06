@@ -137,121 +137,15 @@ custom-digest {
   font-family: 'Noto Sans', sans-serif;
 }
 
-.viafoura p,
-.viafoura .all-comments p,
-.viafoura p.vf-primary-text,
-.viafoura .vf-post-name-button__username,
-.viafoura nav.vf-tabbed-nav .vf-nav-label .vf-label-text,
-.viafoura .vf-dropdown-button__text {
-  font-size: 16px;
-}
-
-.viafoura .vf-follow-button__text,
-.viafoura .vf-post-name-button__username,
-.viafoura h2.vf-subheading-text,
-.viafoura time.vf-label {
-  font-size: 14px;
-}
-
-.viafoura h2.vf-heading-text {
-  font-family: 'Noto Sans', sans-serif;
-  font-size: 20px;
-  font-weight: 700;
-}
-
-.viafoura button.vf-follow-button.vf-button[data-v-632eed25] {
-  padding: 5px 10px;
-}
-
-.viafoura span.vf-follow-button__visible-text[data-v-25cf7183] {
-  position: relative;
-}
-
-.viafoura .vf-follow-button__hidden-text[data-v-25cf7183] {
-  display: none;
-}
-
-.viafoura #commentingIntro,
-.viafoura .v3-comments__post-form {
-  border-top: 1px solid #ECEEF2;
-  margin: 20px 0;
-  padding-top: 20px;
-}
-
-.viafoura .vf-tabbed-nav .vf-label-text,
-.viafoura .vf-tabbed-nav .vf-nav-tab-button__text[data-v-5517aee9],
-.viafoura .vf-dropdown-button__text,
-.viafoura .vf-post-name-button__username {
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-.viafoura .vf-nav-tab-button--inside-dropdown[data-v-5517aee9] {
-  align-items: center;
-}
-
-.viafoura div.vf3-comments__tabbed-nav__right[data-v-66fa0041] {
-  justify-content: space-between;
-  width: 100%;
-  margin-left: 0;
-}
-
-.viafoura .vf3-comments__bottom-action .vf-load-more.vf-label-text button.vf-button.vf-load-more__button.vf-loader-button,
-.viafoura button.big.button {
+.viafoura .vf3-comments__bottom-action .vf-load-more.vf-label-text button.vf-button.vf-load-more__button.vf-loader-button,.viafoura button.big.button {
   background-color: var(--black);
   color: white;
-  font: 700 16px/24px 'Noto Sans', sans-serif;
+  font: 700 16px/24px "Noto Sans",sans-serif;
   text-transform: uppercase;
   padding: .4em 1em;
 }
 
 .viafoura .vf3-comments__bottom-action .vf-load-more.vf-label-text button.vf-button.vf-load-more__button.vf-loader-button:hover,
 .viafoura button.big.button:hover {
-  color: #B0CBFF;
-}
-
-.viafoura .vf-secondary-text,
-.viafoura .vf-comments-trending-articles[data-v-1e6aff7f] h2.vf-trending-articles__header {
-  font-size: 14px;
-  font-weight: 400;
-}
-
-.viafoura div.vf-post-form__new-content[data-v-45fba7ae] {
-  margin-bottom: 20px;
-  padding: 0;
-}
-
-.viafoura div.vf-content-layout[data-v-2396f95c] {
-  padding: 20px 0;
-}
-
-.viafoura .vf-button.is-size-tiny {
-  padding: 5px 10px;
-}
-
-.viafoura .vf-content-focus-container--default {
-  padding: 5px 0;
-}
-
-.viafoura .vf3-conversations-list--comments[data-v-5ce821cf] .vf3-conversations-list--comments--list {
-  margin: 0;
-}
-
-.viafoura .vf-actions-authentication,
-.viafoura .vf-post-form__new-content .vf-content-layout__right::before,
-.viafoura .vf-post-form__new-content .vf-content-layout__right::after,
-.viafoura div.vf-top-comments-info-trigger__container[data-v-e15d4864],
-.viafoura .vf-client-settings-button-logout {
-  display: none;
-}
-
-@media (max-width: 480px) {
-  .viafoura header.vf-comment-header[data-v-ddad5b80] {
-    align-items: flex-start;
-    flex-direction: column;
-  }
-
-  .viafoura .vf-comment-header .vf-comment-header__actions {
-    align-items: start;
-  }
+  color: white;
 }
