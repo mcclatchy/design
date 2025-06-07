@@ -185,3 +185,11 @@ td:first-child {
   border: 1px solid white;
   box-sizing: border-box;
 }
+
+/*
+ * Markets page
+ */
+
+.market img {
+  max-width: 100%;
+}
