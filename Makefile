@@ -26,7 +26,7 @@ live: public
 	git commit -m "publishing to gh-pages"; \
 	git fetch; \
 	git merge -s ours -m "merging with origin"; \
-	git push
+	git push origin HEAD:gh-pages
 
 public:
 	git worktree add -B gh-pages public origin/gh-pages
