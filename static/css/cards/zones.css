@@ -94,6 +94,7 @@
 }
 
 #zoneContainer:has(.sticky-leaderboard) {
+  position: relative;
   height: 106px;
 }
 
@@ -117,9 +118,12 @@
 }
 
 #sticky_ad_close {
-  position: absolute;
-  top: 0;
-  right: 25px;
+  position: fixed;
+  right: 0;
+  z-index: 99;
+  width: 20px;
+  padding-left: 10px;
+  background-color: var(--media-background-color);
   cursor: pointer;
   --fill-color: var(--black);
 }
