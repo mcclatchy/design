@@ -3354,6 +3354,7 @@ section.big-news {
 .ai-summary .expander {
   justify-content: space-between;
   align-items: baseline;
+  --link-color: var(--text-color);
 }
 
 .ai-summary-header {
