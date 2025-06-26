@@ -262,6 +262,17 @@ hr {
   border: none;
 }
 
+.button.vertical-video {
+  --button-background-color: #365FCA;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: var(--space) 0; 
+  padding: 8px 10px;
+  font-size: 12px;
+  text-transform: none;
+}
+
 .button > img {
   display: block;
 }
