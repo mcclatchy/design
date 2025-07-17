@@ -20,7 +20,7 @@ release: dist
 	git push origin $(version)
 
 live: public
-	hugo
+	./hugo
 	cd public; \
 	git add --all; \
 	git commit -m "publishing to gh-pages"; \
