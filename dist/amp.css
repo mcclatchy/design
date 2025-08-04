@@ -1761,6 +1761,7 @@ footer {
     grid-auto-flow: column;
     gap: var(--grid-row-gap) var(--grid-column-gap);
     align-items: baseline;
+  }
 }
 
 .ai-summary .expander {
