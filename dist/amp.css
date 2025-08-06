@@ -1741,7 +1741,7 @@ footer {
 
 @media (max-width: 800px) {
   .story-body .ai-summary-wrapper {
-    margin: var(--space);
+    margin: var(--space) 0;
   }
 }
 
@@ -1757,7 +1757,9 @@ footer {
 
 @media (min-width: 797px) {
   .ai-summary .grid {
+    display: grid;
     grid-auto-flow: column;
+    gap: var(--grid-row-gap) var(--grid-column-gap);
     align-items: baseline;
   }
 }
