@@ -12,10 +12,9 @@
     {{- range $index, $story := first 5 . }}
     <article class="card" {{- with $region }} data-tb-region-item {{- end }}>
       {{- if and (eq $label "sticky") (eq $index 0) }}
-      {{- $img := default "/img/kitten.jpg" (replace .lead_media.thumbnail "FREE" "LANDSCAPE") }}
       <figure>
         <a href="#" {{- with $region }} data-tb-link {{- end }}>
-          <img src="{{ $img }}" alt="{{ .lead_media.caption }}" width="1140" height="641" loading="lazy">
+          <img src="/img/kitten.jpg" alt="{{ .lead_media.caption }}" width="1140" height="641" loading="lazy">
         </a>
       </figure>
       {{- end }}

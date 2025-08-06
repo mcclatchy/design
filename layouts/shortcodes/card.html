@@ -18,10 +18,9 @@
         <a href="#" {{- if $taboola }} data-tb-link data-tb-title {{- end }}>{{ .title }}</a>
       </h3>
     </div>
-    {{- $img := default "/img/kitten.jpg" (replace .lead_media.thumbnail "FREE" "LANDSCAPE") }}
     <figure>
       <a href="#" {{- if $taboola }} data-tb-link {{- end }}>
-        <img src="{{ $img }}" alt="{{ .lead_media.caption }}" width="1140" height="641" loading="{{ $loading }}">
+        <img src="/img/kitten.jpg" alt="{{ .lead_media.caption }}" width="1140" height="641" loading="{{ $loading }}">
       </a>
     </figure>
     <div class="package">
@@ -30,10 +29,9 @@
       <div class="time" {{- if $taboola }} data-tb-date {{- end }}>{{ if in $class "sponsored" -}} sponsored content {{- else -}} {{ $pubdate }} {{- end }}</div>
     </div>
     {{ else }}
-    {{- $img := default "/img/kitten.jpg" (replace .lead_media.thumbnail "FREE" "LANDSCAPE") }}
     <figure>
       <a href="#" {{- if $taboola }} data-tb-link {{- end }}>
-        <img src="{{ $img }}" alt="{{ .lead_media.caption }}" width="1140" height="641" loading="{{ $loading }}">
+        <img src="/img/kitten.jpg" alt="{{ .lead_media.caption }}" width="1140" height="641" loading="{{ $loading }}">
       </a>
     </figure>
     <div class="package">
