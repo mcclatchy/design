@@ -24,6 +24,24 @@
   margin: 0;
 }
 
+.blog-branding .teaser {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.blog-branding .blog-brand-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.blog-branding .teaser .title {
+  font-size: 18px;
+  font-family: var(--serif);
+}
+
 /**
  * Opinion changes
  */
