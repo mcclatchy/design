@@ -1732,11 +1732,12 @@ footer {
 /**
  * AI Summary/Key Takeaways
  */
- .ai-summary-wrapper { 
-  padding: 2px;
+ .ai-summary-wrapper {
   position: relative;
-  border-radius: 3px;
   background: linear-gradient(0deg, #BD56FF, #0FB7FF);
+  margin: var(--space) 0;
+  padding: 2px;
+  border-radius: 3px;
 }
 
 @media (max-width: 800px) {
