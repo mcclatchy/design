@@ -7,8 +7,8 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Noto+Sans:wght@400;700&family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=fallback" rel="stylesheet">
 
     
-    <title>amp story</title>
-    <meta name="description" content="A sample AMP story page.">
+    <title>sitemap</title>
+    <meta name="description" content="A sample sitemap.">
     
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -85,9 +85,10 @@
 
     
   <script defer src="../../js/navigation.js"></script>
+  <script type="module" src="../../js/custom-card.js"></script>
 
   </head>
-  <body class="story" data-template="page">
+  <body class="decks" data-template="page">
   
 
 
@@ -377,76 +378,332 @@
 
 
   
-<div class="breaking-news-organism" id="primary-content">
-  <div class="breaking-news-macro">
-    <div>
-      <h3 class="h4">
-        <span class="breaking-title">BREAKING NEWS:  </span> 
-        <a href="https://alpha.montrealgazette.com/site-services/Newsletters/montreal-sports-newsletter/article54991.html"> Cricket is treated as the celebration in India </a>
-      </h3>
+  
+<div id="promo-banner">
+    <div id="promo-banner-wrapper" class="row">
+        <h3>Text for offer goes here</h3>
+        <button class="button">Save Now</button>
     </div>
-    <div class="close-breaking-news"><svg xmlns="http://www.w3.org/2000/svg" height="13.19px" viewBox="5.41 5.41 13.18 13.18" width="13.19px"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M18.3 5.71c-.39-.39-1.02-.39-1.41 0L12 10.59 7.11 5.7c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41L10.59 12 5.7 16.89c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0L12 13.41l4.89 4.89c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L13.41 12l4.89-4.89c.38-.38.38-1.02 0-1.4z"/></svg></div>
-  </div>
 </div>
   
+  <div id="zone-el-1" class="zone-el hidden"></div>
+  <div id="zone-el-2" class="zone-el zone" data-type="ad">
+    <fake-ad size="[[970,250],[300,250]]"></fake-ad>
+  </div><style>
+  .sitemap {
+    display: grid;
+    gap: var(--space-lg);
+    font-family: var(--sans);
+  }
 
-  <div class="zone" id="zone-el-2" data-type="ad">
-    <fake-ad size="[970,250]"></fake-ad>
+  .sitemap .header{
+    text-align: center;
+  }
+
+  .sitemap .row {
+    justify-content: center;
+    gap: 40px;
+  }
+
+  .sitemap a {
+    --link-color: var(--text-color);
+  }
+
+  .grid-sitemap {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: var(--space-lg) var(--space);
+    align-items: start;
+    --grid-column-gap: 5px;
+  }
+
+  .grid-sitemap.days {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--space);
+  }
+
+  .grid-sitemap.days-alt {
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+  }
+
+  .grid-sitemap.days-alt a {
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--lightgray);
+  }
+
+  .breadcrumb > span {
+    color: var(--darkgray);
+    font-size: 18px;
+    border-left: 1px solid var(--darkgray);
+    padding: 0 var(--space-sm);
+  }
+
+  .breadcrumb > span:not(:last-of-type) {
+    font-weight: normal;
+  }
+
+  .articles-list {
+    display: grid;
+    gap: var(--space-sm);
+    padding-top: var(--space-sm);
+  }
+
+  @media (max-width: 600px) {
+    .sitemap {
+        padding: var(--page-padding);
+    }
+
+    .sitemap .row {
+      gap: var(--space-sm);
+    }
+  }
+</style>
+
+<section class="sitemap">
+  <div class="header">
+    <h1 class="h1">Site Map Alt</h1>
+    <hr>
+  </div>
+  
+  <div class="row">
+    <a href="#">Today</a>
+    <a href="#">Yesterday</a>
+    <a href="#">This Week</a>
+    <a href="#">Last Week</a>
+  </div>
+  <div class="grid-sitemap">
+    <div class="grid">
+      <div class="h3">2025</div>
+      <a href="#">January</a>
+      <a href="#">February</a>
+      <a href="#">March</a>
+      <a href="#">April</a>
+      <a href="#">May</a>
+      <a href="#">June</a>
+      <a href="#">July</a>
+      <a href="#">August</a>
+      <a href="#">September</a>
+      <a href="#">October</a>
+    </div>
+    
+    <div class="grid">
+      <div class="h3">2024</div>
+      <a href="#">January</a>
+      <a href="#">February</a>
+      <a href="#">March</a>
+      <a href="#">April</a>
+      <a href="#">May</a>
+      <a href="#">June</a>
+      <a href="#">July</a>
+      <a href="#">August</a>
+      <a href="#">September</a>
+      <a href="#">October</a>
+      <a href="#">November</a>
+      <a href="#">December</a>
+    </div>
+    
+    <div class="grid">
+      <div class="h3">2023</div>
+      <a href="#">January</a>
+      <a href="#">February</a>
+      <a href="#">March</a>
+      <a href="#">April</a>
+      <a href="#">May</a>
+      <a href="#">June</a>
+      <a href="#">July</a>
+      <a href="#">August</a>
+      <a href="#">September</a>
+      <a href="#">October</a>
+      <a href="#">November</a>
+      <a href="#">December</a>
+    </div>
+    
+    <div class="grid">
+      <div class="h3">2022</div>
+      <a href="#">January</a>
+      <a href="#">February</a>
+      <a href="#">March</a>
+      <a href="#">April</a>
+      <a href="#">May</a>
+      <a href="#">June</a>
+      <a href="#">July</a>
+      <a href="#">August</a>
+      <a href="#">September</a>
+      <a href="#">October</a>
+      <a href="#">November</a>
+      <a href="#">December</a>
+    </div>
+
+    <div class="grid">
+      <div class="h3">2021</div>
+      <a href="#">January</a>
+      <a href="#">February</a>
+      <a href="#">March</a>
+      <a href="#">April</a>
+      <a href="#">May</a>
+      <a href="#">June</a>
+      <a href="#">July</a>
+      <a href="#">August</a>
+      <a href="#">September</a>
+      <a href="#">October</a>
+      <a href="#">November</a>
+      <a href="#">December</a>
+    </div>
+
+    <div class="grid">
+      <div class="h3">2020</div>
+      <a href="#">January</a>
+      <a href="#">February</a>
+      <a href="#">March</a>
+      <a href="#">April</a>
+      <a href="#">May</a>
+      <a href="#">June</a>
+      <a href="#">July</a>
+      <a href="#">August</a>
+      <a href="#">September</a>
+      <a href="#">October</a>
+      <a href="#">November</a>
+      <a href="#">December</a>
+    </div>
+
+    <div class="grid">
+      <div class="h3">2019</div>
+      <a href="#">January</a>
+      <a href="#">February</a>
+      <a href="#">March</a>
+      <a href="#">April</a>
+      <a href="#">May</a>
+      <a href="#">June</a>
+      <a href="#">July</a>
+      <a href="#">August</a>
+      <a href="#">September</a>
+      <a href="#">October</a>
+      <a href="#">November</a>
+      <a href="#">December</a>
+    </div>
+
+    <div class="grid">
+      <div class="h3">2018</div>
+      <a href="#">January</a>
+      <a href="#">February</a>
+      <a href="#">March</a>
+      <a href="#">April</a>
+      <a href="#">May</a>
+      <a href="#">June</a>
+      <a href="#">July</a>
+      <a href="#">August</a>
+      <a href="#">September</a>
+      <a href="#">October</a>
+      <a href="#">November</a>
+      <a href="#">December</a>
+    </div>
+
+    <div class="grid">
+      <div class="h3">2017</div>
+      <a href="#">January</a>
+      <a href="#">February</a>
+      <a href="#">March</a>
+      <a href="#">April</a>
+      <a href="#">May</a>
+      <a href="#">June</a>
+      <a href="#">July</a>
+      <a href="#">August</a>
+      <a href="#">September</a>
+      <a href="#">October</a>
+      <a href="#">November</a>
+      <a href="#">December</a>
+    </div>
+    
   </div>
 
-  
+  <div class="h1 breadcrumb">Sitemap <span>2025</span><span>January</span></div>
+  <div class="h3">January</div>
+  <div class="grid-sitemap days">
+    <a href="#">January 1</a>
+    <a href="#">January 2</a>
+    <a href="#">January 3</a>
+    <a href="#">January 4</a>
+    <a href="#">January 5</a>
+    <a href="#">January 6</a>
+    <a href="#">January 7</a>
+    <a href="#">January 8</a>
+    <a href="#">January 9</a>
+    <a href="#">January 10</a>
+    <a href="#">January 11</a>
+    <a href="#">January 12</a>
+    <a href="#">January 13</a>
+    <a href="#">January 14</a>
+    <a href="#">January 15</a>
+    <a href="#">January 16</a>
+    <a href="#">January 17</a>
+    <a href="#">January 18</a>
+    <a href="#">January 19</a>
+    <a href="#">January 20</a>
+    <a href="#">January 21</a>
+    <a href="#">January 22</a>
+    <a href="#">January 23</a>
+    <a href="#">January 24</a>
+    <a href="#">January 25</a>
+    <a href="#">January 26</a>
+    <a href="#">January 27</a>
+    <a href="#">January 28</a>
+    <a href="#">January 29</a>
+    <a href="#">January 30</a>
+    <a href="#">January 31</a>
+  </div>
+
+  <div class="h1 breadcrumb">Sitemap <span>2025</span><span>January</span></div>
+  <div class="h3">January</div>
+  <div class="grid-sitemap days-alt">
+    <a href="#">1</a>
+    <a href="#">2</a>
+    <a href="#">3</a>
+    <a href="#">4</a>
+    <a href="#">5</a>
+    <a href="#">6</a>
+    <a href="#">7</a>
+    <a href="#">8</a>
+    <a href="#">9</a>
+    <a href="#">10</a>
+    <a href="#">11</a>
+    <a href="#">12</a>
+    <a href="#">13</a>
+    <a href="#">14</a>
+    <a href="#">15</a>
+    <a href="#">16</a>
+    <a href="#">17</a>
+    <a href="#">18</a>
+    <a href="#">19</a>
+    <a href="#">20</a>
+    <a href="#">21</a>
+    <a href="#">22</a>
+    <a href="#">23</a>
+    <a href="#">24</a>
+    <a href="#">25</a>
+    <a href="#">26</a>
+    <a href="#">27</a>
+    <a href="#">28</a>
+    <a href="#">29</a>
+    <a href="#">30</a>
+    <a href="#">31</a>
+  </div>
   
 
-  
-  <div class="server-rendered">
-    <article class="story-body paper"><header class="header ">
+  <div class="h1 breadcrumb">Sitemap <span>2025</span><span>January</span><span class="active">1</span></div>
+  <div class="h3">January 1</div>
   <div>
-    <a class="button vertical-video">
-      <svg viewBox="0 0 512 512" height="15"><path d="M0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zM188.3 147.1c-7.6 4.2-12.3 12.3-12.3 20.9l0 176c0 8.7 4.7 16.7 12.3 20.9s16.8 4.1 24.3-.5l144-88c7.1-4.4 11.5-12.1 11.5-20.5s-4.4-16.1-11.5-20.5l-144-88c-7.4-4.5-16.7-4.7-24.3-.5z" fill="white"/></svg>
-      <span>Trending Videos</span>
-    </a>
-  </div>
-  <a class="kicker" href="#">Section</a>
-  <h1 class="h1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tempus lorem amet.</h1>
-  <div class="author-byline">
-    <div>
-      By <a href="#" class="author-name">John Doe</a> and <a href="#" class="author-name">Jane Doe</a>
-      <span class="credit">Sample Newspaper</span>
-    </div>
-    <div class="article-details">
-      <time datetime="">Updated August 13, 2018 3:19 PM</time>
-      <span class="comments">
-        <svg viewBox="0 0 512 512" aria-hidden="true"><path d="M160 368c26.5 0 48 21.5 48 48l0 16 72.5-54.4c8.3-6.2 18.4-9.6 28.8-9.6L448 368c8.8 0 16-7.2 16-16l0-288c0-8.8-7.2-16-16-16L64 48c-8.8 0-16 7.2-16 16l0 288c0 8.8 7.2 16 16 16l96 0zm48 124l-.2 .2-5.1 3.8-17.1 12.8c-4.8 3.6-11.3 4.2-16.8 1.5s-8.8-8.2-8.8-14.3l0-21.3 0-6.4 0-.3 0-4 0-48-48 0-48 0c-35.3 0-64-28.7-64-64L0 64C0 28.7 28.7 0 64 0L448 0c35.3 0 64 28.7 64 64l0 288c0 35.3-28.7 64-64 64l-138.7 0L208 492z"></path></svg>
-        <span class="vf-comments-count vf-body-text--deprecated viafoura vf-is-logged-in" style="min-height: 0px;">35</span>
-      </span>
+    <div class="h4">Articles</div>
+    <div class="articles-list">
+      <a href="#">Dartmouth College Basketball Players Halt Effort to Unionize</a>
+      <a href="#">Video shows Lego display fall during balloon-drop at arcade</a>
+      <a href="#">Art display falls, injures 10 people at NYE party in Peabody, Mass.</a>
+      <a href="#">Dartmouth College Basketball Players Halt Effort to Unionize</a>
+      <a href="#">Dartmouth College Basketball Players Halt Effort to Unionize</a>
+      <a href="#">Dartmouth College Basketball Players Halt Effort to Unionize</a>
+      <a href="#">Dartmouth College Basketball Players Halt Effort to Unionize</a>
     </div>
   </div>
-</header>
-<figure class="">
-  <img src="../../img/lanterns.jpg" alt="Lorem ipsum dolor sit amet" width="1140" height="641" loading="lazy">
-  <figcaption>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula sem et congue iaculis. Nam vel nisi elit. Pellentesque habitant morbi tristique senectus et netus.
-    <span class="byline">By <a href="#">First Last</a> <span class="credit">Publication name</span>
-    </span>
-  </figcaption>
-</figure>
-
-<p>If this was somewhat unclear, an offence is a seeing breath. Preschool tails show us how taxicabs can be gasolines. The trapezoids could be said to resemble reddish yogurts. Recent controversy aside, their diploma was, in this moment, a schmalzy target.</p>
-<p>What we don&rsquo;t know for sure is whether or not a fadeless carrot without details is truly a gemini of flagrant notebooks. Their carriage was, in this moment, a jumpy authorization. The literature would have us believe that a store typhoon is not but a granddaughter. A modem is the knowledge of an explanation.</p>
-<p>They were lost without the <a href="#">teasing Monday that composed</a> their burn. The israel of a quiet becomes a ledgy menu. A plane is a manx from the right perspective. A zippy jeep&rsquo;s cave comes with it the thought that the jellied myanmar is a curler.</p>
-<div class="zone" data-type="ad">
-  <fake-ad size=""></fake-ad>
-</div>
-
-<p>Oozy cereals show us how coaches can be clippers. Few can name a pukka noise that isn&rsquo;t a tensing buzzard. It&rsquo;s an undeniable fact, really; some askew biplanes are thought of simply as lynxes. The moustache of an aries becomes a tearing caution.</p>
-<p>One cannot separate skins from fiercer spandexes. A worthy biology&rsquo;s ethernet comes with it the thought that the passant ocelot is a railway. An eyeliner is a manky forgery. A stick is an away rake.</p>
-<p>To be more specific, an owl is a poet from the right perspective. Far from the truth, authors often misinterpret the yogurt as a bootleg plaster, when in actuality it feels more like a quintic brother. If this was somewhat unclear, a discalced freighter&rsquo;s cactus comes with it the thought that the telic cake is a rugby. Nowhere is it disputed that authors often misinterpret the burn as a pressing backbone, when in actuality it feels more like a zeroth pair of shorts.</p>
-<div class="amp-rm-wrapper">
-  <a href="#" class="button big">READ MORE</a>
-</div>
-</article>
-  </div>
-
-  <footer class="footer">
+</section><footer class="footer">
   <div class="item">
       <img src="#" class="footer-logo">
     <p class="summary">Part of the McClatchy Media Network</p>
@@ -559,6 +816,7 @@
     <a href="#">Terms of Service</a>
   </div>
 </footer>
+
 
     
     <script src="https://kit.fontawesome.com/b979a0f35d.js" crossorigin="anonymous"></script>

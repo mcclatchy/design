@@ -42,10 +42,10 @@
 }
 
 /*
- * Zone treatment inside grids
+ * Zone treatment inside packages
  */
 
-.grid > [data-type="ad"] {
+.package > [data-type="ad"] {
   grid-column-end: -1;
 }
 
@@ -53,7 +53,7 @@
  * Zones inside story bodies
  */
 
-.story-body [data-type="ad"] {
+.article-body [data-type="ad"] {
   box-sizing: border-box;
   margin: var(--space-lg) 0;
   padding: 0;
@@ -101,12 +101,12 @@
 #zone-el-2.sticky-leaderboard {
   position: fixed;
   z-index: 98;
-  width: 100vw;
+  width: 100%;
   height: 106px;
   overflow: hidden;
 }
 
-#zone-el-2.sticky-leaderboard > * {
+#zone-el-2.sticky-leaderboard > div {
   padding: 8px 0;
 }
 
@@ -118,12 +118,7 @@
 }
 
 #sticky_ad_close {
-  position: fixed;
+  position: absolute;
+  top: 0;
   right: 0;
-  z-index: 99;
-  width: 20px;
-  padding-left: 10px;
-  background-color: var(--media-background-color);
-  cursor: pointer;
-  --fill-color: var(--black);
 }
