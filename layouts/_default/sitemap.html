@@ -1,0 +1,149 @@
+{{ define "head" }}
+  <script defer src="/js/navigation.js"></script>
+{{ end }}
+
+{{ define "content" }}
+<style>
+  .sitemap {
+    display: grid;
+    gap: var(--space-lg);
+    font-family: var(--sans);
+  }
+
+  .sitemap .header {
+    text-align: center;
+  }
+
+  .sitemap .row {
+    justify-content: center;
+    gap: 40px;
+  }
+
+  .sitemap a {
+    --link-color: var(--text-color);
+  }
+
+  .grid-sitemap {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: var(--space-lg) var(--space);
+    align-items: start;
+    --grid-column-gap: 5px;
+  }
+
+  .grid-sitemap.days {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--space);
+  }
+
+  .grid-sitemap.days-alt {
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+  }
+
+  .grid-sitemap.days-alt a {
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--lightgray);
+  }
+
+  .breadcrumb > span {
+    color: var(--darkgray);
+    font-size: 18px;
+    border-left: 1px solid var(--darkgray);
+    padding: 0 var(--space-sm);
+  }
+
+  .breadcrumb > span:not(:last-of-type) {
+    font-weight: normal;
+  }
+
+  .articles-list {
+    display: grid;
+    gap: var(--space-sm);
+    padding-top: var(--space-sm);
+  }
+
+  @media (max-width: 600px) {
+    .sitemap {
+      padding: var(--page-padding);
+    }
+
+    .sitemap .row {
+      gap: var(--space-sm);
+    }
+  }
+</style>
+
+<section class="sitemap">
+  <div class="header">
+    <h1 class="h1">Site Map Alt</h1>
+    <hr>
+  </div>
+  
+  {{ $currentYear := now.Year }}
+  {{ $currentMonth := now.Month }}
+  {{ $currentDay := now.Day }}
+
+  <div class="row">
+    <a href="#">Today</a>
+    <a href="#">Yesterday</a>
+    <a href="#">This Week</a>
+    <a href="#">Last Week</a>
+  </div>
+  <div class="grid-sitemap">
+    {{ $endYear := $currentYear }}
+    {{ $startYear := 2017 }}
+    {{ range (seq $endYear $startYear) }}
+    <div class="grid">
+      <div class="h3">{{ . }}</div>
+      {{ $year := . }}
+      {{ range (seq 1 12) }}
+      {{ $month := printf "%02d" . }}
+      {{ $monthDate := (time.AsTime (printf "%d-%s-01" $year $month)) }}
+      <a href="/{{ $year }}/{{ $monthDate.Format "Jan" | lower }}">{{ $monthDate.Month }}</a>
+      {{ end }}
+    </div>
+    {{ end }}
+  </div>
+
+  <div class="h1 breadcrumb">Sitemap <span>{{ $currentYear }}</span><span>{{ $currentMonth }}</span></div>
+  <div class="h3">{{ $currentMonth }}</div>
+  <div class="grid-sitemap days">
+    {{ $firstDay := (printf "%d-%02d-01" $currentYear ($currentMonth | int)) }}
+    {{ $date := (time.AsTime $firstDay) }}
+    {{ $nextMonth := $date.AddDate 0 1 0 }}
+    {{ $lastDay := $nextMonth.AddDate 0 0 -1 }}
+    {{ range (seq 1 $lastDay.Day) }}
+    <a href="#">{{ $currentMonth }} {{ . }}</a>
+    {{ end }}
+  </div>
+
+  <div class="h1 breadcrumb">Sitemap <span>{{ $currentYear }}</span><span>{{ $currentMonth }} (alternative layout)</span></div>
+  <div class="h3">{{ $currentMonth }}</div>
+  <div class="grid-sitemap days-alt">
+    {{ $firstDay := (printf "%d-%02d-01" $currentYear ($currentMonth | int)) }}
+    {{ $date := (time.AsTime $firstDay) }}
+    {{ $nextMonth := $date.AddDate 0 1 0 }}
+    {{ $lastDay := $nextMonth.AddDate 0 0 -1 }}
+    {{ range (seq 1 $lastDay.Day) }}
+    <a href="#">{{ . }}</a>
+    {{ end }}
+  </div>
+  
+  <div class="h1 breadcrumb">Sitemap <span>{{ $currentYear }}</span><span>{{ $currentMonth }}</span><span class="active">{{ $currentDay }}</span></div>
+  <div class="h3">{{ $currentMonth }} {{ $currentDay }}</div>
+  <div>
+    <div class="h4">Articles</div>
+    <div class="articles-list">
+      <a href="#">Dartmouth College Basketball Players Halt Effort to Unionize</a>
+      <a href="#">Video shows Lego display fall during balloon-drop at arcade</a>
+      <a href="#">Art display falls, injures 10 people at NYE party in Peabody, Mass.</a>
+      <a href="#">‘Fairy’ creature that swims upside down discovered in a roadside pond in India</a>
+      <a href="#">‘Mythical’ deep-sea creature — found by a submarine — is new species off Japan</a>
+      <a href="#">Armed ex-mayoral candidate robs Dollar General, leads FL cops on chase, feds say</a>
+      <a href="#">Collapsed KC Family Dollar was missing concrete pillar car crash took out years ago</a>
+    </div>
+  </div>
+</section>
+
+{{ partial "footer" . }}
+{{- end }}
