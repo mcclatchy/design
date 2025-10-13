@@ -129,19 +129,14 @@
     --grid-row-gap: 5px;
   }
 
-  .grid-sitemap.days {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  .grid-sitemap-days {
+    display: grid;
+    grid-template-rows: repeat(8, 1fr);
+    grid-auto-flow: column;
     gap: var(--space);
   }
 
-  .grid-sitemap.days-alt {
-    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
-  }
-
-  .grid-sitemap.days-alt a {
-    padding-bottom: 10px;
-    border-bottom: 1px solid var(--lightgray);
-  }
+   
 
   .breadcrumb > span {
     color: var(--darkgray);
@@ -160,6 +155,12 @@
     padding-top: var(--space-sm);
   }
 
+  @media (max-width: 800px)  {
+    .grid-sitemap-days {
+      grid-template-rows: repeat(11, 1fr);
+    }
+  }
+
   @media (max-width: 600px) {
     .sitemap {
       padding: var(--page-padding);
@@ -167,6 +168,10 @@
 
     .sitemap .row {
       gap: var(--space-sm);
+    }
+
+    .grid-sitemap-days {
+      grid-template-rows: repeat(16, 1fr);
     }
   }
 </style>
@@ -703,11 +708,10 @@
 
   <div class="h1 breadcrumb">
     Site Map 
-    <span>2025</span>
-    <span>October</span>
+    <span>October 2025</span>
   </div>
-  <div class="h3">October</div>
-  <div class="grid-sitemap days">
+  <div class="h3">October 2025</div>
+  <div class="grid-sitemap-days">
     
     
     
@@ -775,87 +779,14 @@
     
   </div>
 
-  <div class="h1 breadcrumb">
-    Site Map 
-    <span>2025</span>
-    <span>October</span>
-  </div>
-  <div class="h3">October</div>
-  <div class="grid-sitemap days-alt">
-    
-    
-    
-    <a href="#">1</a>
-    
-    <a href="#">2</a>
-    
-    <a href="#">3</a>
-    
-    <a href="#">4</a>
-    
-    <a href="#">5</a>
-    
-    <a href="#">6</a>
-    
-    <a href="#">7</a>
-    
-    <a href="#">8</a>
-    
-    <a href="#">9</a>
-    
-    <a href="#">10</a>
-    
-    <a href="#">11</a>
-    
-    <a href="#">12</a>
-    
-    <a href="#">13</a>
-    
-    <a href="#">14</a>
-    
-    <a href="#">15</a>
-    
-    <a href="#">16</a>
-    
-    <a href="#">17</a>
-    
-    <a href="#">18</a>
-    
-    <a href="#">19</a>
-    
-    <a href="#">20</a>
-    
-    <a href="#">21</a>
-    
-    <a href="#">22</a>
-    
-    <a href="#">23</a>
-    
-    <a href="#">24</a>
-    
-    <a href="#">25</a>
-    
-    <a href="#">26</a>
-    
-    <a href="#">27</a>
-    
-    <a href="#">28</a>
-    
-    <a href="#">29</a>
-    
-    <a href="#">30</a>
-    
-    <a href="#">31</a>
-    
-  </div>
+  
   
   <div class="h1 breadcrumb">
     Site Map 
-    <span>2025</span>
-    <span>October</span>
+    <span>October 2025</span>
     <span class="active">13</span>
   </div>
-  <div class="h3">October 13</div>
+  <div class="h3">October 13, 2025</div>
   <div>
     <div class="h4">Articles</div>
     <div class="articles-list">
