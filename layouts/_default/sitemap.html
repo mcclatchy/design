@@ -14,11 +14,6 @@
     text-align: center;
   }
 
-  .sitemap .row {
-    justify-content: center;
-    gap: 40px;
-  }
-
   .sitemap a {
     --link-color: var(--text-color);
   }
@@ -77,10 +72,6 @@
       padding: var(--page-padding);
     }
 
-    .sitemap .row {
-      gap: var(--space-sm);
-    }
-
     .grid-sitemap-days {
       grid-template-rows: repeat(16, 1fr);
     }
@@ -97,12 +88,6 @@
   {{ $currentMonth := now.Month }}
   {{ $currentDay := now.Day }}
 
-  <div class="row">
-    <a href="#">Today</a>
-    <a href="#">Yesterday</a>
-    <a href="#">This Week</a>
-    <a href="#">Last Week</a>
-  </div>
   <div class="grid-sitemap">
     {{ $currentYear := now.Year }}
     {{ $currentMonth := now.Month | int }}
