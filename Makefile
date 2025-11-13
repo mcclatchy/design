@@ -11,7 +11,7 @@ dist:
 
 release: dist
 	git add dist
-	awk -v c="$(current)" -v n="$(version)" "{sub(c,n); print}" package.json > tmp.json
+	awk -v n="$(version)" '/"version":/ {sub(/"[0-9]+\.[0-9]+\.[0-9]+"/, "\"" n "\"")} 1' package.json > tmp.json
 	mv tmp.json package.json
 	git add package.json
 	git commit -m "updating package.json to $(version)"
