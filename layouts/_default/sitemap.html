@@ -1,0 +1,158 @@
+{{ define "head" }}
+  <script defer src="/js/navigation.js"></script>
+{{ end }}
+
+{{ define "content" }}
+<style>
+  .sitemap {
+    display: grid;
+    gap: var(--space-lg);
+    font-family: var(--sans);
+  }
+
+  .sitemap .header {
+    text-align: center;
+  }
+
+  .sitemap a {
+    --link-color: var(--text-color);
+  }
+
+  .sitemap a.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+    cursor: default;
+  }
+
+  .grid-sitemap {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: var(--space-lg) var(--space);
+    align-items: start;
+    --columns: auto;
+    --grid-column-gap: 5px;
+    --grid-row-gap: 5px;
+  }
+
+  .grid-sitemap-days {
+    display: grid;
+    grid-template-rows: repeat(8, 1fr);
+    grid-auto-flow: column;
+    gap: var(--space);
+  }
+
+  .breadcrumb > span {
+    color: var(--darkgray);
+    font-size: 18px;
+    border-left: 1px solid var(--darkgray);
+    padding: 0 5px 0 10px;
+  }
+
+  .breadcrumb > span:not(:last-of-type) {
+    font-weight: normal;
+  }
+
+  .articles-list {
+    display: grid;
+    gap: var(--space-sm);
+    padding-top: var(--space-sm);
+  }
+
+  @media (max-width: 800px)  {
+    .grid-sitemap-days {
+      grid-template-rows: repeat(11, 1fr);
+    }
+  }
+
+  @media (max-width: 600px) {
+    .sitemap {
+      padding: var(--page-padding);
+    }
+
+    .grid-sitemap-days {
+      grid-template-rows: repeat(16, 1fr);
+    }
+  }
+</style>
+
+<section class="sitemap">
+  <div class="header">
+    <h1 class="h1">Site Map</h1>
+    <hr>
+  </div>
+  
+  {{ $currentYear := now.Year }}
+  {{ $currentMonth := now.Month | int }}
+  {{ $currentDay := now.Day }}
+
+  <div class="grid-sitemap">
+    {{ $endYear := $currentYear }}
+    {{ $startYear := 2017 }}
+
+    {{ range (seq $endYear $startYear) }}
+    <div class="grid">
+      <div class="h3">{{ . }}</div>
+      {{ $year := . }}
+
+      {{ if eq $year $currentYear }}
+        {{ range (seq 1 12) }}
+        {{ $month := . }}
+        {{ $monthFormatted := printf "%02d" $month }}
+        {{ $monthDate := (time.AsTime (printf "%d-%s-01" $year $monthFormatted)) }}
+        
+        {{ $isDisabled := false }}
+        {{ if gt $month $currentMonth }}
+          {{ $isDisabled = true }}
+        {{ end }}
+
+        <a href="/{{ $year }}/{{ $monthDate.Format "Jan" | lower }}" 
+           class="{{ if $isDisabled }}disabled{{ end }}">
+          {{ $monthDate.Month }}
+        </a>
+        {{ end }}
+      {{ else }}
+        {{ range (seq 1 12) }}
+        {{ $month := printf "%02d" . }}
+        {{ $monthDate := (time.AsTime (printf "%d-%s-01" $year $month)) }}
+        <a href="/{{ $year }}/{{ $monthDate.Format "Jan" | lower }}">{{ $monthDate.Month }}</a>
+        {{ end }}
+      {{ end }}
+    </div>
+    {{ end }}
+  </div>
+
+  <div class="h1 breadcrumb">
+    Site Map 
+    <span>{{ now.Month }} {{ $currentYear }}</span>
+  </div>
+  <div class="h3">{{ now.Month }} {{ $currentYear }}</div>
+  <div class="grid-sitemap-days">
+    {{ $firstDay := (printf "%d-%02d-01" $currentYear $currentMonth) | time.AsTime }}
+    {{ $lastDay := $firstDay.AddDate 0 1 -1 }}
+    {{ range (seq 1 $lastDay.Day) }}
+    <a href="#">{{ now.Month }} {{ . }}</a>
+    {{ end }}
+  </div>
+
+  <div class="h1 breadcrumb">
+    Site Map 
+    <span>{{ now.Month }} {{ $currentYear }}</span>
+    <span class="active">{{ now.Day }}</span>
+  </div>
+  <div class="h3">{{ now.Month }} {{ now.Day }}, {{ $currentYear }}</div>
+  <div>
+    <div class="h4">Articles</div>
+    <div class="articles-list">
+      <a href="#">Dartmouth College Basketball Players Halt Effort to Unionize</a>
+      <a href="#">Video shows Lego display fall during balloon-drop at arcade</a>
+      <a href="#">Art display falls, injures 10 people at NYE party in Peabody, Mass.</a>
+      <a href="#">‘Fairy’ creature that swims upside down discovered in a roadside pond in India</a>
+      <a href="#">‘Mythical’ deep-sea creature — found by a submarine — is new species off Japan</a>
+      <a href="#">Armed ex-mayoral candidate robs Dollar General, leads FL cops on chase, feds say</a>
+      <a href="#">Collapsed KC Family Dollar was missing concrete pillar car crash took out years ago</a>
+    </div>
+  </div>
+</section>
+
+{{ partial "footer" . }}
+{{- end }}
