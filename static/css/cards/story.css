@@ -9,6 +9,7 @@
   background-color: var(--story-background-color, var(--paper-color));
   --header-family: var(--story-subhead-family, var(--sans));
   --header-transform: var(--story-subhead-transform, inherit);
+  --link-hover-decoration: underline;
 }
 
 .story-body > * {
