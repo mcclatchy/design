@@ -1082,6 +1082,16 @@ html.msb .masthead {
   background-color: unset;
 }
 
+/*
+ * Grid class
+ */
+.grid {
+  display: grid;
+  grid-template-columns: var(--columns);
+  gap: var(--grid-row-gap) var(--grid-column-gap);
+  grid-auto-flow: var(--grid-flow, dense);
+}
+
 /**
  * Flexbox grid
  *
