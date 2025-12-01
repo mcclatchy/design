@@ -65,6 +65,11 @@
   --link-color: var(--blue);
   --link-decoration: none;
 
+  /* Z-index */
+  --z-content: 1;
+  --z-advertising: 2;
+  --z-overlay: 3;
+
   /* Paper properties */
   --paper-color: var(--white);
   --paper-shadow: none;
