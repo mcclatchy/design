@@ -56,6 +56,10 @@
   /* Link properties */
   --link-color: var(--blue);
   --link-decoration: none;
+  /* Z-index */
+  --z-content: 1;
+  --z-advertising: 2;
+  --z-overlay: 3;
   /* Paper properties */
   --paper-color: var(--white);
   --paper-shadow: none;
@@ -149,6 +153,7 @@ li {
 
 .kicker {
   color: var(--secondary-text-color);
+  --link-color: var(--secondary-text-color);
   font: 0.667rem/1em var(--sans);
   font-weight: bold;
   text-transform: uppercase;
@@ -1645,7 +1650,6 @@ html.msb .masthead {
   background-color: var(--story-background-color, var(--paper-color));
   --header-family: var(--story-subhead-family, var(--sans));
   --header-transform: var(--story-subhead-transform, inherit);
-  --link-hover-decoration: underline;
 }
 
 .story-body > * {
@@ -1669,6 +1673,12 @@ html.msb .masthead {
 
 .story-body p {
   line-height: 1.66em;
+}
+
+.story-body p,
+.story-body ol,
+.story-body ul {
+  --link-hover-decoration: underline;
 }
 
 /**
@@ -3264,6 +3274,24 @@ section.big-news {
 .zone-el.hidden,
 .grid > .zone-el.hidden {
   display: none;
+}
+
+/*
+ * Z-index
+ */
+.z-content {
+  position: relative;
+  z-index: var(--z-content, 1);
+}
+
+.z-advertising {
+  position: relative;
+  z-index: var(--z-advertising, 2);
+}
+
+.z-overlay {
+  position: relative;
+  z-index: var(--z-overlay, 3);
 }
 
 /**
