@@ -9,7 +9,6 @@
   background-color: var(--story-background-color, var(--paper-color));
   --header-family: var(--story-subhead-family, var(--sans));
   --header-transform: var(--story-subhead-transform, inherit);
-  --link-hover-decoration: underline;
 }
 
 .story-body > * {
@@ -34,6 +33,12 @@
 
 .story-body p {
   line-height: 1.66em;
+}
+
+.story-body p,
+.story-body ol,
+.story-body ul {
+  --link-hover-decoration: underline;
 }
 
 /**
