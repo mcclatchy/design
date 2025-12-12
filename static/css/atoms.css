@@ -179,6 +179,10 @@ time, .time, .byline {
   font: 0.778rem/1em var(--sans);
 }
 
+time.recent, .time.recent {
+  color: var(--red);
+}
+
 .byline a {
   color: inherit;
   font-weight: bold;
