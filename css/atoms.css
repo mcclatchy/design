@@ -65,6 +65,11 @@
   --link-color: var(--blue);
   --link-decoration: none;
 
+  /* Z-index */
+  --z-content: 1;
+  --z-advertising: 2;
+  --z-overlay: 3;
+
   /* Paper properties */
   --paper-color: var(--white);
   --paper-shadow: none;
@@ -161,6 +166,7 @@ li {
 
 .kicker {
   color: var(--secondary-text-color);
+  --link-color: var(--secondary-text-color);
   font: 0.667rem/1em var(--sans);
   font-weight: bold;
   text-transform: uppercase;
@@ -171,6 +177,10 @@ time, .time, .byline {
   display: inline-block;
   color: var(--secondary-text-color);
   font: 0.778rem/1em var(--sans);
+}
+
+time.recent, .time.recent {
+  color: var(--red);
 }
 
 .byline a {
