@@ -1019,11 +1019,8 @@ html.msb .masthead {
   grid-area: right;
   justify-self: end;
   align-self: stretch;
+  align-items: center;
   text-wrap: nowrap;
-}
-
-.msb-hide {
-  align-self: center;
 }
 
 /**
@@ -3239,18 +3236,6 @@ section.big-news {
     display: var(--display, block);
   }
 }
-/**
- * msb toggles
- */
-.msb-show,
-.msb .msb-hide {
-  display: none;
-}
-
-.msb .msb-show {
-  display: var(--display, block);
-}
-
 /**
  * Forced image crops
  */
