@@ -157,7 +157,8 @@ html.msb .masthead {
   display: flex;
   grid-area: right;
   justify-self: end;
-  align-self: center;
+  align-self: stretch;
+  align-items: center;
   text-wrap: nowrap;
 }
 
