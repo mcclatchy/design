@@ -12,32 +12,35 @@
               </div>
               <div class="flag-logo" onclick="toggleMSB()">
                 <a href="#">
-                  <img class="logo msb-hide" src="/img/sacramento-bee-black.svg" alt="The Sacramento Bee logo">
-                  <img class="logo msb-show" src="/img/sacramento-bee-white.svg" alt="The Sacramento Bee logo">
+                  <!-- Non-sub -->
+                  <!-- <img class="logo" src="/img/sacramento-bee-black.svg" alt="The Sacramento Bee logo"> -->
+                  <!-- Sub -->
+                  <img class="logo" src="/img/sacramento-bee-white.svg" alt="The Sacramento Bee logo">
                 </a>
               </div>
               <div class="flag-account">
-                  <div class="msb-hide"><a href="https://account.miamiherald.com/auth0" id="logIn">Log In</a><span class="pipe-seperator">|</span><a href="https://subscribe.miamiherald.com/beinformed" class="subscribe-link">Subscribe</a>
-                  </div>
-                  <div class="msb-show">
-                    <button class="button msb-show expander">
-                      <svg width="17" height="19" viewBox="0 0 17 19" xmlns="http://www.w3.org/2000/svg"><path d="M11.5972 7.41211C10.7942 8.21509 9.70584 8.66577 8.57034 8.66577C7.43557 8.66431 6.34719 8.21289 5.54495 7.41064C4.74197 6.60791 4.29055 5.52014 4.28909 4.38464C4.28982 3.24988 4.74051 2.16077 5.54348 1.35779C6.34646 0.55481 7.43484 0.104126 8.57034 0.104126C9.70559 0.104126 10.7942 0.55481 11.5972 1.35779C12.3999 2.16077 12.8506 3.24976 12.8506 4.38525C12.8506 5.52002 12.3999 6.60913 11.5972 7.41211ZM16.9373 18.1038H0.893825H0.203396C0.197781 15.8833 1.0801 13.7537 2.65432 12.1879C4.2239 10.6193 6.35134 9.73755 8.57034 9.73755C10.7893 9.73755 12.9178 10.6193 14.4864 12.1879C16.0557 13.7572 16.9373 15.8848 16.9373 18.1038Z"></path></svg>
-                    </button>
-                    <!-- login popout -->
-                    <div id="popout" class="popout paper sans">
-                      <a href="https://myaccount.miamiherald.com/MIA_MH/myprofile"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 640 512" style="enable-background:new 0 0 640 512;" xml:space="preserve">
-                        <path class="st0" d="M144,128c0-44.2,35.8-80,80-80s80,35.8,80,80s-35.8,80-80,80S144,172.2,144,128z M352,128  C352,57.3,294.7,0,224,0S96,57.3,96,128s57.3,128,128,128S352,198.7,352,128z M49.3,464c8.9-63.3,63.3-112,129-112h91.4  c34.9,0,66.5,13.7,89.9,36l33.9-33.9c-32.1-31-75.7-50.1-123.9-50.1h-91.3C79.8,304,0,383.8,0,482.3C0,498.7,13.3,512,29.7,512  h293.1c-3.1-8.8-3.7-18.4-1.4-27.8l5.1-20.2H49.3z M613.8,235.7c-15.6-15.6-40.9-15.6-56.6,0l-29.4,29.4l71,71l29.4-29.4  c15.6-15.6,15.6-40.9,0-56.6L613.8,235.7L613.8,235.7z M375.9,417c-4.1,4.1-7,9.2-8.4,14.9l-15,60.1c-1.4,5.5,0.2,11.2,4.2,15.2  s9.7,5.6,15.2,4.2l60.1-15c5.6-1.4,10.8-4.3,14.9-8.4l129.2-129.3l-71-71L375.9,417z"/>
-                      </svg> Edit Profile</a>
-                      <a href="https://myaccount.miamiherald.com/MIA_MH/dashboard"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 640 512" style="enable-background:new 0 0 640 512;" xml:space="preserve">
-                        <path class="st0" d="M64,464h284.5c12.3,18.8,28,35.1,46.3,48H64c-35.3,0-64-28.7-64-64V224c0-35.3,28.7-64,64-64h384  c23.8,0,44.5,12.9,55.5,32.2c-2.5-0.1-5-0.2-7.5-0.2c-26.2,0-51.1,5.7-73.4,16H64c-8.8,0-16,7.2-16,16v224C48,456.8,55.2,464,64,464  z M440,80c13.3,0,24,10.7,24,24s-10.7,24-24,24H72c-13.3,0-24-10.7-24-24s10.7-24,24-24H440z M392,0c13.3,0,24,10.7,24,24  s-10.7,24-24,24H120c-13.3,0-24-10.7-24-24s10.7-24,24-24H392z M352,368c0-79.5,64.5-144,144-144s144,64.5,144,144  s-64.5,144-144,144S352,447.5,352,368z M573.7,448.7c-6.2-19-24-32.7-45.1-32.7h-65.2c-21,0-38.9,13.7-45.1,32.7  c20.2,19.4,47.5,31.3,77.7,31.3S553.5,468.1,573.7,448.7z M544,336c0-26.5-21.5-48-48-48c-26.5,0-48,21.5-48,48s21.5,48,48,48  C522.5,384,544,362.5,544,336z"/>
-                      </svg> My Subscriptions</a>
-                      <a href="https://mcclatchy.us.auth0.com/v2/logout?client_id=EvYjQGGcjJcE4V6TPrW95HRYKhFBmCvZ&amp;returnTo=https%3A%2F%2Fmiamiherald.com"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-                        <path class="st0" d="M505,273c9.4-9.4,9.4-24.6,0-33.9L377,111c-9.4-9.4-24.6-9.4-33.9,0s-9.4,24.6,0,33.9l87,87L184,232  c-13.3,0-24,10.7-24,24c0,13.3,10.7,24,24,24h246.1l-87,87c-9.4,9.4-9.4,24.6,0,33.9s24.6,9.4,33.9,0L505,273z M168,80  c13.3,0,24-10.7,24-24s-10.7-24-24-24H88C39.4,32,0,71.4,0,120v272c0,48.6,39.4,88,88,88h80c13.3,0,24-10.7,24-24s-10.7-24-24-24H88  c-22.1,0-40-17.9-40-40V120c0-22.1,17.9-40,40-40H168z"/>
-                      </svg> Sign Out</a>
-                      <button class="button center ghost">Log in / Sign up</button>
-                      <button class="button center">Resubscribe Now</button>
-                    </div>
-                  </div>
+                <!-- Non-sub -->
+                <!-- <a href="https://account.miamiherald.com/auth0" id="logIn">Log In</a>
+                <span class="pipe-seperator">|</span>
+                <a href="https://subscribe.miamiherald.com/beinformed" class="subscribe-link">Subscribe</a> -->
+                <!-- Sub -->
+                <button class="button expander">
+                  <svg width="17" height="19" viewBox="0 0 17 19" xmlns="http://www.w3.org/2000/svg"><path d="M11.5972 7.41211C10.7942 8.21509 9.70584 8.66577 8.57034 8.66577C7.43557 8.66431 6.34719 8.21289 5.54495 7.41064C4.74197 6.60791 4.29055 5.52014 4.28909 4.38464C4.28982 3.24988 4.74051 2.16077 5.54348 1.35779C6.34646 0.55481 7.43484 0.104126 8.57034 0.104126C9.70559 0.104126 10.7942 0.55481 11.5972 1.35779C12.3999 2.16077 12.8506 3.24976 12.8506 4.38525C12.8506 5.52002 12.3999 6.60913 11.5972 7.41211ZM16.9373 18.1038H0.893825H0.203396C0.197781 15.8833 1.0801 13.7537 2.65432 12.1879C4.2239 10.6193 6.35134 9.73755 8.57034 9.73755C10.7893 9.73755 12.9178 10.6193 14.4864 12.1879C16.0557 13.7572 16.9373 15.8848 16.9373 18.1038Z"></path></svg>
+                </button>
+                <!-- login popout -->
+                <div id="popout" class="popout paper sans">
+                  <a href="https://myaccount.miamiherald.com/MIA_MH/myprofile"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 640 512" style="enable-background:new 0 0 640 512;" xml:space="preserve">
+                    <path class="st0" d="M144,128c0-44.2,35.8-80,80-80s80,35.8,80,80s-35.8,80-80,80S144,172.2,144,128z M352,128  C352,57.3,294.7,0,224,0S96,57.3,96,128s57.3,128,128,128S352,198.7,352,128z M49.3,464c8.9-63.3,63.3-112,129-112h91.4  c34.9,0,66.5,13.7,89.9,36l33.9-33.9c-32.1-31-75.7-50.1-123.9-50.1h-91.3C79.8,304,0,383.8,0,482.3C0,498.7,13.3,512,29.7,512  h293.1c-3.1-8.8-3.7-18.4-1.4-27.8l5.1-20.2H49.3z M613.8,235.7c-15.6-15.6-40.9-15.6-56.6,0l-29.4,29.4l71,71l29.4-29.4  c15.6-15.6,15.6-40.9,0-56.6L613.8,235.7L613.8,235.7z M375.9,417c-4.1,4.1-7,9.2-8.4,14.9l-15,60.1c-1.4,5.5,0.2,11.2,4.2,15.2  s9.7,5.6,15.2,4.2l60.1-15c5.6-1.4,10.8-4.3,14.9-8.4l129.2-129.3l-71-71L375.9,417z"/>
+                  </svg> Edit Profile</a>
+                  <a href="https://myaccount.miamiherald.com/MIA_MH/dashboard"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 640 512" style="enable-background:new 0 0 640 512;" xml:space="preserve">
+                    <path class="st0" d="M64,464h284.5c12.3,18.8,28,35.1,46.3,48H64c-35.3,0-64-28.7-64-64V224c0-35.3,28.7-64,64-64h384  c23.8,0,44.5,12.9,55.5,32.2c-2.5-0.1-5-0.2-7.5-0.2c-26.2,0-51.1,5.7-73.4,16H64c-8.8,0-16,7.2-16,16v224C48,456.8,55.2,464,64,464  z M440,80c13.3,0,24,10.7,24,24s-10.7,24-24,24H72c-13.3,0-24-10.7-24-24s10.7-24,24-24H440z M392,0c13.3,0,24,10.7,24,24  s-10.7,24-24,24H120c-13.3,0-24-10.7-24-24s10.7-24,24-24H392z M352,368c0-79.5,64.5-144,144-144s144,64.5,144,144  s-64.5,144-144,144S352,447.5,352,368z M573.7,448.7c-6.2-19-24-32.7-45.1-32.7h-65.2c-21,0-38.9,13.7-45.1,32.7  c20.2,19.4,47.5,31.3,77.7,31.3S553.5,468.1,573.7,448.7z M544,336c0-26.5-21.5-48-48-48c-26.5,0-48,21.5-48,48s21.5,48,48,48  C522.5,384,544,362.5,544,336z"/>
+                  </svg> My Subscriptions</a>
+                  <a href="https://mcclatchy.us.auth0.com/v2/logout?client_id=EvYjQGGcjJcE4V6TPrW95HRYKhFBmCvZ&amp;returnTo=https%3A%2F%2Fmiamiherald.com"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                    <path class="st0" d="M505,273c9.4-9.4,9.4-24.6,0-33.9L377,111c-9.4-9.4-24.6-9.4-33.9,0s-9.4,24.6,0,33.9l87,87L184,232  c-13.3,0-24,10.7-24,24c0,13.3,10.7,24,24,24h246.1l-87,87c-9.4,9.4-9.4,24.6,0,33.9s24.6,9.4,33.9,0L505,273z M168,80  c13.3,0,24-10.7,24-24s-10.7-24-24-24H88C39.4,32,0,71.4,0,120v272c0,48.6,39.4,88,88,88h80c13.3,0,24-10.7,24-24s-10.7-24-24-24H88  c-22.1,0-40-17.9-40-40V120c0-22.1,17.9-40,40-40H168z"/>
+                  </svg> Sign Out</a>
+                  <button class="button center ghost">Log in / Sign up</button>
+                  <button class="button center">Resubscribe Now</button>
+                </div>
               </div>
             </div>
   
