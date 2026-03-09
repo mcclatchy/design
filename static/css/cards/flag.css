@@ -133,7 +133,7 @@ html.msb .masthead {
 }
 
 .flag-eedition a {
-  display: flex;
+  display: inline-flex;
   gap: var(--space-sm)
 }
 
