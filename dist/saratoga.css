@@ -1072,7 +1072,7 @@ html.msb .masthead {
   .flag .button {
     padding: 0 var(--space-sm);
   }
-  .flag .msb-hide a:last-of-type {
+  .flag .flag-account a:last-of-type {
     padding-right: var(--space-sm);
   }
   .flag-top {
@@ -1369,22 +1369,24 @@ html.msb .masthead {
 
 /* Menu */
 .main-nav {
-  position: fixed;
-  top: var(--flag-height);
-  left: 0;
-  bottom: 0;
-  width: var(--menu-width);
-  height: calc(100vh - var(--flag-height));
-  color: var(--black);
   --text-color: var(--black);
   --link-color: var(--black);
   --fill-color: var(--black);
+  position: fixed;
+  z-index: 99;
+  top: var(--flag-height);
+  bottom: 0;
+  left: 0;
+  box-sizing: border-box;
+  width: var(--menu-width);
+  height: calc(100dvh - var(--flag-height));
+  padding-bottom: var(--space);
   background-color: var(--nav-color, var(--white));
+  color: var(--black);
   overflow: scroll;
   -webkit-overflow-scrolling: touch;
   transform: translateX(-150%);
   transition: transform 0.4s ease;
-  z-index: 99;
 }
 
 .main-nav:hover :focus {
@@ -1793,9 +1795,15 @@ html.msb .masthead {
   padding: 20px 0;
 }
 
+@media (max-width: 720px) {
+  .quote {
+    padding: 20px 40px;
+  }
+}
 .quote blockquote {
   margin: 0;
   font: bold var(--block-quote-font-size, 24px)/1.33em var(--sans);
+  overflow-wrap: break-word;
 }
 
 .quote blockquote:before {
@@ -2477,7 +2485,7 @@ html.msb .masthead {
  * Related stories
  */
 .related-stories > *:last-child {
-  border-bottom: 0.5px solid var(--secondary-text-color);
+  border-bottom: 1px solid #D0DAE7;
   padding-bottom: var(--space);
 }
 
@@ -2494,7 +2502,7 @@ html.msb .masthead {
 @media (max-width: 674px) {
   .related-stories .package::after {
     content: "";
-    border-bottom: 1px solid #d9d9d9;
+    border-bottom: 1px solid #D0DAE7;
     width: 40px;
     display: block;
     margin-bottom: var(--space-sm);
