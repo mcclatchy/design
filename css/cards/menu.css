@@ -1,21 +1,23 @@
 /* Menu */
 .main-nav {
-  position: fixed;
-  top: var(--flag-height);
-  left: 0;
-  bottom: 0;
-  width: var(--menu-width);
-  height: calc(100vh - var(--flag-height));
-  color: var(--black);
   --text-color: var(--black);
   --link-color: var(--black);
   --fill-color: var(--black);
+  position: fixed;
+  z-index: 99;
+  top: var(--flag-height);
+  bottom: 0;
+  left: 0;
+  box-sizing: border-box;
+  width: var(--menu-width);
+  height: calc(100dvh - var(--flag-height));
+  padding-bottom: var(--space);
   background-color: var(--nav-color, var(--white));
+  color: var(--black);
   overflow: scroll;
   -webkit-overflow-scrolling: touch;
   transform: translateX(-150%);
   transition: transform 0.4s ease;
-  z-index: 99;
 }
 
 .main-nav:hover :focus {
