@@ -1393,12 +1393,20 @@ footer {
 .quote {
   font-family: var(--sans);
   max-width: 600px;
+  margin: 0 auto;
   padding: 20px 0;
+}
+
+@media (max-width: 720px) {
+  .quote {
+    padding: 20px 40px;
+  }
 }
 
 .quote blockquote {
   margin: 0;
   font: bold var(--block-quote-font-size, 24px) / 1.33em var(--sans);
+  overflow-wrap: break-word;
 }
 
 .quote blockquote:before {
