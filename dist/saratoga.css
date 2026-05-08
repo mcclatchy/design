@@ -2481,6 +2481,10 @@ html.msb .masthead {
   line-height: normal;
 }
 
+.editors-note {
+  font-style: italic;
+}
+
 /**
  * Related stories
  */
