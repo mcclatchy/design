@@ -54,14 +54,6 @@ domain = "thestate"
 glob = "columbia"
 sort = "state"
 
-[ledger-enquirer]
-name = "Columbus Ledger-Enquirer"
-city = "Columbus"
-state = "GA"
-domain = "ledger-enquirer"
-glob = "columbus"
-sort = "columbus"
-
 [heraldsun]
 name = "The Herald Sun"
 city = "Durham"
@@ -125,14 +117,6 @@ state = "KY"
 domain = "kentucky"
 glob = "lexington"
 sort = "lexington"
-
-[macon]
-name = "The Telegraph"
-city = "Macon"
-state = "GA"
-domain = "macon"
-glob = "macon"
-sort = "telegraph"
 
 [mcclatchydc]
 name = "McClatchy DC"
